@@ -57,6 +57,12 @@
           "text": "The first is the *electric field* E, the second the *magnetic field* B. They rise and fall together as a sine wave, and they are oriented at right angles to each other and to the direction in which the wave moves. A wave is drawn as two sine curves threaded along a common axis, one for E and one for B."
         },
         {
+          "kind": "figure",
+          "src": "em_wave.png",
+          "alt": "An electromagnetic wave, with the electric field E oscillating vertically and the magnetic field B oscillating from side to side at right angles, both perpendicular to the direction of travel, which is marked by an arrow labelled at the speed of light c.",
+          "caption": "An electromagnetic wave. The electric field **E** (red) and the magnetic field **B** (blue) oscillate at right angles to each other and to the direction of travel, and the whole pattern moves forward at the speed of light **c**."
+        },
+        {
           "kind": "para",
           "text": "Two lengths describe the wave. The *wavelength* λ is the distance from one crest to the next, or between any two corresponding points. The *amplitude* is the height of the wave, which sets how strong the fields are, and with the intensity of the light. The *frequency* f is how many complete cycles pass a fixed point each second, measured in hertz (Hz)."
         },
@@ -147,6 +153,12 @@
           "ordered": false
         },
         {
+          "kind": "callout",
+          "variant": "term",
+          "title": "Propagation",
+          "body": "**Propagation** is the travel of a wave through space. The electric and magnetic fields oscillate in place, and the pattern they form moves forward, carrying energy from the source to the detector. In a vacuum every electromagnetic wave propagates at the same speed, **c**, which is why wavelength and frequency stay locked together."
+        },
+        {
           "kind": "para",
           "text": "The absence of a medium is worth pausing on. Sound is a vibration of a material and must have something to travel through; that is why a ringing bell in an evacuated jar is silent. Light needs no such thing, because the electric and magnetic fields carry it directly. Light crosses the vacuum of space from the Sun to reach us."
         },
@@ -174,6 +186,12 @@
         {
           "kind": "para",
           "text": "Ordered by wavelength, the electromagnetic spectrum divides into named regions. The names are convenient labels on a continuous range, not sharp boundaries. As wavelength falls, both frequency and photon energy rise."
+        },
+        {
+          "kind": "figure",
+          "src": "em_spectrum.png",
+          "alt": "The electromagnetic spectrum drawn as one continuous bar, from gamma rays and X-rays at the short-wavelength, high-energy end through ultraviolet, visible, infrared and microwaves to radio waves at the long-wavelength, low-energy end.",
+          "caption": "The electromagnetic spectrum. The regions are named parts of one continuous range: as wavelength falls from radio waves towards gamma rays, frequency and photon energy rise."
         },
         {
           "kind": "table",
@@ -270,6 +288,12 @@
           "kind": "formula",
           "tex": "c = \\lambda f \\qquad\\qquad E = h f = \\frac{hc}{\\lambda}",
           "caption": "The two central relationships"
+        },
+        {
+          "kind": "figure",
+          "src": "photon_energy.png",
+          "alt": "A graph of photon energy E against frequency f: a straight line through the origin with the points f and 2f marked, showing that doubling the frequency doubles the energy and that the slope is the Planck constant.",
+          "caption": "Photon energy rises in step with frequency. The graph is a straight line through the origin whose slope is the Planck constant **h**, so doubling the frequency doubles the photon energy."
         },
         {
           "kind": "para",
@@ -551,6 +575,80 @@
         2
       ],
       "explanation": "c = λf, E = hf and E = hc/λ are all correct. The relation λ = Ec is not; it confuses the roles of wavelength and energy."
+    },
+    {
+      "id": "emr-mcq-010",
+      "topicId": "wave-nature",
+      "question": "The amplitude of an electromagnetic wave tells you about:",
+      "options": [
+        "its wavelength",
+        "the strength of its oscillating fields",
+        "its speed in a vacuum",
+        "how many cycles pass each second"
+      ],
+      "answer": 1,
+      "explanation": "Amplitude is the height of the wave. It sets how strong the electric and magnetic fields are, and therefore how bright or intense the light is. Wavelength and frequency are separate properties."
+    },
+    {
+      "id": "emr-mcq-011",
+      "topicId": "quantum-nature",
+      "question": "Why does a beam of ordinary light look perfectly smooth rather than grainy, even though it is made of photons?",
+      "options": [
+        "photons are too heavy to see",
+        "each photon carries a tiny energy and enormous numbers of them arrive every second",
+        "light contains no photons until it hits something",
+        "all the photons merge into one long wave"
+      ],
+      "answer": 1,
+      "explanation": "The Planck constant is tiny, so a single photon carries very little energy. An everyday beam carries so many photons per second that the arrivals blend into a smooth, continuous stream."
+    },
+    {
+      "kind": "truefalse",
+      "id": "emr-tf-004",
+      "topicId": "properties",
+      "question": "Electromagnetic radiation must have a medium to travel through.",
+      "answer": false,
+      "explanation": "It needs no medium at all: the oscillating fields carry it through a vacuum. Sound, by contrast, is a vibration of matter and does need a medium, which is why a bell in an evacuated jar cannot be heard."
+    },
+    {
+      "kind": "numeric",
+      "id": "emr-num-005",
+      "topicId": "spectrum",
+      "question": "Infrared radiation has a wavelength of 2.0 × 10⁻⁶ m. What is its frequency, in hertz? Take c = 3.0 × 10⁸ m/s.",
+      "answer": 150000000000000.0,
+      "tolerance": 10000000000000.0,
+      "unit": "Hz",
+      "explanation": "f = c / λ = (3.0 × 10⁸) / (2.0 × 10⁻⁶) = 1.5 × 10¹⁴ Hz."
+    },
+    {
+      "id": "emr-mcq-012",
+      "topicId": "parameter-relations",
+      "question": "If you double the frequency of some radiation, what happens to its photon energy and its wavelength?",
+      "options": [
+        "the energy doubles and the wavelength halves",
+        "the energy halves and the wavelength doubles",
+        "both the energy and the wavelength double",
+        "both the energy and the wavelength stay the same"
+      ],
+      "answer": 0,
+      "explanation": "Energy is E = hf, so doubling f doubles the energy. Wavelength is λ = c/f, so doubling f halves the wavelength. The two move in opposite directions."
+    },
+    {
+      "kind": "multi",
+      "id": "emr-multi-004",
+      "topicId": "parameter-relations",
+      "question": "Compare radio waves with ultraviolet light. Which of these are greater for the ultraviolet? Select all that apply.",
+      "options": [
+        "frequency",
+        "photon energy",
+        "wavelength",
+        "speed in a vacuum"
+      ],
+      "answers": [
+        0,
+        1
+      ],
+      "explanation": "Ultraviolet has a higher frequency and therefore a higher photon energy than radio waves. Its wavelength is shorter, not longer, and the speed in a vacuum is c for every kind of radiation."
     }
   ]
 }

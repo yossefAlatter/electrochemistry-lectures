@@ -88,8 +88,26 @@
           "caption": "Einstein’s photoelectric equation"
         },
         {
+          "kind": "figure",
+          "src": "photo_energy.png",
+          "alt": "Two panels: on the left a photon with energy below the work function cannot free an electron, and on the right a photon with energy above the work function frees an electron with the leftover energy as kinetic energy.",
+          "caption": "The photoelectric effect. A photon frees an electron only if its energy **hf** exceeds the work function **φ**; the electron leaves with the leftover energy, KE = hf − φ."
+        },
+        {
           "kind": "para",
           "text": "This one equation explains every observation. If hf is below Φ, the photon cannot free an electron at all, which is the threshold. Above it, the surplus hf − Φ becomes kinetic energy, so the electron energy rises with frequency. Raising the intensity adds more photons and so more electrons, but each still carries only hf − Φ. And absorption is a single instant, so emission is instantaneous."
+        },
+        {
+          "kind": "worked",
+          "title": "Maximum kinetic energy of a photoelectron",
+          "given": "Light of wavelength 250 nm falls on a metal whose work function is 2.2 eV. Find the maximum kinetic energy of the emitted electrons. Take h = 6.626 × 10⁻³⁴ J s, c = 3.00 × 10⁸ m/s, and 1 eV = 1.60 × 10⁻¹⁹ J.",
+          "steps": [
+            "Photon energy from E = hc/λ = (6.626 × 10⁻³⁴ × 3.00 × 10⁸) / (250 × 10⁻⁹) = 7.95 × 10⁻¹⁹ J.",
+            "Convert to electronvolts: 7.95 × 10⁻¹⁹ / 1.60 × 10⁻¹⁹ = 4.97 eV.",
+            "Subtract the work function: KE = hf − φ = 4.97 − 2.2 = 2.77 eV.",
+            "In joules: 2.77 × 1.60 × 10⁻¹⁹ = 4.4 × 10⁻¹⁹ J."
+          ],
+          "result": "The fastest electrons leave with about 2.8 eV, or 4.4 × 10⁻¹⁹ J, of kinetic energy."
         },
         {
           "kind": "callout",
@@ -124,6 +142,12 @@
           "kind": "formula",
           "tex": "KE_{max} = e V_0 \\qquad\\qquad e V_0 = h f - \\Phi",
           "caption": "The stopping potential and the work function"
+        },
+        {
+          "kind": "figure",
+          "src": "photo_stopping.png",
+          "alt": "A graph of stopping potential against frequency: a straight line of slope h over e that crosses the horizontal axis at the threshold frequency f-zero.",
+          "caption": "Stopping potential against frequency. The graph is a straight line of slope **h/e**; it crosses the axis at the threshold frequency **f₀**, where **hf₀ = φ**."
         },
         {
           "kind": "para",
@@ -408,6 +432,78 @@
       "question": "The photoelectric effect led towards the idea of wave-particle duality.",
       "answer": true,
       "explanation": "By showing that light behaves as particles when it exchanges energy with matter, the effect forced physics to accept both wave and particle descriptions."
+    },
+    {
+      "id": "pe-mcq-010",
+      "topicId": "threshold",
+      "question": "Why does increasing the intensity of light below the threshold frequency free no electrons, however long you wait?",
+      "options": [
+        "the photons travel too slowly",
+        "each photon still carries less energy than the work function, so no single photon can free an electron",
+        "the metal becomes too cold",
+        "the light is all reflected away"
+      ],
+      "answer": 1,
+      "explanation": "Intensity means more photons, not more energetic ones. Freeing an electron needs a single photon with energy at least equal to the work function φ. Below the threshold, not one photon is energetic enough."
+    },
+    {
+      "kind": "truefalse",
+      "id": "pe-tf-005",
+      "topicId": "threshold",
+      "question": "Once light above the threshold frequency strikes a clean metal surface, electrons appear almost instantly.",
+      "answer": true,
+      "explanation": "Emission is not a slow build-up of absorbed energy. One sufficiently energetic photon frees one electron straight away, so there is no measurable delay even in very faint light."
+    },
+    {
+      "kind": "numeric",
+      "id": "pe-num-004",
+      "topicId": "einstein",
+      "question": "A metal has a work function of 2.0 eV. Light delivers photons of energy 3.5 eV. Find the maximum kinetic energy of the emitted electrons, in eV.",
+      "answer": 1.5,
+      "tolerance": 0.1,
+      "unit": "eV",
+      "explanation": "The photon gives its energy to the electron. The work function φ is spent escaping the surface, so KE = hf − φ = 3.5 − 2.0 = 1.5 eV."
+    },
+    {
+      "id": "pe-mcq-011",
+      "topicId": "einstein",
+      "question": "The work function of a metal is the:",
+      "options": [
+        "energy needed to remove an electron from its surface",
+        "energy of the brightest photon it can absorb",
+        "melting point of the metal",
+        "total energy of all its electrons"
+      ],
+      "answer": 0,
+      "explanation": "The work function φ is the minimum energy needed to lift one electron out of the metal. Only photons with hf ≥ φ can start the process."
+    },
+    {
+      "kind": "numeric",
+      "id": "pe-num-005",
+      "topicId": "stopping-potential",
+      "question": "Light of frequency 8.0 × 10¹⁴ Hz falls on a metal whose threshold frequency is 5.0 × 10¹⁴ Hz. Find the stopping potential, in volts. Take h = 6.626 × 10⁻³⁴ J s and e = 1.60 × 10⁻¹⁹ C.",
+      "answer": 1.24,
+      "tolerance": 0.1,
+      "unit": "V",
+      "explanation": "The extra energy above the threshold is h(f − f₀) = 6.626 × 10⁻³⁴ × (3.0 × 10¹⁴) = 1.99 × 10⁻¹⁹ J, which equals eV₀. So V₀ = 1.99 × 10⁻¹⁹ / 1.60 × 10⁻¹⁹ = 1.24 V."
+    },
+    {
+      "kind": "multi",
+      "id": "pe-multi-003",
+      "topicId": "significance",
+      "question": "Which observations are evidence for the particle nature of light? Select all that apply.",
+      "options": [
+        "there is a threshold frequency below which no electrons are emitted",
+        "emission begins almost instantly",
+        "light diffracts around an obstacle",
+        "the stopping potential depends on frequency rather than intensity"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "A threshold, instant emission, and a stopping potential set by frequency all point to light arriving in discrete packets of energy. Diffraction is a wave effect and is evidence for the wave picture."
     }
   ]
 }

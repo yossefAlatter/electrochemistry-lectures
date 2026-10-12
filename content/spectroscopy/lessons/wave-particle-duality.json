@@ -45,6 +45,12 @@
           "text": "The photons in a beam are not all alike. Each carries a definite amount of energy set by its frequency, and that energy decides what the photon can do. A single X-ray photon carries far more energy than a photon of visible or radio light, which is why X-rays can ionise atoms while radio waves pass through matter almost undisturbed."
         },
         {
+          "kind": "figure",
+          "src": "duality_double_slit.png",
+          "alt": "Electrons fired one at a time through a double slit: each electron lands as a single dot, but many dots build up an interference pattern of bright and dark fringes on the screen.",
+          "caption": "Electrons through a double slit. Each electron arrives as a single dot, yet many dots build up an interference pattern: matter shows both particle and wave behaviour."
+        },
+        {
           "kind": "para",
           "text": "It helps, as a picture rather than a strict description, to imagine a beam of light as a row of little \"light bullets\", each travelling with a fixed energy that marks its type. The picture is not exact, but it captures the essential point: the energy arrives in discrete lumps, not as a smooth flow."
         },
@@ -79,12 +85,29 @@
           "caption": "The de Broglie wavelength of a particle"
         },
         {
+          "kind": "figure",
+          "src": "de_broglie_wave.png",
+          "alt": "A wave wrapped around a nucleus: the wave must join up smoothly, so the circumference holds a whole number of wavelengths, giving a de Broglie standing wave.",
+          "caption": "A de Broglie wave around a nucleus. The wave must close up smoothly, so the circumference holds a whole number of wavelengths: **2πr = nλ**, with **λ = h/p**."
+        },
+        {
           "kind": "para",
           "text": "Here m is the mass, v the speed and p = mv the momentum. The relation says that the wavelength shrinks as mass or speed rises. An electron, being very light, can have a wavelength comparable to the spacing of atoms in a crystal, which is why electron beams diffract from crystals and can be used to study structure."
         },
         {
           "kind": "para",
           "text": "For a thrown cricket ball, the mass is so large that the de Broglie wavelength is smaller than any measurable length by an enormous margin, so its wave nature is invisible. Duality is real for everything; it is only noticeable for the very small."
+        },
+        {
+          "kind": "worked",
+          "title": "The de Broglie wavelength of an electron",
+          "given": "An electron moves at 1.0 × 10⁶ m/s. Find its de Broglie wavelength. Take h = 6.626 × 10⁻³⁴ J s and the electron mass m = 9.11 × 10⁻³¹ kg.",
+          "steps": [
+            "Momentum p = mv = 9.11 × 10⁻³¹ × 1.0 × 10⁶ = 9.11 × 10⁻²⁵ kg m/s.",
+            "De Broglie wavelength λ = h/p = 6.626 × 10⁻³⁴ / 9.11 × 10⁻²⁵.",
+            "λ = 7.3 × 10⁻¹⁰ m = 0.73 nm."
+          ],
+          "result": "The electron wavelength is about 0.73 nm, comparable to atomic spacings, which is why electron diffraction can reveal the structure of crystals."
         },
         {
           "kind": "callout",
@@ -162,6 +185,12 @@
             "The resulting line pattern identifies the material."
           ],
           "ordered": false
+        },
+        {
+          "kind": "figure",
+          "src": "bohr_levels.png",
+          "alt": "An energy-level ladder with an electron falling from one level to a lower one, emitting a photon whose energy equals the gap, and the resulting emission spectrum of sharp bright lines on a dark background.",
+          "caption": "Quantised energy levels. Each downward jump emits one photon of energy equal to the gap, so the emission spectrum is a set of sharp lines rather than a continuous band."
         },
         {
           "kind": "para",
@@ -375,6 +404,81 @@
       ],
       "answer": 1,
       "explanation": "Because each substance has its own set of energy levels, its absorption and emission pattern is unique and can be used to identify it."
+    },
+    {
+      "id": "wpd-mcq-010",
+      "topicId": "dual-nature",
+      "question": "When single electrons are fired one at a time through a double slit, what does the experiment show?",
+      "options": [
+        "electrons are purely particles",
+        "electrons are purely waves",
+        "each electron lands as one dot, yet many dots build up an interference pattern",
+        "electrons vanish inside the slits"
+      ],
+      "answer": 2,
+      "explanation": "Each electron makes a single, localised mark, as a particle would. But over time the marks fall into bright and dark fringes, which only waves produce: both pictures are needed."
+    },
+    {
+      "id": "wpd-mcq-011",
+      "topicId": "de-broglie",
+      "question": "The de Broglie wavelength of a particle is:",
+      "options": [
+        "proportional to its momentum",
+        "inversely proportional to its momentum",
+        "independent of its momentum",
+        "equal to its mass"
+      ],
+      "answer": 1,
+      "explanation": "De Broglie proposed λ = h/p, so a larger momentum means a shorter wavelength. This is why heavy, slow everyday objects have wavelengths far too small to notice."
+    },
+    {
+      "kind": "numeric",
+      "id": "wpd-num-002",
+      "topicId": "de-broglie",
+      "question": "Find the de Broglie wavelength, in nanometres, of an electron whose momentum is 2.0 × 10⁻²⁴ kg m/s. Take h = 6.626 × 10⁻³⁴ J s.",
+      "answer": 0.331,
+      "tolerance": 0.05,
+      "unit": "nm",
+      "explanation": "λ = h / p = 6.626 × 10⁻³⁴ / 2.0 × 10⁻²⁴ = 3.31 × 10⁻¹⁰ m = 0.331 nm, roughly the spacing between atoms in a crystal."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wpd-tf-005",
+      "topicId": "bohr",
+      "question": "In Bohr's model an electron may orbit the nucleus at any radius it chooses.",
+      "answer": false,
+      "explanation": "Bohr allowed only certain orbits, in which the electron-wave fits a whole number of wavelengths around the circumference. Intermediate radii are not allowed, which is what makes the energy levels discrete."
+    },
+    {
+      "id": "wpd-mcq-012",
+      "topicId": "bohr",
+      "question": "For a stable Bohr orbit, the circumference of the orbit must contain:",
+      "options": [
+        "any number of wavelengths",
+        "a whole number of wavelengths",
+        "exactly half a wavelength",
+        "no wavelengths at all"
+      ],
+      "answer": 1,
+      "explanation": "The wave describing the electron must join up smoothly with itself as it goes round. That happens only when the circumference holds a whole number of wavelengths, 2πr = nλ."
+    },
+    {
+      "kind": "multi",
+      "id": "wpd-multi-002",
+      "topicId": "quantized-energy",
+      "question": "Which statements about a line emission spectrum are correct? Select all that apply.",
+      "options": [
+        "it is made of sharp lines",
+        "each line comes from a transition between two energy levels",
+        "it is a continuous band containing all colours",
+        "the pattern of lines can identify the element"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "A line spectrum is sharp lines, one for each allowed transition, because the energy levels are quantised. The pattern is a fingerprint of the element; it is definitely not a continuous band."
     }
   ]
 }

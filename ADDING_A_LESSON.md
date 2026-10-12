@@ -16,10 +16,10 @@ Subject   Physical Chemistry          <- a subject area; others are expected
       Section  cottrell              <- ONE PAGE, with Next / Previous
 ```
 
-Each **course** owns its own directory, so a second subject is separated from
+Each **course** owns its own directory, so a second course is separated from
 the first simply by where its files live. Electrochemistry reads
-`content/lessons/`; the second subject, Spectroscopy, groups a course
-(Applications) whose lessons live in `content/spectroscopy/lessons/`.
+`content/lessons/`; the Spectroscopy course's lessons live in
+`content/spectroscopy/lessons/`.
 
 A lesson is a set of **short section pages**, and each section closes with its
 own quick check. That structure is the whole design: no page is long enough to
@@ -110,14 +110,20 @@ is a site decision rather than lesson content:
 
 ```ts
 {
-  slug: "spectroscopy",
-  title: "Spectroscopy",
+  slug: "physical-chemistry",
+  title: "Physical Chemistry",
   tagline: "Postgraduate · light, matter and the spectra between them",
   description: "Shown on the subject block of the home page.",
   courses: [
     {
-      id: "applications",
-      title: "Applications",
+      id: "electrochemistry",
+      title: "Electrochemistry",
+      description: "Shown under the course title.",
+      lessons: loadAllLessons(),
+    },
+    {
+      id: "spectroscopy",
+      title: "Spectroscopy",
       description: "Shown under the course title.",
       lessons: loadAllLessons(SPECTROSCOPY_LESSONS_DIR),
     },
@@ -228,6 +234,14 @@ Drop a PNG into `public/figures/` and reference it by file name:
 ```
 
 Always write a real `alt`: it is what a screen reader announces.
+
+Modern figures are React SVG components rather than PNG files. Draw one in
+`components/figures/`, register it by file name in `components/figures/index.ts`
+(for example `"em_wave.png": EmWave`), and reference it from content exactly as
+above. The page then draws the SVG inline: sharp at any zoom, theme-aware, and
+made of real text. The `.png` suffix is just a stable name, so no image file is
+needed. `tools/check_figure_fit.py` renders every registered figure in a real
+browser and fails if any label runs outside the frame.
 
 The 16 advanced diagrams are recoloured and redrawn by
 `tools/advanced_figures.py`. The old primer set came from `tools/figures.py`,

@@ -1,0 +1,205 @@
+{
+  "slug": "ps-4-light-matter",
+  "label": "Problem set 4",
+  "title": "Problem set 4: Absorption, emission and scattering",
+  "summary": "Practice Lesson 4: how atoms absorb and emit photons of definite energy, why every element has its own line spectrum, and the difference between elastic Rayleigh scattering and inelastic Raman scattering.",
+  "source": "Written fresh; spectroscopy practice",
+  "order": 9,
+  "minutes": 24,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "This set is about what happens when light meets matter. Atoms and molecules have fixed energy gaps, so they absorb and emit only photons whose energy matches a gap exactly. That is the origin of line spectra."
+    },
+    {
+      "kind": "para",
+      "text": "For the calculations, the same photon equation, ΔE = hf = hc/λ, does all the work. Remember that a transition either absorbs or emits one photon of energy equal to the gap."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps4-matter",
+      "tone": "rose",
+      "title": "Transitions, spectra and scattering",
+      "summary": "Connect energy gaps to absorbed and emitted photons, and tell elastic from inelastic scattering.",
+      "minutes": 19,
+      "keyPoints": [
+        "A photon is absorbed or emitted only when its energy matches a gap between levels.",
+        "Line spectra are fingerprints of the elements because the gaps are fixed.",
+        "Emission and absorption of the same element occur at the same wavelengths.",
+        "Rayleigh scattering is elastic (same energy); Raman scattering is inelastic (shifted)."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Think of the energy levels as a staircase. An electron can stand only on a step, never between steps. A photon with exactly the energy of one step can lift the electron up; when the electron falls back down, a photon of the same energy is given out."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\Delta E = h f = \\frac{hc}{\\lambda}",
+          "caption": "The energy of an absorbed or emitted photon"
+        },
+        {
+          "kind": "para",
+          "text": "Because the steps are different for every element, so is the set of photon energies each element can exchange. That is why a line spectrum identifies the element it came from, much as a fingerprint identifies a person."
+        },
+        {
+          "kind": "worked",
+          "title": "The wavelength and colour of an absorbed photon",
+          "given": "An atom has a transition of energy 3.0 × 10⁻¹⁹ J. Find the wavelength of the light it absorbs. Take hc = 1.99 × 10⁻²⁵ J m.",
+          "steps": [
+            "λ = hc / ΔE = (1.99 × 10⁻²⁵) / (3.0 × 10⁻¹⁹).",
+            "λ = 6.6 × 10⁻⁷ m.",
+            "Convert to nanometres: 6.6 × 10⁻⁷ m = 660 nm, which is red."
+          ],
+          "result": "The atom absorbs red light of about 660 nm."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "Absorption lines",
+          "body": "If white light passes through a gas, the gas removes the wavelengths its atoms can absorb. The result is a bright background crossed by dark absorption lines at exactly the wavelengths the gas would emit."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "ps4-mcq-001",
+      "topicId": "ps4-matter",
+      "question": "Why does each element have its own characteristic line spectrum?",
+      "options": [
+        "all atoms are identical",
+        "the energy-level gaps differ from element to element",
+        "the colours are random",
+        "electrons are the same in every atom"
+      ],
+      "answer": 1,
+      "explanation": "The pattern of energy levels is unique to each element, so the photons it can absorb or emit have a unique set of energies. That set of wavelengths is the line spectrum."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps4-tf-001",
+      "topicId": "ps4-matter",
+      "question": "A substance that absorbs red light looks blue-green (cyan).",
+      "answer": true,
+      "explanation": "If red is removed from white light, the light that remains to reach your eye is the complementary colour, blue-green. That is why many red-absorbing dyes look cyan."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps4-num-001",
+      "topicId": "ps4-matter",
+      "question": "A photon of wavelength 500 nm is emitted. Find its energy, in joules. Take h = 6.626 × 10⁻³⁴ J s and c = 3.0 × 10⁸ m/s.",
+      "answer": 3.98e-19,
+      "tolerance": 1e-20,
+      "unit": "J",
+      "explanation": "E = hc / λ = (6.626 × 10⁻³⁴ × 3.0 × 10⁸) / (5.0 × 10⁻⁷) = 3.98 × 10⁻¹⁹ J."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps4-num-002",
+      "topicId": "ps4-matter",
+      "question": "Find the energy, in joules, of an emitted photon of wavelength 700 nm. Take hc = 1.99 × 10⁻²⁵ J m.",
+      "answer": 2.84e-19,
+      "tolerance": 1e-20,
+      "unit": "J",
+      "explanation": "E = hc / λ = (1.99 × 10⁻²⁵) / (7.0 × 10⁻⁷) = 2.84 × 10⁻¹⁹ J. Red photons are less energetic than blue ones."
+    },
+    {
+      "id": "ps4-mcq-002",
+      "topicId": "ps4-matter",
+      "question": "Which transition emits the most energetic photon (largest energy gap)?",
+      "options": [
+        "n = 2 to n = 1",
+        "n = 3 to n = 2",
+        "n = 4 to n = 3",
+        "n = 5 to n = 4"
+      ],
+      "answer": 0,
+      "explanation": "The gap between n = 1 and n = 2 is the largest, so that transition releases the most energy. In hydrogen it gives an ultraviolet photon."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps4-tf-002",
+      "topicId": "ps4-matter",
+      "question": "In absorption, an electron moves to a higher energy level.",
+      "answer": true,
+      "explanation": "The atom gains the photon's energy, so the electron moves up. Emission is the reverse: the electron falls and the atom loses energy as a photon."
+    },
+    {
+      "kind": "multi",
+      "id": "ps4-multi-001",
+      "topicId": "ps4-matter",
+      "question": "Which of these are ways in which light interacts with matter? Select all that apply.",
+      "options": [
+        "absorption",
+        "emission",
+        "scattering",
+        "sublimation"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Absorption, emission and scattering all involve light and matter. Sublimation is a change of state of a solid, nothing to do with the interaction of light with matter."
+    },
+    {
+      "id": "ps4-mcq-003",
+      "topicId": "ps4-matter",
+      "question": "Rayleigh scattering of light by air molecules is:",
+      "options": [
+        "elastic, so the light keeps its energy",
+        "inelastic, so the light changes colour",
+        "absorption followed by heating",
+        "not a real effect"
+      ],
+      "answer": 0,
+      "explanation": "In Rayleigh scattering the molecule re-emits a photon of the same energy, so the colour is unchanged. Raman scattering is the inelastic case, where a vibration shifts the energy."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps4-num-003",
+      "topicId": "ps4-matter",
+      "question": "A molecule has an energy gap of 4.0 × 10⁻²⁰ J. Find the frequency of the photon it absorbs, in hertz. Take h = 6.626 × 10⁻³⁴ J s.",
+      "answer": 60400000000000.0,
+      "tolerance": 3000000000000.0,
+      "unit": "Hz",
+      "explanation": "f = ΔE / h = (4.0 × 10⁻²⁰) / (6.626 × 10⁻³⁴) = 6.0 × 10¹³ Hz, in the far infrared."
+    },
+    {
+      "id": "ps4-mcq-004",
+      "topicId": "ps4-matter",
+      "question": "Why does the sky look red at sunset?",
+      "options": [
+        "red light is scattered away",
+        "sunlight travels a longer path through the air, so more blue light is scattered out",
+        "the Sun turns red",
+        "the air emits red light"
+      ],
+      "answer": 1,
+      "explanation": "At sunset light crosses much more atmosphere. Short wavelengths are scattered away, leaving the longer red wavelengths to reach your eye directly."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps4-tf-003",
+      "topicId": "ps4-matter",
+      "question": "The emission and absorption lines of a given element occur at the same wavelengths.",
+      "answer": true,
+      "explanation": "Both come from the same set of energy gaps. A gap can be crossed either way, so the element absorbs and emits at the same wavelengths."
+    },
+    {
+      "id": "ps4-mcq-005",
+      "topicId": "ps4-matter",
+      "question": "The energy of a photon emitted in a transition equals:",
+      "options": [
+        "the sum of the two energy levels",
+        "the difference between the two energy levels",
+        "the product of the two levels",
+        "always 13.6 eV"
+      ],
+      "answer": 1,
+      "explanation": "The photon carries away exactly the energy lost by the atom, which is the difference between the upper and lower levels. That is why each transition gives one definite wavelength."
+    }
+  ]
+}

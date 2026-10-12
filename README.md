@@ -1,11 +1,12 @@
 # Physical Chemistry — Postgraduate
 
 Lesson material and interactive questions for postgraduate physical chemistry.
-The site currently carries two subjects: **Electrochemistry** (29 lessons plus
-a problem set for each Bard & Faulkner chapter 1–17) and **Spectroscopy**
-(course "Applications", 5 lessons). Mobile-first, statically generated, no
-database and no server at runtime. In all: 51 lesson files, 226 sections and
-1201 questions.
+The site carries one subject, **Physical Chemistry**, with two courses:
+**Electrochemistry** (29 lessons plus a problem set for each Bard & Faulkner
+chapter 1–17) and **Spectroscopy** (5 lessons plus a matching problem set, each
+with figures and worked examples). Mobile-first, statically generated, no
+database and no server at runtime. In all: 56 lesson files, 231 sections and
+1291 questions.
 
 Built with Next.js (App Router), TypeScript and Tailwind CSS, with KaTeX for
 the maths.
@@ -35,7 +36,7 @@ content/
     lesson-8.json       sections + questions for one lesson
   spectroscopy/
     lessons/
-      emr-nature.json   a lesson in the second subject
+      emr-nature.json   a lesson in the second course
 ```
 
 `content/index.ts` exports the subject structure and fills each course's lesson

@@ -78,6 +78,24 @@
           "text": "This wavelength selectivity explains a familiar medical fact. Soft tissue and dense bone have different atomic structures and different energy gaps, so they absorb X-ray photons to different degrees. High-energy X-rays pass through soft tissue but are blocked by bone, which is exactly why bone shows up on a radiograph."
         },
         {
+          "kind": "figure",
+          "src": "light_absorption_emission.png",
+          "alt": "An energy-level diagram: on the left a photon lifts an electron to a higher level (absorption), and on the right the electron falls back and emits a photon of the same energy (emission).",
+          "caption": "Absorption and emission. A photon of energy ΔE lifts the electron up; when it falls back, a photon of the same energy is emitted. Only certain energies fit the fixed level gaps, so spectra show sharp lines."
+        },
+        {
+          "kind": "worked",
+          "title": "The wavelength a molecule absorbs",
+          "given": "A molecule has an energy gap of 3.2 × 10⁻¹⁹ J between two of its levels. What wavelength of light does it absorb? Take h = 6.626 × 10⁻³⁴ J s and c = 3.00 × 10⁸ m/s.",
+          "steps": [
+            "The absorbed photon must have energy ΔE = hc/λ, so λ = hc/ΔE.",
+            "λ = (6.626 × 10⁻³⁴ × 3.00 × 10⁸) / (3.2 × 10⁻¹⁹).",
+            "λ = 1.99 × 10⁻²⁵ / 3.2 × 10⁻¹⁹ = 6.2 × 10⁻⁷ m.",
+            "That is 620 nm, in the red part of the visible spectrum."
+          ],
+          "result": "The molecule absorbs light of about 620 nm, so it takes the red out of white light and looks its complementary colour (blue-green)."
+        },
+        {
           "kind": "callout",
           "variant": "key",
           "title": "Absorption is the heart of spectroscopy",
@@ -105,6 +123,12 @@
         {
           "kind": "para",
           "text": "For particles much smaller than the wavelength of the light, the strength of scattering rises steeply as the wavelength shortens. Blue light, with its shorter wavelength, is scattered far more strongly than red. That is why looking at the sky away from the Sun you see scattered blue light, while light that comes straight through the atmosphere toward you at sunset has lost much of its blue and looks red."
+        },
+        {
+          "kind": "figure",
+          "src": "light_scattering.png",
+          "alt": "Two panels: Rayleigh scattering re-emits light of the same energy and colour in all directions, while Raman scattering shifts the photon energy by an amount set by a molecular vibration.",
+          "caption": "Scattering. Rayleigh scattering is elastic: the light keeps its colour. Raman scattering is inelastic: a little energy is exchanged with a vibration, so the scattered light is shifted in colour."
         },
         {
           "kind": "callout",
@@ -407,6 +431,81 @@
         2
       ],
       "explanation": "Light can be absorbed, emitted or scattered (as well as reflected, refracted and transmitted). Voltage is an electrical quantity, not an interaction of light with matter."
+    },
+    {
+      "id": "lm-mcq-011",
+      "topicId": "reflection-refraction-transmission",
+      "question": "When light passes from air into glass at an angle, it bends:",
+      "options": [
+        "away from the normal",
+        "towards the normal",
+        "not at all",
+        "back the way it came"
+      ],
+      "answer": 1,
+      "explanation": "On entering the denser medium the light slows, which bends it towards the normal. Leaving a denser medium for a less dense one bends it away from the normal instead."
+    },
+    {
+      "id": "lm-mcq-012",
+      "topicId": "absorption",
+      "question": "A substance looks green in white light because it:",
+      "options": [
+        "emits green light of its own",
+        "absorbs green light",
+        "absorbs most colours but reflects or transmits green",
+        "absorbs every colour equally"
+      ],
+      "answer": 2,
+      "explanation": "An object has the colour of the light it sends to your eye. A green object reflects or transmits green and absorbs the other colours. (A glowing object is different: it emits its own light.)"
+    },
+    {
+      "kind": "truefalse",
+      "id": "lm-tf-004",
+      "topicId": "scattering",
+      "question": "Rayleigh scattering is stronger for shorter wavelengths, which is one reason the sky looks blue.",
+      "answer": true,
+      "explanation": "Air molecules scatter short wavelengths far more than long ones, roughly as 1/λ⁴. Blue light from the Sun is scattered across the sky, so we see blue coming from all directions."
+    },
+    {
+      "id": "lm-mcq-013",
+      "topicId": "emission",
+      "question": "Light is emitted from an atom when:",
+      "options": [
+        "an electron is removed completely",
+        "an electron drops from a higher to a lower energy level",
+        "an electron is added to the atom",
+        "the atom is cooled down"
+      ],
+      "answer": 1,
+      "explanation": "An electron that has been raised to a higher level can fall back down. The lost energy leaves as a photon whose energy equals the gap between the levels."
+    },
+    {
+      "kind": "numeric",
+      "id": "lm-num-001",
+      "topicId": "absorption",
+      "question": "A molecule absorbs a photon of energy 4.0 × 10⁻¹⁹ J. Find the wavelength absorbed, in nanometres. Take hc = 1.99 × 10⁻²⁵ J m.",
+      "answer": 498,
+      "tolerance": 20,
+      "unit": "nm",
+      "explanation": "λ = hc / ΔE = 1.99 × 10⁻²⁵ / 4.0 × 10⁻¹⁹ = 4.98 × 10⁻⁷ m = 498 nm, which is blue-green light."
+    },
+    {
+      "kind": "multi",
+      "id": "lm-multi-003",
+      "topicId": "interaction-summary",
+      "question": "Which of these can happen when light meets matter? Select all that apply.",
+      "options": [
+        "reflection",
+        "absorption",
+        "scattering",
+        "light always passes through completely unchanged"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Light can be reflected, absorbed or scattered, and often a mixture of all three. It is not true that light always passes through unchanged: that is the special case of a fully transparent, non-absorbing material."
     }
   ]
 }

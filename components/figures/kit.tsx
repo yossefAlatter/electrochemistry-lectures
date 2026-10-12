@@ -165,6 +165,7 @@ export function Line({
   stroke = C.rule,
   strokeWidth = 1.5,
   dash,
+  markerStart,
   markerEnd,
 }: {
   x1: number;
@@ -174,6 +175,7 @@ export function Line({
   stroke?: string;
   strokeWidth?: number;
   dash?: string;
+  markerStart?: string;
   markerEnd?: string;
 }) {
   return (
@@ -185,9 +187,42 @@ export function Line({
       stroke={stroke}
       strokeWidth={strokeWidth}
       strokeDasharray={dash}
+      markerStart={markerStart}
       markerEnd={markerEnd}
     />
   );
+}
+
+/**
+ * A wavy connector, used to draw a photon travelling from one point to another.
+ *
+ * The path runs along the straight line from (x1,y1) to (x2,y2) while
+ * oscillating sideways by ±amp, completing `waves` cycles. The amplitude is
+ * tapered to zero at both ends so the wave meets the line cleanly.
+ */
+export function wavePath(
+  x1: number,
+  y1: number,
+  x2: number,
+  y2: number,
+  amp: number,
+  waves: number,
+  samples = 72,
+): string {
+  const dx = x2 - x1;
+  const dy = y2 - y1;
+  const len = Math.hypot(dx, dy) || 1;
+  const px = -dy / len;
+  const py = dx / len;
+  let d = "";
+  for (let i = 0; i <= samples; i++) {
+    const t = i / samples;
+    const s = Math.sin(2 * Math.PI * waves * t) * amp * Math.sin(Math.PI * t);
+    const x = x1 + dx * t + px * s;
+    const y = y1 + dy * t + py * s;
+    d += `${i ? "L" : "M"} ${x.toFixed(1)} ${y.toFixed(1)} `;
+  }
+  return d.trim();
 }
 
 /** A filled arrowhead, for the electron-flow direction. */

@@ -1,0 +1,204 @@
+{
+  "slug": "ps-5-duality-quanta",
+  "label": "Problem set 5",
+  "title": "Problem set 5: Wave-particle duality and quantised energy",
+  "summary": "Practice Lesson 5: the de Broglie wavelength λ = h/p, why heavy objects show no wave behaviour, the Bohr condition 2πr = nλ, and the energy levels and spectra of hydrogen.",
+  "source": "Written fresh; spectroscopy practice",
+  "order": 10,
+  "minutes": 24,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "This set covers the wave nature of matter. De Broglie's idea was simple and startling: every moving particle has a wavelength, λ = h/p. For everyday objects that wavelength is unbelievably tiny; for electrons it is the size of atoms."
+    },
+    {
+      "kind": "para",
+      "text": "We also use the Bohr model of hydrogen, where the electron wave must fit a whole number of wavelengths around its orbit, and the levels follow Eₙ = −13.6 / n² eV."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps5-duality",
+      "tone": "indigo",
+      "title": "De Broglie waves and the Bohr model",
+      "summary": "Use λ = h/p and Eₙ = −13.6/n² eV to relate momentum, wavelength and energy levels, and to find photon energies from transitions.",
+      "minutes": 19,
+      "keyPoints": [
+        "De Broglie wavelength: λ = h / p, and p = mv.",
+        "Large mass or speed means large momentum and a very short wavelength.",
+        "Bohr condition: the orbit holds a whole number of wavelengths, 2πr = nλ.",
+        "Hydrogen levels: Eₙ = −13.6 / n² eV; a transition emits |ΔE|."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "To find the de Broglie wavelength, first work out the momentum. For a particle of mass m moving at speed v, p = mv, then λ = h/p. Because h is so small, the wavelength is only noticeable for the lightest particles."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\lambda = \\frac{h}{p} = \\frac{h}{mv} \\qquad\\qquad E_n = -\\frac{13.6}{n^2}\\ \\text{eV}",
+          "caption": "The de Broglie wavelength and the hydrogen levels"
+        },
+        {
+          "kind": "para",
+          "text": "In the Bohr picture the electron is a wave running round the nucleus. It joins up smoothly only when a whole number of wavelengths fits the orbit. That single condition forces the energies into a discrete ladder."
+        },
+        {
+          "kind": "worked",
+          "title": "The de Broglie wavelength of a fast electron",
+          "given": "An electron (mass 9.11 × 10⁻³¹ kg) moves at 2.0 × 10⁶ m/s. Find its de Broglie wavelength. Take h = 6.626 × 10⁻³⁴ J s.",
+          "steps": [
+            "Momentum: p = mv = 9.11 × 10⁻³¹ × 2.0 × 10⁶ = 1.82 × 10⁻²⁴ kg m/s.",
+            "Wavelength: λ = h / p = (6.626 × 10⁻³⁴) / (1.82 × 10⁻²⁴).",
+            "λ = 3.6 × 10⁻¹⁰ m = 0.36 nm."
+          ],
+          "result": "The electron wavelength is about 0.36 nm, close to the spacing between atoms, which is why electrons can be diffracted by crystals."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "Only electrons and other light particles show it",
+          "body": "A cricket ball with p about 3 kg m/s has a wavelength of order 10⁻³⁴ m, far too small to detect. Waves of matter are real for all particles, but only light, fast ones show measurable effects."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "ps5-mcq-001",
+      "topicId": "ps5-duality",
+      "question": "Why is the wave nature of a thrown cricket ball never noticed?",
+      "options": [
+        "a cricket ball has no wave nature",
+        "its momentum is huge, so its de Broglie wavelength is far too small to detect",
+        "it moves too slowly",
+        "balls are not made of matter"
+      ],
+      "answer": 1,
+      "explanation": "λ = h/p. A cricket ball has a large mass and speed, so p is enormous and λ is around 10⁻³⁴ m: utterly undetectable. Electrons, being tiny, have wavelengths the size of atoms."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps5-tf-001",
+      "topicId": "ps5-duality",
+      "question": "Electrons can produce a diffraction pattern.",
+      "answer": true,
+      "explanation": "A beam of electrons passed through a thin crystal or a double slit forms a diffraction pattern, exactly as a wave would. This is direct evidence for the de Broglie picture."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps5-num-001",
+      "topicId": "ps5-duality",
+      "question": "Find the momentum, in kg m/s, of an electron whose de Broglie wavelength is 0.50 nm = 5.0 × 10⁻¹⁰ m. Take h = 6.626 × 10⁻³⁴ J s.",
+      "answer": 1.33e-24,
+      "tolerance": 1e-25,
+      "unit": "kg m/s",
+      "explanation": "p = h / λ = (6.626 × 10⁻³⁴) / (5.0 × 10⁻¹⁰) = 1.33 × 10⁻²⁴ kg m/s."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps5-num-002",
+      "topicId": "ps5-duality",
+      "question": "Find the de Broglie wavelength, in metres, of a proton (mass 1.67 × 10⁻²⁷ kg) moving at 1.0 × 10⁵ m/s. Take h = 6.626 × 10⁻³⁴ J s.",
+      "answer": 3.97e-12,
+      "tolerance": 4e-13,
+      "unit": "m",
+      "explanation": "p = mv = 1.67 × 10⁻²⁷ × 1.0 × 10⁵ = 1.67 × 10⁻²² kg m/s, so λ = h/p = 3.97 × 10⁻¹² m. The heavier proton has a much shorter wavelength than an electron of similar speed."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps5-num-003",
+      "topicId": "ps5-duality",
+      "question": "An electron has momentum 2.0 × 10⁻²⁴ kg m/s. Find its kinetic energy, in joules. Take m = 9.11 × 10⁻³¹ kg.",
+      "answer": 2.2e-18,
+      "tolerance": 3e-19,
+      "unit": "J",
+      "explanation": "KE = p² / 2m = (2.0 × 10⁻²⁴)² / (2 × 9.11 × 10⁻³¹) = 4.0 × 10⁻⁴⁸ / 1.82 × 10⁻³⁰ = 2.2 × 10⁻¹⁸ J."
+    },
+    {
+      "id": "ps5-mcq-002",
+      "topicId": "ps5-duality",
+      "question": "In the Bohr model, the allowed orbits are fixed by:",
+      "options": [
+        "the colour of the electron",
+        "the condition 2πr = nλ, a whole number of wavelengths round the orbit",
+        "the temperature of the atom",
+        "the mass of the nucleus alone"
+      ],
+      "answer": 1,
+      "explanation": "The electron wave must join up smoothly as it goes round. That happens only if the circumference holds a whole number of wavelengths, which picks out the allowed orbits."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps5-tf-002",
+      "topicId": "ps5-duality",
+      "question": "Energy leaves an atom only in fixed amounts, which is why its spectrum is a set of lines.",
+      "answer": true,
+      "explanation": "Because the energy levels are discrete, differences between them take only certain values. Each allowed difference corresponds to one sharp line in the spectrum."
+    },
+    {
+      "id": "ps5-mcq-003",
+      "topicId": "ps5-duality",
+      "question": "For hydrogen, the ground-state energy is:",
+      "options": [
+        "−13.6 eV",
+        "+13.6 eV",
+        "0 eV",
+        "−1.0 eV"
+      ],
+      "answer": 0,
+      "explanation": "The lowest level of hydrogen, n = 1, lies at −13.6 eV. The negative sign means the electron is bound; the energy needed to remove it completely is 13.6 eV."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps5-num-004",
+      "topicId": "ps5-duality",
+      "question": "For hydrogen, Eₙ = −13.6 / n² eV. Find the energy of the n = 3 level, in eV.",
+      "answer": -1.51,
+      "tolerance": 0.1,
+      "unit": "eV",
+      "explanation": "E₃ = −13.6 / 3² = −13.6 / 9 = −1.51 eV."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps5-num-005",
+      "topicId": "ps5-duality",
+      "question": "Find the energy, in eV, of the photon emitted when hydrogen falls from n = 3 (−1.51 eV) to n = 2 (−3.40 eV). Give the magnitude.",
+      "answer": 1.89,
+      "tolerance": 0.15,
+      "unit": "eV",
+      "explanation": "The photon carries the difference: |−1.51 − (−3.40)| = 1.89 eV. This is the red Hα line of hydrogen."
+    },
+    {
+      "kind": "multi",
+      "id": "ps5-multi-001",
+      "topicId": "ps5-duality",
+      "question": "Which statements about de Broglie waves are correct? Select all that apply.",
+      "options": [
+        "every moving particle has one",
+        "λ = h / p",
+        "heavier particles have shorter wavelengths",
+        "only electrons have them"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Every particle has a de Broglie wavelength λ = h/p; a larger momentum (for example a larger mass) means a shorter wavelength. It is not special to electrons, though only very light particles show measurable effects."
+    },
+    {
+      "id": "ps5-mcq-004",
+      "topicId": "ps5-duality",
+      "question": "The double-slit experiment with single electrons shows that:",
+      "options": [
+        "particles can behave as waves",
+        "electrons are really light",
+        "waves are always particles",
+        "electrons have no momentum"
+      ],
+      "answer": 0,
+      "explanation": "Each electron arrives as a single dot, yet many dots build an interference pattern. That is the wave behaviour of a particle, the heart of wave-particle duality."
+    }
+  ]
+}

@@ -90,12 +90,30 @@
           "caption": "Refractive index and Snell’s law"
         },
         {
+          "kind": "figure",
+          "src": "wave_reflection_refraction.png",
+          "alt": "A ray striking the boundary between two media: the normal is drawn dashed, the reflected ray leaves at the same angle as the incident ray, and the refracted ray bends towards the normal in the second medium.",
+          "caption": "Reflection and refraction at a boundary. The reflected ray leaves at the same angle as the incident ray (θ₁ = θ₁′); the refracted ray bends towards the normal when it enters the denser medium, following n₁ sin θ₁ = n₂ sin θ₂."
+        },
+        {
           "kind": "para",
           "text": "The *refractive index* n compares the speed of light in vacuum c to its speed v in the medium. Snell’s law links the angles on either side of the boundary to the indices of the two media. When light enters a denser medium (larger n) it slows and bends towards the normal; leaving for a less dense medium it speeds up and bends away."
         },
         {
           "kind": "para",
           "text": "Because the refractive index depends slightly on wavelength, different colours bend by different amounts. This is *dispersion*, and it is why a prism spreads white light into a rainbow. Dispersion is the principle behind every prism and grating spectrometer."
+        },
+        {
+          "kind": "worked",
+          "title": "Refraction at an air–water surface",
+          "given": "A ray of light in air strikes the surface of water (n = 1.33) at an angle of incidence of 40°. Find the angle of refraction. Take the refractive index of air as 1.00.",
+          "steps": [
+            "Write Snell’s law: n₁ sin θ₁ = n₂ sin θ₂.",
+            "Put in the numbers: 1.00 × sin 40° = 1.33 × sin θ₂.",
+            "So sin θ₂ = sin 40° / 1.33 = 0.643 / 1.33 = 0.483.",
+            "Take the inverse sine: θ₂ = sin⁻¹(0.483) = 28.9°."
+          ],
+          "result": "The ray bends towards the normal and leaves the surface at about 29°."
         },
         {
           "kind": "callout",
@@ -129,6 +147,12 @@
         {
           "kind": "para",
           "text": "Thomas Young demonstrated this with two closely spaced slits. Light from the two slits overlaps on a screen and forms a pattern of alternating bright and dark lines, evenly spaced. No particle picture can account for the dark regions, where two beams of light have somehow produced darkness."
+        },
+        {
+          "kind": "figure",
+          "src": "wave_diffraction.png",
+          "alt": "Two panels: a plane wave spreading into circular wavefronts after a single slit, and two overlapping sets of circular waves from a double slit forming bright and dark fringes on a screen.",
+          "caption": "Diffraction and interference. A single slit spreads the wave out; two slits let the two sets of waves overlap, adding to bright fringes and cancelling to dark ones."
         },
         {
           "kind": "list",
@@ -166,6 +190,12 @@
         {
           "kind": "para",
           "text": "A polarising filter acts like a picket fence for the electric field. It passes the component of the field aligned with its axis and absorbs the rest. Light emerging from one filter is polarised; if a second filter is placed at right angles to the first, it blocks the light almost entirely."
+        },
+        {
+          "kind": "figure",
+          "src": "wave_polarization.png",
+          "alt": "Unpolarised light oscillating in many directions passes through a filter that transmits only the vertical component, leaving light oscillating in a single plane.",
+          "caption": "Polarisation by a filter. The filter passes only the component of the electric field along its axis, so the light leaving it oscillates in a single plane."
         },
         {
           "kind": "para",
@@ -442,6 +472,76 @@
       "question": "Reflection, refraction, diffraction, interference and polarisation are all wave behaviours.",
       "answer": true,
       "explanation": "Together they form the classical optics of light and are the evidence for its wave nature."
+    },
+    {
+      "id": "wave-mcq-011",
+      "topicId": "huygens-maxwell",
+      "question": "Huygens' principle treats every point on a wavefront as:",
+      "options": [
+        "a source of a new spherical wavelet",
+        "a place where the wave stops",
+        "a fixed obstacle",
+        "a magnetic pole"
+      ],
+      "answer": 0,
+      "explanation": "Each point of a wavefront can be taken as the centre of a new small wavelet. Adding all these wavelets together gives the next position of the wavefront, which explains reflection, refraction and diffraction."
+    },
+    {
+      "id": "wave-mcq-012",
+      "topicId": "reflection-refraction",
+      "question": "Why is the angle of incidence always measured from the normal rather than from the surface?",
+      "options": [
+        "the normal is easier to draw",
+        "the angles to the normal obey a fixed, simple law for reflection and refraction",
+        "the surface is always curved",
+        "light cannot touch the surface"
+      ],
+      "answer": 1,
+      "explanation": "Measured from the normal, the reflected angle equals the incident angle, and the refracted angles obey Snell’s law n₁ sin θ₁ = n₂ sin θ₂. Measured from the surface the same quantities would give a messy rule."
+    },
+    {
+      "kind": "numeric",
+      "id": "wave-num-002",
+      "topicId": "reflection-refraction",
+      "question": "Light passes from air (n = 1.00) into glass of refractive index 1.50, hitting the surface at 50°. Find the angle of refraction, in degrees. Use n₁ sin θ₁ = n₂ sin θ₂.",
+      "answer": 30.7,
+      "tolerance": 1.5,
+      "unit": "degrees",
+      "explanation": "sin θ₂ = (n₁/n₂) sin θ₁ = (1.00/1.50) sin 50° = 0.511, so θ₂ = sin⁻¹(0.511) = 30.7°. The ray bends towards the normal as it enters the denser glass."
+    },
+    {
+      "id": "wave-mcq-013",
+      "topicId": "diffraction-interference",
+      "question": "At a point where a crest of one wave meets a trough of another, the two waves:",
+      "options": [
+        "add to give a bright fringe",
+        "cancel to give a dark fringe",
+        "change colour",
+        "speed up"
+      ],
+      "answer": 1,
+      "explanation": "A crest on a trough is destructive interference: the waves cancel and the point goes dark. A crest on a crest is constructive and gives a bright fringe."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wave-tf-004",
+      "topicId": "polarization",
+      "question": "Longitudinal waves such as sound cannot be polarised.",
+      "answer": true,
+      "explanation": "A wave can only be polarised if it vibrates at right angles to its direction of travel, as light does. Sound vibrates along its direction of travel, so there is no plane orientation to select."
+    },
+    {
+      "id": "wave-mcq-014",
+      "topicId": "wave-summary",
+      "question": "Which of these is NOT explained by the wave theory of light?",
+      "options": [
+        "diffraction",
+        "interference",
+        "polarisation",
+        "the photoelectric effect"
+      ],
+      "answer": 3,
+      "explanation": "The photoelectric effect needs the particle picture: energy is handed over one photon at a time. Diffraction, interference and polarisation are all wave effects."
     }
   ]
 }

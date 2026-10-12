@@ -13,12 +13,38 @@
 
 import type { ComponentType } from "react";
 import { PnJunction } from "./pn-junction";
+import { EmWave } from "./em-wave";
+import { EmSpectrum } from "./em-spectrum";
+import { PhotonEnergy } from "./photon-energy";
+import { WaveReflectionRefraction } from "./wave-reflection-refraction";
+import { WaveDiffraction } from "./wave-diffraction";
+import { WavePolarization } from "./wave-polarization";
+import { PhotoEnergy } from "./photo-energy";
+import { PhotoStopping } from "./photo-stopping";
+import { LightAbsorptionEmission } from "./light-absorption-emission";
+import { LightScattering } from "./light-scattering";
+import { DeBroglieStandingWave } from "./de-broglie-standing-wave";
+import { BohrLevels } from "./bohr-levels";
+import { DualityDoubleSlit } from "./duality-double-slit";
 
 /** Every registered figure draws itself; none takes props. */
 export type FigureComponent = ComponentType;
 
 export const FIGURES: Record<string, FigureComponent> = {
   "pn_junction.png": PnJunction,
+  "em_wave.png": EmWave,
+  "em_spectrum.png": EmSpectrum,
+  "photon_energy.png": PhotonEnergy,
+  "wave_reflection_refraction.png": WaveReflectionRefraction,
+  "wave_diffraction.png": WaveDiffraction,
+  "wave_polarization.png": WavePolarization,
+  "photo_energy.png": PhotoEnergy,
+  "photo_stopping.png": PhotoStopping,
+  "light_absorption_emission.png": LightAbsorptionEmission,
+  "light_scattering.png": LightScattering,
+  "de_broglie_wave.png": DeBroglieStandingWave,
+  "bohr_levels.png": BohrLevels,
+  "duality_double_slit.png": DualityDoubleSlit,
 };
 
 /** The SVG component for a figure file name, or null to fall back to the PNG. */

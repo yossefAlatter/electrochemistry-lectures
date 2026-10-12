@@ -1,0 +1,202 @@
+{
+  "slug": "ps-3-photoelectric",
+  "label": "Problem set 3",
+  "title": "Problem set 3: The photoelectric effect",
+  "summary": "Practice Lesson 3: threshold frequency, the work function, Einstein’s equation KE = hf − φ, and the stopping potential, with the handy formula E(eV) = 1240 / λ(nm).",
+  "source": "Written fresh; spectroscopy practice",
+  "order": 8,
+  "minutes": 24,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "This set is about the particle picture of light. The central equation is Einstein’s, hf = φ + KE, read as: the photon’s energy pays the work function to escape the metal, and whatever is left becomes kinetic energy."
+    },
+    {
+      "kind": "para",
+      "text": "A very useful shortcut for these problems is that the photon energy in electronvolts is 1240 divided by the wavelength in nanometres. It saves a lot of arithmetic."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps3-photo",
+      "tone": "violet",
+      "title": "Threshold, work function and stopping potential",
+      "summary": "Use hf = φ + KE and the threshold condition hf₀ = φ to find energies, wavelengths and stopping potentials.",
+      "minutes": 19,
+      "keyPoints": [
+        "A photon frees an electron only if hf ≥ φ, the work function.",
+        "Einstein’s equation: KE_max = hf − φ.",
+        "The threshold condition is hf₀ = φ, so φ = hc/λ₀.",
+        "The stopping potential obeys eV₀ = hf − φ."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Every photoelectric question is a balance of energies. The incoming photon supplies hf. The metal keeps φ to let the electron out. The remainder appears as the electron's kinetic energy."
+        },
+        {
+          "kind": "formula",
+          "tex": "h f = \\varphi + KE_{max} \\qquad\\qquad E(\\text{eV}) = \\frac{1240}{\\lambda(\\text{nm})}",
+          "caption": "Einstein’s equation and the energy shortcut"
+        },
+        {
+          "kind": "para",
+          "text": "Only the fastest electrons have KE = hf − φ. Others lose a little more energy on the way out, so they emerge more slowly. That is why we speak of the maximum kinetic energy."
+        },
+        {
+          "kind": "worked",
+          "title": "Maximum kinetic energy of a photoelectron",
+          "given": "A metal has a work function of 2.3 eV. Light of frequency 9.0 × 10¹⁴ Hz shines on it. Find the maximum kinetic energy of the emitted electrons, in eV. Take h = 6.626 × 10⁻³⁴ J s and 1 eV = 1.60 × 10⁻¹⁹ J.",
+          "steps": [
+            "Photon energy: E = hf = 6.626 × 10⁻³⁴ × 9.0 × 10¹⁴ = 5.96 × 10⁻¹⁹ J.",
+            "In electronvolts: 5.96 × 10⁻¹⁹ / 1.60 × 10⁻¹⁹ = 3.73 eV.",
+            "Subtract the work function: KE = 3.73 − 2.3 = 1.43 eV."
+          ],
+          "result": "The fastest electrons leave with about 1.4 eV of kinetic energy."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "Why the photon must come whole",
+          "body": "An electron cannot slowly collect energy from many dim photons. It needs one single photon with enough energy in one go, which is exactly why there is a threshold frequency."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "ps3-mcq-001",
+      "topicId": "ps3-photo",
+      "question": "Why does the photoelectric effect need light to be made of photons rather than continuous waves?",
+      "options": [
+        "waves cannot carry any energy",
+        "a single electron has to receive the whole energy of one photon at once",
+        "photons are heavier than waves",
+        "waves travel too fast"
+      ],
+      "answer": 1,
+      "explanation": "Energy is handed over one photon at a time to one electron. A continuous wave would spread its energy thinly, so an electron could never gain enough at once, and there would be no sharp threshold."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps3-tf-001",
+      "topicId": "ps3-photo",
+      "question": "The threshold frequency of a metal depends on which metal it is.",
+      "answer": true,
+      "explanation": "Different metals hold their outer electrons more or less tightly, so φ differs. A metal with a large work function needs higher-frequency light to show any emission."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps3-num-001",
+      "topicId": "ps3-photo",
+      "question": "Find the energy, in eV, of a photon of wavelength 400 nm. Use E(eV) = 1240 / λ(nm).",
+      "answer": 3.1,
+      "tolerance": 0.15,
+      "unit": "eV",
+      "explanation": "E = 1240 / 400 = 3.1 eV. This is violet-blue light, just energetic enough to free electrons from some metals."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps3-num-002",
+      "topicId": "ps3-photo",
+      "question": "A metal has a threshold wavelength of 500 nm. Find its work function, in eV. Use E(eV) = 1240 / λ(nm).",
+      "answer": 2.48,
+      "tolerance": 0.15,
+      "unit": "eV",
+      "explanation": "φ = 1240 / 500 = 2.48 eV. Light of longer wavelength than 500 nm cannot free electrons from this metal."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps3-num-003",
+      "topicId": "ps3-photo",
+      "question": "Light of wavelength 300 nm falls on a metal of work function 2.0 eV. Find the maximum kinetic energy of the electrons, in eV. Use E(eV) = 1240 / λ(nm).",
+      "answer": 2.13,
+      "tolerance": 0.2,
+      "unit": "eV",
+      "explanation": "Photon energy = 1240 / 300 = 4.13 eV. Then KE = 4.13 − 2.0 = 2.13 eV."
+    },
+    {
+      "id": "ps3-mcq-002",
+      "topicId": "ps3-photo",
+      "question": "Increasing the intensity of light above the threshold increases:",
+      "options": [
+        "the energy of each emitted electron",
+        "the number of electrons emitted per second",
+        "the threshold frequency",
+        "the work function"
+      ],
+      "answer": 1,
+      "explanation": "Intensity means more photons per second, so more electrons are freed per second. The energy of each electron is set by the frequency, not the intensity."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps3-tf-002",
+      "topicId": "ps3-photo",
+      "question": "For a given frequency, the stopping potential is the same however bright the light is.",
+      "answer": true,
+      "explanation": "The stopping potential measures the energy of the fastest electrons, which depends only on frequency. Brighter light gives more electrons but not faster ones, so V₀ is unchanged."
+    },
+    {
+      "id": "ps3-mcq-003",
+      "topicId": "ps3-photo",
+      "question": "A graph of stopping potential V₀ against frequency f is a straight line. Its slope is:",
+      "options": [
+        "h",
+        "h / e",
+        "e / h",
+        "φ"
+      ],
+      "answer": 1,
+      "explanation": "From eV₀ = hf − φ we get V₀ = (h/e) f − φ/e. So the slope is h/e, and the intercept on the x-axis gives the threshold."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps3-num-004",
+      "topicId": "ps3-photo",
+      "question": "The work function of a metal is 3.0 eV. What is the longest wavelength of light, in nanometres, that can free an electron? Use E(eV) = 1240 / λ(nm).",
+      "answer": 413,
+      "tolerance": 20,
+      "unit": "nm",
+      "explanation": "λ = 1240 / 3.0 = 413 nm. Light of longer wavelength carries too little energy per photon to escape."
+    },
+    {
+      "kind": "multi",
+      "id": "ps3-multi-001",
+      "topicId": "ps3-photo",
+      "question": "Which of these are true of the photoelectric effect? Select all that apply.",
+      "options": [
+        "emission is almost instantaneous",
+        "there is a threshold frequency",
+        "electron energy increases with intensity",
+        "electron energy increases with frequency"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Emission is immediate, there is a threshold frequency, and the maximum electron energy rises with frequency. Intensity changes the number of electrons, not their energy."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps3-tf-003",
+      "topicId": "ps3-photo",
+      "question": "A very bright red lamp can free electrons from a metal that is not sensitive to red light.",
+      "answer": false,
+      "explanation": "Brightness means more photons, but each red photon still carries too little energy to reach the work function. If the frequency is below threshold, no emission occurs however bright the lamp."
+    },
+    {
+      "id": "ps3-mcq-004",
+      "topicId": "ps3-photo",
+      "question": "Two beams of the same colour fall on the same metal, one brighter than the other. Compared with the dimmer beam, the brighter beam produces electrons of:",
+      "options": [
+        "higher maximum energy",
+        "the same maximum energy but more of them",
+        "lower maximum energy",
+        "no energy at all"
+      ],
+      "answer": 1,
+      "explanation": "Same colour means the same photon energy, so the fastest electrons have the same energy. The brighter beam simply contains more photons and so frees more electrons per second."
+    }
+  ]
+}

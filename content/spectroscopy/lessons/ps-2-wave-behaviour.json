@@ -1,0 +1,205 @@
+{
+  "slug": "ps-2-wave-behaviour",
+  "label": "Problem set 2",
+  "title": "Problem set 2: Reflection, refraction, diffraction and polarisation",
+  "summary": "Practice the wave theory of Lesson 2: the law of reflection, Snell’s law, the change of speed and wavelength in a medium, and the meaning of diffraction, interference and polarisation.",
+  "source": "Written fresh; spectroscopy practice",
+  "order": 7,
+  "minutes": 24,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "This set practises the behaviour of light as a wave: how it reflects, how it bends on entering a new medium, and what diffraction, interference and polarisation tell us. The key equation is Snell’s law, n₁ sin θ₁ = n₂ sin θ₂."
+    },
+    {
+      "kind": "para",
+      "text": "Remember the definition of refractive index, n = c / v, where v is the speed of light in the medium. On entering a denser medium the light slows down, so it bends towards the normal."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps2-waves",
+      "tone": "teal",
+      "title": "Reflection, refraction and wave phenomena",
+      "summary": "Apply the law of reflection and Snell’s law, and reason about diffraction, interference and polarisation.",
+      "minutes": 19,
+      "keyPoints": [
+        "The angle of reflection equals the angle of incidence, both measured from the normal.",
+        "Snell’s law: n₁ sin θ₁ = n₂ sin θ₂.",
+        "Refractive index n = c / v; entering a denser medium slows the light and bends it towards the normal.",
+        "Diffraction, interference and polarisation are all wave effects."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Reflection keeps the speed and simply turns the ray. Refraction is more interesting: the speed changes, and because the frequency is fixed by the source, the wavelength must change too. The steeper the change of speed, the more the ray bends."
+        },
+        {
+          "kind": "formula",
+          "tex": "n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2 \\qquad\\qquad n = \\frac{c}{v}",
+          "caption": "Snell’s law and the refractive index"
+        },
+        {
+          "kind": "para",
+          "text": "Keep the frequency fixed when light enters a medium. The frequency is set by the source and never changes; what changes is the speed and, with it, the wavelength."
+        },
+        {
+          "kind": "worked",
+          "title": "Refraction at an air–water surface",
+          "given": "Light passes from air (n = 1.00) into water (n = 1.33) at an angle of incidence of 35°. Find the angle of refraction.",
+          "steps": [
+            "Snell’s law: 1.00 × sin 35° = 1.33 × sin θ₂.",
+            "sin θ₂ = sin 35° / 1.33 = 0.574 / 1.33 = 0.431.",
+            "θ₂ = sin⁻¹(0.431) = 25.5°."
+          ],
+          "result": "The ray bends towards the normal and enters the water at about 26°."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "A quick check",
+          "body": "When the second medium is denser (n₂ > n₁), the refracted ray is always closer to the normal than the incident ray. If your answer comes out larger than the incident angle, something has gone wrong."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "ps2-mcq-001",
+      "topicId": "ps2-waves",
+      "question": "Why does a pencil look bent where it enters a glass of water?",
+      "options": [
+        "light speeds up in water",
+        "light slows down and changes direction at the surface",
+        "light is absorbed by the water",
+        "the water emits its own light"
+      ],
+      "answer": 1,
+      "explanation": "Light travels more slowly in water than in air, so at the surface it changes direction: refraction. Your eye traces the bent ray back in a straight line, so the pencil looks kinked."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps2-tf-001",
+      "topicId": "ps2-waves",
+      "question": "The angle of reflection is equal to the angle of incidence.",
+      "answer": true,
+      "explanation": "This is the law of reflection, with both angles measured from the normal to the surface. It holds for every smooth surface."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps2-num-001",
+      "topicId": "ps2-waves",
+      "question": "Light enters glass (n = 1.50) from air (n = 1.00) at an angle of incidence of 40°. Find the angle of refraction, in degrees.",
+      "answer": 25.6,
+      "tolerance": 1.5,
+      "unit": "degrees",
+      "explanation": "sin θ₂ = (1.00/1.50) sin 40° = 0.429, so θ₂ = sin⁻¹(0.429) = 25.6°. The ray bends towards the normal."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps2-num-002",
+      "topicId": "ps2-waves",
+      "question": "A light wave of frequency 5.0 × 10¹⁴ Hz enters a medium in which its speed is 2.0 × 10⁸ m/s. Find its wavelength in the medium, in metres.",
+      "answer": 4e-07,
+      "tolerance": 2e-08,
+      "unit": "m",
+      "explanation": "The frequency is unchanged, so λ = v / f = (2.0 × 10⁸) / (5.0 × 10¹⁴) = 4.0 × 10⁻⁷ m."
+    },
+    {
+      "id": "ps2-mcq-002",
+      "topicId": "ps2-waves",
+      "question": "Diffraction is clearest when:",
+      "options": [
+        "the gap is much wider than the wavelength",
+        "the gap is comparable in size to the wavelength",
+        "there is no gap at all",
+        "the light is very intense"
+      ],
+      "answer": 1,
+      "explanation": "Waves spread noticeably when they pass through an opening about the same size as their wavelength. Through a very wide gap the spreading is negligible."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps2-tf-002",
+      "topicId": "ps2-waves",
+      "question": "Interference and diffraction are evidence that light behaves as a wave.",
+      "answer": true,
+      "explanation": "Both arise from the adding and cancelling of overlapping waves, and both are seen with light. They are among the strongest evidence for the wave theory."
+    },
+    {
+      "kind": "multi",
+      "id": "ps2-multi-001",
+      "topicId": "ps2-waves",
+      "question": "Which of these are wave phenomena? Select all that apply.",
+      "options": [
+        "reflection",
+        "polarisation",
+        "diffraction",
+        "the photoelectric effect"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Reflection, polarisation and diffraction are all described by the wave picture. The photoelectric effect belongs to the particle picture."
+    },
+    {
+      "id": "ps2-mcq-003",
+      "topicId": "ps2-waves",
+      "question": "Unpolarised light passes through a single polarising filter. The light that comes out is:",
+      "options": [
+        "still unpolarised",
+        "polarised in one plane",
+        "completely blocked",
+        "turned into sound"
+      ],
+      "answer": 1,
+      "explanation": "The filter passes only the component of the electric field along its axis, so the transmitted light oscillates in a single plane. A second filter at right angles would block it entirely."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps2-num-003",
+      "topicId": "ps2-waves",
+      "question": "Light of wavelength 600 nm in air enters glass of refractive index 1.50. Find its wavelength inside the glass, in nanometres. (The frequency is unchanged.)",
+      "answer": 400,
+      "tolerance": 20,
+      "unit": "nm",
+      "explanation": "The speed and wavelength both fall by the factor n, so λ(glass) = 600 / 1.50 = 400 nm. The colour does not change, because the frequency is the same."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps2-tf-003",
+      "topicId": "ps2-waves",
+      "question": "White light splits into colours through a prism because different colours refract by different amounts.",
+      "answer": true,
+      "explanation": "The refractive index depends slightly on wavelength, so each colour bends a little differently and the colours separate. This is dispersion."
+    },
+    {
+      "id": "ps2-mcq-004",
+      "topicId": "ps2-waves",
+      "question": "The refractive index n of a medium is defined as:",
+      "options": [
+        "n = v / c",
+        "n = c / v",
+        "n = c + v",
+        "n = c v"
+      ],
+      "answer": 1,
+      "explanation": "The refractive index is the ratio of the speed of light in a vacuum to its speed in the medium, n = c / v. A larger n means a slower speed and a denser medium."
+    },
+    {
+      "id": "ps2-mcq-005",
+      "topicId": "ps2-waves",
+      "question": "Two loudspeakers play the same steady tone, yet you find quiet spots in the room. The reason is:",
+      "options": [
+        "sound is polarised",
+        "the waves interfere destructively at some points",
+        "sound needs a medium",
+        "the speakers turn each other off"
+      ],
+      "answer": 1,
+      "explanation": "Where a crest of one wave meets a trough of the other they cancel, giving a quiet point. This destructive interference is a general property of waves, sound and light alike."
+    }
+  ]
+}
