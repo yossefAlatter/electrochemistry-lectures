@@ -1,0 +1,264 @@
+{
+  "slug": "problems-1",
+  "label": "Problem set 1",
+  "title": "Problem set 1: Overview of electrode processes",
+  "summary": "Quantitative practice on the basic vocabulary of the electrode: limiting currents, cell resistance, the RC time constant, capacitive currents, and half-wave potentials.",
+  "source": "Bard & Faulkner ch.1",
+  "order": 101,
+  "minutes": 30,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "These problems use the working relations of Chapter 1: the steady-state limiting current i = nFAmC, the solution resistance R = l/(kappa A), the RC time constant tau = R C_d, the capacitive current i_c = C_d (dE/dt), and the half-wave potential of a reversible couple."
+    },
+    {
+      "kind": "para",
+      "text": "Each problem is self-contained, and the values are chosen so the arithmetic is clean. Work in mol/cm3 for concentration when the area is in cm2, remembering that 1 M = 1e-3 mol/cm3."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps1-overview",
+      "tone": "amber",
+      "title": "Hint sheet: working relations",
+      "summary": "Quantitative practice on the basic vocabulary of the electrode: limiting currents, cell resistance, the RC time constant, capacitive currents, and half-wave potentials.",
+      "minutes": 25,
+      "keyPoints": [
+        "i_lim = nFAmC",
+        "R = l/(kappa A)",
+        "tau = R C",
+        "i_c = C (dE/dt)",
+        "log-plot slope = 0.05916/n V per decade"
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "These problems use the working relations of Chapter 1: the steady-state limiting current i = nFAmC, the solution resistance R = l/(kappa A), the RC time constant tau = R C_d, the capacitive current i_c = C_d (dE/dt), and the half-wave potential of a reversible couple."
+        },
+        {
+          "kind": "para",
+          "text": "Each problem is self-contained, and the values are chosen so the arithmetic is clean. Work in mol/cm3 for concentration when the area is in cm2, remembering that 1 M = 1e-3 mol/cm3."
+        },
+        {
+          "kind": "worked",
+          "title": "Limiting current at an RDE",
+          "given": "m = 0.010 cm/s, A = 0.30 cm2, C = 1.0e-5 mol/cm3, n = 1",
+          "steps": [
+            "Write the steady-state mass-transfer law: i = nFAmC.",
+            "Substitute nF = 96485 C/mol, A = 0.30 cm2, m = 0.010 cm/s, C = 1.0e-5 mol/cm3.",
+            "Multiply: 96485 x 0.30 x 0.010 x 1.0e-5 = 2.89e-3 A."
+          ],
+          "result": "i = 2.9 mA"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "numeric",
+      "id": "ps1-num-001",
+      "topicId": "ps1-overview",
+      "question": "A rotating disk electrode of area 0.30 cm2 reduces Fe3+ to Fe2+ from a solution where the mass-transfer coefficient is m = 0.010 cm/s and the concentration is 1.0e-5 mol/cm3. Using i = nFAmC with n = 1 and F = 96485 C/mol, calculate the limiting current in mA.",
+      "answer": 2.9,
+      "tolerance": 0.15,
+      "unit": "mA",
+      "explanation": "i = 1 x 96485 x 0.30 x 0.010 x 1.0e-5 = 2.89e-3 A, about 2.9 mA."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps1-num-002",
+      "topicId": "ps1-overview",
+      "question": "A 0.10 cm2 planar electrode sits 3.0 cm from a large counter electrode in a solution of conductivity 0.013 ohm-1 cm-1. Calculate the solution resistance between them in ohms, using R = l/(kappa A).",
+      "answer": 2308,
+      "tolerance": 120,
+      "unit": "ohm",
+      "explanation": "R = 3.0/(0.013 x 0.10) = 3.0/0.0013 = 2308 ohm, about 2.3 kohm."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps1-num-003",
+      "topicId": "ps1-overview",
+      "question": "An electrode of area 0.10 cm2 has a double-layer capacitance of 20 uF/cm2, so its total capacitance is 2.0 uF. If the uncompensated resistance is 10 ohm, what is the RC time constant in microseconds?",
+      "answer": 20,
+      "tolerance": 1,
+      "unit": "us",
+      "explanation": "tau = RC = 10 x 2.0e-6 = 2.0e-5 s = 20 us."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps1-num-004",
+      "topicId": "ps1-overview",
+      "question": "For the cell above (tau = 20 us), how long in microseconds is needed for double-layer charging to be 95 percent complete? (Use t = 3.0 tau.)",
+      "answer": 60,
+      "tolerance": 3,
+      "unit": "us",
+      "explanation": "t = 3.0 x 20 = 60 us. Charging is essentially complete after about three time constants."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps1-num-005",
+      "topicId": "ps1-overview",
+      "question": "A 2.0 uF electrode is swept linearly at 1.0 V/s. Neglecting transients, what non-faradaic (capacitive) current flows, in microamperes? (i_c = C dE/dt.)",
+      "answer": 2.0,
+      "tolerance": 0.1,
+      "unit": "uA",
+      "explanation": "i_c = C (dE/dt) = 2.0e-6 x 1.0 = 2.0e-6 A = 2.0 uA. The capacitive current grows with scan rate."
+    },
+    {
+      "id": "ps1-mcq-001",
+      "topicId": "ps1-overview",
+      "quick": true,
+      "question": "At a rotating disk electrode, the limiting current is reached when:",
+      "options": [
+        "The electrode is fully charged",
+        "Mass transfer supplies the reactant as fast as it can react",
+        "The scan rate is zero",
+        "The reference electrode is disconnected"
+      ],
+      "answer": 1,
+      "explanation": "At the limiting current the surface concentration falls to zero and the rate is set entirely by mass transfer, so i = nFAmC."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps1-num-006",
+      "topicId": "ps1-overview",
+      "question": "A mercury electrode of area 1.0 cm2 has a double-layer capacitance of 20 uF/cm2. How much charge, in nanocoulombs, is needed to change its potential by 1 mV? (Q = C dE.)",
+      "answer": 20,
+      "tolerance": 1,
+      "unit": "nC",
+      "explanation": "Q = 20e-6 F x 1e-3 V = 2.0e-8 C = 20 nC. Only a tiny charge moves the potential by 1 mV."
+    },
+    {
+      "id": "ps1-mcq-002",
+      "topicId": "ps1-overview",
+      "quick": true,
+      "question": "The best way to reduce the uncompensated-resistance iR drop between working and reference electrodes is to:",
+      "options": [
+        "Increase the scan rate",
+        "Place the reference tip (Luggin capillary) close to the working electrode",
+        "Add more analyte",
+        "Use a larger counter electrode"
+      ],
+      "answer": 1,
+      "explanation": "Bringing the reference tip close shortens the path through solution, so R_u and the iR drop both fall."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps1-tf-001",
+      "topicId": "ps1-overview",
+      "quick": true,
+      "question": "With no current flowing, the interior of a conducting phase is an equipotential volume.",
+      "answer": true,
+      "explanation": "If an internal field existed, the mobile carriers would move to cancel it. With no current the field is zero and the potential is uniform."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps1-tf-002",
+      "topicId": "ps1-overview",
+      "question": "A nernstian (electrochemically reversible) half-reaction follows the Nernst equation.",
+      "answer": true,
+      "explanation": "Nernstian means the potential is linked to concentration by the Nernst equation; it is the fast-electron-transfer limit."
+    },
+    {
+      "kind": "multi",
+      "id": "ps1-multi-001",
+      "topicId": "ps1-overview",
+      "question": "Which of the following are real mechanisms for charging an electrode phase? Select all that apply.",
+      "options": [
+        "Pumping electrons in or out with a power supply",
+        "Chemical equilibration with a redox couple in solution",
+        "Heating the cell to red heat",
+        "Randomly varying the reference electrode"
+      ],
+      "answers": [
+        0,
+        1
+      ],
+      "explanation": "Pumping electrons with a power supply and equilibrating chemically with a redox couple are the two mechanisms discussed. Heating is not a charging mechanism."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps1-num-007",
+      "topicId": "ps1-overview",
+      "question": "For a reversible system the log plot has a slope of 2.303RT/(nF), equal to 0.05916/n volts per decade at 25 C. What is the slope, in volts per decade, for n = 2?",
+      "answer": 0.0296,
+      "tolerance": 0.001,
+      "unit": "V/decade",
+      "explanation": "Slope = 0.05916/2 = 0.02958 V per decade, about 0.0296 V."
+    },
+    {
+      "id": "ps1-mcq-003",
+      "topicId": "ps1-overview",
+      "quick": true,
+      "question": "For a reversible soluble/soluble couple, the half-wave potential E1/2 is close to:",
+      "options": [
+        "The formal potential E0-prime of the couple",
+        "Zero always",
+        "The potential of the reference electrode",
+        "The standard potential of the counter electrode"
+      ],
+      "answer": 0,
+      "explanation": "When oxidized and reduced forms diffuse similarly, E1/2 is close to the formal potential E0-prime."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps1-num-008",
+      "topicId": "ps1-overview",
+      "question": "A current of 2.9 mA flows for 20 s. Calculate the charge passed in mC.",
+      "answer": 58,
+      "tolerance": 4,
+      "unit": "mC",
+      "explanation": "Q = i t = 2.9e-3 x 20 = 5.8e-2 C = 58 mC."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps1-num-009",
+      "topicId": "ps1-overview",
+      "question": "A limiting current of 2.9 mA is measured on an electrode of area 0.30 cm2. Calculate the current density in mA/cm2.",
+      "answer": 9.7,
+      "tolerance": 0.7,
+      "unit": "mA/cm2",
+      "explanation": "j = i/A = 2.9e-3/0.30 = 9.7e-3 A/cm2 = 9.7 mA/cm2."
+    },
+    {
+      "id": "ps1-mcq-004",
+      "topicId": "ps1-overview",
+      "quick": true,
+      "question": "A good counter electrode in a three-electrode cell should be:",
+      "options": [
+        "Large, inert and able to pass the required current",
+        "Small and easily polarised",
+        "Made of the analyte",
+        "Disconnected from the circuit"
+      ],
+      "answer": 0,
+      "explanation": "The counter electrode must pass whatever current the working electrode draws without limiting the cell, so it is made large and inert."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps1-tf-003",
+      "topicId": "ps1-overview",
+      "question": "The capacitive (non-faradaic) current is proportional to the scan rate.",
+      "answer": true,
+      "explanation": "Because i_c = C (dE/dt), a faster scan drives more charging current, which is why capacitive current is a problem at high scan rates."
+    },
+    {
+      "kind": "multi",
+      "id": "ps1-multi-002",
+      "topicId": "ps1-overview",
+      "question": "Which techniques measure the cell current directly? Select all that apply.",
+      "options": [
+        "Chronoamperometry",
+        "Cyclic voltammetry",
+        "Polarography",
+        "Potentiometry with a high-impedance voltmeter"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Chronoamperometry, cyclic voltammetry and polarography all record current. Potentiometry measures potential while drawing essentially no current."
+    }
+  ]
+}

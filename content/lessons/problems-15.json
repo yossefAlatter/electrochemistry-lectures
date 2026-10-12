@@ -1,0 +1,230 @@
+{
+  "slug": "problems-15",
+  "label": "Problem set 15",
+  "title": "Problem set 15: Electrochemical instrumentation",
+  "summary": "Practice with the potentiostat and its building blocks: iR drop, current measurement, time constants, iR compensation and noise reduction.",
+  "source": "Bard & Faulkner ch.15",
+  "order": 115,
+  "minutes": 26,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "A potentiostat sets the working-electrode potential relative to a reference while the counter electrode passes the current. Key relations are the iR drop V = iR, the current-to-voltage conversion V = i Rf, and the response time tau = RC."
+    },
+    {
+      "kind": "para",
+      "text": "Positive feedback compensates most of the iR drop but cannot reach 100 percent without instability."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps15-inst",
+      "tone": "amber",
+      "title": "Hint sheet: instrumentation relations",
+      "summary": "Practice with the potentiostat and its building blocks: iR drop, current measurement, time constants, iR compensation and noise reduction.",
+      "minutes": 21,
+      "keyPoints": [
+        "iR drop = i R_u",
+        "Current-to-voltage: V = i Rf",
+        "Time constant tau = RC",
+        "Positive-feedback iR compensation",
+        "Reference in a high-impedance sense circuit"
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A potentiostat sets the working-electrode potential relative to a reference while the counter electrode passes the current. Key relations are the iR drop V = iR, the current-to-voltage conversion V = i Rf, and the response time tau = RC."
+        },
+        {
+          "kind": "para",
+          "text": "Positive feedback compensates most of the iR drop but cannot reach 100 percent without instability."
+        },
+        {
+          "kind": "worked",
+          "title": "iR drop across a cell",
+          "given": "i = 1.0 mA, R_u = 100 ohm",
+          "steps": [
+            "Use V = i R.",
+            "V = 1.0e-3 x 100.",
+            "V = 0.1 V."
+          ],
+          "result": "iR drop = 0.1 V"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "numeric",
+      "id": "ps15-num-001",
+      "topicId": "ps15-inst",
+      "question": "A current of 1.0 mA flows through an uncompensated resistance of 100 ohm. Calculate the iR drop in volts.",
+      "answer": 0.1,
+      "tolerance": 0.01,
+      "unit": "V",
+      "explanation": "iR = 1.0e-3 x 100 = 0.1 V. This error adds directly to the measured working-electrode potential."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps15-num-002",
+      "topicId": "ps15-inst",
+      "question": "A current-to-voltage converter has a feedback resistor of 1.0 Mohm. What output voltage in volts corresponds to an input current of 1.0 uA? (V = i Rf.)",
+      "answer": 1.0,
+      "tolerance": 0.05,
+      "unit": "V",
+      "explanation": "V = 1.0e-6 x 1.0e6 = 1.0 V."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps15-num-003",
+      "topicId": "ps15-inst",
+      "question": "A potentiostat has an effective series resistance of 1.0 Mohm and the cell capacitance is 10 pF. Calculate the response time constant in microseconds (tau = RC).",
+      "answer": 10,
+      "tolerance": 1,
+      "unit": "us",
+      "explanation": "tau = 1.0e6 x 10e-12 = 1.0e-5 s = 10 us."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps15-num-004",
+      "topicId": "ps15-inst",
+      "question": "If the total iR drop is 0.1 V, what residual iR error in volts remains after 90 percent positive-feedback compensation?",
+      "answer": 0.01,
+      "tolerance": 0.002,
+      "unit": "V",
+      "explanation": "Residual = 10 percent of 0.1 V = 0.010 V. Positive feedback can never be pushed to 100 percent without instability."
+    },
+    {
+      "id": "ps15-mcq-001",
+      "topicId": "ps15-inst",
+      "quick": true,
+      "question": "In a three-electrode cell the potentiostat controls the potential of the:",
+      "options": [
+        "Working electrode relative to the reference electrode",
+        "Counter electrode relative to itself",
+        "Reference electrode relative to the counter electrode",
+        "Solution relative to the counter electrode"
+      ],
+      "answer": 0,
+      "explanation": "The working electrode potential is measured against the reference and held at the set value; the counter electrode passes whatever current is needed."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps15-tf-001",
+      "topicId": "ps15-inst",
+      "quick": true,
+      "question": "In a three-electrode cell the faradaic current flows between the working and counter electrodes, not through the reference electrode.",
+      "answer": true,
+      "explanation": "The reference electrode is kept in a high-impedance sense circuit so almost no current flows through it, preserving its stable potential."
+    },
+    {
+      "id": "ps15-mcq-002",
+      "topicId": "ps15-inst",
+      "quick": true,
+      "question": "Positive feedback iR compensation works by:",
+      "options": [
+        "Increasing the applied voltage to offset the measured iR drop",
+        "Grounding the reference electrode",
+        "Removing the supporting electrolyte",
+        "Reducing the cell capacitance to zero"
+      ],
+      "answer": 0,
+      "explanation": "The instrument senses the cell current, multiplies it by a fraction of the measured resistance and adds that voltage back, cancelling most of the iR drop."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps15-tf-002",
+      "topicId": "ps15-inst",
+      "question": "Overcompensating the iR drop with positive feedback can make the potentiostat unstable and oscillate.",
+      "answer": true,
+      "explanation": "Pushing compensation beyond 100 percent creates positive feedback that the control loop cannot handle, so the system oscillates."
+    },
+    {
+      "kind": "multi",
+      "id": "ps15-multi-001",
+      "topicId": "ps15-inst",
+      "question": "Which are good practices in electrochemical instrumentation? Select all that apply.",
+      "options": [
+        "Use a Faraday cage and shielding to reduce noise",
+        "Keep the reference tip close to the working electrode",
+        "Use a high-input-impedance reference sense circuit",
+        "Connect the reference electrode directly to carry the cell current"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Shielding reduces noise, a close reference tip reduces iR, and a high-impedance sense circuit keeps current off the reference. Carrying the cell current through the reference would destroy its stable potential."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps15-num-005",
+      "topicId": "ps15-inst",
+      "question": "An instrument can resolve currents to 1.0 pA. If the full-scale current is 1.0 mA, what is the dynamic range as a factor (full scale / resolution)?",
+      "answer": 1000000000.0,
+      "tolerance": 100000000.0,
+      "explanation": "Dynamic range = 1.0e-3/1.0e-12 = 1.0e9, i.e. nine orders of magnitude."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps15-num-006",
+      "topicId": "ps15-inst",
+      "question": "A current-to-voltage converter has a feedback resistor of 1.0 Gohm. What output voltage in volts corresponds to an input current of 10 nA? (V = i Rf.)",
+      "answer": 10,
+      "tolerance": 0.6,
+      "unit": "V",
+      "explanation": "V = 10e-9 x 1.0e9 = 10 V."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps15-num-007",
+      "topicId": "ps15-inst",
+      "question": "A current of 10 uA flows through an uncompensated resistance of 1.0 kohm. Calculate the iR drop in volts.",
+      "answer": 0.01,
+      "tolerance": 0.002,
+      "unit": "V",
+      "explanation": "iR = 10e-6 x 1.0e3 = 1.0e-2 V = 10 mV."
+    },
+    {
+      "id": "ps15-mcq-003",
+      "topicId": "ps15-inst",
+      "quick": true,
+      "question": "A potentiostat maintains the working-electrode potential by:",
+      "options": [
+        "Feeding back a current through the counter electrode so the reference senses the set potential",
+        "Grounding the counter electrode",
+        "Disconnecting the reference",
+        "Heating the cell"
+      ],
+      "answer": 0,
+      "explanation": "The control amplifier drives the counter electrode until the working electrode, sensed against the reference, sits at the set potential."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps15-tf-003",
+      "topicId": "ps15-inst",
+      "question": "A reference electrode is deliberately kept out of the current-carrying path to preserve its stable potential.",
+      "answer": true,
+      "explanation": "Because the reference is sensed with a high-impedance input, negligible current flows through it, so its potential does not drift during the experiment."
+    },
+    {
+      "kind": "multi",
+      "id": "ps15-multi-002",
+      "topicId": "ps15-inst",
+      "question": "Which reduce noise in a sensitive electrochemical measurement? Select all that apply.",
+      "options": [
+        "A Faraday cage around the cell",
+        "Short, shielded leads",
+        "A clean, stable reference electrode",
+        "Loosely twisted, unshielded wires across a power supply"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Shielding, short leads and a stable reference all reduce noise. Unshielded wiring near a power supply adds noise rather than removing it."
+    }
+  ]
+}

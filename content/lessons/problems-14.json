@@ -1,0 +1,229 @@
+{
+  "slug": "problems-14",
+  "label": "Problem set 14",
+  "title": "Problem set 14: Electroactive layers and modified electrodes",
+  "summary": "Practice with surface-confined redox species: coverage from peak charge, scan-rate dependence, peak width, self-assembled monolayers and charge hopping.",
+  "source": "Bard & Faulkner ch.14",
+  "order": 114,
+  "minutes": 26,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "A chemically modified electrode carries an intentional layer of redox, catalytic or recognition groups. For a surface-confined couple the peak current follows ip = n^2 F^2 Gamma A v/(4RT), proportional to scan rate, with an ideal half-width of 90.6/n mV."
+    },
+    {
+      "kind": "para",
+      "text": "Integrating the peak charge gives the coverage Gamma = Q/(nFA), and in polymer films charge can hop between redox sites."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps14-mod",
+      "tone": "amber",
+      "title": "Hint sheet: modified-electrode relations",
+      "summary": "Practice with surface-confined redox species: coverage from peak charge, scan-rate dependence, peak width, self-assembled monolayers and charge hopping.",
+      "minutes": 21,
+      "keyPoints": [
+        "Gamma = Q/(nFA)",
+        "Surface wave: ip = n^2 F^2 Gamma A v/(4RT)",
+        "Surface wave ip proportional to v",
+        "Half-width = 90.6/n mV",
+        "SAMs on gold"
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A chemically modified electrode carries an intentional layer of redox, catalytic or recognition groups. For a surface-confined couple the peak current follows ip = n^2 F^2 Gamma A v/(4RT), proportional to scan rate, with an ideal half-width of 90.6/n mV."
+        },
+        {
+          "kind": "para",
+          "text": "Integrating the peak charge gives the coverage Gamma = Q/(nFA), and in polymer films charge can hop between redox sites."
+        },
+        {
+          "kind": "worked",
+          "title": "Surface coverage from peak area",
+          "given": "Q = 10.0 uC, A = 1.0 cm2, n = 1",
+          "steps": [
+            "Use Gamma = Q/(nFA).",
+            "Gamma = 10.0e-6/(1 x 96485 x 1.0).",
+            "Gamma = 1.04e-10 mol/cm2."
+          ],
+          "result": "Gamma = 1.04e-10 mol/cm2"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "numeric",
+      "id": "ps14-num-001",
+      "topicId": "ps14-mod",
+      "question": "A surface-confined redox couple gives a peak of area 10.0 uC on a 1.0 cm2 electrode with n = 1. Calculate the surface coverage in mol/cm2 (Gamma = Q/(nFA), F = 96485 C/mol).",
+      "answer": 1.04e-10,
+      "tolerance": 1e-11,
+      "unit": "mol/cm2",
+      "explanation": "Gamma = 10.0e-6/(1 x 96485 x 1.0) = 1.04e-10 mol/cm2."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps14-num-002",
+      "topicId": "ps14-mod",
+      "question": "For an ideal surface wave the peak current is ip = n^2 F^2 Gamma A v/(4RT). Calculate ip in uA for n = 1, Gamma = 1.0e-10 mol/cm2, A = 1.0 cm2, v = 0.10 V/s, T = 298.15 K.",
+      "answer": 9.39,
+      "tolerance": 1.0,
+      "unit": "uA",
+      "explanation": "ip = (96485^2 x 1.0e-10 x 1.0 x 0.10)/(4 x 8.314 x 298.15) = 0.0931/9913 = 9.39e-6 A = 9.39 uA."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps14-num-003",
+      "topicId": "ps14-mod",
+      "question": "For an ideal surface-confined wave the peak current is proportional to scan rate v (not v^(1/2)). If the scan rate is doubled, by what factor does ip change?",
+      "answer": 2.0,
+      "tolerance": 0.15,
+      "explanation": "For a surface wave ip proportional to v, so doubling the scan rate doubles the peak current."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps14-num-004",
+      "topicId": "ps14-mod",
+      "question": "The ideal full width at half maximum of a surface wave is 90.6/n mV. Calculate this width in mV for n = 2.",
+      "answer": 45.3,
+      "tolerance": 3,
+      "unit": "mV",
+      "explanation": "Width = 90.6/2 = 45.3 mV. This narrow, symmetrical wave is a signature of a surface-confined couple."
+    },
+    {
+      "id": "ps14-mcq-001",
+      "topicId": "ps14-mod",
+      "quick": true,
+      "question": "The defining kinetic signature of a surface-confined redox couple in cyclic voltammetry is that the peak current is proportional to:",
+      "options": [
+        "The square root of the scan rate",
+        "The scan rate itself",
+        "The square of the scan rate",
+        "The scan rate to the power minus one"
+      ],
+      "answer": 1,
+      "explanation": "With no diffusion to the surface species, ip is proportional to v, not v^(1/2). This distinguishes a surface wave from a diffusion-controlled one."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps14-tf-001",
+      "topicId": "ps14-mod",
+      "quick": true,
+      "question": "Integrating the charge under a surface wave gives the surface coverage Gamma of the redox species.",
+      "answer": true,
+      "explanation": "The total charge is nFA Gamma, so the peak area directly measures how many moles per unit area are attached to the electrode."
+    },
+    {
+      "id": "ps14-mcq-002",
+      "topicId": "ps14-mod",
+      "quick": true,
+      "question": "A self-assembled monolayer (SAM) on a gold electrode is often used to:",
+      "options": [
+        "Attach well-defined redox or recognition groups at a controlled coverage",
+        "Melt the gold",
+        "Block all electron transfer permanently",
+        "Change the metal to a semiconductor"
+      ],
+      "answer": 0,
+      "explanation": "Thiols assemble into a well-ordered monolayer on gold, providing a tunable, reproducible platform for attaching redox centres, catalysts or recognition elements."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps14-tf-002",
+      "topicId": "ps14-mod",
+      "question": "In a redox polymer film, charge can move by electron self-exchange (hopping) between adjacent redox sites.",
+      "answer": true,
+      "explanation": "Electrons hop between neighbouring redox centres in the film, so the film behaves as an electron-transfer medium, with an apparent diffusion coefficient for charge transport."
+    },
+    {
+      "kind": "multi",
+      "id": "ps14-multi-001",
+      "topicId": "ps14-mod",
+      "question": "Which are characteristics of chemically modified electrodes? Select all that apply.",
+      "options": [
+        "A deliberately attached layer of redox, catalytic or recognition species",
+        "Peak currents for surface species proportional to scan rate",
+        "Possible catalysis of solution species",
+        "Automatic loss of all electrochemical response"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Modified electrodes carry an intentional surface layer, give v-proportional peaks for confined species, and can catalyse reactions of solution analytes. They do not lose their response."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps14-num-005",
+      "topicId": "ps14-mod",
+      "question": "If a monolayer holds 5.0e-11 mol/cm2 of a one-electron redox species on a 1.0 cm2 electrode, what charge in uC is passed in oxidising the whole layer? (Q = nF Gamma A.)",
+      "answer": 4.83,
+      "tolerance": 0.5,
+      "unit": "uC",
+      "explanation": "Q = 1 x 96485 x 5.0e-11 x 1.0 = 4.83e-6 C = 4.83 uC."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps14-num-006",
+      "topicId": "ps14-mod",
+      "question": "A surface-confined couple gives a peak of area 5.0 uC on a 1.0 cm2 electrode with n = 2. Calculate the coverage in mol/cm2.",
+      "answer": 2.59e-11,
+      "tolerance": 3e-12,
+      "unit": "mol/cm2",
+      "explanation": "Gamma = 5.0e-6/(2 x 96485 x 1.0) = 2.59e-11 mol/cm2."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps14-num-007",
+      "topicId": "ps14-mod",
+      "question": "For a surface-confined redox species the peak current is proportional to scan rate v. If the scan rate is increased by a factor of 4, by what factor does ip change?",
+      "answer": 4.0,
+      "tolerance": 0.3,
+      "explanation": "Since ip is proportional to v for a surface species, a factor of 4 in v gives a factor of 4 in ip (unlike v^(1/2) for a diffusing species)."
+    },
+    {
+      "id": "ps14-mcq-003",
+      "topicId": "ps14-mod",
+      "quick": true,
+      "question": "A narrow, symmetric peak with a half-width of about 90.6/n mV and ip proportional to v indicates:",
+      "options": [
+        "A surface-confined (adsorbed) redox couple",
+        "A diffusion-controlled solution species",
+        "A completely irreversible reaction",
+        "No reaction at all"
+      ],
+      "answer": 0,
+      "explanation": "These are the signatures of an ideal surface wave: a symmetric, narrow peak growing linearly with scan rate."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps14-tf-003",
+      "topicId": "ps14-mod",
+      "question": "Self-assembled monolayers form spontaneously when thiols adsorb on a gold surface.",
+      "answer": true,
+      "explanation": "The strong gold-sulfur bond drives thiols to organise into a dense, ordered monolayer, a convenient platform for modifying electrodes."
+    },
+    {
+      "kind": "multi",
+      "id": "ps14-multi-002",
+      "topicId": "ps14-mod",
+      "question": "Which are uses of modified electrodes? Select all that apply.",
+      "options": [
+        "Immobilising a catalyst at the surface",
+        "Attaching a redox mediator",
+        "Building recognition layers for sensors",
+        "Melting the electrode metal"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Modified electrodes immobilise catalysts, mediators and recognition groups. Melting the metal is not a purpose of surface modification."
+    }
+  ]
+}

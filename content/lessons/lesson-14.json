@@ -1,0 +1,705 @@
+{
+  "slug": "lesson-14",
+  "label": "Lesson 14",
+  "title": "Batteries, fuel cells and devices",
+  "summary": "Corrosion was the cell we did not mean to build. This lesson turns the entire pedagogy around and looks at cells we build on purpose: batteries, which store reactants in a can, fuel cells, which feed reactants across a membrane, and supercapacitors, which store charge in the double layer itself. The lesson covers what each one stores, how to count its capacity and energy, and what sets its rate.",
+  "order": 14,
+  "minutes": 55,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "A battery is a thermodynamic proposition with a delivery schedule. Its open-circuit voltage is set by the chemistry of the couple inside; its capacity is set by how much reactant fits in the can; its lifetime is set by how well the couple repeats. Get all three right and you have a device. Get one wrong and you have a laboratory curiosity."
+    },
+    {
+      "kind": "para",
+      "text": "Following Bagotsky ch.19-21 we first ask what a battery is actually storing, then count capacity and energy like a chemist, then survey the three families - primary, storage, and lithium - plus supercapacitors, and close with fuel cells and the sensors that turn the same interfacial physics into measurement."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The one-sentence summary of this lesson",
+      "body": "A battery is a confined cell, a fuel cell is a fed cell, and a supercapacitor is a charged double layer: the same thermodynamics and interfacial physics, packaged three different ways."
+    }
+  ],
+  "sections": [
+    {
+      "id": "what-a-battery-stores",
+      "tone": "azure",
+      "title": "What a battery actually stores",
+      "minutes": 7,
+      "summary": "A battery is not a box of electrons. It is a box of chemical free energy, packaged as two reactants separated by an insulator, ready to run a cell reaction on demand.",
+      "keyPoints": [
+        "A battery stores chemical free energy; its terminals are where that free energy is offered as voltage.",
+        "A cell contains an anode reactant, a cathode reactant, and an electrolyte that carries ions but blocks electrons.",
+        "Open-circuit voltage is the free energy of the cell reaction per unit charge; capacity is the total charge the reactants can deliver.",
+        "A battery's energy density is limited by how much reactant mass and how much voltage its chemistry can combine."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Shake a dead battery and it is still full of material. What left is the *ability* of that material to react usefully. A battery stores free energy, not charge: the charge in a phone battery's terminals is a rounding error. What actually flows is electrons driven by the chemical potential difference between two reactants that want very different things - one to give electrons, one to take them."
+        },
+        {
+          "kind": "para",
+          "text": "A single cell has three parts. The **anode** holds the reductant - the fuel; it gives up electrons when the circuit is closed. The **cathode** holds the oxidant; it accepts them. Between them is an **electrolyte** that conducts ions but not electrons, so the electrons are forced through the external circuit to get from anode to cathode. That one design decision - ionic conduction, electronic insulation - is what makes the battery a battery."
+        },
+        {
+          "kind": "para",
+          "text": "The open-circuit voltage is set by the two half-reactions through ΔG = -nFE, exactly as Lesson 3 taught. The capacity - how many coulombs the cell can deliver before the reactants are used up - is set by the amount of reactant packed in. The watt-hours of a battery are the product of the two, which is why metals with a high cell voltage *and* a light atomic mass, like lithium, keep reappearing in the designs."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "Energy = voltage × charge",
+          "body": "A battery is specified by three numbers: the voltage it can sustain, the charge it can deliver (capacity), and the rate at which it can deliver it (power). A small battery can have huge power; a big one can be very slow. The three together define the device."
+        }
+      ]
+    },
+    {
+      "id": "capacity-rate-life",
+      "tone": "indigo",
+      "title": "Capacity, rate and life",
+      "minutes": 8,
+      "summary": "Three numbers describe any practical battery: how much charge it can deliver, how fast, and how many times. Each comes from a different corner of Lesson 4 and Lesson 5.",
+      "keyPoints": [
+        "Capacity is the total charge deliverable, counted in ampere-hours; it is finite because the reactants are finite.",
+        "Rate capability is where kinetics and mass transfer say how much of that capacity is available at a given discharge current.",
+        "Cycle life is how many charge-discharge round trips before side reactions and mechanical strain erode the capacity.",
+        "The C-rate normalises current: a 1C discharge empties the cell in one hour."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Ask a battery datasheet three questions. **Capacity**: how many ampere-hours can it deliver before the voltage collapses? That number is just the amount of reactant in the can, expressed in coulombs. **Rate**: at what current can it deliver that capacity? A cell that passes 2 A cannot pass 20 A without its voltage sagging under overpotential and mass-transfer limits. **Life**: how many times can it be filled and emptied before it fades? Each cycle leaks a little through side reactions, and a little more through the mechanical breathing of the electrodes."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "C-rate: the speedometer",
+          "body": "Discharge current is best quoted as a C-rate: 1C empties the nominal capacity in one hour, 2C in half an hour, C/2 in two hours. It puts a phone cell and a grid-scale cell on the same scale."
+        },
+        {
+          "kind": "para",
+          "text": "Rate capability is where the earlier lessons return. A cell's voltage under load is its open-circuit voltage minus activation overpotentials at both electrodes, minus the ohmic drop through the electrolyte, minus the concentration gradients of Lesson 4. Drain the cell at 1C and all four terms are small. Drain it at 10C and the overpotentials balloon, the voltage collapses, and the usable capacity plummets - even though the reactants are still in there."
+        },
+        {
+          "kind": "formula",
+          "tex": "V_{\\text{battery}} = E_{\\text{OCV}} - \\eta_{\\text{act}} - i R_{\\Omega} - \\eta_{\\text{conc}}",
+          "caption": "The voltage of a working battery is its open-circuit voltage minus three losses. Better kinetics, lower resistance and stronger stirring all raise the voltage at a given rate - which is why electrode engineering is battery engineering."
+        }
+      ]
+    },
+    {
+      "id": "primary-storage-lithium",
+      "tone": "violet",
+      "title": "The three families of battery",
+      "minutes": 8,
+      "summary": "Primary cells run once and are discarded; storage cells are designed to be reversed; lithium-ion cells do the same trick with the lightest, most energetic alkali metal available.",
+      "keyPoints": [
+        "Primary batteries deliver one discharge; the reaction is not designed to be driven backward.",
+        "Secondary (storage) batteries are built so the reaction can be reversed: charge, discharge, repeat.",
+        "Lithium-ion changes the mechanism: rather than dissolving, Li+ ions shuttle between two solid hosts and insert or remove themselves.",
+        "Lithium's low equivalent weight and high cell voltage make it the densest practical storage chemistry."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A primary battery is built to be spent. Alkaline AAs, zinc-carbon torches, disposable lithium coin cells: the reaction is chosen for cost and shelf life, not for reversibility. That makes them cheap and long-lived on the shelf, and unhelpful once they are flat."
+        },
+        {
+          "kind": "para",
+          "text": "A secondary, or storage, battery is the same idea with the arrow turned around. Lead-acid in a car, NiMH in a drill, and Li-ion in a phone all accept charge back from the charger and return it on demand. The chemistry must therefore be *reversible*: the discharge products have to stay where they formed, close enough to the electrode to be converted back, cycle after cycle, without rebuilding the cell."
+        },
+        {
+          "kind": "para",
+          "text": "Lithium-ion made this reversibility elegant. In a Li-ion cell there is no dissolving metal. Li+ ions sit inside two solid host lattices - typically graphite at the anode and a lithium metal oxide at the cathode. On discharge the Li+ ions leave the graphite, cross the electrolyte, and insert into the oxide; on charge, the electric field pulls them back. The reaction is purely 'shuttling', and shuttling is very clean, which is why the cells last hundreds of cycles."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "Intercalation",
+          "body": "Inserting a guest ion into a host lattice is called intercalation. The host keeps its structure; the guest slides between its layers. That mechanical stability is the deep reason lithium-ion cells survive so many cycles - the electrode does not dissolve and re-grow each time."
+        }
+      ]
+    },
+    {
+      "id": "supercapacitors",
+      "tone": "rose",
+      "title": "Supercapacitors: the charged double layer, productised",
+      "minutes": 7,
+      "summary": "A supercapacitor is the double layer from Lesson 6 scaled into a device: enormous area, tiny separation, and charge stored electrostatically rather than chemically.",
+      "keyPoints": [
+        "A supercapacitor stores charge in two double layers back-to-back across a porous carbon with surface area measured in square metres per gram.",
+        "No chemical reaction means no degradation of the electrode: cycles in the hundreds of thousands are routine.",
+        "It delivers power, not energy: it charges and discharges in seconds, but its watt-hours are a fraction of a battery's.",
+        "Hybrid devices combine a battery's energy density with a supercapacitor's power and life."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Go back to the capacitor. Two plates, a dielectric, and charge stored by keeping charges apart. A supercapacitor is the same device with the separation shrunk to a nanometre and the area blown up to hundreds of square metres. The 'plates' are two electrodes of activated carbon; the 'dielectric' is the double-layer structure of Lesson 6; and the ionic electrolyte plays the role of the material that dissipates into the gap. Because C grows with area and shrinks with separation, both changes chase capacitance upward."
+        },
+        {
+          "kind": "formula",
+          "tex": "C = \\frac{\\varepsilon A}{d}",
+          "caption": "Capacitance. Supercapacitors maximise it by combining a huge effective area from a nanoporous carbon with a separation set by the ion-size scale of the double layer."
+        },
+        {
+          "kind": "para",
+          "text": "The physics buys two things. First, speed: charging a double layer takes milliseconds, so a supercapacitor can soak up a braking event or deliver a starting crank in seconds - power, not energy. Second, life: because no chemical bond is made or broken, nothing wears out. A battery ages with every cycle; a supercapacitor barely notices the count. What it lacks is energy density: it holds perhaps a tenth of the watt-hours per kilogram of a good lithium cell."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "Battery and supercapacitor are complements",
+          "body": "A battery is a slow, rich store; a supercapacitor is a fast, shallow one. Hybrid packs - or systems that use both - take the deep discharge from the battery and the peaks from the capacitor, and each technology lasts longer for the compromise."
+        }
+      ]
+    },
+    {
+      "id": "fuel-cells",
+      "tone": "coral",
+      "title": "Fuel cells: a fed cell, not a stored one",
+      "minutes": 8,
+      "summary": "A fuel cell is the continuous-feed cousin of the battery: reactants flow in, products flow out, and the cell runs as long as the feed does.",
+      "keyPoints": [
+        "A fuel cell never stores its reactants; hydrogen and oxygen are fed continuously, and the cell runs as long as they flow.",
+        "Electricity is produced by a controlled, interfacial oxidation of the fuel and reduction of the oxidant across a membrane.",
+        "PEM fuel cells use a proton-conducting polymer; direct methanol cells feed methanol instead of hydrogen.",
+        "The theoretical voltage is limited by the same ΔG = -nFE as a battery, and real cells sag under the same overpotential budget."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Swap the battery's sealed can for a plumbing diagram and you get a fuel cell. The two reactants - most often hydrogen and oxygen - are fed across two porous electrodes separated by a membrane, and the cell delivers current for as long as the feed keeps flowing. Nothing in the cell is 'spent'; the fuel is spent. That distinction is the whole engineering content of the device."
+        },
+        {
+          "kind": "para",
+          "text": "At the anode the fuel is oxidised: H2 splits into protons and electrons. The protons cross the membrane; the electrons are pushed around the external circuit - the power stroke. At the cathode they meet again and reduce oxygen to water. Every design choice - catalyst, membrane, gas diffusion layer - is there to make those three steps fast, selective, and watertight."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\text{Anode: } H_2 \\rightarrow 2H^+ + 2e^-, \\qquad \\text{Cathode: } \\tfrac{1}{2}O_2 + 2H^+ + 2e^- \\rightarrow H_2O",
+          "caption": "The PEM fuel-cell half-reactions. Hydrogen is split at the anode; the electrons travel through the circuit; oxygen is reduced at the cathode using those electrons and the protons that crossed the membrane."
+        },
+        {
+          "kind": "para",
+          "text": "The thermodynamic ceiling is the same ΔG = -nFE as for a battery - about 1.23 V for hydrogen and oxygen at standard conditions. Real cells sit well below it, paying the usual taxes: activation overpotential at both electrodes, especially at the sluggish oxygen-reduction cathode, the ohmic drop across the membrane, and concentration losses when the gas supply lags. The clear parallel to the battery voltage budget of Lesson 8 is no accident: it is the same ledger."
+        }
+      ]
+    },
+    {
+      "id": "sensors-and-transducers",
+      "tone": "amber",
+      "title": "Sensors and transducers",
+      "minutes": 6,
+      "summary": "The same interfacial physics, read backward, makes a sensor: let the analyte set the potential or the current, and the device reports its size.",
+      "keyPoints": [
+        "A sensor converts a chemical amount into an electrical signal; the signal must be selective for one species.",
+        "Amperometric sensors run a near-mass-transfer-limited current and report the limiting current as the concentration.",
+        "Potentiometric sensors read the potential of an ion-selective membrane at zero current, as in the pH electrode.",
+        "Selectivity comes from the same place it always comes from: the chemistry at the interface, tuned to one reaction."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Every device in this lesson is an energy-conversion device. A sensor is the quieter cousin: it converts a chemical measurement into an electrical one, and the battery of Lesson 7 runs backward. Hold the potential at the limiting current and the current becomes a concentration meter; hold the current at zero and the potential becomes one."
+        },
+        {
+          "kind": "para",
+          "text": "An amperometric sensor is the first case. Fix the potential deep in the mass-transfer limit and the steady current is - by Levich or Cottrell, depending on geometry - proportional to the analyte concentration. Blood-glucose strips work exactly this way: glucose oxidises at the working electrode, and the charge passed in a few seconds is the glucose count."
+        },
+        {
+          "kind": "para",
+          "text": "A potentiometric sensor is the second case. Let an ion-selective membrane set the surface concentration ratio, and the open-circuit potential reports the analyte activity through Nernst. The pH electrode of Lesson 7 is the archetype: a glass membrane whose two faces see different proton activities develops a potential proportional to their ratio. Same physics, same equilibrium, read as a measurement instead of a cell voltage."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "The interface is the sensing element",
+          "body": "A sensor is only as selective as the chemistry at its working surface. Tuning that chemistry - a catalyst, a membrane, a mediator - is the whole of sensor design."
+        },
+        {
+          "kind": "worked",
+          "title": "Cell voltage under load",
+          "given": "A cell's OCV is 3.7 V. At 1C discharge it loses 60 mV activationally, 40 mV ohmically, and 30 mV to concentration. Terminal voltage?",
+          "steps": [
+            "V = E_{OCV} - \\eta_{act} - iR - \\eta_{conc}",
+            "V = 3.7 - 0.060 - 0.040 - 0.030 = 3.57\\ \\mathrm{V}"
+          ],
+          "result": "3.57 V. Every kinetic or ohmic improvement shows up directly as terminal voltage - and the discharge stops early when that voltage slides below the electronics' cutoff."
+        },
+        {
+          "kind": "worked",
+          "title": "Energy in a pack",
+          "given": "A 2.0 Ah lithium cell works at 3.6 V. What energy does it store, and at what power does it deliver that in two hours?",
+          "steps": [
+            "E = V \\times Q = 3.6 \\times 2.0 = 7.2\\ \\mathrm{Wh}",
+            "P = E/t = 7.2/2.0 = 3.6\\ \\mathrm{W}"
+          ],
+          "result": "7.2 Wh, delivered at 3.6 W over two hours (a C/2 discharge). Watt-hours are the true 'size' of a battery; everything else is volts per cell and pack configuration."
+        }
+      ],
+      "cta": {
+        "title": "Refine the surface",
+        "body": "Devices store or convert energy; surfaces decide how well. Lesson 15 looks at the electrode surface itself - plating, modified electrodes, and the techniques that watch them.",
+        "href": "/lessons/lesson-14/quiz",
+        "linkLabel": "Take the Lesson 14 quiz",
+        "secondaryHref": "/lessons/lesson-15",
+        "secondaryLabel": "Go to Lesson 15"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "l14-mcq-001",
+      "topicId": "what-a-battery-stores",
+      "quick": true,
+      "question": "A battery stores:",
+      "options": [
+        "Electrons in a can",
+        "Chemical free energy in its reactants",
+        "Charge in a vacuum",
+        "Heat"
+      ],
+      "answer": 1,
+      "explanation": "Almost all of the 'energy' in a battery is the free energy of its cell reaction; the terminals' charge is negligible by comparison."
+    },
+    {
+      "id": "l14-mcq-002",
+      "topicId": "what-a-battery-stores",
+      "quick": true,
+      "question": "The electrolyte in a battery cell must:",
+      "options": [
+        "Conduct electrons and block ions",
+        "Conduct ions and block electrons",
+        "Block everything",
+        "Evaporate on demand"
+      ],
+      "answer": 1,
+      "explanation": "Ionic conduction but electronic insulation forces the electrons through the external circuit, where they do useful work."
+    },
+    {
+      "id": "l14-mcq-003",
+      "topicId": "what-a-battery-stores",
+      "quick": true,
+      "question": "The open-circuit voltage of a cell is set by:",
+      "options": [
+        "The temperature of the room",
+        "The free energy of its cell reaction per unit charge",
+        "The colour of the case",
+        "The amount of electrolyte only"
+      ],
+      "answer": 1,
+      "explanation": "ΔG = -nFE: the open-circuit voltage is the cell reaction's free energy expressed per coulomb."
+    },
+    {
+      "id": "l14-mcq-004",
+      "topicId": "what-a-battery-stores",
+      "question": "A battery's capacity (Ah) is set by:",
+      "options": [
+        "Its output voltage",
+        "The amount of reactant packed inside",
+        "The colour of the label",
+        "The shape of the can"
+      ],
+      "answer": 1,
+      "explanation": "Capacity is the total charge the reactants can deliver, i.e. how much reactant is in the can, expressed in ampere-hours."
+    },
+    {
+      "id": "l14-mcq-005",
+      "topicId": "capacity-rate-life",
+      "quick": true,
+      "question": "A 2C discharge rate means the cell is emptied in:",
+      "options": [
+        "Two hours",
+        "Half an hour",
+        "One hour",
+        "Two minutes"
+      ],
+      "answer": 1,
+      "explanation": "At 1C the nominal capacity lasts one hour; at 2C the same total leaves twice as fast, lasting half an hour."
+    },
+    {
+      "id": "l14-mcq-006",
+      "topicId": "capacity-rate-life",
+      "quick": true,
+      "question": "Why does a battery's voltage sag when you draw a higher current?",
+      "options": [
+        "The reactants are used up faster thermodynamically",
+        "Activation overpotentials, ohmic drop, and concentration overpotentials all grow",
+        "The Faraday constant changes",
+        "The electrolyte evaporates"
+      ],
+      "answer": 1,
+      "explanation": "All three loss terms scale with current, so the terminal voltage falls as the cell is asked to work harder."
+    },
+    {
+      "id": "l14-mcq-007",
+      "topicId": "capacity-rate-life",
+      "quick": true,
+      "question": "Cycle life is reduced mainly by:",
+      "options": [
+        "Side reactions and mechanical strain of the electrodes",
+        "The growth of a tree in the electrolyte",
+        "A poetic label",
+        "The day of the week"
+      ],
+      "answer": 0,
+      "explanation": "Each cycle leaks a little capacity to parasitic chemistry and to the physical breathing of the electrode materials."
+    },
+    {
+      "id": "l14-mcq-008",
+      "topicId": "capacity-rate-life",
+      "question": "Improving electrode kinetics raises the battery's:",
+      "options": [
+        "Open-circuit voltage only",
+        "Voltage under load and hence its power at a given rate",
+        "Colour",
+        "Number of bees"
+      ],
+      "answer": 1,
+      "explanation": "Lower activation overpotential means less voltage is lost at a given current, so the cell delivers more of its thermodynamic voltage under load."
+    },
+    {
+      "id": "l14-mcq-009",
+      "topicId": "primary-storage-lithium",
+      "quick": true,
+      "question": "A primary battery is designed to be:",
+      "options": [
+        "Recharged often",
+        "Used once",
+        "Used at absolute zero",
+        "Thrown away while working"
+      ],
+      "answer": 1,
+      "explanation": "Its reaction is not meant to be reversed; when the reactants are spent, the cell is done."
+    },
+    {
+      "id": "l14-mcq-010",
+      "topicId": "primary-storage-lithium",
+      "quick": true,
+      "question": "A secondary (storage) battery differs by being:",
+      "options": [
+        "Heavier",
+        "Designed so its cell reaction can be driven backward to recharge it",
+        "Unable to store energy",
+        "Only useful once"
+      ],
+      "answer": 1,
+      "explanation": "Reversible chemistry lets the charger push the reaction backward, restoring the reactants for another discharge."
+    },
+    {
+      "id": "l14-mcq-011",
+      "topicId": "primary-storage-lithium",
+      "quick": true,
+      "question": "In a lithium-ion cell, discharge works by:",
+      "options": [
+        "Metallic lithium dissolving from the anode",
+        "Li+ ions shuttling from the graphite anode into the cathode oxide",
+        "Protons moving through the can",
+        "Electrons crossing the electrolyte"
+      ],
+      "answer": 1,
+      "explanation": "No metal dissolves; Li+ ions leave the graphite layers, cross the electrolyte, and insert into the oxide cathode. Reversing the field reverses the trip."
+    },
+    {
+      "id": "l14-mcq-012",
+      "topicId": "primary-storage-lithium",
+      "question": "Intercalation in a lithium-ion battery is valuable because it:",
+      "options": [
+        "Dissolves the electrode each cycle",
+        "Lets Li+ insert into and leave a host lattice without destroying its structure, so the cell survives many cycles",
+        "Increases the temperature",
+        "Consumes all the electrolyte each cycle"
+      ],
+      "answer": 1,
+      "explanation": "The host lattice expands and contracts slightly but keeps its structure, so no material dissolves or re-grows; a reversible mechanical breathing instead of a chemical makeover."
+    },
+    {
+      "id": "l14-mcq-013",
+      "topicId": "supercapacitors",
+      "quick": true,
+      "question": "A supercapacitor stores energy primarily in:",
+      "options": [
+        "Chemical bonds of a reactant",
+        "The mass of the electrodes",
+        "Two electric double layers of nanoporous carbon",
+        "Heat in the electrolyte"
+      ],
+      "answer": 2,
+      "explanation": "Charge is stored electrostatically across the double layers, not by a faradaic reaction - the double layer of Lesson 6 scaled up."
+    },
+    {
+      "id": "l14-mcq-014",
+      "topicId": "supercapacitors",
+      "quick": true,
+      "question": "Compared with a lithium-ion cell, a supercapacitor delivers more:",
+      "options": [
+        "Energy density",
+        "Power density and cyclic life",
+        "Voltage per cell",
+        "Heat"
+      ],
+      "answer": 1,
+      "explanation": "No sluggish reaction to wait for: it charges in seconds and can be cycled hundreds of thousands of times, at the price of much less energy per kilogram."
+    },
+    {
+      "id": "l14-mcq-015",
+      "topicId": "supercapacitors",
+      "quick": true,
+      "question": "Supercapacitor capacitance is increased by:",
+      "options": [
+        "Thicker electrodes and wider plate spacing",
+        "Huge surface area and nanometre-scale charge separation",
+        "Freezing the electrolyte",
+        "Using fewer ions"
+      ],
+      "answer": 1,
+      "explanation": "C = εA/d: maximising area (nanoporous carbon) and shrinking d (double-layer scale) push capacitance up by orders."
+    },
+    {
+      "id": "l14-mcq-016",
+      "topicId": "supercapacitors",
+      "question": "A supercapacitor cannot replace a battery for long drive times because:",
+      "options": [
+        "It is too heavy",
+        "Its energy density is much lower, so it stores far less watt-hours per kilogram",
+        "It cannot deliver current",
+        "It is always at 0 V"
+      ],
+      "answer": 1,
+      "explanation": "It trades energy for power: superb for short bursts, inadequate for hours of steady discharge."
+    },
+    {
+      "id": "l14-mcq-017",
+      "topicId": "fuel-cells",
+      "quick": true,
+      "question": "A fuel cell differs from a battery by:",
+      "options": [
+        "Storing its own fuel",
+        "Being fed reactants continuously from outside",
+        "Running at 0 V always",
+        "Having no electrodes"
+      ],
+      "answer": 1,
+      "explanation": "A fuel cell consumes what is pumped into it; a battery carries its reactants inside."
+    },
+    {
+      "id": "l14-mcq-018",
+      "topicId": "fuel-cells",
+      "quick": true,
+      "question": "At the anode of a hydrogen PEM fuel cell:",
+      "options": [
+        "Hydrogen is oxidised to protons and electrons",
+        "Oxygen is reduced",
+        "Water is electrolysed",
+        "Electrons are stored"
+      ],
+      "answer": 0,
+      "explanation": "H2 → 2H+ + 2e^-: dehydrogenation releases the electrons that power the external circuit."
+    },
+    {
+      "id": "l14-mcq-019",
+      "topicId": "fuel-cells",
+      "quick": true,
+      "question": "In a PEM fuel cell the electrons travel:",
+      "options": [
+        "Through the membrane",
+        "Through the external circuit",
+        "Through the gas channels",
+        "Nowhere - they vanish"
+      ],
+      "answer": 1,
+      "explanation": "Only protons cross the membrane; electrons must detour through the load, where they do work."
+    },
+    {
+      "id": "l14-mcq-020",
+      "topicId": "fuel-cells",
+      "question": "The voltage actually delivered by a fuel cell under load is below its thermodynamic EMF mainly because of:",
+      "options": [
+        "Activation overpotentials (especially at the oxygen electrode), ohmic drop in the membrane, and concentration losses",
+        "The gravitational pull of the moon",
+        "The colour of the current collectors",
+        "The age of the building"
+      ],
+      "answer": 0,
+      "explanation": "The same three loss terms that sag a battery apply: slow cathodic kinetics, membrane resistance, and reactant starvation at high current."
+    },
+    {
+      "id": "l14-mcq-021",
+      "topicId": "sensors-and-transducers",
+      "quick": true,
+      "question": "An amperometric sensor reports concentration through:",
+      "options": [
+        "The colour of the solution",
+        "The limiting current at a fixed potential",
+        "The temperature",
+        "The mass of the electrode"
+      ],
+      "answer": 1,
+      "explanation": "Held at a mass-transfer-limited potential, the steady current is proportional to the analyte concentration - the Levich/Cottrell logic in a device."
+    },
+    {
+      "id": "l14-mcq-022",
+      "topicId": "sensors-and-transducers",
+      "quick": true,
+      "question": "A pH electrode is a sensor because:",
+      "options": [
+        "It switches colour",
+        "An ion-selective membrane converts a proton-activity ratio into a Nernstian potential",
+        "It generates heat",
+        "It measures resistance only"
+      ],
+      "answer": 1,
+      "explanation": "Zero-current potential between the two faces of the glass membrane is set by the proton activity ratio, i.e. the pH."
+    },
+    {
+      "id": "l14-mcq-023",
+      "topicId": "sensors-and-transducers",
+      "quick": true,
+      "question": "The selectivity of a sensor comes from:",
+      "options": [
+        "The batch number",
+        "The chemistry at the sensing interface - catalyst, membrane, mediator",
+        "The wire gauge",
+        "The logo on the case"
+      ],
+      "answer": 1,
+      "explanation": "Only the interfacial chemistry can tell species apart; tuning it is what makes a sensor respond to glucose and not water."
+    },
+    {
+      "id": "l14-mcq-024",
+      "topicId": "sensors-and-transducers",
+      "question": "All electrochemical sensors share one idea:",
+      "options": [
+        "They measure mass",
+        "They convert a chemical amount at an interface into an electrical signal",
+        "They measure temperature only",
+        "They must use mercury"
+      ],
+      "answer": 1,
+      "explanation": "Amperometric, potentiometric, impedimetric - all of them read out the same interfacial thermodynamics or kinetics as a voltage or a current."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l14-tf-001",
+      "topicId": "what-a-battery-stores",
+      "question": "A cell's electrolyte carries ions but blocks electrons.",
+      "answer": true,
+      "explanation": "The electrolyte must conduct ions so charge can balance inside the cell, but it must insulate against electrons, otherwise the cell would short-circuit internally. Electrons travel only through the external circuit."
+    },
+    {
+      "kind": "multi",
+      "id": "l14-multi-001",
+      "topicId": "what-a-battery-stores",
+      "question": "Which of these make up an electrochemical cell? Select all that apply.",
+      "options": [
+        "An anode reactant",
+        "A cathode reactant",
+        "An electrolyte that carries ions and blocks electrons",
+        "A wire that carries the ionic current"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "A cell needs an anode reactant, a cathode reactant, and an ion-conducting, electron-blocking electrolyte. The external wire carries the electronic current, not the ionic one, which stays inside the electrolyte."
+    },
+    {
+      "kind": "numeric",
+      "id": "l14-num-001",
+      "topicId": "capacity-rate-life",
+      "question": "A cell is discharged at a rate of 2C. Ideally, how many minutes does it take to empty?",
+      "answer": 30,
+      "tolerance": 1,
+      "unit": "min",
+      "explanation": "At 1C a cell empties in one hour. At 2C the current is twice as large, so the cell empties in half the time: 30 minutes. The C-rate simply normalises current to capacity."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l14-tf-002",
+      "topicId": "capacity-rate-life",
+      "question": "A battery's capacity is finite because its reactants are finite.",
+      "answer": true,
+      "explanation": "Capacity is the total charge the finite amount of reactant can deliver, counted in ampere-hours. Once the reactant is consumed, no more charge is available however low the current is."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l14-tf-003",
+      "topicId": "primary-storage-lithium",
+      "question": "Lithium-ion batteries work by dissolving the electrode, as a classic battery does.",
+      "answer": false,
+      "explanation": "Instead of dissolving, lithium ions shuttle between two solid hosts, inserting into one and removing from the other without destroying the structure. Lithium's low equivalent weight and high voltage make it the densest practical chemistry."
+    },
+    {
+      "kind": "multi",
+      "id": "l14-multi-002",
+      "topicId": "primary-storage-lithium",
+      "question": "Which of these are among the three families of battery described? Select all that apply.",
+      "options": [
+        "Primary batteries",
+        "Secondary (storage) batteries",
+        "Lithium-ion batteries",
+        "Fuel cells"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The three families are primary (one discharge), secondary or storage (rechargeable by reversing the reaction), and lithium-ion (Li+ shuttles between hosts). A fuel cell is a fed device, not a stored battery."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l14-tf-004",
+      "topicId": "supercapacitors",
+      "question": "A supercapacitor stores charge in double layers with no chemical reaction, so it tolerates hundreds of thousands of cycles.",
+      "answer": true,
+      "explanation": "Because no reaction degrades the electrode, cycling is extremely long-lived. The trade-off is that a supercapacitor delivers power, not much energy: its watt-hours are a fraction of a battery's."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l14-tf-005",
+      "topicId": "fuel-cells",
+      "question": "A fuel cell stores its reactants internally, like a battery.",
+      "answer": false,
+      "explanation": "A fuel cell never stores its reactants. Hydrogen and oxygen are fed continuously, and the cell runs as long as they flow. Its theoretical voltage still follows dG = -nFE, just like a battery."
+    },
+    {
+      "kind": "multi",
+      "id": "l14-multi-003",
+      "topicId": "fuel-cells",
+      "question": "Which statements about fuel cells are correct? Select all that apply.",
+      "options": [
+        "Reactants are fed continuously",
+        "The cell runs as long as the fuel flows",
+        "The theoretical voltage follows dG = -nFE",
+        "It stores all of its fuel internally at once"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Fuel and oxidant are supplied continuously, so the cell runs while they flow, and its ideal voltage is set by the same Gibbs-energy relation as any cell. It does not store its fuel internally; that is what distinguishes it from a battery."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l14-tf-006",
+      "topicId": "sensors-and-transducers",
+      "question": "An amperometric sensor reports a near-mass-transfer-limited current as the measure of concentration.",
+      "answer": true,
+      "explanation": "By running near the mass-transfer limit, the current is proportional to how fast the analyte arrives, and so to its concentration. Potentiometric sensors instead read a membrane potential at zero current."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l14-tf-007",
+      "topicId": "sensors-and-transducers",
+      "question": "A potentiometric sensor reads the potential of an ion-selective membrane at essentially zero current.",
+      "answer": true,
+      "explanation": "The pH electrode is the familiar example: at zero current the membrane potential tracks the ion activity through a Nernst-like relation. Selectivity comes from tuning the interfacial chemistry to one species."
+    }
+  ]
+}

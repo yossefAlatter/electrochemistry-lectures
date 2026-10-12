@@ -1,0 +1,239 @@
+{
+  "slug": "problems-4",
+  "label": "Problem set 4",
+  "title": "Problem set 4: Mass transfer",
+  "summary": "Practice with diffusion: the Cottrell equation, diffusion-layer growth, Ficks laws, transport numbers and the role of the supporting electrolyte.",
+  "source": "Bard & Faulkner ch.4",
+  "order": 104,
+  "minutes": 28,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Chapter 4 supplies the transport relations used everywhere else: the Cottrell equation i = nFAD^(1/2)C/(pi^(1/2)t^(1/2)), the diffusion-layer thickness d = sqrt(pi D t), and Ficks laws of diffusion."
+    },
+    {
+      "kind": "para",
+      "text": "Remember the three modes of transport - diffusion, migration and convection - and that a supporting electrolyte removes migration so diffusion alone remains."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps4-mass",
+      "tone": "amber",
+      "title": "Hint sheet: transport relations",
+      "summary": "Practice with diffusion: the Cottrell equation, diffusion-layer growth, Ficks laws, transport numbers and the role of the supporting electrolyte.",
+      "minutes": 23,
+      "keyPoints": [
+        "i = nFAD^(1/2)C/(pi^(1/2)t^(1/2))",
+        "d = sqrt(pi D t)",
+        "J = D(dC/dx)",
+        "t+ + t- = 1",
+        "Supporting electrolyte removes migration"
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Chapter 4 supplies the transport relations used everywhere else: the Cottrell equation i = nFAD^(1/2)C/(pi^(1/2)t^(1/2)), the diffusion-layer thickness d = sqrt(pi D t), and Ficks laws of diffusion."
+        },
+        {
+          "kind": "para",
+          "text": "Remember the three modes of transport - diffusion, migration and convection - and that a supporting electrolyte removes migration so diffusion alone remains."
+        },
+        {
+          "kind": "worked",
+          "title": "Cottrell current",
+          "given": "n = 1, A = 1.0 cm2, D = 1.0e-5 cm2/s, C = 1.0e-6 mol/cm3, t = 1.0 s",
+          "steps": [
+            "Write i = nFAD^(1/2)C/(pi^(1/2)t^(1/2)).",
+            "sqrt(D) = 3.162e-3; pi^(1/2) = 1.7725.",
+            "i = 96485 x 1 x 3.162e-3 x 1e-6/1.7725 = 1.72e-4 A."
+          ],
+          "result": "i = 172 uA"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "numeric",
+      "id": "ps4-num-001",
+      "topicId": "ps4-mass",
+      "question": "Use the Cottrell equation i = nFAD^(1/2)C/(pi^(1/2) t^(1/2)) with n = 1, A = 1.0 cm2, D = 1.0e-5 cm2/s, C = 1.0e-6 mol/cm3 and t = 1.0 s. Calculate i in microamperes (F = 96485, pi = 3.1416).",
+      "answer": 172,
+      "tolerance": 10,
+      "unit": "uA",
+      "explanation": "sqrt(D)=3.162e-3; i = 96485 x 1 x 3.162e-3 x 1e-6/(1.7725 x 1) = 1.72e-4 A = 172 uA."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps4-num-002",
+      "topicId": "ps4-mass",
+      "question": "The diffusion-layer thickness is roughly d = sqrt(pi D t). Calculate d in micrometres for D = 1.0e-5 cm2/s and t = 1.0 s.",
+      "answer": 56,
+      "tolerance": 4,
+      "unit": "um",
+      "explanation": "d = sqrt(3.1416 x 1.0e-5 x 1) = 5.6e-3 cm = 56 um."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps4-num-003",
+      "topicId": "ps4-mass",
+      "question": "Fick-1s first law gives the flux J = D(dC/dx). Calculate J in mol/(cm2 s) for D = 1.0e-5 cm2/s and a concentration gradient of 1.0e-3 mol/cm4.",
+      "answer": 1e-08,
+      "tolerance": 1.5e-09,
+      "unit": "mol/(cm2 s)",
+      "explanation": "J = 1.0e-5 x 1.0e-3 = 1.0e-8 mol/(cm2 s)."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps4-num-004",
+      "topicId": "ps4-mass",
+      "question": "In a solution the cation carries 60 percent of the current. What is the anion transport number t-?",
+      "answer": 0.4,
+      "tolerance": 0.02,
+      "explanation": "Transport numbers sum to one, so t- = 1 - 0.60 = 0.40."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps4-num-005",
+      "topicId": "ps4-mass",
+      "question": "By what factor is the Cottrell current at t = 9 s smaller than at t = 1 s? (Answer as a fraction, e.g. 0.5.)",
+      "answer": 0.333,
+      "tolerance": 0.02,
+      "explanation": "The current falls as t^(-1/2), so the ratio is sqrt(1/9) = 1/3 = 0.333."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps4-num-006",
+      "topicId": "ps4-mass",
+      "question": "How long, in seconds, does it take for the diffusion layer to reach d = 100 um (1.0e-2 cm) if D = 1.0e-5 cm2/s? Use t = d^2/(pi D).",
+      "answer": 3.18,
+      "tolerance": 0.2,
+      "unit": "s",
+      "explanation": "t = (1.0e-2)^2/(3.1416 x 1.0e-5) = 1.0e-4/3.1416e-5 = 3.18 s."
+    },
+    {
+      "id": "ps4-mcq-001",
+      "topicId": "ps4-mass",
+      "quick": true,
+      "question": "An excess of supporting electrolyte is added to a solution mainly to:",
+      "options": [
+        "Increase the analyte concentration",
+        "Eliminate migration of the analyte and fix the ionic strength",
+        "Change the solvent",
+        "Cool the solution"
+      ],
+      "answer": 1,
+      "explanation": "The supporting electrolyte carries the current by migration, so the analyte moves by diffusion alone; it also fixes ionic strength and reduces resistance."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps4-tf-001",
+      "topicId": "ps4-mass",
+      "quick": true,
+      "question": "In an unstirred solution with excess supporting electrolyte, the analyte is transported to the electrode by diffusion alone.",
+      "answer": true,
+      "explanation": "Migration is suppressed by the supporting electrolyte and convection is absent, so the transport of the analyte is purely diffusive."
+    },
+    {
+      "kind": "multi",
+      "id": "ps4-multi-001",
+      "topicId": "ps4-mass",
+      "question": "Which modes of transport can carry material to an electrode? Select all that apply.",
+      "options": [
+        "Diffusion down a concentration gradient",
+        "Migration in an electric field",
+        "Convection from stirring",
+        "Nuclear decay"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Diffusion, migration and convection are the three transport modes in solution. Nuclear decay is not a transport process."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps4-tf-002",
+      "topicId": "ps4-mass",
+      "question": "The Cottrell current decays in proportion to the square root of time.",
+      "answer": true,
+      "explanation": "i is proportional to t^(-1/2), so it decays gradually as the diffusion layer thickens."
+    },
+    {
+      "id": "ps4-mcq-002",
+      "topicId": "ps4-mass",
+      "quick": true,
+      "question": "Which equation describes how concentration changes with both position and time?",
+      "options": [
+        "Ficks first law",
+        "Ficks second law",
+        "Ohms law",
+        "The Nernst equation"
+      ],
+      "answer": 1,
+      "explanation": "Ficks second law is the continuity equation for diffusion, expressing how concentration evolves in space and time; the first law gives the flux from a gradient."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps4-num-007",
+      "topicId": "ps4-mass",
+      "question": "The Cottrell current is proportional to t^(-1/2). If i = 172 uA at t = 1.0 s, what is i in uA at t = 0.25 s?",
+      "answer": 344,
+      "tolerance": 25,
+      "unit": "uA",
+      "explanation": "i(0.25)/i(1) = sqrt(1/0.25) = 2, so i = 2 x 172 = 344 uA."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps4-num-008",
+      "topicId": "ps4-mass",
+      "question": "The Cottrell slope m = i t^(1/2) equals nFAD^(1/2)C/pi^(1/2). If i = 172 uA at t = 1.0 s, what is m in uA s^(1/2)?",
+      "answer": 172,
+      "tolerance": 10,
+      "unit": "uA s^(1/2)",
+      "explanation": "At t = 1 s, t^(1/2) = 1, so m = i = 172 uA s^(1/2)."
+    },
+    {
+      "id": "ps4-mcq-003",
+      "topicId": "ps4-mass",
+      "quick": true,
+      "question": "Besides suppressing migration, a supporting electrolyte also:",
+      "options": [
+        "Lowers the solution resistance and fixes the ionic strength",
+        "Raises the viscosity to zero",
+        "Removes all ions",
+        "Prevents diffusion"
+      ],
+      "answer": 0,
+      "explanation": "The supporting electrolyte carries the current, reducing resistance, and buffers the ionic strength so activity coefficients stay constant."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps4-tf-003",
+      "topicId": "ps4-mass",
+      "question": "With a large excess of supporting electrolyte, the migration of the analyte is negligible.",
+      "answer": true,
+      "explanation": "The abundant inert ions carry essentially all the migration current, so the dilute analyte moves by diffusion alone."
+    },
+    {
+      "kind": "multi",
+      "id": "ps4-multi-002",
+      "topicId": "ps4-mass",
+      "question": "Which variables appear in Ficks second law for one-dimensional diffusion? Select all that apply.",
+      "options": [
+        "The diffusion coefficient D",
+        "The second derivative of concentration with distance",
+        "The change of concentration with time",
+        "The colour of the solution"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Ficks second law involves D, the curvature of the concentration profile and the time derivative. Colour plays no part."
+    }
+  ]
+}

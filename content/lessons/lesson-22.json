@@ -1,0 +1,348 @@
+{
+  "slug": "lesson-22",
+  "label": "Lesson 22",
+  "title": "Electrokinetic phenomena",
+  "summary": "Whenever a charged surface meets a liquid, movement of one drags the other. This lesson covers the four electrokinetic effects - electro-osmosis, electrophoresis, streaming potential and sedimentation potential - the zeta potential that relates them, and their uses from capillary electrophoresis to dewatering.",
+  "order": 22,
+  "minutes": 40,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "A charged surface attracts a cloud of counter-ions in the liquid next to it. The surface and that cloud make a double layer, and a double layer couples fluid motion to electricity. Move the liquid and you move charge; apply a field and you move the liquid."
+    },
+    {
+      "kind": "para",
+      "text": "This is the world of electrokinetics. It appears whenever particles, pores or capillaries sit in a liquid - which is most of colloid science, soil science, microfluidics and separation science. This lesson covers the four effects and the single quantity, the zeta potential, that ties them together."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The one-sentence summary",
+      "body": "The four electrokinetic effects are the two directions of one coupling: a moving charged surface drives fluid, and a moving fluid drives charge."
+    }
+  ],
+  "sections": [
+    {
+      "id": "double-layer-in-motion",
+      "tone": "azure",
+      "title": "The double layer in motion",
+      "minutes": 8,
+      "summary": "A charged surface in a liquid carries a diffuse cloud of counter-ions. Shearing the liquid off that cloud separates charge, and that separation is the common root of every electrokinetic effect.",
+      "keyPoints": [
+        "A charged surface gathers a diffuse layer of counter-ions in the adjacent liquid.",
+        "Where the liquid begins to flow, the counter-ion cloud is left partly behind.",
+        "This charge separation couples fluid flow to electric current and potential.",
+        "One coupling has four observable faces: two move a liquid, two move particles."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Every charged surface in contact with a liquid attracts counter-ions into a diffuse layer, exactly as the double-layer lesson described. The surface charge and the ionic cloud together form an electrical double layer, and the outer part of that cloud sits in liquid that can flow."
+        },
+        {
+          "kind": "para",
+          "text": "When the liquid is pushed along the surface, the flowing part carries its share of the ionic cloud with it while the surface and the tightly held ions stay put. The moving charge is a current, and if the flow is blocked it builds up as a potential. Either way, fluid motion has been converted into an electrical signal."
+        },
+        {
+          "kind": "para",
+          "text": "The reverse works too. Apply an electric field and it pulls the mobile part of the double layer, and the liquid with it. The same coupling has two directions, and each direction shows up in two settings - through a porous body or around free particles - giving the four electrokinetic effects."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "The four effects in one frame",
+          "body": "Electro-osmosis and streaming potential concern liquid moving through a stationary charged body. Electrophoresis and sedimentation potential concern charged particles moving through a stationary liquid."
+        }
+      ]
+    },
+    {
+      "id": "zeta-potential",
+      "tone": "indigo",
+      "title": "The zeta potential",
+      "minutes": 9,
+      "summary": "The zeta potential is the potential at the slipping plane where the liquid starts to move with respect to the surface. It is the quantity that all four electrokinetic effects report, and it stands in for the surface charge.",
+      "keyPoints": [
+        "The slipping plane separates the liquid that moves with the surface from the liquid that flows.",
+        "The zeta potential is the potential at the slipping plane.",
+        "All four electrokinetic effects are interpreted through the zeta potential.",
+        "It depends on ionic strength, pH and adsorbed species, and can even change sign."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Part of the ionic cloud is stuck to the surface and moves with it; the rest is free to flow. The boundary between them is the slipping plane, and the electric potential there is the zeta potential. It is not the surface potential itself, but it is close enough, and it is what experiments can actually report."
+        },
+        {
+          "kind": "para",
+          "text": "Every electrokinetic measurement is converted into a zeta potential. Electrophoresis turns the speed of a particle into it; streaming potential turns a pressure-driven voltage into it. The zeta potential is therefore the single currency of the field."
+        },
+        {
+          "kind": "para",
+          "text": "Because it reflects the outer part of the double layer, the zeta potential is very sensitive to the solution. More salt compresses the cloud and lowers it; pH changes the surface charge; adsorbing a surfactant or a polymer can move it dramatically and even reverse its sign. That sensitivity is exactly what makes it a useful probe of surface chemistry."
+        },
+        {
+          "kind": "callout",
+          "variant": "example",
+          "title": "Reading the sign",
+          "body": "A particle with a positive zeta potential moves toward the negative electrode in electrophoresis; one with a negative zeta potential moves the other way. The direction of travel is the sign of the surface charge in the liquid."
+        }
+      ]
+    },
+    {
+      "id": "electro-osmosis-and-electrophoresis",
+      "tone": "violet",
+      "title": "Electro-osmosis and electrophoresis",
+      "minutes": 9,
+      "summary": "Electro-osmosis is field-driven flow of liquid past a charged surface, and electrophoresis is field-driven motion of charged particles through a liquid. Both are workhorses of separation science and microfluidics.",
+      "keyPoints": [
+        "Electro-osmosis is liquid flow driven by an electric field along a charged wall.",
+        "Electrophoresis is the migration of charged particles or molecules in a field.",
+        "Electro-osmotic flow gives the flat flow profile that makes capillary electrophoresis fast and sharp.",
+        "Both are used to separate, move and deposit material."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Electro-osmosis is the flow of liquid through a fine channel or porous plug when a field is applied along it. The field pulls the mobile counter-ions, and they drag the liquid with them. The result is a nearly flat flow profile, unlike the parabolic profile of pressure-driven flow, because the driving force acts throughout the thin double layer near the wall rather than only at the ends."
+        },
+        {
+          "kind": "para",
+          "text": "Electrophoresis is the matching motion of suspended particles or dissolved molecules. In a field, a charged particle drifts at a speed proportional to its charge-to-size ratio, and that difference is the basis of separation."
+        },
+        {
+          "kind": "para",
+          "text": "The two combine in capillary electrophoresis. The flat electro-osmotic flow carries the whole buffer along at a uniform speed, and the different electrophoretic mobilities of the analytes separate them within it. The result is fast, sharp separations of proteins, DNA fragments and small ions."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "Why the flat profile matters",
+          "body": "In pressure-driven flow, the liquid near the wall barely moves, which spreads a band of analyte. In electro-osmotic flow the plug moves almost uniformly, so bands stay sharp and separations are efficient."
+        }
+      ]
+    },
+    {
+      "id": "streaming-and-sedimentation",
+      "tone": "rose",
+      "title": "Streaming and sedimentation potentials",
+      "minutes": 8,
+      "summary": "Streaming potential is the voltage produced when liquid is forced through a charged porous body; sedimentation potential is the voltage produced when charged particles settle. They are the reverse of electro-osmosis and electrophoresis.",
+      "keyPoints": [
+        "Forcing liquid through a charged plug builds up a streaming potential.",
+        "Settling charged particles build up a sedimentation potential.",
+        "These are the reverse of electro-osmosis and electrophoresis, by reciprocity.",
+        "Measuring them gives the zeta potential without moving a particle under a field."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Push liquid through a porous plug of charged material and the flow drags the mobile counter-ions downstream, leaving the upstream side with a net charge of the opposite sign. The resulting voltage is the streaming potential. It is electro-osmosis run backwards: instead of a field driving flow, flow makes a field."
+        },
+        {
+          "kind": "para",
+          "text": "Let charged particles settle under gravity and the same logic applies. The particles drift faster or slower than the liquid around them, carrying their charge and creating a small potential difference, the sedimentation potential, over the settling column."
+        },
+        {
+          "kind": "para",
+          "text": "These downward effects are welcome because they let the zeta potential be measured in settings where applying a field to the particles is awkward. The reciprocity is exact: the same coupling constant appears in both directions, so a measurement in either direction reports the same surface property."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "One coupling, four faces",
+          "body": "Electro-osmosis, streaming potential, electrophoresis and sedimentation potential are not four unrelated curiosities. They are the two directions of one coupling, observed in two geometries, and they can all be reduced to a single zeta potential."
+        }
+      ]
+    },
+    {
+      "id": "applications",
+      "tone": "coral",
+      "title": "Where electrokinetics is used",
+      "minutes": 8,
+      "summary": "Electrokinetic effects underpin capillary electrophoresis, the stability of paints and slurries, the dewatering of sludge, soil remediation and the design of microfluidic pumps.",
+      "keyPoints": [
+        "Capillary electrophoresis separates molecules by electrophoretic mobility.",
+        "Electro-osmotic dewatering and sludge handling dry out solids in industry.",
+        "The zeta potential predicts whether a colloid will aggregate or stay dispersed.",
+        "Electro-osmotic pumps are built into microfluidic chips."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The best-known use is capillary electrophoresis, where the migration of charged species in a thin tube separates them quickly and with high resolution. It is a standard analytical tool for proteins, DNA and small ions."
+        },
+        {
+          "kind": "para",
+          "text": "Industry uses electro-osmosis to move water out of solids. Applying a field across a wet clay or sludge drives water toward an electrode, which is a way to dewater a material that filters poorly. The same principle underlies electrokinetic soil remediation, where contaminants are pulled through the ground by a field."
+        },
+        {
+          "kind": "para",
+          "text": "The zeta potential guides the formulation of paints, inks and slurries. A high zeta potential keeps particles apart, so the suspension stays stable; lowering it lets them come together and settle or stick, which is exactly what a coating must do at the right moment. On a chip, an electro-osmotic pump moves tiny volumes of liquid with no moving parts."
+        },
+        {
+          "kind": "callout",
+          "variant": "example",
+          "title": "Why paints do not settle prematurely",
+          "body": "A well-formulated paint keeps a high zeta potential so the pigment particles repel one another and stay suspended. When the paint must finally adhere, the chemistry is adjusted so the particles can come together and form a film."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "truefalse",
+      "id": "l22-tf-001",
+      "topicId": "double-layer-in-motion",
+      "quick": true,
+      "question": "A charged surface in a liquid attracts a diffuse layer of counter-ions.",
+      "answer": true,
+      "explanation": "Those counter-ions form the outer, mobile part of the double layer. The coupling between their motion and the liquid is the root of every electrokinetic effect."
+    },
+    {
+      "id": "l22-mcq-001",
+      "topicId": "double-layer-in-motion",
+      "quick": true,
+      "question": "The four electrokinetic effects are best described as:",
+      "options": [
+        "Four unrelated phenomena",
+        "The two directions of one coupling between fluid flow and charge",
+        "Four kinds of battery",
+        "Four ways to measure pH"
+      ],
+      "answer": 1,
+      "explanation": "A moving charged surface drives fluid and a moving fluid drives charge; the same coupling appears in two directions and two geometries, giving the four effects."
+    },
+    {
+      "id": "l22-mcq-002",
+      "topicId": "zeta-potential",
+      "quick": true,
+      "question": "The zeta potential is the electric potential at:",
+      "options": [
+        "The centre of the electrode",
+        "The slipping plane where the liquid begins to flow",
+        "The bulk of the solution",
+        "The metal surface itself"
+      ],
+      "answer": 1,
+      "explanation": "Part of the ionic cloud sticks to the surface and part flows; the boundary between them is the slipping plane, and its potential is the zeta potential."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l22-tf-002",
+      "topicId": "zeta-potential",
+      "question": "All four electrokinetic effects are interpreted through the zeta potential.",
+      "answer": true,
+      "explanation": "Electrophoresis, electro-osmosis, streaming potential and sedimentation potential are all converted into the same zeta potential, which acts as the common currency of the field."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l22-tf-003",
+      "topicId": "zeta-potential",
+      "question": "Adding salt to a suspension usually lowers the magnitude of the zeta potential.",
+      "answer": true,
+      "explanation": "More salt compresses the ionic cloud, so the potential at the slipping plane falls. The zeta potential is also sensitive to pH and to adsorbed species, and it can even reverse sign."
+    },
+    {
+      "kind": "multi",
+      "id": "l22-multi-001",
+      "topicId": "zeta-potential",
+      "question": "Which factors change the zeta potential of a surface? Select all that apply.",
+      "options": [
+        "Ionic strength of the solution",
+        "pH of the solution",
+        "Adsorption of a surfactant or polymer",
+        "The colour of the container"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Ionic strength compresses the double layer, pH changes the surface charge, and adsorption alters the outer layer, all shifting the zeta potential. The colour of the container has no effect."
+    },
+    {
+      "id": "l22-mcq-003",
+      "topicId": "electro-osmosis-and-electrophoresis",
+      "quick": true,
+      "question": "Electrophoresis is the:",
+      "options": [
+        "Flow of liquid driven by a field along a charged wall",
+        "Motion of charged particles through a liquid under a field",
+        "Settling of particles under gravity",
+        "Evaporation of a solvent"
+      ],
+      "answer": 1,
+      "explanation": "Electrophoresis is the field-driven drift of charged particles or molecules, and their different mobilities are the basis of separation."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l22-tf-004",
+      "topicId": "electro-osmosis-and-electrophoresis",
+      "question": "Electro-osmotic flow has a nearly flat profile, which helps keep separation bands sharp.",
+      "answer": true,
+      "explanation": "The driving force acts through the thin double layer near the wall, giving an almost uniform plug flow. Unlike the parabolic pressure-driven profile, it does not spread the bands."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l22-tf-005",
+      "topicId": "electro-osmosis-and-electrophoresis",
+      "question": "Capillary electrophoresis separates analytes using their different electrophoretic mobilities.",
+      "answer": true,
+      "explanation": "A flat electro-osmotic flow carries the buffer at a uniform speed while the analytes migrate at rates set by their charge-to-size ratio, so they separate quickly and sharply."
+    },
+    {
+      "id": "l22-mcq-004",
+      "topicId": "streaming-and-sedimentation",
+      "quick": true,
+      "question": "The streaming potential is produced when:",
+      "options": [
+        "Particles settle under gravity",
+        "Liquid is forced through a charged porous body",
+        "A battery discharges",
+        "A salt dissolves"
+      ],
+      "answer": 1,
+      "explanation": "Forcing liquid through a charged plug drags the mobile counter-ions downstream and builds up a voltage: it is electro-osmosis run backwards."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l22-tf-006",
+      "topicId": "streaming-and-sedimentation",
+      "question": "Streaming potential and electro-osmosis are related by reciprocity, sharing the same coupling constant.",
+      "answer": true,
+      "explanation": "The coupling works both ways with the same constant, so a measurement in either direction reports the same surface property. Sedimentation potential and electrophoresis are related in the same way."
+    },
+    {
+      "id": "l22-mcq-005",
+      "topicId": "applications",
+      "quick": true,
+      "question": "A well-formulated paint is kept suspended by having a:",
+      "options": [
+        "Low zeta potential",
+        "High zeta potential that makes particles repel",
+        "Zero zeta potential",
+        "Very high salt content"
+      ],
+      "answer": 1,
+      "explanation": "A high zeta potential makes the pigment particles repel one another and stay dispersed. Lowering it later lets them come together to form a film."
+    },
+    {
+      "kind": "multi",
+      "id": "l22-multi-002",
+      "topicId": "applications",
+      "question": "Which are real uses of electrokinetic effects? Select all that apply.",
+      "options": [
+        "Capillary electrophoresis for separating molecules",
+        "Electro-osmotic dewatering of sludge",
+        "Electrokinetic soil remediation",
+        "Converting heat directly into light"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Capillary electrophoresis, electro-osmotic dewatering and electrokinetic soil remediation all exploit the coupling between flow and charge. Converting heat into light is not an electrokinetic effect."
+    }
+  ]
+}

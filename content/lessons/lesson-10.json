@@ -1,0 +1,705 @@
+{
+  "slug": "lesson-10",
+  "label": "Lesson 10",
+  "title": "Hydrodynamic methods",
+  "summary": "Lesson 9 swept the potential, but the solution sat still, and the resulting current depended on whatever the fluid happened to be doing. This lesson makes the solution move on purpose. Spin the electrode and the flow carries away what you react and brings in fresh material at a rate you can set: the rotating disk electrode. Add a second ring and you can catch the intermediates of the reaction as they fly past. Flow cells and channel electrodes do the same job in flow-through geometry.",
+  "order": 10,
+  "minutes": 55,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "In the earlier lessons the solution was quiescent. That made the mathematics clean but the experiment fragile: a passing vibration or a stray convection set the diffusion layer's thickness. Hydrodynamic methods turn that weakness into a dial. Move the solution past the electrode in a controlled way and the mass-transfer coefficient becomes a known, reproducible number instead of an accident."
+    },
+    {
+      "kind": "para",
+      "text": "Following Bard & Faulkner ch.9 we first meet the rotating disk electrode, the workhorse, and derive its Levich current. Then we add a ring, a channel, or a pump and look at what each geometry buys. The lesson ends with the Koutecký-Levich analysis, the simple plot that separates kinetic currents from transport currents - arguably the most used graph in electrocatalysis."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The one-sentence summary of this lesson",
+      "body": "By forcing a known flow of solution past the electrode you make the diffusion layer a controlled, reproducible quantity - and the Koutecký-Levich plot then lets you pull the electrode's intrinsic kinetics out from under the mass-transfer ceiling."
+    }
+  ],
+  "sections": [
+    {
+      "id": "why-force-convection",
+      "tone": "azure",
+      "title": "Why force the solution to move",
+      "minutes": 6,
+      "summary": "In a still solution the diffusion layer grows freely and any vibration changes it. Forced convection pins the layer at a thickness set by the flow, making the limiting current a reliable, settable quantity.",
+      "keyPoints": [
+        "In unstirred solution the diffusion layer is an uncontrolled boundary condition; the limiting current floats.",
+        "Moving the solution past the electrode fixes a thin, well-defined diffusion layer at the surface.",
+        "The faster the flow, the thinner the layer and the bigger the limiting current.",
+        "A controlled flow makes mass transfer reproducible enough to separate it from kinetics."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Every limiting current we have met so far lived inside an uncontrolled environment. In a quiescent cell the diffusion layer thickness is set by whatever the liquid happens to be doing - drafts, thermal currents, the last time someone touched the bench. Record a limiting current in such a cell twice and you will get two numbers. That is useless for kinetics, which is why forced convection exists."
+        },
+        {
+          "kind": "para",
+          "text": "Push the solution past the electrode at a known, steady rate and the picture changes. Fresh reactant is delivered in a thin, well-mixed layer whose thickness is set by the flow speed. The diffusion layer at the electrode is no longer a slow-growing, poorly defined region; it is a thin film of known thickness, and the limiting current through it is fixed and reproducible."
+        },
+        {
+          "kind": "para",
+          "text": "The trade is a new variable. Flow rate becomes something you dial in, and the limiting current becomes a function of that dial setting. Spin faster and the layer thins, so the current rises; spin slower and it thickens. That dependence is the whole point of the next sections: it lets you separate the part of the current set by how fast the electrode thinks from the part set by how fast the solution delivers."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "Convective-diffusion layer",
+          "body": "Two layers matter near a working electrode in flow: a thick, well-stirred convective layer in which the concentration is nearly uniform, and a thin diffusion layer right at the surface across which the last bit of transport is diffusional. All the current is set in the second, tiny, layer."
+        }
+      ]
+    },
+    {
+      "id": "rotating-disk",
+      "tone": "indigo",
+      "title": "The rotating disk electrode",
+      "minutes": 8,
+      "summary": "Spin a flat disk in the solution and the flow pattern is a perfect axial pump: solution is drawn up toward the surface and thrown outward. The resulting Levich current is the standard meter of mass transfer.",
+      "keyPoints": [
+        "A spinning disk acts like a pump: fluid is pulled toward the surface along the axis and flung outward along the face.",
+        "The diffusion layer over the disk is uniform in thickness - every point on the surface sees the same transport conditions.",
+        "The limiting current follows the Levich equation: proportional to D^{2/3}, C, A and the square root of the rotation rate.",
+        "Uniform transport across the surface is why RDE results are so clean compared with a static electrode."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The rotating disk electrode (RDE) is a flat cylinder of metal embedded in insulating resin, spun about its axis through a chuck connected to a motor. Spin it in the solution and the fluid near the face is dragged around with it; centrifugal action throws that fluid outward, and fresh solution is sucked up along the axis to replace it. The result is an exact, axisymmetric flow field: every point on the disk face experiences the same supply."
+        },
+        {
+          "kind": "para",
+          "text": "Because the flow is the same everywhere, the diffusion layer at the surface is of uniform thickness all over the face. That is the RDE's great virtue: a static electrode in a tidal cell has an edge that reacts differently from its centre, but the RDE averages none of that away - there is nothing to average. The limiting current then takes a closed form, the Levich equation."
+        },
+        {
+          "kind": "formula",
+          "tex": "i_L = 0.620\\, n F A D^{2/3}\\, C\\, v^{-1/6}\\, \\omega^{1/2}",
+          "caption": "Levich equation for the disk. The limiting current grows as the square root of the angular rotation rate omega, the two-thirds power of the diffusion coefficient, and the inverse sixth power of the kinematic viscosity."
+        },
+        {
+          "kind": "para",
+          "text": "Two things to notice. First, the current is *uniform* and steady - a plateau on a voltammogram - because the supply is steady. Second, unlike the quiescent cell, there is no t^{-1/2} decay: this is a genuine steady-state method, like the microelectrode of Lesson 8, but the layer thickness is set by a knob you can turn. Measure at several rotation rates and the square-root law is itself a check that the system is really mass-transfer limited."
+        },
+        {
+          "kind": "worked",
+          "title": "Levich current on a 5 mm disk",
+          "given": "Oxygen reduction, n = 4, A = pi (0.25 cm)^2 = 0.196 cm², C = 1.2 mM = 1.2e-6 mol/cm³, D = 2.0e-5 cm²/s, omega = 1600 rpm = 168 rad/s, kinematic viscosity nu = 0.01 cm²/s.",
+          "steps": [
+            "D^{2/3} = (2.0\\times10^{-5})^{2/3} = 7.4\\times10^{-4},\\quad \\omega^{1/2} = 12.96,\\quad \\nu^{-1/6} = 2.15",
+            "i_L = 0.620 \\times 4 \\times 96485 \\times 0.196 \\times 7.4\\times10^{-4} \\times 1.2\\times10^{-6} \\times 2.15 \\times 12.96",
+            "i_L \\approx 0.620 \\times 4 \\times 96485 \\times 0.196 \\times 7.4\\times10^{-4} \\times 1.2\\times10^{-6} \\times 27.9 \\approx 1.5\\times10^{-4}\\ \\mathrm{A}"
+          ],
+          "result": "About 150 µA of steady oxygen-reduction current at 1600 rpm - the kind of number that anchors a fuel-cell measurement."
+        }
+      ]
+    },
+    {
+      "id": "ring-disk",
+      "tone": "violet",
+      "title": "The rotating ring-disk electrode",
+      "minutes": 7,
+      "summary": "Add a second electrode, a ring around the disk, and you can catch whatever the disk reaction throws off. That is how you detect intermediates and measure their lifetimes in solution.",
+      "keyPoints": [
+        "An RRDE is a disk surrounded by a concentric ring, electrically independent, set to a potential that detects species made at the disk.",
+        "Whatever the disk generates and releases into solution is swept outward across the gap and over the ring, where it is detected.",
+        "The fraction of disk product the ring catches is fixed by geometry - the collection efficiency N.",
+        "A smaller-than-geometric collection efficiency means the intermediate decayed or adsorbed before reaching the ring."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The rotating ring-disk electrode (RRDE) keeps the disk and adds a ring of the same material on a circle a short gap away, insulated from the disk. Run the disk at a potential where it makes a product, and hold the ring at a potential where it detects that product. The flow field throws everything the disk releases outward, so a fixed fraction of it crosses the gap and passes over the ring, where it shows up as a current."
+        },
+        {
+          "kind": "para",
+          "text": "The ring current, normalised by the disk current, is the collection efficiency `N` - a purely geometric number, typically 0.2-0.4, fixed by the radii of disk and ring. If the ring catches *less* than `N` times the disk's production, some of the disk product never made it across the gap. It must have been eaten by a homogeneous reaction, adsorbed, or otherwise diverted. The deficit is a direct count of those losses."
+        },
+        {
+          "kind": "formula",
+          "tex": "N = \\frac{i_{\\text{ring}}}{i_{\\text{disk}}} \\times \\frac{n_{\\text{disk}}}{n_{\\text{ring}}}, \\qquad i_{\\text{ring}} \\approx N\\, i_{\\text{disk}} \\ (\\text{geometry only})",
+          "caption": "Collection efficiency. For a stable product the ring current is just N times the disk current. A deficit is the signature of coupled chemistry happening in the gap."
+        },
+        {
+          "kind": "para",
+          "text": "The classic use is oxygen reduction. On the disk you may reduce O2 either all the way to water (four electrons) or only to peroxide (two electrons). Hold the ring at a potential that re-oxidises peroxide and the ring current tells you how much peroxide escaped the disk - a direct, quantitative measure of the reaction's pathway. The same logic catches superoxide in aprotic media or metal-ion intermediates in plating."
+        }
+      ]
+    },
+    {
+      "id": "flow-cells",
+      "tone": "rose",
+      "title": "Channel and flow-through cells",
+      "minutes": 7,
+      "summary": "Pump the solution through a thin channel past the electrode, and the current measures what gets converted before the fluid leaves. These cells are how bulk electrolysis meets controlled transport.",
+      "keyPoints": [
+        "In a channel cell the electrode forms one wall of a thin rectangular channel through which solution is pumped.",
+        "The diffusion layer is bounded by the channel height, so the limiting current depends on flow rate and channel geometry.",
+        "Porous flow-through electrodes give enormous electroactive area per volume and push conversion toward completeness.",
+        "Because residence time is a design variable, conversion can be traded against throughput."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A channel cell is exactly what it sounds like: two plates a millimetre or less apart, the working electrode making one wall, the counter electrode the other, and a pump pushing the solution through. The physics is the same as the RDE - a boundary layer forms next to the wall - but the geometry now includes a finite gap, so the boundary layer cannot grow forever and the limiting current is set by the interplay of flow speed, channel height and electrode length."
+        },
+        {
+          "kind": "para",
+          "text": "That changes the experiment's meaning. In a batch cell the current tells you how fast the electrode reacts what reaches it. In a channel cell it also tells you how much of the incoming reactant is consumed before it leaves. Push the flow slowly and you convert nearly everything; push it fast and most reactant escapes. Throughput and conversion become two knobs on the same dial, which is exactly the design question in an industrial reactor."
+        },
+        {
+          "kind": "para",
+          "text": "Flow-through porous electrodes take the idea further: instead of a flat wall, the fluid is pushed through a thick, high-surface-area bed of electrode material. Reactant then sees wall area from every side, and because the area-to-volume ratio is enormous, even a fast pump can be held up long enough for near-complete conversion. Fuel cells, electrolysers and sensors all exploit this format."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "Residence time is the message",
+          "body": "In flow methods the experimental variable is how long each parcel of fluid spends at the electrode. Current is then a statement about conversion per pass, not just about the surface."
+        }
+      ]
+    },
+    {
+      "id": "koutecky-levich",
+      "tone": "coral",
+      "title": "Koutecký-Levich: separating kinetics from transport",
+      "minutes": 8,
+      "summary": "Measure the current at several rotation rates and plot the reciprocal of the current against the reciprocal of the square root of rotation rate. The intercept gives the kinetic current; the slope gives the transport coefficient.",
+      "keyPoints": [
+        "At any practical potential the measured current is the series combination of the kinetic current and the mass-transfer current, so 1/i = 1/i_k + 1/i_L.",
+        "Because i_L rises as sqrt(omega), plotting 1/i against 1/sqrt(omega) is a straight line for a kinetics-limited component.",
+        "The intercept is 1/i_k, the pure kinetic current; the slope contains n, D and C.",
+        "This Koutecký-Levich analysis is the standard way to report electrocatalyst performance on an RDE."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "In Lesson 5 we said the observed current can be limited by how fast the electron transfer runs or by how fast the reactant arrives. The RDE turns that into geometry: spin faster and the arrival rate improves, but the intrinsic kinetic rate does not care how fast you spin. So the two limits act like resistors in series - the current is set by whichever is harder."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\frac{1}{i} = \\frac{1}{i_k} + \\frac{1}{i_L} = \\frac{1}{i_k} + \\frac{1}{0.620\\, n F A D^{2/3} C \\nu^{-1/6} \\omega^{1/2}}",
+          "caption": "The Koutecký-Levich equation. The measured current is the series combination of kinetic control (i_k, spin-independent) and transport control (i_L, growing as sqrt(omega))."
+        },
+        {
+          "kind": "para",
+          "text": "The practical form is a plot. Take the measured current `i` at a fixed potential and several rotation rates, and plot `1/i` on the y-axis against `1/sqrt(omega)` on the x-axis. Because `1/i_L` is linear in `1/sqrt(omega)`, the data fall on a straight line. Its *slope* is set by the Levich parameters `n F A D^{2/3} C nu^{-1/6}`; its *intercept* is `1/i_k`, the pure kinetic current you would measure if transport were infinitely fast."
+        },
+        {
+          "kind": "para",
+          "text": "This is the most-used graph in electrocatalysis. Report a catalyst as a single current at one rotation rate and a skeptic can always say the number was really transport. Report the Koutecký-Levich intercept and you have removed transport from the claim: the intercept is the electrode's honest kinetic rate at that potential. The same plot also tells you how many electrons the reaction passes, because the slope carries the factor `n` explicitly."
+        },
+        {
+          "kind": "callout",
+          "variant": "warn",
+          "title": "Intercept, not slope, is the catalyst",
+          "body": "The slope of a Koutecký-Levich plot knows only the Levich parameters: n, D, C. The intercept extrapolates to infinite rotation, where transport is no longer limiting - it is the only part of the plot that sees the catalyst's intrinsic activity."
+        }
+      ]
+    },
+    {
+      "id": "choosing-a-hydrodynamic-method",
+      "tone": "teal",
+      "title": "Choosing a hydrodynamic method",
+      "minutes": 5,
+      "summary": "RDE for clean kinetics, RRDE for intermediates, channel and flow-through cells for conversion per pass. The flow regime picks the tool.",
+      "keyPoints": [
+        "Use the RDE when you want a uniform, settable mass-transfer coefficient and a Koutecký-Levich kinetic intercept.",
+        "Use the RRDE to detect intermediates and measure their collection efficiency.",
+        "Use channel and flow-through cells when the question is conversion, residence time, or industrial throughput.",
+        "All share one logic: controlled flow makes mass transfer a known quantity instead of a nuisance."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The three families differ less in physics than in what they let you dial. The RDE fixes the transport coefficient through the rotation rate; the RRDE adds a second, independent detector on the same controlled flow; channel and flow-through cells replace rotation with a pump and make conversion per pass the headline number."
+        },
+        {
+          "kind": "table",
+          "head": [
+            "Method",
+            "How flow is imposed",
+            "What it is best at"
+          ],
+          "widths": [
+            1.6,
+            2.2,
+            2.6
+          ],
+          "rows": [
+            [
+              "Rotating disk",
+              "Spin the electrode",
+              "Uniform surface transport; Koutecký-Levich kinetics"
+            ],
+            [
+              "Ring-disk",
+              "Spin the electrode, second ring detector",
+              "Intermediates, collection efficiency, pathway branching"
+            ],
+            [
+              "Channel/flow-through",
+              "Pump through a thin channel or porous bed",
+              "Conversion per pass, throughput, reactor design"
+            ]
+          ]
+        },
+        {
+          "kind": "para",
+          "text": "A good workflow is usually RDE first: quantify the limiting current, check the sqrt(omega) law, and take the Koutecký-Levich intercept for the kinetics. Move to the RRDE when a suspected intermediate needs catching, and scale up to a channel or flow-through cell when the answer has to survive contact with a real reactor."
+        },
+        {
+          "kind": "worked",
+          "title": "Levich scaling on the disk",
+          "given": "On an RDE, i_L = 150 uA at 1600 rpm. What is i_L at 400 rpm?",
+          "steps": [
+            "i_L \\propto \\omega^{1/2}",
+            "i_L(400) = 150\\ \\mu\\mathrm{A} \\times \\sqrt{400/1600} = 150 \\times 0.5",
+            "i_L(400) = 75\\ \\mu\\mathrm{A}"
+          ],
+          "result": "75 uA. A fourfold cut in rotation halves the current: speed beats thickness in the diffusion layer."
+        },
+        {
+          "kind": "worked",
+          "title": "Extracting i_k from a Koutecký-Levich line",
+          "given": "At one potential, 1/i against 1/sqrt(omega) is linear with intercept 1/i_k = 4.0e3 A^{-1} and slope such that at omega = 3200 rpm (181 rad/s), 1/i = 6.0e3 A^{-1}. Find i_k.",
+          "steps": [
+            "\\frac{1}{i} = \\frac{1}{i_k} + \\frac{1}{i_L}",
+            "i_k = 1/(4.0\\times10^{3}) = 2.5\\times10^{-4}\\ \\mathrm{A}",
+            "\\text{At 3200 rpm: } i = 1/(6.0\\times10^{3}) = 1.67\\times10^{-4}\\ \\mathrm{A}"
+          ],
+          "result": "The pure kinetic current is 250 uA; at 3200 rpm it is held down to 167 uA by transport. That gap between the intercept and the measured current is the transport correction."
+        }
+      ],
+      "cta": {
+        "title": "Make the cell sing",
+        "body": "Time-domain pulses, sweeps and steady flows all prod the system directly. In Lesson 11 we nudge it with a small alternating signal and listen to the response - impedance spectroscopy.",
+        "href": "/lessons/lesson-10/quiz",
+        "linkLabel": "Take the Lesson 10 quiz",
+        "secondaryHref": "/lessons/lesson-11",
+        "secondaryLabel": "Go to Lesson 11"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "l10-mcq-001",
+      "topicId": "why-force-convection",
+      "quick": true,
+      "question": "The main reason to force convection in an electrochemical cell is to:",
+      "options": [
+        "Cool the cell",
+        "Make the diffusion layer thickness reproducible and known",
+        "Increase the solvent viscosity",
+        "Remove the need for a reference electrode"
+      ],
+      "answer": 1,
+      "explanation": "In a still solution the layer thickness is an uncontrolled boundary condition; controlled flow makes the mass-transfer rate a settable quantity."
+    },
+    {
+      "id": "l10-mcq-002",
+      "topicId": "why-force-convection",
+      "quick": true,
+      "question": "Spinning an electrode faster makes the limiting current:",
+      "options": [
+        "Smaller",
+        "Larger",
+        "Unchanged",
+        "Zero"
+      ],
+      "answer": 1,
+      "explanation": "Faster flow thins the diffusion layer, steepens the surface gradient, and so raises the limiting current."
+    },
+    {
+      "id": "l10-mcq-003",
+      "topicId": "why-force-convection",
+      "quick": true,
+      "question": "Near a working electrode in a flowing solution the current is set across:",
+      "options": [
+        "The bulk solution",
+        "A thin diffusional layer right at the electrode surface",
+        "The counter electrode",
+        "The reference electrode junction"
+      ],
+      "answer": 1,
+      "explanation": "The bulk is well stirred; the last concentration change happens in the thin stagnant diffusion layer adjacent to the electrode, and that gradient carries the flux."
+    },
+    {
+      "id": "l10-mcq-004",
+      "topicId": "why-force-convection",
+      "question": "In a quiescent electrochemical cell, the limiting current tends to:",
+      "options": [
+        "Be perfectly reproducible",
+        "Drift as stray convection changes the diffusion layer",
+        "Equal the exchange current",
+        "Follow the Cottrell equation forever"
+      ],
+      "answer": 1,
+      "explanation": "Without controlled transport the layer grows and is continually perturbed, so the limiting current is poorly defined - which is the motivation for hydrodynamic methods."
+    },
+    {
+      "id": "l10-mcq-005",
+      "topicId": "rotating-disk",
+      "quick": true,
+      "question": "A rotating disk electrode pumps solution:",
+      "options": [
+        "Parallel to the disk face only",
+        "Up along the axis and outward across the face",
+        "Nowhere - the fluid is static",
+        "Down into the disk"
+      ],
+      "answer": 1,
+      "explanation": "The spinning disk flings fluid outward; fresh solution is drawn in along the rotation axis, giving an exact axisymmetric flow."
+    },
+    {
+      "id": "l10-mcq-006",
+      "topicId": "rotating-disk",
+      "quick": true,
+      "question": "The Levich limiting current on a disk scales with rotation rate omega as:",
+      "options": [
+        "omega",
+        "omega^{1/2}",
+        "omega^2",
+        "1/omega"
+      ],
+      "answer": 1,
+      "explanation": "i_L = 0.620 n F A D^{2/3} C nu^{-1/6} omega^{1/2}: the current grows as the square root of the rotation rate."
+    },
+    {
+      "id": "l10-mcq-007",
+      "topicId": "rotating-disk",
+      "quick": true,
+      "question": "The special feature of the diffusion layer on a rotating disk is that it is:",
+      "options": [
+        "Thickest at the edge",
+        "Uniform in thickness over the whole face",
+        "Thickest at the centre",
+        "Oscillating"
+      ],
+      "answer": 1,
+      "explanation": "Because the flow is exactly the same at every radius, the transport conditions are uniform - the reason RDE data are so clean."
+    },
+    {
+      "id": "l10-mcq-008",
+      "topicId": "rotating-disk",
+      "question": "In the Levich equation the diffusion coefficient enters as:",
+      "options": [
+        "D^{1/2}",
+        "D^{2/3}",
+        "D",
+        "D^{-1}"
+      ],
+      "answer": 1,
+      "explanation": "i_L ∝ D^{2/3}: larger D raises the current, but weaker than linearly because transport also depends on the viscosity and momentum boundary layer."
+    },
+    {
+      "id": "l10-mcq-009",
+      "topicId": "ring-disk",
+      "quick": true,
+      "question": "The ring in an RRDE is held at a potential that:",
+      "options": [
+        "Makes the same product as the disk",
+        "Detects species generated at the disk",
+        "Does nothing",
+        "Matches the disk exactly"
+      ],
+      "answer": 1,
+      "explanation": "The ring is a potentiostatted detector for whatever the disk reaction releases into the outward flow."
+    },
+    {
+      "id": "l10-mcq-010",
+      "topicId": "ring-disk",
+      "quick": true,
+      "question": "The collection efficiency N is:",
+      "options": [
+        "A property of the electrolyte",
+        "The fraction of disk product the ring detects, fixed by geometry",
+        "The transfer coefficient",
+        "The faradaic efficiency"
+      ],
+      "answer": 1,
+      "explanation": "N is set purely by the disk and ring radii; typically a stable product is collected with efficiency N, and a deficit signals loss in the gap."
+    },
+    {
+      "id": "l10-mcq-011",
+      "topicId": "ring-disk",
+      "quick": true,
+      "question": "An RRDE ring current smaller than N times the disk current means the disk product:",
+      "options": [
+        "Was all detected",
+        "Decayed, adsorbed, or reacted before reaching the ring",
+        "Turned into the counter electrode",
+        "Was too concentrated"
+      ],
+      "answer": 1,
+      "explanation": "Geometry guarantees that fraction N of a stable product reaches the ring; anything less is a loss term in the gap."
+    },
+    {
+      "id": "l10-mcq-012",
+      "topicId": "ring-disk",
+      "question": "A common RRDE application is detecting:",
+      "options": [
+        "Bubbles in the cell",
+        "Peroxide from two-electron oxygen reduction at the disk",
+        "The temperature of the motor",
+        "Impurities in the acid"
+      ],
+      "answer": 1,
+      "explanation": "Holding the ring to re-oxidise peroxide and comparing its current to the disk's gives the H2O2 yield of an O2-reduction catalyst directly."
+    },
+    {
+      "id": "l10-mcq-013",
+      "topicId": "flow-cells",
+      "quick": true,
+      "question": "In a channel cell the solution is moved by:",
+      "options": [
+        "Spinning the electrode",
+        "A pump pushing it through a thin channel",
+        "Thermal convection",
+        "Gravity only"
+      ],
+      "answer": 1,
+      "explanation": "A channel cell is a thin rectangular channel with the working electrode as one wall, traversed by pumped solution."
+    },
+    {
+      "id": "l10-mcq-014",
+      "topicId": "flow-cells",
+      "quick": true,
+      "question": "Pushing the flow slower through a channel cell generally:",
+      "options": [
+        "Decreases conversion per pass",
+        "Increases conversion per pass",
+        "Has no effect on conversion",
+        "Reverses the reaction"
+      ],
+      "answer": 1,
+      "explanation": "Slower flow gives each parcel of fluid more residence time at the electrode, so a larger fraction of its reactant is converted."
+    },
+    {
+      "id": "l10-mcq-015",
+      "topicId": "flow-cells",
+      "quick": true,
+      "question": "A porous flow-through electrode is valuable because it offers:",
+      "options": [
+        "A very small surface area",
+        "A huge electroactive area per unit volume",
+        "No need for electrolyte",
+        "Perfect insulation"
+      ],
+      "answer": 1,
+      "explanation": "Forcing the fluid through a high-surface-area bed maximises contact, pushing conversion toward completeness in a compact volume."
+    },
+    {
+      "id": "l10-mcq-016",
+      "topicId": "flow-cells",
+      "question": "Flow methods let you trade which two quantities against each other?",
+      "options": [
+        "Colour and taste",
+        "Conversion per pass and throughput",
+        "Pressure and viscosity",
+        "Temperature and humidity"
+      ],
+      "answer": 1,
+      "explanation": "Residence time couples the two directly: a slower pump converts more per pass but processes less fluid per unit time."
+    },
+    {
+      "id": "l10-mcq-017",
+      "topicId": "koutecky-levich",
+      "quick": true,
+      "question": "The Koutecký-Levich relation treats the kinetic and mass-transfer currents as:",
+      "options": [
+        "In parallel",
+        "In series",
+        "Unrelated",
+        "Identical"
+      ],
+      "answer": 1,
+      "explanation": "1/i = 1/i_k + 1/i_L: the observed current is limited by whichever step, kinetic or transport, is harder - like resistors in series."
+    },
+    {
+      "id": "l10-mcq-018",
+      "topicId": "koutecky-levich",
+      "quick": true,
+      "question": "The x-axis of the Koutecký-Levich plot is:",
+      "options": [
+        "omega",
+        "1/sqrt(omega)",
+        "v",
+        "t"
+      ],
+      "answer": 1,
+      "explanation": "Plotting 1/i against 1/sqrt(omega) linearises the transport term; the intercept extrapolates to infinite rotation rate."
+    },
+    {
+      "id": "l10-mcq-019",
+      "topicId": "koutecky-levich",
+      "quick": true,
+      "question": "The intercept of a Koutecký-Levich plot is 1/i_k. It represents:",
+      "options": [
+        "The diffusion coefficient",
+        "The pure kinetic current, free of transport limitations",
+        "The Levich slope",
+        "The solution resistance"
+      ],
+      "answer": 1,
+      "explanation": "At infinite rotation the transport resistance vanishes, so the intercept current is set purely by the electrode's kinetics."
+    },
+    {
+      "id": "l10-mcq-020",
+      "topicId": "koutecky-levich",
+      "question": "A catalyst benchmark should report the Koutecký-Levich intercept rather than a single current because:",
+      "options": [
+        "The single current is always wrong",
+        "It removes the mass-transfer contribution from the number",
+        "The intercept is prettier",
+        "The slope is confidential"
+      ],
+      "answer": 1,
+      "explanation": "A raw current at one rotation rate mixes kinetic and transport limits; the intercept isolates the electrode's intrinsic activity."
+    },
+    {
+      "id": "l10-mcq-021",
+      "topicId": "choosing-a-hydrodynamic-method",
+      "quick": true,
+      "question": "For the cleanest study of steady-state kinetics, choose:",
+      "options": [
+        "RDE with a Koutecký-Levich analysis",
+        "A still beaker",
+        "A dropping mercury electrode",
+        "A static plate"
+      ],
+      "answer": 0,
+      "explanation": "The RDE's uniform transport plus the K-L plot pulls the kinetic current out of the transport ceiling."
+    },
+    {
+      "id": "l10-mcq-022",
+      "topicId": "choosing-a-hydrodynamic-method",
+      "quick": true,
+      "question": "To catch a suspected soluble intermediate, use:",
+      "options": [
+        "RDE alone",
+        "RRDE",
+        "Potentiometry",
+        "Coulometry"
+      ],
+      "answer": 1,
+      "explanation": "The ring sits in the outward flow and detects intermediates escaping the disk, with geometry fixing the catch rate."
+    },
+    {
+      "id": "l10-mcq-023",
+      "topicId": "choosing-a-hydrodynamic-method",
+      "quick": true,
+      "question": "For a reactor design question about conversion per pass, use:",
+      "options": [
+        "Channel or flow-through cell",
+        "RDE",
+        "RRDE",
+        "A static cell"
+      ],
+      "answer": 0,
+      "explanation": "Flow-through formats tie residence time directly to conversion, which is the actual engineering variable."
+    },
+    {
+      "id": "l10-mcq-024",
+      "topicId": "choosing-a-hydrodynamic-method",
+      "question": "All hydrodynamic methods share one idea:",
+      "options": [
+        "Stirring the solution changes the Faraday constant",
+        "Controlled flow turns mass transfer into a known, settable parameter",
+        "They eliminate the reference electrode",
+        "They only work with mercury"
+      ],
+      "answer": 1,
+      "explanation": "Whether by rotation or by pumping, the method fixes the diffusion layer so that transport can be modelled - and subtracted."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l10-tf-001",
+      "topicId": "why-force-convection",
+      "question": "In unstirred solution the limiting current is uncontrolled because the diffusion layer is not fixed.",
+      "answer": true,
+      "explanation": "Without forced flow the diffusion layer floats with natural convection, so the limiting current drifts. Moving the solution past the electrode fixes a thin, well-defined layer and makes mass transfer reproducible."
+    },
+    {
+      "kind": "numeric",
+      "id": "l10-num-001",
+      "topicId": "rotating-disk",
+      "question": "In the Levich equation the RDE limiting current is proportional to the rotation rate omega raised to what power?",
+      "answer": 0.5,
+      "tolerance": 0.02,
+      "explanation": "The Levich equation gives the limiting current proportional to omega^(1/2), so a plot against the square root of rotation rate is linear. The RDE diffusion layer also has uniform thickness, making the electrode uniformly accessible."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l10-tf-002",
+      "topicId": "rotating-disk",
+      "question": "Over a rotating disk electrode the diffusion layer has a uniform thickness at every point of the surface.",
+      "answer": true,
+      "explanation": "The two geometrical dependencies of the flat-plate theory cancel at the RDE, so every accessible point sees the same transport conditions. That uniformity is why RDE currents are clean and reproducible."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l10-tf-003",
+      "topicId": "ring-disk",
+      "question": "On an RRDE, a collection efficiency smaller than the geometric value means the intermediate decayed or adsorbed before reaching the ring.",
+      "answer": true,
+      "explanation": "The collection efficiency is fixed by geometry, so if the ring catches less than that fraction, some of the intermediate was lost on the way - by reacting, decaying or sticking to the surface."
+    },
+    {
+      "kind": "numeric",
+      "id": "l10-num-002",
+      "topicId": "ring-disk",
+      "question": "For a typical rotating ring-disk geometry, the collection efficiency N is about what value?",
+      "answer": 0.4,
+      "tolerance": 0.1,
+      "explanation": "A typical geometry gives a collection efficiency of about 0.4, meaning the ring catches roughly 40% of what the disk releases. The value is fixed by the ring and disk radii."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l10-tf-004",
+      "topicId": "flow-cells",
+      "question": "In a channel cell the diffusion layer is bounded by the channel height, so the limiting current depends on the flow rate and the cell geometry.",
+      "answer": true,
+      "explanation": "The electrode forms one wall of a thin channel, so the diffusion layer cannot grow past the channel height. The limiting current therefore depends on flow rate and geometry, and residence time becomes a design variable."
+    },
+    {
+      "kind": "numeric",
+      "id": "l10-num-003",
+      "topicId": "koutecky-levich",
+      "question": "Under Koutecky-Levich control 1/i = 1/i_k + 1/i_L. If i_k = 4.0 and i_L = 12.0 in the same units, what is the measured current i?",
+      "answer": 3.0,
+      "tolerance": 0.1,
+      "explanation": "1/i = 1/4.0 + 1/12.0 = 0.250 + 0.0833 = 0.3333, so i = 3.0. The smaller limiting current dominates, which is why the measured current stays below both i_k and i_L."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l10-tf-005",
+      "topicId": "koutecky-levich",
+      "question": "A Koutecky-Levich plot of 1/i against 1/sqrt(omega) has an intercept equal to the pure kinetic current.",
+      "answer": false,
+      "explanation": "The intercept is 1/i_k, the reciprocal of the kinetic current, not i_k itself. The kinetic current is the reciprocal of the intercept. This is the standard way to report electrocatalyst activity."
+    },
+    {
+      "kind": "multi",
+      "id": "l10-multi-001",
+      "topicId": "choosing-a-hydrodynamic-method",
+      "question": "Which hydrodynamic method fits each job? Select every correct pairing.",
+      "options": [
+        "RDE: uniform settable mass transfer and a Koutecky-Levich intercept",
+        "RRDE: detect intermediates and measure their collection efficiency",
+        "Channel and flow-through cells: conversion, residence time and throughput",
+        "RDE: measure the collection efficiency of intermediates"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The RDE gives uniform, settable mass transfer and a kinetic intercept; the RRDE detects intermediates through its collection efficiency; channel and flow-through cells are chosen for conversion and throughput. Collection efficiency is an RRDE concept, not an RDE one."
+    }
+  ]
+}

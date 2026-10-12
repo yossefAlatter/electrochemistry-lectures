@@ -1,0 +1,246 @@
+{
+  "slug": "problems-3",
+  "label": "Problem set 3",
+  "title": "Problem set 3: Kinetics of electrode reactions",
+  "summary": "Practice with the Tafel slope, exchange current density, standard rate constant, transfer coefficients and the high-field limit of Butler-Volmer.",
+  "source": "Bard & Faulkner ch.3",
+  "order": 103,
+  "minutes": 28,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Chapter 3 turns the exponential current-overpotential relation into working formulas: the Tafel slope b = 2.303RT/(alpha n F), the exchange current density i0 = nFk0C, and the Tafel equation eta = b log10(i/i0)."
+    },
+    {
+      "kind": "para",
+      "text": "At 25 C the prefactor 2.303RT/F is 0.05916 V, so for alpha = 0.5 and n = 1 the Tafel slope is near 0.118 V per decade."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps3-kinetics",
+      "tone": "amber",
+      "title": "Hint sheet: kinetic relations",
+      "summary": "Practice with the Tafel slope, exchange current density, standard rate constant, transfer coefficients and the high-field limit of Butler-Volmer.",
+      "minutes": 23,
+      "keyPoints": [
+        "b = 2.303RT/(alpha n F)",
+        "i0 = nFk0C",
+        "eta = b log10(i/i0)",
+        "alpha_a + alpha_c = 1",
+        "At 25 C, 2.303RT/F = 0.05916 V"
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Chapter 3 turns the exponential current-overpotential relation into working formulas: the Tafel slope b = 2.303RT/(alpha n F), the exchange current density i0 = nFk0C, and the Tafel equation eta = b log10(i/i0)."
+        },
+        {
+          "kind": "para",
+          "text": "At 25 C the prefactor 2.303RT/F is 0.05916 V, so for alpha = 0.5 and n = 1 the Tafel slope is near 0.118 V per decade."
+        },
+        {
+          "kind": "worked",
+          "title": "Tafel slope at 25 C",
+          "given": "alpha = 0.5, n = 1, T = 298.15 K",
+          "steps": [
+            "Use b = 2.303RT/(alpha n F).",
+            "Substitute: b = 2.303 x 8.314 x 298.15 / (0.5 x 96485).",
+            "Numerator 5708 J/mol; divide by 48242 C/mol gives 0.1183 V."
+          ],
+          "result": "b = 0.118 V per decade"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "numeric",
+      "id": "ps3-num-001",
+      "topicId": "ps3-kinetics",
+      "question": "Calculate the Tafel slope b = 2.303RT/(alpha n F) in volts per decade for alpha = 0.5, n = 1, T = 298.15 K, R = 8.314 J/(K mol), F = 96485 C/mol.",
+      "answer": 0.118,
+      "tolerance": 0.004,
+      "unit": "V/decade",
+      "explanation": "b = 2.303 x 8.314 x 298.15 / (0.5 x 1 x 96485) = 0.1183 V per decade."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps3-num-002",
+      "topicId": "ps3-kinetics",
+      "question": "The exchange current density is i0 = nFk0C. Calculate i0 in microamperes per cm2 for n = 1, k0 = 1.0e-4 cm/s, C = 1.0e-6 mol/cm3, F = 96485 C/mol.",
+      "answer": 9.65,
+      "tolerance": 0.5,
+      "unit": "uA/cm2",
+      "explanation": "i0 = 96485 x 1.0e-4 x 1.0e-6 = 9.65e-6 A/cm2 = 9.65 uA/cm2."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps3-num-003",
+      "topicId": "ps3-kinetics",
+      "question": "Using the Tafel relation eta = b log10(i/i0) with b = 0.118 V per decade, calculate the overpotential in volts needed to raise the current to ten times the exchange current density.",
+      "answer": 0.118,
+      "tolerance": 0.005,
+      "unit": "V",
+      "explanation": "eta = 0.118 x log10(10) = 0.118 V. One decade of current costs one Tafel slope of overpotential."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps3-num-004",
+      "topicId": "ps3-kinetics",
+      "question": "If the anodic transfer coefficient is alpha_a = 0.60, what is the cathodic transfer coefficient alpha_c, given alpha_a + alpha_c = 1?",
+      "answer": 0.4,
+      "tolerance": 0.02,
+      "explanation": "alpha_c = 1 - 0.60 = 0.40. The two transfer coefficients sum to one."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps3-num-005",
+      "topicId": "ps3-kinetics",
+      "question": "An electrode has an exchange current density of 1.0e-3 A/cm2 for a one-electron reaction with concentration 1.0e-5 mol/cm3. Calculate the standard rate constant k0 in cm/s, using k0 = i0/(nFC).",
+      "answer": 0.00104,
+      "tolerance": 0.0001,
+      "unit": "cm/s",
+      "explanation": "k0 = 1.0e-3/(1 x 96485 x 1.0e-5) = 1.0e-3/0.96485 = 1.04e-3 cm/s."
+    },
+    {
+      "id": "ps3-mcq-001",
+      "topicId": "ps3-kinetics",
+      "quick": true,
+      "question": "At large overpotentials the Butler-Volmer equation reduces to:",
+      "options": [
+        "A constant current",
+        "The Tafel equation, an exponential relation between current and overpotential",
+        "Ohm-1s law",
+        "Zero current"
+      ],
+      "answer": 1,
+      "explanation": "When the overpotential is large, one of the two exponential terms dominates and Butler-Volmer becomes the Tafel equation, linear in log i versus eta."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps3-tf-001",
+      "topicId": "ps3-kinetics",
+      "quick": true,
+      "question": "At equilibrium the net current is zero, but equal anodic and cathodic currents still flow.",
+      "answer": true,
+      "explanation": "The exchange current flows in both directions at equal rates, so the net current is zero while charge transfer continues."
+    },
+    {
+      "kind": "multi",
+      "id": "ps3-multi-001",
+      "topicId": "ps3-kinetics",
+      "question": "Which assumptions underlie the simple Butler-Volmer treatment? Select all that apply.",
+      "options": [
+        "A single rate-determining electron-transfer step",
+        "A transfer coefficient that is constant with potential",
+        "Mass transfer that is fast enough not to limit the current",
+        "A perfect vacuum around the electrode"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Butler-Volmer assumes a single electron-transfer step, a roughly constant transfer coefficient, and no mass-transfer limitation. A vacuum is irrelevant to solution electrochemistry."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps3-tf-002",
+      "topicId": "ps3-kinetics",
+      "question": "A large exchange current density indicates a fast, highly reversible electrode reaction.",
+      "answer": true,
+      "explanation": "i0 measures how readily the reaction runs in both directions; a large i0 means little overpotential is needed, characteristic of a good electrocatalyst."
+    },
+    {
+      "id": "ps3-mcq-002",
+      "topicId": "ps3-kinetics",
+      "quick": true,
+      "question": "A plot of overpotential against log(current) for a reaction under kinetic control gives:",
+      "options": [
+        "A horizontal line",
+        "A straight line whose slope is the Tafel slope",
+        "A circle",
+        "A parabola bending upward"
+      ],
+      "answer": 1,
+      "explanation": "This Tafel plot is linear; its slope, the Tafel slope, is 2.303RT/(alpha n F) and its intercept gives the exchange current density."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps3-num-006",
+      "topicId": "ps3-kinetics",
+      "question": "For the one-electron reaction above with k0 = 1.04e-3 cm/s and alpha = 0.5, by what factor does the forward rate constant increase when the overpotential is raised by the Tafel slope b = 0.118 V? (Answer as a factor, e.g. 10.)",
+      "answer": 10,
+      "tolerance": 1,
+      "explanation": "Raising the overpotential by one Tafel slope (2.303RT/(alpha n F)) raises log10(i/i0) by one, so the rate increases by about a factor of ten."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps3-tf-003",
+      "topicId": "ps3-kinetics",
+      "question": "The transfer coefficient alpha describes how the activation barrier changes with electrode potential.",
+      "answer": true,
+      "explanation": "Alpha is the fraction of the applied potential change that lowers the forward activation barrier, so it sets the slope of the Tafel line."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps3-num-007",
+      "topicId": "ps3-kinetics",
+      "question": "Using eta = b log10(i/i0) with b = 0.118 V per decade, calculate the overpotential in volts for i/i0 = 100.",
+      "answer": 0.236,
+      "tolerance": 0.01,
+      "unit": "V",
+      "explanation": "eta = 0.118 x log10(100) = 0.236 V. Two decades of current cost two Tafel slopes."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps3-num-008",
+      "topicId": "ps3-kinetics",
+      "question": "For b = 0.118 V per decade, what current ratio i/i0 corresponds to an overpotential of 0.354 V?",
+      "answer": 1000,
+      "tolerance": 100,
+      "explanation": "log10(i/i0) = 0.354/0.118 = 3, so i/i0 = 10^3 = 1000."
+    },
+    {
+      "id": "ps3-mcq-003",
+      "topicId": "ps3-kinetics",
+      "quick": true,
+      "question": "The intercept of a Tafel plot (eta versus log i) gives:",
+      "options": [
+        "The exchange current density",
+        "The transfer coefficient directly",
+        "The diffusion coefficient",
+        "The cell resistance"
+      ],
+      "answer": 0,
+      "explanation": "Extrapolating the Tafel line to zero overpotential gives log i0, and hence k0; the slope gives alpha."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps3-tf-004",
+      "topicId": "ps3-kinetics",
+      "question": "A larger transfer coefficient alpha produces a smaller (shallower) Tafel slope.",
+      "answer": true,
+      "explanation": "The Tafel slope is 2.303RT/(alpha n F), so a larger alpha gives a smaller slope."
+    },
+    {
+      "kind": "multi",
+      "id": "ps3-multi-002",
+      "topicId": "ps3-kinetics",
+      "question": "Which conditions favour a clean Tafel line? Select all that apply.",
+      "options": [
+        "A single rate-determining electron-transfer step",
+        "Negligible mass-transfer limitation",
+        "A reasonably large overpotential",
+        "A slow, drifting reference electrode"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "A clean Tafel region needs a single slow step, no mass-transfer limitation and a substantial overpotential. A slow reference would distort the measurement."
+    }
+  ]
+}

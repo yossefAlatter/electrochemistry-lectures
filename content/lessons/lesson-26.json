@@ -1,0 +1,330 @@
+{
+  "slug": "lesson-26",
+  "label": "Lesson 26",
+  "title": "Computer simulation in electrochemistry",
+  "summary": "Electrode processes are usually too complicated to solve with a formula. This lesson shows how computers fill the gap, at three levels: quantum chemistry for the electron transfer itself, molecular simulation for the interface and the double layer, and continuum methods for transport and voltammetry.",
+  "order": 26,
+  "minutes": 38,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "The equations of electrochemistry are often impossible to solve by hand. The transport equations couple to the kinetics, the kinetics couple to the surface, and the surface structure depends on everything. The realistic answer is to let a computer do the arithmetic."
+    },
+    {
+      "kind": "para",
+      "text": "Simulation also does something theory alone cannot: it builds a bridge between the molecular scale, where bonds break and solvent rearranges, and the laboratory scale, where a current is measured. This lesson surveys the levels and what each one buys."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The one-sentence summary",
+      "body": "Simulation attacks the same electrochemical problem at different scales - quantum for the transfer, molecular for the interface, continuum for transport - and good work links them."
+    }
+  ],
+  "sections": [
+    {
+      "id": "why-simulate",
+      "tone": "azure",
+      "title": "Why simulate at all",
+      "minutes": 7,
+      "summary": "Analytical formulas exist only for simple cases. Simulation handles the coupled, nonlinear, many-body problems that real electrodes present, and it can test models that no formula describes.",
+      "keyPoints": [
+        "Real electrode problems couple transport, kinetics, adsorption and surface structure.",
+        "Analytical solutions exist only for simplified geometries and mechanisms.",
+        "Simulation lets a hypothesised mechanism be tested against the measured response.",
+        "It also visualises what cannot be seen, such as the double layer or a growing nucleus."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A formula is a luxury. It appears when the geometry is simple and the mechanism is linear, as in the diffusion problems solved earlier. Real electrodes are irregular, their kinetics are nonlinear, and their surfaces evolve. For these, one builds a model and solves it numerically."
+        },
+        {
+          "kind": "para",
+          "text": "Simulation is also a test of understanding. Having proposed a mechanism, one computes the voltammogram it would produce and compares it with the experiment. If the curves match across many conditions, the mechanism is credible; if not, it is rejected. This discipline turns electrochemistry into a predictive science."
+        },
+        {
+          "kind": "para",
+          "text": "Finally, simulation shows the invisible. The structure of the double layer, the distribution of ions near an electrode, the birth of a nucleus, the path of an electron through a molecule - none of these can be watched directly, but all can be computed and pictured."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "Three questions, three scales",
+          "body": "What happens when the electron moves? That is quantum. How do the ions arrange? That is molecular simulation. How does the current respond? That is continuum simulation. A full picture needs all three."
+        }
+      ]
+    },
+    {
+      "id": "scales-of-modelling",
+      "tone": "indigo",
+      "title": "The scales of electrochemical modelling",
+      "minutes": 9,
+      "summary": "Quantum chemistry treats the electrons and bonds directly. Molecular simulation treats atoms and ions with classical forces. Continuum simulation treats concentrations and potentials as smooth fields. Each scale answers a different question.",
+      "keyPoints": [
+        "Quantum methods (ab initio, DFT) compute electronic structure and the activation energy of transfer.",
+        "Molecular dynamics and Monte Carlo treat atoms and ions classically and reveal interfacial structure.",
+        "Continuum methods solve transport and kinetics on a grid for the whole cell.",
+        "The scales overlap, and linking them is the aim of multiscale modelling."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "At the smallest scale, quantum chemistry solves the Schrodinger equation for the electrons. Methods such as density functional theory give the energy of a molecule, the strength of a bond, and - applied to the elementary act - the activation energy and the coupling for electron transfer. Nothing is fitted: the barrier comes out of the electronic structure."
+        },
+        {
+          "kind": "para",
+          "text": "Above that, molecular simulation treats atoms and ions as classical particles interacting through force fields. Molecular dynamics integrates Newton's equations to follow the solvent as it rearranges, while Monte Carlo samples the configurations statistically. These methods show how ions and water arrange at the interface, which is the structure of the double layer."
+        },
+        {
+          "kind": "para",
+          "text": "At the largest scale, continuum methods ignore individual molecules altogether and treat concentration and potential as smooth fields. The transport equations and the kinetic boundary conditions are discretised on a grid and solved numerically. This is what produces a simulated cyclic voltammogram for a whole cell."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "Multiscale modelling",
+          "body": "The dream is to feed the results of one scale into the next: quantum energies become parameters for molecular simulation, whose interfacial structure becomes a boundary condition for the continuum model. Each scale supplies what the one above it needs."
+        }
+      ]
+    },
+    {
+      "id": "digital-simulation",
+      "tone": "violet",
+      "title": "Digital simulation of voltammetry",
+      "minutes": 8,
+      "summary": "To simulate a voltammogram, space and time are divided into a grid, the transport equations are stepped forward, and the kinetics set the current at the electrode. The trick is choosing a grid fine enough near the electrode, where everything changes fastest.",
+      "keyPoints": [
+        "Digital simulation discretises space and time into a grid.",
+        "The diffusion equations are advanced step by step from known conditions.",
+        "The boundary condition at the electrode contains the kinetics.",
+        "Grids are made finer near the electrode, where gradients are steepest."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A digital simulation replaces the smooth concentration profile with its values at a grid of points near the electrode, and advances them in small time steps. At each step, transport is applied everywhere, then the electrode boundary condition fixes the flux from the reaction. The computed flux is the current."
+        },
+        {
+          "kind": "para",
+          "text": "The art lies in the grid. Near the electrode the concentration and potential change over a tiny distance, while far away they are almost flat. A uniform fine grid would be wasteful, so simulators use a nonuniform grid, dense near the surface and coarse in the bulk. As the experiment gets faster, the diffusion layer thins, and the grid must follow it."
+        },
+        {
+          "kind": "para",
+          "text": "With the geometry and mechanism set, the simulator computes the full voltammogram including every coupled step. A mechanism proposed from intuition is thereby put to a quantitative test, and competing mechanisms can be told apart by which one reproduces the measured curves at all scan rates."
+        },
+        {
+          "kind": "callout",
+          "variant": "example",
+          "title": "Fitting a mechanism",
+          "body": "A chemist proposes that a reduction is followed by a chemical step. Simulating that mechanism across the scan-rate range produces a family of curves with a characteristic shape. Comparing them with the data confirms or rejects the proposal."
+        }
+      ]
+    },
+    {
+      "id": "molecular-simulation",
+      "tone": "rose",
+      "title": "Molecular dynamics and Monte Carlo",
+      "minutes": 8,
+      "summary": "Molecular dynamics follows the motion of atoms and ions in time, revealing how the solvent and the double layer arrange. Monte Carlo samples configurations statistically, well suited to equilibrium structure and to adsorption.",
+      "keyPoints": [
+        "Molecular dynamics integrates Newton's equations to follow the real-time motion of particles.",
+        "It reveals the structure of the double layer and the reorganisation of the solvent.",
+        "Monte Carlo samples configurations statistically rather than dynamically.",
+        "Both are used to study adsorption, nucleation and ion distribution near electrodes."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Molecular dynamics puts atoms and ions in a box, gives them forces from a force field, and steps their positions forward in time. Water molecules jostle, ions crowd the electrode, and the structure of the double layer emerges from the simulation without being assumed. Watching the solvent rearrange is watching the reorganisation energy in the making."
+        },
+        {
+          "kind": "para",
+          "text": "Monte Carlo takes a different route. Instead of following time, it samples configurations according to their probability, accepting or rejecting random moves by their energy. It is efficient for equilibrium questions such as how a layer of adsorbed molecules arranges, or how a nucleus of a new phase forms on a surface."
+        },
+        {
+          "kind": "para",
+          "text": "These methods connect the microscopic to the measurable. The interfacial structure they produce feeds the boundary conditions of continuum models, and the reorganisation they reveal is compared with the reorganisation energy extracted from electron-transfer kinetics."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "Dynamics versus statistics",
+          "body": "Molecular dynamics is about motion in time and suits transport, fluctuations and reorganisation. Monte Carlo is about probability and suits equilibrium structure and phase formation. The two answer complementary questions."
+        }
+      ]
+    },
+    {
+      "id": "limits",
+      "tone": "coral",
+      "title": "What simulation can and cannot do",
+      "minutes": 6,
+      "summary": "Simulation is limited by computing power, by the accuracy of its force fields, and by the gap between scales. Its strength is to test mechanisms and connect theory to experiment, not to replace either.",
+      "keyPoints": [
+        "Force fields and approximations limit accuracy, especially for reactive systems.",
+        "The size and time a computer can reach are finite, so scales must be bridged by hand.",
+        "Simulation tests mechanisms and guides experiment rather than standing alone.",
+        "Its value grows as computing power grows and methods improve."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Every simulation rests on approximations. Quantum methods truncate the electronic problem and choose a functional; molecular methods choose a force field; continuum methods choose a grid. Each choice introduces error, and the results are only as good as the model behind them."
+        },
+        {
+          "kind": "para",
+          "text": "There is also a hard limit of size and time. A quantum calculation reaches only a few hundred atoms; a molecular simulation spans nanoseconds; a continuum model covers a whole cell but no molecules. No single simulation spans the whole range, so the scales must be joined by multiscale schemes, and the joins are themselves a source of uncertainty."
+        },
+        {
+          "kind": "para",
+          "text": "For all that, simulation earns its place. It tells experimenters which mechanism is plausible, it predicts where to look, and it gives numbers where no formula exists. As computers grow, the models reach further and the joins tighten, but the guiding role - testing ideas against measured behaviour - stays the same."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "The proper role",
+          "body": "Simulation is at its best as a bridge: it turns a molecular story into a predicted voltammogram, and a measured voltammogram back into a molecular story. Used that way it strengthens both theory and experiment."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "truefalse",
+      "id": "l26-tf-001",
+      "topicId": "why-simulate",
+      "quick": true,
+      "question": "Analytical formulas are available for all realistic electrochemical problems.",
+      "answer": false,
+      "explanation": "Formulas exist only for simplified geometries and linear mechanisms. Real electrodes are irregular and their kinetics nonlinear, so numerical simulation is needed."
+    },
+    {
+      "id": "l26-mcq-001",
+      "topicId": "why-simulate",
+      "quick": true,
+      "question": "A main advantage of simulation in electrochemistry is that it:",
+      "options": [
+        "Removes the need for experiments",
+        "Lets a proposed mechanism be tested against the measured response",
+        "Always gives exact answers",
+        "Eliminates diffusion"
+      ],
+      "answer": 1,
+      "explanation": "By computing the response a mechanism would produce and comparing with the data, simulation tests understanding and helps distinguish competing mechanisms."
+    },
+    {
+      "id": "l26-mcq-002",
+      "topicId": "scales-of-modelling",
+      "quick": true,
+      "question": "Which method is used at the smallest scale to compute electronic structure and transfer barriers?",
+      "options": [
+        "Continuum finite differences",
+        "Density functional theory",
+        "Molecular dynamics",
+        "Monte Carlo"
+      ],
+      "answer": 1,
+      "explanation": "Quantum methods such as density functional theory solve the electronic problem and give bond energies, activation energies and couplings directly from electronic structure."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l26-tf-002",
+      "topicId": "scales-of-modelling",
+      "question": "Continuum methods treat concentration and potential as smooth fields rather than individual molecules.",
+      "answer": true,
+      "explanation": "Continuum simulation ignores individual molecules and discretises smooth concentration and potential profiles on a grid, which is how whole-cell voltammograms are simulated."
+    },
+    {
+      "kind": "multi",
+      "id": "l26-multi-001",
+      "topicId": "scales-of-modelling",
+      "question": "Match each scale to its task. Which are correct? Select all that apply.",
+      "options": [
+        "Quantum chemistry computes electronic structure and transfer barriers",
+        "Molecular simulation reveals interfacial and double-layer structure",
+        "Continuum simulation solves transport and kinetics for the whole cell",
+        "Continuum simulation computes individual bond energies"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Quantum handles electrons and bonds, molecular handles atoms and interfacial structure, and continuum handles transport and kinetics. Bond energies are the quantum scale's job, not the continuum scale's."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l26-tf-003",
+      "topicId": "scales-of-modelling",
+      "question": "Multiscale modelling aims to feed the results of one scale into the next.",
+      "answer": true,
+      "explanation": "Quantum energies can parametrise molecular simulation, whose interfacial structure can set boundary conditions for a continuum model. Linking the scales is the goal of multiscale modelling."
+    },
+    {
+      "id": "l26-mcq-003",
+      "topicId": "digital-simulation",
+      "quick": true,
+      "question": "In a digital simulation of voltammetry, the electrode reaction appears as:",
+      "options": [
+        "A source of light",
+        "A boundary condition setting the flux at the electrode",
+        "A change of temperature",
+        "A colour change"
+      ],
+      "answer": 1,
+      "explanation": "Transport is applied on the grid, and the kinetics enter through the boundary condition at the electrode, which fixes the flux and hence the current."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l26-tf-004",
+      "topicId": "digital-simulation",
+      "question": "Simulation grids are usually made finer near the electrode because gradients are steepest there.",
+      "answer": true,
+      "explanation": "Concentration and potential change over a very small distance near the surface, so a dense grid is needed there, while a coarser grid suffices in the bulk. This saves computing effort."
+    },
+    {
+      "id": "l26-mcq-004",
+      "topicId": "molecular-simulation",
+      "quick": true,
+      "question": "Molecular dynamics follows atoms and ions by:",
+      "options": [
+        "Solving the electronic Schrodinger equation",
+        "Integrating Newton's equations with forces from a force field",
+        "Sampling random configurations only",
+        "Drawing a voltammogram"
+      ],
+      "answer": 1,
+      "explanation": "Molecular dynamics steps particle positions in time using classical forces. The solvent's rearrangement and the double-layer structure then emerge from the simulation itself."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l26-tf-005",
+      "topicId": "molecular-simulation",
+      "question": "Monte Carlo simulation samples configurations statistically rather than following their motion in time.",
+      "answer": true,
+      "explanation": "Monte Carlo accepts or rejects random moves by their energy, which is efficient for equilibrium questions such as adsorption and nucleation. Molecular dynamics instead follows real-time motion."
+    },
+    {
+      "id": "l26-mcq-005",
+      "topicId": "limits",
+      "quick": true,
+      "question": "A fundamental limit of molecular simulation is that:",
+      "options": [
+        "It cannot handle more than two atoms",
+        "It can reach only a finite size and time span, so scales must be bridged",
+        "It always gives exact results",
+        "It requires no force field"
+      ],
+      "answer": 1,
+      "explanation": "A quantum calculation reaches a few hundred atoms and a molecular simulation spans nanoseconds, so no single simulation covers the whole range. Multiscale schemes bridge the gap, and the joins add uncertainty."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l26-tf-006",
+      "topicId": "limits",
+      "question": "Simulation should be seen as a bridge between theory and experiment that tests mechanisms.",
+      "answer": true,
+      "explanation": "Its best role is to turn a molecular story into a predicted response and a measurement back into a molecular story, strengthening both theory and experiment rather than replacing either."
+    }
+  ]
+}

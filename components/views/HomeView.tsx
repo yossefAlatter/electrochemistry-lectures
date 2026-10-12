@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { RichText } from "@/components/Blocks";
+import { RichText } from "@/components/kit";
 import { getSubjects, lessonHref } from "@/content/registry";
 import { fill, t } from "@/lib/i18n";
 

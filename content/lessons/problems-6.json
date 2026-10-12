@@ -1,0 +1,226 @@
+{
+  "slug": "problems-6",
+  "label": "Problem set 6",
+  "title": "Problem set 6: Potential sweep methods",
+  "summary": "Practice with cyclic voltammetry: the Randles-Sevcik equation, scan-rate dependence, peak separation and the diagnostics of reversibility.",
+  "source": "Bard & Faulkner ch.6",
+  "order": 106,
+  "minutes": 28,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Cyclic voltammetry is the workhorse of the field. For a reversible diffusion-controlled couple the peak current follows Randles-Sevcik, ip = 2.69e5 n^(3/2) A D^(1/2) C v^(1/2) at 25 C, and the peak separation is about 59/n mV."
+    },
+    {
+      "kind": "para",
+      "text": "The scan-rate dependence is the key diagnostic: ip proportional to v^(1/2) means diffusion control, while deviations point to adsorption, kinetics or coupled chemistry."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps6-sweep",
+      "tone": "amber",
+      "title": "Hint sheet: sweep relations",
+      "summary": "Practice with cyclic voltammetry: the Randles-Sevcik equation, scan-rate dependence, peak separation and the diagnostics of reversibility.",
+      "minutes": 23,
+      "keyPoints": [
+        "ip = 2.69e5 n^(3/2) A D^(1/2) C v^(1/2) (25 C)",
+        "ip proportional to v^(1/2)",
+        "dEp = 59/n mV (reversible)",
+        "Ep = E1/2 - 28.5/n mV (reduction)"
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Cyclic voltammetry is the workhorse of the field. For a reversible diffusion-controlled couple the peak current follows Randles-Sevcik, ip = 2.69e5 n^(3/2) A D^(1/2) C v^(1/2) at 25 C, and the peak separation is about 59/n mV."
+        },
+        {
+          "kind": "para",
+          "text": "The scan-rate dependence is the key diagnostic: ip proportional to v^(1/2) means diffusion control, while deviations point to adsorption, kinetics or coupled chemistry."
+        },
+        {
+          "kind": "worked",
+          "title": "Randles-Sevcik peak current",
+          "given": "n = 1, A = 1.0 cm2, D = 1.0e-5 cm2/s, C = 1.0e-6 mol/cm3, v = 0.10 V/s",
+          "steps": [
+            "Use ip = 2.69e5 n^(3/2) A D^(1/2) C v^(1/2).",
+            "D^(1/2) = 3.162e-3, v^(1/2) = 0.316.",
+            "ip = 2.69e5 x 3.162e-3 x 1e-6 x 0.316 = 2.69e-4 A."
+          ],
+          "result": "ip = 269 uA"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "numeric",
+      "id": "ps6-num-001",
+      "topicId": "ps6-sweep",
+      "question": "Use the Randles-Sevcik equation at 25 C, ip = 2.69e5 n^(3/2) A D^(1/2) C v^(1/2) (A in cm2, D in cm2/s, C in mol/cm3, v in V/s, ip in A). Calculate ip in microamperes for n = 1, A = 1.0 cm2, D = 1.0e-5 cm2/s, C = 1.0e-6 mol/cm3, v = 0.10 V/s.",
+      "answer": 269,
+      "tolerance": 20,
+      "unit": "uA",
+      "explanation": "ip = 2.69e5 x 1 x 3.162e-3 x 1.0e-6 x sqrt(0.10) = 2.69e5 x 3.162e-9 x 0.316 = 2.69e-4 A = 269 uA."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps6-num-002",
+      "topicId": "ps6-sweep",
+      "question": "The Randles-Sevcik peak current is proportional to v^(1/2). If the scan rate is doubled, by what factor does ip change?",
+      "answer": 1.41,
+      "tolerance": 0.05,
+      "explanation": "ip scales with sqrt(v), so doubling v multiplies ip by sqrt(2) = 1.41."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps6-num-003",
+      "topicId": "ps6-sweep",
+      "question": "For a reversible n-electron couple the peak separation is about 59/n mV at 25 C. Calculate the peak separation in volts for n = 3.",
+      "answer": 0.0197,
+      "tolerance": 0.002,
+      "unit": "V",
+      "explanation": "dEp = 0.059/3 = 0.0197 V (about 20 mV)."
+    },
+    {
+      "id": "ps6-mcq-001",
+      "topicId": "ps6-sweep",
+      "quick": true,
+      "question": "For a reversible couple the cyclic-voltammetric peak separation (Ep,a - Ep,c) is about:",
+      "options": [
+        "59/n mV at 25 C",
+        "590 mV",
+        "Zero always",
+        "100 n mV"
+      ],
+      "answer": 0,
+      "explanation": "A reversible couple shows a peak separation near 59/n mV at 25 C, independent of scan rate. Larger or scan-rate-dependent separations indicate sluggish kinetics."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps6-tf-001",
+      "topicId": "ps6-sweep",
+      "quick": true,
+      "question": "For a diffusion-controlled reversible process the peak current is proportional to the square root of the scan rate.",
+      "answer": true,
+      "explanation": "The Randles-Sevcik equation gives ip proportional to v^(1/2), which is a key diagnostic of diffusion control."
+    },
+    {
+      "id": "ps6-mcq-002",
+      "topicId": "ps6-sweep",
+      "quick": true,
+      "question": "If a plot of ip against v^(1/2) is not linear and does not pass through the origin, the most likely conclusion is that:",
+      "options": [
+        "The process is not purely diffusion-controlled (for example adsorption or kinetics interferes)",
+        "The electrode is broken",
+        "The reference electrode is contaminated",
+        "Ohms law is violated"
+      ],
+      "answer": 0,
+      "explanation": "A nonlinear ip versus v^(1/2) plot signals that something other than simple diffusion controls the current, such as adsorption or a coupled reaction."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps6-num-004",
+      "topicId": "ps6-sweep",
+      "question": "For a reversible reduction the peak potential is Ep = E1/2 - 0.0285/n V at 25 C. If E1/2 = 0.500 V and n = 1, calculate Ep in volts.",
+      "answer": 0.472,
+      "tolerance": 0.003,
+      "unit": "V",
+      "explanation": "Ep = 0.500 - 0.0285/1 = 0.4715 V, about 0.472 V."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps6-tf-002",
+      "topicId": "ps6-sweep",
+      "question": "An electrode reaction followed by a fast chemical step can show a peak current smaller than the diffusion-controlled value at slow scan rates.",
+      "answer": true,
+      "explanation": "At slow scan rates the chemical step has time to consume the product, so less material is re-oxidised and the peak current (and especially the reverse peak) is reduced."
+    },
+    {
+      "kind": "multi",
+      "id": "ps6-multi-001",
+      "topicId": "ps6-sweep",
+      "question": "Which are diagnostic features of a reversible diffusion-controlled couple in cyclic voltammetry? Select all that apply.",
+      "options": [
+        "Peak separation near 59/n mV",
+        "Peak current proportional to v^(1/2)",
+        "Ratio of reverse to forward peak current near one",
+        "Peak separation that grows strongly with scan rate"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Reversible behaviour shows a 59/n mV separation, ip proportional to v^(1/2), and near-equal forward and reverse peaks. A separation that grows with scan rate indicates irreversible kinetics."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps6-tf-003",
+      "topicId": "ps6-sweep",
+      "question": "In cyclic voltammetry the potential is swept from an initial value to a switching value and then back.",
+      "answer": true,
+      "explanation": "The triangular waveform sweeps out and back, so both the oxidation and the reduction of a couple can be seen in one experiment."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps6-num-005",
+      "topicId": "ps6-sweep",
+      "question": "The Randles-Sevcik peak current is proportional to v^(1/2). If ip = 269 uA at 0.10 V/s, what is ip in uA at 0.40 V/s?",
+      "answer": 538,
+      "tolerance": 40,
+      "unit": "uA",
+      "explanation": "v increases by a factor of 4, so sqrt(v) and ip increase by 2: ip = 2 x 269 = 538 uA."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps6-num-006",
+      "topicId": "ps6-sweep",
+      "question": "For a diffusion-controlled reversible couple, by what factor does ip change when the scan rate is increased by a factor of 4?",
+      "answer": 2.0,
+      "tolerance": 0.15,
+      "explanation": "ip scales with v^(1/2), so a factor of 4 in v gives a factor of 2 in ip."
+    },
+    {
+      "id": "ps6-mcq-003",
+      "topicId": "ps6-sweep",
+      "quick": true,
+      "question": "If a species is strongly adsorbed on the electrode, its cyclic voltammetric peak current is proportional to:",
+      "options": [
+        "The scan rate v",
+        "The square root of the scan rate",
+        "The cube of the scan rate",
+        "The concentration only"
+      ],
+      "answer": 0,
+      "explanation": "A surface-confined (adsorbed) redox species gives a peak proportional to v, whereas a diffusing species gives a peak proportional to v^(1/2)."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps6-tf-004",
+      "topicId": "ps6-sweep",
+      "question": "A plot of ip/v^(1/2) that is constant with scan rate is evidence for a diffusion-controlled process.",
+      "answer": true,
+      "explanation": "If ip is strictly proportional to v^(1/2) the ratio ip/v^(1/2) does not change with scan rate, which is the standard test for diffusion control."
+    },
+    {
+      "kind": "multi",
+      "id": "ps6-multi-002",
+      "topicId": "ps6-sweep",
+      "question": "Which will increase the peak current in a diffusion-controlled cyclic voltammogram? Select all that apply.",
+      "options": [
+        "A higher scan rate",
+        "A higher concentration",
+        "A larger electrode area",
+        "A higher solution resistance"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "ip rises with v^(1/2), C and A. A larger solution resistance distorts the curve but does not increase the true diffusion-limited peak current."
+    }
+  ]
+}

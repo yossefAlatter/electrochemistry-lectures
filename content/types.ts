@@ -21,6 +21,22 @@ export interface Paragraph {
   text: string;
 }
 
+/**
+ * A subheading inside a section.
+ *
+ * A section is normally a flat argument with no headings of its own, so its
+ * only "sub-headings" used to be a callout's title and a worked example's
+ * title. A heading block lets a longer section be broken into labelled parts,
+ * and it is picked up by the in-page table of contents like the others, so a
+ * reader can jump straight to the part they came for.
+ */
+export interface Heading {
+  kind: "heading";
+  text: string;
+  /** 2 = major part (default), 3 = minor part. */
+  level?: 2 | 3;
+}
+
 /** Display maths, written in LaTeX and rendered with KaTeX. */
 export interface Formula {
   kind: "formula";
@@ -48,10 +64,17 @@ export interface Table {
   widths?: number[];
 }
 
+/**
+ * The kinds of highlighted box. `key`, `warn` and `term` are the three the
+ * course already used; `note` and `example` are additive so a template can
+ * mark a side note or a concrete example without pretending it is a rule.
+ */
+export type CalloutVariant = "key" | "warn" | "term" | "note" | "example";
+
 /** A highlighted box. */
 export interface Callout {
   kind: "callout";
-  variant: "key" | "warn" | "term";
+  variant: CalloutVariant;
   title: string;
   body: string;
 }
@@ -74,6 +97,7 @@ export interface Worked {
 
 export type Block =
   | Paragraph
+  | Heading
   | Formula
   | Figure
   | Table
@@ -133,16 +157,15 @@ export interface Section {
   cta?: SectionCta;
 }
 
-/** A single multiple-choice question. */
-export interface Mcq {
+/**
+ * Fields every question carries, whatever its kind. A question always belongs
+ * to a section (`topicId`) and always explains itself, so the review list and
+ * the per-topic filter work uniformly across every type.
+ */
+export interface QuestionBase {
   id: string;
   /** Section id this question belongs to; powers per-topic filtering. */
   topicId: string;
-  question: string;
-  /** Exactly four options for the standard quiz. */
-  options: string[];
-  /** Index of the correct option. */
-  answer: number;
   explanation: string;
   /**
    * Set on a small number of questions per section. These are the ones shown
@@ -151,6 +174,60 @@ export interface Mcq {
    */
   quick?: boolean;
 }
+
+/** The classic four-option single-answer question. */
+export interface McqQuestion extends QuestionBase {
+  kind?: "mcq";
+  question: string;
+  /** Exactly four options for the standard quiz. */
+  options: string[];
+  /** Index of the correct option. */
+  answer: number;
+}
+
+/** Choose every option that applies. Two or more options, at least one answer. */
+export interface MultiQuestion extends QuestionBase {
+  kind: "multi";
+  question: string;
+  options: string[];
+  /** Indices of the correct options; must be non-empty and within range. */
+  answers: number[];
+}
+
+/** Judge a single statement true or false. */
+export interface TrueFalseQuestion extends QuestionBase {
+  kind: "truefalse";
+  question: string;
+  answer: boolean;
+}
+
+/** Enter a number; graded within a tolerance. */
+export interface NumericQuestion extends QuestionBase {
+  kind: "numeric";
+  question: string;
+  answer: number;
+  /**
+   * Allowed absolute error. Defaults to a value derived from the answer, so a
+   * number written to three significant figures is accepted.
+   */
+  tolerance?: number;
+  /** Unit to show after the input, e.g. "V" or "mol dm⁻³". */
+  unit?: string;
+}
+
+/**
+ * Every question on the site is one of these. The `kind` discriminates the
+ * union and is absent only on the original `mcq` form, which predates the
+ * other kinds; treat a missing `kind` as `"mcq"`.
+ */
+export type Question =
+  | McqQuestion
+  | MultiQuestion
+  | TrueFalseQuestion
+  | NumericQuestion;
+
+/** Back-compat alias for the original name of the single-answer question. */
+export type Mcq = McqQuestion;
 
 /** Constants and other numbers the site shows in a "reference" panel. */
 export interface Constant {
@@ -166,6 +243,12 @@ export interface Lesson {
   label: string;
   title: string;
   summary: string;
+  /**
+   * Optional chapter attribution, e.g. "Bagotsky ch.6, Bard & Faulkner ch.3".
+   * Purely informational: it tells a reader which book chapters the lesson
+   * follows, and never quotes either book.
+   */
+  source?: string;
   /** Sidebar / card ordering. Lowest first. */
   order: number;
   /** Approximate reading time for the whole lesson, in minutes. */
@@ -173,7 +256,7 @@ export interface Lesson {
   /** Shown on the lesson overview page, above the section list. */
   intro?: Block[];
   sections: Section[];
-  mcq: Mcq[];
+  mcq: Question[];
   constants?: Constant[];
 }
 

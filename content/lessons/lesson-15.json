@@ -1,0 +1,728 @@
+{
+  "slug": "lesson-15",
+  "label": "Lesson 15",
+  "title": "Surfaces and modified electrodes",
+  "summary": "A real electrode is not a flat metal plate; it is a surface with layers, defects and coatings, and almost every useful property of a cell comes from controlling what grows on it. This lesson is about making those surfaces deliberately: plating a metal onto an electrode, growing a functional film on it, and then looking at it with the scanning probes and spectroscopy that let you see the work.",
+  "order": 15,
+  "minutes": 55,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Lessons 1 through 5 spoke of electrodes as if they were clean, infinite plates. Real ones are none of those things. Their faces are rough, contaminated, or deliberately coated; their every useful property is set by the few atomic layers that touch the solution. Controlling a device therefore means controlling a surface."
+    },
+    {
+      "kind": "para",
+      "text": "Following Bagotsky ch.16, 27 and Bard & Faulkner ch.14, 16-17 we first look at how a surface is made - deposition, the growth of oxide and salt layers - then at electrodes that carry functional films, and finally at the scanning probes and spectroscopies that let us watch a surface while it works."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The one-sentence summary of this lesson",
+      "body": "An electrode becomes a device when you choose what covers it: plating, passive or functional films, and molecular layers; the scanning probes and spectroscopies are the tools that let you watch the surface you built."
+    }
+  ],
+  "sections": [
+    {
+      "id": "metal-deposition",
+      "tone": "azure",
+      "title": "Depositing a metal",
+      "minutes": 7,
+      "summary": "Reduce a metal ion at a cathode and it plates out, atom by atom. How it plates - smooth films, dendrites, or powders - is the first lesson in controlling a surface.",
+      "keyPoints": [
+        "An applied cathodic potential drives M^n+ + ne^- → M, depositing a metal film on the electrode.",
+        "Whether the deposit is smooth or dendritic depends on the competition between kinetics, mass transfer, and surface energy.",
+        "A high overpotential smooths the film by making many nuclei; transport-limited deposition gives dendrites and powders.",
+        "The same electrochemistry plates metals for industry, deposits catalysts, and fails as dendritic short-circuits in batteries."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Apply a sufficiently negative potential to a solution of metal ions and the reverse of corrosion runs: the ions step onto the electrode, atom by atom, and a metal film grows. That is electrodeposition, and it is how electroplating, refining, and most battery electrodes are made."
+        },
+        {
+          "kind": "formula",
+          "tex": "M^{n+} + n e^- \\rightarrow M",
+          "caption": "The plating half-reaction. Overpotential is the driving force; mass transfer and nucleation jointly decide what the new metal looks like."
+        },
+        {
+          "kind": "para",
+          "text": "The shape of that film is the lesson. Push the potential hard negative and the reaction starts everywhere at once: a fine-grained, smooth, adherent coating. Run near the limiting current and deposition is slow enough that ions arrive preferentially at the high spots, and each high spot grows into a needle: dendrites. Push further and the needles detach as a powder. A smooth plate and a tree of silver from a torch cell are the same chemistry, separated by how hard you pushed it."
+        },
+        {
+          "kind": "callout",
+          "variant": "warn",
+          "title": "Dendrites: the failure mode that looks like a feature",
+          "body": "Dendritic lithium plates look impressive in a demo and fatal in a battery: they short the cell, waste the electrolyte, and can puncture the separator. Real lithium cells are engineered to plate *smoothly* - another argument for a clean, uniform interface."
+        }
+      ]
+    },
+    {
+      "id": "surface-layers",
+      "tone": "indigo",
+      "title": "Surface layers: oxides, salts and films",
+      "minutes": 7,
+      "summary": "Before any deliberate coating lands, a surface already carries what the solution and air left on it: oxide, hydroxide, adsorbed water, salts. Knowing what is there changes what you must do next.",
+      "keyPoints": [
+        "Almost every 'clean' metal surface is covered by a native oxide a few angstroms thick, an adsorbed water layer, and sometimes hydroxide.",
+        "Electrochemical reactions must often cross that layer, so its composition and thickness are part of the electrode's kinetics.",
+        "Potentiodynamic polarisation in a CV can grow, reduce and map those layers, revealing the surface's electrochemical area.",
+        "Small changes at the surface - a monolayer of adsorbate - can shift a peak or a rate by orders of magnitude."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Take a shiny piece of platinum out of the polish and into air and it is instantly dressed: a layer of oxide, a layer of adsorbed water, perhaps a trace of carbon. Put it in solution and the water thickens into the double layer of Lesson 6. None of this is visible, and all of it matters: every electron that crosses the interface must pass through, around, or under that few-angstrom film."
+        },
+        {
+          "kind": "para",
+          "text": "That film is why an electrode 'remembers' its history. Clean it one way and a reaction is fast; clean it another and the same reaction is slow by a factor of a hundred. A monolayer of adsorbed hydrogen, or an oxide left over from the last sweep, can block the sites an analyte needs. The electrode's true surface area is therefore something to be measured, not assumed - the hydrogen-adsorption peak area in an acid CV is one classic way to do it."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "A surface is a history book",
+          "body": "Every potential excursion and every exposure leaves a mark. Reproducible electrochemistry starts from reproducible surface preparation; two labs can disagree about a rate constant purely because they polished differently."
+        }
+      ]
+    },
+    {
+      "id": "modified-electrodes",
+      "tone": "violet",
+      "title": "Modified electrodes",
+      "minutes": 8,
+      "summary": "A modified electrode is a bare electrode plus a functional layer designed to do one job: catalyse a reaction, pass one ion, hold a molecule, or block a poison. The layer is part of the electrode, and the electrode is part of the device.",
+      "keyPoints": [
+        "A modified electrode carries a thin functional layer - polymer, catalyst, molecular film, or biological molecule - that defines its chemistry.",
+        "The layer can catalyse a reaction, ion-selectively filter the solution, or immobilise a recognition element.",
+        "Because the layer is thin, all of the currents and potentials of earlier lessons still apply - now to the layer-solution interface.",
+        "Failure modes are mostly about the layer detaching or degrading, not about the metal."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Bare platinum is a good generalist and a mediocre specialist. To make it selective, attach a layer: a polymer film that only passes one ion, a monolayer of a catalyst fast for hydrogen oxidation and slow for oxygen, an enzyme that recognises exactly one analyte. The metal underneath still supplies electrons and the structure; the layer supplies the chemistry."
+        },
+        {
+          "kind": "para",
+          "text": "Two broad strategies do most of the work. **Chemiresis-tive layers** - a polymer or a small-molecule film that changes resistance when it binds an analyte - and **catalytic layers**, which speed up one target reaction while leaving competitors alone. Either way, the layer is thin by design: thick enough to carry the function, thin enough that ions in the underlying solution can reach it."
+        },
+        {
+          "kind": "para",
+          "text": "The same Lesson 8-9-10 machinery then applies to the layer. Its own impedance, its own peak shifts with analyte concentration, its own scan-rate dependence: the layer is a small electrochemical system in its own right, and its failure modes are usually mechanical - swelling, delamination, slow leaching - rather than the chemistry wearing out."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "The surface is the sensor",
+          "body": "A modified electrode moves the selectivity from the measurement to the surface: the chemistry happens in a pre-selected doorway before the electrode ever sees it."
+        }
+      ]
+    },
+    {
+      "id": "nucleation-and-growth",
+      "tone": "amber",
+      "title": "Nucleation and growth",
+      "minutes": 7,
+      "summary": "A deposited metal does not spread evenly: it arrives as tiny islands that nucleate, grow, and merge. The size of those islands is set by how hard you drive the deposition, and with it the grain size of the coating.",
+      "keyPoints": [
+        "Deposition begins with nucleation: a small cluster of new atoms that must reach a critical size before it is stable.",
+        "High overpotential gives a high nucleation rate, hence many small islands and a fine-grained film.",
+        "Low overpotential gives few islands that grow large: a coarse film, or isolated crystallites.",
+        "The grain size of the coating - fixed at nucleation - follows it through its whole life, and with it its strength and corrosion behaviour."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "When a metal ion is reduced at a cathode, the first few atoms deposited do not yet form a crystal. A tiny cluster pays the surface energy of its boundary before it earns the bulk energy of the metal. That is why only clusters above a critical size survive; below it they redissolve. The overpotential decides that critical size."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\Delta G(r) = 4\\pi r^{2}\\gamma - \\frac{4}{3}\\pi r^{3}\\,\\frac{nF|\\eta|}{V_m}",
+          "caption": "Free energy of a spherical nucleus. Surface costs scale as r², the bulk payoff as r³, and the payoff is funded by the overpotential. Big η shrinks the critical radius, so nucleation gets easy."
+        },
+        {
+          "kind": "para",
+          "text": "Consequences follow. Push the potential hard: critical nuclei form everywhere, often, and the surface fills with a fine-grained, smooth film. Nudge the potential gently: only the occasional cluster survives, and the film grows as a few large, faceted islands that merge late. The same chemistry that plated silver onto a mirror in one cell can beard a dendrite tree in another, depending on whether nucleation or growth rate wins the competition for arrivals."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "Nucleation rate is the dial",
+          "body": "Fine grain, smooth films, and dense coatings are achieved by making nucleation frequent relative to growth. Additive chemistry and pulsed deposition both work by the same trick: momentarily raising the overpotential to burst new nuclei."
+        }
+      ]
+    },
+    {
+      "id": "adsorption-and-surface-thermodynamics",
+      "tone": "slate",
+      "title": "Adsorption and surface thermodynamics",
+      "minutes": 7,
+      "summary": "Molecules stick to surfaces, and the surface has an energy budget just like a bulk phase. Adsorption isotherms and the surface excess are how the adsorbed amount is measured and related to the applied potential.",
+      "keyPoints": [
+        "An adsorption isotherm relates the surface coverage θ to the bulk concentration or pressure of the adsorbate.",
+        "Langmuir saturates at one monolayer; real systems show Freundlich or Temkin behaviour from lateral interactions.",
+        "The surface excess - the Gibbs adsorption equation - connects how much adsorbs to how the surface tension changes.",
+        "On an electrode the same accounting runs through the potential: adsorption and desorption give peaks in the CV, and their charge counts the covered area."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Molecules in solution have a finite lifetime of indifference to a surface; once they touch, the surface's electronic and geometric landscape decides whether they stick. Coverage builds with concentration and falls with thermal disorder, and the equilibrium between arrival and escape is what an isotherm records."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\theta = \\frac{Kc}{1 + Kc}\\quad(\\text{Langmuir}),\\qquad \\Gamma = -\\frac{1}{RT}\\frac{d\\gamma}{d\\ln c}\\quad(\\text{Gibbs})",
+          "caption": "Two bookkeeping relations. Langmuir: coverage rises with concentration and saturates at one monolayer. Gibbs: the surface excess of an adsorbate is proportional to how much it lowers the surface tension."
+        },
+        {
+          "kind": "para",
+          "text": "On an electrode, concentration and potential are linked through the same thermodynamics. Hydrogen, oxygen, and organic adsorbates each have a characteristic potential window in which covering the surface costs energy and in which it does not. Sweep through that window and the CV traces an adsorption peak on the way in and a desorption peak on the way out; integrate either peak and the charge passed counts the adsorbed amount, one electron per site. That is how a monolayer becomes a number."
+        }
+      ]
+    },
+    {
+      "id": "scanning-probes",
+      "tone": "rose",
+      "title": "Scanning probe techniques",
+      "minutes": 8,
+      "summary": "Scanning probe microscopy puts a needle between you and the surface and lets it trace the topography, the chemistry, or the electronic properties, one point at a time.",
+      "keyPoints": [
+        "Scanning tunnelling microscopy reads a tunnel current between an atomically sharp tip and the sample to map the surface with atomic resolution.",
+        "Atomic force microscopy reads the force between tip and surface, so it works in insulators and in liquid.",
+        "An electrochemical variant, EC-STM/AFM, does the same while an electrode reaction runs underneath.",
+        "The technique trades speed for resolution: a map that once took hours is now a movie, but a point is still a point."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Optics cannot resolve atoms; a needle can. Scanning tunnelling microscopy (STM) brings a tungsten or Pt-Ir needle so close to a conducting surface that electrons tunnel across the last ångström or two, and reads the current. Scan the needle across the surface and the current changes with the height: you have drawn the surface, atom by atom."
+        },
+        {
+          "kind": "formula",
+          "tex": "I \\propto e^{-2\\kappa d}",
+          "caption": "Tunnel current falls exponentially with the tip-sample gap d. A change of one ångström changes the current by roughly an order of magnitude - which is why STM is atomic."
+        },
+        {
+          "kind": "para",
+          "text": "Atomic force microscopy (AFM) keeps the needle but drops the current. Instead it reads the force between tip and sample - a van der Waals push at a distance, a hard wall at contact - and scans that. Because no current needs to flow, it maps insulators, soft films, and living cells almost as well as metals."
+        },
+        {
+          "kind": "para",
+          "text": "Electrochemical STM and AFM do the same trick inside a cell. Potentiostat the sample, put the tip in the same electrolyte, and you can watch a copper deposit grow, an oxide film form, or a bubble nucleate, one atomic row at a time. It is the slowest way ever invented to take a picture, and the sharpest."
+        }
+      ]
+    },
+    {
+      "id": "spectroelectrochemistry",
+      "tone": "coral",
+      "title": "Spectroelectrochemistry: seeing while reacting",
+      "minutes": 7,
+      "summary": "Point a spectrometer at an electrode while it works and the spectrum itself becomes a measurement: which species are present, in what state, and how fast they change.",
+      "keyPoints": [
+        "Spectroelectrochemistry couples an electrochemical cell to a spectroscopic readout - optical, infrared, Raman, or X-ray.",
+        "Because the potential sets the population of oxidation states, scanning it lets you watch one species grow and another shrink.",
+        "It identifies the intermediates of a reaction and counts them, turning a voltammogram from a curve into a story.",
+        "The same logic underlies sensors, catalyst screening, and mechanistic assignments."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A voltammogram tells you that electrons moved; it does not tell you what they did to the molecules. To find out, watch the solution while the potential runs. Shine UV-vis through a thin-layer cell and the colour changing is the species changing; record an infrared spectrum and the disappearance of a C=O stretch is a bond breaking. The pair of measurements - current on one axis, spectrum on the other - is spectroelectrochemistry."
+        },
+        {
+          "kind": "para",
+          "text": "The power is in the coupling. Sweep the potential through a peak and the spectrum at each point tells you what was being reduced and what it became. See an isosbestic point - a wavelength that never changes - and you know the transformation is clean: one species in, one species out. See a new band grow instead, and you have caught an intermediate that the voltammogram alone would have hidden inside a shoulder."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "The electrode writes, the spectrometer reads",
+          "body": "Electrochemistry sets the stage; spectroscopy names the actors. Together they answer the two questions every mechanism must: how many electrons, and which molecules?"
+        },
+        {
+          "kind": "worked",
+          "title": "Langmuir saturation",
+          "given": "A surface adsorbs with K = 2000 L/mol. What fraction of sites is covered at 0.5 mM?",
+          "steps": [
+            "\\theta = Kc/(1+Kc)",
+            "Kc = 2000 \\times 5\\times10^{-4} = 1.0",
+            "\\theta = 1.0/2.0 = 0.5"
+          ],
+          "result": "Half the sites are filled. Whenever Kc = 1 the coverage is exactly half - a Langmuir isotherm's half-saturation point."
+        },
+        {
+          "kind": "worked",
+          "title": "Critical radius shrinks with overpotential",
+          "given": "For a deposit with surface energy gamma = 1.5 J/m2, molar volume V_m = 7.1e-6 m3/mol, n = 2, the critical radius at 10 mV of overpotential is about: use r* = 2 gamma V_m/(n F eta).",
+          "steps": [
+            "r^* = \\frac{2\\gamma V_m}{n F |\\eta|}",
+            "r^* = \\frac{2 \\times 1.5 \\times 7.1\\times10^{-6}}{2 \\times 96485 \\times 0.010}",
+            "r^* = \\frac{2.13\\times10^{-5}}{1.93\\times10^{3}} \\approx 1.1\\times10^{-8}\\ \\mathrm{m} = 11\\ \\mathrm{nm}"
+          ],
+          "result": "About 11 nm. Double the overpotential and the critical nucleus halves - that is why a hard kick of potential suddenly nucleates a flood of small grains."
+        }
+      ],
+      "cta": {
+        "title": "Beyond the basics",
+        "body": "We have a full course now - from ion motion to coupled chemistry, from chronoamperometry to corrosion to fuel cells. The last lesson is a guidepost to where the same physics goes next: catalysis, photoelectrochemistry, conductive polymers, solid-state devices, and nanoelectrochemistry.",
+        "href": "/lessons/lesson-15/quiz",
+        "linkLabel": "Take the Lesson 15 quiz",
+        "secondaryHref": "/lessons/lesson-16",
+        "secondaryLabel": "Go to Lesson 16"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "l15-mcq-001",
+      "topicId": "metal-deposition",
+      "quick": true,
+      "question": "Electrodeposition occurs at:",
+      "options": [
+        "An anodically polarised electrode",
+        "A cathodically polarised electrode in a solution of metal ions",
+        "Only at absolute zero",
+        "The reference electrode"
+      ],
+      "answer": 1,
+      "explanation": "M^n+ + ne^- → M at a sufficiently negative potential; the same half-reaction as corrosion, run backward."
+    },
+    {
+      "id": "l15-mcq-002",
+      "topicId": "metal-deposition",
+      "quick": true,
+      "question": "Dendritic deposits are the result of:",
+      "options": [
+        "Very low overpotential",
+        "Transport-limited, uneven growth of high spots into needles",
+        "A perfectly flat surface",
+        "The salt bridge"
+      ],
+      "answer": 1,
+      "explanation": "When mass transfer sets the rate, the sharpest points see the most reactant and grow fastest - a positive feedback that produces dendrites and powder."
+    },
+    {
+      "id": "l15-mcq-003",
+      "topicId": "metal-deposition",
+      "quick": true,
+      "question": "A smooth, fine-grained metal film is favoured by:",
+      "options": [
+        "A large cathodic overpotential that nucleates many sites at once",
+        "Running right at the limiting current",
+        "Heating the cell until it boils",
+        "Adding dendrites"
+      ],
+      "answer": 0,
+      "explanation": "High overpotential starts the reaction everywhere simultaneously, giving many small nuclei that merge into a smooth film."
+    },
+    {
+      "id": "l15-mcq-004",
+      "topicId": "metal-deposition",
+      "question": "Dendritic lithium plating inside a battery is dangerous because:",
+      "options": [
+        "It smells bad",
+        "It can penetrate the separator and short the cell",
+        "It evaporates",
+        "It cleans the electrodes"
+      ],
+      "answer": 1,
+      "explanation": "The same needles that make a pretty demo puncture the separator in a real cell, shorting it and risking thermal runaway."
+    },
+    {
+      "id": "l15-mcq-005",
+      "topicId": "surface-layers",
+      "quick": true,
+      "question": "A freshly polished metal in air is:",
+      "options": [
+        "Atomically bare",
+        "Immediately covered by a native oxide and adsorbed water",
+        "Inert and featureless",
+        "Made of glass"
+      ],
+      "answer": 1,
+      "explanation": "Even an angstrom or two of oxide and adsorbed water forms instantly, and every electron crossing the interface must pass through it."
+    },
+    {
+      "id": "l15-mcq-006",
+      "topicId": "surface-layers",
+      "quick": true,
+      "question": "The true electrochemical surface area of a 'clean' electrode is usually measured by:",
+      "options": [
+        "Its geometric length times width",
+        "A diagnostic CV feature such as the hydrogen-adsorption charge or double-layer capacitance",
+        "Its mass",
+        "Its colour"
+      ],
+      "answer": 1,
+      "explanation": "Roughness makes geometric area unreliable; integration of a known surface reaction's charge, or of C_dl, counts the real area."
+    },
+    {
+      "id": "l15-mcq-007",
+      "topicId": "surface-layers",
+      "quick": true,
+      "question": "A monolayer of adsorbate on an electrode can:",
+      "options": [
+        "Never affect kinetics",
+        "Change the reaction rate or peak position by orders of magnitude",
+        "Only change its colour",
+        "Only change its mass by half"
+      ],
+      "answer": 1,
+      "explanation": "The surface is where the electron transfer happens; blocking or donating through one molecular layer flips the kinetics."
+    },
+    {
+      "id": "l15-mcq-008",
+      "topicId": "surface-layers",
+      "question": "Two labs disagreeing about a rate constant on 'the same electrode' probably differ in:",
+      "options": [
+        "The value of the Faraday constant",
+        "Surface preparation history, which changes the active surface and defect density",
+        "The shape of the room",
+        "The colour of the glassware"
+      ],
+      "answer": 1,
+      "explanation": "A voltammogram reads the surface you actually have; polishing and cleaning histories differ between labs and shift the kinetics."
+    },
+    {
+      "id": "l15-mcq-009",
+      "topicId": "modified-electrodes",
+      "quick": true,
+      "question": "A modified electrode is:",
+      "options": [
+        "A bare metal plate",
+        "An electrode carrying a thin functional layer - polymer, catalyst, molecules, biomolecules - that defines its chemistry",
+        "A reference electrode only",
+        "A broken electrode"
+      ],
+      "answer": 1,
+      "explanation": "The metal supplies electrons and structure; the thin film supplies the selectivity or catalysis - together they are the electrode."
+    },
+    {
+      "id": "l15-mcq-010",
+      "topicId": "modified-electrodes",
+      "quick": true,
+      "question": "The functional layer on a modified electrode is kept thin because:",
+      "options": [
+        "Thicker layers are cheaper",
+        "Ions and electrons must still reach the metal through or under it",
+        "Thin layers are harder to characterise",
+        "Regulations forbid thick films"
+      ],
+      "answer": 1,
+      "explanation": "The layer's job is surface selectivity; if it were thick, transport through it would replace the interfacial chemistry as the bottleneck."
+    },
+    {
+      "id": "l15-mcq-011",
+      "topicId": "modified-electrodes",
+      "quick": true,
+      "question": "The main failure mode of a modified electrode is usually:",
+      "options": [
+        "The layer leaching, swelling, or delaminating",
+        "The metal dissolving away",
+        "The salt bridge emptying",
+        "The voltammogram turning red"
+      ],
+      "answer": 0,
+      "explanation": "The native metal is usually robust; it is the attached film, with its mismatch of mechanical properties, that ages."
+    },
+    {
+      "id": "l15-mcq-012",
+      "topicId": "modified-electrodes",
+      "question": "A chemically selective modified electrode places selectivity:",
+      "options": [
+        "In the electronics only",
+        "In the surface chemistry that precedes the electrode",
+        "In the fume hood",
+        "Nowhere"
+      ],
+      "answer": 1,
+      "explanation": "The film admits or catalyses only the target species; by the time the current flows, the selection has already been made."
+    },
+    {
+      "id": "l15-mcq-013",
+      "topicId": "scanning-probes",
+      "quick": true,
+      "question": "STM maps a surface by:",
+      "options": [
+        "Shining light off it",
+        "Reading the tunnel current between an atomically sharp tip and the sample",
+        "Weighing it",
+        "Heating it"
+      ],
+      "answer": 1,
+      "explanation": "Electrons tunnel across the last ångströms; scanning the tip turns that exponential current-distance relationship into a topographic map."
+    },
+    {
+      "id": "l15-mcq-014",
+      "topicId": "scanning-probes",
+      "quick": true,
+      "question": "The tunnel current changes by roughly an order of magnitude when the tip-sample gap changes by:",
+      "options": [
+        "One micrometre",
+        "One ångström",
+        "One metre",
+        "One volt"
+      ],
+      "answer": 1,
+      "explanation": "I ∝ exp(-2κd): a tiny change in separation swings the current hugely, which is why STM achieves atomic resolution."
+    },
+    {
+      "id": "l15-mcq-015",
+      "topicId": "scanning-probes",
+      "quick": true,
+      "question": "AFM differs from STM because it:",
+      "options": [
+        "Uses more current",
+        "Reads the force between tip and surface, so it also images insulators and liquids",
+        "Only works in vacuum",
+        "Cannot see atoms"
+      ],
+      "answer": 1,
+      "explanation": "No tunnelling current is needed; the cantilever deflection from tip-sample force maps any surface, including insulating and biological ones."
+    },
+    {
+      "id": "l15-mcq-016",
+      "topicId": "scanning-probes",
+      "question": "EC-STM/AFM is powerful because it can:",
+      "options": [
+        "Replace the counter electrode",
+        "Watch a metal deposit, oxide grow, or bubble form while the electrode potential is held",
+        "Measure bulk concentration only",
+        "Operate at 1000 °C"
+      ],
+      "answer": 1,
+      "explanation": "The tip and the sample share a cell, so one can image the very surface while the potentiostat runs the reaction on it."
+    },
+    {
+      "id": "l15-mcq-017",
+      "topicId": "spectroelectrochemistry",
+      "quick": true,
+      "question": "Spectroelectrochemistry couples a cell with a spectrometer so that:",
+      "options": [
+        "The light powers the reaction",
+        "The optical or vibrational spectrum of the solution is recorded while a potential is applied",
+        "The voltage is halved",
+        "The reference electrode glows"
+      ],
+      "answer": 1,
+      "explanation": "Sweep the potential and watch the spectrum change; species appear and disappear in lock-step with the current."
+    },
+    {
+      "id": "l15-mcq-018",
+      "topicId": "spectroelectrochemistry",
+      "quick": true,
+      "question": "An isosbestic point in a spectroelectrochemical series means:",
+      "options": [
+        "The measurement failed",
+        "A simple conversion between exactly two species - one consumed, one formed",
+        "The light source flickered",
+        "Nothing"
+      ],
+      "answer": 1,
+      "explanation": "A wavelength that neither grows nor shrinks through the titration is the signature of a clean two-species interconversion with no intermediates."
+    },
+    {
+      "id": "l15-mcq-019",
+      "topicId": "spectroelectrochemistry",
+      "quick": true,
+      "question": "It is used to find:",
+      "options": [
+        "The colour of the lab",
+        "Reaction intermediates and their potentials of appearance",
+        "The typographer's font",
+        "The age of the glassware"
+      ],
+      "answer": 1,
+      "explanation": "A new band growing in at a particular potential flags a species born at that potential - a mechanistic assignment from the spectrum."
+    },
+    {
+      "id": "l15-mcq-020",
+      "topicId": "spectroelectrochemistry",
+      "question": "The two questions every mechanism must answer are best met by:",
+      "options": [
+        "Electrochemistry alone",
+        "Electrochemistry and spectroscopy together - how many electrons, and which species",
+        "A tape recorder",
+        "A weighing balance alone"
+      ],
+      "answer": 1,
+      "explanation": "Current counts electrons; the spectrum names the molecules. Neither alone pins down both the stoichiometry and the chemistry."
+    },
+    {
+      "id": "l15-mcq-021",
+      "topicId": "nucleation-and-growth",
+      "quick": true,
+      "question": "Deposition starts as:",
+      "options": [
+        "A uniform film",
+        "Small clusters that must exceed a critical radius to survive",
+        "A powder only",
+        "A bubble"
+      ],
+      "answer": 1,
+      "explanation": "Every new island initially pays surface energy; only clusters larger than a critical size win back enough bulk energy to grow."
+    },
+    {
+      "id": "l15-mcq-022",
+      "topicId": "nucleation-and-growth",
+      "quick": true,
+      "question": "A high nucleation rate produces:",
+      "options": [
+        "A few large grains",
+        "Many small grains and a fine film",
+        "No deposit",
+        "A single crystal"
+      ],
+      "answer": 1,
+      "explanation": "Many nuclei competing for the same incoming ions each grow only a little, giving dense, fine-grained coatings."
+    },
+    {
+      "id": "l15-mcq-023",
+      "topicId": "nucleation-and-growth",
+      "quick": true,
+      "question": "Low overpotential, near equilibrium, gives deposits that are:",
+      "options": [
+        "Fine and smooth",
+        "Coarse or isolated, since few nuclei form",
+        "Invisible",
+        "Always amorphous"
+      ],
+      "answer": 1,
+      "explanation": "The critical nucleus is large at small overpotential, so only occasional clusters survive and grow large."
+    },
+    {
+      "id": "l15-mcq-024",
+      "topicId": "nucleation-and-growth",
+      "question": "Pulsed electrodeposition refines grain size by:",
+      "options": [
+        "Heating the bath",
+        "Momentarily raising overpotential so nucleation outpaces growth",
+        "Stirring faster",
+        "Adding more salt"
+      ],
+      "answer": 1,
+      "explanation": "The on-pulse burst of new nuclei sets many growth centres; off-pulses let them thicken without runaway growth."
+    },
+    {
+      "id": "l15-mcq-025",
+      "topicId": "adsorption-and-surface-thermodynamics",
+      "quick": true,
+      "question": "The Langmuir isotherm describes coverage that:",
+      "options": [
+        "Grows without limit",
+        "Saturates at one monolayer",
+        "Decreases with concentration",
+        "Is independent of concentration"
+      ],
+      "answer": 1,
+      "explanation": "θ = Kc/(1+Kc): each site holds one molecule, so coverage plateaus as sites fill."
+    },
+    {
+      "id": "l15-mcq-026",
+      "topicId": "adsorption-and-surface-thermodynamics",
+      "quick": true,
+      "question": "The Gibbs adsorption equation links the surface excess to:",
+      "options": [
+        "The electrode's colour",
+        "How the surface tension changes with adsorbate concentration",
+        "The number of bees",
+        "The temperature of the room only"
+      ],
+      "answer": 1,
+      "explanation": "Γ = -(1/RT) dγ/d ln c: the amount segregated to the surface is proportional to how strongly it lowers the surface tension."
+    },
+    {
+      "id": "l15-mcq-027",
+      "topicId": "adsorption-and-surface-thermodynamics",
+      "quick": true,
+      "question": "An adsorption peak on a CV yields:",
+      "options": [
+        "The formal potential only",
+        "The amount of adsorbed material, via the integrated charge",
+        "The solution pH",
+        "The reference electrode potential"
+      ],
+      "answer": 1,
+      "explanation": "Integrating the adsorption or desorption peak over potential counts the electrons, and one electron per site counts the sites - the adsorbed amount."
+    },
+    {
+      "id": "l15-mcq-028",
+      "topicId": "adsorption-and-surface-thermodynamics",
+      "question": "Real adsorption often deviates from Langmuir because:",
+      "options": [
+        "All sites are identical",
+        "Adsorbate-adsorbate interactions and site heterogeneity make the heat of adsorption coverage-dependent",
+        "There is no solvent",
+        "The temperature is exactly 0 K"
+      ],
+      "answer": 1,
+      "explanation": "Langmuir assumes identical, non-interacting sites; real surfaces have a distribution of sites and lateral interactions (Freundlich, Temkin)."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l15-tf-001",
+      "topicId": "metal-deposition",
+      "question": "High overpotential smooths a metal deposit by producing many nuclei.",
+      "answer": true,
+      "explanation": "A high overpotential raises the nucleation rate, so many small islands form and the film is fine-grained and smooth. Transport-limited deposition instead gives dendrites and powders."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l15-tf-002",
+      "topicId": "surface-layers",
+      "question": "Almost every clean metal surface carries a native oxide only a few angstroms thick.",
+      "answer": true,
+      "explanation": "Real surfaces also carry an adsorbed water layer and sometimes hydroxide. Because electrode reactions must often cross this layer, its composition and thickness are part of the electrode's kinetics."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l15-tf-003",
+      "topicId": "modified-electrodes",
+      "question": "The main failure modes of modified electrodes are the functional layer detaching or degrading, not the metal itself.",
+      "answer": true,
+      "explanation": "The thin functional layer defines the chemistry, and it is the fragile part. The underlying metal is usually robust, so failures are about the layer rather than the electrode material."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l15-tf-004",
+      "topicId": "nucleation-and-growth",
+      "question": "Low overpotential gives many small islands and a fine-grained film.",
+      "answer": false,
+      "explanation": "It is the opposite: a low overpotential gives a low nucleation rate, so few islands form and each grows large, producing a coarse film or isolated crystallites. The grain size set at nucleation follows the coating through its whole life."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l15-tf-005",
+      "topicId": "adsorption-and-surface-thermodynamics",
+      "question": "The Langmuir isotherm saturates at one monolayer.",
+      "answer": true,
+      "explanation": "Langmuir coverage approaches one monolayer as concentration or pressure rises. Real systems with lateral interactions instead follow Freundlich or Temkin behaviour, and on an electrode adsorption shows as peaks in the CV."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l15-tf-006",
+      "topicId": "scanning-probes",
+      "question": "Atomic force microscopy works on insulators and in liquid because it senses a force rather than a tunnelling current.",
+      "answer": true,
+      "explanation": "STM needs a tunnel current and so a conducting sample, while AFM reads the tip-surface force and works on insulators and in liquid. An electrochemical variant does either while a reaction runs underneath."
+    },
+    {
+      "kind": "multi",
+      "id": "l15-multi-001",
+      "topicId": "spectroelectrochemistry",
+      "question": "Which can spectroelectrochemistry do? Select all that apply.",
+      "options": [
+        "Identify intermediates of a reaction",
+        "Count how species change as the potential is scanned",
+        "Couple the cell to an optical, IR, Raman or X-ray readout",
+        "Remove the need for any electrode"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "By coupling a cell to a spectroscopic readout and scanning the potential, it identifies intermediates and watches one species grow while another shrinks. It still needs electrodes; the spectroscopy is added, not substituted."
+    }
+  ]
+}

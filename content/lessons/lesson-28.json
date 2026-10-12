@@ -1,0 +1,364 @@
+{
+  "slug": "lesson-28",
+  "label": "Lesson 28",
+  "title": "The development of electrochemistry",
+  "summary": "Electrochemistry grew from a twitching frog's leg into a science that underpins batteries, corrosion protection, sensors and computation. This closing lesson traces the arc: the voltaic pile, the founding of theory by Faraday and Nernst, the arrival of electrode kinetics, and the modern era of instruments, in-situ probes and simulation.",
+  "order": 28,
+  "minutes": 36,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Every field has a history, and electrochemistry's is unusually rich. It began as a physiological curiosity, became the source of the first steady electric current, gave chemistry its central vocabulary, and then matured into a quantitative science of the charged interface."
+    },
+    {
+      "kind": "para",
+      "text": "Tracing that arc is more than nostalgia. The order in which ideas appeared mirrors the logic of this course: first the cell and the laws of electrolysis, then the thermodynamics of potential, then the kinetics of the electrode, and finally the modern tools - instruments, in-situ methods and simulation - that bring it together."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The one-sentence summary",
+      "body": "Electrochemistry advanced from the voltaic pile, through Faraday's laws and Nernst's thermodynamics, to Butler-Volmer kinetics and the instrumented, molecular-level science of today."
+    }
+  ],
+  "sections": [
+    {
+      "id": "beginnings",
+      "tone": "azure",
+      "title": "From frog legs to the voltaic pile",
+      "minutes": 7,
+      "summary": "Galvani saw a frog's leg twitch when touched by two metals; Volta recognised the metals, not the flesh, were the source and built the first battery. Within a year, electrolysis had been used to isolate new elements.",
+      "keyPoints": [
+        "Galvani's twitching frog (1780s) first linked animal tissue and electricity.",
+        "Volta showed that the contact of two metals produces electricity, and built the pile about 1800.",
+        "The pile was the first source of a steady electric current.",
+        "Davy used the pile to isolate new elements by electrolysis."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "In the 1780s Luigi Galvani noticed that a frog's leg twitched when touched by two different metals. He attributed the effect to animal electricity. Alessandro Volta saw it differently: the electricity came from the metallic contact, and the leg was merely a detector. Around 1800 he built the voltaic pile, a stack of metal discs and brine-soaked cloth, the first device to deliver a steady electric current."
+        },
+        {
+          "kind": "para",
+          "text": "That steady current transformed chemistry. Within years, Humphry Davy used it to decompose molten salts and isolate new elements, showing that compounds could be pulled apart by electricity and that the method could find substances previously unknown."
+        },
+        {
+          "kind": "para",
+          "text": "These experiments established the essential picture that this course has used throughout: a chemical reaction in a cell produces a current, and a current in a cell drives a chemical reaction. Everything since is elaboration."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "The voltaic pile",
+          "body": "Made of alternating discs of two metals separated by cloth soaked in brine, the pile multiplied the small contact voltage of each pair into a useful total. It was the first practical battery and the ancestor of every cell since."
+        }
+      ]
+    },
+    {
+      "id": "fold theory",
+      "tone": "indigo",
+      "title": "Faraday, Nernst and the founding of theory",
+      "minutes": 8,
+      "summary": "Faraday gave electrolysis its quantitative laws and its vocabulary. Later, Nernst and Arrhenius explained electrode potentials by thermodynamics, and Gibbs supplied the underlying energy equations.",
+      "keyPoints": [
+        "Faraday's laws of electrolysis relate charge passed to amount of substance transformed.",
+        "Faraday also introduced the words electrode, anode, cathode, ion and electrolyte.",
+        "Arrhenius explained that solutions contain free ions.",
+        "Nernst derived the dependence of electrode potential on concentration, and Gibbs framed the energy."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Faraday turned electrolysis into a quantitative law. The amount of substance transformed is proportional to the charge passed, and a fixed quantity of charge, the faraday, transforms a fixed amount of material. He also gave the field its vocabulary - electrode, anode, cathode, ion, electrolyte - much of which this course has simply assumed."
+        },
+        {
+          "kind": "para",
+          "text": "The explanation waited for the theory of solutions. Arrhenius proposed that salts dissociate into free ions, and Gibbs's thermodynamics gave the energy relations to describe equilibrium. Combining them, Walther Nernst derived the equation that bears his name, expressing an electrode potential in terms of concentration and standard potential."
+        },
+        {
+          "kind": "formula",
+          "tex": "E = E^{\\circ} - \\frac{RT}{nF}\\ln Q",
+          "caption": "The Nernst equation: how potential depends on the composition of the cell"
+        },
+        {
+          "kind": "para",
+          "text": "With the Nernst equation and the thermodynamic description of the cell, electrochemistry became a quantitative science. Potentials could be predicted from standard data, and the connection between chemical energy and electrical work - developed more fully by Gibbs - was made explicit."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "The vocabulary that stuck",
+          "body": "Faraday's terms were coined with the help of a scholar of Greek and have survived almost unchanged. The word electrolyte, ion and electrode are the everyday language of this course because of a decision made in the 1830s."
+        }
+      ]
+    },
+    {
+      "id": "kinetics",
+      "tone": "violet",
+      "title": "The discovery of electrode kinetics",
+      "minutes": 7,
+      "summary": "Thermodynamics says nothing about speed. Early researchers found that an electrode reaction needs an overpotential, and from their measurements came Tafel's law and the Butler-Volmer equation.",
+      "keyPoints": [
+        "An electrode reaction requires an overpotential to proceed at a useful rate.",
+        "Tafel found a linear relation between the logarithm of current and the overpotential.",
+        "Butler and Volmer gave the equation that describes the full current-potential curve.",
+        "These empirical and theoretical steps turned equilibrium electrochemistry into a science of rate."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Nernst's theory describes equilibrium, but a cell producing current is not at equilibrium. Researchers noticed that to make a reaction go at a useful rate one must apply extra voltage, the overpotential, and that this was not a small correction but the central fact of practical electrochemistry."
+        },
+        {
+          "kind": "para",
+          "text": "Julius Tafel measured the relation and found the empirical law that still carries his name: the logarithm of the current rises linearly with the overpotential. Tafel's law was the first quantitative handle on electrode kinetics."
+        },
+        {
+          "kind": "para",
+          "text": "Butler and Volmer then built an equation that describes the whole curve, combining an anodic and a cathodic term through a transfer coefficient. This is the equation developed earlier in the course, and it gave a single expression covering the exponential rise and the passage through equilibrium."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "From equilibrium to rate",
+          "body": "Nernst tells you where an electrode would rest; Butler-Volmer tells you how fast it acts when pushed. The shift from thermodynamics to kinetics is the second great step in the subject's history."
+        }
+      ]
+    },
+    {
+      "id": "twentieth-century",
+      "tone": "rose",
+      "title": "Polarography, electronics and new electrodes",
+      "minutes": 7,
+      "summary": "The twentieth century added a new analytical technique, electronics that could control potential precisely, and new electrode materials. Polarography, the dropping-mercury electrode and the potentiostat opened modern electrochemical measurement.",
+      "keyPoints": [
+        "Heyrovsky's polarography used the dropping-mercury electrode to analyse solutions.",
+        "The potentiostat made it possible to control the electrode potential precisely with three electrodes.",
+        "Fuel cells and industrial electrolysis made electrochemistry a technology.",
+        "Semiconductor electrodes extended electrochemistry to photoelectricity."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "In the 1920s Jaroslav Heyrovsky introduced polarography, measuring current as a function of potential at a slowly dropping mercury electrode. The reproducible, renewing surface of each drop made it a superb analytical tool, and the technique won a Nobel Prize. It is the ancestor of the voltammetric methods central to this course."
+        },
+        {
+          "kind": "para",
+          "text": "Progress needed better control of potential. The three-electrode cell with a potentiostat, developed in the middle of the century, let the potential of the working electrode be held exactly while current flowed, separating the quantity being controlled from the quantity being measured. Modern electrochemistry rests on that instrument."
+        },
+        {
+          "kind": "para",
+          "text": "The same century turned electrochemistry into an industry. Fuel cells converting chemical energy directly to electricity, large-scale electrolysis for chlorine and aluminium, and the first practical batteries all date from this era. Toward its end, semiconductor electrodes brought light and electricity together in photoelectrochemistry."
+        },
+        {
+          "kind": "callout",
+          "variant": "example",
+          "title": "One instrument, many techniques",
+          "body": "The potentiostat - three electrodes and a feedback circuit that holds the working electrode potential - underlies cyclic voltammetry, chronoamperometry, impedance and nearly every technique in this course."
+        }
+      ]
+    },
+    {
+      "id": "frontiers",
+      "tone": "coral",
+      "title": "Modern frontiers",
+      "minutes": 7,
+      "summary": "Today's electrochemistry is molecular and instrumented. In-situ spectroscopies watch the interface during reaction, scanning probe methods map it atom by atom, nanostructuring and simulation extend the reach, and energy storage drives the field.",
+      "keyPoints": [
+        "In-situ spectroscopy and scanning probes observe the electrode while it works.",
+        "Nanostructuring and single-entity methods reach molecules and nanoparticles.",
+        "Computer simulation links the molecular scale to the measured response.",
+        "Energy, sensing, corrosion and the interface to biology drive current research."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The decisive change of recent decades is that measurements are no longer blind. Infrared, Raman and X-ray methods can probe the electrode surface while it operates, and scanning probe microscopies map it atom by atom. The interface is now observed, not merely inferred from current and potential."
+        },
+        {
+          "kind": "para",
+          "text": "At the smallest scales, the nanostructuring and single-entity methods of the nanoelectrochemistry lesson let one molecule or one nanoparticle be examined at a time, while computer simulation links the quantum and molecular pictures to the voltammogram measured in the laboratory."
+        },
+        {
+          "kind": "para",
+          "text": "The driving applications have likewise multiplied. Batteries, supercapacitors and fuel cells for clean energy, sensors for health and environment, corrosion protection, electroplating for electronics, and the electrochemical study of biological systems all rely on the science built in this course."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "Where the story continues",
+          "body": "The history shows a recurring pattern: a new tool or a new material reopens old questions at a finer scale. Nanoelectrodes, in-situ probes and simulation are doing that now, and the next chapter of electrochemistry is being written with them."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "l28-mcq-001",
+      "topicId": "beginnings",
+      "quick": true,
+      "question": "The voltaic pile, built around 1800, was significant because it:",
+      "options": [
+        "Was the first device to supply a steady electric current",
+        "Stored no energy at all",
+        "Used no metals",
+        "Ran on sunlight"
+      ],
+      "answer": 0,
+      "explanation": "By stacking metal discs separated by brine-soaked cloth, Volta multiplied the contact voltage into a steady current, the first practical battery and the tool that opened electrochemistry."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l28-tf-001",
+      "topicId": "beginnings",
+      "quick": true,
+      "question": "Galvani first interpreted the twitching frog's leg as being caused by the metals, not by animal electricity.",
+      "answer": false,
+      "explanation": "Galvani attributed the effect to animal electricity. Volta reinterpreted it, showing that the contact of two metals was the source and the leg merely a detector."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l28-tf-002",
+      "topicId": "beginnings",
+      "question": "Humphry Davy used the voltaic pile to isolate new chemical elements by electrolysis.",
+      "answer": true,
+      "explanation": "The steady current from the pile let Davy decompose compounds and isolate elements, demonstrating that electricity could break chemical bonds."
+    },
+    {
+      "id": "l28-mcq-002",
+      "topicId": "fold theory",
+      "quick": true,
+      "question": "Faraday's laws of electrolysis relate:",
+      "options": [
+        "Colour to temperature",
+        "Charge passed to the amount of substance transformed",
+        "Pressure to volume",
+        "Current to voltage only"
+      ],
+      "answer": 1,
+      "explanation": "Faraday showed that the amount of substance transformed is proportional to the charge passed, and that a fixed charge transforms a fixed amount. He also coined the field's vocabulary."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l28-tf-003",
+      "topicId": "fold theory",
+      "question": "Faraday introduced the terms electrode, anode, cathode, ion and electrolyte.",
+      "answer": true,
+      "explanation": "Faraday coined these words and they have survived almost unchanged, forming the everyday vocabulary of electrochemistry."
+    },
+    {
+      "id": "l28-mcq-003",
+      "topicId": "fold theory",
+      "quick": true,
+      "question": "The Nernst equation expresses the electrode potential in terms of:",
+      "options": [
+        "Only temperature",
+        "Concentration and the standard potential",
+        "Only the electrode area",
+        "The colour of the solution"
+      ],
+      "answer": 1,
+      "explanation": "Derived by combining thermodynamics with the idea that solutions contain free ions (Arrhenius), the Nernst equation links potential to concentration and standard potential."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l28-tf-004",
+      "topicId": "fold theory",
+      "question": "Arrhenius proposed that salts in solution dissociate into free ions, which was essential for explaining electrode potentials.",
+      "answer": true,
+      "explanation": "Without free ions there is no way to relate a potential to concentration. Arrhenius's idea of dissociation supplied the missing link for Nernst's equation."
+    },
+    {
+      "id": "l28-mcq-004",
+      "topicId": "kinetics",
+      "quick": true,
+      "question": "A key practical fact discovered about electrode reactions is that they require:",
+      "options": [
+        "No driving force",
+        "An overpotential to proceed at a useful rate",
+        "A perfect vacuum",
+        "Light"
+      ],
+      "answer": 1,
+      "explanation": "Thermodynamics fixes the equilibrium, but a working electrode reaction needs extra voltage, the overpotential, to go at a useful rate. This is the heart of electrode kinetics."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l28-tf-005",
+      "topicId": "kinetics",
+      "question": "Tafel found that the logarithm of the current is linearly related to the overpotential.",
+      "answer": true,
+      "explanation": "Tafel's law was the first quantitative handle on electrode kinetics and remains a standard diagnostic tool today."
+    },
+    {
+      "id": "l28-mcq-005",
+      "topicId": "kinetics",
+      "quick": true,
+      "question": "The Butler-Volmer equation describes:",
+      "options": [
+        "Only equilibrium potentials",
+        "The full current-potential curve combining anodic and cathodic terms",
+        "The colour change of an electrode",
+        "The boiling point of a solution"
+      ],
+      "answer": 1,
+      "explanation": "Combining an anodic and a cathodic term through a transfer coefficient, Butler-Volmer describes the whole current-potential relation, the topic of the kinetics lessons."
+    },
+    {
+      "id": "l28-mcq-006",
+      "topicId": "twentieth-century",
+      "quick": true,
+      "question": "Heyrovsky's polarography used which electrode?",
+      "options": [
+        "A platinum disc",
+        "A dropping-mercury electrode",
+        "A glassy carbon rod",
+        "A nanoelectrode"
+      ],
+      "answer": 1,
+      "explanation": "The steadily dropping mercury electrode renewed its surface with each drop, giving reproducible results. Polarography is the ancestor of the voltammetric methods used throughout this course."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l28-tf-006",
+      "topicId": "twentieth-century",
+      "question": "The three-electrode cell with a potentiostat allows the working electrode potential to be controlled precisely while current flows.",
+      "answer": true,
+      "explanation": "Separating the electrode being controlled from the one carrying the current was decisive. Modern voltammetry, chronoamperometry and impedance all rest on this instrument."
+    },
+    {
+      "id": "l28-mcq-007",
+      "topicId": "frontiers",
+      "quick": true,
+      "question": "A decisive change in recent electrochemistry is that measurements:",
+      "options": [
+        "No longer need electrodes",
+        "Can now observe the interface in situ while it works",
+        "Require no theory",
+        "Avoid all molecules"
+      ],
+      "answer": 1,
+      "explanation": "In-situ spectroscopies and scanning probe methods probe the electrode during reaction, so the interface is observed rather than inferred. Nanoelectrodes and simulation extend the reach to single entities and molecules."
+    },
+    {
+      "kind": "multi",
+      "id": "l28-multi-001",
+      "topicId": "frontiers",
+      "quick": true,
+      "question": "Which topics drive modern electrochemical research? Select all that apply.",
+      "options": [
+        "Energy storage and conversion",
+        "In-situ spectroscopic and scanning-probe methods",
+        "Nanoscale and single-entity electrochemistry",
+        "Rejecting all prior theory"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Energy, in-situ characterisation, nanoscale and single-entity work, plus simulation and bio-interfaces, are the active frontiers. Modern work builds on the earlier theory rather than rejecting it."
+    }
+  ]
+}

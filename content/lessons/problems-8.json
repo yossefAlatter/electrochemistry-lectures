@@ -1,0 +1,217 @@
+{
+  "slug": "problems-8",
+  "label": "Problem set 8",
+  "title": "Problem set 8: Controlled-current techniques",
+  "summary": "Practice with chronopotentiometry: the Sand equation, transition times, current reversal and the effect of iR drop.",
+  "source": "Bard & Faulkner ch.8",
+  "order": 108,
+  "minutes": 26,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Controlled-current (chronopotentiometric) methods force a constant current and follow the potential. The transition time follows the Sand equation i t^(1/2) = nFAD^(1/2)pi^(1/2)C/2."
+    },
+    {
+      "kind": "para",
+      "text": "The transition time falls as 1/i^2, and a large forced current magnifies any uncompensated-resistance iR drop in the measured potential."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps8-cur",
+      "tone": "amber",
+      "title": "Hint sheet: controlled-current relations",
+      "summary": "Practice with chronopotentiometry: the Sand equation, transition times, current reversal and the effect of iR drop.",
+      "minutes": 21,
+      "keyPoints": [
+        "i t^(1/2) = nFAD^(1/2)pi^(1/2)C/2",
+        "t proportional to 1/i^2",
+        "Transition time: surface concentration reaches zero",
+        "Current reversal probes the product"
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Controlled-current (chronopotentiometric) methods force a constant current and follow the potential. The transition time follows the Sand equation i t^(1/2) = nFAD^(1/2)pi^(1/2)C/2."
+        },
+        {
+          "kind": "para",
+          "text": "The transition time falls as 1/i^2, and a large forced current magnifies any uncompensated-resistance iR drop in the measured potential."
+        },
+        {
+          "kind": "worked",
+          "title": "Transition time from the Sand equation",
+          "given": "n = 1, A = 1.0 cm2, D = 1.0e-5 cm2/s, C = 1.0e-6 mol/cm3, i = 1.0e-3 A",
+          "steps": [
+            "Use i t^(1/2) = nFAD^(1/2)pi^(1/2)C/2.",
+            "Right side = 96485 x 3.162e-3 x 1.7725 x 1e-6/2 = 2.704e-4.",
+            "t^(1/2) = 2.704e-4/1.0e-3 = 0.270; t = 0.073 s."
+          ],
+          "result": "t = 0.073 s"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "numeric",
+      "id": "ps8-num-001",
+      "topicId": "ps8-cur",
+      "question": "Use the Sand equation i t^(1/2) = nFAD^(1/2)pi^(1/2)C/2 to find the transition time t (s) for n = 1, A = 1.0 cm2, D = 1.0e-5 cm2/s, C = 1.0e-6 mol/cm3 and i = 1.0e-3 A.",
+      "answer": 0.073,
+      "tolerance": 0.01,
+      "unit": "s",
+      "explanation": "nFAD^(1/2)pi^(1/2)C/2 = (96485 x 1 x 3.162e-3 x 1.7725 x 1e-6)/2 = 2.704e-4; t^(1/2)=2.704e-4/1.0e-3=0.270; t=0.073 s."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps8-num-002",
+      "topicId": "ps8-cur",
+      "question": "The Sand equation gives the transition time as proportional to 1/i^2. If the current is quadrupled, by what fraction of its original value does the transition time change? (Answer as a fraction, e.g. 0.25.)",
+      "answer": 0.0625,
+      "tolerance": 0.01,
+      "explanation": "t scales with 1/i^2, so quadrupling i divides t by 16, giving 1/16 = 0.0625."
+    },
+    {
+      "id": "ps8-mcq-001",
+      "topicId": "ps8-cur",
+      "quick": true,
+      "question": "Chronopotentiometry records:",
+      "options": [
+        "Potential as a function of time under a constant applied current",
+        "Current as a function of time under a constant potential",
+        "Impedance against frequency",
+        "Mass against charge"
+      ],
+      "answer": 0,
+      "explanation": "In a constant-current experiment the potential is followed with time; it jumps sharply at the transition time when the reactant at the surface is exhausted."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps8-tf-001",
+      "topicId": "ps8-cur",
+      "quick": true,
+      "question": "The transition time in chronopotentiometry is the time at which the surface concentration of the reactant reaches zero.",
+      "answer": true,
+      "explanation": "Up to the transition time the reactant still arrives by diffusion; once the surface is depleted the potential must swing to a new reaction, giving the characteristic jump."
+    },
+    {
+      "id": "ps8-mcq-002",
+      "topicId": "ps8-cur",
+      "quick": true,
+      "question": "A practical drawback of controlled-current methods at large currents is that:",
+      "options": [
+        "The iR drop in solution can distort the measured potential",
+        "No current flows",
+        "The solution freezes",
+        "The electrode area changes to zero"
+      ],
+      "answer": 0,
+      "explanation": "Because a fixed current is forced through the cell, an uncompensated resistance can consume part of the applied voltage as iR drop and distort the potential-time curve, especially at high current."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps8-tf-002",
+      "topicId": "ps8-cur",
+      "question": "Reversing the current part-way through a chronopotentiometric experiment lets the product of the first step be examined.",
+      "answer": true,
+      "explanation": "Current reversal oxidises or reduces whatever was produced in the forward step, and the reverse transition time gives information about the product and its reactions."
+    },
+    {
+      "kind": "multi",
+      "id": "ps8-multi-001",
+      "topicId": "ps8-cur",
+      "question": "Which statements about chronopotentiometry are correct? Select all that apply.",
+      "options": [
+        "A constant current is applied",
+        "The potential-time curve shows a sharp change at the transition time",
+        "The transition time increases with concentration",
+        "The potential stays constant after the transition time"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "A constant current is applied, the potential jumps at the transition time, and a higher concentration lengthens that transition time. After the transition the potential shifts to a new reaction rather than staying constant."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps8-num-003",
+      "topicId": "ps8-cur",
+      "question": "For diffusion-controlled chronopotentiometry the product i t^(1/2) is a constant. If i = 1.0 mA gives t = 4.0 s, what is i t^(1/2) in mA s^(1/2)?",
+      "answer": 2.0,
+      "tolerance": 0.1,
+      "unit": "mA s^(1/2)",
+      "explanation": "i t^(1/2) = 1.0 x sqrt(4.0) = 2.0 mA s^(1/2)."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps8-tf-003",
+      "topicId": "ps8-cur",
+      "question": "In chronopotentiometry the potential before the transition time is determined by the Nernst equation applied at the electrode surface.",
+      "answer": true,
+      "explanation": "As the surface concentration of the reactant falls, the potential follows the Nernst equation until the surface is depleted at the transition time."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps8-num-004",
+      "topicId": "ps8-cur",
+      "question": "The transition time is proportional to 1/i^2. If t = 4.0 s at i = 1.0 mA, what is t in seconds when the current is doubled to 2.0 mA?",
+      "answer": 1.0,
+      "tolerance": 0.15,
+      "unit": "s",
+      "explanation": "Doubling i divides t by 4, so t = 4.0/4 = 1.0 s."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps8-num-005",
+      "topicId": "ps8-cur",
+      "question": "For diffusion-controlled chronopotentiometry the product i t^(1/2) is constant. If i = 1.0 mA gives t = 4.0 s, what is i t^(1/2) in mA s^(1/2)?",
+      "answer": 2.0,
+      "tolerance": 0.15,
+      "unit": "mA s^(1/2)",
+      "explanation": "i t^(1/2) = 1.0 x sqrt(4.0) = 2.0 mA s^(1/2)."
+    },
+    {
+      "id": "ps8-mcq-003",
+      "topicId": "ps8-cur",
+      "quick": true,
+      "question": "The main experimental difficulty of controlled-current methods at high current is:",
+      "options": [
+        "The uncompensated-resistance iR drop distorting the measured potential",
+        "The absence of any current",
+        "The reference electrode dissolving",
+        "The solution becoming transparent"
+      ],
+      "answer": 0,
+      "explanation": "A large forced current through an uncompensated resistance consumes voltage as iR drop, which distorts the measured potential-time curve unless it is compensated."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps8-tf-004",
+      "topicId": "ps8-cur",
+      "question": "After the transition time the electrode potential shifts to a new electrode reaction.",
+      "answer": true,
+      "explanation": "Once the original reactant is exhausted at the surface, the potential moves to whatever reaction can now carry the fixed current."
+    },
+    {
+      "kind": "multi",
+      "id": "ps8-multi-002",
+      "topicId": "ps8-cur",
+      "question": "Which are true of the Sand equation? Select all that apply.",
+      "options": [
+        "It relates current and transition time",
+        "It contains the diffusion coefficient and concentration",
+        "It predicts t proportional to 1/i^2",
+        "It contains the electrode resistance"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The Sand equation links i and t through D and C and predicts t proportional to 1/i^2. It does not contain the electrode resistance."
+    }
+  ]
+}

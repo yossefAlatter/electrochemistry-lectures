@@ -1,0 +1,228 @@
+{
+  "slug": "problems-5",
+  "label": "Problem set 5",
+  "title": "Problem set 5: Basic potential step methods",
+  "summary": "Practice with chronoamperometry: Cottrell decay, charge passed, sampled current, and the double potential step.",
+  "source": "Bard & Faulkner ch.5",
+  "order": 105,
+  "minutes": 26,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "A potential step is the simplest controlled-potential experiment. Under diffusion control the current follows the Cottrell equation, i = nFAD^(1/2)C/(pi^(1/2)t^(1/2)), and the charge passed is Q = 2it."
+    },
+    {
+      "kind": "para",
+      "text": "A plot of i against t^(-1/2) is a straight line for diffusion control, and the double potential step lets the product of the first step be examined by the reverse current."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps5-step",
+      "tone": "amber",
+      "title": "Hint sheet: step relations",
+      "summary": "Practice with chronoamperometry: Cottrell decay, charge passed, sampled current, and the double potential step.",
+      "minutes": 21,
+      "keyPoints": [
+        "i = nFAD^(1/2)C/(pi^(1/2)t^(1/2))",
+        "Q = 2 i t",
+        "i proportional to t^(-1/2)",
+        "Surface concentration -> 0 under diffusion control"
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A potential step is the simplest controlled-potential experiment. Under diffusion control the current follows the Cottrell equation, i = nFAD^(1/2)C/(pi^(1/2)t^(1/2)), and the charge passed is Q = 2it."
+        },
+        {
+          "kind": "para",
+          "text": "A plot of i against t^(-1/2) is a straight line for diffusion control, and the double potential step lets the product of the first step be examined by the reverse current."
+        },
+        {
+          "kind": "worked",
+          "title": "Cottrell current at 4 s",
+          "given": "n = 2, A = 0.010 cm2, D = 1.0e-5 cm2/s, C = 1.0e-6 mol/cm3, t = 4.0 s",
+          "steps": [
+            "i = nFAD^(1/2)C/(pi^(1/2)t^(1/2)).",
+            "Numerator: 2 x 96485 x 0.010 x 3.162e-3 x 1e-6 = 6.10e-6.",
+            "Denominator: 1.7725 x 2.0 = 3.545. i = 1.72e-6 A."
+          ],
+          "result": "i = 1.72 uA"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "numeric",
+      "id": "ps5-num-001",
+      "topicId": "ps5-step",
+      "question": "A potential step is applied so a species is reduced under diffusion control. Use the Cottrell equation with n = 2, A = 0.010 cm2, D = 1.0e-5 cm2/s, C = 1.0e-6 mol/cm3, t = 4.0 s. Calculate i in microamperes.",
+      "answer": 1.72,
+      "tolerance": 0.15,
+      "unit": "uA",
+      "explanation": "sqrt(D)=3.162e-3; i = 2 x 96485 x 0.010 x 3.162e-3 x 1e-6/(1.7725 x 2) = 1.72e-6 A = 1.72 uA."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps5-num-002",
+      "topicId": "ps5-step",
+      "question": "For a Cottrell decay the charge passed up to time t is Q = 2 i t. For the previous step (i = 1.72 uA at t = 4.0 s), calculate Q in microcoulombs.",
+      "answer": 13.8,
+      "tolerance": 1.2,
+      "unit": "uC",
+      "explanation": "Q = 2 x 1.72e-6 x 4.0 = 1.38e-5 C = 13.8 uC."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps5-num-003",
+      "topicId": "ps5-step",
+      "question": "In a chronoamperometric step the current at 1 s is compared with the current at 4 s. What is the ratio i(1 s)/i(4 s)?",
+      "answer": 2.0,
+      "tolerance": 0.1,
+      "explanation": "Since i is proportional to t^(-1/2), the ratio is sqrt(4/1) = 2.0."
+    },
+    {
+      "id": "ps5-mcq-001",
+      "topicId": "ps5-step",
+      "quick": true,
+      "question": "Chronoamperometry measures:",
+      "options": [
+        "Current as a function of time after a potential step",
+        "Potential as a function of time under constant current",
+        "Impedance as a function of frequency",
+        "Mass as a function of charge"
+      ],
+      "answer": 0,
+      "explanation": "In a potential step the potential is controlled and the resulting current is recorded against time; the decay is the Cottrell response."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps5-tf-001",
+      "topicId": "ps5-step",
+      "quick": true,
+      "question": "After a large enough potential step the surface concentration of the reactant falls to essentially zero.",
+      "answer": true,
+      "explanation": "When the step puts the electrode into the mass-transfer-limited region, every reactant that arrives reacts at once, so the surface concentration is zero."
+    },
+    {
+      "id": "ps5-mcq-002",
+      "topicId": "ps5-step",
+      "quick": true,
+      "question": "A plot of i against t^(-1/2) from a potential-step experiment should be:",
+      "options": [
+        "Curved",
+        "A straight line through the origin for diffusion control",
+        "A horizontal line",
+        "A single point"
+      ],
+      "answer": 1,
+      "explanation": "Because i = (constant) t^(-1/2), a plot of i versus t^(-1/2) is linear; a straight line confirms diffusion control and its slope gives D."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps5-num-004",
+      "topicId": "ps5-step",
+      "question": "In sampled-current voltammetry the current is read at a fixed time after each step. If that time is doubled, by what factor does the sampled Cottrell current change? (Answer as a fraction.)",
+      "answer": 0.707,
+      "tolerance": 0.04,
+      "explanation": "i is proportional to t^(-1/2), so doubling t multiplies the current by 1/sqrt(2) = 0.707."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps5-tf-002",
+      "topicId": "ps5-step",
+      "question": "A double potential step can be used to detect and study the product of the first step.",
+      "answer": true,
+      "explanation": "Stepping the potential back oxidises or reduces whatever the first step produced, so the reverse current reports on the product and its fate."
+    },
+    {
+      "kind": "multi",
+      "id": "ps5-multi-001",
+      "topicId": "ps5-step",
+      "question": "Which are true of a diffusion-controlled potential step? Select all that apply.",
+      "options": [
+        "The current follows the Cottrell equation",
+        "The current decays as t^(-1/2)",
+        "The surface concentration is driven to zero",
+        "The current is constant with time"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "A diffusion-controlled step gives a Cottrell decay, falls as t^(-1/2), and drives the surface concentration to zero. The current is not constant."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps5-num-005",
+      "topicId": "ps5-step",
+      "question": "The Cottrell slope m = i t^(1/2) is constant. If i = 1.72 uA at t = 4.0 s, what is m in uA s^(1/2)?",
+      "answer": 3.44,
+      "tolerance": 0.15,
+      "unit": "uA s^(1/2)",
+      "explanation": "m = 1.72 x sqrt(4.0) = 1.72 x 2.0 = 3.44 uA s^(1/2)."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps5-num-006",
+      "topicId": "ps5-step",
+      "question": "The Cottrell current is proportional to t^(-1/2). If i = 1.72 uA at t = 4.0 s, what is i in uA at t = 16 s?",
+      "answer": 0.86,
+      "tolerance": 0.08,
+      "unit": "uA",
+      "explanation": "i(16)/i(4) = sqrt(4/16) = 0.5, so i = 0.86 uA."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps5-num-007",
+      "topicId": "ps5-step",
+      "question": "The charge passed up to time t is Q = 2 i t. If i = 1.72 uA at t = 16 s, calculate Q in uC.",
+      "answer": 55,
+      "tolerance": 5,
+      "unit": "uC",
+      "explanation": "Q = 2 x 1.72e-6 x 16 = 5.5e-5 C = 55 uC."
+    },
+    {
+      "id": "ps5-mcq-003",
+      "topicId": "ps5-step",
+      "quick": true,
+      "question": "In sampled-current voltammetry the current is read:",
+      "options": [
+        "At a fixed time after each potential step",
+        "At the moment the step is applied",
+        "Only at infinite time",
+        "Never"
+      ],
+      "answer": 0,
+      "explanation": "Reading at a fixed, well-defined time after each step gives a reproducible, diffusion-controlled current that varies with potential like a polarogram."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps5-tf-003",
+      "topicId": "ps5-step",
+      "question": "After a potential step the diffusion layer thickness grows with the square root of time.",
+      "answer": true,
+      "explanation": "The diffusion layer grows as sqrt(pi D t), so the Cottrell current, inversely related to it, decays as t^(-1/2)."
+    },
+    {
+      "kind": "multi",
+      "id": "ps5-multi-002",
+      "topicId": "ps5-step",
+      "question": "Which factors determine the Cottrell current? Select all that apply.",
+      "options": [
+        "The diffusion coefficient of the reactant",
+        "Its bulk concentration",
+        "The square root of time",
+        "The colour of the solution"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The Cottrell current depends on D, C and t (as t^(-1/2)), along with n, A and F. Colour is irrelevant."
+    }
+  ]
+}

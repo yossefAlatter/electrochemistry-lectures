@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
-import type { Lesson, Mcq } from "@/content/types";
-import { lessonHref } from "@/content/registry";
-import { fill, optionLetters, t } from "@/lib/i18n";
-import { RichText } from "@/components/Blocks";
+import type { Lesson, Question } from "@/content/types";
+import { lessonHref } from "@/lib/links";
+import { fill, t } from "@/lib/i18n";
+import { RichText } from "@/components/kit";
+import { QuestionCard } from "@/components/QuestionCard";
+import { answerText } from "@/lib/questions";
 
 type Phase = "intro" | "quiz" | "results";
 
@@ -33,7 +35,7 @@ export function Quiz({ lesson }: { lesson: Lesson }) {
 
   const sections = lesson.sections;
   // the pool is derived from the URL, so it is safe to compute during render
-  const pool = useMemo<Mcq[]>(
+  const pool = useMemo<Question[]>(
     () =>
       topicParam
         ? lesson.mcq.filter((q) => q.topicId === topicParam)
@@ -43,10 +45,9 @@ export function Quiz({ lesson }: { lesson: Lesson }) {
 
   // the order is shuffled when the quiz starts, not during render: render
   // must stay pure, and Math.random must not be called there
-  const [live, setLive] = useState<Mcq[]>(pool);
+  const [live, setLive] = useState<Question[]>(pool);
   const [phase, setPhase] = useState<Phase>("intro");
   const [at, setAt] = useState(0);
-  const [picked, setPicked] = useState<number | null>(null);
   const [answers, setAnswers] = useState<Record<string, boolean>>({});
 
   const current = live[at];
@@ -57,19 +58,11 @@ export function Quiz({ lesson }: { lesson: Lesson }) {
     setLive(shuffle(pool));
     setAnswers({});
     setAt(0);
-    setPicked(null);
     setPhase("quiz");
   }
 
   function reset(to = 0) {
     setAt(to);
-    setPicked(null);
-  }
-
-  function choose(i: number) {
-    if (picked !== null || !current) return;
-    setPicked(i);
-    setAnswers((a) => ({ ...a, [current.id]: i === current.answer }));
   }
 
   function next() {
@@ -230,7 +223,7 @@ export function Quiz({ lesson }: { lesson: Lesson }) {
                     </p>
                     <p className="mt-2 text-[0.93rem] text-ink-soft">
                       <span className="font-semibold text-green">
-                        Correct: {q.options[q.answer]}
+                        Correct: {answerText(q)}
                       </span>
                     </p>
                     <p className="mt-1.5 text-[0.92rem] leading-relaxed text-ink-soft">
@@ -283,85 +276,13 @@ export function Quiz({ lesson }: { lesson: Lesson }) {
         {section?.title ?? current.topicId}
       </p>
 
-      <h1 className="mt-2 font-serif text-[1.25rem] leading-snug font-semibold text-ink sm:text-[1.4rem]">
-        <RichText text={current.question} />
-      </h1>
-
-      <ul className="mt-4 space-y-2">
-        {current.options.map((opt, i) => {
-          const isAnswer = i === current.answer;
-          const isPicked = i === picked;
-          let cls =
-            "border-rule bg-surface text-ink hover:border-accent hover:bg-accent-light/40";
-          if (picked !== null) {
-            if (isAnswer) cls = "border-good bg-good-light text-ink";
-            else if (isPicked) cls = "border-bad bg-bad-light text-ink";
-            else cls = "border-rule bg-surface text-faint opacity-60";
-          }
-          return (
-            <li key={i}>
-              <button
-                type="button"
-                onClick={() => choose(i)}
-                disabled={picked !== null}
-                className={`flex w-full items-start gap-3 rounded-lg border px-3.5 py-3 text-left transition-colors ${cls}`}
-              >
-                <span className="mt-px flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-current text-[0.8rem] font-bold">
-                  {picked !== null && isAnswer ? (
-                    <span aria-hidden="true">✓</span>
-                  ) : picked !== null && isPicked ? (
-                    <span aria-hidden="true">✕</span>
-                  ) : (
-                    optionLetters[i]
-                  )}
-                </span>
-                <span className="min-w-0 text-[0.97rem] leading-snug">
-                  <RichText text={opt} />
-                </span>
-              </button>
-            </li>
-          );
-        })}
-      </ul>
-
-      {/* feedback */}
-      {picked !== null && (
-        <div className="mt-5">
-          <div
-            className={`rounded-lg px-4 py-3 text-[0.97rem] font-semibold ${
-              picked === current.answer
-                ? "bg-green-light text-green"
-                : "bg-red-light text-red"
-            }`}
-          >
-            {picked === current.answer
-              ? d.correct
-              : fill(d.notQuite, { letter: optionLetters[current.answer] })}
-          </div>
-          <div className="mt-3 rounded-lg border border-rule bg-surface p-4">
-            <p className="text-[0.7rem] font-bold uppercase tracking-wider text-accent">
-              {d.why}
-            </p>
-            <p className="mt-1.5 text-[0.95rem] leading-relaxed text-ink-soft">
-              <RichText text={current.explanation} />
-            </p>
-          </div>
-
-          <button
-            type="button"
-            onClick={next}
-            className="mt-4 min-h-12 w-full rounded-lg bg-accent px-5 text-[1rem] font-semibold text-on-accent transition-colors hover:bg-accent-dark"
-          >
-            {at + 1 < live.length ? d.nextQuestion : d.seeScore}
-          </button>
-        </div>
-      )}
-
-      {picked === null && (
-        <p className="mt-5 text-[0.85rem] text-faint">
-          {d.pickOption}
-        </p>
-      )}
+      <QuestionCard
+        key={current.id}
+        question={current}
+        onResult={(ok) => setAnswers((a) => ({ ...a, [current.id]: ok }))}
+        nextLabel={at + 1 < live.length ? d.nextQuestion : d.seeScore}
+        onNext={next}
+      />
 
       <div className="mt-6 flex items-center justify-between border-t border-rule pt-4 text-[0.86rem]">
         <button

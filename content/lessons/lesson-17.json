@@ -1,0 +1,385 @@
+{
+  "slug": "lesson-17",
+  "label": "Lesson 17",
+  "title": "Solid-state electrochemistry",
+  "summary": "When the electrolyte is a solid, the ions hop through a lattice instead of swimming in a liquid. This lesson covers how solid electrolytes conduct, the defects that carry the current, the main families of solid conductor, and the devices - sensors, solid oxide fuel cells and solid-state batteries - that build on them.",
+  "order": 17,
+  "minutes": 40,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Liquid electrolytes carry ions by letting them drift through a solvent. Replace the liquid with a crystal and the same job has to be done by ions hopping from one lattice site to the next. That change sounds modest, but it reshapes the whole device: a solid electrolyte cannot leak, cannot evaporate, and can be assembled into thin, sealed, high-temperature cells."
+    },
+    {
+      "kind": "para",
+      "text": "This lesson develops the ideas in four steps: how a solid conducts by ion hopping, what defects make the hopping possible, which materials conduct well enough to matter, and how the interfaces of a real device limit it."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The one-sentence summary",
+      "body": "A solid electrolyte conducts when one kind of ion can hop through a lattice of fixed counter-ions; its conductivity is set by the number of mobile defects and how easily they move."
+    }
+  ],
+  "sections": [
+    {
+      "id": "how-a-solid-conducts",
+      "tone": "azure",
+      "title": "How a solid conducts",
+      "minutes": 8,
+      "summary": "In a solid electrolyte the lattice is rigid but a single ion species can migrate through it. Conduction is thermally activated hopping, so it follows an Arrhenius law and improves on heating.",
+      "keyPoints": [
+        "A solid electrolyte is an ionic conductor: one ion moves while the counter-ion lattice stays fixed.",
+        "Ion movement happens by hopping into neighbouring vacant sites, so it needs defects.",
+        "The conductivity rises with temperature as exp(-Ea/RT), the opposite of a metal.",
+        "An electronic conductor carries electrons; an ionic conductor carries mass. A solid electrolyte must block electrons."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A metal conducts by moving electrons, which are light and were never bound to a particular atom. A solid electrolyte does the opposite: its electrons are held tightly in a rigid ionic lattice, but one of the ion species is mobile enough to wander. Current in such a crystal is therefore a flow of matter, not just of charge."
+        },
+        {
+          "kind": "para",
+          "text": "An ion cannot move unless there is somewhere to move to. It hops into a neighbouring vacant site, and that hop needs enough thermal energy to break the ion free of its neighbours. The fraction of ions with that energy rises with temperature, so the conductivity climbs quickly as the solid warms."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\sigma = \\frac{A}{T}\\exp\\!\\left(-\\frac{E_a}{RT}\\right)",
+          "caption": "Arrhenius form of ionic conductivity in a solid"
+        },
+        {
+          "kind": "para",
+          "text": "That temperature dependence is the exact opposite of a metal, whose conductivity falls as it heats up. It is also why solid electrolytes are used hot: at room temperature many of them conduct poorly, while at several hundred degrees they conduct as well as a concentrated liquid."
+        },
+        {
+          "kind": "callout",
+          "variant": "warn",
+          "title": "The key contrast with a semiconductor",
+          "body": "A semiconductor conducts electrons whose number is set by doping. A solid electrolyte conducts *ions* whose number is set by defects. Both are thermally activated, but only the semiconductor answers to the gate of a transistor; the ionic conductor answers to the vacancy content of its lattice."
+        }
+      ]
+    },
+    {
+      "id": "defects-carry-the-current",
+      "tone": "indigo",
+      "title": "Defects carry the current",
+      "minutes": 8,
+      "summary": "Perfect crystals do not conduct. Point defects - vacancies and interstitials - make a lattice permeable, and adding aliovalent dopants manufactures extra vacancies on purpose.",
+      "keyPoints": [
+        "A Frenkel defect is an ion that leaves its site for an interstitial, leaving a vacancy behind.",
+        "A Schottky defect is a pair of vacancies, one of each sign, that keeps the crystal neutral.",
+        "Doping with an ion of different charge creates charge-compensating vacancies - the workhorse of oxide-ion conduction.",
+        "Conductivity is proportional to the number of mobile defects times their mobility."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A perfectly ordered crystal has every site filled, so no ion can move: each one is surrounded by occupied neighbours. Real crystals are never perfect, and the imperfections are useful. A Frenkel defect is an ion that has left its own site for an interstitial position, leaving a vacancy behind. A Schottky defect is a matched pair of vacancies, one of each charge sign, so the crystal stays neutral."
+        },
+        {
+          "kind": "heading",
+          "text": "Manufacturing vacancies on purpose"
+        },
+        {
+          "kind": "para",
+          "text": "The deliberate route to good conduction is aliovalent doping: replacing some host cations with an ion of a different charge. In yttria-stabilised zirconia, Y3+ replaces some Zr4+ in ZrO2. Each substitution leaves the lattice short of positive charge, and the crystal compensates by creating an oxygen vacancy. Those vacancies are what carry the current."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\mathrm{Y_2O_3} + 2\\,\\mathrm{Zr_{Zr}} + \\mathrm{O_O} \\rightarrow 2\\,\\mathrm{Y_{Zr}^{\\prime}} + \\mathrm{V_O^{\\bullet\\bullet}} + 2\\,\\mathrm{ZrO_2}",
+          "caption": "Yttria doping creates oxygen vacancies in zirconia"
+        },
+        {
+          "kind": "para",
+          "text": "This is the central lesson of the field: the number of charge carriers is a design variable, set by the chemistry of the crystal rather than by an external voltage. Adding the right dopant turns a poor conductor into a useful one."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "Why vacancies and not interstitials",
+          "body": "Both work in principle, but in most oxide and halide lattices a vacant site is the cheaper defect: the ion moves into a hole rather than squeezing into a gap. Tightly packed lattices favour vacancy hopping."
+        }
+      ]
+    },
+    {
+      "id": "families",
+      "tone": "violet",
+      "title": "The families of solid electrolyte",
+      "minutes": 8,
+      "summary": "Solid electrolytes divide by which ion they carry: oxide ions for high-temperature oxide cells, protons for intermediate temperatures, and silver, sodium or lithium ions for batteries and sensors.",
+      "keyPoints": [
+        "Oxide-ion conductors such as yttria-stabilised zirconia carry O2- and run hot (600-1000 C).",
+        "Proton conductors carry H+ at intermediate temperatures and are useful in fuel cells and hydrogen sensors.",
+        "Silver and sodium conductors include the superionic crystals, with mobile-ion sublattices.",
+        "Lithium solid electrolytes (oxides such as LLZO, and sulfides) are the basis of solid-state batteries."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Which ion a solid carries fixes what the device can do. Oxide-ion conductors, of which yttria-stabilised zirconia is the archetype, move O2- through the lattice and operate at high temperature; they are the electrolyte of the solid oxide fuel cell and the oxygen sensor."
+        },
+        {
+          "kind": "para",
+          "text": "Proton conductors carry H+ at more modest temperatures, which suits some fuel cells and hydrogen sensors. Silver-ion and sodium-ion conductors include the superionic crystals such as alpha-AgI and beta-alumina, where a whole sublattice of mobile cations weaves through a rigid anion framework."
+        },
+        {
+          "kind": "para",
+          "text": "For storage the prize is a lithium solid electrolyte: an oxide such as the garnet LLZO or a sulfide glass that transports Li+ fast, blocks dendrites, and lets a solid-state battery be built from a metal-lithium anode. The difficulty is that a fast bulk conductor may still fail at its interfaces."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "The superionic trick",
+          "body": "In a superionic crystal the mobile ion sublattice melts while the counter-ion framework stays solid, so a liquid-like ion fluid threads a rigid skeleton. alpha-AgI and beta-alumina reach conductivities close to those of liquid electrolytes - in a crystal."
+        }
+      ]
+    },
+    {
+      "id": "interfaces-and-devices",
+      "tone": "rose",
+      "title": "Interfaces and devices",
+      "minutes": 8,
+      "summary": "A solid electrolyte is only as good as its interfaces. Grain boundaries, poor contact and the three-phase boundary where gas, electrode and electrolyte meet decide the performance of real sensors, fuel cells and batteries.",
+      "keyPoints": [
+        "The oxygen sensor (lambda sensor) is a yttria-zirconia concentration cell that reads the oxygen partial pressure.",
+        "In a solid oxide fuel cell the reaction happens at the three-phase boundary of gas, electrode and electrolyte.",
+        "Solid-state batteries replace the flammable liquid electrolyte and may allow a lithium-metal anode.",
+        "The bottleneck in most devices is the interface: contact, grain boundaries, and thermal expansion mismatch."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A solid electrolyte rarely fails in its bulk. It fails at its surfaces and grain boundaries, where the perfect lattice is interrupted and the resistance is highest. Contact between a rigid electrolyte and a rigid electrode is difficult to make perfect, and differences in thermal expansion can crack it on cycling."
+        },
+        {
+          "kind": "para",
+          "text": "The oxygen sensor shows the principle at its simplest. A tube of yttria-stabilised zirconia separates air, at a known oxygen pressure, from the exhaust gas, at an unknown one. The two surfaces are porous platinum electrodes, and the tube acts as a concentration cell whose voltage follows the Nernst equation applied to oxygen."
+        },
+        {
+          "kind": "formula",
+          "tex": "E = \\frac{RT}{4F}\\ln\\frac{p_{\\mathrm{O_2}}^{\\mathrm{ref}}}{p_{\\mathrm{O_2}}^{\\mathrm{sample}}}",
+          "caption": "Oxygen-sensor voltage from the Nernst equation (four electrons per O2)"
+        },
+        {
+          "kind": "para",
+          "text": "A solid oxide fuel cell takes the same electrolyte and runs it as a power source. Oxygen is reduced at the cathode, O2- crosses the zirconia, and the oxide oxidises the fuel at the anode. The reaction needs gas, electrode metal and electrolyte to meet at a line or surface, the three-phase boundary, and maximising that boundary is the central design problem of the cell."
+        },
+        {
+          "kind": "callout",
+          "variant": "example",
+          "title": "A solid-state battery in one sentence",
+          "body": "Replace the liquid electrolyte of a lithium-ion cell with a thin solid lithium conductor, and you gain a non-flammable electrolyte that can also stand against a lithium-metal anode; the promise is higher energy and better safety, and the problem is again the interfaces."
+        }
+      ]
+    },
+    {
+      "id": "measuring",
+      "tone": "coral",
+      "title": "Measuring a solid electrolyte",
+      "minutes": 8,
+      "summary": "Ionic conductivity in a solid is measured with impedance spectroscopy and blocking electrodes, and the contributions of bulk, grain boundary and interface are separated by their relaxation frequencies.",
+      "keyPoints": [
+        "Impedance spectroscopy separates bulk, grain-boundary and electrode responses by frequency.",
+        "Four-probe measurements remove the contact resistance that troubles two-probe work.",
+        "Blocking electrodes are ionically inert, so no faradaic reaction occurs and only polarisation shows.",
+        "The bulk conductivity is found from the high-frequency intercept, not from the total resistance."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The tool of choice is impedance spectroscopy, the same method introduced for liquid cells. In a solid the semicircles in the Nyquist plot separate cleanly by frequency: the highest-frequency arc is the bulk crystal, a middle arc is the grain boundaries, and the low-frequency feature is the electrode interface. Fitting them apart gives each resistance on its own."
+        },
+        {
+          "kind": "para",
+          "text": "A four-probe arrangement removes the contact resistance that plagues a simple two-probe measurement, because the voltage probes carry almost no current. And when the goal is to measure only the electrolyte, blocking electrodes - ionically inert metals - are used so that no chemical reaction can run and the low-frequency feature is purely capacitive."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "Read the resistance from the right arc",
+          "body": "The bulk conductivity comes from the high-frequency intercept, where the grain boundaries and the electrode have not yet had time to respond. Reporting total resistance as conductivity is one of the commonest errors in solid-state work."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "l17-mcq-001",
+      "topicId": "how-a-solid-conducts",
+      "quick": true,
+      "question": "A solid electrolyte conducts by the movement of:",
+      "options": [
+        "Electrons through the lattice",
+        "A single mobile ion species hopping between sites",
+        "Whole molecules",
+        "Photons"
+      ],
+      "answer": 1,
+      "explanation": "One ion species is mobile and hops through the rigid counter-ion lattice, so the current is a flow of matter as well as charge. The lattice is otherwise fixed, and electrons are held in place."
+    },
+    {
+      "id": "l17-mcq-002",
+      "topicId": "how-a-solid-conducts",
+      "quick": true,
+      "question": "As a typical solid electrolyte is heated, its ionic conductivity:",
+      "options": [
+        "Falls, as in a metal",
+        "Rises, following an Arrhenius law",
+        "Stays constant",
+        "Becomes electronic"
+      ],
+      "answer": 1,
+      "explanation": "Ionic hopping is thermally activated, so more ions clear the barrier as temperature rises and the conductivity climbs as exp(-Ea/RT). This is the opposite of a metal."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l17-tf-001",
+      "topicId": "how-a-solid-conducts",
+      "question": "A solid electrolyte must block electronic current while carrying ionic current.",
+      "answer": true,
+      "explanation": "If electrons could pass, the electrolyte would short-circuit the cell internally. Its useful job is to conduct one ion species and block everything else, including electrons."
+    },
+    {
+      "id": "l17-mcq-003",
+      "topicId": "defects-carry-the-current",
+      "quick": true,
+      "question": "A Frenkel defect is:",
+      "options": [
+        "A pair of vacancies of opposite sign",
+        "An ion that left its site for an interstitial, leaving a vacancy",
+        "A dopant atom",
+        "A dislocation"
+      ],
+      "answer": 1,
+      "explanation": "A Frenkel defect pairs an interstitial ion with the vacancy it left behind. A Schottky defect is the pair of vacancies instead."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l17-tf-002",
+      "topicId": "defects-carry-the-current",
+      "question": "Doping zirconia with yttria creates oxygen vacancies that carry the current.",
+      "answer": true,
+      "explanation": "Y3+ replacing Zr4+ leaves the lattice short of positive charge, so oxygen vacancies appear to restore neutrality. Those vacancies are the mobile charge carriers of yttria-stabilised zirconia."
+    },
+    {
+      "kind": "multi",
+      "id": "l17-multi-001",
+      "topicId": "defects-carry-the-current",
+      "question": "Which statements about defects in solid electrolytes are correct? Select all that apply.",
+      "options": [
+        "A perfect crystal has no mobile charge carriers",
+        "Defects can be created deliberately by aliovalent doping",
+        "Conductivity rises with the number of mobile defects",
+        "Vacancies are generally cheaper defects than interstitials in close-packed lattices"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "A perfect lattice leaves no site for an ion to move into; aliovalent doping manufactures vacancies on purpose; conductivity grows with carrier number; and in close-packed lattices a vacancy is the favoured defect. All four are correct."
+    },
+    {
+      "id": "l17-mcq-004",
+      "topicId": "families",
+      "question": "The archetypal oxide-ion conductor used in oxygen sensors and solid oxide fuel cells is:",
+      "options": [
+        "Yttria-stabilised zirconia",
+        "Sodium beta-alumina",
+        "alpha-AgI",
+        "Nafion"
+      ],
+      "answer": 0,
+      "explanation": "Yttria-stabilised zirconia is the workhorse oxide-ion conductor, running hot in sensors and solid oxide fuel cells. Beta-alumina carries sodium ions, alpha-AgI silver ions, and Nafion is a polymer proton conductor."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l17-tf-003",
+      "topicId": "families",
+      "question": "In a superionic crystal the mobile-ion sublattice behaves almost like a liquid while the counter-ion framework stays rigid.",
+      "answer": true,
+      "explanation": "That is the superionic trick: a disordered fluid of mobile cations threads a solid anion skeleton, giving conductivities close to those of liquid electrolytes inside a crystal."
+    },
+    {
+      "kind": "numeric",
+      "id": "l17-num-001",
+      "topicId": "families",
+      "question": "How many oxygen vacancies are created per formula unit of Y2O3 substitution when it replaces zirconia, given the charge balance in the lesson?",
+      "answer": 1,
+      "tolerance": 0.01,
+      "explanation": "The reaction shows one Y2O3 substitution producing two yttrium-on-zirconium defects and one oxygen vacancy. So one oxygen vacancy is created per Y2O3 unit, balancing the charge."
+    },
+    {
+      "id": "l17-mcq-005",
+      "topicId": "interfaces-and-devices",
+      "quick": true,
+      "question": "A solid oxide fuel cell reaction takes place at the three-phase boundary, which is where:",
+      "options": [
+        "Two metals meet",
+        "Gas, electrode metal and electrolyte meet",
+        "Two grains meet",
+        "The cell is hottest"
+      ],
+      "answer": 1,
+      "explanation": "The reaction needs fuel or oxygen gas, an electronic path through the electrode, and an ionic path through the electrolyte. All three must meet, and maximising that boundary is a central design problem."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l17-tf-004",
+      "topicId": "interfaces-and-devices",
+      "question": "In most solid-electrolyte devices the practical limit is the interface, not the bulk conductivity.",
+      "answer": true,
+      "explanation": "Bulk conduction can be excellent while poor contact, grain boundaries and thermal-expansion mismatch dominate the resistance. The interface is where the perfect lattice is interrupted."
+    },
+    {
+      "kind": "numeric",
+      "id": "l17-num-002",
+      "topicId": "interfaces-and-devices",
+      "question": "An oxygen concentration cell uses the Nernst term RT/(nF) ln(p_ref/p_sample). How many electrons, n, appear in this term for the oxygen reaction?",
+      "answer": 4,
+      "tolerance": 0.01,
+      "explanation": "Oxygen is reduced through a four-electron step, O2 + 4e- -> 2O2-, so n = 4 appears in the Nernst term. This is why the oxygen-sensor voltage uses RT/4F."
+    },
+    {
+      "id": "l17-mcq-006",
+      "topicId": "measuring",
+      "question": "In impedance spectroscopy of a solid electrolyte, the bulk conductivity is found from:",
+      "options": [
+        "The total DC resistance",
+        "The high-frequency intercept",
+        "The low-frequency tail",
+        "The applied voltage"
+      ],
+      "answer": 1,
+      "explanation": "The high-frequency arc comes from the bulk crystal before the grain boundaries and electrode have had time to respond. Using the total resistance would mix in grain-boundary and interface contributions."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l17-tf-005",
+      "topicId": "measuring",
+      "question": "Blocking electrodes are ionically inert, so no faradaic reaction runs and only polarisation appears at low frequency.",
+      "answer": true,
+      "explanation": "With an inert electrode the ions cannot cross, so the low-frequency feature is purely capacitive rather than a reaction. Four-probe measurements are also used to remove contact resistance."
+    },
+    {
+      "kind": "multi",
+      "id": "l17-multi-002",
+      "topicId": "measuring",
+      "question": "Which statements about measuring a solid electrolyte are correct? Select all that apply.",
+      "options": [
+        "Impedance spectroscopy separates bulk, grain-boundary and electrode responses by frequency",
+        "A four-probe measurement removes contact resistance",
+        "Blocking electrodes prevent a faradaic reaction",
+        "The total resistance always equals the bulk resistance"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Impedance separates the contributions by frequency, four-probe removes contact resistance, and blocking electrodes suppress faradaic reactions. The total resistance is generally larger than the bulk resistance, not equal to it."
+    }
+  ]
+}

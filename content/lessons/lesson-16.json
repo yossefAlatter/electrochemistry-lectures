@@ -1,0 +1,632 @@
+{
+  "slug": "lesson-16",
+  "label": "Lesson 16",
+  "title": "Advanced topics",
+  "summary": "Sixteen lessons of electrochemistry have all been the same small set of ideas - ions, electrons, interfaces, and the couple of boundary conditions that govern them - applied and reapplied. This last lesson is a guidepost. It points at the six places where those ideas are currently being pushed the hardest: electro-catalysis, photoelectrochemistry and chemiluminescence, conducting polymers, solid-state electrochemistry, bioelectrochemistry, and the nanoscale world.",
+  "order": 16,
+  "minutes": 50,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Nothing in this lesson is new physics. Every topic below is Butler-Volmer kinetics, mass transfer, and double-layer structure wearing a different hat - sometimes a very large one. The aim here is a map, not a territory: enough to know what each field studies and what question it is trying to answer, so that the deeper books have somewhere to hang."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The one-sentence summary of this lesson",
+      "body": "The frontiers of electrochemistry are all ways of asking the same old question - how fast can charge cross this interface? - about smaller electrodes, stranger materials, and live cells."
+    }
+  ],
+  "sections": [
+    {
+      "id": "electrocatalysis",
+      "tone": "azure",
+      "title": "Electrocatalysis",
+      "minutes": 8,
+      "summary": "A catalyst is a material that lowers the activation barrier of a reaction; an electrocatalyst does it at an electrode, turning microwatts per square centimetre into amperes.",
+      "keyPoints": [
+        "An electrocatalyst is an electrode material that lowers the overpotential of a target reaction at a given current density.",
+        "The Sabatier principle applies: bind the intermediates neither too strongly nor too weakly.",
+        "Hydrogen evolution, oxygen reduction, and CO2 reduction are the canonical agricultural and industrial targets.",
+        "The search is for cheap materials that match platinum's activity, because platinum is the benchmark, not the answer."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Lesson 5 told us the rate of an electrode reaction is set by the activation barrier. A good electrocatalyst is nothing more than a surface that makes that barrier smaller: a material whose atomic geometry and electronic structure happen to stabilise the reaction's intermediates in just the right way. The whole field is the search for such a surface, one element or alloy at a time."
+        },
+        {
+          "kind": "para",
+          "text": "The guiding trade-off is the Sabatier principle, familiar from heterogeneous catalysis generally: if the surface binds the intermediate too weakly, the intermediate never forms; bind it too strongly, and the intermediate never leaves. The best catalysts sit in the valley between. For hydrogen evolution a superb surface is one that binds H by about the thermoneutral amount - strong enough to split, weak enough to release."
+        },
+        {
+          "kind": "para",
+          "text": "The big three targets are hydrogen evolution (cheap fuel), oxygen reduction (the bottleneck of every fuel cell), and CO2 reduction (turning a greenhouse gas back into fuel or feedstock). In each case a whole periodic table is being screened for cheap substitutes for platinum - transition-metal alloys, sulfides, oxides, single-atom sites. The benchmark is always the same: current density at a fixed overpotential, on a known surface."
+        }
+      ]
+    },
+    {
+      "id": "photo-and-ecl",
+      "tone": "indigo",
+      "title": "Photoelectrochemistry and chemiluminescence",
+      "minutes": 8,
+      "summary": "Shine light on an electrode and the photon can do the oxidising work instead of the applied potential; run the electron-transfer reaction in solution and it can give the energy back as light. Both directions are studied here.",
+      "keyPoints": [
+        "In photoelectrochemistry a semiconductor electrode absorbs light, and the photogenerated carriers drive the electrode reaction.",
+        "The dream device is a photoelectrode that splits water without an external bias - artificial photosynthesis.",
+        "Electrogenerated chemiluminescence is the radiative cousin of ECL's dark twin, EC: a species made at the electrode reacts in solution to give an excited state that emits light.",
+        "ECL is an analytical superpower because every emitter is born at a known potential and no lamp is needed."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Replace a metal with a semiconductor and the electrode can harvest light. A photon of sufficient energy kicks an electron from the valence band to the conduction band, leaving a hole behind; the two carriers then drift to opposite phases, one delivering reductive power to the solution, one oxidative power. Bias the semiconductor the wrong way and the current vanishes: the photocurrent turns itself off if the light goes away."
+        },
+        {
+          "kind": "para",
+          "text": "The canonical ambition is a water-splitting photoelectrode that performs both half-reactions with sunlight alone: hydrogen on one face, oxygen on the other, no wires. It has been the grail since the 1970s, and progress is measured in a few percent efficiency on real materials. The same physics underlies dye-sensitised solar cells and perovskite photovoltaics, which are its photovoltaic cousins."
+        },
+        {
+          "kind": "para",
+          "text": "Run the arrow backward and you get electrogenerated chemiluminescence (ECL). Generate a radical cation and a radical anion at nearby electrodes, let them meet, and their recombination can leave one of them in an excited state that emits a photon. The emission is intrinsically clean, has no lamp background, and switches on exactly where the potential does - which is why ECL is now the standard detection chemistry of immunoassays."
+        }
+      ]
+    },
+    {
+      "id": "conducting-polymers",
+      "tone": "violet",
+      "title": "Conducting polymers",
+      "minutes": 7,
+      "summary": "Some polymers can be oxidised or reduced along their backbone, and in that charged state they conduct. Switching the potential switches both their colour and their chemistry - the basis of organic batteries, OLEDs, and artificial muscle.",
+      "keyPoints": [
+        "A conjugated polymer has a backbone of alternating double bonds whose π electrons can be removed or added, turning it from insulator to conductor.",
+        "Doping and dedoping the polymer switch its conductivity and its colour, both at potentials accessible to a battery.",
+        "Applications follow: rechargeable organic batteries, display pixels, sensors, and artificial muscles.",
+        "The science is the Lesson 12 CE scheme worn by a plastic: a faradaic reaction induces a chemical change in the polymer that feeds back on its conductivity."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Most polymers are insulators, and proud of it. A conjugated polymer is the exception: a chain of alternating single and double bonds whose π electrons delocalise along the backbone. Pull an electron out or push one in - 'dope' it electrochemically - and the whole chain changes character: the once-insulating plastic conducts like a modest metal. Push it back and it insulators again."
+        },
+        {
+          "kind": "para",
+          "text": "Because the doping is a faradaic reaction, the polymer is also a CE system from Lesson 12: inject charge, and a chemical change follows that gates its conductivity. The colour often flips too, so the same potential switch that turns the polymer conductive also turns it visibly different - the basis of the polymer displays and 'smart windows' of the 1990s and 2000s."
+        },
+        {
+          "kind": "para",
+          "text": "The same switchability is a battery material. Polyaniline, polypyrrole and PEDOT can each store charge by this doping chemistry, which is why they were the first serious candidates for all-polymer batteries - lighter than lithium-ion, if less energetic. And because doping changes the polymer's volume slightly, a film of polymer can flex: an artificial muscle that contracts at a volt."
+        }
+      ]
+    },
+    {
+      "id": "solid-state",
+      "tone": "rose",
+      "title": "Solid-state electrochemistry",
+      "minutes": 7,
+      "summary": "Everything so far assumed ions moving through a liquid. In a solid electrolyte - a crystal, a glass, a ceramic - they move through a lattice instead, and the same Lessons 1 and 4 apply, only slower and with a much bigger payoff.",
+      "keyPoints": [
+        "In a solid electrolyte the conducting species is usually a single ion that hops through a rigid lattice; the lattice's defects and channels set its mobility.",
+        "Solid electrolytes can be more selective than liquids: a proton-conducting oxide passes protons and blocks electrons, for example.",
+        "Oxygen sensors, solid-state batteries, and fuel cells for high temperatures all rely on them.",
+        "The bottleneck is almost always the interface between the solid electrolyte and the electrode - grain boundaries, contact, and mismatch."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Take the solvent away and Lessons 1 and 4 do not break; they just get lonely. In a solid electrolyte the charge-carrying ion - Li+, O2-, H+ - hops between sites in a crystal. Its mobility is lower, often by orders of magnitude, but the compensations are dramatic: no evaporation, no leak, and, best of all, almost perfect selectivity, because the lattice passes only ions of the right size and charge."
+        },
+        {
+          "kind": "para",
+          "text": "That selectivity is the killer app. A yttria-stabilised zirconia passes O2- and blocks electrons, so it can serve as both the electrolyte and the oxygen-activity meter in an engine's exhaust. A proton-conducting ceramic does the same for H+ in a high-temperature fuel cell. And a solid lithium conductor - a ceramic or glass - is the dream electrolyte for a battery that is safer and denser than today's liquid-fed lithium-ion."
+        },
+        {
+          "kind": "callout",
+          "variant": "warn",
+          "title": "The interface is the problem now",
+          "body": "In a liquid cell the electrolyte wets the electrode and contact is automatic. In a solid-state cell the contact is a mechanical joint, and grain boundaries, thermal expansion, and roughness all raise the resistance. Most of the research is about that buried interface - the same Lesson 6 double layer, only harder to see."
+        }
+      ]
+    },
+    {
+      "id": "bioelectrochemistry",
+      "tone": "coral",
+      "title": "Bioelectrochemistry",
+      "minutes": 7,
+      "summary": "Cells have run on electron-transfer chemistry for two billion years before we got the voltmeter patent. Bioelectrochemistry is where electrodes meet that older machinery: sensors, fuel cells that eat sugar, and the deep question of how a protein hands an electron to a wire.",
+      "keyPoints": [
+        "Bioelectrochemistry asks how biological charge carriers - enzymes, cells, whole organisms - exchange electrons with an electrode.",
+        "Enzyme electrodes immobolise a catalyst on a sensor to give selective signals; glucose strips are the consumer success.",
+        "Microbial fuel cells harvest the small currents of respiring bacteria, promising wastewater treatment that pays for itself.",
+        "The open mechanistic question is how a redox site buried inside a protein can exchange electrons with a macroscopic wire."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Life is an electrochemical operation. Respiration, photosynthesis, and every metabolic step in between are sequences of electron transfers coupled to proton pumps. Bioelectrochemistry asks what happens when you interrupt that chain by offering the electrons somewhere else to go: an electrode."
+        },
+        {
+          "kind": "para",
+          "text": "The practical wins are already on your wrist. A blood-glucose strip is an enzyme electrode: glucose oxidase on a carbon working electrode turns glucose into a current in a few seconds. A microbial fuel cell is the same idea fed a whole bacterium: feed the anode waste, and the respiring cells pass their waste electrons to it. The current is small, but it treats the wastewater while it generates - the process is energetically 'negative cost'."
+        },
+        {
+          "kind": "para",
+          "text": "The deep question is still open: how does an electron get from a redox site buried inside a protein to a metal wire? For most redox proteins it cannot, unless you provoke it - with a mediator molecule, a redox polymer, or a conductive pilus. Understanding that tunneling step well enough to design around it would make every cell in your body addressable, and it is why protein film voltammetry is such a rich technique."
+        }
+      ]
+    },
+    {
+      "id": "nano-and-simulation",
+      "tone": "amber",
+      "title": "Nanoelectrochemistry and simulation",
+      "minutes": 7,
+      "summary": "Shrink the electrode and the currents shrink with it - but the physics changes too. At the nanoscale, planar diffusion becomes radial, noise matters, and single molecules become measurable events. Simulation does the opposite: it makes the continuum equations of the earlier lessons runnable on a computer.",
+      "keyPoints": [
+        "Nanoelectrodes are small in all dimensions, so diffusion to them is spherical or hemispherical, giving the steady states of Lesson 8.",
+        "Because their currents are tiny and the transport layers thick compared with the electrode, they can record the unwritten chemistry of short-lived species.",
+        "At the smallest scales a single molecule is an event, and the current becomes a series of countable spikes.",
+        "Digital simulation now solves the coupled diffusion-reaction equations of any waveform - the Randles-Sevcik world made general."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Lesson 8 taught us that a microscopic electrode reaches a true steady state because the diffusion field around it is radial. Now shrink it further still. At a nanometre-scale tip the same steady state appears, but faster: the characteristic diffusion time scales as radius squared, so a nanometre electrode relaxes in microseconds and can capture species that live for microseconds - radicals and intermediates that a conventional electrode averages away."
+        },
+        {
+          "kind": "para",
+          "text": "Push the size down again and the picture dissolves into single molecules. A metallic break junction, two tips almost touching, can hold one molecule between them; the current that flows as that molecule is twisted or biased is a molecular property you can buy with a microscope. Electrochemistry at this scale stops being a current in an ampere meter and becomes a count of events."
+        },
+        {
+          "kind": "para",
+          "text": "The other pole of the field is computation. The diffusion-reaction equations we have quoted since Lesson 4 can be solved exactly only for the simplest boundary conditions; the moment a coupled reaction or a porous electrode enters, mathematics runs out and the computer takes over. Modern simulation packages reproduce any waveform - CV, pulse, impedance, chronoamperometry - from a mechanism, and fitting them to data is how the field assigns mechanisms today. The t^{-1/2} tail of Lesson 8 and the 59/n mV of Lesson 9 are the analytical limits of the same world the simulators draw in colour."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "Same equations, smaller world",
+          "body": "From macroscopic cells to single molecules, the boundary conditions change but the physics - Nernst, Fick, Butler-Volmer - does not. The advanced topics are the same three equations, now wearing radiation, nanostructures, and proteins."
+        },
+        {
+          "kind": "worked",
+          "title": "Fuel-cell voltage budget",
+          "given": "A PEM cell should deliver 1.23 V ideally but loses 50 mV at the anode, 350 mV at the cathode, and 80 mV ohmically. Terminal voltage at load?",
+          "steps": [
+            "V = E_{thermo} - \\eta_a - \\eta_c - iR_{\\Omega}",
+            "V = 1.23 - 0.050 - 0.350 - 0.080 = 0.75\\ \\mathrm{V}"
+          ],
+          "result": "0.75 V per cell. Note the cathode dominates the losses: that is the whole reason electrocatalysis is a field - a better oxygen-reduction catalyst claws back most of the gap to 1.23 V."
+        },
+        {
+          "kind": "worked",
+          "title": "Photopotential bookkeeping",
+          "given": "A photocathode absorbs photons of 2.0 eV and its conduction band is 0.4 eV above the water reduction level. What effective overpotential does one absorbed photon supply for hydrogen evolution (n = 1 per H-atom step)?",
+          "steps": [
+            "\\text{Available energy} = h\\nu - \\text{loss} = 2.0 - (-0.4)\\ \\text{alignment gap}",
+            "\\text{Driving force for reduction} = 0.4\\ \\mathrm{eV} = 0.4\\ \\mathrm{V}\\ \\text{per electron}"
+          ],
+          "result": "Each absorbed photon can drive one electron with a 0.4 V driving force - the faradaic 'overpotential' the sun supplies. A cell runs only while the absorbed photon flux exceeds the required electron flux."
+        }
+      ],
+      "cta": {
+        "title": "Back to the beginning",
+        "body": "That is the map. From here, the syllabus runs: reopen Lesson 1 and work through with a pencil, take the question banks, or start again from the subject page - the whole course is built to be re-read.",
+        "href": "/",
+        "linkLabel": "Return to the course home"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "l16-mcq-001",
+      "topicId": "electrocatalysis",
+      "quick": true,
+      "question": "An electrocatalyst is judged by:",
+      "options": [
+        "Its colour",
+        "The current density it delivers at a given overpotential",
+        "Its price alone",
+        "Its melting point"
+      ],
+      "answer": 1,
+      "explanation": "The whole point is a better rate at a smaller driving force, so the benchmark is current density at fixed overpotential."
+    },
+    {
+      "id": "l16-mcq-002",
+      "topicId": "electrocatalysis",
+      "quick": true,
+      "question": "The Sabatier principle says a catalyst should bind intermediates:",
+      "options": [
+        "As strongly as possible",
+        "As weakly as possible",
+        "Neither too strongly nor too weakly",
+        "In gaseous form"
+      ],
+      "answer": 2,
+      "explanation": "Too weak and the intermediate never forms; too strong and it never leaves. Activity peaks in the middle."
+    },
+    {
+      "id": "l16-mcq-003",
+      "topicId": "electrocatalysis",
+      "quick": true,
+      "question": "The benchmark material for hydrogen evolution is:",
+      "options": [
+        "Carbon",
+        "Platinum",
+        "Gold",
+        "Zinc"
+      ],
+      "answer": 1,
+      "explanation": "Pt sits near the top of the volcano for hydrogen binding, so it remains the standard against which cheaper catalysts are measured."
+    },
+    {
+      "id": "l16-mcq-004",
+      "topicId": "electrocatalysis",
+      "question": "Oxygen reduction is the bottleneck of fuel cells because:",
+      "options": [
+        "Oxygen is unavailable",
+        "Its multi-electron, multi-step mechanism is kinetically slow compared with hydrogen oxidation",
+        "It is too fast",
+        "It needs no catalyst"
+      ],
+      "answer": 1,
+      "explanation": "Four electrons and several intermediates must be managed, so the cathode demands orders of magnitude more overpotential than the anode."
+    },
+    {
+      "id": "l16-mcq-005",
+      "topicId": "photo-and-ecl",
+      "quick": true,
+      "question": "In a photoelectrochemical cell, the driving force for the electrode reaction is provided by:",
+      "options": [
+        "A battery",
+        "Photogenerated electron-hole pairs in a semiconductor",
+        "Heat alone",
+        "A sponge"
+      ],
+      "answer": 1,
+      "explanation": "Photon absorption creates carriers whose chemical potential difference across the junction can split water without an external bias."
+    },
+    {
+      "id": "l16-mcq-006",
+      "topicId": "photo-and-ecl",
+      "quick": true,
+      "question": "The dream of photoelectrochemistry since the 1970s is:",
+      "options": [
+        "A cheaper battery",
+        "A single photoelectrode that splits water with sunlight alone",
+        "A better mercury thermometer",
+        "An LED that glows in the dark"
+      ],
+      "answer": 1,
+      "explanation": "Artificial photosynthesis - bias-free water splitting on a semiconductor - remains the field's benchmark challenge."
+    },
+    {
+      "id": "l16-mcq-007",
+      "topicId": "photo-and-ecl",
+      "quick": true,
+      "question": "Electrogenerated chemiluminescence (ECL) produces light by:",
+      "options": [
+        "Heating a filament",
+        "Recombination of electrogenerated radical ions that leaves one partner in an excited state",
+        "Melting ice",
+        "Shining a lamp on the cell"
+      ],
+      "answer": 1,
+      "explanation": "A radical cation and radical anion, both born at electrodes, annihilate in solution and one product is born excited, then emits."
+    },
+    {
+      "id": "l16-mcq-008",
+      "topicId": "photo-and-ecl",
+      "question": "ECL's analytical advantage is that:",
+      "options": [
+        "It needs no reagents",
+        "It needs no lamp, turns on exactly at a set potential, and has a very low background",
+        "It works only in the dark",
+        "It requires radioactivity"
+      ],
+      "answer": 1,
+      "explanation": "No excitation source means no scattered-light background; the emission is born at the electrode, switchable with the potential."
+    },
+    {
+      "id": "l16-mcq-009",
+      "topicId": "conducting-polymers",
+      "quick": true,
+      "question": "A conjugated polymer conducts because:",
+      "options": [
+        "It contains copper wires",
+        "Its alternating double bonds delocalise π electrons along the backbone once doped",
+        "It is wet",
+        "It is very heavy"
+      ],
+      "answer": 1,
+      "explanation": "The π backbone is electronically continuous; adding or removing electrons from it lets charge move along the chain."
+    },
+    {
+      "id": "l16-mcq-010",
+      "topicId": "conducting-polymers",
+      "quick": true,
+      "question": "Switching a conducting polymer between doped and dedoped changes:",
+      "options": [
+        "Only its melting point",
+        "Its conductivity and often its colour",
+        "Its mass by half",
+        "Nothing"
+      ],
+      "answer": 1,
+      "explanation": "Doping changes the carrier density; the altered electronic structure also changes which wavelengths are absorbed, hence the colour."
+    },
+    {
+      "id": "l16-mcq-011",
+      "topicId": "conducting-polymers",
+      "quick": true,
+      "question": "In electrochemical terms, doping a conducting polymer is a:",
+      "options": [
+        "Purely mechanical step",
+        "Faradaic reaction - an EC-type coupled chemistry on the backbone",
+        "Thermal decomposition",
+        "Nuclear event"
+      ],
+      "answer": 1,
+      "explanation": "Oxidising or reducing the chain injects or removes electronic charge, and the compensating ion uptake makes it a coupled chemical step."
+    },
+    {
+      "id": "l16-mcq-012",
+      "topicId": "conducting-polymers",
+      "question": "Conducting-polymer actuators work because doping:",
+      "options": [
+        "Heats the polymer",
+        "Changes the polymer's volume, so a film bends or contracts at a volt",
+        "Melts the polymer",
+        "Magnetises it"
+      ],
+      "answer": 1,
+      "explanation": "Ion insertion swells or shrinks the film; bonded to a passive layer, that volume change becomes macroscopic motion - an artificial muscle."
+    },
+    {
+      "id": "l16-mcq-013",
+      "topicId": "solid-state",
+      "quick": true,
+      "question": "In a solid electrolyte, charge is carried by:",
+      "options": [
+        "Electrons only",
+        "Ions hopping through the lattice",
+        "Bubbles",
+        "Light"
+      ],
+      "answer": 1,
+      "explanation": "A mobile ionic species drifts through the rigid host; electrons are ideally blocked, which is what makes it an electrolyte."
+    },
+    {
+      "id": "l16-mcq-014",
+      "topicId": "solid-state",
+      "quick": true,
+      "question": "YSZ (yttria-stabilised zirconia) is valuable because it passes:",
+      "options": [
+        "Electrons only",
+        "O2- ions and blocks electrons",
+        "Protons only",
+        "Nothing at all"
+      ],
+      "answer": 1,
+      "explanation": "Its defect structure carries oxide ions while remaining an electronic insulator - ideal for an oxygen sensor or a high-temperature fuel cell."
+    },
+    {
+      "id": "l16-mcq-015",
+      "topicId": "solid-state",
+      "quick": true,
+      "question": "The hardest part of a solid-state battery is usually:",
+      "options": [
+        "The price of lithium",
+        "The solid-solid interface between electrolyte and electrode",
+        "The colour of the case",
+        "The number of bees"
+      ],
+      "answer": 1,
+      "explanation": "No liquid wets the contact; grain boundaries, roughness and thermal mismatch dominate the cell's resistance."
+    },
+    {
+      "id": "l16-mcq-016",
+      "topicId": "solid-state",
+      "question": "The main advantage of a solid electrolyte over a liquid one is:",
+      "options": [
+        "Always much higher conductivity",
+        "Selectivity for one ion and no leakage or evaporation",
+        "Lower cost in every case",
+        "It glows"
+      ],
+      "answer": 1,
+      "explanation": "The rigid lattice lets only ions of the right size through and cannot spill - the trade is that their motion is slower."
+    },
+    {
+      "id": "l16-mcq-017",
+      "topicId": "bioelectrochemistry",
+      "quick": true,
+      "question": "Bioelectrochemistry is the study of:",
+      "options": [
+        "How electronics are recycled",
+        "How biological redox systems exchange electrons with electrodes",
+        "The taxonomy of algae",
+        "The history of batteries"
+      ],
+      "answer": 1,
+      "explanation": "Enzymes, cells and whole microbes run electron-transfer chemistry; the field asks how that chemistry can hand charge to a wire."
+    },
+    {
+      "id": "l16-mcq-018",
+      "topicId": "bioelectrochemistry",
+      "quick": true,
+      "question": "A blood-glucose strip is an example of:",
+      "options": [
+        "A reference electrode",
+        "An enzyme electrode - a bioelectrocatalytic sensor",
+        "A fuel cell",
+        "A supercapacitor"
+      ],
+      "answer": 1,
+      "explanation": "Glucose oxidase immobilised on the carbon anode converts glucose into a current that is counted in a few seconds."
+    },
+    {
+      "id": "l16-mcq-019",
+      "topicId": "bioelectrochemistry",
+      "quick": true,
+      "question": "A microbial fuel cell's current is generated by:",
+      "options": [
+        "Photosynthesis",
+        "Respiring microbes passing electrons to the anode",
+        "Thermal convection",
+        "A pump"
+      ],
+      "answer": 1,
+      "explanation": "Feed the anode organic waste and the microbes respire onto it, excreting electrons as current - wastewater treatment that yields power."
+    },
+    {
+      "id": "l16-mcq-020",
+      "topicId": "bioelectrochemistry",
+      "question": "The central mechanistic problem of bioelectrochemistry is:",
+      "options": [
+        "How a redox centre buried inside a protein exchanges electrons with the electrode",
+        "How to make proteins cheaper",
+        "How to cool the cell",
+        "How to polish platinum"
+      ],
+      "answer": 0,
+      "explanation": "Most redox enzymes keep their active site insulated; getting its electron out to the wire, via a mediator or a designed contact, is the field's core problem."
+    },
+    {
+      "id": "l16-mcq-021",
+      "topicId": "nano-and-simulation",
+      "quick": true,
+      "question": "At a nanometre-scale electrode, transport is dominated by:",
+      "options": [
+        "Planar diffusion",
+        "Radial/spherical diffusion and true steady states",
+        "No diffusion",
+        "Turbulence"
+      ],
+      "answer": 1,
+      "explanation": "A very small electrode is engulfed by a three-dimensional diffusion field, giving the steady currents of Lesson 8 - only microseconds fast."
+    },
+    {
+      "id": "l16-mcq-022",
+      "topicId": "nano-and-simulation",
+      "quick": true,
+      "question": "Nanoparticles and ultramicroelectrodes are useful because:",
+      "options": [
+        "Their diffusion layers relax so fast they can trap short-lived species",
+        "They are made of gold only",
+        "They never touch solution",
+        "They are invisible"
+      ],
+      "answer": 0,
+      "explanation": "The diffusion time scales with radius squared, so a nanometre electrode samples chemistry on a microsecond timescale and catches fleeting intermediates."
+    },
+    {
+      "id": "l16-mcq-023",
+      "topicId": "nano-and-simulation",
+      "quick": true,
+      "question": "At the single-molecule limit, the measurable current becomes:",
+      "options": [
+        "A smooth DC line",
+        "A series of countable events as individual molecules enter, react, or leave",
+        "Exactly zero",
+        "Undefined"
+      ],
+      "answer": 1,
+      "explanation": "With one molecule in the junction the trace is a sequence of discrete steps - the chemical event itself is the signal."
+    },
+    {
+      "id": "l16-mcq-024",
+      "topicId": "nano-and-simulation",
+      "question": "Digital simulation of voltammetry exists because:",
+      "options": [
+        "The analytic equations of Fick and Butler-Volmer are wrong",
+        "For coupled reactions and realistic boundary conditions the diffusion equations cannot be solved analytically",
+        "Computers enjoy solving PDEs",
+        "Experiments are unnecessary"
+      ],
+      "answer": 1,
+      "explanation": "Closed forms exist only for idealised cases; a real mechanism with coupled chemistry and a porous electrode is a PDE problem, and PDEs are what computers solve."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l16-tf-001",
+      "topicId": "electrocatalysis",
+      "question": "The Sabatier principle says an electrocatalyst should bind its intermediates neither too strongly nor too weakly.",
+      "answer": true,
+      "explanation": "Binding that is too strong traps the intermediate; too weak and it never forms. The best catalysts sit in between, which is why the search for cheap materials that match platinum is guided by this principle."
+    },
+    {
+      "kind": "multi",
+      "id": "l16-multi-001",
+      "topicId": "electrocatalysis",
+      "question": "Which are canonical targets of electrocatalysis? Select all that apply.",
+      "options": [
+        "Hydrogen evolution",
+        "Oxygen reduction",
+        "CO2 reduction",
+        "Spontaneous nitrogen fixation in every cell"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Hydrogen evolution, oxygen reduction and CO2 reduction are the classic reactions studied. The search is for inexpensive catalysts that approach platinum's activity for these reactions."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l16-tf-002",
+      "topicId": "photo-and-ecl",
+      "question": "In photoelectrochemistry a semiconductor absorbs light and the photogenerated carriers drive the electrode reaction.",
+      "answer": true,
+      "explanation": "Light creates electron-hole pairs in the semiconductor, and those carriers supply the energy to run the reaction. The dream device is a photoelectrode that splits water with no external bias."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l16-tf-003",
+      "topicId": "photo-and-ecl",
+      "question": "Electrogenerated chemiluminescence needs an external lamp to excite the emitting species.",
+      "answer": false,
+      "explanation": "In ECL the emitting excited state is produced by a chemical reaction between species generated at the electrode, so no lamp is needed. That, plus the known generation potential, makes ECL a sensitive analytical method."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l16-tf-004",
+      "topicId": "conducting-polymers",
+      "question": "A conjugated polymer can be switched between an insulating and a conducting state by doping at accessible potentials.",
+      "answer": true,
+      "explanation": "Removing or adding electrons along the conjugated backbone turns the polymer from an insulator into a conductor, and also changes its colour. This underlies organic batteries, display pixels, sensors and artificial muscles."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l16-tf-005",
+      "topicId": "solid-state",
+      "question": "In a solid electrolyte the mobile species is usually a single ion that hops through a rigid lattice, and the bottleneck is often the interface with the electrode.",
+      "answer": true,
+      "explanation": "The lattice's defects and channels set the ion's mobility, and a solid electrolyte can be more selective than a liquid. But grain boundaries, poor contact and lattice mismatch at the electrode interface usually set the practical limit."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l16-tf-006",
+      "topicId": "bioelectrochemistry",
+      "question": "Glucose test strips are a consumer success of enzyme electrodes.",
+      "answer": true,
+      "explanation": "An enzyme immobilised on the electrode gives a selective signal for glucose, which is exactly what a test strip needs. Microbial fuel cells and the wiring of buried redox sites remain active research questions."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l16-tf-007",
+      "topicId": "nano-and-simulation",
+      "question": "At a nanoelectrode the diffusion field is spherical or hemispherical, giving a steady-state current.",
+      "answer": true,
+      "explanation": "Because the electrode is small in all dimensions, reactant arrives from the whole hemisphere and the diffusion layer reaches a steady thickness, just as in the microelectrode case of the steady-state methods lesson."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l16-tf-008",
+      "topicId": "nano-and-simulation",
+      "question": "Digital simulation can solve the coupled diffusion-reaction equations for essentially any waveform.",
+      "answer": true,
+      "explanation": "Simulation generalises the Randles-Sevcik world: given the mechanism and the waveform, it computes the current response numerically. It is now a standard companion to experiment."
+    }
+  ]
+}

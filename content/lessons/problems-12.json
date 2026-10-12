@@ -1,0 +1,222 @@
+{
+  "slug": "problems-12",
+  "label": "Problem set 12",
+  "title": "Problem set 12: Coupled homogeneous reactions",
+  "summary": "Practice recognising and analysing EC, CE, ECE and catalytic mechanisms, and using the scan rate to probe a coupled chemical step.",
+  "source": "Bard & Faulkner ch.12",
+  "order": 112,
+  "minutes": 26,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "When a chemical reaction is coupled to electron transfer, the notation records the order: EC (charge then chemistry), CE (chemistry then charge), and ECE (charge, chemistry, charge). A catalytic step that regenerates the reactant is written EC-prime."
+    },
+    {
+      "kind": "para",
+      "text": "The scan rate sets the experimental timescale, so it controls whether the coupled chemistry is seen: fast scans outrun it, slow scans let it happen."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps12-coup",
+      "tone": "amber",
+      "title": "Hint sheet: mechanism labels",
+      "summary": "Practice recognising and analysing EC, CE, ECE and catalytic mechanisms, and using the scan rate to probe a coupled chemical step.",
+      "minutes": 21,
+      "keyPoints": [
+        "E = electron transfer, C = chemical step",
+        "EC, CE, ECE, EC-prime (catalytic)",
+        "Peak ratio falls at slow scan for EC",
+        "Catalytic current grows at slow scan"
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "When a chemical reaction is coupled to electron transfer, the notation records the order: EC (charge then chemistry), CE (chemistry then charge), and ECE (charge, chemistry, charge). A catalytic step that regenerates the reactant is written EC-prime."
+        },
+        {
+          "kind": "para",
+          "text": "The scan rate sets the experimental timescale, so it controls whether the coupled chemistry is seen: fast scans outrun it, slow scans let it happen."
+        },
+        {
+          "kind": "worked",
+          "title": "Electron count from the peak ratio",
+          "given": "A stable product gives a reverse/forward peak ratio of 1; full consumption gives 0",
+          "steps": [
+            "At a fast scan rate the chemical step cannot compete and the ratio approaches 1.",
+            "At a slow scan rate the product is consumed and the ratio approaches 0.",
+            "The rate constant is extracted from the scan rate at which the ratio falls to about 1/2."
+          ],
+          "result": "The peak ratio reports the fate of the product"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "ps12-mcq-001",
+      "topicId": "ps12-coup",
+      "quick": true,
+      "question": "An EC mechanism is one in which:",
+      "options": [
+        "An electron transfer is followed by a chemical reaction",
+        "A chemical reaction precedes the electron transfer",
+        "Two electron transfers are separated by a chemical step",
+        "No reaction occurs"
+      ],
+      "answer": 0,
+      "explanation": "In the notation E for electron transfer and C for chemical step, EC means the electron transfer comes first and the product then reacts chemically."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps12-tf-001",
+      "topicId": "ps12-coup",
+      "quick": true,
+      "question": "For a catalytic (EC-prime) mechanism the current increases as the scan rate is decreased.",
+      "answer": true,
+      "explanation": "A slower scan gives the regenerating chemical step more time to return the product to the reactant, so more turnovers occur and the current grows."
+    },
+    {
+      "id": "ps12-mcq-002",
+      "topicId": "ps12-coup",
+      "quick": true,
+      "question": "A CE mechanism is one in which:",
+      "options": [
+        "A chemical reaction precedes the electron transfer",
+        "An electron transfer is followed by a chemical reaction",
+        "Two electrons transfer at once",
+        "The electrode dissolves"
+      ],
+      "answer": 0,
+      "explanation": "In a CE mechanism an electroinactive form converts chemically to an electroactive form before the electron transfer can occur."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps12-tf-002",
+      "topicId": "ps12-coup",
+      "question": "An ECE mechanism has two electron-transfer steps separated by a chemical step.",
+      "answer": true,
+      "explanation": "E-C-E means the sequence is electron transfer, then chemistry, then a second electron transfer, often at a different potential from the first."
+    },
+    {
+      "id": "ps12-mcq-003",
+      "topicId": "ps12-coup",
+      "quick": true,
+      "question": "A key diagnostic of a following chemical reaction (EC) in cyclic voltammetry is that:",
+      "options": [
+        "The ratio of the reverse to forward peak current falls as the scan rate is decreased",
+        "The peak separation is exactly 59 mV",
+        "No peaks appear",
+        "The current is independent of scan rate"
+      ],
+      "answer": 0,
+      "explanation": "At slow scan rates the chemical step has time to consume the product, so the reverse peak shrinks relative to the forward peak; at fast scan rates the reaction is outrun and the ratio approaches one."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps12-num-001",
+      "topicId": "ps12-coup",
+      "question": "For an EC mechanism at a scan rate slow enough to consume all the product, what is the ratio of the reverse peak current to the forward peak current? (Give a fraction.)",
+      "answer": 0.0,
+      "tolerance": 0.05,
+      "explanation": "If the following chemical step consumes the product completely before the reverse sweep, no product remains to be re-oxidised, so the reverse-to-forward peak ratio is zero."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps12-tf-003",
+      "topicId": "ps12-coup",
+      "question": "In a catalytic mechanism the electrode reaction is regenerated by a homogeneous chemical step, so the current can exceed that of a simple diffusion-controlled process.",
+      "answer": true,
+      "explanation": "The regeneration means each reactant molecule can be turned over many times, producing an amplified, catalytic current."
+    },
+    {
+      "kind": "multi",
+      "id": "ps12-multi-001",
+      "topicId": "ps12-coup",
+      "question": "Which mechanism labels pair correctly with their description? Select all that apply.",
+      "options": [
+        "EC: electron transfer then chemistry",
+        "CE: chemistry then electron transfer",
+        "ECE: electron transfer, chemistry, electron transfer",
+        "EC-prime: catalytic regeneration of the reactant"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four are standard notation: EC, CE, ECE and catalytic EC-prime all describe a specific ordering of electron-transfer and chemical steps."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps12-tf-004",
+      "topicId": "ps12-coup",
+      "question": "Varying the scan rate is a common way to reveal whether a homogeneous chemical step is coupled to an electron transfer.",
+      "answer": true,
+      "explanation": "The competition between the timescale of the experiment (set by the scan rate) and the rate of the chemical step controls whether the coupled reaction is seen, so varying the scan rate probes it."
+    },
+    {
+      "id": "ps12-mcq-004",
+      "topicId": "ps12-coup",
+      "quick": true,
+      "question": "A catalytic (EC-prime) mechanism produces a current that is:",
+      "options": [
+        "Larger than the simple diffusion-controlled current because the reactant is regenerated",
+        "Always zero",
+        "Always equal to the diffusion current",
+        "Negative"
+      ],
+      "answer": 0,
+      "explanation": "Regeneration lets each molecule react many times, so the catalytic current exceeds the plain diffusion-limited value, especially at slow scan rates."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps12-tf-005",
+      "topicId": "ps12-coup",
+      "question": "In a CE mechanism the rate of the preceding chemical step can control the observed current.",
+      "answer": true,
+      "explanation": "If the conversion to the electroactive form is slow, it limits how much material reaches the electrode, so the kinetics of the chemical step appear in the current."
+    },
+    {
+      "id": "ps12-mcq-005",
+      "topicId": "ps12-coup",
+      "quick": true,
+      "question": "For a simple EC mechanism at a very fast scan rate, the reverse-to-forward peak current ratio approaches:",
+      "options": [
+        "One, because the chemical step is outrun",
+        "Zero always",
+        "Negative one",
+        "Infinity"
+      ],
+      "answer": 0,
+      "explanation": "At a fast scan the chemical step has little time to act, so the product survives and can be reduced back: the peak ratio returns toward one."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps12-tf-006",
+      "topicId": "ps12-coup",
+      "question": "Doubling the scan rate shortens the time available for a following chemical reaction to act.",
+      "answer": true,
+      "explanation": "A faster scan completes the electrochemical experiment in less time, so a coupled chemical step of given rate constant has less chance to interfere."
+    },
+    {
+      "kind": "multi",
+      "id": "ps12-multi-002",
+      "topicId": "ps12-coup",
+      "question": "Which observations can reveal a coupled homogeneous chemical step? Select all that apply.",
+      "options": [
+        "A scan-rate-dependent reverse/forward peak-current ratio",
+        "A shift of the half-wave or peak potential with scan rate",
+        "A catalytic current that grows at slow scan rates",
+        "A peak separation of exactly 59 mV independent of everything"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Scan-rate-dependent peak ratios or potentials and catalytic currents all betray coupled chemistry. A rigid 59 mV separation is the signature of a simple reversible couple."
+    }
+  ]
+}

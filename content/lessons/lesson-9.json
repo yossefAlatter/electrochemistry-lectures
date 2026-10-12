@@ -1,0 +1,929 @@
+{
+  "slug": "lesson-9",
+  "label": "Lesson 9",
+  "title": "Sweep methods and polarography",
+  "summary": "Lesson 8 held the potential still and let time answer. This lesson lets the potential sweep, and asks what the current does on the way. That simple change turns a single experiment into a fingerprint: the voltammogram. We learn to read its peaks, to use peak separation and scan-rate dependence to tell reversible from kinetically sluggish systems, to sweep back and forth (cyclic voltammetry), and finally to see how pulsing the potential lets us see concentration and kinetics far below the double-layer current.",
+  "order": 9,
+  "minutes": 58,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "A potential step is a blunt instrument: one question, one transient. A linear sweep is gentler and more informative. If you ramp the potential steadily and record the current the whole way, the curve you get traces the whole personality of the electrode reaction - how easily it starts, how fast it runs, what happens to its product. That curve is the voltammogram, and reading it is a core skill."
+    },
+    {
+      "kind": "para",
+      "text": "Following Bard & Faulkner ch.6-7 we first derive the shape of a reversible sweep, then learn the diagnostics that tell a reversible system from a kinetically hindered one, then do the same trick backwards with cyclic voltammetry. The lesson ends with polarography and pulse methods, where shaping the potential waveform rather than just ramping it buys sensitivity."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The one-sentence summary of this lesson",
+      "body": "Ramp the potential and the current traces out a voltammogram whose peak position, height and separation diagnose the reaction; sweeping back gives cyclic voltammetry, and pulsing the potential suppresses the charging current so that small quantities become visible."
+    }
+  ],
+  "sections": [
+    {
+      "id": "what-a-voltammogram-is",
+      "tone": "azure",
+      "title": "What a voltammogram is",
+      "minutes": 6,
+      "summary": "A voltammogram is the graph of current against potential recorded while the potential is swept. Its shape tells you what reacts, at what potential, and how fast.",
+      "keyPoints": [
+        "A voltammogram is current plotted against the applied potential as that potential is ramped at a constant rate.",
+        "On the sweep the electrode reaction switches on where Nernst says it should, rises as the driving force grows, and then is starved by depletion.",
+        "The result is a peak rather than a sigmoid: depletion makes the current fall even though the potential keeps rising.",
+        "The peak potential locates the reaction; the peak current scales with concentration and scan rate."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "In Lesson 8 the potential changed only once. A sweep changes it continuously at a scan rate `v` (V/s). The instrument records the current that flows at every instant, and the resulting `i`-versus-`E` curve is the voltammogram. It is simply the Lesson 8 transient played over and over again at every point of the ramp, which is why its shape is governed by the same planar-diffusion physics."
+        },
+        {
+          "kind": "para",
+          "text": "Three features do the talking. Starting potential: the reaction is frozen because Nernst puts essentially all of the species in one oxidation state. Then, as the potential passes through the formal potential, the surface concentration switches and the reaction turns on: the current rises steeply. Eventually the surface is drained faster than diffusion can refill it, and depletion wins: the current peaks and then decays. That competition between a rising rate and a thinning supply is the whole reason a voltammogram has a peak at all."
+        },
+        {
+          "kind": "para",
+          "text": "Read the peak for three things. Its *position* tells you where the reaction sits on the potential scale - which species, how hard it is to reduce, and what the formal potential is. Its *height* scales with how much reactant is present and how fast you sweep. And its *shape and symmetry* report on kinetics and coupled chemistry, as the next sections show."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "Scan rate is the hidden axis",
+          "body": "Every voltammogram is taken at a scan rate v, and most of the information in it is hidden in how the curve changes when v changes. A reversible peak grows as sqrt(v); a kinetic or adsorption-controlled one grows differently. Always record v."
+        }
+      ]
+    },
+    {
+      "id": "reversible-sweep",
+      "tone": "indigo",
+      "title": "The reversible sweep and Randles-Sevcik",
+      "minutes": 8,
+      "summary": "For a fast, reversible, planar system the peak current obeys the Randles-Sevcik equation: proportional to concentration and to the square root of the scan rate.",
+      "keyPoints": [
+        "A reversible system keeps surface concentrations pinned at the Nernst ratio while mass transport brings the change to the surface.",
+        "The peak current is ip = 0.4463 nFAC sqrt(nFvD/RT), the Randles-Sevcik equation.",
+        "ip scales as C and as v^{1/2}; a plot of ip versus sqrt(v) is linear.",
+        "The peak potential for a reversible system is independent of scan rate."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Assume the electron transfer is so fast that, whatever the bulk does, the surface is always at the Nernst ratio of oxidised to reduced form. Then the only question left is mass transport, and the problem is the Lesson 8 step with a moving boundary condition: the surface ratio, not the surface concentration, is fixed by E. The diffusion equations can then be solved - Randles and Sevcik did it in the 1940s - and the current takes the shape of a single peak."
+        },
+        {
+          "kind": "formula",
+          "tex": "i_p = 0.4463\\, n F A C \\sqrt{\\frac{n F v D}{R T}}",
+          "caption": "Randles-Sevcik equation for a reversible, planar, semi-infinite system at 25 °C. The peak current is proportional to the concentration and to the square root of the scan rate."
+        },
+        {
+          "kind": "para",
+          "text": "Three consequences are worth memorising. First, `i_p` grows as `sqrt(v)`: sweep faster and you thin the diffusion layer at any given potential, so the gradient, and the current, is steeper. Plot `i_p` against `sqrt(v)` and a reversible, diffusion-controlled system gives a straight line through the origin. Second, `i_p` is proportional to C, so the same equation turns the peak height into a concentration measurement. Third, for a reversible peak the peak potential itself does not move with scan rate - a clean internal check that the system really is reversible."
+        },
+        {
+          "kind": "worked",
+          "title": "Checking Randles-Sevcik on a real peak",
+          "given": "Ferrocene in acetonitrile, one-electron reversible couple. A = 0.071 cm² (a 3 mm disk), C = 1.0 mM = 1.0e-6 mol/cm³, D = 1.0e-5 cm²/s, v = 0.100 V/s, T = 298 K.",
+          "steps": [
+            "\\frac{nFvD}{RT} = \\frac{1 \\times 96485 \\times 0.100 \\times 1.0\\times10^{-5}}{8.314 \\times 298} = 3.90\\times10^{-5}",
+            "i_p = 0.4463 \\times 96485 \\times 0.071 \\times 1.0\\times10^{-6} \\times \\sqrt{3.90\\times10^{-5}}",
+            "i_p = 0.4463 \\times 6.85\\times10^{-3} \\times 6.25\\times10^{-3} \\approx 1.9\\times10^{-5}\\ \\mathrm{A} = 19\\ \\mu\\mathrm{A}"
+          ],
+          "result": "About 19 µA. That is the size of a reversible one-electron wave at millimolar concentration on a small disk - the working scale of cyclic voltammetry."
+        }
+      ]
+    },
+    {
+      "id": "peak-separation",
+      "tone": "violet",
+      "title": "Peak separation and the reversibility test",
+      "minutes": 7,
+      "summary": "Sweep forward and backward. For a freely reversible system the anodic and cathodic peaks sit 59/n mV apart at 25 °C; anything larger means sluggish kinetics.",
+      "keyPoints": [
+        "A reversible one-electron system shows ΔE_p = E_pa - E_pc ≈ 59 mV at 25 °C, independent of scan rate.",
+        "A scan-rate-independent but larger ΔE_p indicates slow electron transfer (quasi-reversible).",
+        "An irreversible wave has no true reverse peak and shifts with scan rate.",
+        "Peak current ratios close to unity, and ip_a/ip_c growing with sweep direction, diagnose chemical reversibility."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The single most useful number in a voltammogram is ΔE_p, the gap between the cathodic and anodic peaks. For an ideally reversible one-electron couple at 25 °C that gap is 59 mV - the Nernst slope we met in Lesson 3 rewritten as a distance between peaks. It is one of the few numbers in electrochemistry that you can predict without measuring anything first."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\Delta E_p = E_{p,a} - E_{p,c} \\approx \\frac{59}{n}\\ \\mathrm{mV} \\quad (25^\\circ\\mathrm{C},\\ \\text{reversible})",
+          "caption": "The reversible peak separation. n is the number of electrons in the couple. A gap that does not shrink when n rises, or that grows when you sweep faster, is telling you the kinetics are not keeping up."
+        },
+        {
+          "kind": "para",
+          "text": "If the measured gap is bigger than 59/n mV, the electron transfer cannot instantly follow the moving potential: the system needs extra driving force to make the reaction go, so the peaks are pushed apart. If the gap also *grows* when you scan faster, the kinetics are the limiting actor and the system is quasi-reversible; from the scan-rate dependence you can extract the rate constant. If the reverse peak is missing entirely, the electron transfer is effectively irreversible on the experimental timescale."
+        },
+        {
+          "kind": "para",
+          "text": "A second check watches the current rather than the potential. For a chemically stable product, the anodic charge equals the cathodic charge: `Q_a ≈ Q_c`. If the reverse peak comes back smaller, some of the product escaped - by diffusing away, decomposing, or reacting with a substrate - and you have found coupled chemistry, exactly as the double-step experiment of Lesson 8 did."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "Two distances, one diagnosis",
+          "body": "ΔE_p tells you about kinetics at the electrode; Q_a/Q_c tells you about chemistry in solution. A reversible electron transfer with a clean follow-up reaction gives 59/n mV and unit charge ratio; a sluggish electron transfer spreads the peaks; a coupled reaction shrinks the reverse peak."
+        }
+      ]
+    },
+    {
+      "id": "cyclic-voltammetry",
+      "tone": "rose",
+      "title": "Cyclic voltammetry: there and back",
+      "minutes": 8,
+      "summary": "Sweep forward to a switching potential, then sweep back. The resulting loop shows both halves of the couple and reports on coupled chemistry, adsorption and mechanism.",
+      "keyPoints": [
+        "Cyclic voltammetry sweeps the potential forward and then reverses, tracing a closed loop in the i-E plane.",
+        "The forward peak generates product; the reverse peak consumes it, so the loop shows the couple in both directions.",
+        "A reversible solution couple gives a symmetric loop; asymmetry or extra waves signal surface adsorption or coupled chemistry.",
+        "The switching potential must be far enough past the peak for the reverse scan to capture the full return wave."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Cyclic voltammetry (CV) is just two sweeps joined. Run the potential forward through the reaction until you are past the peak, stop at a chosen switching potential, and then ramp back at the same rate. On the way out you oxidised or reduced the analyte; on the way back you convert it again, and the reverse peak is the electrochemical echo of the forward one. It is the potential-scan cousin of the double potential step from Lesson 8."
+        },
+        {
+          "kind": "para",
+          "text": "The loop's shape is the diagnosis. A clean, symmetric loop - one forward peak, one reverse peak, 59/n mV apart, equal charge - is the signature of a stable, reversible solution couple such as the ferrocenium/ferrocene pair. If the reverse peak is smaller or shifted, the product of the forward sweep did not survive: it reacted with the solvent, with oxygen, with itself, or adsorbed on the electrode. Each failure mode has a characteristic distortion, and learning to read them is the practical art of CV."
+        },
+        {
+          "kind": "para",
+          "text": "Watch adsorption next. A species that sticks to the electrode gives extremely sharp peaks that grow linearly with scan rate rather than as sqrt(v), because the surface concentration is what matters, not diffusion. See a tall, thin peak at the foot of the main wave and you are probably looking at a monolayer of adsorbed reactant or product."
+        },
+        {
+          "kind": "callout",
+          "variant": "warn",
+          "title": "Switching too early cuts the loop",
+          "body": "If you reverse the sweep before the forward current has decayed well past the peak, the reverse wave comes back small and oddly shaped, and ΔE_p and Q_a/Q_c are meaningless. As a rule of thumb, switch at least 100 mV beyond the peak on the potential axis."
+        }
+      ]
+    },
+    {
+      "id": "irreversible-and-quasireversible",
+      "tone": "coral",
+      "title": "Quasi-reversible and irreversible waves",
+      "minutes": 7,
+      "summary": "Not every reaction follows the fast, clean script of the reversible case. When electron transfer is slow, or the product reacts chemically, the voltammogram deforms in ways that still carry information.",
+      "keyPoints": [
+        "A quasi-reversible wave needs overpotential to drive the kinetics; its peak separation is larger than 59/n mV and grows with scan rate.",
+        "An irreversible wave has no return peak; its peak potential shifts by 30/(αn) mV per decade of scan rate.",
+        "Peak current for an irreversible wave still obeys a Randles-Sevcik-like square-root dependence on scan rate.",
+        "Measuring a peak's shift with scan rate yields the transfer coefficient α and, with more care, the standard rate constant."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Between 'always at Nernst equilibrium' and 'never reversible' lies the quasi-reversible regime. Here the electron transfer is fast enough to contribute, but not so fast that the surface stays pinned to equilibrium. The voltammogram responds by needing extra driving force: both peaks are pushed away from the formal potential, the gap ΔE_p widens, and - the diagnostic that matters - the gap widens further whenever you sweep faster, because faster sweeps give the kinetics less time to keep up."
+        },
+        {
+          "kind": "para",
+          "text": "In the fully irreversible limit there is no return wave at all. The product, once made, does not come back within the experiment, either because the back reaction needs a potential far away or because a chemical step removed it. The position of the irreversible peak then shifts with scan rate, by roughly `30/(α n)` mV for every ten-fold increase in `v`. That shift is a measurement of the transfer coefficient α from Lesson 5."
+        },
+        {
+          "kind": "formula",
+          "tex": "|E_p - E^0| \\;\\propto\\; \\frac{RT}{\\alpha n F}\\,\\ln v",
+          "caption": "For an irreversible wave the peak potential moves logarithmically with scan rate. The slope gives α; combined with the peak width, it yields the standard rate constant k^0."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "A peak that will not sit still",
+          "body": "Reversible: peak potential fixed, gap 59/n mV. Quasi-reversible: gap grows with v. Irreversible: peak itself slides with v and there is no partner peak. Scan rate is the variable that separates the three."
+        }
+      ]
+    },
+    {
+      "id": "polarography",
+      "tone": "amber",
+      "title": "Polarography and the dropping mercury electrode",
+      "minutes": 7,
+      "summary": "The classical version of sweep voltammetry uses a continuously renewed mercury drop as the working electrode, giving clean, reproducible waves - at the price of mercury and a low anodic limit.",
+      "keyPoints": [
+        "Polarography records current against a ramped potential at a dropping mercury electrode (DME).",
+        "Each new drop renews the electrode surface, so waves are reproducible and adsorption fouling is washed away.",
+        "The current oscillates with each drop's growth; averaging over the drop life gives the polarographic wave.",
+        "The DME offers a wide negative window but oxidises easily, limiting its anodic range."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Polarography is the original form of sweep voltammetry. Instead of a static solid electrode, the working electrode is a stream of mercury drops that grow at the tip of a capillary and detach every few seconds. A potential ramp is applied across the cell, and the current is recorded against it - the polarogram. Each drop is a fresh electrode, so the surface is renewed continuously and the result does not drift as a solid electrode would foul."
+        },
+        {
+          "kind": "para",
+          "text": "The price is a distinctive signal. As each drop grows, its area grows, so the faradaic current on it grows, then collapses when the drop falls. The raw trace is a train of sawteeth. Classical polarography simply averages over the sawteeth; modern instruments sample the current at a fixed point late in each drop's life instead, cleaning up the baseline enormously."
+        },
+        {
+          "kind": "para",
+          "text": "Why mercury? Because it is liquid, so its surface is automatically smooth and reproducible, and because hydrogen overvoltage on mercury is high, so reductions of many cations and molecules can be observed before hydrogen interferes. The drawbacks are now famous: mercury itself oxidises at fairly positive potentials, cutting off the anodic window, and handling liquid mercury carries obvious environmental costs. The technique is historically monumental but now largely replaced by solid electrodes plus pulse methods."
+        }
+      ]
+    },
+    {
+      "id": "pulse-voltammetry",
+      "tone": "emerald",
+      "title": "Pulse voltammetry: hiding from the charging current",
+      "minutes": 8,
+      "summary": "Chop the potential into pulses and sample the current late in each pulse, after the double layer has finished charging. The faradaic signal survives; the charging current vanishes, and sensitivity jumps by orders of magnitude.",
+      "keyPoints": [
+        "The double-layer charging current decays much faster than the faradaic diffusion current, so a delayed current sample is almost purely faradaic.",
+        "Normal pulse voltammetry steps the potential from a non-faradaic baseline and samples the current late in the pulse.",
+        "Differential pulse voltammetry samples just before and just after a small pulse and reports the difference, giving peaked, high-resolution traces.",
+        "Square-wave voltammetry superposes a symmetric square wave on a staircase; the difference current between forward and reverse pulses gives a derivative-like peak with exceptional sensitivity."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Every voltammetric measurement pays a tax: the double-layer charging current. In a fast sweep that tax is as large as the signal. Pulse methods dodge it using one asymmetry we already know from Lesson 8: the capacitive current decays with the cell's RC time constant, while the faradaic current decays only as t^{-1/2}. Wait a little after a potential change and the capacitor has stopped complaining, but the diffusion-driven faradaic current is still there."
+        },
+        {
+          "kind": "para",
+          "text": "Normal pulse voltammetry exploits this directly. Hold the potential at a value where nothing reacts, jump to a new value, and sample the current a fixed delay into the pulse - after the charging transient has died. The sampled trace against pulse potential is essentially the clean, Cottrell-corrected voltammogram of the previous sections."
+        },
+        {
+          "kind": "para",
+          "text": "Differential pulse voltammetry (DPV) adds one more trick. Superimpose a small pulse on a slowly rising staircase, and sample the current just before the pulse and just after it. The difference between those two samples cancels the slowly varying background and keeps only the part that responded to the pulse - the faradaic part. The result is a derivative-like peak sitting on a flat baseline, and peak heights that are proportional to concentration. Detection limits drop by one to two orders of magnitude over a simple sweep."
+        },
+        {
+          "kind": "para",
+          "text": "Square-wave voltammetry pushes the same idea further: a symmetric square wave rides on the staircase, and the instrument records the current at the end of each half-cycle, forward and reverse. Their difference is the signal. Because the forward and reverse pulses also probe the two directions of a reversible couple, the SWV peak sharpens further and the sensitivity climbs another order of magnitude. This is why trace analysis - pharmaceuticals, heavy metals, biomolecules - is dominated by pulse techniques."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "Same electrodes, sharper eyes",
+          "body": "Pulse methods never change the chemistry. They change when you look. By sampling late in each pulse they let the charging current die first, and the tiny faradaic signal that remains can be amplified, differentiated and averaged."
+        }
+      ]
+    },
+    {
+      "id": "choosing-a-sweep",
+      "tone": "teal",
+      "title": "Choosing a sweep technique",
+      "minutes": 5,
+      "summary": "From a bare linear sweep to square-wave voltammetry, each technique trades simplicity for sensitivity. The choice follows from what you want to see.",
+      "keyPoints": [
+        "Linear sweep voltammetry: the simplest waveform, one potential, one peak; good for a first look.",
+        "Cyclic voltammetry: the everyday mechanistic tool; shows reversibility, coupled chemistry, adsorption.",
+        "Differential pulse and square-wave voltammetry: highest sensitivity for trace detection, at the cost of more complicated waveforms.",
+        "Polarography/DME: historically foundational, now niche, limited by the anodic window of mercury."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The four sweep techniques are one physics and four filters. A raw linear sweep gives the whole picture but pays full price in charging current. Cyclic voltammetry is the same sweep with the return trip added: it tells you whether the product survives. Pulse methods keep the same ramp but time the sampling so the capacitor is silent. Polarography replaces the electrode itself with a renewed mercury surface so the answer never drifts."
+        },
+        {
+          "kind": "table",
+          "head": [
+            "Technique",
+            "Waveform",
+            "Best for",
+            "Main limitation"
+          ],
+          "widths": [
+            1.6,
+            1.8,
+            2,
+            2
+          ],
+          "rows": [
+            [
+              "Linear sweep",
+              "One-way ramp",
+              "First look at a new system",
+              "Charging current comparable to signal"
+            ],
+            [
+              "Cyclic voltammetry",
+              "Forward ramp + reverse ramp",
+              "Mechanism, reversibility, adsorption",
+              "Still RC-limited on sensitivity"
+            ],
+            [
+              "Differential pulse",
+              "Small pulses on a staircase",
+              "Trace concentrations",
+              "Loses some of the CV shape information"
+            ],
+            [
+              "Square-wave",
+              "Symmetric square wave on a staircase",
+              "Highest sensitivity, fast",
+              "Waveform adds parameters to optimise"
+            ],
+            [
+              "Polarography (DME)",
+              "Ramp on a dropping drop",
+              "Historical waves, fouling-free surface",
+              "Mercury handling; narrow anodic window"
+            ]
+          ]
+        },
+        {
+          "kind": "para",
+          "text": "A good workflow still starts with cyclic voltammetry: one experiment that tells you whether the couple is reversible, whether the products are stable, and roughly where the action is. Once the lay of the land is clear, zoom in with pulse methods for quantitative sensitivity or with scan-rate studies for kinetics."
+        },
+        {
+          "kind": "worked",
+          "title": "Randles-Sevcik at a new scan rate",
+          "given": "A reversible 1-electron, planar system gives i_p = 19 uA at v = 0.100 V/s. What is i_p at v = 0.025 V/s?",
+          "steps": [
+            "i_p \\propto \\sqrt{v} \\quad (\\text{Randles-Sevcik})",
+            "i_p(0.025) = 19\\ \\mu\\mathrm{A} \\times \\sqrt{0.025/0.100} = 19 \\times 0.5",
+            "i_p(0.025) \\approx 9.5\\ \\mu\\mathrm{A}"
+          ],
+          "result": "9.5 uA. The square-root scaling means a fourfold slowdown of the scan halves the peak - a quick reversibility check."
+        },
+        {
+          "kind": "worked",
+          "title": "Transfer coefficient from a sliding peak",
+          "given": "An irreversible peak moves 45 mV every time the scan rate increases tenfold, at 25 C. Estimate the transfer coefficient alpha for a one-electron wave.",
+          "steps": [
+            "|\\Delta E_p| \\text{ per decade} = \\frac{2.303\\,RT}{\\alpha n F} = \\frac{59\\ \\mathrm{mV}}{\\alpha n}",
+            "45 = 59/(\\alpha \\times 1) \\;\\Rightarrow\\; \\alpha = 59/45",
+            "\\alpha \\approx 1.31\\ \\;(\\approx 0.5\\text{ would be expected; a check on the sign convention or the diagnosis})"
+          ],
+          "result": "Alpha is not bounded below 1 in this naive reading, which flags that the peak shift includes more than alpha alone - a useful reminder that scan-rate diagnostics deserve care."
+        }
+      ],
+      "cta": {
+        "title": "Now make it flow",
+        "body": "All of these techniques assume a quiet solution. Next lesson we deliberately stir it: rotating disks and flow cells take mass transfer from an uncontrolled coincidence to a settable parameter.",
+        "href": "/lessons/lesson-9/quiz",
+        "linkLabel": "Take the Lesson 9 quiz",
+        "secondaryHref": "/lessons/lesson-10",
+        "secondaryLabel": "Go to Lesson 10"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "l9-mcq-001",
+      "topicId": "what-a-voltammogram-is",
+      "quick": true,
+      "question": "A voltammogram plots:",
+      "options": [
+        "Current against time",
+        "Current against applied potential while the potential is swept",
+        "Charge against concentration",
+        "Resistance against frequency"
+      ],
+      "answer": 1,
+      "explanation": "It is the current recorded as the potential ramps at a constant scan rate - the potential-scan equivalent of the Lesson 8 transient."
+    },
+    {
+      "id": "l9-mcq-002",
+      "topicId": "what-a-voltammogram-is",
+      "quick": true,
+      "question": "On a sweep voltammetry trace, the current eventually falls after the peak because:",
+      "options": [
+        "The reaction stops entirely",
+        "Depletion of reactant near the electrode starves the surface",
+        "The Faraday constant has been reached",
+        "The reference electrode dries out"
+      ],
+      "answer": 1,
+      "explanation": "The surface is consumed faster than diffusion can refill it; the gradient and hence the current collapse even as the driving force keeps rising."
+    },
+    {
+      "id": "l9-mcq-003",
+      "topicId": "what-a-voltammogram-is",
+      "quick": true,
+      "question": "The peak current of a diffusion-controlled peak scales as:",
+      "options": [
+        "v²",
+        "sqrt(v)",
+        "1/v",
+        "constant"
+      ],
+      "answer": 1,
+      "explanation": "From Randles-Sevcik, i_p ∝ sqrt(v): faster scans give a thinner diffusion layer and a steeper surface gradient."
+    },
+    {
+      "id": "l9-mcq-004",
+      "topicId": "what-a-voltammogram-is",
+      "question": "A voltammogram is a map of a reaction. Which feature locates the formal potential?",
+      "options": [
+        "The peak height",
+        "The peak position on the potential axis",
+        "The scan rate",
+        "The charging-current baseline"
+      ],
+      "answer": 1,
+      "explanation": "Where the wave sits on the potential axis is set by the thermodynamics of the couple; its height reports how much reactant and how fast the scan."
+    },
+    {
+      "id": "l9-mcq-005",
+      "topicId": "reversible-sweep",
+      "quick": true,
+      "question": "For a reversible planar couple, the peak current obeys Randles-Sevcik: i_p is proportional to:",
+      "options": [
+        "C/sqrt(v)",
+        "C sqrt(v)",
+        "C v",
+        "C v²"
+      ],
+      "answer": 1,
+      "explanation": "i_p = 0.4463 nFAC sqrt(nFvD/RT): linear in concentration and in the square root of the scan rate."
+    },
+    {
+      "id": "l9-mcq-006",
+      "topicId": "reversible-sweep",
+      "quick": true,
+      "question": "For a reversible system, the peak potential shifts with scan rate by:",
+      "options": [
+        "59 mV per decade",
+        "Nothing - it is independent of scan rate",
+        "30 mV per decade",
+        "It doubles"
+      ],
+      "answer": 1,
+      "explanation": "A reversible wave is pinned by Nernst thermodynamics: its peak position does not move as v changes. Only quasi-reversible and irreversible waves drift."
+    },
+    {
+      "id": "l9-mcq-007",
+      "topicId": "reversible-sweep",
+      "quick": true,
+      "question": "A straight line through the origin when i_p is plotted against sqrt(v) indicates:",
+      "options": [
+        "A kinetically limited reaction",
+        "Diffusion control of a reversible system",
+        "An adsorbed monolayer",
+        "Ohmic distortion"
+      ],
+      "answer": 1,
+      "explanation": "Randles-Sevcik predicts exactly that scaling; its slope yields D, C or A."
+    },
+    {
+      "id": "l9-mcq-008",
+      "topicId": "reversible-sweep",
+      "question": "In the Randles-Sevcik equation, i_p depends on which power of the diffusion coefficient D?",
+      "options": [
+        "D^0",
+        "D^{1/2}",
+        "D",
+        "D^2"
+      ],
+      "answer": 1,
+      "explanation": "i_p ∝ sqrt(D): larger D gives steeper gradients and larger peak currents, but only as the square root."
+    },
+    {
+      "id": "l9-mcq-009",
+      "topicId": "peak-separation",
+      "quick": true,
+      "question": "At 25 °C the peak separation of an ideal reversible one-electron wave is approximately:",
+      "options": [
+        "0 mV",
+        "59 mV",
+        "118 mV",
+        "1 V"
+      ],
+      "answer": 1,
+      "explanation": "ΔE_p = 59/n mV: one Nernst decade's worth of potential between the two peaks."
+    },
+    {
+      "id": "l9-mcq-010",
+      "topicId": "peak-separation",
+      "quick": true,
+      "question": "A peak separation significantly larger than 59/n mV that grows with scan rate means:",
+      "options": [
+        "The system is reversible",
+        "Electron-transfer kinetics are slow (quasi-reversible)",
+        "The concentration is too high",
+        "The solvent is pure"
+      ],
+      "answer": 1,
+      "explanation": "Slow kinetics demand extra overpotential, pushing the peaks apart; faster sweeps leave less time to keep up, so the gap widens further."
+    },
+    {
+      "id": "l9-mcq-011",
+      "topicId": "peak-separation",
+      "quick": true,
+      "question": "A missing reverse peak indicates:",
+      "options": [
+        "A reversible couple",
+        "An irreversible electron transfer or a fast follow-up chemical step",
+        "A perfectly stable product",
+        "A microelectrode"
+      ],
+      "answer": 1,
+      "explanation": "With no return wave, the product of the forward scan cannot be driven back within the experiment, either kinetically or because chemistry consumed it."
+    },
+    {
+      "id": "l9-mcq-012",
+      "topicId": "peak-separation",
+      "question": "If Q_anodic is much smaller than Q_cathodic in a reversible couple, the product most likely:",
+      "options": [
+        "Stayed exactly where it formed",
+        "Was consumed by a coupled chemical reaction or escaped the electrode region",
+        "Doubled in concentration",
+        "Became the reference electrode"
+      ],
+      "answer": 1,
+      "explanation": "Charge balance demands all of the forward product come back if nothing intervenes. A deficit is the signature of coupled chemistry."
+    },
+    {
+      "id": "l9-mcq-013",
+      "topicId": "cyclic-voltammetry",
+      "quick": true,
+      "question": "Cyclic voltammetry differs from a single-sweep experiment by:",
+      "options": [
+        "Using two working electrodes",
+        "Reversing the scan at a switching potential and recording the return wave",
+        "Holding the potential constant",
+        "Stirring the solution"
+      ],
+      "answer": 1,
+      "explanation": "CV is the potential-scan equivalent of double-step chronoamperometry: forward scan makes product, reverse scan converts it back."
+    },
+    {
+      "id": "l9-mcq-014",
+      "topicId": "cyclic-voltammetry",
+      "quick": true,
+      "question": "A tall, thin peak that grows linearly with scan rate is characteristic of:",
+      "options": [
+        "A solution diffusion process",
+        "An adsorbed species on the electrode surface",
+        "An irreversible bulk reaction",
+        "A gas bubble"
+      ],
+      "answer": 1,
+      "explanation": "Adsorbed species have a fixed number of moles available; the peak current is proportional to v, not sqrt(v)."
+    },
+    {
+      "id": "l9-mcq-015",
+      "topicId": "cyclic-voltammetry",
+      "quick": true,
+      "question": "To recover a full, undistorted reverse wave, the switching potential should be:",
+      "options": [
+        "Exactly at the forward peak",
+        "Far enough past the peak that the forward current has decayed",
+        "At the starting potential",
+        "At zero volts"
+      ],
+      "answer": 1,
+      "explanation": "Switching too early truncates the forward diffusion layer and distorts the return peak; switch well past it."
+    },
+    {
+      "id": "l9-mcq-016",
+      "topicId": "cyclic-voltammetry",
+      "question": "A symmetric CV loop with 59/n mV peak separation and equal charges indicates:",
+      "options": [
+        "A coupled chemical reaction",
+        "A stable, reversible solution couple",
+        "A passing valve",
+        "An adsorption monolayer"
+      ],
+      "answer": 1,
+      "explanation": "Symmetry, Nernstian peak spacing, and unit charge ratio together are the classic fingerprint of a clean reversible couple like Fc+/Fc."
+    },
+    {
+      "id": "l9-mcq-017",
+      "topicId": "irreversible-and-quasireversible",
+      "quick": true,
+      "question": "A quasi-reversible wave is identified by a peak separation that:",
+      "options": [
+        "Stays fixed at 59 mV",
+        "Is larger than 59/n mV and grows as the scan rate increases",
+        "Is zero",
+        "Equals the formal potential"
+      ],
+      "answer": 1,
+      "explanation": "Sluggish kinetics widen the gap, and faster sweeps make the kinetics lag further behind, so the gap grows with v."
+    },
+    {
+      "id": "l9-mcq-018",
+      "topicId": "irreversible-and-quasireversible",
+      "quick": true,
+      "question": "For an irreversible wave, the peak potential shifts with scan rate by roughly:",
+      "options": [
+        "59/n mV per decade",
+        "30/(αn) mV per decade",
+        "Nothing",
+        "1 V per decade"
+      ],
+      "answer": 1,
+      "explanation": "The logarithmic scan-rate dependence of an irreversible peak carries the transfer coefficient α; its slope is 30/(αn) mV per decade at 25 °C."
+    },
+    {
+      "id": "l9-mcq-019",
+      "topicId": "irreversible-and-quasireversible",
+      "quick": true,
+      "question": "An irreversible voltammetric wave:",
+      "options": [
+        "Has two perfectly symmetric peaks",
+        "Has a single peak and no return wave",
+        "Has a peak separation of exactly 59 mV",
+        "Never moves with scan rate"
+      ],
+      "answer": 1,
+      "explanation": "If the electron transfer cannot be reversed on the experimental timescale - or the product is chemically destroyed - only the forward peak remains."
+    },
+    {
+      "id": "l9-mcq-020",
+      "topicId": "irreversible-and-quasireversible",
+      "question": "The scan-rate dependence of an irreversible peak position can be used to extract:",
+      "options": [
+        "The pH of the solution",
+        "The transfer coefficient α and ultimately k^0",
+        "The solubility of the product",
+        "The drop time of a mercury electrode"
+      ],
+      "answer": 1,
+      "explanation": "Because the peak slides logarithmically with v with a slope set by α, scan-rate studies turn directly into kinetic parameters."
+    },
+    {
+      "id": "l9-mcq-021",
+      "topicId": "polarography",
+      "quick": true,
+      "question": "Polarography records a voltammogram at a working electrode that is:",
+      "options": [
+        "A rotating disk",
+        "A continuously dropping mercury drop",
+        "A static platinum plate",
+        "A reference electrode"
+      ],
+      "answer": 1,
+      "explanation": "The dropping mercury electrode (DME) continuously renews its surface, giving reproducible, fouling-free measurements."
+    },
+    {
+      "id": "l9-mcq-022",
+      "topicId": "polarography",
+      "quick": true,
+      "question": "The raw polarographic current oscillates because:",
+      "options": [
+        "The lamp flickers",
+        "Each mercury drop grows and detaches, modulating the electrode area",
+        "The reference electrode pulses",
+        "The solution boils"
+      ],
+      "answer": 1,
+      "explanation": "Faradaic current is proportional to area; a growing drop's area grows, then resets when the drop falls, giving sawtooth current traces."
+    },
+    {
+      "id": "l9-mcq-023",
+      "topicId": "polarography",
+      "quick": true,
+      "question": "The main advantage of mercury as a polarographic electrode is:",
+      "options": [
+        "Its very positive anodic limit",
+        "Its high hydrogen overvoltage and a continuously renewable surface",
+        "Its zero cost and safe disposal",
+        "Its catalysis of every reaction"
+      ],
+      "answer": 1,
+      "explanation": "The high hydrogen overvoltage opens a wide negative window, and the liquid surface is always fresh - which is also why the method is now niche, for safety and the opposite anodic limit."
+    },
+    {
+      "id": "l9-mcq-024",
+      "topicId": "polarography",
+      "question": "Polarography is now largely replaced in the lab by:",
+      "options": [
+        "Solid electrodes with pulse techniques",
+        "Nothing - it is still the only method",
+        "Gravimetry",
+        "Flame photometry"
+      ],
+      "answer": 0,
+      "explanation": "Mercury's toxicity and its narrow anodic window pushed the field toward solid working electrodes probed with differential pulse and square-wave waveforms."
+    },
+    {
+      "id": "l9-mcq-025",
+      "topicId": "pulse-voltammetry",
+      "quick": true,
+      "question": "Pulse voltammetry achieves high sensitivity by:",
+      "options": [
+        "Using more mercury",
+        "Sampling the current after the double-layer charging transient has decayed",
+        "Sweeping very slowly",
+        "Removing the reference electrode"
+      ],
+      "answer": 1,
+      "explanation": "The capacitive current dies with RC; the faradaic current decays only as t^{-1/2}. Sampling late keeps the faradaic part and discards the tax."
+    },
+    {
+      "id": "l9-mcq-026",
+      "topicId": "pulse-voltammetry",
+      "quick": true,
+      "question": "Differential pulse voltammetry reports the difference of two current samples taken:",
+      "options": [
+        "One day apart",
+        "Just before and just after a small pulse",
+        "At the start and end of the experiment",
+        "On two different electrodes"
+      ],
+      "answer": 1,
+      "explanation": "Subtracting the pre-pulse sample from the post-pulse sample cancels the background and yields a derivative-like peak proportional to concentration."
+    },
+    {
+      "id": "l9-mcq-027",
+      "topicId": "pulse-voltammetry",
+      "quick": true,
+      "question": "Square-wave voltammetry superposes a square wave on:",
+      "options": [
+        "A sine wave",
+        "A slow potential staircase",
+        "A rotating disk",
+        "A fixed potential"
+      ],
+      "answer": 1,
+      "explanation": "The staircase provides the ramp; the square wave gives forward and reverse pulses whose difference currents form a sharp, sensitive peak."
+    },
+    {
+      "id": "l9-mcq-028",
+      "topicId": "pulse-voltammetry",
+      "question": "Which statement best explains why pulse methods are more sensitive than a plain sweep?",
+      "options": [
+        "They change the standard potential of the couple",
+        "They let the fast-decaying charging current die before the current is measured",
+        "They increase the temperature",
+        "They double the Faraday constant"
+      ],
+      "answer": 1,
+      "explanation": "Sensitivity is about signal-to-background. By waiting out the capacitive transient, the faradaic signal is measured against a much smaller baseline."
+    },
+    {
+      "id": "l9-mcq-029",
+      "topicId": "choosing-a-sweep",
+      "quick": true,
+      "question": "For an initial mechanistic look at a new redox system, the first experiment is usually:",
+      "options": [
+        "Square-wave voltammetry",
+        "Cyclic voltammetry",
+        "A weighing",
+        "A pH titration"
+      ],
+      "answer": 1,
+      "explanation": "CV shows the whole loop - reversibility, stability of products, adsorption - in one experiment, so it is the standard first probe."
+    },
+    {
+      "id": "l9-mcq-030",
+      "topicId": "choosing-a-sweep",
+      "quick": true,
+      "question": "For trace-level detection, the preferred technique is:",
+      "options": [
+        "Differential pulse or square-wave voltammetry",
+        "A slow linear sweep",
+        "Potentiometry at zero current only",
+        "Bulk electrolysis"
+      ],
+      "answer": 0,
+      "explanation": "Pulse methods suppress the charging-current background, lowering detection limits by one to two orders of magnitude."
+    },
+    {
+      "id": "l9-mcq-031",
+      "topicId": "choosing-a-sweep",
+      "quick": true,
+      "question": "Polarography's main practical drawback today is:",
+      "options": [
+        "Too much sensitivity",
+        "Mercury handling and its narrow anodic window",
+        "It never produces waves",
+        "It requires no instrumentation"
+      ],
+      "answer": 1,
+      "explanation": "Liquid mercury is hazardous to handle and oxidises at moderate potentials, cutting off the anodic side of the experiment."
+    },
+    {
+      "id": "l9-mcq-032",
+      "topicId": "choosing-a-sweep",
+      "question": "The key trade-off across the sweep techniques is:",
+      "options": [
+        "Simplicity versus sensitivity to the charging current",
+        "Colour versus smell",
+        "Mass versus length",
+        "Voltage versus gravitational pull"
+      ],
+      "answer": 0,
+      "explanation": "A plain sweep is simplest but carries the full RC tax; pulse methods buy sensitivity at the cost of more complex waveforms and parameters."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l9-tf-001",
+      "topicId": "what-a-voltammogram-is",
+      "question": "A voltammogram shows a peak rather than a sigmoid because depletion makes the current fall even though the potential keeps rising.",
+      "answer": true,
+      "explanation": "Once the reaction switches on, the rising potential would drive more current, but the reactant near the surface is used up, so the current peaks and then falls. The result is a peak-shaped wave."
+    },
+    {
+      "kind": "numeric",
+      "id": "l9-num-001",
+      "topicId": "reversible-sweep",
+      "question": "In the Randles-Sevcik equation the peak current scales with scan rate v raised to what power?",
+      "answer": 0.5,
+      "tolerance": 0.02,
+      "explanation": "The reversible peak current is proportional to the square root of scan rate, ip proportional to v^(1/2). A plot of ip against sqrt(v) is therefore linear."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l9-tf-002",
+      "topicId": "reversible-sweep",
+      "question": "For a reversible system the peak potential does not change with scan rate.",
+      "answer": true,
+      "explanation": "A reversible system keeps the surface concentrations at the Nernst ratio, so the peak sits at a fixed potential whatever the scan rate. A peak that moves with scan rate is a sign of slow kinetics."
+    },
+    {
+      "kind": "numeric",
+      "id": "l9-num-002",
+      "topicId": "peak-separation",
+      "question": "A reversible one-electron system at 25 C shows a peak separation of about how many millivolts?",
+      "answer": 59,
+      "tolerance": 2,
+      "unit": "mV",
+      "explanation": "For a reversible one-electron couple the peak separation is about 59 mV at 25 C, and it is independent of scan rate. A larger separation points to quasi-reversible kinetics."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l9-tf-003",
+      "topicId": "peak-separation",
+      "question": "A scan-rate-independent peak separation larger than 59 mV indicates quasi-reversible electron transfer.",
+      "answer": true,
+      "explanation": "A larger-than-59 mV separation that does not change with scan rate is the classic signature of slow electron transfer, the quasi-reversible case. An irreversible wave moves with scan rate instead."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l9-tf-004",
+      "topicId": "cyclic-voltammetry",
+      "question": "In cyclic voltammetry the reverse peak consumes the product made on the forward scan.",
+      "answer": true,
+      "explanation": "Sweeping there and back, the forward peak makes product and the reverse peak uses it up, so a reversible solution couple traces a symmetric loop. Asymmetry or extra waves reveal adsorption or coupled chemistry."
+    },
+    {
+      "kind": "numeric",
+      "id": "l9-num-003",
+      "topicId": "irreversible-and-quasireversible",
+      "question": "For an irreversible wave the peak potential shifts by 30/(alpha n) mV per decade of scan rate. If alpha n = 0.5, what is the shift in mV per decade?",
+      "answer": 60,
+      "tolerance": 2,
+      "unit": "mV",
+      "explanation": "The shift is 30 / (alpha n) = 30 / 0.5 = 60 mV per decade. Measuring how far an irreversible peak moves with scan rate gives the transfer coefficient alpha."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l9-tf-005",
+      "topicId": "irreversible-and-quasireversible",
+      "question": "An irreversible wave has no true return peak on the reverse scan.",
+      "answer": true,
+      "explanation": "When the electron transfer is so slow that the product is not regenerated during the reverse scan, no return peak appears. The forward peak still rises as the square root of scan rate."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l9-tf-006",
+      "topicId": "polarography",
+      "question": "In polarography each new mercury drop renews the electrode surface, which helps make the waves reproducible.",
+      "answer": true,
+      "explanation": "A fresh drop forms for every measurement, washing away any adsorbed fouling and giving a clean surface. The current oscillates with drop growth, and averaging over the drop life recovers the polarographic wave."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l9-tf-007",
+      "topicId": "pulse-voltammetry",
+      "question": "In pulse voltammetry the double-layer charging current decays faster than the faradaic diffusion current, so a delayed current sample is mostly faradaic.",
+      "answer": true,
+      "explanation": "The charging current falls exponentially while the faradaic current falls more slowly, as t^-1/2. Sampling the current late in the pulse therefore avoids most of the charging background, which is the whole point of pulse methods."
+    },
+    {
+      "kind": "multi",
+      "id": "l9-multi-001",
+      "topicId": "pulse-voltammetry",
+      "question": "Which statements about pulse and square-wave methods are correct? Select all that apply.",
+      "options": [
+        "They sample the current late to avoid charging current",
+        "Differential pulse reports the difference before and after a small pulse",
+        "Square-wave voltammetry gives a derivative-like peak",
+        "They rely on the faradaic current decaying faster than the charging current"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Pulse methods sample late, when the charging current has died away; differential pulse subtracts the current before and after a small pulse; and square-wave voltammetry gives a sharp, derivative-like peak. The last statement reverses the truth: it is the charging current that decays faster."
+    },
+    {
+      "kind": "multi",
+      "id": "l9-multi-002",
+      "topicId": "choosing-a-sweep",
+      "question": "Which methods offer the highest sensitivity for trace detection? Select all that apply.",
+      "options": [
+        "Differential pulse voltammetry",
+        "Square-wave voltammetry",
+        "Linear sweep voltammetry",
+        "Polarography at the dropping mercury electrode"
+      ],
+      "answers": [
+        0,
+        1
+      ],
+      "explanation": "Differential pulse and square-wave voltammetry suppress the charging current and reach the highest sensitivity, at the cost of more complicated waveforms. Linear sweep is the simplest first look, and polarography is now niche."
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import "../globals.css";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import { SiteShell } from "@/components/SiteShell";
 import { themeScript } from "@/components/themeScript";
+import { getNav } from "@/content/registry";
 
 const display = Fraunces({
   subsets: ["latin"],
@@ -67,6 +68,10 @@ export default function EnglishLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // Read here, on the server, and hand the shell a slim model: the content
+  // tree is not serialisable to the client and must not cross that boundary.
+  const nav = getNav();
+
   return (
     <html
       lang="en"
@@ -79,7 +84,7 @@ export default function EnglishLayout({
       </head>
       <body className="min-h-full">
         <ServiceWorkerRegister />
-        <SiteShell>{children}</SiteShell>
+        <SiteShell nav={nav}>{children}</SiteShell>
       </body>
     </html>
   );

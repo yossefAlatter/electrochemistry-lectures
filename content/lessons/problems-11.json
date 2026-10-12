@@ -1,0 +1,223 @@
+{
+  "slug": "problems-11",
+  "label": "Problem set 11",
+  "title": "Problem set 11: Bulk electrolysis",
+  "summary": "Practice with Faradays law and coulometry: charge, number of electrons, amounts of substance, current efficiency and exhaustive electrolysis.",
+  "source": "Bard & Faulkner ch.11",
+  "order": 111,
+  "minutes": 26,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Bulk electrolysis and coulometry apply Faradays law, Q = nF x moles. Measuring the charge passed gives the number of electrons, the amount of substance and the stoichiometry directly."
+    },
+    {
+      "kind": "para",
+      "text": "Controlled-potential electrolysis uses a chosen potential to be selective, and exhaustive electrolysis drives the reaction to completion as the current decays."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps11-bulk",
+      "tone": "amber",
+      "title": "Hint sheet: coulometry relations",
+      "summary": "Practice with Faradays law and coulometry: charge, number of electrons, amounts of substance, current efficiency and exhaustive electrolysis.",
+      "minutes": 21,
+      "keyPoints": [
+        "Q = nF x moles",
+        "n = Q/(F x moles)",
+        "t = Q/i",
+        "Current efficiency = useful charge / charge passed"
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Bulk electrolysis and coulometry apply Faradays law, Q = nF x moles. Measuring the charge passed gives the number of electrons, the amount of substance and the stoichiometry directly."
+        },
+        {
+          "kind": "para",
+          "text": "Controlled-potential electrolysis uses a chosen potential to be selective, and exhaustive electrolysis drives the reaction to completion as the current decays."
+        },
+        {
+          "kind": "worked",
+          "title": "Charge for a deposition",
+          "given": "mass = 100 mg Ag, n = 1, M(Ag) = 107.9 g/mol",
+          "steps": [
+            "Convert mass to moles: 0.100/107.9 = 9.27e-4 mol.",
+            "Use Q = nF x moles.",
+            "Q = 1 x 96485 x 9.27e-4 = 89.4 C."
+          ],
+          "result": "Q = 89.4 C"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "numeric",
+      "id": "ps11-num-001",
+      "topicId": "ps11-bulk",
+      "question": "Calculate the charge in coulombs needed to deposit 100 mg of silver from Ag+ ions. Use n = 1, F = 96485 C/mol and the atomic mass of Ag = 107.9 g/mol.",
+      "answer": 89.4,
+      "tolerance": 6,
+      "unit": "C",
+      "explanation": "moles = 0.100/107.9 = 9.27e-4 mol; Q = nF x moles = 96485 x 9.27e-4 = 89.4 C."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps11-num-002",
+      "topicId": "ps11-bulk",
+      "question": "A coulometric experiment passes 192.97 C and electrolyses exactly 1.00 mmol of a species. How many electrons per molecule are transferred? (n = Q/(F x moles).)",
+      "answer": 2.0,
+      "tolerance": 0.1,
+      "explanation": "n = 192.97/(96485 x 1.00e-3) = 192.97/96.485 = 2.0 electrons per molecule."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps11-num-003",
+      "topicId": "ps11-bulk",
+      "question": "How long, in seconds, does it take to pass 89.4 C at a constant current of 0.100 A?",
+      "answer": 894,
+      "tolerance": 25,
+      "unit": "s",
+      "explanation": "t = Q/i = 89.4/0.100 = 894 s, about 15 minutes."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps11-num-004",
+      "topicId": "ps11-bulk",
+      "question": "For a two-electron reaction, how many moles of substance are transformed by 1000 C? (N = Q/(nF).)",
+      "answer": 0.00518,
+      "tolerance": 0.0004,
+      "unit": "mol",
+      "explanation": "N = 1000/(2 x 96485) = 5.18e-3 mol."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps11-num-005",
+      "topicId": "ps11-bulk",
+      "question": "A deposition passes 100 C, but only 0.90 mmol of a one-electron product is obtained. Calculate the current efficiency as a fraction (charge useful/charge passed).",
+      "answer": 0.87,
+      "tolerance": 0.04,
+      "explanation": "Useful charge = 0.90e-3 x 96485 = 86.8 C; efficiency = 86.8/100 = 0.87."
+    },
+    {
+      "id": "ps11-mcq-001",
+      "topicId": "ps11-bulk",
+      "quick": true,
+      "question": "Faradays law of electrolysis states that the amount of substance transformed is:",
+      "options": [
+        "Proportional to the charge passed",
+        "Independent of the charge",
+        "Proportional to the electrode area",
+        "Proportional to the temperature squared"
+      ],
+      "answer": 0,
+      "explanation": "The amount transformed is proportional to the charge passed, with the constant of proportionality nF, so coulometry measures quantity of electricity directly."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps11-tf-001",
+      "topicId": "ps11-bulk",
+      "quick": true,
+      "question": "Controlled-potential bulk electrolysis can separate two species whose reduction potentials differ sufficiently.",
+      "answer": true,
+      "explanation": "By holding the potential in a window where only one species reacts, that species is electrolysed selectively while the other is left largely untouched."
+    },
+    {
+      "kind": "multi",
+      "id": "ps11-multi-001",
+      "topicId": "ps11-bulk",
+      "question": "Which quantities can be determined by coulometry (measuring total charge)? Select all that apply.",
+      "options": [
+        "The number of electrons n in the reaction",
+        "The amount of substance transformed",
+        "The stoichiometry of a reaction",
+        "The colour of the product"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Coulometry gives n, the amount transformed and the stoichiometry, because charge is linked to moles by nF. Colour is not a coulometric quantity."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps11-tf-002",
+      "topicId": "ps11-bulk",
+      "question": "In bulk electrolysis the goal is usually to convert the analyte exhaustively, so the current falls toward zero as it is consumed.",
+      "answer": true,
+      "explanation": "As the analyte is depleted its bulk concentration falls, so the limiting current decays; the electrolysis is complete when essentially no reactant remains."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps11-num-006",
+      "topicId": "ps11-bulk",
+      "question": "If a bulk electrolysis uses 90 percent of the theoretical charge for the desired reaction, and the rest goes to a side reaction, what fraction of the current is wasted? (Answer as a fraction.)",
+      "answer": 0.1,
+      "tolerance": 0.02,
+      "explanation": "The fraction wasted is 1 - 0.90 = 0.10, i.e. 10 percent of the charge is lost to side reactions."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps11-num-007",
+      "topicId": "ps11-bulk",
+      "question": "Calculate the charge in coulombs needed to deposit 0.100 g of copper from Cu2+ (n = 2, M = 63.5 g/mol, F = 96485 C/mol).",
+      "answer": 304,
+      "tolerance": 20,
+      "unit": "C",
+      "explanation": "moles = 0.100/63.5 = 1.575e-3 mol; Q = 2 x 96485 x 1.575e-3 = 304 C."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps11-num-008",
+      "topicId": "ps11-bulk",
+      "question": "How long, in seconds, does it take to pass 89.4 C at a constant current of 0.050 A?",
+      "answer": 1788,
+      "tolerance": 60,
+      "unit": "s",
+      "explanation": "t = Q/i = 89.4/0.050 = 1788 s, about 30 minutes."
+    },
+    {
+      "id": "ps11-mcq-002",
+      "topicId": "ps11-bulk",
+      "quick": true,
+      "question": "The number of electrons n in a reaction is obtained coulometrically from:",
+      "options": [
+        "n = Q/(F x moles)",
+        "n = F x moles/Q",
+        "n = Q x F",
+        "n = Q - F"
+      ],
+      "answer": 0,
+      "explanation": "Measuring the charge Q for a known number of moles gives n = Q/(F x moles), provided the reaction is the only faradaic process occurring."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps11-tf-003",
+      "topicId": "ps11-bulk",
+      "question": "A high current efficiency means most of the charge goes into the desired reaction rather than side reactions.",
+      "answer": true,
+      "explanation": "Current efficiency is the fraction of the charge producing the desired product; side reactions lower it."
+    },
+    {
+      "kind": "multi",
+      "id": "ps11-multi-002",
+      "topicId": "ps11-bulk",
+      "question": "Which conditions favour a clean, efficient bulk electrolysis? Select all that apply.",
+      "options": [
+        "Good stirring to speed mass transport",
+        "A potential at the mass-transfer-limited plateau of the target species",
+        "Minimising competing side reactions",
+        "Using the highest possible current with no control"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Stirring, a well-chosen potential and suppression of side reactions all improve an exhaustive electrolysis. Uncontrolled high current usually wastes charge on side reactions."
+    }
+  ]
+}

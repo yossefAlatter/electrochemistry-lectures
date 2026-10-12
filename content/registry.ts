@@ -7,6 +7,7 @@
 
 import { registry, type Registry } from "./index";
 import type { Lesson, Section, Subject } from "./types";
+import { buildNav, type NavSubject } from "@/lib/nav";
 
 /** The registry: the whole derived view of the content tree. */
 export function getRegistry(): Registry {
@@ -15,6 +16,14 @@ export function getRegistry(): Registry {
 
 export function getSubjects(): Subject[] {
   return registry.subjects;
+}
+
+/**
+ * The sidebar's navigation tree. Derived on the server and passed to the
+ * client shell as props, so the shell never imports the content tree.
+ */
+export function getNav(): NavSubject[] {
+  return buildNav(registry.subjects);
 }
 
 /* -------------------------------------------------------------------- links --*/

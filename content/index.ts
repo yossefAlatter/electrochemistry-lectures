@@ -16,24 +16,14 @@
 // counts) are computed once from it. Routes and views read those through
 // content/registry.ts rather than reaching into the content files.
 
-import type { Course, Lesson, Mcq, Section, Subject } from "./types";
-import { lesson0 } from "./lesson-0";
-import { lesson1 } from "./lesson-1";
-import { lesson2 } from "./lesson-2";
-import { lesson3 } from "./lesson-3";
-import { lesson4 } from "./lesson-4";
-import { lesson5 } from "./lesson-5";
-import { lesson6 } from "./lesson-6";
-import { lesson7 } from "./lesson-7";
-import { lesson8 } from "./lesson-8";
-import { lesson9 } from "./lesson-9";
-import { lesson10 } from "./lesson-10";
-import { lesson11 } from "./lesson-11";
-import { lesson12 } from "./lesson-12";
-import { lesson13 } from "./lesson-13";
-import { lesson14 } from "./lesson-14";
-import { lesson15 } from "./lesson-15";
-import { lesson16 } from "./lesson-16";
+import type { Course, Lesson, Question, Section, Subject } from "./types";
+import { loadAllLessons } from "./load";
+import {
+  homeHref as homeHrefPure,
+  lessonHref as lessonHrefPure,
+  quizHref as quizHrefPure,
+  sectionHref as sectionHrefPure,
+} from "@/lib/links";
 
 /* --------------------------------------------------------------- subjects --*/
 
@@ -56,25 +46,10 @@ export const subjects: Subject[] = [
           "why rates are what they are, and how cells are designed, used and " +
           "broken. Begin with Lesson 0, a short orientation, then work " +
           "through the lessons in order.",
-        lessons: [
-          lesson0,
-          lesson1,
-          lesson2,
-          lesson3,
-          lesson4,
-          lesson5,
-          lesson6,
-          lesson7,
-          lesson8,
-          lesson9,
-          lesson10,
-          lesson11,
-          lesson12,
-          lesson13,
-          lesson14,
-          lesson15,
-          lesson16,
-        ],
+        // The lesson list is discovered, not listed: JSON files in
+        // `content/lessons/`, sorted by `order`. Adding a lesson means
+        // dropping in a JSON file; there is nothing to register here.
+        lessons: loadAllLessons(),
       },
     ],
   },
@@ -116,8 +91,8 @@ export interface Registry {
   nextLesson(slug: string): Lesson | undefined;
   prevLesson(slug: string): Lesson | undefined;
 
-  questionsForSection(lesson: Lesson, sectionId: string): Mcq[];
-  quickCheckFor(lesson: Lesson, sectionId: string): Mcq[];
+  questionsForSection(lesson: Lesson, sectionId: string): Question[];
+  quickCheckFor(lesson: Lesson, sectionId: string): Question[];
   countQuestions(lesson: Lesson): number;
   countQuickChecks(lesson: Lesson): number;
 
@@ -143,7 +118,7 @@ export function createRegistry(tree: Subject[]): Registry {
 
   // Defined as locals, not inline methods: the shortcuts below destructure
   // these off the object, and `this` would be undefined by then.
-  const questionsForSection = (lesson: Lesson, sectionId: string): Mcq[] =>
+  const questionsForSection = (lesson: Lesson, sectionId: string): Question[] =>
     lesson.mcq.filter((q) => q.topicId === sectionId);
 
   /**
@@ -151,7 +126,7 @@ export function createRegistry(tree: Subject[]): Registry {
    * Falls back to the first few of the section's questions so a section is
    * never left without a quick check just because nobody flagged one.
    */
-  const quickCheckFor = (lesson: Lesson, sectionId: string): Mcq[] => {
+  const quickCheckFor = (lesson: Lesson, sectionId: string): Question[] => {
     const all = questionsForSection(lesson, sectionId);
     const flagged = all.filter((q) => q.quick);
     return (flagged.length ? flagged : all).slice(0, 3);
@@ -205,11 +180,12 @@ export function createRegistry(tree: Subject[]): Registry {
     },
 
     // Links are built at the root, so the original `/lessons/...` URLs are
-    // byte-for-byte unchanged.
-    lessonHref: (lesson) => `/lessons/${lesson.slug}`,
-    sectionHref: (lesson, section) => `/lessons/${lesson.slug}/${section.id}`,
-    quizHref: (lesson) => `/lessons/${lesson.slug}/quiz`,
-    homeHref: () => "/",
+    // byte-for-byte unchanged. The implementations live in `lib/links.ts` so
+    // client components can build a URL without importing this module.
+    lessonHref: lessonHrefPure,
+    sectionHref: sectionHrefPure,
+    quizHref: quizHrefPure,
+    homeHref: homeHrefPure,
   };
 }
 

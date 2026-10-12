@@ -1,8 +1,10 @@
 # Physical Chemistry — Postgraduate
 
-Lesson material and multiple-choice questions for a postgraduate physical
-chemistry course, currently covering electrochemistry. Mobile-first, statically
-generated, no database and no server at runtime.
+Lesson material and interactive questions for a postgraduate physical chemistry
+course, currently covering electrochemistry. Mobile-first, statically generated,
+no database and no server at runtime. The course is 29 numbered lessons plus a
+problem set for each Bard & Faulkner end-of-chapter set (chapters 1–17) — 46
+lesson files, 203 sections and 1118 questions in all.
 
 Built with Next.js (App Router), TypeScript and Tailwind CSS, with KaTeX for
 the maths.
@@ -19,21 +21,23 @@ Subject    Physical Chemistry        <- subject area, more are expected
       Section  nernst               <- ONE PAGE, ends in its own quick check
 ```
 
-Everything displayed is hard-coded in `content/`:
+A lesson is authored as one JSON file; the components and templates render it,
+so adding material is purely additive.
 
 ```
 content/
   types.ts              the shape of every block, section and question
-  index.ts              the registry - the only file to touch to add material
-  lesson-0.ts          the short introduction, 4 sections
-  lesson-0.mcq.ts      16 questions for the introduction
-  lesson-1.ts          11 sections, cell anatomy through to batteries
-  lesson-1.mcq.ts      80 questions with explanations
+  schema.ts             the JSON lesson schema + build-time validator
+  load.ts               reads content/lessons/*.json (server only)
+  index.ts              the subject/course tree; lessons are discovered
+  lessons/
+    lesson-8.json       sections + questions for one lesson
 ```
 
-`content/index.ts` exports the subject structure. The sidebar, the home page,
-every route and the quiz filters all read from it, so adding material is
-purely additive.
+`content/index.ts` exports the subject structure and fills each course's lesson
+list from `loadAllLessons()`, which discovers `content/lessons/*.json` and
+sorts them by `order`. The sidebar, the home page, every route and the quiz
+filters all read through it.
 
 **See [ADDING_A_LESSON.md](ADDING_A_LESSON.md)** for how to add a section, a
 lesson, a course or a whole subject.
@@ -67,14 +71,14 @@ All of these are prerendered at build time via `generateStaticParams`.
 
 **Tones.** There are nine reusable accent hues (`azure`, `indigo`, `violet`,
 `rose`, `coral`, `amber`, `emerald`, `teal`, `slate`). Every section declares
-one in `content/*.ts`:
+one in its lesson file:
 
-```ts
+```json
 {
-  id: "nernst",
-  title: "The Nernst equation",
-  tone: "azure",        // <- the section's colour
-  ...
+  "id": "nernst",
+  "title": "The Nernst equation",
+  "tone": "azure",
+  "...": "the section's colour"
 }
 ```
 
@@ -120,16 +124,26 @@ never sent to the browser.
 
 ## Questions
 
-Each question carries a `topicId` matching a section id. Three questions per
-section are flagged `quick: true`; those become the inline **Quick check** at
-the bottom of the section page, so a learner can test themselves without
-leaving the page. Everything else stays in the full bank, which is where the
-shuffled end-to-end quiz comes from.
+Each question carries a `topicId` matching a section id and one of four kinds:
+`mcq` (single choice, the default), `multi` (select all that apply),
+`truefalse` (true/false) and `numeric` (a number, checked within a tolerance).
+`components/QuestionCard.tsx` is the single player for all four; the quiz and
+the quick check differ only in the questions they feed it.
+
+A few questions per section are flagged `quick: true`; those become the inline
+**Quick check** at the bottom of the section page, so a learner can test
+themselves without leaving the page. Everything else stays in the full bank,
+which is where the shuffled end-to-end quiz comes from.
 
 Lesson 1's questions were exported from the verified question bank in the
 sibling `electricial-chemistry` project, whose `tools/check_questions.py`
 recomputes all 65 printed numeric values against the printed working. The
 export is a one-time step; the file is then edited like any other source file.
+
+The 17 problem-set lessons (`content/lessons/problems-1.json` through
+`problems-17.json`) are original problems written in the style of each Bard &
+Faulkner chapter's exercises and attributed to that chapter; none of the book's
+exercises are copied.
 
 ## Figures
 

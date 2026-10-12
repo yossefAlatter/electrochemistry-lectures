@@ -1,0 +1,325 @@
+{
+  "slug": "lesson-18",
+  "label": "Lesson 18",
+  "title": "Conducting polymers",
+  "summary": "Plastics normally insulate. A conducting polymer is a plastic whose backbone of alternating double bonds can be oxidised or reduced, turning it from an insulator into a conductor and changing its colour at the same time. This lesson explains the conjugated backbone, electrochemical doping, the main materials, and the devices built from them.",
+  "order": 18,
+  "minutes": 40,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "For most of the twentieth century a polymer and a conductor were opposites: plastics insulate, metals conduct. Conducting polymers broke that rule by taking an ordinary-looking plastic and letting charge move along its backbone."
+    },
+    {
+      "kind": "para",
+      "text": "The trick is conjugation: a chain of alternating single and double bonds whose pi electrons are shared along the whole molecule. Removing or adding a few of those electrons - doping, done electrochemically - turns the insulator into a conductor. This lesson builds the idea and then looks at where such polymers are used."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The one-sentence summary",
+      "body": "A conducting polymer is a conjugated plastic whose pi electrons are added or removed by electrochemical doping, switching it between insulator and conductor and between two colours."
+    }
+  ],
+  "sections": [
+    {
+      "id": "conjugated-backbone",
+      "tone": "azure",
+      "title": "The conjugated backbone",
+      "minutes": 8,
+      "summary": "A backbone of alternating double bonds makes the pi electrons delocalised along the chain. Doping removes or adds electrons, creating mobile carriers and turning the insulator into a conductor.",
+      "keyPoints": [
+        "Conjugation means a chain of alternating single and double bonds sharing pi electrons.",
+        "Doping means oxidising or reducing the backbone, adding or removing pi electrons.",
+        "The charged defects - polarons and bipolarons - are the mobile carriers.",
+        "Doping moves the polymer from an insulating to a conducting state."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A saturated polymer such as polyethylene has its electrons locked in single bonds, so it insulates. A conjugated polymer is different: its backbone alternates single and double bonds, and the double bonds contribute pi electrons that are not tied to one pair of atoms. Those electrons are spread along the chain and are available to move."
+        },
+        {
+          "kind": "para",
+          "text": "Doping is the electrochemist's way to release them. Oxidising the backbone removes electrons, leaving positive carriers; reducing it adds electrons, giving negative carriers. Because the doping is done by an electrode, the amount of doping and the polymer's state are set by the applied potential."
+        },
+        {
+          "kind": "formula",
+          "tex": "[\\text{polymer}]_n \\xrightarrow{\\ \\text{oxidation}\\ }\\ [\\text{polymer}^{y+}]_n + n y\\,e^-",
+          "caption": "Electrochemical p-doping by oxidation at the electrode"
+        },
+        {
+          "kind": "para",
+          "text": "The carriers are not bare electrons. Oxidising a conjugated chain produces a polaron, a charge coupled to a local distortion of the lattice; further oxidation can give a bipolaron. These defects move along the chain and between chains, and they carry the current."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "Why it is a plastic and a conductor",
+          "body": "The polymer keeps the mechanical properties of a plastic - it can be cast, spun and bent - while its conjugated backbone and its doping give it the electronic behaviour of a semiconductor or a conductor."
+        }
+      ]
+    },
+    {
+      "id": "doping-and-switching",
+      "tone": "indigo",
+      "title": "Doping, switching and colour",
+      "minutes": 8,
+      "summary": "Because doping is electrochemical, a polymer film on an electrode can be switched reversibly by potential. Its conductivity, volume and colour all change together, and its cyclic voltammogram has the broad, featureless shape of a conducting film.",
+      "keyPoints": [
+        "A polymer film on an electrode can be doped and undoped reversibly by changing the potential.",
+        "Each doping level has its own conductivity, colour and volume.",
+        "The colour change is electrochromism, useful in displays and smart windows.",
+        "The cyclic voltammogram of a conducting polymer is broad and featureless, unlike a simple redox couple."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Put a thin film of a conjugated polymer on an electrode and the whole process becomes switchable. At one potential the film is neutral and insulating; step the potential and the electrode oxidises the backbone, doping it and turning it conducting. Reverse the potential and it undopes, returning to the insulating state."
+        },
+        {
+          "kind": "para",
+          "text": "The switch changes more than conductivity. Different doping levels absorb light differently, so the film changes colour - the phenomenon of electrochromism, the basis of colour-changing windows and display pixels. The film also swells as ions enter to balance the newly created charge."
+        },
+        {
+          "kind": "para",
+          "text": "The cyclic voltammogram of such a film is telling: instead of sharp peaks for a simple solution couple, it is broad and featureless, because the redox sites are many and spread across a range of environments. The shape is the fingerprint of a conducting polymer."
+        },
+        {
+          "kind": "callout",
+          "variant": "example",
+          "title": "The orange-to-blue switch",
+          "body": "A thin film of polyaniline can be switched between a pale yellow, a green and a deep blue, depending on its oxidation and protonation state. A window coated with it can be made transparent in the morning and tinted in the afternoon."
+        }
+      ]
+    },
+    {
+      "id": "materials",
+      "tone": "violet",
+      "title": "The main materials",
+      "minutes": 8,
+      "summary": "The workhorses are polypyrrole, polythiophene and its derivative PEDOT, and polyaniline. Many are made directly on the electrode by electropolymerisation, which is convenient and gives a controllable film.",
+      "keyPoints": [
+        "Polypyrrole, polythiophene, polyaniline and PEDOT are the common conducting polymers.",
+        "Electropolymerisation grows the film directly on the electrode from a monomer solution.",
+        "PEDOT mixed with PSS is a processable, water-dispersed conductor.",
+        "The choice of polymer trades conductivity, stability and processability."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A handful of polymers dominate the field. Polypyrrole, made from pyrrole, is easily electropolymerised and biocompatible. Polythiophene and its derivative PEDOT are stable and highly conducting. Polyaniline is cheap, switches colour dramatically, and is the classic electrochromic material."
+        },
+        {
+          "kind": "para",
+          "text": "Many of these are made not in a factory but on the electrode itself. Electropolymerisation oxidises the monomer in solution, and the growing chains deposit as a film. The thickness is controlled by the charge passed, one more example of Faraday's law doing useful work."
+        },
+        {
+          "kind": "para",
+          "text": "PEDOT combined with the polyelectrolyte PSS gives a water-dispersed conductor that can be printed and coated, which is why it appears in touch screens and antistatic layers. The trade-offs between conductivity, long-term stability and ease of processing decide which polymer fits which job."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "Electropolymerisation as a coating method",
+          "body": "Because the film grows only where the electrode is, the polymer can be deposited in a pattern. That is how conducting tracks and pixel elements are written directly onto a surface."
+        }
+      ]
+    },
+    {
+      "id": "applications",
+      "tone": "rose",
+      "title": "Where conducting polymers are used",
+      "minutes": 8,
+      "summary": "Conducting polymers appear in rechargeable organic batteries, electrochromic displays, sensors and artificial muscles, and they can be modelled with the coupled-chemistry ideas of the electrochemical course.",
+      "keyPoints": [
+        "Rechargeable organic batteries store charge by doping and undoping the polymer.",
+        "Electrochromic displays and smart windows use the colour switch.",
+        "Sensors and artificial muscles exploit the volume change and conductivity change.",
+        "The chemistry is a coupled scheme: a faradaic reaction changes the polymer, which feeds back on its conductivity."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The applications follow directly from the switch. A rechargeable organic battery charges by doping the polymer and discharges by undoping it, storing charge in the plastic itself. An electrochromic display or a smart window uses the colour change. A sensor reads the change in conductivity or mass when the film binds an analyte."
+        },
+        {
+          "kind": "para",
+          "text": "An artificial muscle uses a subtler effect: when the polymer is doped, ions enter the film to balance the charge, and the film swells. That volume change can be turned into mechanical motion, bending a strip of polymer the way a muscle bends a limb."
+        },
+        {
+          "kind": "para",
+          "text": "For an electrochemist the most satisfying view is that a conducting polymer is the coupled-chemistry scheme of the electrode-kinetics lessons wearing a plastic coat. A faradaic reaction at the electrode changes the oxidation state of the film, and that chemical change feeds back on the film's conductivity and volume."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "The unifying view",
+          "body": "Doping is a faradaic electron transfer; the polymer is the product of that reaction; and the product's conductivity and colour are what the device measures or uses. The electrochemistry is the same as anywhere else, just applied to a molecule that spans the whole electrode."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "l18-mcq-001",
+      "topicId": "conjugated-backbone",
+      "quick": true,
+      "question": "A conducting polymer conducts because its backbone:",
+      "options": [
+        "Has alternating single and double bonds that delocalise pi electrons",
+        "Contains metal atoms",
+        "Is saturated and rigid",
+        "Contains dissolved salt"
+      ],
+      "answer": 0,
+      "explanation": "Conjugation, the alternation of single and double bonds, shares the pi electrons along the chain. Doping then frees carriers to move."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l18-tf-001",
+      "topicId": "conjugated-backbone",
+      "question": "Doping a conducting polymer means adding or removing pi electrons by oxidation or reduction.",
+      "answer": true,
+      "explanation": "Oxidation removes electrons (p-doping) and reduction adds them (n-doping). Because an electrode does the redox, the doping level is set by the applied potential."
+    },
+    {
+      "kind": "multi",
+      "id": "l18-multi-001",
+      "topicId": "conjugated-backbone",
+      "question": "Which statements about conducting polymers are correct? Select all that apply.",
+      "options": [
+        "Conjugation delocalises pi electrons along the chain",
+        "Doping turns an insulator into a conductor",
+        "The mobile carriers can be described as polarons and bipolarons",
+        "Doping has no effect on the polymer's properties"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Conjugation, doping, and polaron or bipolaron carriers are all part of the picture. Doping changes conductivity, colour and volume, so it certainly affects the polymer's properties."
+    },
+    {
+      "id": "l18-mcq-002",
+      "topicId": "doping-and-switching",
+      "quick": true,
+      "question": "When a conducting polymer film is oxidised at an electrode, ions enter the film in order to:",
+      "options": [
+        "Anchor the polymer to the metal",
+        "Balance the newly created charge",
+        "Dissolve the film",
+        "Block the current"
+      ],
+      "answer": 1,
+      "explanation": "Doping creates charge on the backbone, and mobile ions must enter from the solution to keep the film neutral overall. Their entry also makes the film swell."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l18-tf-002",
+      "topicId": "doping-and-switching",
+      "question": "The cyclic voltammogram of a conducting polymer film is broad and featureless rather than showing sharp peaks.",
+      "answer": true,
+      "explanation": "The redox sites are many and spread over a range of local environments, so the waves merge into a broad response. This is a fingerprint of a conducting polymer film."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l18-tf-003",
+      "topicId": "doping-and-switching",
+      "question": "The colour of a conducting polymer can change when it is doped or undoped.",
+      "answer": true,
+      "explanation": "Different oxidation states absorb light differently, an effect called electrochromism, used in smart windows and display pixels."
+    },
+    {
+      "id": "l18-mcq-003",
+      "topicId": "materials",
+      "quick": true,
+      "question": "Which polymer is the classic electrochromic material that switches through pale yellow, green and blue?",
+      "options": [
+        "Polystyrene",
+        "Polyaniline",
+        "Polytetrafluoroethylene",
+        "Polyethylene"
+      ],
+      "answer": 1,
+      "explanation": "Polyaniline's colour depends strongly on its oxidation and protonation state, making it a favourite for electrochromic devices."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l18-tf-004",
+      "topicId": "materials",
+      "question": "Electropolymerisation grows a conducting polymer film directly on the electrode from a monomer solution.",
+      "answer": true,
+      "explanation": "Oxidising the monomer makes it polymerise and deposit where the electrode is. The film thickness is set by the charge passed, following Faraday's law."
+    },
+    {
+      "kind": "multi",
+      "id": "l18-multi-002",
+      "topicId": "materials",
+      "question": "Which of these are common conducting polymers? Select all that apply.",
+      "options": [
+        "Polypyrrole",
+        "Polythiophene (and PEDOT)",
+        "Polyaniline",
+        "Polyethylene"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Polypyrrole, polythiophene with its derivative PEDOT, and polyaniline are the workhorses. Polyethylene is saturated and insulating."
+    },
+    {
+      "id": "l18-mcq-004",
+      "topicId": "applications",
+      "quick": true,
+      "question": "An artificial muscle made from a conducting polymer works by:",
+      "options": [
+        "Melting the polymer",
+        "The film swelling as ions enter during doping",
+        "Releasing heat",
+        "Dissolving in the electrolyte"
+      ],
+      "answer": 1,
+      "explanation": "Entering ions balance the doping charge and make the film swell, and that volume change can be turned into mechanical motion."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l18-tf-005",
+      "topicId": "applications",
+      "question": "A rechargeable organic battery can store charge by doping and undoping a conducting polymer.",
+      "answer": true,
+      "explanation": "Charging dopes the polymer and discharge undopes it, so the charge is stored in the plastic rather than in a metal oxide."
+    },
+    {
+      "kind": "numeric",
+      "id": "l18-num-001",
+      "topicId": "applications",
+      "question": "A polypyrrole film is oxidised with a charge of 96.485 C. If one electron is removed per formula unit of monomer, how many moles of monomer units were oxidised? Take F = 96 485 C/mol.",
+      "answer": 0.001,
+      "tolerance": 5e-05,
+      "unit": "mol",
+      "explanation": "n = Q/F = 96.485 / 96 485 = 0.001 mol of monomer units oxidised. The charge directly counts the doping events."
+    },
+    {
+      "kind": "multi",
+      "id": "l18-multi-003",
+      "topicId": "applications",
+      "question": "Which are real or proposed uses of conducting polymers? Select all that apply.",
+      "options": [
+        "Rechargeable organic batteries",
+        "Electrochromic displays and smart windows",
+        "Sensors and artificial muscles",
+        "High-temperature structural ceramics"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Batteries, electrochromic devices, sensors and artificial muscles all exploit the doping switch. High-temperature structural ceramics are a different class of material entirely."
+    }
+  ]
+}

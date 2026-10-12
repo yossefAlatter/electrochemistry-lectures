@@ -1,0 +1,342 @@
+{
+  "slug": "lesson-19",
+  "label": "Lesson 19",
+  "title": "Studying the electrode surface",
+  "summary": "An electrode reaction happens on a surface only a few atoms deep, so understanding it needs tools that see atoms and bonds. This lesson surveys the physical methods - electron and X-ray spectroscopy, vibrational spectroscopy, scanning probes and microbalances - that reveal what is really on an electrode while it works.",
+  "order": 19,
+  "minutes": 42,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Everything an electrode does happens at its surface. Yet for most of the history of electrochemistry the surface was a black box: currents and potentials were measured, but the arrangement of atoms and adsorbed molecules had to be guessed. Modern physical methods opened the box."
+    },
+    {
+      "kind": "para",
+      "text": "This lesson groups the methods by what they measure: electrons tell us the composition and oxidation state, X-rays tell us the structure, vibrational spectroscopy tells us the bonds of adsorbed species, scanning probes paint atomic pictures, and microbalances weigh what has settled on the surface."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The one-sentence summary",
+      "body": "Surface-sensitive physical methods reveal the composition, structure, bonds and mass of an electrode surface, and their power grows when they are combined with a working electrochemical cell."
+    }
+  ],
+  "sections": [
+    {
+      "id": "why-surface-sensitive",
+      "tone": "azure",
+      "title": "Why the surface must be seen",
+      "minutes": 8,
+      "summary": "Electrode kinetics depends on surface structure, defects and adsorbates, so bulk measurements hide the very thing that matters. The methods must be surface-sensitive and, ideally, work while the electrode runs.",
+      "keyPoints": [
+        "Electrode reactions depend on the surface atoms, their arrangement, and what is adsorbed on them.",
+        "A surface is a few atoms deep, so a method must not be swamped by the bulk.",
+        "Ex situ methods study the surface after removing it; in situ and operando methods study it while it works.",
+        "The ideal experiment measures structure and reaction at the same time."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Two electrodes of the same metal can catalyse a reaction at very different rates. The reason is structure: which crystal faces are exposed, how many steps and defects there are, and which species have adsorbed. A bulk measurement averages all of that away, so it cannot explain the difference."
+        },
+        {
+          "kind": "para",
+          "text": "The challenge is that a surface is only a few atomic layers thick. A method that interrogates the whole sample sees the bulk overwhelming the surface. Surface-sensitive techniques are designed to pick out that thin layer, either by using a probe that cannot penetrate far or by detecting only what escapes from the top."
+        },
+        {
+          "kind": "para",
+          "text": "There is also a choice of when to look. An ex situ method examines the electrode after it has been removed from solution - convenient, but the surface may change on the way out. An in situ method looks at the electrode in contact with the electrolyte, and an operando method does so while the reaction is actually running. Each step from ex situ to operando buys realism at the cost of difficulty."
+        },
+        {
+          "kind": "callout",
+          "variant": "warn",
+          "title": "The transfer problem",
+          "body": "A surface prepared and studied in a vacuum may not survive the trip into an electrolyte, and an electrode pulled out of solution may not keep the structure it had while running. Comparing an ex situ result with an in situ one is a common source of contradiction."
+        }
+      ]
+    },
+    {
+      "id": "electron-and-xray",
+      "tone": "indigo",
+      "title": "Electrons and X-rays: composition and structure",
+      "minutes": 9,
+      "summary": "Electron spectroscopies such as XPS and Auger give the composition and oxidation state of the top atomic layers, while LEED, XRD and electron microscopy give the arrangement of atoms. Most require a vacuum.",
+      "keyPoints": [
+        "XPS measures core-electron binding energies, giving composition and oxidation state of the surface.",
+        "Auger spectroscopy uses emitted electrons to identify surface elements.",
+        "LEED reveals the two-dimensional arrangement of atoms on a single-crystal electrode.",
+        "XRD, SEM and TEM give structure and morphology over larger scales."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "X-ray photoelectron spectroscopy is the workhorse of surface composition. X-rays eject core electrons, and their binding energy identifies the element and often its oxidation state. Because the escaping electrons come from only the top few nanometres, XPS is intrinsically surface-sensitive. Auger spectroscopy works in a similar spirit using emitted electrons."
+        },
+        {
+          "kind": "para",
+          "text": "For structure, low-energy electron diffraction fires slow electrons at a single crystal and reads the pattern of diffracted beams to determine how the surface atoms are arranged, including how they reconstruct. X-ray diffraction, electron microscopy and, at the highest resolution, transmission electron microscopy fill in structure and morphology over larger scales."
+        },
+        {
+          "kind": "para",
+          "text": "The price is that electrons travel only a short way through matter, so these methods usually need ultra-high vacuum. That makes them ex situ for electrochemical purposes: the electrode is prepared, studied dry, and then transferred - with the transfer problem always in mind."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "What XPS can and cannot tell you",
+          "body": "XPS gives the elements present, their approximate amounts and their oxidation states, averaged over the sampled area. It does not, by itself, give the atomic arrangement - that is the job of diffraction methods."
+        }
+      ]
+    },
+    {
+      "id": "vibrational",
+      "tone": "violet",
+      "title": "Vibrational spectroscopy of adsorbates",
+      "minutes": 9,
+      "summary": "Infrared and Raman spectroscopy identify adsorbed species by the vibrations of their bonds. Surface enhancement makes Raman practical, and in situ infrared can watch a reaction as it happens.",
+      "keyPoints": [
+        "Infrared and Raman spectra report the vibrational frequencies of bonds, identifying adsorbed species.",
+        "Raman scattering is weak, but surface-enhanced Raman scattering (SERS) makes it strong.",
+        "In situ FTIR studies adsorbed intermediates on an electrode while it is polarised.",
+        "A shift in a vibrational frequency reveals how strongly a molecule is bound to the surface."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A molecule vibrates at frequencies set by its bonds and their surroundings. Infrared and Raman spectroscopy read those frequencies, so they can identify what is sitting on a surface. If an adsorbate binds through one atom, its internal frequencies shift, and the size of the shift reports the strength of the bond to the metal."
+        },
+        {
+          "kind": "para",
+          "text": "Raman scattering is intrinsically very weak, which once made it impractical for monolayers. Surface-enhanced Raman scattering rescues it: on roughened metals such as silver and gold, the signal can be strengthened by many orders of magnitude, enough to detect a single layer of molecules."
+        },
+        {
+          "kind": "para",
+          "text": "Infrared spectroscopy can be done in situ. By modulating the electrode potential and detecting the small change in absorbance, in situ FTIR follows the appearance and disappearance of adsorbed intermediates on a working electrode, turning the surface into something closer to a movie."
+        },
+        {
+          "kind": "callout",
+          "variant": "example",
+          "title": "Carbon monoxide on platinum",
+          "body": "Carbon monoxide adsorbs on platinum through the carbon, and its C-O stretch shifts strongly with the electrode potential. Following that band is a textbook demonstration of how a vibrational frequency probes both the adsorbate and the field it feels."
+        }
+      ]
+    },
+    {
+      "id": "scanning-probes",
+      "tone": "rose",
+      "title": "Scanning probes and the SECM",
+      "minutes": 8,
+      "summary": "Scanning tunnelling and atomic force microscopy image surfaces atom by atom, and their electrochemical cousins do so in solution. The scanning electrochemical microscope images a surface through the current of a tiny probe electrode.",
+      "keyPoints": [
+        "Scanning tunnelling microscopy reads a tunnel current to map a conducting surface with atomic resolution.",
+        "Atomic force microscopy reads a force and works on insulators and in liquid.",
+        "Electrochemical STM and AFM image a surface while an electrode reaction runs.",
+        "The scanning electrochemical microscope maps reactivity using a tiny probe electrode in solution."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Scanning probe microscopes bring a sharp tip close to a surface and measure a local interaction. Scanning tunnelling microscopy uses the tunnel current and achieves atomic resolution on conductors; atomic force microscopy uses the force between tip and surface and so works on insulators and in liquid."
+        },
+        {
+          "kind": "para",
+          "text": "Their electrochemical versions combine imaging with a working electrode. EC-STM and EC-AFM watch an electrode in contact with solution, revealing how adsorbates arrange and how a deposit grows in real time. Some instruments can image a single reaction as it deposits atom by atom."
+        },
+        {
+          "kind": "para",
+          "text": "A different kind of probe is the scanning electrochemical microscope. Its tip is a tiny electrode, not a passive sensor, and it images the surface by the electrochemical current that flows between tip and sample. Contrast comes from local reactivity, so SECM maps where a surface is active, insulating or catalytic."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "Resolution against environment",
+          "body": "STM has the finest resolution but needs a conductor and often a vacuum; AFM is less exacting and works in liquid; SECM trades resolution for chemical sensitivity. Choosing a method is choosing which trade-off matters for the question."
+        }
+      ]
+    },
+    {
+      "id": "weighing-the-surface",
+      "tone": "coral",
+      "title": "Weighing and tagging the surface",
+      "minutes": 8,
+      "summary": "The electrochemical quartz crystal microbalance weighs the mass added to or removed from an electrode, and radiotracers count adsorbates. Combined with electrochemistry, they turn a current into a mass change per electron.",
+      "keyPoints": [
+        "The electrochemical quartz crystal microbalance measures tiny mass changes from a frequency shift.",
+        "It reveals whether a reaction deposits mass, strips it, or exchanges ions without net mass change.",
+        "Radiotracer methods count labelled adsorbates directly on the surface.",
+        "The mass-per-electron ratio helps identify the reaction mechanism."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A quartz crystal vibrates at a frequency that shifts when mass is added to an electrode plated onto it. The electrochemical quartz crystal microbalance uses this to weigh what a reaction puts on or takes off the surface, resolving fractions of a monolayer."
+        },
+        {
+          "kind": "para",
+          "text": "The mass change answers a mechanistic question directly. If depositing one electron adds a known mass, the reaction must be the one that carries that mass; if a reaction exchanges only ions and solvent, the mass barely changes. The ratio of mass to charge is a signature of the mechanism."
+        },
+        {
+          "kind": "para",
+          "text": "Radiotracer methods take a different route: a radioactive label on the adsorbate lets its surface amount be counted directly, independent of charge. Combined with the microbalance and with spectroscopy, the picture of a working electrode becomes quantitative in mass, charge and identity at once."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "The combined picture",
+          "body": "Current tells you how many electrons moved; the microbalance tells you what mass arrived; spectroscopy tells you which bonds formed; and the scanning probe tells you where. No single method sees everything."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "l19-mcq-001",
+      "topicId": "why-surface-sensitive",
+      "quick": true,
+      "question": "Why is a surface-sensitive method needed to study electrode reactions?",
+      "options": [
+        "Because the bulk of the electrode is electrically insulating",
+        "Because the reaction depends only on the top few atomic layers",
+        "Because electrochemistry happens in the gas phase",
+        "Because surfaces are always clean"
+      ],
+      "answer": 1,
+      "explanation": "Only the surface atoms and their adsorbates matter for the reaction, and that region is a few atoms deep. A bulk measurement averages it away."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l19-tf-001",
+      "topicId": "why-surface-sensitive",
+      "question": "An in situ method studies the electrode while it is in contact with the electrolyte.",
+      "answer": true,
+      "explanation": "In situ means in place, with the electrode in the electrolyte; operando goes further and measures while the reaction runs. Ex situ instead studies the electrode after removal."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l19-tf-002",
+      "topicId": "why-surface-sensitive",
+      "question": "An ex situ surface is guaranteed to be identical to the surface during the reaction.",
+      "answer": false,
+      "explanation": "Removing the electrode can change its structure and adsorbates, which is the transfer problem. Comparing ex situ and in situ results can therefore give contradictions."
+    },
+    {
+      "id": "l19-mcq-002",
+      "topicId": "electron-and-xray",
+      "quick": true,
+      "question": "X-ray photoelectron spectroscopy identifies elements and their oxidation states by measuring:",
+      "options": [
+        "The mass of ions",
+        "The binding energy of ejected core electrons",
+        "The colour of the surface",
+        "The refractive index"
+      ],
+      "answer": 1,
+      "explanation": "X-rays eject core electrons whose binding energies are characteristic of the element and its oxidation state. Only electrons from the top few nanometres escape, so the method is surface-sensitive."
+    },
+    {
+      "id": "l19-mcq-003",
+      "topicId": "electron-and-xray",
+      "question": "Which method reveals the two-dimensional arrangement of atoms on a single-crystal electrode?",
+      "options": [
+        "XPS",
+        "Auger spectroscopy",
+        "Low-energy electron diffraction (LEED)",
+        "Infrared spectroscopy"
+      ],
+      "answer": 2,
+      "explanation": "LEED fires slow electrons at the crystal and reads the diffraction pattern, revealing how the surface atoms are arranged, including reconstruction."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l19-tf-003",
+      "topicId": "electron-and-xray",
+      "question": "Electron-based surface methods usually require ultra-high vacuum.",
+      "answer": true,
+      "explanation": "Electrons travel only a short distance through matter, so the sample and the electron optics must be kept in vacuum. This makes such methods ex situ for electrochemical work."
+    },
+    {
+      "id": "l19-mcq-004",
+      "topicId": "vibrational",
+      "quick": true,
+      "question": "Surface-enhanced Raman scattering is useful because it:",
+      "options": [
+        "Changes the sample colour",
+        "Greatly strengthens the weak Raman signal from molecules on rough metal surfaces",
+        "Removes the need for a laser",
+        "Works only in vacuum"
+      ],
+      "answer": 1,
+      "explanation": "Raman scattering is intrinsically very weak, but on roughened silver or gold the signal can be enhanced by many orders of magnitude, enough to detect a monolayer."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l19-tf-004",
+      "topicId": "vibrational",
+      "question": "A shift in the vibrational frequency of an adsorbate reports how strongly it is bound to the surface.",
+      "answer": true,
+      "explanation": "Binding through the surface perturbs the molecule's bonds, so its vibrational frequencies shift. The size of the shift is a measure of the adsorbate-surface interaction."
+    },
+    {
+      "kind": "multi",
+      "id": "l19-multi-001",
+      "topicId": "vibrational",
+      "question": "Which statements about vibrational spectroscopy of electrodes are correct? Select all that apply.",
+      "options": [
+        "Infrared and Raman identify adsorbed species by their bond vibrations",
+        "In situ FTIR can follow an intermediate on a working electrode",
+        "SERS makes Raman strong enough for monolayers",
+        "Vibrational frequencies are independent of how a molecule binds"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Vibrational spectra identify adsorbates, in situ FTIR follows them during reaction, and SERS enhances Raman for monolayers. Frequencies do depend on binding, which is exactly what makes the method useful."
+    },
+    {
+      "id": "l19-mcq-005",
+      "topicId": "scanning-probes",
+      "quick": true,
+      "question": "The scanning electrochemical microscope images a surface using:",
+      "options": [
+        "A tunnel current through a vacuum gap",
+        "The electrochemical current of a tiny probe electrode in solution",
+        "A beam of X-rays",
+        "The mass of the sample"
+      ],
+      "answer": 1,
+      "explanation": "Its tip is a small electrode, and the current flowing between tip and sample provides contrast based on local reactivity. It maps where a surface is active or insulating."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l19-tf-005",
+      "topicId": "scanning-probes",
+      "question": "Atomic force microscopy can work on insulating surfaces and in liquid, unlike STM which needs a conductor.",
+      "answer": true,
+      "explanation": "AFM senses a force rather than a tunnelling current, so it is not restricted to conductors and works in liquid. STM needs a conducting sample for the tunnel current."
+    },
+    {
+      "id": "l19-mcq-006",
+      "topicId": "weighing-the-surface",
+      "quick": true,
+      "question": "The electrochemical quartz crystal microbalance measures:",
+      "options": [
+        "The temperature of the electrode",
+        "Tiny mass changes from a shift in the crystal's vibration frequency",
+        "The pH of the solution",
+        "The colour change of the film"
+      ],
+      "answer": 1,
+      "explanation": "Mass added to or removed from the electrode shifts the crystal's resonant frequency, so the instrument weighs fractions of a monolayer."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l19-tf-006",
+      "topicId": "weighing-the-surface",
+      "question": "The ratio of mass change to charge passed helps identify the reaction mechanism.",
+      "answer": true,
+      "explanation": "If each electron deposits a known mass, the reaction must be the one carrying that mass. The mass-per-electron signature distinguishes mechanisms that look alike in current alone."
+    }
+  ]
+}

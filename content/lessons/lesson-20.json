@@ -1,0 +1,381 @@
+{
+  "slug": "lesson-20",
+  "label": "Lesson 20",
+  "title": "Electrocatalysis",
+  "summary": "An electrocatalyst is a surface that makes an electrode reaction go faster at a smaller overpotential. This lesson explains how a catalyst works without changing thermodynamics, why the best catalyst binds its intermediates neither too strongly nor too weakly, how the reaction steps are diagnosed, and where the important reactions are found.",
+  "order": 20,
+  "minutes": 42,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Some electrode reactions run close to their thermodynamic potential; others need to be pushed far from it. The difference is catalysis. A good electrocatalyst lowers the overpotential needed for a given current, saving energy in every electrolyser, fuel cell and battery."
+    },
+    {
+      "kind": "para",
+      "text": "The subject begins with an apparent paradox: a catalyst cannot change the thermodynamic driving force of a reaction, so how can it help? The answer is that it changes the *pathway* - the sequence of steps the reaction takes - and a faster pathway means a lower barrier."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The one-sentence summary",
+      "body": "An electrocatalyst changes the reaction pathway so that the same reaction runs faster at the same potential, and the best pathway binds every intermediate just strongly enough."
+    }
+  ],
+  "sections": [
+    {
+      "id": "what-a-catalyst-does",
+      "tone": "azure",
+      "title": "What an electrocatalyst does",
+      "minutes": 8,
+      "summary": "An electrocatalyst lowers the overpotential of a target reaction at a given current density. It changes the mechanism, not the thermodynamics, and it must be stable and selective to be useful.",
+      "keyPoints": [
+        "The catalyst provides an alternative pathway with a lower activation barrier.",
+        "It cannot change the equilibrium potential, only the overpotential needed to reach a current.",
+        "A good catalyst is fast, stable and selective for one reaction.",
+        "Catalysis is a surface phenomenon: only the exposed atoms take part."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "An electrode reaction with a large activation barrier needs a large overpotential to reach a useful current. A catalyst offers a different route to the same products through intermediates that are easier to form. The thermodynamic start and end points are untouched, but the hill between them is lower."
+        },
+        {
+          "kind": "para",
+          "text": "The measure of a catalyst is the overpotential at a given current density, or equivalently the current density at a given overpotential. A catalyst that reaches 10 mA/cm2 at a few tens of millivolts of overpotential is excellent; one that needs hundreds of millivolts is poor."
+        },
+        {
+          "kind": "para",
+          "text": "Because catalysis happens on the surface, only the exposed atoms count. This is why so much effort goes into making catalysts as small and as finely dispersed as possible, and why a support that keeps the particles apart matters as much as the active metal itself."
+        },
+        {
+          "kind": "callout",
+          "variant": "warn",
+          "title": "Catalyst versus reactant",
+          "body": "A catalyst is not consumed by the overall reaction; it is returned at the end of each cycle. If the surface changes irreversibly, it is deactivating, not catalysing. Durability is part of the definition."
+        }
+      ]
+    },
+    {
+      "id": "volcano-and-sabatier",
+      "tone": "indigo",
+      "title": "The Sabatier principle and volcanoes",
+      "minutes": 9,
+      "summary": "A catalyst must bind its intermediate strongly enough to hold it and weakly enough to release it. Plotting activity against binding energy gives the volcano, whose peak marks the optimum.",
+      "keyPoints": [
+        "The Sabatier principle: bind intermediates neither too strongly nor too weakly.",
+        "Too weak and the intermediate never forms; too strong and it never leaves.",
+        "A plot of activity against a binding energy produces a volcano shape.",
+        "The top of the volcano is the best catalyst, which is what makes the plot a design tool."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Consider a reaction that goes through an adsorbed intermediate. If the surface binds it weakly, it barely forms and the reaction stalls at the adsorption step. If the surface binds it very strongly, it forms readily but refuses to leave, poisoning the surface. The best surface sits between these extremes."
+        },
+        {
+          "kind": "para",
+          "text": "This is the Sabatier principle. Its consequence is the volcano plot: if activity is plotted against the binding energy of the key intermediate, the two failure modes appear on the two sides and the best catalysts cluster at the peak. The plot is a map for finding better materials."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\text{activity}\\ \\propto\\ \\frac{1}{1 + \\exp[\\Delta G_{\\mathrm{bind}}/k_BT]} \\quad \\text{for the weak-binding side}",
+          "caption": "A schematic volcano side: weak binding limits the rate"
+        },
+        {
+          "kind": "para",
+          "text": "Modern theory goes further. The d-band model correlates the binding energy with the position of the metal's d-band centre, so a computed electronic property predicts the catalytic activity. This is how catalyst discovery became a computational as well as an experimental field."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "Why the top of the volcano is never perfect",
+          "body": "Even at the volcano's peak the catalyst still binds one intermediate or another sub-optimally, because a single surface must handle several intermediates at once. This residual cost is the origin of most of the remaining overpotential."
+        }
+      ]
+    },
+    {
+      "id": "steps-and-diagnosis",
+      "tone": "violet",
+      "title": "Steps, mechanisms and diagnosis",
+      "minutes": 9,
+      "summary": "A catalysed reaction runs through a sequence of steps - adsorption, charge transfer, surface reaction, desorption. The Tafel slope and its change with conditions reveal which step is slowest.",
+      "keyPoints": [
+        "A typical sequence is adsorption, electron transfer, surface reaction and desorption.",
+        "The slowest step, the rate-determining step, sets the kinetics.",
+        "The Tafel slope depends on which step is rate-determining.",
+        "A change of Tafel slope with potential signals a change of mechanism."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A catalysed reaction is a chain of steps: reactant adsorbs onto the surface, an electron transfers, the adsorbed species reacts or recombines, and the product desorbs. Each step has its own barrier, and the slowest one - the rate-determining step - controls the overall rate."
+        },
+        {
+          "kind": "para",
+          "text": "The Tafel slope is the diagnostic. Different rate-determining steps give different Tafel slopes, because the way the current depends on potential depends on which step is the bottleneck. Measuring a slope near 120 mV per decade points to one step, near 40 mV to another."
+        },
+        {
+          "kind": "para",
+          "text": "When the mechanism changes with potential or coverage, the Tafel slope changes, and a plot with two straight sections is the signal. Coupled with spectroscopy of the adsorbed intermediates, Tafel analysis turns a current-voltage curve into a proposed mechanism."
+        },
+        {
+          "kind": "callout",
+          "variant": "example",
+          "title": "Two slopes, one mechanism change",
+          "body": "A hydrogen-evolution catalyst that shows a 120 mV per decade slope at low current and 40 mV per decade at high current has changed its rate-determining step. The first regime is limited by the initial discharge step, the second by a later recombination or desorption step."
+        }
+      ]
+    },
+    {
+      "id": "important-reactions",
+      "tone": "rose",
+      "title": "The reactions that matter",
+      "minutes": 8,
+      "summary": "Electrocatalysis matters most for hydrogen evolution, oxygen reduction and evolution, and the reduction of CO2 and nitrogen. Platinum is the benchmark for several, but it is expensive and easily poisoned.",
+      "keyPoints": [
+        "Hydrogen evolution and hydrogen oxidation are the fuel-cell and electrolyser reactions.",
+        "Oxygen reduction is slow and is the main loss in a fuel cell; oxygen evolution is the main loss in water splitting.",
+        "CO2 and nitrogen reduction are harder still because their molecules are very stable.",
+        "Platinum is a benchmark, not the final answer, because it is costly and easily poisoned by carbon monoxide."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The hydrogen reactions are the simplest and the best understood. Hydrogen evolution, the reduction of protons to hydrogen gas, runs well on platinum near its equilibrium potential; the reverse, hydrogen oxidation, is the fuel-cell anode reaction."
+        },
+        {
+          "kind": "para",
+          "text": "The oxygen reactions are the hard ones. Oxygen reduction is slow, so it dominates the loss in a hydrogen fuel cell, and oxygen evolution is slow, so it dominates the loss in water electrolysis. The two together are why a fuel cell and an electrolyser each need a substantial overpotential."
+        },
+        {
+          "kind": "para",
+          "text": "Reducing carbon dioxide and nitrogen is harder still, because both molecules are very stable and the desired products compete with hydrogen evolution. Platinum is the benchmark for the hydrogen and oxygen reactions, but it is expensive and is poisoned by carbon monoxide, so much of the field is a search for cheaper, more tolerant catalysts."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "The four-electron problem",
+          "body": "Oxygen reduction and evolution move four electrons. That opens the door to two-electron side products such as hydrogen peroxide, so selectivity as well as speed is a target for the catalyst."
+        }
+      ]
+    },
+    {
+      "id": "catalyst-structure",
+      "tone": "coral",
+      "title": "The structure of a real catalyst",
+      "minutes": 8,
+      "summary": "Practical catalysts are nanoparticles dispersed on a support, often alloyed or built as core-shell particles. Their activity, selectivity and durability depend on size, composition and the support, and single-atom catalysts push dispersion to the limit.",
+      "keyPoints": [
+        "Nanoparticles maximise surface area per gram of the expensive metal.",
+        "Alloys and core-shell particles tune binding energies by changing the electronic structure.",
+        "The support can itself contribute to the catalysis and to stability.",
+        "Single-atom catalysts use every metal atom as a site, but stability is hard to maintain."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A catalyst made of solid platinum would be mostly wasted, because only the surface works. Dispersing the metal as nanoparticles on a support such as carbon exposes most of the atoms and gives a large current for a small amount of metal."
+        },
+        {
+          "kind": "para",
+          "text": "Alloying is the next lever. Combining platinum with another metal changes its electronic structure and therefore its binding energies, which can move a material up the volcano. Core-shell particles, with one metal in the core and another as the shell, tune the surface without using expensive metal throughout."
+        },
+        {
+          "kind": "para",
+          "text": "The support is not always passive: some oxide supports participate in the reaction, and a good support keeps the particles from sintering together. Single-atom catalysts go furthest, placing isolated metal atoms on the support so that every atom is a site, though keeping those atoms from migrating and clumping under operating conditions is difficult."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "The design triangle",
+          "body": "Activity, selectivity and durability must all be satisfied at once. A catalyst that is fast but dissolves, or selective but poisoned, is not useful. Real progress is almost always a compromise among the three."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "truefalse",
+      "id": "l20-tf-001",
+      "topicId": "what-a-catalyst-does",
+      "quick": true,
+      "question": "An electrocatalyst changes the equilibrium potential of the reaction it catalyses.",
+      "answer": false,
+      "explanation": "A catalyst cannot change thermodynamics. It provides an alternative pathway with a lower barrier, so the reaction reaches a given current at a smaller overpotential, but the equilibrium potential is unchanged."
+    },
+    {
+      "id": "l20-mcq-001",
+      "topicId": "what-a-catalyst-does",
+      "quick": true,
+      "question": "The performance of an electrocatalyst is usually reported as:",
+      "options": [
+        "Its mass",
+        "The overpotential needed to reach a given current density",
+        "Its colour",
+        "Its melting point"
+      ],
+      "answer": 1,
+      "explanation": "Overpotential at a given current density is the standard figure of merit. A small overpotential for a given current means a good catalyst."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l20-tf-002",
+      "topicId": "what-a-catalyst-does",
+      "question": "Catalysis happens on the surface, so finely dispersing the metal increases the activity per gram.",
+      "answer": true,
+      "explanation": "Only exposed surface atoms can take part, so spreading the metal as small particles on a support exposes more of them and raises the activity per gram of metal."
+    },
+    {
+      "id": "l20-mcq-002",
+      "topicId": "volcano-and-sabatier",
+      "quick": true,
+      "question": "The Sabatier principle states that the best catalyst binds its intermediates:",
+      "options": [
+        "As strongly as possible",
+        "As weakly as possible",
+        "Neither too strongly nor too weakly",
+        "Only after the reaction is complete"
+      ],
+      "answer": 2,
+      "explanation": "Too weak and the intermediate never forms; too strong and it never leaves. The optimum is in between, which is the peak of the volcano plot."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l20-tf-003",
+      "topicId": "volcano-and-sabatier",
+      "question": "A volcano plot of activity against binding energy has its best catalysts near the peak.",
+      "answer": true,
+      "explanation": "The two sides of the volcano are the weak-binding and strong-binding failure modes, so the peak marks the best compromise and guides the search for new materials."
+    },
+    {
+      "kind": "multi",
+      "id": "l20-multi-001",
+      "topicId": "volcano-and-sabatier",
+      "question": "Which statements about the Sabatier principle and volcano plots are correct? Select all that apply.",
+      "options": [
+        "Weak binding limits the reaction because the intermediate barely forms",
+        "Strong binding limits it because the intermediate will not leave",
+        "The plot of activity versus binding energy can guide catalyst design",
+        "Binding energy has no relation to activity"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Both extremes limit the reaction, one by preventing formation and the other by preventing release. Plotting activity against binding energy gives the volcano, which is a genuine design tool. Binding energy is central to activity, not unrelated to it."
+    },
+    {
+      "id": "l20-mcq-003",
+      "topicId": "steps-and-diagnosis",
+      "quick": true,
+      "question": "The slowest step in a catalysed reaction is called the:",
+      "options": [
+        "Adsorption step",
+        "Rate-determining step",
+        "Desorption step",
+        "Thermodynamic step"
+      ],
+      "answer": 1,
+      "explanation": "The rate-determining step is the bottleneck that sets the overall kinetics, and its identity is reflected in the Tafel slope."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l20-tf-004",
+      "topicId": "steps-and-diagnosis",
+      "question": "A change in Tafel slope with potential signals a change in the rate-determining step or mechanism.",
+      "answer": true,
+      "explanation": "Different bottleneck steps give different slopes, so a curve with two straight sections means the mechanism has changed with potential or coverage."
+    },
+    {
+      "kind": "numeric",
+      "id": "l20-num-001",
+      "topicId": "steps-and-diagnosis",
+      "question": "A catalyst reaches a current density of 10 mA/cm2 with an overpotential of 0.050 V. What is its overpotential in millivolts?",
+      "answer": 50,
+      "tolerance": 1,
+      "unit": "mV",
+      "explanation": "0.050 V is 50 mV. This is an excellent catalyst for many reactions, since good catalysts reach 10 mA/cm2 at only a few tens of millivolts of overpotential."
+    },
+    {
+      "id": "l20-mcq-004",
+      "topicId": "important-reactions",
+      "quick": true,
+      "question": "Which reaction is the main source of loss in a hydrogen fuel cell?",
+      "options": [
+        "Hydrogen oxidation",
+        "Oxygen reduction",
+        "Proton transfer",
+        "Water evaporation"
+      ],
+      "answer": 1,
+      "explanation": "Oxygen reduction is slow, so it dominates the loss in a fuel cell, as oxygen evolution does in water electrolysis."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l20-tf-005",
+      "topicId": "important-reactions",
+      "question": "Platinum is a benchmark catalyst for several reactions but is expensive and can be poisoned by carbon monoxide.",
+      "answer": true,
+      "explanation": "Platinum is highly active for the hydrogen and oxygen reactions, but its cost and its susceptibility to CO poisoning drive the search for alternatives."
+    },
+    {
+      "kind": "multi",
+      "id": "l20-multi-002",
+      "topicId": "important-reactions",
+      "question": "Which of these are important electrocatalytic reactions? Select all that apply.",
+      "options": [
+        "Hydrogen evolution",
+        "Oxygen reduction",
+        "CO2 reduction",
+        "Dissolution of an inert support in acid"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Hydrogen evolution, oxygen reduction and CO2 reduction are central targets. The dissolution of a support is a degradation process, not a desired catalytic reaction."
+    },
+    {
+      "id": "l20-mcq-005",
+      "topicId": "catalyst-structure",
+      "quick": true,
+      "question": "Alloying platinum with another metal can improve catalysis by:",
+      "options": [
+        "Increasing its melting point only",
+        "Changing its electronic structure and therefore its binding energies",
+        "Making it a better insulator",
+        "Preventing any reaction from occurring"
+      ],
+      "answer": 1,
+      "explanation": "Alloying alters the electronic structure, which shifts the binding energies of intermediates and can move the material toward the top of the volcano."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l20-tf-006",
+      "topicId": "catalyst-structure",
+      "question": "Single-atom catalysts use isolated metal atoms as sites, but keeping them from migrating is difficult.",
+      "answer": true,
+      "explanation": "Isolated atoms give the maximum number of active sites per amount of metal, but under operating conditions they tend to migrate and clump into particles, losing the advantage."
+    },
+    {
+      "kind": "multi",
+      "id": "l20-multi-003",
+      "topicId": "catalyst-structure",
+      "question": "Which are design considerations for a practical electrocatalyst? Select all that apply.",
+      "options": [
+        "Activity at low overpotential",
+        "Selectivity for the target reaction",
+        "Durability under operating conditions",
+        "Using as much of the precious metal as possible"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Activity, selectivity and durability must all be satisfied together. Using as much precious metal as possible wastes it; the goal is to use as little as possible."
+    }
+  ]
+}

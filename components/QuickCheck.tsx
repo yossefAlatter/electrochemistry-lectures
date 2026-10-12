@@ -4,23 +4,23 @@
 // in place, with the explanation shown the moment you commit. It is
 // deliberately smaller than the full quiz - two or three questions, one at a
 // time, no timer - so that finishing a section feels like finishing a
-// section.
+// section. The interaction for each question (of any kind) is shared with the
+// quiz through `QuestionCard`.
 
 import { useState } from "react";
-import type { Mcq } from "@/content/types";
-import { fill, optionLetters, t } from "@/lib/i18n";
-import { RichText } from "@/components/Blocks";
+import type { Question } from "@/content/types";
+import { fill, t } from "@/lib/i18n";
+import { QuestionCard } from "@/components/QuestionCard";
 
 export default function QuickCheck({
   questions,
   sectionTitle,
 }: {
-  questions: Mcq[];
+  questions: Question[];
   sectionTitle: string;
 }) {
   const d = t();
   const [at, setAt] = useState(0);
-  const [picked, setPicked] = useState<number | null>(null);
   const [got, setGot] = useState<boolean[]>([]);
   const [done, setDone] = useState(false);
 
@@ -29,24 +29,16 @@ export default function QuickCheck({
   const q = questions[at];
   const right = got.filter(Boolean).length;
 
-  function choose(i: number) {
-    if (picked !== null) return;
-    setPicked(i);
-    setGot((g) => [...g, i === q.answer]);
-  }
-
   function next() {
     if (at + 1 >= questions.length) {
       setDone(true);
       return;
     }
     setAt((n) => n + 1);
-    setPicked(null);
   }
 
   function restart() {
     setAt(0);
-    setPicked(null);
     setGot([]);
     setDone(false);
   }
@@ -102,84 +94,15 @@ export default function QuickCheck({
           </button>
         </div>
       ) : (
-        <>
-          <p className="mt-3.5 text-[0.98rem] leading-relaxed font-medium text-ink">
-            <RichText text={q.question} />
-          </p>
-
-          <ul className="mt-3.5 space-y-2">
-            {q.options.map((opt, i) => {
-              const isAnswer = i === q.answer;
-              const isPicked = i === picked;
-              const show = picked !== null;
-              const tone = !show
-                ? "border-rule bg-surface hover:border-[color:var(--tone)]"
-                : isAnswer
-                  ? "border-good bg-good/10"
-                  : isPicked
-                    ? "border-bad bg-bad/10"
-                    : "border-rule bg-surface opacity-55";
-              return (
-                <li key={i}>
-                  <button
-                    type="button"
-                    onClick={() => choose(i)}
-                    aria-pressed={isPicked}
-                    className={`flex w-full items-start gap-3 rounded-lg border px-3.5 py-3 text-start transition-colors ${tone}`}
-                  >
-                    <span
-                      aria-hidden="true"
-                      className={`mt-px grid h-6 w-6 shrink-0 place-items-center rounded-full text-[0.75rem] font-bold ${
-                        !show
-                          ? "bg-[color:var(--tone-soft)] text-[color:var(--tone)]"
-                          : isAnswer
-                            ? "bg-good text-on-good"
-                            : isPicked
-                              ? "bg-bad text-on-bad"
-                              : "bg-tint text-faint"
-                      }`}
-                    >
-                      {show && isAnswer ? "✓" : show && isPicked ? "✗" : optionLetters[i]}
-                    </span>
-                    <span className="text-[0.94rem] leading-relaxed text-ink">
-                      <RichText text={opt} />
-                    </span>
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
-
-          {picked === null ? (
-            <p className="mt-3 text-[0.85rem] text-faint">
-              {d.pickOption}
-            </p>
-          ) : (
-            <div className="mt-4 border-t border-[color:var(--tone-line)] pt-4">
-              <p
-                className={`text-[0.95rem] font-semibold ${picked === q.answer ? "text-good" : "text-bad"}`}
-              >
-                {picked === q.answer ? d.correctShort : d.notCorrectShort}
-              </p>
-              <p className="mt-1 text-[0.72rem] font-bold uppercase tracking-wider text-faint">
-                {d.why}
-              </p>
-              <p className="mt-1 text-[0.92rem] leading-relaxed text-ink-soft">
-                <RichText text={q.explanation} />
-              </p>
-              <button
-                type="button"
-                onClick={next}
-                className="mt-4 inline-flex min-h-11 w-full items-center justify-center rounded-lg bg-[color:var(--tone)] px-4 text-[0.92rem] font-semibold text-on-accent transition-opacity hover:opacity-90 sm:w-auto"
-              >
-                {at + 1 >= questions.length ? d.seeResult : d.nextQuestion}
-                <span aria-hidden="true" className="ms-1.5 flow-arrow">
-                  →
-                </span>
-              </button>
-            </div>
-          )}
-        </>
+        <div className="mt-3.5">
+          <QuestionCard
+            key={q.id}
+            question={q}
+            onResult={(ok) => setGot((g) => [...g, ok])}
+            nextLabel={at + 1 >= questions.length ? d.seeResult : d.nextQuestion}
+            onNext={next}
+          />
+        </div>
       )}
     </section>
   );

@@ -1,0 +1,218 @@
+{
+  "slug": "problems-17",
+  "label": "Problem set 17",
+  "title": "Problem set 17: Spectroelectrochemistry and photoelectrochemistry",
+  "summary": "Practice with coupled optical and light-driven methods: Beer-Lambert analysis, band gaps and threshold wavelengths, thin-layer coulometry and electrogenerated chemiluminescence.",
+  "source": "Bard & Faulkner ch.17",
+  "order": 117,
+  "minutes": 26,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Spectroelectrochemistry couples the cell to a spectrometer, so products are identified while they form; the Beer-Lambert law A = eps c l links absorbance to concentration."
+    },
+    {
+      "kind": "para",
+      "text": "Photoelectrochemistry uses light to create charge carriers. The band gap follows Eg(eV) = 1240/lambda(nm), and light below the threshold wavelength cannot drive the reaction. Electrogenerated chemiluminescence emits light from an excited state made electrochemically."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps17-spec",
+      "tone": "amber",
+      "title": "Hint sheet: optical and photoelectrochemical relations",
+      "summary": "Practice with coupled optical and light-driven methods: Beer-Lambert analysis, band gaps and threshold wavelengths, thin-layer coulometry and electrogenerated chemiluminescence.",
+      "minutes": 21,
+      "keyPoints": [
+        "Beer-Lambert: A = eps c l",
+        "Eg(eV) = 1240/lambda(nm)",
+        "Threshold wavelength lambda = 1240/Eg",
+        "n = Q/(F x moles)",
+        "Ring-disk collection of products"
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Spectroelectrochemistry couples the cell to a spectrometer, so products are identified while they form; the Beer-Lambert law A = eps c l links absorbance to concentration."
+        },
+        {
+          "kind": "para",
+          "text": "Photoelectrochemistry uses light to create charge carriers. The band gap follows Eg(eV) = 1240/lambda(nm), and light below the threshold wavelength cannot drive the reaction. Electrogenerated chemiluminescence emits light from an excited state made electrochemically."
+        },
+        {
+          "kind": "worked",
+          "title": "Band gap from wavelength",
+          "given": "lambda = 620 nm",
+          "steps": [
+            "Use Eg(eV) = 1240/lambda(nm).",
+            "Eg = 1240/620.",
+            "Eg = 2.0 eV."
+          ],
+          "result": "Eg = 2.0 eV"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "numeric",
+      "id": "ps17-num-001",
+      "topicId": "ps17-spec",
+      "question": "Use the Beer-Lambert law A = eps c l. Calculate the absorbance for eps = 1.0e4 M-1 cm-1, c = 1.0e-4 M and l = 1.0 cm.",
+      "answer": 1.0,
+      "tolerance": 0.1,
+      "explanation": "A = 1.0e4 x 1.0e-4 x 1.0 = 1.0. Spectroelectrochemistry uses this to follow the concentration of a species as it is generated."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps17-num-002",
+      "topicId": "ps17-spec",
+      "question": "The band gap of a semiconductor is related to wavelength by Eg(eV) = 1240/lambda(nm). Calculate Eg in eV for light of wavelength 620 nm.",
+      "answer": 2.0,
+      "tolerance": 0.1,
+      "unit": "eV",
+      "explanation": "Eg = 1240/620 = 2.0 eV."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps17-num-003",
+      "topicId": "ps17-spec",
+      "question": "For a semiconductor with a band gap of 2.0 eV, calculate the threshold wavelength in nm. (lambda = 1240/Eg.)",
+      "answer": 620,
+      "tolerance": 30,
+      "unit": "nm",
+      "explanation": "lambda = 1240/2.0 = 620 nm. Light of longer wavelength has too little energy to create electron-hole pairs."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps17-num-004",
+      "topicId": "ps17-spec",
+      "question": "In thin-layer spectroelectrochemistry the charge passed for 1.00e-4 mol is 19.30 mC. Calculate the number of electrons n (n = Q/(F x moles), F = 96485 C/mol).",
+      "answer": 2.0,
+      "tolerance": 0.1,
+      "explanation": "n = 0.01930/(96485 x 1.00e-4) = 0.01930/9.6485 = 2.0."
+    },
+    {
+      "id": "ps17-mcq-001",
+      "topicId": "ps17-spec",
+      "quick": true,
+      "question": "The main advantage of in-situ spectroelectrochemistry is that it:",
+      "options": [
+        "Identifies species optically while the electrode reaction is happening",
+        "Removes the need for a reference electrode",
+        "Needs no electrolyte",
+        "Measures mass directly"
+      ],
+      "answer": 0,
+      "explanation": "By coupling the electrochemical cell to a spectrometer, the species formed at the electrode are identified in real time by their spectra, linking current to structure."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps17-tf-001",
+      "topicId": "ps17-spec",
+      "quick": true,
+      "question": "In a photoelectrochemical cell, light with energy greater than the band gap can generate charge carriers that drive an electrode reaction.",
+      "answer": true,
+      "explanation": "Absorbed photons with energy above the band gap create electron-hole pairs, which can separate at the semiconductor-solution junction and drive chemistry such as water splitting."
+    },
+    {
+      "id": "ps17-mcq-002",
+      "topicId": "ps17-spec",
+      "quick": true,
+      "question": "Electrogenerated chemiluminescence (ECL) is:",
+      "options": [
+        "Light emitted when electrochemically generated species react to form an excited state",
+        "Heat released during electrolysis",
+        "Light absorbed by an electrode",
+        "A type of X-ray emission"
+      ],
+      "answer": 0,
+      "explanation": "In ECL an electrode reaction produces radicals that react to form an excited molecule, which emits light. It is used in sensitive bioassays."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps17-tf-002",
+      "topicId": "ps17-spec",
+      "question": "A rotating ring-disk electrode lets the products formed at the disk be detected at the ring.",
+      "answer": true,
+      "explanation": "Products generated at the disk are swept outward to the ring by the rotation, where they are detected electrochemically; the collection efficiency reports on intermediate stability."
+    },
+    {
+      "kind": "multi",
+      "id": "ps17-multi-001",
+      "topicId": "ps17-spec",
+      "question": "Which phenomena belong to spectroelectrochemistry or photoelectrochemistry? Select all that apply.",
+      "options": [
+        "In-situ UV-visible monitoring of products",
+        "Photocurrents at semiconductor electrodes",
+        "Electrogenerated chemiluminescence",
+        "Diffusion-limited steady-state currents at a microelectrode"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "In-situ optical monitoring, semiconductor photocurrents and ECL all involve light coupled to electrochemistry. A microelectrode steady-state current is a pure transport phenomenon with no light involved."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps17-num-005",
+      "topicId": "ps17-spec",
+      "question": "Use A = eps c l. Calculate the absorbance for eps = 5.0e3 M-1 cm-1, c = 2.0e-4 M, l = 1.0 cm.",
+      "answer": 1.0,
+      "tolerance": 0.1,
+      "explanation": "A = 5.0e3 x 2.0e-4 x 1.0 = 1.0."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps17-num-006",
+      "topicId": "ps17-spec",
+      "question": "Calculate the band gap in eV for a semiconductor that absorbs light of wavelength 500 nm (Eg = 1240/lambda).",
+      "answer": 2.48,
+      "tolerance": 0.15,
+      "unit": "eV",
+      "explanation": "Eg = 1240/500 = 2.48 eV."
+    },
+    {
+      "id": "ps17-mcq-003",
+      "topicId": "ps17-spec",
+      "quick": true,
+      "question": "The rotating ring-disk electrode is used to:",
+      "options": [
+        "Detect products formed at the disk by oxidising or reducing them at the ring",
+        "Measure temperature",
+        "Increase the band gap",
+        "Replace the reference electrode"
+      ],
+      "answer": 0,
+      "explanation": "Products generated at the disk are swept to the ring, where they are detected; the ring current reveals the fate and stability of reaction intermediates."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps17-tf-003",
+      "topicId": "ps17-spec",
+      "question": "A semiconductor electrode needs light with photon energy greater than its band gap to generate a photocurrent.",
+      "answer": true,
+      "explanation": "Only photons with energy above the band gap create electron-hole pairs, so there is a threshold wavelength beyond which no photocurrent flows."
+    },
+    {
+      "kind": "multi",
+      "id": "ps17-multi-002",
+      "topicId": "ps17-spec",
+      "question": "Which are advantages of spectroelectrochemical techniques? Select all that apply.",
+      "options": [
+        "Direct identification of reaction products",
+        "Real-time observation of species during reaction",
+        "Measurement of the number of electrons from the charge",
+        "Elimination of the need for any electrode"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "In-situ optics identify products in real time while coulometry gives n. An electrode is still required to drive the reaction."
+    }
+  ]
+}

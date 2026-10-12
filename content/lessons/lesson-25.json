@@ -1,0 +1,354 @@
+{
+  "slug": "lesson-25",
+  "label": "Lesson 25",
+  "title": "The elementary act of electron transfer",
+  "summary": "Why does an electron transfer need a barrier at all? This lesson goes below the Butler-Volmer curve to the molecular picture, where the barrier comes from reorganising the solvent and the reactants. It develops potential-energy surfaces, the Marcus theory of the activation energy, the difference between outer- and inner-sphere reactions, and the meaning of the transfer coefficient.",
+  "order": 25,
+  "minutes": 42,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Butler-Volmer describes an electrode reaction with a transfer coefficient and a rate constant, but it does not say where the barrier comes from or why the transfer coefficient is usually near one half. To answer those questions we need a picture of the reacting molecules."
+    },
+    {
+      "kind": "para",
+      "text": "That picture is the theory of the elementary act of electron transfer, built by Marcus and others. It shows that the barrier is mostly the energy needed to rearrange the solvent until the electron can move, and it predicts how the barrier changes with the driving force - including a striking surprise at large driving force."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The one-sentence summary",
+      "body": "An electron transfers when the solvent and the reactants have fluctuated into a configuration where the reactant and product states have equal energy; reaching that configuration costs the activation energy."
+    }
+  ],
+  "sections": [
+    {
+      "id": "why-a-barrier",
+      "tone": "azure",
+      "title": "Why an electron transfer needs a barrier",
+      "minutes": 8,
+      "summary": "An electron cannot simply jump when the two states have different energies. The surroundings must first reorganise so that reactant and product are at the same energy, and that reorganisation is the barrier.",
+      "keyPoints": [
+        "The electron moves only when the reactant state and the product state have equal energy.",
+        "The surroundings - solvent and bonds - must rearrange to reach that equal-energy configuration.",
+        "The energy needed to rearrange is the activation energy for the elementary act.",
+        "This explains why an electrode reaction can be slow even when it is thermodynamically favourable."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "An electron is not a classical particle that climbs a hill: it moves between states, and the simplest rule is that it goes when the two states have the same energy. Immediately after the reaction the product is surrounded by solvent arranged for the reactant, which is usually not the comfortable arrangement for the product. Something has to give."
+        },
+        {
+          "kind": "para",
+          "text": "The surroundings therefore fluctuate, and occasionally they reach a configuration in which the reactant and product states are equal in energy. At that moment the electron can transfer with no energy change, and afterwards the system relaxes into the product's preferred arrangement, releasing energy as heat."
+        },
+        {
+          "kind": "para",
+          "text": "The probability of reaching that configuration by thermal fluctuation is the activation energy. It is why a reaction can be thermodynamically downhill and still slow: the barrier is not about the overall energy change but about the reorganisation needed to let the electron move."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "The equal-energy condition",
+          "body": "Electron transfer happens where the two potential-energy curves cross. Finding that crossing point, and the energy needed to reach it, is the whole problem of the elementary act."
+        }
+      ]
+    },
+    {
+      "id": "potential-energy-surfaces",
+      "tone": "indigo",
+      "title": "Potential-energy surfaces",
+      "minutes": 9,
+      "summary": "Represent the reactant and product by two curves of energy against a reaction coordinate. The electron transfers where they cross, and the height of the crossing above the reactant's minimum is the barrier.",
+      "keyPoints": [
+        "The reactant and product states are drawn as two potential-energy curves against a reorganisation coordinate.",
+        "The curves are usually taken as parabolas, reflecting harmonic rearrangement of the surroundings.",
+        "Electron transfer occurs at the crossing point of the two curves.",
+        "The barrier is the energy from the reactant minimum up to that crossing."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "To make the problem tractable, the reactant and product are each drawn as a parabola of energy against a single coordinate that stands for all the rearrangement of the solvent and bonds. A parabola is the natural choice because small displacements from equilibrium cost energy quadratically, like a spring."
+        },
+        {
+          "kind": "para",
+          "text": "The reactant sits at the bottom of its parabola. The product sits at the bottom of its own parabola, shifted in both position and height: horizontally because the surroundings must change, and vertically because the reaction has its own energy change. The two curves cross."
+        },
+        {
+          "kind": "para",
+          "text": "The electron is assumed to transfer at the crossing, where the two curves have equal energy. The barrier is the vertical distance from the reactant minimum to that crossing. This single picture contains the whole theory, and the rest is just working out how the barrier depends on the driving force and the reorganisation."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "What the reaction coordinate is",
+          "body": "The horizontal coordinate is not a normal distance; it is a composite measure of how far the solvent and the reactant's bonds have moved from the reactant's equilibrium arrangement. Moving along it costs energy because it distorts the surroundings away from their comfortable state."
+        }
+      ]
+    },
+    {
+      "id": "marcus",
+      "tone": "violet",
+      "title": "The Marcus relation and the inverted region",
+      "minutes": 9,
+      "summary": "Marcus related the barrier to the driving force and a reorganisation energy, giving a parabola in the driving force. The most surprising prediction is that beyond a certain point, making the reaction more favourable makes it slower.",
+      "keyPoints": [
+        "The reorganisation energy lambda is the energy to rearrange the surroundings from reactant-like to product-like without transferring the electron.",
+        "The activation energy is ΔG‡ = (lambda + ΔG)²/(4 lambda).",
+        "The barrier is smallest when the driving force equals the reorganisation energy.",
+        "Beyond that point, a more favourable reaction is slower - the inverted region."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The shape of the two parabolas is set by one quantity, the reorganisation energy lambda: the energy it would take to distort the surroundings from the reactant's arrangement to the product's without letting the electron move. Geometry then gives the activation energy as a simple function of lambda and the reaction's driving force."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\Delta G^{\\ddagger} = \\frac{(\\lambda + \\Delta G^{\\circ})^2}{4\\lambda}",
+          "caption": "The Marcus relation for the activation energy"
+        },
+        {
+          "kind": "para",
+          "text": "Read this as a parabola in the driving force. When the reaction is very unfavourable the barrier is large; as it becomes more favourable the barrier falls; it reaches its minimum when the driving force equals the reorganisation energy, at which point the barrier is zero and the reaction is as fast as possible."
+        },
+        {
+          "kind": "para",
+          "text": "The surprise is what happens next. Push the driving force beyond lambda and the barrier rises again. The reaction becomes *slower* even though it is more exergonic. This inverted region was predicted before it was observed and remains one of the sharpest tests of the theory: beyond the optimum, extra driving force has to be paid back as a bigger reorganisation barrier."
+        },
+        {
+          "kind": "callout",
+          "variant": "example",
+          "title": "The parabola in action",
+          "body": "Plot the measured rate against driving force and the points fall on a parabola, rising, peaking, and falling again. The peak locates the reorganisation energy and the falling side is the inverted region."
+        }
+      ]
+    },
+    {
+      "id": "outer-and-inner-sphere",
+      "tone": "rose",
+      "title": "Outer-sphere, inner-sphere and nonadiabatic transfer",
+      "minutes": 8,
+      "summary": "In an outer-sphere reaction the electron tunnels between two intact coordination shells; in an inner-sphere reaction a bridging ligand provides a path. Whether transfer happens on every crossing or only rarely distinguishes adiabatic from nonadiabatic behaviour.",
+      "keyPoints": [
+        "An outer-sphere reaction transfers the electron with no bond made or broken; the shells stay intact.",
+        "An inner-sphere reaction uses a bridging ligand to carry the electron.",
+        "Adiabatic transfer happens with high probability at each crossing; nonadiabatic transfer is rare.",
+        "Long-distance transfer in proteins is typically nonadiabatic, with the rate falling off as distance grows."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Two mechanisms are distinguished by whether the reacting species touch through their inner coordination. In an outer-sphere reaction the electron tunnels between two species whose coordination shells remain intact, with no bond formed or broken. Because nothing is disturbed except by solvation, outer-sphere reactions are the cleanest test of the theory."
+        },
+        {
+          "kind": "para",
+          "text": "In an inner-sphere reaction a ligand bridges the two centres and provides a path for the electron. The bridge can be much longer than a direct contact, and it can be tuned chemically, which is why inner-sphere transfer is central to catalysis and to the wiring of proteins."
+        },
+        {
+          "kind": "para",
+          "text": "A second distinction is the probability of transfer at each crossing. If the coupling between reactant and product is strong, the system transfers almost every time it reaches the crossing - the adiabatic case. If the coupling is weak, as over long distances or through a poor bridge, transfer is rare even at the crossing, and the reaction is nonadiabatic. The rate then falls off with distance, which is exactly what is seen when redox centres are buried in proteins."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "Adiabatic and nonadiabatic in one line",
+          "body": "Adiabatic means the system follows the lower surface smoothly; nonadiabatic means it usually fails to make the transition even when it reaches the crossing, and must be given many chances."
+        }
+      ]
+    },
+    {
+      "id": "transfer-coefficient",
+      "tone": "coral",
+      "title": "What the transfer coefficient means",
+      "minutes": 8,
+      "summary": "The transfer coefficient of the Butler-Volmer equation is the fraction of the driving force that lowers the barrier. In the microscopic picture it reflects the symmetry of the two potential-energy curves, and its value near one half is no accident.",
+      "keyPoints": [
+        "The transfer coefficient alpha measures how the barrier changes with potential.",
+        "It is the fraction of the applied driving force that lowers the forward barrier.",
+        "In the simple symmetric picture alpha is about one half.",
+        "Real systems can show alpha different from one half, and even varying with potential."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The transfer coefficient from earlier lessons reappears here as a geometric property. If the two potential-energy curves are symmetric, moving the product curve up or down by the applied energy splits the change evenly: half of it lowers the forward barrier and half raises the reverse one. That is alpha equals one half."
+        },
+        {
+          "kind": "para",
+          "text": "If the curves are not symmetric - because the product is more reorganised, or the transition state sits off centre - then alpha departs from one half. When the driving force is large enough that the crossing moves into the curved part of the parabola, alpha itself changes with potential, which is why the Tafel line bends."
+        },
+        {
+          "kind": "para",
+          "text": "This ties the whole lesson back to the empirical kinetics. The transfer coefficient, the Tafel slope and the symmetry of the potential-energy surfaces are three views of the same quantity. The microscopic theory explains what Butler-Volmer assumed."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "From empiricism to mechanism",
+          "body": "Butler-Volmer gives the shape of the current-potential curve. The theory of the elementary act explains why that shape appears and what the coefficients mean in terms of solvent reorganisation and the structure of the transition state."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "truefalse",
+      "id": "l25-tf-001",
+      "topicId": "why-a-barrier",
+      "quick": true,
+      "question": "An electron transfers readily even when the reactant and product states have different energies.",
+      "answer": false,
+      "explanation": "The electron transfers when the two states have equal energy, which requires the surroundings to fluctuate into that configuration. Reaching it is the activation barrier."
+    },
+    {
+      "id": "l25-mcq-001",
+      "topicId": "why-a-barrier",
+      "quick": true,
+      "question": "The activation barrier for electron transfer is mainly the energy needed to:",
+      "options": [
+        "Ionise the metal",
+        "Reorganise the solvent and reactant surroundings",
+        "Melt the electrode",
+        "Evaporate the solution"
+      ],
+      "answer": 1,
+      "explanation": "The surroundings must rearrange until the reactant and product states have equal energy. The energy to reach that configuration is the barrier."
+    },
+    {
+      "id": "l25-mcq-002",
+      "topicId": "potential-energy-surfaces",
+      "quick": true,
+      "question": "In the potential-energy picture, electron transfer is assumed to occur:",
+      "options": [
+        "At the bottom of the reactant parabola",
+        "At the crossing point of the reactant and product curves",
+        "Only in a vacuum",
+        "When the product parabola is far below the reactant"
+      ],
+      "answer": 1,
+      "explanation": "The two curves cross at equal energy, and that is where the electron moves. The height of the crossing above the reactant minimum is the barrier."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l25-tf-002",
+      "topicId": "potential-energy-surfaces",
+      "question": "The reactant and product are usually represented by parabolic potential-energy curves.",
+      "answer": true,
+      "explanation": "A parabola is the natural shape because small displacements from equilibrium cost energy quadratically, like a spring. The curves' shift and height difference encode the reorganisation and the driving force."
+    },
+    {
+      "id": "l25-mcq-003",
+      "topicId": "marcus",
+      "quick": true,
+      "question": "In Marcus theory the reorganisation energy lambda is:",
+      "options": [
+        "The overall energy of the reaction",
+        "The energy to rearrange the surroundings from reactant-like to product-like without transferring the electron",
+        "The binding energy of the electron",
+        "The thermal energy kT"
+      ],
+      "answer": 1,
+      "explanation": "Lambda measures how far the surroundings must be distorted to swap arrangements. It sets the curvature of the barrier's dependence on driving force."
+    },
+    {
+      "kind": "numeric",
+      "id": "l25-num-001",
+      "topicId": "marcus",
+      "question": "Using ΔG‡ = (lambda + ΔG)²/(4 lambda), what is the activation energy when the driving force exactly equals minus the reorganisation energy, that is ΔG = -lambda? Give the answer in the same units as lambda (enter 0 for zero).",
+      "answer": 0,
+      "tolerance": 0.01,
+      "explanation": "When ΔG = -lambda the numerator is (lambda - lambda)² = 0, so the barrier vanishes. This is the optimum point where the reaction is fastest."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l25-tf-003",
+      "topicId": "marcus",
+      "question": "In the inverted region, making the reaction more favourable makes it slower.",
+      "answer": true,
+      "explanation": "Beyond a driving force equal to lambda the barrier rises again, so extra exergonicity slows the reaction. The inverted region was a striking prediction before it was observed."
+    },
+    {
+      "id": "l25-mcq-004",
+      "topicId": "outer-and-inner-sphere",
+      "quick": true,
+      "question": "An outer-sphere electron-transfer reaction is one in which:",
+      "options": [
+        "A bridging ligand carries the electron",
+        "The electron transfers between intact coordination shells with no bond made or broken",
+        "The electrode dissolves",
+        "The solvent freezes"
+      ],
+      "answer": 1,
+      "explanation": "No bond is formed or broken in an outer-sphere reaction, which makes it the cleanest test of the theory. An inner-sphere reaction instead uses a bridging ligand."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l25-tf-004",
+      "topicId": "outer-and-inner-sphere",
+      "question": "Long-distance electron transfer in proteins is usually nonadiabatic, with the rate falling off as distance increases.",
+      "answer": true,
+      "explanation": "When the coupling between reactant and product is weak, transfer is rare even at the crossing, so the rate drops with distance. This is typical of redox centres buried in proteins."
+    },
+    {
+      "kind": "multi",
+      "id": "l25-multi-001",
+      "topicId": "outer-and-inner-sphere",
+      "question": "Which statements about electron-transfer mechanisms are correct? Select all that apply.",
+      "options": [
+        "Outer-sphere transfer leaves the coordination shells intact",
+        "Inner-sphere transfer uses a bridging ligand",
+        "Adiabatic transfer occurs with high probability at each crossing",
+        "Nonadiabatic transfer occurs on every crossing without fail"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Outer-sphere leaves the shells intact, inner-sphere uses a bridge, and adiabatic transfer is efficient at each crossing. Nonadiabatic transfer is the opposite: it usually fails at the crossing, so the rate is lower."
+    },
+    {
+      "id": "l25-mcq-005",
+      "topicId": "transfer-coefficient",
+      "quick": true,
+      "question": "The transfer coefficient alpha is best understood microscopically as:",
+      "options": [
+        "A random constant",
+        "The fraction of the driving force that lowers the forward barrier, reflecting the symmetry of the potential-energy curves",
+        "The number of electrons",
+        "The temperature divided by the field"
+      ],
+      "answer": 1,
+      "explanation": "When the curves are symmetric, half the driving force lowers the forward barrier, giving alpha near one half. Asymmetry or a curved crossing shifts it and can make it vary with potential."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l25-tf-005",
+      "topicId": "transfer-coefficient",
+      "question": "A transfer coefficient different from one half reflects an asymmetric shape of the potential-energy curves.",
+      "answer": true,
+      "explanation": "Alpha is a geometric property of the two curves. When the transition state sits off centre or the crossing moves into a curved region, alpha departs from one half and can even change with potential."
+    },
+    {
+      "kind": "multi",
+      "id": "l25-multi-002",
+      "topicId": "transfer-coefficient",
+      "question": "How is the elementary-act theory related to the empirical kinetics? Select all that apply.",
+      "options": [
+        "It explains the origin of the activation barrier",
+        "It gives a microscopic meaning to the transfer coefficient",
+        "It predicts a change in Tafel slope when alpha varies",
+        "It replaces the need for any measurements"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The theory explains the barrier, gives alpha a microscopic meaning, and predicts curvature of the Tafel plot when alpha varies. It complements measurement rather than replacing it."
+    }
+  ]
+}

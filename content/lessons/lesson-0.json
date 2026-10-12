@@ -1,0 +1,518 @@
+{
+  "slug": "lesson-0",
+  "label": "Lesson 0",
+  "title": "A short introduction",
+  "summary": "Before the equations, here is the picture. Electrochemistry is the chemistry of electrons moving between a metal and a solution. This short lesson explains what that means, the three quantities we use to describe it, how a cell is written down, and how the rest of the course fits together.",
+  "order": 0,
+  "minutes": 25,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "This is a short welcome lesson, not a long one. It assumes you remember some school chemistry, but nothing more, and it takes about half an hour. Everything in it is used again later, so it is worth reading carefully before you move on."
+    },
+    {
+      "kind": "para",
+      "text": "The aim is simple. By the end you should be able to say what electrochemistry studies, name the three quantities that describe a cell, and read the short-hand way chemists write a cell down. That is the vocabulary the next lessons build on."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The one-sentence summary",
+      "body": "Electrochemistry studies reactions in which electrons cross the boundary between a metal electrode and a solution, and it describes them with three ideas: charge, current and potential."
+    }
+  ],
+  "sections": [
+    {
+      "id": "what-it-studies",
+      "tone": "azure",
+      "title": "What electrochemistry studies",
+      "minutes": 6,
+      "summary": "Electrochemistry is the chemistry of electron transfer at the edge of a metal and a solution. This section gives the big picture and shows the two directions a cell can run.",
+      "keyPoints": [
+        "Electrochemistry studies reactions in which electrons pass between an electrode and a solution.",
+        "Oxidation means losing electrons, and reduction means gaining them; together they make a redox reaction.",
+        "A galvanic cell uses a reaction that happens by itself to make electricity; an electrolytic cell uses electricity to push a reaction the other way.",
+        "Oxidation always happens at the anode and reduction at the cathode."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Most chemistry is about atoms swapping partners in a solution. Electrochemistry is different because one partner is a solid metal and the other is a liquid. The reaction happens right at the surface where they meet, and its currency is the electron."
+        },
+        {
+          "kind": "para",
+          "text": "The metal is called the *electrode*. It can hand electrons to the solution or take them back. The liquid is called the *electrolyte*; it contains ions, which are atoms or groups of atoms carrying a charge. When the electrode gives out electrons, something in the solution is reduced."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "Oxidation and reduction, without the confusion",
+          "body": "Oxidation is the *loss* of electrons; reduction is the *gain* of electrons. A memory aid is OIL RIG: Oxidation Is Loss, Reduction Is Gain. The two always happen together, because an electron has to go somewhere. A reaction built this way is called a redox reaction."
+        },
+        {
+          "kind": "heading",
+          "text": "Two directions a cell can take"
+        },
+        {
+          "kind": "para",
+          "text": "A cell can run in two directions. If the reaction wants to happen by itself, it can push electrons around an outside wire and do useful work; this is a *galvanic* cell, and it makes electricity. If the reaction does not want to happen, we can still force it by feeding electricity in; this is an *electrolytic* cell, and it uses electricity. Batteries are galvanic cells; the industrial plants that make aluminium or chlorine use electrolytic cells."
+        },
+        {
+          "kind": "callout",
+          "variant": "example",
+          "title": "The same reaction, both ways",
+          "body": "Take the reaction between zinc and copper ions. Left alone in a beaker it runs by itself and warms up, releasing its energy as heat. Split the two metals into separate half-cells joined by a wire and a salt bridge, and the very same reaction runs as a galvanic cell, delivering that energy as electricity instead. Force the reaction backwards with an outside supply, turning copper metal back into copper ions and zinc ions back into zinc metal, and you have an electrolytic cell. One reaction, three ways to run it."
+        },
+        {
+          "kind": "list",
+          "items": [
+            "*Anode*: the electrode where oxidation happens (electrons leave the solution).",
+            "*Cathode*: the electrode where reduction happens (electrons enter the solution).",
+            "The two names are fixed by the reaction, not by which side of the cell looks positive."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "charge-current-potential",
+      "tone": "indigo",
+      "title": "Charge, current and potential",
+      "minutes": 6,
+      "summary": "Three quantities describe almost everything in electrochemistry: how much charge is moved, how fast it moves, and how much energy each unit of charge carries.",
+      "keyPoints": [
+        "Charge is measured in coulombs (C); one mole of electrons carries a charge of about 96 485 C, called the Faraday constant F.",
+        "Current is the rate of flow of charge, measured in amperes (A), where 1 A = 1 C/s.",
+        "The charge passed in a steady current is Q = I t.",
+        "Potential is energy per unit charge, measured in volts (V), where 1 V = 1 J/C; a cell voltage is the energy available per coulomb."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Three quantities cover most of the subject. The first is *charge*, written Q and measured in coulombs (C). Electrons are tiny, so a useful amount of charge means an enormous number of them. It is easier to count them by the mole: one mole of electrons carries the *Faraday constant* F."
+        },
+        {
+          "kind": "formula",
+          "tex": "F = N_A e \\approx 96\\,485\\ \\mathrm{C\\ mol^{-1}}",
+          "caption": "Charge on one mole of electrons"
+        },
+        {
+          "kind": "para",
+          "text": "The second quantity is *current*, written I and measured in amperes (A). Current is simply charge moving past a point each second, so 1 A = 1 C/s. If the current is steady, the total charge that has passed is current multiplied by time."
+        },
+        {
+          "kind": "formula",
+          "tex": "Q = I t \\qquad Q = nF",
+          "caption": "Charge from a steady current, and charge from n moles of electrons"
+        },
+        {
+          "kind": "para",
+          "text": "The third quantity is *potential*, written E and measured in volts (V). Potential is energy per unit charge: one volt is one joule per coulomb. A cell voltage therefore tells you how much energy each coulomb of charge can deliver, not how many coulombs flow. Voltage and current answer different questions: voltage is how hard the charge is pushed, current is how much is moving."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "The three quantities in one line",
+          "body": "Charge Q (coulombs) is *how much*; current I (amperes) is *how fast*; potential E (volts) is *how much energy per charge*. Most of electrochemistry is built from these three ideas."
+        },
+        {
+          "kind": "worked",
+          "title": "From a current to a number of electrons",
+          "given": "A steady current of 0.50 A flows for 2.0 minutes. What charge passes, and how many moles of electrons is that? Take F = 96 485 C/mol.",
+          "steps": [
+            "Convert the time to seconds, because the ampere is coulombs per second: 2.0 min = 120 s.",
+            "Multiply current by time to get charge: Q = I t = 0.50 x 120 = 60 C.",
+            "Divide the charge by the Faraday constant to count the electrons by the mole: n = Q / F = 60 / 96 485 = 6.2 x 10^-4 mol."
+          ],
+          "result": "About 60 C has passed, which is 6.2 x 10^-4 mol of electrons."
+        }
+      ]
+    },
+    {
+      "id": "how-a-cell-is-written",
+      "tone": "violet",
+      "title": "How a cell is written",
+      "minutes": 6,
+      "summary": "Chemists describe a cell with a one-line diagram. Once you can read the symbols, you can see the anode, the cathode and every boundary in the cell at a glance.",
+      "keyPoints": [
+        "A cell diagram is read from left to right: the anode is on the left, the cathode on the right.",
+        "A single vertical line marks a boundary between two phases; a double line marks a salt bridge or liquid junction.",
+        "In the example Zn(s) | Zn2+(aq) || Cu2+(aq) | Cu(s), zinc is oxidised on the left and copper ions are reduced on the right.",
+        "Each side of the double line is one half-cell, with its own electrode and solution."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Drawing a whole cell every time would be slow, so chemists use a short-hand line. Solids are written as the metal, ions as their formula, and vertical lines stand for the surfaces between them. By agreement, the diagram is always read from left to right."
+        },
+        {
+          "kind": "table",
+          "head": [
+            "Symbol",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "|",
+              "A boundary between two phases, for example metal and solution."
+            ],
+            [
+              "||",
+              "A salt bridge or other liquid junction joining the two half-cells."
+            ],
+            [
+              "Left-hand end",
+              "The anode, where oxidation happens."
+            ],
+            [
+              "Right-hand end",
+              "The cathode, where reduction happens."
+            ]
+          ],
+          "widths": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "para",
+          "text": "Here is a familiar example. A strip of zinc in zinc sulfate on the left, a strip of copper in copper sulfate on the right, and a salt bridge between them."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\mathrm{Zn(s)}\\ |\\ \\mathrm{Zn^{2+}(aq)}\\ \\|\\ \\mathrm{Cu^{2+}(aq)}\\ |\\ \\mathrm{Cu(s)}",
+          "caption": "The Daniell cell, read from left to right"
+        },
+        {
+          "kind": "para",
+          "text": "Reading it tells the whole story: zinc is oxidised on the left (it gives up electrons and becomes Zn2+), the electrons travel through the outside wire, and copper ions on the right take the electrons and become copper metal. The salt bridge lets charge balance without mixing the two solutions."
+        },
+        {
+          "kind": "callout",
+          "variant": "example",
+          "title": "Reading a cell with a gas electrode",
+          "body": "Not every electrode is a metal in its own salt solution. The standard hydrogen electrode is written Pt(s) | H2(g) | H+(aq). The platinum is inert, it only carries the current, while the actual reaction involves hydrogen gas and hydrogen ions. Notice the extra phase boundaries: each vertical line marks a new phase, here platinum, then gas, then solution."
+        },
+        {
+          "kind": "callout",
+          "variant": "warn",
+          "title": "The common mistake",
+          "body": "Do not label the electrodes by their charge signs when the cell is galvanic. Label them by the reaction: the anode is always where oxidation happens and the cathode where reduction happens, whichever side they sit on."
+        }
+      ]
+    },
+    {
+      "id": "the-road-ahead",
+      "tone": "rose",
+      "title": "The road ahead",
+      "minutes": 5,
+      "summary": "A short map of the lessons, and a simple way to study each section so that nothing is left behind.",
+      "keyPoints": [
+        "The lessons follow a path: ions in solution, then why potentials exist, then how fast reactions go, then how to measure and use them.",
+        "Study one section at a time, answer its three quick checks, and only then move on.",
+        "The full quiz at the end of each lesson mixes all of its sections together, so it is a fair test.",
+        "The numbers matter less than the reasoning; if you can explain the idea, the formula follows."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "You now have the vocabulary. The lessons that follow put it to work in a fixed order, and each one leans on the one before it."
+        },
+        {
+          "kind": "list",
+          "ordered": true,
+          "items": [
+            "*Ions in solution*: how charge moves through an electrolyte, and how fast each ion travels.",
+            "*Thermodynamics*: why a cell has a voltage at all, and where that voltage comes from.",
+            "*Measuring a potential*: why a single electrode potential cannot be measured, and how reference electrodes solve the problem.",
+            "*Electrodes and reactions*: the different kinds of electrode, and the reactions they run.",
+            "*Kinetics*: how fast an electrochemical reaction goes, and what slows it down.",
+            "*Looking ahead*: the later lessons turn all of this into batteries, corrosion, sensors and industrial cells."
+          ]
+        },
+        {
+          "kind": "para",
+          "text": "A good way to study is to read one section, close it, and try the three quick checks at the end. If you get one wrong, the explanation points you back to the paragraph that answers it. When a whole lesson is finished, the full quiz brings all of its sections together."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "If you remember only one thing",
+          "body": "Electrochemistry is electron transfer at a metal-solution boundary, described by charge, current and potential. Every later lesson is a deeper look at one part of that sentence."
+        }
+      ],
+      "cta": {
+        "title": "Ready to begin?",
+        "body": "Take the Lesson 0 quiz to check the vocabulary, then start Lesson 1, where ions in solution are made quantitative.",
+        "href": "/lessons/lesson-0/quiz",
+        "linkLabel": "Take the Lesson 0 quiz",
+        "secondaryHref": "/lessons/lesson-1",
+        "secondaryLabel": "Go to Lesson 1"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "l0-mcq-001",
+      "topicId": "what-it-studies",
+      "quick": true,
+      "question": "Electrochemistry is best described as the study of:",
+      "options": [
+        "Reactions where electrons move between an electrode and a solution",
+        "Reactions that only happen at very high temperature",
+        "The colour of metal salts in water",
+        "The strength of acids and bases"
+      ],
+      "answer": 0,
+      "explanation": "The essential feature is electron transfer at a metal-solution boundary. That boundary is what makes electrochemistry different from ordinary solution chemistry."
+    },
+    {
+      "id": "l0-mcq-002",
+      "topicId": "what-it-studies",
+      "quick": true,
+      "question": "Oxidation is the:",
+      "options": [
+        "Gain of electrons",
+        "Loss of electrons",
+        "Loss of protons",
+        "Gain of neutrons"
+      ],
+      "answer": 1,
+      "explanation": "Oxidation is the loss of electrons and reduction is the gain. The memory aid OIL RIG stands for Oxidation Is Loss, Reduction Is Gain."
+    },
+    {
+      "id": "l0-mcq-003",
+      "topicId": "what-it-studies",
+      "quick": true,
+      "question": "A cell that uses a spontaneous reaction to produce electricity is called:",
+      "options": [
+        "An electrolytic cell",
+        "A galvanic cell",
+        "A fuel tank",
+        "An insulator"
+      ],
+      "answer": 1,
+      "explanation": "A galvanic cell runs the reaction in the direction it wants to go and harvests the energy as electricity. An electrolytic cell does the opposite and needs electricity fed in."
+    },
+    {
+      "id": "l0-mcq-004",
+      "topicId": "what-it-studies",
+      "question": "The cathode is the electrode where:",
+      "options": [
+        "Oxidation happens",
+        "Reduction happens",
+        "No reaction happens",
+        "The solution freezes"
+      ],
+      "answer": 1,
+      "explanation": "By definition the cathode is where reduction takes place, and the anode is where oxidation takes place. These names follow the reaction, not the physical side of the cell."
+    },
+    {
+      "id": "l0-mcq-005",
+      "topicId": "charge-current-potential",
+      "quick": true,
+      "question": "Current is measured in amperes. One ampere is equal to:",
+      "options": [
+        "One coulomb per second",
+        "One volt per second",
+        "One joule per second",
+        "One mole per second"
+      ],
+      "answer": 0,
+      "explanation": "Current is the rate at which charge flows, so its unit is charge per time: 1 A = 1 C/s."
+    },
+    {
+      "id": "l0-mcq-006",
+      "topicId": "charge-current-potential",
+      "quick": true,
+      "question": "The Faraday constant F is the charge carried by one mole of electrons, about:",
+      "options": [
+        "96.5 C/mol",
+        "965 C/mol",
+        "96 485 C/mol",
+        "6.02 C/mol"
+      ],
+      "answer": 2,
+      "explanation": "F is about 96 485 C/mol. It is the bridge between the number of moles of electrons and the total charge passed."
+    },
+    {
+      "id": "l0-mcq-007",
+      "topicId": "charge-current-potential",
+      "quick": true,
+      "question": "Potential is best described as:",
+      "options": [
+        "The number of electrons moving per second",
+        "The energy per unit charge",
+        "The mass of the electrode",
+        "The volume of the electrolyte"
+      ],
+      "answer": 1,
+      "explanation": "One volt is one joule per coulomb, so a voltage tells you how much energy each unit of charge carries. Current, by contrast, tells you how much charge moves."
+    },
+    {
+      "id": "l0-mcq-008",
+      "topicId": "charge-current-potential",
+      "question": "A steady current of 2 A flows for 30 seconds. What charge has passed?",
+      "options": [
+        "15 C",
+        "30 C",
+        "60 C",
+        "120 C"
+      ],
+      "answer": 2,
+      "explanation": "Charge is current times time: Q = I t = 2 A x 30 s = 60 C."
+    },
+    {
+      "id": "l0-mcq-008b",
+      "topicId": "how-a-cell-is-written",
+      "quick": true,
+      "question": "In a cell diagram, a double vertical line (||) usually marks:",
+      "options": [
+        "A metal-solution boundary",
+        "A salt bridge or liquid junction",
+        "The end of the reaction",
+        "A change of temperature"
+      ],
+      "answer": 1,
+      "explanation": "A single line marks a phase boundary, such as a metal touching a solution. A double line marks a salt bridge or another junction between the two half-cells."
+    },
+    {
+      "id": "l0-mcq-009",
+      "topicId": "how-a-cell-is-written",
+      "quick": true,
+      "question": "In a cell diagram, the anode is written:",
+      "options": [
+        "On the left",
+        "On the right",
+        "In the middle",
+        "The anode is not shown"
+      ],
+      "answer": 0,
+      "explanation": "Cell diagrams are read from left to right, and by agreement the anode (where oxidation happens) is placed on the left and the cathode on the right."
+    },
+    {
+      "id": "l0-mcq-010",
+      "topicId": "how-a-cell-is-written",
+      "quick": true,
+      "question": "In Zn(s) | Zn2+(aq) || Cu2+(aq) | Cu(s), which metal is oxidised?",
+      "options": [
+        "Zinc",
+        "Copper",
+        "Both zinc and copper",
+        "Neither metal"
+      ],
+      "answer": 0,
+      "explanation": "Zinc sits at the left-hand end, the anode, so it is oxidised to Zn2+. Copper ions are reduced to copper metal at the cathode on the right."
+    },
+    {
+      "id": "l0-mcq-011",
+      "topicId": "how-a-cell-is-written",
+      "question": "A single vertical line (|) in a cell diagram marks:",
+      "options": [
+        "A salt bridge",
+        "A boundary between two phases",
+        "A change in temperature",
+        "A gas bubble"
+      ],
+      "answer": 1,
+      "explanation": "A single line stands for a phase boundary, for example the surface between a solid metal electrode and the solution it touches."
+    },
+    {
+      "kind": "multi",
+      "id": "l0-multi-001",
+      "topicId": "what-it-studies",
+      "quick": true,
+      "question": "Which of these are true of every electrochemical cell? Select all that apply.",
+      "options": [
+        "It has two electrodes",
+        "Electrons cross the metal-solution boundary",
+        "Its reaction is always spontaneous",
+        "Charge is carried through the solution by ions"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Two electrodes and electron transfer at the metal-solution boundary define an electrochemical cell, and the solution carries charge by ion movement. Spontaneity is not required: an electrolytic cell is driven by an external supply and is not spontaneous."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l0-tf-001",
+      "topicId": "how-a-cell-is-written",
+      "quick": true,
+      "question": "In the shorthand cell notation, the anode is written on the right-hand side.",
+      "answer": false,
+      "explanation": "By convention the anode, where oxidation occurs, is written on the left and the cathode, where reduction occurs, on the right. The two are separated by the salt bridge, drawn as a double vertical bar."
+    },
+    {
+      "kind": "numeric",
+      "id": "l0-num-001",
+      "topicId": "charge-current-potential",
+      "question": "A steady current of 2.5 A flows for 40 s. What charge passes, in coulombs?",
+      "answer": 100,
+      "tolerance": 1,
+      "unit": "C",
+      "explanation": "Charge is current times time: q = It = 2.5 A x 40 s = 100 C."
+    },
+    {
+      "kind": "numeric",
+      "id": "l0-num-002",
+      "topicId": "charge-current-potential",
+      "quick": true,
+      "question": "How many moles of electrons carry a charge of 96 485 C? Take F = 96 485 C/mol.",
+      "answer": 1.0,
+      "tolerance": 0.01,
+      "unit": "mol",
+      "explanation": "One mole of electrons carries the Faraday constant, about 96 485 C. So 96 485 C is exactly one mole of electrons: n = Q / F = 96 485 / 96 485 = 1 mol."
+    },
+    {
+      "kind": "numeric",
+      "id": "l0-num-003",
+      "topicId": "charge-current-potential",
+      "question": "A current of 0.50 A flows for 5.0 minutes. What charge passes, in coulombs?",
+      "answer": 150,
+      "tolerance": 1,
+      "unit": "C",
+      "explanation": "Convert the time to seconds: 5.0 min = 300 s. Then Q = I t = 0.50 x 300 = 150 C."
+    },
+    {
+      "id": "l0-mcq-012",
+      "topicId": "charge-current-potential",
+      "question": "Which quantity tells you how much charge moves past a point each second?",
+      "options": [
+        "Charge",
+        "Current",
+        "Potential",
+        "Resistance"
+      ],
+      "answer": 1,
+      "explanation": "Current is the rate of flow of charge, measured in coulombs per second (amperes). Charge is the total amount that has moved; potential is the energy per unit charge."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l0-tf-002",
+      "topicId": "what-it-studies",
+      "question": "In an electrolytic cell the overall reaction is spontaneous.",
+      "answer": false,
+      "explanation": "An electrolytic cell drives a non-spontaneous reaction by feeding in electrical energy. A galvanic cell is the one that runs a spontaneous reaction and produces electricity."
+    },
+    {
+      "kind": "multi",
+      "id": "l0-multi-002",
+      "topicId": "charge-current-potential",
+      "question": "Which statements about potential are correct? Select all that apply.",
+      "options": [
+        "One volt equals one joule per coulomb",
+        "Potential is energy per unit charge",
+        "Potential measures how fast charge flows",
+        "A cell voltage is the energy available per coulomb of charge"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Potential is energy per unit charge, so one volt is one joule per coulomb, and a cell voltage is the energy each coulomb can deliver. How fast charge flows is the current, not the potential."
+    }
+  ]
+}

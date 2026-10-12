@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import LessonView from "@/components/views/LessonView";
-import { plainText } from "@/components/Blocks";
+import { plainText } from "@/components/kit";
 import { allLessons } from "@/content";
 
 type Params = { slug: string };

@@ -1,0 +1,348 @@
+{
+  "slug": "lesson-21",
+  "label": "Lesson 21",
+  "title": "Bioelectrochemistry",
+  "summary": "Living systems run on electron transfer, from respiration to photosynthesis. This lesson looks at how biology and electrochemistry meet: how redox proteins exchange electrons with an electrode, how enzyme electrodes become biosensors, how bacteria can generate current, and how electrochemistry is used to study and stimulate living systems.",
+  "order": 21,
+  "minutes": 40,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Biology is full of electrochemistry. Every time a cell respires it moves electrons down a chain of proteins; every nerve impulse is a wave of membrane potential. Bioelectrochemistry studies these processes and, increasingly, wires them to electrodes."
+    },
+    {
+      "kind": "para",
+      "text": "This lesson covers the meeting point: getting an electron from a protein into a metal, turning an enzyme into a selective sensor, harvesting the respiration of bacteria as current, and using electrodes to probe biology."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The one-sentence summary",
+      "body": "Bioelectrochemistry connects biological electron transfer to electrodes, whether the electron comes from a redox protein, an enzyme, or a whole living cell."
+    }
+  ],
+  "sections": [
+    {
+      "id": "electrons-and-life",
+      "tone": "azure",
+      "title": "Electrons and life",
+      "minutes": 8,
+      "summary": "Biological energy flows through chains of redox proteins, and cells maintain membrane potentials. The redox sites are usually buried inside proteins, which makes wiring them to an electrode a challenge.",
+      "keyPoints": [
+        "Respiration and photosynthesis move electrons through chains of redox proteins.",
+        "Redox centres are usually buried inside the protein, away from the electrode.",
+        "Cell membranes maintain a potential difference, the basis of nerve signals.",
+        "Electron transfer over distance happens by tunnelling and by hopping between centres."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A cell extracts energy by passing electrons along a chain of proteins, each one handing the electron to the next and releasing a little energy on the way. The same chain, run backwards with light as the input, is photosynthesis. Biology is therefore an electrochemical machine built from proteins."
+        },
+        {
+          "kind": "para",
+          "text": "The difficulty for an electrochemist is that the redox centre - the place where the electron actually sits - is usually buried deep inside the protein, shielded from the outside by the folded chain. An electrode cannot simply touch it. Bridging that distance is the central problem of protein electrochemistry."
+        },
+        {
+          "kind": "para",
+          "text": "The exception is the cell membrane. A living membrane can hold a potential difference across its few-nanometre thickness, and a travelling change in that potential is a nerve impulse. Electrochemistry, and its cousin electrophysiology, grew up studying such potentials."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "Why burying the site is useful",
+          "body": "By shielding the redox centre, the protein controls exactly who it talks to. That selectivity is what makes biology work, and it is also what makes proteins hard to connect to a macroscopic electrode."
+        }
+      ]
+    },
+    {
+      "id": "enzyme-electrodes",
+      "tone": "indigo",
+      "title": "Enzyme electrodes",
+      "minutes": 9,
+      "summary": "An enzyme can be immobilised on an electrode so that its reaction produces or consumes electrons. The electron may transfer directly or via a mediator, and a mediator often makes the coupling much faster.",
+      "keyPoints": [
+        "An enzyme electrode couples an enzyme's reaction to an electrode.",
+        "Direct electron transfer needs the redox site close to the electrode.",
+        "A mediator shuttles electrons between the buried site and the electrode.",
+        "The enzyme gives selectivity; the electrode gives the measurable signal."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "An enzyme electrode immobilises an enzyme on a conducting surface. The enzyme catalyses a reaction, and the electron involved is delivered to or taken from the electrode, so the reaction becomes a current. The enzyme supplies selectivity - only its substrate reacts - and the electrode turns that reaction into a number."
+        },
+        {
+          "kind": "para",
+          "text": "Getting the electron across is the hard part. Direct electron transfer requires the redox site to be near the electrode, which is rarely true for a buried centre. A mediator solves the problem: a small redox molecule shuttles between the enzyme and the electrode, carrying the electron over the distance the protein will not."
+        },
+        {
+          "kind": "para",
+          "text": "The choice between direct and mediated transfer shapes the device. Direct transfer makes a simpler sensor but depends on lucky orientation of the protein. Mediated transfer is more general but adds a reagent and its own electrochemistry to the signal."
+        },
+        {
+          "kind": "callout",
+          "variant": "example",
+          "title": "Ferrocene and glucose oxidase",
+          "body": "Many glucose sensors use a ferrocene derivative as the mediator: it collects electrons from the enzyme's active site and delivers them to the electrode, turning a hidden redox event into a measurable current."
+        }
+      ]
+    },
+    {
+      "id": "biosensors",
+      "tone": "violet",
+      "title": "Biosensors",
+      "minutes": 8,
+      "summary": "A biosensor combines a biological recognition element with an electrochemical transducer. The glucose test strip is the consumer success story, and continuous monitors extend the idea to the body.",
+      "keyPoints": [
+        "A biosensor pairs biological recognition with an electrode signal.",
+        "Amperometric biosensors report a current proportional to substrate concentration.",
+        "The most successful example is the glucose test strip and its continuous version.",
+        "Selectivity comes from the biological element, not from the electrode."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A biosensor has two halves: a biological element that recognises the target, and a transducer, here an electrode, that turns recognition into a signal. The biological half decides what the sensor sees; the electrode half decides how well it can be read."
+        },
+        {
+          "kind": "para",
+          "text": "In an amperometric biosensor the current, often a limiting current, is proportional to the substrate concentration. Because the enzyme is selective, the device can measure glucose in blood without separating the rest of the sample first."
+        },
+        {
+          "kind": "para",
+          "text": "The glucose test strip is the enormous commercial success, tested billions of times a year. Its continuous cousin, an implanted or worn sensor, follows glucose through the day and feeds an insulin pump, closing a loop between measurement and treatment."
+        },
+        {
+          "kind": "callout",
+          "variant": "warn",
+          "title": "Selectivity is the weak point",
+          "body": "The electrode will happily react with anything that reaches it, so stray electroactive species - drugs, ascorbate, other metabolites - can confuse the signal. The enzyme's selectivity and a well-chosen operating potential are what keep the sensor honest."
+        }
+      ]
+    },
+    {
+      "id": "microbial-fuel-cells",
+      "tone": "rose",
+      "title": "Microbial fuel cells",
+      "minutes": 8,
+      "summary": "Some bacteria can transfer electrons from their metabolism to an electrode, generating current while consuming organic matter. The promise is wastewater treatment that produces electricity; the problem is low power.",
+      "keyPoints": [
+        "Exoelectrogenic bacteria transfer electrons from their respiration to an electrode.",
+        "The electrons come from oxidising organic matter, so the fuel is a waste stream.",
+        "Power densities are low but the process also treats the water.",
+        "Transfer to the electrode may be direct or use a mediator the bacteria make."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Certain bacteria can breathe onto an electrode. They oxidise organic matter and, instead of delivering the electrons to oxygen, deliver them to a solid anode. The electrode becomes the terminal electron acceptor, and the current it collects is a useful output."
+        },
+        {
+          "kind": "para",
+          "text": "The attraction is that the fuel is free: the organic matter in wastewater is exactly what the bacteria eat. A microbial fuel cell can therefore clean water and generate a little electricity at the same time, which is why it is studied for wastewater treatment."
+        },
+        {
+          "kind": "para",
+          "text": "The catch is power. Electrons cross the bacterium-electrode interface slowly, so the current density is far below that of a chemical fuel cell. Part of the answer is bacteria that grow conductive appendages, or that secrete their own mediators, to improve the transfer."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "The double dividend",
+          "body": "A microbial fuel cell is judged not only by its watts but by how much pollution it removes. Even a modest power output can be worthwhile if it comes bundled with treatment."
+        }
+      ]
+    },
+    {
+      "id": "bioelectrochemical-systems",
+      "tone": "coral",
+      "title": "Bioelectrochemical systems",
+      "minutes": 8,
+      "summary": "The same interface can be turned around: electrodes can drive biological reactions, as in bioelectrosynthesis, or read them, as in DNA and cell sensors. Electrodes also serve to stimulate nerves.",
+      "keyPoints": [
+        "Bioelectrosynthesis uses an electrode to supply electrons to microbes or enzymes to make a product.",
+        "DNA and cell sensors use electrochemistry to detect biomolecules.",
+        "Nerve stimulation and biosignal recording use the electrode-electrolyte interface for signalling.",
+        "The same challenges - selectivity, stability, biocompatibility - recur in every application."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A microbial fuel cell takes electrons out of biology; bioelectrosynthesis pushes them in. Here an electrode supplies electrons to microbes or enzymes that use them to build a wanted product - a fuel or a chemical - from simple feedstocks. The electrode replaces a chemical reducing agent."
+        },
+        {
+          "kind": "para",
+          "text": "Electrochemistry also reads biology. A DNA sensor detects a target sequence through a current that depends on how much of it has hybridised to a probe on the electrode. Cell-based sensors report the metabolic or respiratory activity of living cells."
+        },
+        {
+          "kind": "para",
+          "text": "Finally, the electrode-electrolyte interface is the working surface of electrophysiology: nerve stimulation and the recording of biosignals both rest on it. Across all of these, the same demands return - selectivity, stability and, now, biocompatibility with the living system."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "The recurring triangle",
+          "body": "Whether the device is a sensor, a fuel cell or a stimulator, it must be selective, stable and compatible with biology. Success in one application rarely transfers automatically to another, because the operating conditions differ."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "truefalse",
+      "id": "l21-tf-001",
+      "topicId": "electrons-and-life",
+      "quick": true,
+      "question": "In most redox proteins the site where the electron sits is buried inside the folded protein.",
+      "answer": true,
+      "explanation": "Burial gives the protein control over whom it reacts with, which is the basis of biological selectivity. It also makes wiring the protein to an electrode difficult."
+    },
+    {
+      "id": "l21-mcq-001",
+      "topicId": "electrons-and-life",
+      "quick": true,
+      "question": "A nerve impulse is best described as:",
+      "options": [
+        "A flow of metal ions along a wire",
+        "A travelling change in the potential across a cell membrane",
+        "A chemical precipitation",
+        "A change in temperature"
+      ],
+      "answer": 1,
+      "explanation": "The membrane holds a potential difference across its few-nanometre thickness, and a travelling change in that potential is the impulse."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l21-tf-002",
+      "topicId": "electrons-and-life",
+      "question": "Respiration moves electrons through a chain of redox proteins.",
+      "answer": true,
+      "explanation": "Each protein hands the electron to the next, releasing energy along the way. Photosynthesis runs the same kind of chain with light as the input."
+    },
+    {
+      "id": "l21-mcq-002",
+      "topicId": "enzyme-electrodes",
+      "quick": true,
+      "question": "A mediator in an enzyme electrode is used to:",
+      "options": [
+        "Anchor the enzyme to the electrode",
+        "Carry electrons between the buried active site and the electrode",
+        "Provide energy to the enzyme",
+        "Increase the pH"
+      ],
+      "answer": 1,
+      "explanation": "The redox site is usually buried, so a small redox molecule shuttles the electron between it and the electrode. This makes the coupling general."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l21-tf-003",
+      "topicId": "enzyme-electrodes",
+      "question": "In an enzyme electrode the enzyme provides selectivity and the electrode provides the measurable signal.",
+      "answer": true,
+      "explanation": "The enzyme ensures only its substrate reacts, while the electrode turns that reaction into a current or potential. Direct electron transfer needs the site close to the electrode; a mediator bridges the gap when it is not."
+    },
+    {
+      "kind": "multi",
+      "id": "l21-multi-001",
+      "topicId": "enzyme-electrodes",
+      "question": "Which statements about enzyme electrodes are correct? Select all that apply.",
+      "options": [
+        "Direct electron transfer needs the redox site near the electrode",
+        "A mediator shuttles electrons between the site and the electrode",
+        "The enzyme confers selectivity on the sensor",
+        "Mediators make the coupling always slower"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Direct transfer needs proximity, mediators bridge the distance, and the enzyme provides selectivity. Mediators usually speed the coupling up rather than slowing it down, which is why they are used."
+    },
+    {
+      "id": "l21-mcq-003",
+      "topicId": "biosensors",
+      "quick": true,
+      "question": "The most commercially successful electrochemical biosensor is:",
+      "options": [
+        "The pH meter",
+        "The glucose test strip",
+        "The lead-acid battery",
+        "The oxygen sensor"
+      ],
+      "answer": 1,
+      "explanation": "The glucose test strip is tested billions of times a year, and its continuous form feeds insulin pumps. Its success comes from combining a selective enzyme with a simple amperometric readout."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l21-tf-004",
+      "topicId": "biosensors",
+      "question": "In a biosensor, selectivity comes from the electrode material rather than the biological element.",
+      "answer": false,
+      "explanation": "Selectivity comes from the biological recognition element - the enzyme or other bioreceptor. The electrode is the transducer that turns recognition into a current or potential."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l21-tf-005",
+      "topicId": "biosensors",
+      "question": "Stray electroactive species such as ascorbate can interfere with an amperometric biosensor.",
+      "answer": true,
+      "explanation": "The electrode reacts with anything that reaches it, so interfering species can add to the signal. The enzyme's selectivity and a carefully chosen operating potential limit the problem."
+    },
+    {
+      "id": "l21-mcq-004",
+      "topicId": "microbial-fuel-cells",
+      "quick": true,
+      "question": "In a microbial fuel cell, the electrons come from:",
+      "options": [
+        "An external power supply",
+        "Bacteria oxidising organic matter and delivering electrons to the anode",
+        "The reduction of water",
+        "Sunlight directly"
+      ],
+      "answer": 1,
+      "explanation": "The bacteria oxidise organic matter, often a waste stream, and pass the electrons to a solid anode. This earns the double dividend of current and water treatment."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l21-tf-006",
+      "topicId": "microbial-fuel-cells",
+      "question": "Microbial fuel cells generate power densities comparable to chemical fuel cells.",
+      "answer": false,
+      "explanation": "Electron transfer across the bacterium-electrode interface is slow, so power densities are far lower. The attraction is that the fuel is free and the water is treated at the same time."
+    },
+    {
+      "id": "l21-mcq-005",
+      "topicId": "bioelectrochemical-systems",
+      "quick": true,
+      "question": "Bioelectrosynthesis uses an electrode to:",
+      "options": [
+        "Remove electrons from a product",
+        "Supply electrons to microbes or enzymes so they make a product",
+        "Measure the temperature of a culture",
+        "Sterilise a solution"
+      ],
+      "answer": 1,
+      "explanation": "Instead of harvesting current, bioelectrosynthesis feeds electrons from the electrode into biology, replacing a chemical reducing agent to build a wanted product."
+    },
+    {
+      "kind": "multi",
+      "id": "l21-multi-002",
+      "topicId": "bioelectrochemical-systems",
+      "question": "Which demands recur across bioelectrochemical devices? Select all that apply.",
+      "options": [
+        "Selectivity",
+        "Stability",
+        "Biocompatibility with a living system",
+        "Maximum use of precious metals"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Selectivity, stability and biocompatibility matter in every application, especially when living cells are involved. Precious-metal use is a concern for some catalysts but is not one of the recurring biological demands."
+    }
+  ]
+}

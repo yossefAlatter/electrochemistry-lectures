@@ -1,0 +1,1052 @@
+{
+  "slug": "lesson-4",
+  "label": "Lesson 4",
+  "title": "Mass transfer and limiting currents",
+  "summary": "Until now every electrode reaction assumed the solution hands over ions as fast as the current wants them. It cannot. This lesson is about speed: how matter actually reaches an electrode - by diffusion, migration and convection - why a current always has a hard ceiling, and how the rotating disk turned a messy flow problem into the cleanest experiment in the field.",
+  "order": 4,
+  "minutes": 60,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Lessons 1 to 3 built the equilibrium world: the voltage machinery, its thermodynamic dials, and the medium that shuttles charge. Every one of those arguments rested on a silent assumption - the solution hands ions to an electrode on demand, at any speed required. Lesson 4 drops that assumption. It puts the solution *under load* and asks how matter actually travels to the electrode surface - by **diffusion**, by **migration** and by **convection** - and what happens when the medium simply cannot deliver fast enough. Following Bagotsky ch.4 and Bard ch.4, the payoff is the **limiting current**: the ceiling that every real electrochemical process has to respect."
+    },
+    {
+      "kind": "para",
+      "text": "Keep the big picture in view. The first three lessons told you what *can* happen. This one tells you how *fast*, and that brings in a new inefficiency. At equilibrium the Nernst equation says where an electrode reaction stops. Under current the **rate of supply** takes over, and the interface is no longer the only voice: the medium now sets the maximum flow. Every later lesson on kinetics, polarization or technique uses the words you build here - **diffusion layer**, **key component** and **Levich equation**."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The one-sentence summary of this lesson",
+      "body": "An electrode can only use up reactant as fast as the solution refreshes a thin still film at its surface. The current at which that film runs dry is the **limiting diffusion current**, and every honest electrochemical technique is an exercise in thinning the film."
+    }
+  ],
+  "sections": [
+    {
+      "id": "fick-diffusion",
+      "tone": "azure",
+      "title": "Fick's laws and the diffusion coefficient",
+      "minutes": 7,
+      "summary": "Diffusion levels out concentration: particles flow down the gradient, and the flux is proportional to how steep it is. The diffusion coefficient - tied to ionic mobility by Nernst-Einstein - gives each species its own speed.",
+      "keyPoints": [
+        "The flux is proportional to the concentration gradient - that is Fick's first law (1855).",
+        "Most ions in water have D_j between 0.6 x 10^-5 and 2 x 10^-5 cm2/s, and D falls as concentration rises.",
+        "The real driving force is the gradient of chemical potential, not of concentration; the difference is folded into a D_j that depends on concentration.",
+        "Nernst-Einstein ties D_j to ionic mobility: D_j = u_j RT/(z_j F), so conductivity data give you diffusion coefficients."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "This section is about how a substance moves through a solution that is itself standing still. The answer is diffusion, and the law Fick stated in 1855 is almost embarrassingly simple: matter flows from where it is crowded to where it is not, at a rate set by how steep the gradient is."
+        },
+        {
+          "kind": "para",
+          "text": "You already met ionic mobility `u_j`: the steady speed that a unit field gives an ion. Diffusion is the same phenomenon with no field on. The random walk that makes an ion wander is the same agitation that makes it drift. In a solution that is not uniform, the two opposite flows no longer cancel and a net flux survives. Fick's first law says that this **diffusional flux** `J_d,j` (mol/cm²s, a current made of matter) points down the concentration gradient and grows with it:"
+        },
+        {
+          "kind": "formula",
+          "tex": "J_{d,j} = D_j\\,\\mathrm{grad}\\,c_j",
+          "caption": "Fick's first law. The diffusion coefficient D_j (cm2/s) is the stiffness of the response: how much flux a given gradient can push. The law is exact only in dilute solution - how to fix that comes next."
+        },
+        {
+          "kind": "para",
+          "text": "The honest driving force is not the concentration gradient but the gradient of **chemical potential** - diffusion levels out activities, not amounts. Written that way the law reads `J_d,j = D_a,j grad a_j`, but it buys no practical gain, because the activity-based coefficient varies just as much. Working electrochemists therefore keep Fick's law in its raw form and admit reality the cheap way: **D_j is simply a function of concentration**. In dilute aqueous solution most ions and many neutral molecules have D_j between `0.6 × 10⁻⁵` and `2 × 10⁻⁵` cm²/s at room temperature, and the values fall markedly as concentration climbs - the OH⁻ ion in KOH is the classic plotted example."
+        },
+        {
+          "kind": "para",
+          "text": "Fick's law has a second virtue: it pairs with mobility. The same drag that slows an ion under a field slows its diffusion too, and the link (Nernst, 1888) is exact:"
+        },
+        {
+          "kind": "formula",
+          "tex": "D_j = \\frac{RT}{z_j F}\\,u_j",
+          "caption": "The Nernst-Einstein relation, valid in dilute solutions. Mobilities are far easier to measure than diffusion coefficients, so this bridge lets conductivity tables produce diffusion tables."
+        },
+        {
+          "kind": "para",
+          "text": "The relation matters far beyond bookkeeping. It is the first sign of a theme that runs through the whole lesson: **one mechanism, many uniforms**. Mobility under a field, diffusion under a gradient and, soon, convection in a flow are chapters of the same story."
+        }
+      ]
+    },
+    {
+      "id": "diffusion-layer",
+      "tone": "indigo",
+      "title": "The diffusion layer",
+      "minutes": 6,
+      "summary": "Passing current empties the region next to an electrode. A thin still film - the diffusion layer - carries all the diffusional transport, and its thickness decides the current the solution will support.",
+      "keyPoints": [
+        "Under current the reactant concentration at the surface falls (c_S < c_V) and the product concentration rises.",
+        "The diffusion layer delta is the still film across which transport is purely diffusional; outside it, stirring keeps concentrations at the bulk values.",
+        "Its thickness - the diffusion path length - is set by the cell design and by how hard the liquid is stirred.",
+        "Surface concentration means about 1 nm from the electrode: outside the double layer, inside the diffusion layer."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "This section is about how the solution answers back. An electrode reaction removes reactant at the surface and creates product there, and the solution responds by building concentration gradients - gradients that live inside one specific, measurable slice of space: the **diffusion layer**."
+        },
+        {
+          "kind": "para",
+          "text": "When current flows, the surface concentration `c_S,j` of a reactant falls below its bulk value `c_V,j`, while the surface concentration of a reaction product rises above it. Stressed this way, the solution obeys: around the electrode a **diffusion layer** forms - a film of electrolyte of thickness `δ`, across which the concentration changes and within which substances travel by diffusion alone. Outside the film, stirring holds the liquid at the bulk composition. The thickness `δ` is the *diffusion path length*. It is not a property of the solution but of the cell: it depends on the cell design and on how hard the liquid is mixed. For now we treat it as a constant; section 7 (hydrodynamics) explains where it comes from."
+        },
+        {
+          "kind": "para",
+          "text": "Surface concentration is a precise idea. Right at the metal the double layer distorts ionic concentrations all on its own, so `c_S,j` means the concentration at a point about **1 nm from the surface**: close enough to sit well inside the diffusion layer, far enough that double-layer effects are gone. At flat electrodes the fluxes inside the layer are one-dimensional, and in the steady state the flux density is constant all the way across. The gradient is constant too, so finite differences take over from calculus:"
+        },
+        {
+          "kind": "formula",
+          "tex": "J_{d,j} = D_j\\,\\frac{\\Delta c_j}{\\delta} = \\kappa_j\\,\\Delta c_j, \\qquad \\kappa_j = \\frac{D_j}{\\delta}",
+          "caption": "Steady linear diffusion across a film of thickness delta. kappa_j = D_j/delta is the diffusion-flux constant (cm/s) - how generous that film is to the diffusing species."
+        },
+        {
+          "kind": "para",
+          "text": "Now the current density writes its own bill. Each reactant used up and each product released obeys its balance law - the current equals the Faradaic demand on the flux - and combined with the linear flux this gives the workhorse equation of the whole lesson:"
+        },
+        {
+          "kind": "formula",
+          "tex": "i = \\frac{n}{\\nu_j}\\,F\\,\\kappa_j\\,(c_{V,j} - c_{S,j})",
+          "caption": "Current density is proportional to the concentration difference between bulk and surface. n is the electron count, nu_j the stoichiometric coefficient of the reactant in the balanced half-reaction."
+        },
+        {
+          "kind": "para",
+          "text": "Rearranged, the same equation gives the surface concentration at any current:"
+        },
+        {
+          "kind": "formula",
+          "tex": "c_{S,j} = c_{V,j} - \\frac{\\nu_j\\,i}{n\\,F\\,\\kappa_j}",
+          "caption": "The surface concentration falls linearly as the current density climbs - until the day it reaches zero, and that day has a name (next section)."
+        }
+      ]
+    },
+    {
+      "id": "limiting-current",
+      "tone": "violet",
+      "title": "The limiting diffusion current",
+      "minutes": 7,
+      "summary": "At a critical current the surface concentration hits zero and the medium cannot deliver any faster. This ceiling - the limiting diffusion current - is the clearest statement of mass-transfer control in electrochemistry.",
+      "keyPoints": [
+        "The limiting diffusion current density is i_l = (n/nu_j) F kappa_j c_V - it is reached when c_S collapses to zero.",
+        "Rewritten in the handy form c_S = c_V (1 - i/i_l), and c_S = c_V (1 + i/i_l) for products.",
+        "Limiting currents show up in galvanic circuits but never in pure electronic conductors - a sign of ionic transport.",
+        "The key component is the reactant that runs dry first; precipitation of a product at the surface can also cap the current."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "This section asks how much current a given solution and electrode arrangement can possibly carry. The thickness of the diffusion layer and the bulk concentration set an upper bound, and reaching that bound is not a failure but a diagnosis - it is how the field measures transport."
+        },
+        {
+          "kind": "para",
+          "text": "Push the current density up and the surface concentration drops, as the last equation says. Eventually a **critical value** is reached at which the surface concentration of the reactant has fallen to zero. At that moment the concentration gradient across the film has hit its physical maximum - `c_V,j/δ` - and no increase in current can squeeze the diffusional flux any further:"
+        },
+        {
+          "kind": "formula",
+          "tex": "i_{l,j} = \\frac{n}{\\nu_j}\\,F\\,\\kappa_j\\,c_{V,j}, \\qquad c_{S,j} = c_{V,j}\\left(1 - \\frac{i}{i_{l,j}}\\right)",
+          "caption": "The limiting diffusion current density, and the compact surface-concentration form it gives. The subscript l (or d) marks it as the diffusion-limited ceiling for a given reactant."
+        },
+        {
+          "kind": "para",
+          "text": "The product side gets a sibling equation: its surface concentration climbs as `1 + i/i_l`. But its ceiling is of a different and nastier kind - it arrives not because delivery fails but because the **solubility limit** is reached and the product precipitates onto the electrode, covering the surface and getting in the way of more current. That limiting current depends on the nature of the deposit, is poorly reproducible, and may drift with time. The diffusion-limited ceiling of the reactant is the clean, reproducible one."
+        },
+        {
+          "kind": "para",
+          "text": "Notice one sharp point: limiting currents belong to galvanic circuits and are entirely absent from circuits made of metal. A copper wire carries whatever current the battery pushes without ever 'running out of copper'. An electrode reaction is matter transport in disguise, so it cannot dodge the ceiling. That contrast is the whole point of the concept."
+        },
+        {
+          "kind": "para",
+          "text": "Real reactions have several reactants and products, and each carries its own limiting current. As the current climbs, one of them runs out of diffusive supply first. That **key component** - the one whose surface concentration hits zero first - decides the actual limiting current of the whole system, pinned by its diffusion coefficient and bulk concentration. Finding the key component is usually the whole diagnostic battle."
+        }
+      ]
+    },
+    {
+      "id": "nernst-planck",
+      "tone": "rose",
+      "title": "Transport in a field: the Nernst-Planck flux",
+      "minutes": 6,
+      "summary": "Real ions travel by migration down the electric field and by diffusion down their gradient at the same time. The Nernst-Planck equation adds the two, and electroneutrality ties all the gradients into one system - intricate, but solvable.",
+      "keyPoints": [
+        "Total flux = migration + diffusion: J_j = c_j u_j E +- D_j dc_j/dx (Nernst-Planck, 1890).",
+        "Electroneutrality puts one constraint among the gradients, so N species give N equations in N unknowns.",
+        "Uncharged components (z_j = 0) drop straight back onto Fick's law.",
+        "A steady state is genuinely reachable: charges and substances balance, and the voltage and the concentration profile take unique values."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "So far the analysis assumed uncharged reactants, for whom only diffusion matters. But under current the electrolyte also carries an electric field, and ions answer to it. This section asks what the flux of an ion caught between a field and a gradient looks like."
+        },
+        {
+          "kind": "para",
+          "text": "The answer has two terms that add or subtract: **migration**, the drift `c_j·u_j·E` that the field imposes on a cloud of ions, and **diffusion**, the push down the concentration gradient. Together they form the **Nernst-Planck equation** (1890), the founding transport law of electrochemistry:"
+        },
+        {
+          "kind": "formula",
+          "tex": "J_j = c_j\\,u_j\\,E \\pm D_j\\,\\frac{\\mathrm{d}c_j}{\\mathrm{d}x}",
+          "caption": "Nernst-Planck: the total flux J_j is migration plus diffusion. The minus sign is used when the two point in opposite directions, the plus sign when they work together."
+        },
+        {
+          "kind": "para",
+          "text": "The equation is written for every species in the electrolyte - reactants and spectators alike - and the unknowns are the field strength `E` and the concentration gradients `dc_j/dx`. Not all gradients are free: electroneutrality requires the charge-weighted gradients to sum to zero, which leaves `N − 1` independent gradients. That gives `N` equations in `N` unknowns - solvable in principle, though in the general case only by computer. The big news is that the system *closes* at all: a **steady state** is genuinely reachable in which charges and substances balance exactly and the voltage and concentrations take unique values. Electrochemistry rests on this closure."
+        },
+        {
+          "kind": "para",
+          "text": "Two limiting cases are cheap. For uncharged components (`z_j = 0`) the migration term dies and Nernst-Planck collapses back into Fick's law. And for a dilute electroactive minority swimming in a sea of inert ions, the field term becomes a footnote - which is exactly the trick the next section uses."
+        }
+      ]
+    },
+    {
+      "id": "supporting-electrolyte",
+      "tone": "coral",
+      "title": "What the supporting electrolyte suppresses",
+      "minutes": 6,
+      "summary": "Drown the little electroactive ion in a sea of inert ones and the solution's conductivity soars, the field collapses to nothing, and migration disappears - leaving clean, reproducible, purely diffusional delivery.",
+      "keyPoints": [
+        "Excess foreign ions raise the conductivity sigma, so at a fixed current density the field strength E collapses (Ohm's law).",
+        "In the limit the migration term vanishes and the reacting ion travels only by diffusion.",
+        "The current equation reverts to the simple diffusion-limited form - charge still flows, but each ion arrives by diffusion.",
+        "The result is the most precious gift a technique can ask for: reproducibility and clean limiting currents."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The Nernst-Planck equation has two terms, and an experimentalist wants one of them out of the room. The way to do it is old laboratory hygiene: a large excess of a chemically inert **supporting (or 'base') electrolyte**."
+        },
+        {
+          "kind": "para",
+          "text": "The trick is Ohm's law in disguise. The conductivity `σ` of a solution is set by all its ions, not just the reactive one. Flood the solution with foreign ions that take no part in the reaction and `σ` climbs sharply. At a given current density the field strength has to fall to match - `E = i/σ` - and with a generous excess it shrinks to nothing. When `E` is gone, so is the migration term of Nernst-Planck, and the reactive ion is carried by diffusion alone."
+        },
+        {
+          "kind": "para",
+          "text": "The stakes deserve emphasis. With excess supporting electrolyte the reacting ion follows exactly the flux law of an uncharged particle, the current takes the pure diffusion form from the diffusion-layer section, and the limiting current stays unchanged and predictable. The price is none: the inert ions merely carry the field. They do not dilute the analyte's concentration and they do not change `κ`. What is *suppressed* is the messy many-body problem of migration and diffusion happening at once for every species."
+        },
+        {
+          "kind": "para",
+          "text": "This is not an engineering footnote; it is the reason electrochemical measurements are reproducible at all. Remove the supporting electrolyte and every flux drags the electroneutrality field around with it, surface concentrations shift, and the limiting current drifts with the conditions. Add it, and the only parameter that decides delivery is the diffusional one. The whole structure of classical voltammetry - including the Levich equation you meet in the last section - assumes this suppressed field."
+        }
+      ]
+    },
+    {
+      "id": "binary-migration",
+      "tone": "amber",
+      "title": "Migration without a supporting electrolyte",
+      "minutes": 7,
+      "summary": "Take the supporting electrolyte away and a binary solution surprises you: unreactive anions, refused a net flux, build a field that speeds up the reacting cation. The limiting current rises by an enhancement factor alpha.",
+      "keyPoints": [
+        "Anions are excluded from the reaction, so their diffusive flux to the surface must be cancelled by a migrational flux away - a field is forced into being.",
+        "The cation's two flux components then point the same way, and the total flux rises by alpha = 1 + tau-/tau+ over pure diffusion.",
+        "alpha = 2 for symmetric electrolytes (e.g. CuSO4-type), 3 for ZnCl2, 1.5 for Ag2SO4.",
+        "alpha > 1 whenever migration and diffusion work together (reacting cations in cathodic reactions, and so on); alpha < 1 when they clash, as in deposition from complex anions."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "This section covers what happens when there is no supporting electrolyte - when the solution is a pure binary electrolyte and the spectator ions matter in their own right. The surprise is that migration refuses to vanish: the anions' bookkeeping *forces* it into existence, and it makes the limiting current larger than pure diffusion could ever deliver."
+        },
+        {
+          "kind": "para",
+          "text": "Suppose a binary electrolyte `Mτ+ Aτ-` of concentration `c_k`, with the cation being reduced at the cathode. Current flows; the cation concentration at the surface falls, and - by electroneutrality - the anion concentration falls with it. But anions take no part in the reaction, so in the steady state their **net flux is zero**. The only way Nernst-Planck can be satisfied is for the anions' diffusive flux toward the surface to be matched by a migrational flux away from it. A field therefore builds itself inside the diffusion layer, pointed so as to push anions out. And that same field pushes the *cations* - their diffusive and migrational fluxes now point the same way."
+        },
+        {
+          "kind": "para",
+          "text": "For the cation both supply routes aim at the electrode, so the total flux exceeds the pure-diffusion value. The arithmetic gives a tidy multiplier, the **enhancement factor**:"
+        },
+        {
+          "kind": "formula",
+          "tex": "\\alpha = 1 + \\frac{\\tau_-}{\\tau_+}",
+          "caption": "How far the current rises above the diffusion-only value in a binary electrolyte. For a symmetric electrolyte tau+ = tau-, so alpha = 2: migration doubles what pure diffusion would deliver at the same gradient."
+        },
+        {
+          "kind": "para",
+          "text": "The numbers bite. In this two-ion world the reactive species' current obeys `i = z+ F J+` with the enhanced flux, so the binary limiting current is the diffusion-limited value multiplied by `α` - worth a corner of memory: **a limiting current measured without supporting electrolyte is not a pure diffusion current**. For symmetric electrolytes `α = 2`; for `ZnCl₂` it is 3; for `Ag₂SO₄` it is 1.5. And the transport numbers inside the layer turn strange: the effective transport number of the reacting ion is 1 (it carries every last coulomb) while that of the spectator is 0, even if the bulk transport numbers say otherwise."
+        },
+        {
+          "kind": "para",
+          "text": "The sign of `α − 1` follows a crisp physical rule: migration works *with* diffusion - `α > 1` - whenever the reactant is a **cation in a cathodic reaction** (as above) or an **anion in an anodic reaction**, and also for products of the opposite polarities. It works against diffusion - `α < 1` - in the mirrored set, the textbook case being **cathodic deposition of a metal from a complex anion**: the negatively charged ion has to swim against the field to reach the reacting site, so the field *withholds* supply."
+        },
+        {
+          "kind": "para",
+          "text": "The field itself is not free of charge. Integrating the self-built field across the film gives a **diffusional potential drop** on top of the ohmic drop - a piece of internal voltage that depends on the concentration ratio and vanishes only when both ions diffuse equally. It exists even at zero current, whenever a gradient is held by hand, and under current it makes the electrolyte behave as if Ohm's law were slightly dishonest. This is the same diffusion potential Lesson 3 met at a liquid junction, now sitting inside a working cell."
+        }
+      ]
+    },
+    {
+      "id": "convective-diffusion",
+      "tone": "emerald",
+      "title": "Convection and the boundary layer",
+      "minutes": 7,
+      "summary": "The bulk liquid is a delivery fleet, but it never reaches the wall: a stagnant hydrodynamic boundary layer clings to every electrode, and the diffusion layer sits nested inside it - about ten times thinner.",
+      "keyPoints": [
+        "Convective flux J = v c_j is always electroneutral - the medium sweeps charge-balanced solution, if it sweeps anything.",
+        "At aqueous values (D ~ 10^-5 cm2/s, delta ~ 10^-2 cm) convection beats diffusion even at a negligible flow of 10^-3 cm/s.",
+        "The Prandtl (hydrodynamic) boundary layer thickness delta_b is set by viscosity; the diffusion layer is delta/delta_b ~ Pr^-1/3, about one tenth of it.",
+        "Natural convection (layers of 100-500 um) is why unstirred cells still pass steady current; narrow pores and matrices kill it outright."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Diffusion is slow and migration is a field effect, so how does an experimenter deliver reactant on an industrial or an analytical scale? The answer is **convection** - and, right away, a surprise: convection never reaches the electrode surface at all."
+        },
+        {
+          "kind": "para",
+          "text": "Convective transport is transport with the moving medium - solute hitching a ride on the flow. Its flux law is the simplest in the lesson:"
+        },
+        {
+          "kind": "formula",
+          "tex": "J_{\\nu,j} = v\\,c_j",
+          "caption": "Convective flux: the medium's linear velocity v carries a concentration c_j. The medium itself is electroneutral, so every convective flux is too - it shuffles charge in perfect balance."
+        },
+        {
+          "kind": "para",
+          "text": "How strong is it next to diffusion? A rough estimate gives `J_d/J_ν ≈ D/(δv)`. Aqueous diffusion coefficients sit near `10⁻⁵` cm²/s and a working diffusion layer near `10⁻²` cm, and the ratio says the two modes are already comparable at a flow velocity of `10⁻³` cm/s - a gentle drift. At any decent flow, **convection dominates the bulk**. That is the first half of convection's double act."
+        },
+        {
+          "kind": "para",
+          "text": "The second half is the subtle one, and it explains why stirring can never wash the diffusion layer away. Even in a vigorously stirred solution a thin layer of liquid clings to the solid surface - held by molecular forces - in which the **velocity is zero at the wall** and builds up to the bulk value over a finite distance. That zone of velocity gradient is the **Prandtl, or hydrodynamic, boundary layer**, of thickness `δ_b`."
+        },
+        {
+          "kind": "para",
+          "text": "Inside this boundary layer there is no convection worth the name, so transport to the electrode is purely diffusive (and migrative). The diffusion layer is not the boundary layer - it nests inside it, thinner, because momentum diffuses faster than matter. Their ratio is set by a dimensionless pair, the **Prandtl number**:"
+        },
+        {
+          "kind": "formula",
+          "tex": "\\frac{\\delta}{\\delta_b} \\approx \\left(\\frac{D_j}{\\nu_{\\mathrm{kin}}}\\right)^{\\!1/3} = \\mathrm{Pr}^{-1/3}",
+          "caption": "The diffusion layer is Pr^-1/3 of the hydrodynamic boundary layer, where Pr = nu_kin/D_j. In water, nu_kin ~ 10^-2 cm2/s and D_j ~ 10^-5 cm2/s, so Pr ~ 10^3 and the diffusion layer is roughly ten times thinner than the boundary layer."
+        },
+        {
+          "kind": "para",
+          "text": "So the boundary layer is a two-tier system: from its outer rim inward, convection levels the concentration right down to the top of the diffusion layer, and only inside that inner film does Fick's law make the final delivery. It is the same pairing as Lesson 2's conductivity arguments: mobility with diffusion, momentum with species - the same mechanism told again."
+        },
+        {
+          "kind": "para",
+          "text": "One more surprise closes the section. With no stirring at all, the theory above would push `δ` to infinity and the current to zero - yet unstirred cells carry steady current routinely. The rescue is **natural convection**: spontaneous flows driven by density differences from temperature and concentration fluctuations (and gas bubbles, which stir fiercely), which hold the layer to something like `100–500 µm`. Natural convection cannot be predicted in general, it depends heavily on geometry - none forms in capillaries or narrow gaps - and holding the electrolyte in a porous matrix kills it, so a diffusion layer simply spans the whole gap."
+        }
+      ]
+    },
+    {
+      "id": "hydrodynamics-flowby",
+      "tone": "teal",
+      "title": "Flow-by electrolysis and the Reynolds number",
+      "minutes": 7,
+      "summary": "Whether liquid sweeping past an electrode flows in layers or in eddies is decided by the Reynolds number, and the boundary layer grows along the electrode from the stagnation point - so the diffusion layer, and the local current, depend on position.",
+      "keyPoints": [
+        "Laminar flow survives below a critical Reynolds number (~10^3 on rough surfaces, ~10^5 on smooth ones); above it, turbulence sets in. This lesson follows laminar flow only.",
+        "The hydrodynamic boundary layer grows from the stagnation point: delta_b ~ nu_kin^(1/2) y^(1/2) v^(-1/2).",
+        "The diffusion layer follows: delta ~ D^(1/3) nu_kin^(1/6) y^(1/2) v^(-1/2), so the diffusive flux - and the current - fall along the electrode.",
+        "Convection has a double role: it levels the bulk concentration (takes hardly any motion) and it sets the diffusion layer (a quantitative function of the velocity)."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "This section asks what the boundary-layer picture looks like in a real geometry - a working electrode with liquid flowing past it. You get the theory's controlling numbers and one surprise: along a plate electrode the delivery is not uniform at all."
+        },
+        {
+          "kind": "para",
+          "text": "Which flow regime an electrode gets is fixed by one dimensionless number, the **Reynolds number** `Re = vL/ν_kin`. It compares inertial to viscous forces for a flow velocity `v`, an electrode length `L`, and a kinematic viscosity `ν_kin = η/ρ`. Below a critical `Re` (about `10³` for rough surfaces, `10⁵` for smooth ones) the flow is **laminar** - layers sliding parallel to the wall. Above it the flow turns **turbulent** and eddies roam. Every quantitative statement in this lesson belongs to laminar flow, and everyone repeats the same caveat: only the laminar world gives answers you can calculate."
+        },
+        {
+          "kind": "para",
+          "text": "In a laminar flow past an electrode the velocity profile repeats the boundary-layer logic: zero at the wall, bulk value far out. But the layer does not keep a constant thickness - it thickens along the electrode as the distance `y` from the **stagnation point** (where the flow first touches the surface) grows:"
+        },
+        {
+          "kind": "formula",
+          "tex": "\\delta_b \\approx \\nu_{\\mathrm{kin}}^{1/2}\\,y^{1/2}\\,v^{-1/2}",
+          "caption": "Hydrodynamic boundary-layer thickness for laminar flow past a flat surface: viscosity spreads the slowed zone, the layer grows with distance from the stagnation point, and the flow speed compresses it."
+        },
+        {
+          "kind": "para",
+          "text": "Run the same geometry through the diffusion layer and the dependence on position survives:"
+        },
+        {
+          "kind": "formula",
+          "tex": "\\delta \\approx D_j^{1/3}\\,\\nu_{\\mathrm{kin}}^{1/6}\\,y^{1/2}\\,v^{-1/2}",
+          "caption": "Diffusion-layer thickness in flow-by electrolysis. The dependence on D_j is weak (power 1/3), which is why species with very different diffusion coefficients still share comparable layers; the growth with y^(1/2) is the geometric signature of the flat plate."
+        },
+        {
+          "kind": "para",
+          "text": "The consequences follow. Because the layer thickens with `y`, the gradient at the surface - and with it the diffusional flux and the local current density - **falls along the electrode**. A long plate electrode does not do one uniform job; it does a job that tapers with distance. And recall the double nature of convection: barely any motion suffices to level the bulk, but the *thinning* of the diffusion layer is set quantitatively by the flow - the faster the flow, the thinner the layer, the steeper the gradient, the larger the diffusive flux. That trade, velocity against film, is what every flow-by cell in industry quietly exploits."
+        }
+      ]
+    },
+    {
+      "id": "rde-levich",
+      "tone": "slate",
+      "title": "The rotating disk: how Levich levelled the field",
+      "minutes": 7,
+      "summary": "Spin the electrode instead of stirring the solution and every point of the disk becomes the same: one uniform diffusion layer, one uniform current, and the cleanest quantitative law in electrochemistry - the Levich equation.",
+      "keyPoints": [
+        "At a rotating disk electrode (RDE) the angular velocity omega = 2 pi f, and the two y-dependencies of the flat-plate theory cancel exactly: delta stays uniform.",
+        "Every point of the accessible surface carries the same diffusion layer and the same current - uniformly accessible by design.",
+        "Levich (1944): delta_RDE = 1.61 D_j^(1/3) nu_kin^(1/6) omega^(-1/2), and i_RDE = 0.62 (n/nu_j) F D_j^(2/3) nu_kin^(-1/6) omega^(1/2) (c_V - c_S).",
+        "Practical speeds (60 to 10,000 rpm) sweep delta from about 60 to 4.5 um; the rotating ring-disk electrode (Frumkin 1959) adds a concentric ring whose collection efficiency N ~ 0.4 assays the disk products."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "This section is about building an electrode whose delivery is *known*, uniform and tunable - the laboratory instrument of the whole discipline. The answer is the **rotating disk electrode** (RDE), and its mathematical champion was Veniamin Levich."
+        },
+        {
+          "kind": "para",
+          "text": "The RDE inverts the flow-by geometry: instead of pushing liquid past a static plate, it **spins the plate itself**. A disk at the end of a shaft turns about its vertical axis with angular velocity `ω = 2πf` (`f` revolutions per second). Liquid is drawn up to the disk's center, flung outward by centrifugal force, and replaced from below - a steady, axisymmetric pump aimed at the center line."
+        },
+        {
+          "kind": "para",
+          "text": "The hydrodynamic magic is cancellation. For a flat plate the layer thickened with distance `y` and thinned with the local velocity `ωr` - and at the disk that distance and that velocity rise together from the center outward. In Eq. (4.34) the two dependences **cancel each other**, leaving a diffusion layer of constant thickness across the whole disk. The RDE is an electrode with a **uniformly accessible surface**: every patch sees the same layer, the same gradient, the same current. Nothing else in electrochemistry achieves this so cleanly."
+        },
+        {
+          "kind": "para",
+          "text": "Levich's 1944 solution of the Navier-Stokes side of the problem produced the quantitative heart of the technique:"
+        },
+        {
+          "kind": "formula",
+          "tex": "\\delta_{\\mathrm{RDE}} = 1.61\\,D_j^{1/3}\\,\\nu_{\\mathrm{kin}}^{1/6}\\,\\omega^{-1/2}",
+          "caption": "Diffusion-layer thickness at a rotating disk, uniform over the whole surface. Spin faster and the layer thins as omega^(-1/2); the constant 1.61 comes from solving the flow field (Levich, 1944)."
+        },
+        {
+          "kind": "formula",
+          "tex": "i = 0.62\\,\\frac{n}{\\nu_j}\\,F\\,D_j^{2/3}\\,\\nu_{\\mathrm{kin}}^{-1/6}\\,\\omega^{1/2}\\,(c_{V,j} - c_{S,j})",
+          "caption": "The Levich equation: the current at a rotating disk, and its dependence on the spin rate omega^(1/2), the diffusion coefficient D_j^(2/3) and the kinematic viscosity nu_kin^(-1/6). At the limiting current (c_S -> 0), a Levich plot of i against omega^(1/2) is a straight line through the origin."
+        },
+        {
+          "kind": "para",
+          "text": "The precision was stunning for its era: electrochemists quote the 0.62 and 1.61 constants as proof that the field knows its hydrodynamics, and Levich plots double as **diffusion-coefficient measuring instruments**. Practical disks run from about 60 to 10,000 rpm, which in water sweeps the diffusion layer from roughly `60 µm` down to `4.5 µm`. Spin much faster and whirling flow and wobble ruin the laminar promise."
+        },
+        {
+          "kind": "para",
+          "text": "The rotating family gained a second member in 1959, when Frumkin, Nekrasov, Levich and Ivanov added a thin **ring** around the disk - the **rotating ring-disk electrode** (RRDE). The disk runs the primary reaction; products, swept outward by the same flow, pass over the ring where they are caught electrochemically. Hydrodynamic theory says exactly what fraction `N` reaches the ring - a bonus of the uniform flow - typically about **40%**. The ring current, scaled by `N`, reports how fast the disk's reaction is producing anything reducible or oxidizable downstream: clean detection of intermediates and parallel pathways. Between them, Levich's constant-thickness layer and the RRDE's ring opened the era of *physicochemical hydrodynamics* - and with it, the modern instrument rack."
+        }
+      ],
+      "cta": {
+        "title": "Matter on a deadline",
+        "body": "Lesson 4 put the solution under load and learned its one hard truth: an electrode can use up reactant only as fast as a thin still film at its surface is refreshed. Fick's laws describe the delivery, the diffusion layer sizes it, the limiting current sets the ceiling, and the supporting electrolyte - or its absence - decides whether migration joins in. Faster flows beat thinner films, and the rotating disk turned that idea into an equation with a straight-line plot. Lesson 5 asks the natural follow-up: once matter is delivered, how willingly does the *interface itself* convert it? That is electrode kinetics - the Butler-Volmer equation and the exchange current. Test yourself on this lesson's bank first.",
+        "href": "/lessons/lesson-4/quiz",
+        "linkLabel": "Take the Lesson 4 questions",
+        "secondaryHref": "/lessons/lesson-3",
+        "secondaryLabel": "Recheck Lesson 3"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "l4-mcq-001",
+      "topicId": "fick-diffusion",
+      "quick": true,
+      "question": "Fick's first law states that the diffusional flux is:",
+      "options": [
+        "Proportional to the concentration itself",
+        "Proportional to the gradient of the concentration",
+        "Inversely proportional to the diffusion coefficient",
+        "Independent of the concentration profile"
+      ],
+      "answer": 1,
+      "explanation": "The flux J = D grad c scales with the concentration gradient; the diffusion coefficient D is the proportionality constant, not a reciprocal factor."
+    },
+    {
+      "id": "l4-mcq-002",
+      "topicId": "fick-diffusion",
+      "quick": true,
+      "question": "The Nernst-Einstein relation connects the diffusion coefficient Dj to:",
+      "options": [
+        "The transport number and the field strength",
+        "The ionic mobility uj, temperature and charge",
+        "The solution conductivity and the current density",
+        "The diffusion-layer thickness"
+      ],
+      "answer": 1,
+      "explanation": "Dj = uj · RT/(zj F): the same thermal agitation that lets an ion drift under a field makes it diffuse along a gradient, so mobility and diffusion coefficient are proportional at fixed temperature."
+    },
+    {
+      "id": "l4-mcq-003",
+      "topicId": "fick-diffusion",
+      "quick": true,
+      "question": "In dilute aqueous solution, diffusion coefficients of most ions:",
+      "options": [
+        "Exceed 10^-3 cm2/s",
+        "Fall between about 0.6 and 2 x 10^-5 cm2/s",
+        "Are identical for every ion",
+        "Increase steeply with concentration"
+      ],
+      "answer": 1,
+      "explanation": "Room-temperature values cluster around 10^-5 cm2/s (roughly 0.6-2 x 10^-5), and D actually decreases as concentration rises - a real-solution effect folded into a concentration-dependent coefficient."
+    },
+    {
+      "id": "l4-mcq-004",
+      "topicId": "fick-diffusion",
+      "question": "Why do practising electrochemists usually keep Fick's law in its concentration-gradient form rather than the activity-gradient form?",
+      "options": [
+        "Activities are exact, so the activity form is rarely needed",
+        "The activity-based coefficient is no more constant, and the concentration form needs no activity coefficients",
+        "Concentrations are harder to measure than activities",
+        "Fick's law is only valid for uncharged species"
+      ],
+      "answer": 1,
+      "explanation": "Using grad a_j keeps the physical honesty but buys no accuracy: the activity-based diffusion coefficient is equally nonconstant, and the concentration form requires no activity data at all, so equation J = D grad c stays the workhorse."
+    },
+    {
+      "id": "l4-mcq-005",
+      "topicId": "diffusion-layer",
+      "quick": true,
+      "question": "The diffusion layer is best described as the region where:",
+      "options": [
+        "Transport occurs purely by convection",
+        "Concentration changes are transported purely by diffusion",
+        "The electric field is strongest",
+        "No current flows"
+      ],
+      "answer": 1,
+      "explanation": "In the film of thickness delta next to the electrode, concentration differs from the bulk and all transport is diffusional; outside it, convection keeps the concentration at the bulk value."
+    },
+    {
+      "id": "l4-mcq-006",
+      "topicId": "diffusion-layer",
+      "quick": true,
+      "question": "The surface concentration c_S in the diffusion model is measured:",
+      "options": [
+        "Exactly at the electrode surface inside the double layer",
+        "About 1 nm from the surface - outside the double layer, inside the diffusion layer",
+        "At the outer edge of the diffusion layer",
+        "At the bulk solution"
+      ],
+      "answer": 1,
+      "explanation": "The double layer distorts concentrations right at the metal, so c_S is read at a point small compared with delta yet beyond the double layer - conventionally about 1 nm out."
+    },
+    {
+      "id": "l4-mcq-007",
+      "topicId": "diffusion-layer",
+      "quick": true,
+      "question": "For steady linear diffusion across a film, the current density is proportional to:",
+      "options": [
+        "The diffusion coefficient alone",
+        "The difference between bulk and surface concentration",
+        "The square of the film thickness",
+        "The surface concentration only"
+      ],
+      "answer": 1,
+      "explanation": "i = (n/nu_j) F kappa_j (c_V - c_S) with kappa_j = D_j/delta: the current scales with the concentration difference c_V minus c_S across the film."
+    },
+    {
+      "id": "l4-mcq-008",
+      "topicId": "diffusion-layer",
+      "question": "The diffusion-layer thickness delta is best regarded as:",
+      "options": [
+        "A universal constant of water",
+        "A property of the cell and its stirring, not of the solution alone",
+        "Identical to the double-layer thickness",
+        "Independent of flow conditions"
+      ],
+      "answer": 1,
+      "explanation": "delta is the diffusion path length set by cell design and flow intensity. Its size is later traced to hydrodynamics - the key variable the next sections learn to control."
+    },
+    {
+      "id": "l4-mcq-009",
+      "topicId": "limiting-current",
+      "quick": true,
+      "question": "The limiting diffusion current is reached when:",
+      "options": [
+        "The bulk concentration falls to zero",
+        "The surface concentration of the reactant falls to zero",
+        "The diffusion coefficient vanishes",
+        "The solution reaches its boiling point"
+      ],
+      "answer": 1,
+      "explanation": "At i = i_l the reactant's surface concentration c_S is zero, the gradient has reached its physical maximum c_V/delta, and no further diffusional delivery is possible."
+    },
+    {
+      "id": "l4-mcq-010",
+      "topicId": "limiting-current",
+      "quick": true,
+      "question": "Which fact distinguishes limiting currents from behaviour seen in metal conductors?",
+      "options": [
+        "Only in solution do currents have upper bounds set by transport",
+        "Metal conductors also show limiting currents at high fields",
+        "Limiting currents appear only at cryogenic temperatures",
+        "Metal wires resist, so they never carry current"
+      ],
+      "answer": 0,
+      "explanation": "A galvanic circuit has a ceiling because the electrode reaction consumes matter; a metal wire delivers electrons on demand with no mass transfer, so such a current limit has no analogue there."
+    },
+    {
+      "id": "l4-mcq-011",
+      "topicId": "limiting-current",
+      "quick": true,
+      "question": "The 'key component' of a reaction is the species that:",
+      "options": [
+        "Has the largest diffusion coefficient",
+        "Reaches its limiting concentration first as current rises",
+        "Is present at the highest bulk concentration",
+        "Carries the largest charge"
+      ],
+      "answer": 1,
+      "explanation": "Each reactant and product has its own limiting current; the one whose surface concentration saturates first - the key component - fixes the limiting current of the whole cell."
+    },
+    {
+      "id": "l4-mcq-012",
+      "topicId": "limiting-current",
+      "question": "A limiting current caused by precipitation of a reaction product:",
+      "options": [
+        "Is identical in value to the diffusion-limited current of the reactant",
+        "Is less reproducible and may drift with time as the deposit screens the surface",
+        "Is perfectly reproducible because deposits are uniform",
+        "Cannot occur in aqueous solution"
+      ],
+      "answer": 1,
+      "explanation": "Product-based limits arise when the solubility limit is reached; the precipitated material screens the electrode, and the value depends on the nature of the deposit, so it is less reproducible than the clean diffusion-limited ceiling."
+    },
+    {
+      "id": "l4-mcq-013",
+      "topicId": "nernst-planck",
+      "quick": true,
+      "question": "The Nernst-Planck equation for the total flux of an ion is:",
+      "options": [
+        "J = D grad c alone",
+        "J = c·u·E ± D·dc/dx, the sum of migration and diffusion",
+        "J = v·c, the convective flux",
+        "J = F·z·c·u, Ohm's law for ions"
+      ],
+      "answer": 1,
+      "explanation": "Migration down the field (c·u·E) and diffusion down the gradient (D·dc/dx) combine with a sign reflecting whether they point the same way or against each other."
+    },
+    {
+      "id": "l4-mcq-014",
+      "topicId": "nernst-planck",
+      "quick": true,
+      "question": "The electroneutrality constraint on the Nernst-Planck system means that:",
+      "options": [
+        "All concentration gradients are independent",
+        "The charge-weighted sum of concentration gradients is zero",
+        "The solution must be stirred",
+        "Only uncharged species can diffuse"
+      ],
+      "answer": 1,
+      "explanation": "Electroneutrality ties the gradients: sum(z_j dc_j/dx) = 0. With N species this leaves N - 1 independent gradients and closes the N-equation system for the field and the profiles."
+    },
+    {
+      "id": "l4-mcq-015",
+      "topicId": "nernst-planck",
+      "quick": true,
+      "question": "For an uncharged component, the Nernst-Planck equation:",
+      "options": [
+        "Adds a new migrative term",
+        "Reduces to Fick's first law",
+        "Predicts a limiting current of zero",
+        "Becomes the Levich equation"
+      ],
+      "answer": 1,
+      "explanation": "With z_j = 0 the migration term c_j u_j E vanishes, leaving pure diffusional flux - Fick's law, exactly as for neutral molecules."
+    },
+    {
+      "id": "l4-mcq-016",
+      "topicId": "nernst-planck",
+      "question": "Why is the closure of the Nernst-Planck system (N equations in N unknowns) conceptually important?",
+      "options": [
+        "It proves diffusion never reaches steady state",
+        "It shows a unique steady state with balanced charges and substances can actually exist while current flows",
+        "It eliminates the need for the supporting electrolyte",
+        "It shows the current is independent of the field"
+      ],
+      "answer": 1,
+      "explanation": "That the equations close means the field strength and concentration profiles settle at unique, self-consistent steady values - the very possibility on which modelling a working cell rests."
+    },
+    {
+      "id": "l4-mcq-017",
+      "topicId": "supporting-electrolyte",
+      "quick": true,
+      "question": "Adding a large excess of an inert supporting electrolyte suppresses:",
+      "options": [
+        "Diffusion of the electroactive ion",
+        "The migration term of the Nernst-Planck flux",
+        "The limiting current itself",
+        "The diffusion-layer thickness"
+      ],
+      "answer": 1,
+      "explanation": "The excess ions raise conductivity, so at fixed current the field strength E = i/sigma collapses; with E gone, the migration term c·u·E vanishes and delivery becomes purely diffusional."
+    },
+    {
+      "id": "l4-mcq-018",
+      "topicId": "supporting-electrolyte",
+      "quick": true,
+      "question": "The field collapse caused by a supporting electrolyte follows from:",
+      "options": [
+        "Faraday's law of electrolysis",
+        "Ohm's law applied to a solution of greatly increased conductivity",
+        "Fick's first law",
+        "The Nernst equation"
+      ],
+      "answer": 1,
+      "explanation": "E = i/sigma. Flooding the solution with inert ions raises sigma dramatically, so the field needed to drive a given current density becomes negligibly small."
+    },
+    {
+      "id": "l4-mcq-019",
+      "topicId": "supporting-electrolyte",
+      "quick": true,
+      "question": "In the presence of excess supporting electrolyte, the electroactive ion:",
+      "options": [
+        "Is transported mainly by migration",
+        "Is transported only by diffusion and obeys the uncharged-particle law",
+        "Stops being transported entirely",
+        "Doubles its effective charge"
+      ],
+      "answer": 1,
+      "explanation": "With the field suppressed, the ion's flux obeys exactly the pure-diffusion equations already derived, so the current and limiting current take their simple, predictable forms."
+    },
+    {
+      "id": "l4-mcq-020",
+      "topicId": "supporting-electrolyte",
+      "question": "What does the supporting electrolyte actually cost the measurement?",
+      "options": [
+        "It dilutes the analyte so the current drops",
+        "Nothing material - it changes neither c_V nor kappa, only dompting the field",
+        "It halves the limiting current",
+        "It forces the use of turbulent flow"
+      ],
+      "answer": 1,
+      "explanation": "The inert ions carry no reaction chemistry and do not change the analyte's bulk concentration or diffusion coefficient; their only role is to hoist the conductivity and silence migration - the reason voltammetry is reproducible at all."
+    },
+    {
+      "id": "l4-mcq-021",
+      "topicId": "binary-migration",
+      "quick": true,
+      "question": "Without a supporting electrolyte in a binary solution, the unreactive anion in a cathodic deposition:",
+      "options": [
+        "Moves freely to the surface and reacts",
+        "Shows zero net flux, its diffusion toward the surface balanced by migration away from it",
+        "Carries most of the current as a reactant",
+        "Never feels the electric field"
+      ],
+      "answer": 1,
+      "explanation": "With nu_- = 0 the anion cannot leave the electrode in steady state, so its diffusional flux in must be matched by a migrational flux out - a self-organised field is the only way to balance the books."
+    },
+    {
+      "id": "l4-mcq-022",
+      "topicId": "binary-migration",
+      "quick": true,
+      "question": "For a symmetric binary electrolyte M+A-, the enhancement factor alpha is:",
+      "options": [
+        "1",
+        "2",
+        "1.5",
+        "3"
+      ],
+      "answer": 1,
+      "explanation": "alpha = 1 + tau-/tau+. With tau+ = tau- the factor equals 2: migration doubles the delivery compared with pure diffusion at the same gradient."
+    },
+    {
+      "id": "l4-mcq-023",
+      "topicId": "binary-migration",
+      "quick": true,
+      "question": "The enhancement factor alpha is below 1 - the field withholds supply - when:",
+      "options": [
+        "A cation is reduced at the cathode",
+        "An anion is oxidised at the anode",
+        "A metal is deposited from a complex anion at the cathode",
+        "The electrolyte is symmetric"
+      ],
+      "answer": 2,
+      "explanation": "alpha < 1 when migration opposes diffusion; reducing a negatively charged complex at the cathode forces the ion to swim against the field, the textbook example of field-throttled supply."
+    },
+    {
+      "id": "l4-mcq-024",
+      "topicId": "binary-migration",
+      "question": "Inside the diffusion layer of a binary electrolyte without support, the effective transport number of the reacting ion is:",
+      "options": [
+        "Zero, because it is slowed by the anions",
+        "Unity, while the spectator's effective transport number is zero",
+        "Equal to its bulk transport number",
+        "Negative"
+      ],
+      "answer": 1,
+      "explanation": "The reacting ion carries every coulomb of current through the layer even though its bulk transport number is lower; effective transport numbers inside the diffusion layer differ from bulk values."
+    },
+    {
+      "id": "l4-mcq-025",
+      "topicId": "convective-diffusion",
+      "quick": true,
+      "question": "A convective flux is always electroneutral because:",
+      "options": [
+        "Convection only carries neutral molecules",
+        "The moving medium itself is electroneutral",
+        "Ions never participate in flow",
+        "Diffusion cancels it"
+      ],
+      "answer": 1,
+      "explanation": "J = v·c_j sweeps whatever concentration rides the flow, and since the medium carries balanced charge, the convective flux can never create a net current by itself."
+    },
+    {
+      "id": "l4-mcq-026",
+      "topicId": "convective-diffusion",
+      "quick": true,
+      "question": "In water, diffusive and convective transport become comparable already for a flow velocity of about:",
+      "options": [
+        "10 cm/s",
+        "10^-3 cm/s",
+        "10^-8 cm/s",
+        "10^3 cm/s"
+      ],
+      "answer": 1,
+      "explanation": "With D ~ 10^-5 cm2/s and delta ~ 10^-2 cm, the ratio J_d/J_nu ~ D/(delta v) equals one near v = 10^-3 cm/s - convection dominates bulk delivery at almost any real flow."
+    },
+    {
+      "id": "l4-mcq-027",
+      "topicId": "convective-diffusion",
+      "quick": true,
+      "question": "The hydrodynamic (Prandtl) boundary layer is:",
+      "options": [
+        "The region where the flow velocity builds from zero at the wall to its bulk value",
+        "Another name for the double layer",
+        "A layer in which diffusion is impossible",
+        "Always thinner than the diffusion layer"
+      ],
+      "answer": 0,
+      "explanation": "Molecular forces hold the fluid at the solid surface at rest; the boundary layer is the zone of velocity gradient between the wall and the free stream."
+    },
+    {
+      "id": "l4-mcq-028",
+      "topicId": "convective-diffusion",
+      "question": "Natural convection explains why:",
+      "options": [
+        "Unstirred cells still support steady currents (layers of roughly 100-500 um)",
+        "Stirring always removes the diffusion layer",
+        "Porous matrices enhance natural convection",
+        "Capillaries carry high currents"
+      ],
+      "answer": 0,
+      "explanation": "Density gradients from temperature, composition and gas bubbles drive spontaneous flows that cap the layer at tens to hundreds of microns; narrow pores and matrices suppress the flows entirely."
+    },
+    {
+      "id": "l4-mcq-029",
+      "topicId": "hydrodynamics-flowby",
+      "quick": true,
+      "question": "The Reynolds number controls:",
+      "options": [
+        "The degree of dissociation",
+        "Whether the flow past an electrode is laminar or turbulent",
+        "The diffusion coefficient",
+        "The exchange current density"
+      ],
+      "answer": 1,
+      "explanation": "Re = vL/nu_kin compares inertia with viscosity; below a critical value (roughly 10^3 rough surfaces, 10^5 smooth) the flow stays laminar, above it turbulence appears."
+    },
+    {
+      "id": "l4-mcq-030",
+      "topicId": "hydrodynamics-flowby",
+      "quick": true,
+      "question": "In laminar flow past a flat electrode, the hydrodynamic boundary layer:",
+      "options": [
+        "Has constant thickness everywhere",
+        "Grows with distance from the stagnation point and shrinks with flow speed",
+        "Is thicker at higher flow speeds",
+        "Does not depend on viscosity"
+      ],
+      "answer": 1,
+      "explanation": "delta_b ~ nu_kin^(1/2) y^(1/2) v^(-1/2): the retarded zone spreads along the surface and is compressed by faster flow."
+    },
+    {
+      "id": "l4-mcq-031",
+      "topicId": "hydrodynamics-flowby",
+      "quick": true,
+      "question": "Along a flat-plate electrode in laminar flow, the local current density:",
+      "options": [
+        "Is uniform",
+        "Falls with distance from the stagnation point because the diffusion layer thickens",
+        "Rises linearly with distance",
+        "Is zero everywhere"
+      ],
+      "answer": 1,
+      "explanation": "Because delta grows as y^(1/2), the surface gradient - and with it the diffusive flux and the local current - decreases along the electrode; only the rotating disk rescues uniformity."
+    },
+    {
+      "id": "l4-mcq-032",
+      "topicId": "hydrodynamics-flowby",
+      "question": "Convection influences the diffusional transport through the boundary layer in which way?",
+      "options": [
+        "It sets the diffusion-layer thickness quantitatively: faster flow means a thinner layer, a steeper gradient and a larger flux",
+        "It has no influence once the bulk is levelled",
+        "It only works in turbulent flow",
+        "It thickens the layer at higher velocity"
+      ],
+      "answer": 0,
+      "explanation": "Convection plays a double role - levelling the bulk (which needs almost no motion) and governing delta (a quantitative function of velocity). The faster the flow, the thinner the film and the larger the limiting flux."
+    },
+    {
+      "id": "l4-mcq-033",
+      "topicId": "rde-levich",
+      "quick": true,
+      "question": "The rotating disk electrode achieves a uniform diffusion layer because:",
+      "options": [
+        "The disk is polished perfectly flat",
+        "The distance-from-center and local velocity dependences cancel exactly in the hydrodynamic law",
+        "The solution is stirred very fast",
+        "Centrifugal forces remove all liquid"
+      ],
+      "answer": 1,
+      "explanation": "At the disk, distance y from the stagnation point and linear velocity omega·r rise together; substituting into the flat-plate law cancels both, leaving delta independent of position."
+    },
+    {
+      "id": "l4-mcq-034",
+      "topicId": "rde-levich",
+      "quick": true,
+      "question": "The Levich equation predicts that the current at a rotating disk is proportional to:",
+      "options": [
+        "omega^(-1/2)",
+        "omega^(1/2)",
+        "omega",
+        "omega^2"
+      ],
+      "answer": 1,
+      "explanation": "i = 0.62 (n/nu_j) F D^(2/3) nu_kin^(-1/6) omega^(1/2) (c_V - c_S): a Levich plot of i versus omega^(1/2) is a straight line through the origin at the limiting current."
+    },
+    {
+      "id": "l4-mcq-035",
+      "topicId": "rde-levich",
+      "quick": true,
+      "question": "A common RDE working range spins at about 60 to 10,000 rpm, corresponding to diffusion-layer thicknesses:",
+      "options": [
+        "From about 60 um down to about 4.5 um",
+        "From about 1 mm up to 1 cm",
+        "Independent of the spin rate",
+        "Always near 100 nm"
+      ],
+      "answer": 0,
+      "explanation": "delta_RDE = 1.61 D^(1/3) nu_kin^(1/6) omega^(-1/2); in water, 60-10,000 rpm sweep delta across roughly two orders from 60 to 4.5 um."
+    },
+    {
+      "id": "l4-mcq-036",
+      "topicId": "rde-levich",
+      "question": "What does the ring of a rotating ring-disk electrode (RRDE) do?",
+      "options": [
+        "It stirs the solution more efficiently than the disk",
+        "It catches products swept outward from the disk and reports their flux via its limiting current",
+        "It raises the disk's limiting current by a fixed factor",
+        "It protects the disk from wobble"
+      ],
+      "answer": 1,
+      "explanation": "The ring, held at a potential that reacts to disk products, collects a calculable fraction N (typically about 0.4) of the material released at the disk, giving quantitative access to intermediates and parallel pathways."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l4-tf-001",
+      "topicId": "fick-diffusion",
+      "question": "The true driving force for diffusion is the gradient of chemical potential, not directly the concentration gradient.",
+      "answer": true,
+      "explanation": "The gradient of chemical potential is the physical driving force. Its difference from the concentration gradient is folded into a diffusion coefficient that depends on concentration, which is why D varies with concentration."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l4-tf-002",
+      "topicId": "diffusion-layer",
+      "question": "Inside the diffusion layer transport is purely diffusional, while outside it stirring keeps concentrations at their bulk values.",
+      "answer": true,
+      "explanation": "The diffusion layer is the still film across which only diffusion carries material. Beyond it, convection keeps the solution well mixed at the bulk concentration. Its thickness is set by the cell design and the stirring."
+    },
+    {
+      "kind": "numeric",
+      "id": "l4-num-001",
+      "topicId": "limiting-current",
+      "question": "At a current density equal to 0.75 of the limiting value, what fraction of the bulk concentration remains at the surface?",
+      "answer": 0.25,
+      "tolerance": 0.02,
+      "explanation": "Surface concentration falls as c_S = c_V (1 - i/i_l). With i/i_l = 0.75, c_S = c_V (1 - 0.75) = 0.25 c_V, a quarter of the bulk value. At the limiting current itself, c_S reaches zero."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l4-tf-003",
+      "topicId": "limiting-current",
+      "question": "A limiting diffusion current can appear in a purely electronic conductor.",
+      "answer": false,
+      "explanation": "A limiting current is a sign of ionic transport running out of reactant. In a purely electronic conductor there is no ion to be depleted, so no limiting current appears."
+    },
+    {
+      "kind": "multi",
+      "id": "l4-multi-001",
+      "topicId": "nernst-planck",
+      "question": "Which statements about the Nernst-Planck flux are correct? Select all that apply.",
+      "options": [
+        "It adds migration and diffusion contributions",
+        "Electroneutrality adds a constraint among the gradients",
+        "For uncharged species it reduces to Fick's law",
+        "It only works when a supporting electrolyte is present"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Nernst-Planck combines migration and diffusion. Electroneutrality ties the gradients together so N species give N equations, and setting z = 0 drops it back to Fick's law. A supporting electrolyte is a convenience, not a requirement."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l4-tf-004",
+      "topicId": "nernst-planck",
+      "question": "With both migration and diffusion present, a genuine steady state can be reached in which the concentration profile and the voltage take unique values.",
+      "answer": true,
+      "explanation": "Charges and substances can balance so that nothing changes with time. The voltage and the concentration profile then settle at unique values, which is what makes migration-diffusion problems solvable."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l4-tf-005",
+      "topicId": "supporting-electrolyte",
+      "question": "A large excess of supporting electrolyte makes the reacting ion travel to the surface by migration alone.",
+      "answer": false,
+      "explanation": "The excess salt raises the conductivity, so the field strength collapses at a given current density and the migration term vanishes. The reacting ion then arrives by diffusion alone, and the current equation takes its simple diffusion-limited form."
+    },
+    {
+      "kind": "numeric",
+      "id": "l4-num-002",
+      "topicId": "binary-migration",
+      "question": "For a symmetric electrolyte such as CuSO4 the transport numbers of cation and anion are both 0.5. What is the migration enhancement factor alpha = 1 + tau-/tau+?",
+      "answer": 2.0,
+      "tolerance": 0.05,
+      "explanation": "With equal transport numbers, alpha = 1 + 0.5/0.5 = 2. So migration doubles the flux compared with pure diffusion. This is the value for symmetric electrolytes such as CuSO4."
+    },
+    {
+      "kind": "numeric",
+      "id": "l4-num-003",
+      "topicId": "binary-migration",
+      "question": "What is the migration enhancement factor alpha for ZnCl2, given as a standard value in the lesson?",
+      "answer": 3.0,
+      "tolerance": 0.05,
+      "explanation": "For ZnCl2 the standard factor is alpha = 3, while Ag2SO4 gives 1.5 and symmetric electrolytes give 2. Alpha exceeds 1 whenever migration and diffusion push the same way."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l4-tf-006",
+      "topicId": "convective-diffusion",
+      "question": "Convective flux is always electroneutral, because the moving solution carries charge-balanced fluid.",
+      "answer": true,
+      "explanation": "Convection sweeps whole regions of charge-balanced solution, so its net charge flux is zero. That is why convection never appears as a term in the charge-balance equation, only in the mass balance."
+    },
+    {
+      "kind": "numeric",
+      "id": "l4-num-004",
+      "topicId": "convective-diffusion",
+      "question": "The diffusion layer is about one tenth of the hydrodynamic boundary layer. If the hydrodynamic boundary layer is 100 micrometres thick, how thick is the diffusion layer, in micrometres?",
+      "answer": 10.0,
+      "tolerance": 0.5,
+      "unit": "um",
+      "explanation": "The ratio of the two layer thicknesses is about Pr^(-1/3), roughly one tenth for water. So a 100 um hydrodynamic layer corresponds to a diffusion layer of about 10 um."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l4-tf-007",
+      "topicId": "hydrodynamics-flowby",
+      "question": "Above a critical Reynolds number the flow becomes turbulent; this lesson treats only the laminar case.",
+      "answer": true,
+      "explanation": "Laminar flow survives below a critical Reynolds number, about 10^3 on rough surfaces and 10^5 on smooth ones. Above it turbulence sets in, and the lesson deliberately restricts itself to laminar flow."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l4-tf-008",
+      "topicId": "rde-levich",
+      "question": "At a rotating disk electrode every point of the accessible surface has the same diffusion layer thickness.",
+      "answer": true,
+      "explanation": "On the RDE the two geometrical dependencies of the flat-plate theory cancel, so the diffusion layer is uniform and the electrode is uniformly accessible. That is what makes the RDE so useful for kinetics."
+    },
+    {
+      "kind": "numeric",
+      "id": "l4-num-005",
+      "topicId": "rde-levich",
+      "question": "In the Levich equation the limiting current is proportional to omega raised to what power?",
+      "answer": 0.5,
+      "tolerance": 0.02,
+      "explanation": "The Levich equation gives i proportional to omega^(1/2), so a plot of i against the square root of rotation rate is a straight line. Its slope gives the diffusion coefficient."
+    }
+  ]
+}

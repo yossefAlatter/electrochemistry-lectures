@@ -1,0 +1,367 @@
+{
+  "slug": "lesson-23",
+  "label": "Lesson 23",
+  "title": "Liquid-liquid interfaces",
+  "summary": "An interface between two immiscible liquids - water and oil - can act as an electrode even though neither phase is a metal. This lesson explains how an ion crosses such an interface, how the potential across it can be controlled, and how the resulting voltammetry is used to study ion transfer, assisted transfer and reactions at the oil-water boundary.",
+  "order": 23,
+  "minutes": 38,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Most of this course puts a metal electrode against a solution. But an electrode reaction only needs a place where charge changes carrier, and a boundary between two immiscible liquids can be such a place. Water and an organic solvent do not mix, yet ions can cross between them, and that crossing is an electrochemical event."
+    },
+    {
+      "kind": "para",
+      "text": "The interface between two immiscible electrolyte solutions, usually shortened to ITIES, has become a rich field. It lets ion transfer and electron transfer be studied in a controlled way at a soft, structureless junction, with applications from sensors to drug partitioning."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The one-sentence summary",
+      "body": "At an ITIES both phases are ionic conductors, so the potential across the boundary can be set externally and used to drive ions or electrons from one liquid to the other."
+    }
+  ],
+  "sections": [
+    {
+      "id": "two-liquids-one-interface",
+      "tone": "azure",
+      "title": "Two liquids, one interface",
+      "minutes": 8,
+      "summary": "When water is shaken with an immiscible organic solvent, a stable boundary forms. Both phases contain ions and conduct, so a potential difference can be imposed across the boundary without a metal electrode.",
+      "keyPoints": [
+        "An ITIES is the boundary between two immiscible electrolyte solutions.",
+        "Both phases contain ions and conduct, so each acts as a solution electrode.",
+        "A thermodynamic Galvani potential difference exists across the boundary.",
+        "Only a limited amount of the boundary is disruptive; the two bulk phases are homogeneous."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "An ITIES is formed whenever two immiscible liquids that both contain ions are brought together. Typically one is water carrying a hydrophilic salt and the other is an organic solvent such as nitrobenzene carrying a hydrophobic salt. The two do not mix, so a sharp boundary forms between them."
+        },
+        {
+          "kind": "para",
+          "text": "Both phases conduct by ion motion, so each can serve as the electrode that the other needs. There is no metal anywhere in the cell, yet the interface behaves electrochemically because charge can cross it, changing carriers from an ion of one phase to an ion of the other."
+        },
+        {
+          "kind": "para",
+          "text": "A Galvani potential difference sits across the boundary, set by the distribution of ions between the phases, and it can be changed by applying an external voltage through reference electrodes placed in each phase. With that control, the interface can be polarised, exactly like a metal electrode."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "Why it is a \"soft\" electrode",
+          "body": "A metal electrode has a rigid lattice and a definite surface plane. An ITIES has a fluctuating, liquid boundary a few molecules thick, so it is called a soft or liquid-liquid electrode. This softness is why it is useful for studying adsorption and transfer of fragile molecules."
+        }
+      ]
+    },
+    {
+      "id": "potential-window",
+      "tone": "indigo",
+      "title": "The polarisable window",
+      "minutes": 8,
+      "summary": "An ITIES can be polarised over a range of potentials, but only until an ion from either phase begins to cross. The width of that window is set by which ions are present and how easily each can transfer.",
+      "keyPoints": [
+        "An ITIES is ideally polarisable while no ion finds it favourable to cross.",
+        "The usable potential window is bounded by the transfer of the least hydrophobic ion present.",
+        "The width of the window can be widened by choosing ions that stay in their own phase.",
+        "Inside the window the interface behaves like a capacitor; across the edges, current flows."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Between the edges of the window nothing can cross the interface, so no faradaic current flows and the boundary simply charges as a capacitor. The interface is then ideally polarisable, the same condition met with an inert metal electrode over a limited range."
+        },
+        {
+          "kind": "para",
+          "text": "Push the potential to one edge and the easiest ion to leave its phase begins to cross, and current flows. Which ion that is depends on the composition: the window is bounded by the most transferable ion present in each phase. A common design uses very hydrophilic ions in water and very hydrophobic ions in oil, so that neither will leave and the window is wide."
+        },
+        {
+          "kind": "para",
+          "text": "The size of this window is the practical currency of ITIES experiments. A wider window lets you study more species inside it, and the art of the field lies in choosing salts that keep the edges as far apart as possible."
+        },
+        {
+          "kind": "callout",
+          "variant": "warn",
+          "title": "Not all ITIES are polarisable",
+          "body": "If a salt partitions appreciably between the two phases, its ions cross freely and the interface cannot be polarised: it is a liquid junction, not an electrode. Making the ITIES polarisable means keeping both salts firmly in their own phase."
+        }
+      ]
+    },
+    {
+      "id": "ion-transfer-voltammetry",
+      "tone": "violet",
+      "title": "Ion-transfer voltammetry",
+      "minutes": 9,
+      "summary": "An ion crosses the interface at a characteristic potential set by its Gibbs energy of transfer. Sweeping the potential gives a voltammogram whose peak position reports that energy, and an ionophore can pull a reluctant ion across by complexing it.",
+      "keyPoints": [
+        "The Gibbs energy of transfer sets the potential at which an ion crosses the interface.",
+        "Sweeping the interfacial potential gives a voltammogram of ion transfer.",
+        "A more hydrophobic ion crosses at a lower potential.",
+        "An ionophore in one phase can assist the transfer of an ion it binds."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "An ion will cross the water-oil interface when the potential makes the crossing energetically favourable. The energy that matters is the Gibbs energy of transfer, the difference in solvation energy between the two phases. A hydrophobic ion is happy in oil and crosses easily; a hydrophilic one needs a larger push."
+        },
+        {
+          "kind": "para",
+          "text": "Sweeping the interfacial potential therefore produces a voltammogram whose peak or wave sits at a potential characteristic of the ion. The position identifies the ion, and the height measures its concentration, just as in ordinary voltammetry, but now the electrode is the liquid boundary itself."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\Delta G_{\\mathrm{tr}} = zF\\,\\Delta_o^w\\phi",
+          "caption": "The applied interfacial potential does work zF times the Galvani potential difference to move an ion"
+        },
+        {
+          "kind": "para",
+          "text": "The technique becomes especially powerful with an ionophore: a molecule dissolved in the organic phase that binds a particular ion. Even an ion that would never cross on its own can be brought across by complexation, and the shift in the transfer potential measures the binding. This is how the field studies the selectivity of ion carriers, the same chemistry behind ion-selective electrodes."
+        },
+        {
+          "kind": "callout",
+          "variant": "example",
+          "title": "Transfer assisted by a crown ether",
+          "body": "A crown ether in the oil phase wraps around a sodium ion from the water, hiding its charge and dragging it into the organic phase at a much lower potential than sodium would cross unaided. The shift measures the strength of the complex."
+        }
+      ]
+    },
+    {
+      "id": "electron-transfer-at-ities",
+      "tone": "rose",
+      "title": "Electron transfer across the boundary",
+      "minutes": 8,
+      "summary": "Besides ions, a single electron can cross an ITIES between two redox couples, one in each phase. This biphasic electron transfer can also drive catalysis, where one phase regenerates the other.",
+      "keyPoints": [
+        "A redox couple in each phase allows electron transfer across the boundary.",
+        "Electron transfer is driven by the difference in redox potentials of the two couples.",
+        "The reaction can be studied without a metal electrode touching either redox couple.",
+        "A regenerating couple gives a catalytic current that amplifies a slow reaction."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "If one phase holds an oxidant and the other a reductant, an electron can cross the interface directly, without any ion moving. The driving force is the difference between the redox potentials of the two couples, one measured in water and one in oil, and both are now accessible to a single voltammogram."
+        },
+        {
+          "kind": "para",
+          "text": "This lets chemists study a bimolecular electron-transfer reaction with all the control of electrochemistry but none of the metal. There is no electrode surface for either reactant to adsorb on, so the interface isolates the pure electron-transfer step."
+        },
+        {
+          "kind": "para",
+          "text": "When one of the couples is regenerated by a further reaction, the current becomes catalytic. A slow electron transfer can then be amplified into a large, easily measured current, which is how the technique reaches reactions too sluggish to see directly. The design mirrors the catalytic mechanisms of the electrode-kinetics lessons, with a liquid boundary in place of the solid one."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "Ions or electrons",
+          "body": "At an ITIES both mechanisms are available. Ions cross when the potential reaches their transfer energy; electrons cross when the two couples allow it. By choosing the conditions, one can be singled out, which is a striking demonstration that the same interface supports both."
+        }
+      ]
+    },
+    {
+      "id": "ities-applications",
+      "tone": "coral",
+      "title": "Where liquid-liquid electrochemistry is used",
+      "minutes": 8,
+      "summary": "ITIES studies inform ion-selective sensors, the partitioning of drugs between water and membranes, solvent extraction and the behaviour of ions inside nanoscale pores.",
+      "keyPoints": [
+        "The transfer energy at an ITIES is the same quantity that governs solvent extraction and drug partitioning.",
+        "The field underpins ion-selective electrode design.",
+        "Nano-ITIES and pores extend the method to single molecules and transport.",
+        "It links electrochemistry to liquid-liquid extraction and pharmacology."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The Gibbs energy of transfer measured at an ITIES is exactly the quantity that decides how a drug distributes between water and a cell membrane, or how a metal ion is pulled from an aqueous into an organic phase during solvent extraction. Electrochemistry thus provides a direct, controlled measurement of a property that matters across chemistry and pharmacology."
+        },
+        {
+          "kind": "para",
+          "text": "The same principles guide the design of ion-selective electrodes, whose sensing membrane must let one ion cross while blocking the rest. The transfer energetics measured at a model ITIES predict what the real membrane will do."
+        },
+        {
+          "kind": "para",
+          "text": "At the smallest scales, a nanoscopic interface - a single pore or an etched tip - lets the method be used to study the transport of individual ions, to detect single molecules, and to build tiny sensors. The liquid boundary scales down gracefully where a rigid electrode becomes difficult to make."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "The bridge to pharmacology and separation science",
+          "body": "Because the transfer energy is transferable, an electrochemist measuring an ion at an ITIES is, in effect, measuring the partition coefficient that a pharmacologist or a separation engineer cares about."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "truefalse",
+      "id": "l23-tf-001",
+      "topicId": "two-liquids-one-interface",
+      "quick": true,
+      "question": "An ITIES can behave as an electrode even though neither phase is a metal.",
+      "answer": true,
+      "explanation": "An electrode only requires a place where charge changes carrier. At an ITIES, ions cross from one liquid to the other, so the interface is electrochemically active without any metal."
+    },
+    {
+      "id": "l23-mcq-001",
+      "topicId": "two-liquids-one-interface",
+      "quick": true,
+      "question": "The abbreviation ITIES stands for:",
+      "options": [
+        "Internal transfer in electrochemical systems",
+        "Interface between two immiscible electrolyte solutions",
+        "Ion transfer in ionic electrolytes",
+        "Ionic transport in electrode surfaces"
+      ],
+      "answer": 1,
+      "explanation": "It is the interface between two immiscible electrolyte solutions, typically water in contact with an organic solvent."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l23-tf-002",
+      "topicId": "two-liquids-one-interface",
+      "question": "A Galvani potential difference exists across an ITIES and can be changed by an external voltage.",
+      "answer": true,
+      "explanation": "Reference electrodes in each phase allow the potential across the boundary to be set and swept, which is what makes ion-transfer voltammetry possible."
+    },
+    {
+      "id": "l23-mcq-002",
+      "topicId": "potential-window",
+      "quick": true,
+      "question": "The usable potential window at an ITIES is bounded by:",
+      "options": [
+        "The melting point of water",
+        "The onset of ion transfer from one phase to the other",
+        "The colour of the organic solvent",
+        "The temperature only"
+      ],
+      "answer": 1,
+      "explanation": "Inside the window no ion can cross and the interface is ideally polarisable; at the edges the most transferable ion present begins to cross and current flows."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l23-tf-003",
+      "topicId": "potential-window",
+      "question": "Inside its polarisable window an ITIES behaves like a capacitor.",
+      "answer": true,
+      "explanation": "With no ion able to cross, the only response to a change in potential is charging of the double layer, so the interface acts as a capacitor. Faradaic current appears only at the window edges."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l23-tf-004",
+      "topicId": "potential-window",
+      "question": "If a salt partitions appreciably between the two phases, the interface becomes a liquid junction rather than a polarisable electrode.",
+      "answer": true,
+      "explanation": "Ions that cross freely short-circuit the potential control. To make a useful, polarisable ITIES, the salts must stay firmly in their own phases."
+    },
+    {
+      "id": "l23-mcq-003",
+      "topicId": "ion-transfer-voltammetry",
+      "quick": true,
+      "question": "At an ITIES an ion crosses the interface when the applied potential:",
+      "options": [
+        "Reaches a value set by its Gibbs energy of transfer",
+        "Randomly fluctuates",
+        "Exceeds the breakdown voltage of water",
+        "Matches the pH"
+      ],
+      "answer": 0,
+      "explanation": "The Gibbs energy of transfer, the difference in solvation between the phases, sets the potential at which the crossing becomes favourable, so the peak position identifies the ion."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l23-tf-005",
+      "topicId": "ion-transfer-voltammetry",
+      "question": "A more hydrophobic ion crosses the water-oil interface at a lower potential than a hydrophilic one.",
+      "answer": true,
+      "explanation": "A hydrophobic ion is already comfortable in the oil, so it needs less help to cross. The ion-transfer peak moves to lower potential as the ion becomes more hydrophobic."
+    },
+    {
+      "id": "l23-mcq-004",
+      "topicId": "ion-transfer-voltammetry",
+      "quick": true,
+      "question": "An ionophore dissolved in one phase assists ion transfer by:",
+      "options": [
+        "Repelling the ion",
+        "Complexing the ion so it can cross more easily",
+        "Increasing the viscosity",
+        "Blocking the interface"
+      ],
+      "answer": 1,
+      "explanation": "By binding the ion, the ionophore hides its charge and lowers the energy of transfer, so an otherwise reluctant ion crosses at a much lower potential. The shift measures the binding."
+    },
+    {
+      "id": "l23-mcq-005",
+      "topicId": "electron-transfer-at-ities",
+      "quick": true,
+      "question": "Electron transfer across an ITIES requires:",
+      "options": [
+        "A metal electrode in each phase",
+        "A redox couple in each phase with different potentials",
+        "No ions at all",
+        "A magnetic field"
+      ],
+      "answer": 1,
+      "explanation": "An oxidant in one phase and a reductant in the other allow a single electron to hop across, driven by the difference in their redox potentials."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l23-tf-006",
+      "topicId": "electron-transfer-at-ities",
+      "question": "Studying electron transfer at an ITIES avoids any metal surface on which the reactants could adsorb.",
+      "answer": true,
+      "explanation": "With no electrode surface touching the reactants, the interface isolates the pure bimolecular electron-transfer step, which is one of the advantages of the method."
+    },
+    {
+      "kind": "multi",
+      "id": "l23-multi-001",
+      "topicId": "electron-transfer-at-ities",
+      "question": "Which statements about ITIES electrochemistry are correct? Select all that apply.",
+      "options": [
+        "Both ion transfer and electron transfer can occur at an ITIES",
+        "Ion transfer is driven by the Gibbs energy of transfer",
+        "Electron transfer is driven by the difference in redox potentials",
+        "Only electrons can cross an ITIES"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Both ions and electrons can cross, and each is driven by its own quantity: the transfer energy for ions and the redox-potential difference for electrons. Electrons are not the only species that cross."
+    },
+    {
+      "id": "l23-mcq-006",
+      "topicId": "ities-applications",
+      "quick": true,
+      "question": "The Gibbs energy of transfer measured at an ITIES is also central to:",
+      "options": [
+        "Predicting how a drug partitions between water and a membrane",
+        "The colour of a dye",
+        "The strength of a spring",
+        "The speed of sound"
+      ],
+      "answer": 0,
+      "explanation": "The transfer energy decides how a species distributes between water and an organic phase, which is exactly the question in drug partitioning, solvent extraction and ion-selective electrodes."
+    },
+    {
+      "kind": "multi",
+      "id": "l23-multi-002",
+      "topicId": "ities-applications",
+      "question": "Which fields are linked to ITIES electrochemistry? Select all that apply.",
+      "options": [
+        "Ion-selective electrode design",
+        "Solvent extraction",
+        "Drug partitioning between water and membranes",
+        "High-temperature superconductor physics"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Ion-selective electrodes, solvent extraction and drug partitioning all rest on the same transfer energetics measured at an ITIES. Superconductor physics is unrelated."
+    }
+  ]
+}

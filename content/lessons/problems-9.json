@@ -1,0 +1,219 @@
+{
+  "slug": "problems-9",
+  "label": "Problem set 9",
+  "title": "Problem set 9: Hydrodynamic methods",
+  "summary": "Practice with the rotating disk electrode: the Levich equation, mass-transfer coefficients, rotation-rate dependence and Koutecky-Levich analysis.",
+  "source": "Bard & Faulkner ch.9",
+  "order": 109,
+  "minutes": 28,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "The rotating disk electrode gives a steady-state, mass-transfer-limited current described by the Levich equation iL = 0.62 n F A D^(2/3) omega^(1/2) nu^(-1/6) C, with omega = 2 pi f."
+    },
+    {
+      "kind": "para",
+      "text": "Because iL is proportional to omega^(1/2), a Koutecky-Levich plot of 1/i against 1/omega^(1/2) separates mass transfer from kinetics, giving the kinetic current as the intercept."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps9-rde",
+      "tone": "amber",
+      "title": "Hint sheet: hydrodynamic relations",
+      "summary": "Practice with the rotating disk electrode: the Levich equation, mass-transfer coefficients, rotation-rate dependence and Koutecky-Levich analysis.",
+      "minutes": 23,
+      "keyPoints": [
+        "iL = 0.62 n F A D^(2/3) omega^(1/2) nu^(-1/6) C",
+        "omega = 2 pi f",
+        "iL proportional to omega^(1/2)",
+        "1/i = 1/ik + 1/iL"
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The rotating disk electrode gives a steady-state, mass-transfer-limited current described by the Levich equation iL = 0.62 n F A D^(2/3) omega^(1/2) nu^(-1/6) C, with omega = 2 pi f."
+        },
+        {
+          "kind": "para",
+          "text": "Because iL is proportional to omega^(1/2), a Koutecky-Levich plot of 1/i against 1/omega^(1/2) separates mass transfer from kinetics, giving the kinetic current as the intercept."
+        },
+        {
+          "kind": "worked",
+          "title": "Levich limiting current",
+          "given": "n=1, A=0.30 cm2, D=1.0e-5 cm2/s, omega=62.8 s-1, nu=0.010 cm2/s, C=1.0e-5 mol/cm3",
+          "steps": [
+            "Use iL = 0.62 n F A D^(2/3) omega^(1/2) nu^(-1/6) C.",
+            "D^(2/3)=4.64e-4, omega^(1/2)=7.93, nu^(-1/6)=2.15.",
+            "iL = 0.62 x 96485 x 0.30 x 4.64e-4 x 7.93 x 2.15 x 1e-5 = 1.42e-3 A."
+          ],
+          "result": "iL = 1.42 mA"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "numeric",
+      "id": "ps9-num-001",
+      "topicId": "ps9-rde",
+      "question": "Use the Levich equation iL = 0.62 n F A D^(2/3) omega^(1/2) nu^(-1/6) C for n = 1, A = 0.30 cm2, D = 1.0e-5 cm2/s, rotation frequency 10 r/s (omega = 2 pi f = 62.8 s-1), nu = 0.010 cm2/s, C = 1.0e-5 mol/cm3. Calculate iL in mA.",
+      "answer": 1.42,
+      "tolerance": 0.15,
+      "unit": "mA",
+      "explanation": "D^(2/3)=4.64e-4; omega^(1/2)=7.93; nu^(-1/6)=2.15; iL = 0.62 x 96485 x 0.30 x 4.64e-4 x 7.93 x 2.15 x 1e-5 = 1.42e-3 A."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps9-num-002",
+      "topicId": "ps9-rde",
+      "question": "The Levich limiting current is proportional to omega^(1/2). If the rotation rate is quadrupled, by what factor does iL change?",
+      "answer": 2.0,
+      "tolerance": 0.1,
+      "explanation": "iL scales with sqrt(omega), so quadrupling the rotation rate multiplies iL by sqrt(4) = 2.0."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps9-num-003",
+      "topicId": "ps9-rde",
+      "question": "Calculate the mass-transfer coefficient m = 0.62 D^(2/3) omega^(1/2) nu^(-1/6) in cm/s for D = 1.0e-5 cm2/s, omega = 62.8 s-1 and nu = 0.010 cm2/s.",
+      "answer": 0.0049,
+      "tolerance": 0.0006,
+      "unit": "cm/s",
+      "explanation": "m = 0.62 x 4.64e-4 x 7.93 x 2.15 = 4.9e-3 cm/s."
+    },
+    {
+      "id": "ps9-mcq-001",
+      "topicId": "ps9-rde",
+      "quick": true,
+      "question": "The rotating disk electrode is widely used because it:",
+      "options": [
+        "Gives a steady-state, reproducible and uniformly accessible mass-transfer rate",
+        "Has no diffusion layer",
+        "Produces no current",
+        "Needs no rotation controller"
+      ],
+      "answer": 0,
+      "explanation": "The RDE gives a well-defined, steady-state, uniform flux to the disk, so its limiting current is given by the Levich equation and is easy to model."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps9-tf-001",
+      "topicId": "ps9-rde",
+      "quick": true,
+      "question": "The Koutecky-Levich analysis separates the mass-transfer-limited current from the kinetic current.",
+      "answer": true,
+      "explanation": "Plotting 1/i against 1/omega^(1/2) gives a line whose intercept is 1/ik and whose slope contains the mass-transfer term, so both the kinetic current and the rate constant can be extracted."
+    },
+    {
+      "id": "ps9-mcq-002",
+      "topicId": "ps9-rde",
+      "quick": true,
+      "question": "In a Koutecky-Levich plot of 1/i against 1/omega^(1/2), the intercept equals:",
+      "options": [
+        "1/ik, the reciprocal of the kinetic current",
+        "Zero",
+        "The Levich slope",
+        "The number of electrons"
+      ],
+      "answer": 0,
+      "explanation": "As the rotation rate becomes very large, mass transfer stops limiting and the current approaches the kinetic current ik; the extrapolated intercept is 1/ik."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps9-num-004",
+      "topicId": "ps9-rde",
+      "question": "At a rotation rate where the mass-transfer-limited current would be 2.0 mA, a reaction still has a finite kinetic current of 2.0 mA. Using 1/i = 1/ik + 1/iL, calculate the measured current in mA.",
+      "answer": 1.0,
+      "tolerance": 0.1,
+      "unit": "mA",
+      "explanation": "1/i = 1/2.0 + 1/2.0 = 1.0, so i = 1.0 mA. When kinetics and mass transfer are comparable, the measured current is lower than either alone."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps9-tf-002",
+      "topicId": "ps9-rde",
+      "question": "The Levich equation applies to a rotating disk electrode under fully mass-transfer-limited conditions.",
+      "answer": true,
+      "explanation": "Under the limiting condition the surface concentration is zero and the Levich equation gives the steady-state limiting current as a function of rotation rate and diffusion coefficient."
+    },
+    {
+      "kind": "multi",
+      "id": "ps9-multi-001",
+      "topicId": "ps9-rde",
+      "question": "Which are features of the rotating disk electrode? Select all that apply.",
+      "options": [
+        "Steady-state current",
+        "Uniform accessibility of the disk surface",
+        "Limiting current proportional to omega^(1/2)",
+        "Current that decays as t^(-1/2)"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The RDE reaches a steady state, the surface is uniformly accessible, and the limiting current follows Levich, proportional to omega^(1/2). The t^(-1/2) decay belongs to diffusion to a still planar electrode."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps9-num-005",
+      "topicId": "ps9-rde",
+      "question": "The Levich current is proportional to omega^(1/2). If iL = 1.42 mA at 10 r/s, what is iL in mA at 40 r/s?",
+      "answer": 2.84,
+      "tolerance": 0.25,
+      "unit": "mA",
+      "explanation": "omega increases by 4, so sqrt(omega) and iL increase by 2: iL = 2 x 1.42 = 2.84 mA."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps9-num-006",
+      "topicId": "ps9-rde",
+      "question": "Use the Levich equation iL = 0.62 nFAD^(2/3)omega^(1/2)nu^(-1/6)C, proportional to concentration. If iL = 1.42 mA at C = 1.0e-5 mol/cm3, what is iL in mA at C = 2.0e-5 mol/cm3?",
+      "answer": 2.84,
+      "tolerance": 0.25,
+      "unit": "mA",
+      "explanation": "The Levich current is proportional to C, so doubling C doubles iL to 2.84 mA."
+    },
+    {
+      "id": "ps9-mcq-003",
+      "topicId": "ps9-rde",
+      "quick": true,
+      "question": "The rotating disk electrode surface is described as uniformly accessible because:",
+      "options": [
+        "Every point on the disk experiences the same mass-transfer rate",
+        "Only the centre reacts",
+        "The edge reacts ten times faster",
+        "There is no diffusion layer"
+      ],
+      "answer": 0,
+      "explanation": "The hydrodynamic flow gives the same flux to every point of the disk, so the current distribution is uniform - a key reason the RDE is so reproducible."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps9-tf-003",
+      "topicId": "ps9-rde",
+      "question": "The mass-transfer coefficient at an RDE depends on the rotation rate but not on the concentration.",
+      "answer": true,
+      "explanation": "The mass-transfer coefficient m = 0.62 D^(2/3) omega^(1/2) nu^(-1/6) contains D, omega and nu but no concentration, so it is independent of C."
+    },
+    {
+      "kind": "multi",
+      "id": "ps9-multi-002",
+      "topicId": "ps9-rde",
+      "question": "Which are applications of the rotating disk electrode? Select all that apply.",
+      "options": [
+        "Measuring electrode kinetics by Koutecky-Levich analysis",
+        "Studying electrocatalysts under defined mass transport",
+        "Determining diffusion coefficients",
+        "Measuring the pH of the solution directly"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The RDE is used for kinetics, catalysis and diffusion measurements under well-defined transport. It does not measure pH directly."
+    }
+  ]
+}

@@ -1,0 +1,349 @@
+{
+  "slug": "lesson-27",
+  "label": "Lesson 27",
+  "title": "Nanoelectrochemistry",
+  "summary": "Shrinking an electrode to the nanoscale changes everything. Mass transport becomes steady, tiny currents let single molecules and single nanoparticles be detected, and structured nanomaterials furnish huge surface areas. This lesson surveys why the nanoscale is special and what it makes possible.",
+  "order": 27,
+  "minutes": 40,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Throughout this course the electrode has mostly been a flat sheet, large compared with the diffusion layer. Shrink it until its size is comparable to the molecules it senses, and the rules change. Transport becomes steady, currents fall to picoamperes or attoamperes, and the electrode can address one molecule at a time."
+    },
+    {
+      "kind": "para",
+      "text": "The nanoscale is also where materials get interesting. Nanoparticles, nanowires and porous frameworks pack enormous surface area into a small volume, and their properties depend on size. This lesson links these two faces of nanoelectrochemistry: the tiny electrode and the nanostructured material."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The one-sentence summary",
+      "body": "At the nanoscale, transport becomes steady and currents become single-molecule small, while nanostructured materials supply the surface area and size-dependent properties that make catalysts and sensors work."
+    }
+  ],
+  "sections": [
+    {
+      "id": "why-nanoscale",
+      "tone": "azure",
+      "title": "Why the nanoscale is different",
+      "minutes": 7,
+      "summary": "An object smaller than the diffusion layer is surrounded by reactants converging from all directions. This changes the shape of the diffusion field and the character of the current.",
+      "keyPoints": [
+        "An electrode much smaller than the diffusion layer sees spherical rather than planar diffusion.",
+        "Convergent diffusion delivers material efficiently from all directions.",
+        "The result is a steady-state current that does not decay with time.",
+        "Small size also means steep gradients and sensitivity to single events."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A large flat electrode sees diffusion from one direction only, and its current decays with time as the diffusion layer thickens, as in the Cottrell behaviour of earlier lessons. An electrode of nanometre size is smaller than the diffusion layer that surrounds it, so reactants arrive by converging from every direction, effectively in spherical symmetry."
+        },
+        {
+          "kind": "para",
+          "text": "Convergent transport is efficient and self-sustaining. The diffusion field reaches a steady shape, material is supplied as fast as it is consumed, and the current becomes independent of time. A tiny electrode therefore behaves like a steady microelectrode, giving a flat plateau instead of a decaying hump."
+        },
+        {
+          "kind": "para",
+          "text": "The small size also sharpens everything. The region sampled is minute, so the electrode can probe a tiny patch of a surface, and the current is small enough that individual events become visible against the background."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "Convergent versus planar diffusion",
+          "body": "Planar means material comes from one direction and the current falls with time. Convergent means it comes from all directions and the current settles to a constant. Nanometre electrodes are in the convergent regime."
+        }
+      ]
+    },
+    {
+      "id": "nanoelectrodes",
+      "tone": "indigo",
+      "title": "Nanoelectrodes and steady-state response",
+      "minutes": 8,
+      "summary": "A nanoelectrode reaches a true steady state, giving a sigmoidal rather than peak-shaped voltammogram. The tiny currents have practical advantages and let fast kinetics be measured cleanly.",
+      "keyPoints": [
+        "A nanoelectrode voltammogram is sigmoidal, with a steady limiting plateau.",
+        "The limiting current is proportional to the electrode radius, not its area.",
+        "Small currents mean little ohmic drop and little double-layer charging.",
+        "Fast electron-transfer kinetics can be measured because mass transport is very efficient."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Instead of the peak-and-decay of a macroelectrode, a nanoelectrode gives a sigmoidal voltammogram that settles onto a plateau. The steady-state limiting current for a hemispherical electrode is proportional to the radius and the concentration and the diffusion coefficient, and it does not depend on the scan rate."
+        },
+        {
+          "kind": "formula",
+          "tex": "i_{\\mathrm{lim}} = 2\\pi n F D C r",
+          "caption": "Steady-state limiting current at a hemispherical nanoelectrode"
+        },
+        {
+          "kind": "para",
+          "text": "The scales are seductive. A radius of ten nanometres and a micromolar solution give picoamperes. Currents that small mean almost no ohmic drop in solution, so the electrode can be used in poorly conducting media, and very little charging current, so fast scans are possible without distortion."
+        },
+        {
+          "kind": "para",
+          "text": "The efficiency of transport also opens the door to fast kinetics. Because material is delivered so well, a reaction that would be transport-limited at a big electrode is still kinetically controlled at a nanoelectrode, so its rate constant can be extracted."
+        },
+        {
+          "kind": "callout",
+          "variant": "example",
+          "title": "Sensing in a tiny volume",
+          "body": "Because the current is proportional to radius, not area, a nanoelectrode placed in a minute volume gives a measurable signal while barely disturbing the solution. This is why nanoelectrodes are used to probe inside single cells."
+        }
+      ]
+    },
+    {
+      "id": "single-entity",
+      "tone": "violet",
+      "title": "Single-entity electrochemistry",
+      "minutes": 9,
+      "summary": "When the electrode is small enough and the current sensitive enough, the collision of a single nanoparticle or the transit of a single molecule becomes a measurable blip. This turns electrochemistry into a single-molecule technique.",
+      "keyPoints": [
+        "A single nanoparticle striking an electrode can produce a measurable current step.",
+        "Nanopores let single molecules pass, each blocking the ionic current briefly.",
+        "Blips in the current report the arrival, reaction or transit of one entity.",
+        "This removes ensemble averaging and reveals behaviour hidden in bulk measurements."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A bulk measurement averages over countless molecules and particles, hiding their individual differences. If the electrode is small and the amplifier quiet enough, a single event becomes visible. When a single catalytic nanoparticle strikes the electrode, its reaction adds a small current step, and the height of the step measures that one particle."
+        },
+        {
+          "kind": "para",
+          "text": "A nanopore offers a second route. Ions flow through a tiny hole in a membrane, and when a single molecule passes through, it briefly blocks part of the current. Each transit is a dip, and the depth and duration of the dip carry information about the molecule. This is the principle of a resistive-pulse sensor and of nanopore sequencing."
+        },
+        {
+          "kind": "para",
+          "text": "Single-entity electrochemistry removes the averaging. It shows that nanoparticles of nominally the same size can have different activities, that a molecule's behaviour fluctuates, and that rare events matter. The information is no longer a smooth average but a distribution of individual stories."
+        },
+        {
+          "kind": "callout",
+          "variant": "warn",
+          "title": "Why it is hard",
+          "body": "Single events produce tiny currents against a background of noise and drift, so the electrode must be small, the electronics quiet and the environment stable. Much of the experimental art is in keeping the background low enough that one event stands out."
+        }
+      ]
+    },
+    {
+      "id": "nanostructured-electrodes",
+      "tone": "rose",
+      "title": "Nanostructured electrodes",
+      "minutes": 8,
+      "summary": "Nanoparticles, nanowires and porous materials provide enormous surface area and size-tuned properties. They are the working electrodes of fuel cells, batteries and sensors.",
+      "keyPoints": [
+        "Nanomaterials pack a huge surface area into a small volume.",
+        "The large area boosts the current from surface-limited reactions such as catalysis.",
+        "Size and shape tune the catalytic and electronic properties.",
+        "Porous and high-area supports give more active sites per gram of costly catalyst."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A catalytic current scales with the electrode area, so the goal is as much active surface as possible in a small space. Nanoparticles, with their enormous surface-to-volume ratio, and porous supports such as high-area carbon deliver that. A gram of nanoscale platinum can expose hundreds of square metres of surface."
+        },
+        {
+          "kind": "para",
+          "text": "Size is not only about area. Catalytic activity often depends on the size and shape of the nanostructure, because the arrangement of surface atoms changes. Some reactions are fastest on small particles, others on large, and some on particular facets or edges. Nanostructuring is therefore a tool for tuning activity, not merely for increasing area."
+        },
+        {
+          "kind": "para",
+          "text": "The same materials serve energy and sensing. Fuel-cell and battery electrodes are nanostructured to maximise the reaction per gram of precious metal, while sensor electrodes use nanostructures to amplify signals and to make rigid, high-area supports for recognition layers."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "Two reasons for nanostructuring",
+          "body": "First, area: more surface means more current. Second, tuning: size and shape change the intrinsic activity. Good nanoscience exploits both at once."
+        }
+      ]
+    },
+    {
+      "id": "size-effects",
+      "tone": "coral",
+      "title": "Size-dependent and quantum effects",
+      "minutes": 6,
+      "summary": "Below a few nanometres, the properties of a material depend on its size. The chemistry and physics converge, giving effects such as quantised charging and shifted potentials, and challenging the assumptions of classical electrochemistry.",
+      "keyPoints": [
+        "As size shrinks, the electronic structure changes, shifting redox potentials and band gaps.",
+        "Charging a tiny particle or cluster occurs in discrete, quantised steps.",
+        "The small system shows stochastic behaviour rather than smooth averages.",
+        "Nanoelectrochemistry therefore links electrochemistry to quantum mechanics and statistical physics."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A metal particle of a few nanometres is not simply a smaller piece of the same metal. Its electronic energy levels become discrete, its work function and redox potential shift with size, and a semiconductor's band gap widens as the crystal shrinks. These are quantum size effects, and they are the reason nanocrystals have colours different from the bulk."
+        },
+        {
+          "kind": "para",
+          "text": "Charging such a small object is also discrete. Adding one electron to an isolated nanoparticle changes its potential by a measurable, quantised amount, an effect known as quantised capacitance or Coulomb blockade. The smooth capacitance of a large electrode gives way to a staircase."
+        },
+        {
+          "kind": "para",
+          "text": "These effects push electrochemistry to its limits, where the classical, smooth descriptions fail and the discreteness of charge and the quantum nature of the particles come to the fore. Rather than a difficulty, this is the frontier: nanoelectrochemistry is where electrochemistry meets quantum mechanics."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "The small-scale staircase of charge",
+          "body": "At a large electrode, charge flow looks continuous. At a nanoscale object, charge comes in single electrons with measurable gaps. Watching that staircase is watching the discreteness of charge itself."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "l27-mcq-001",
+      "topicId": "why-nanoscale",
+      "quick": true,
+      "question": "An electrode much smaller than its diffusion layer experiences:",
+      "options": [
+        "Planar diffusion from one direction",
+        "Convergent diffusion from all directions",
+        "No diffusion",
+        "Only migration"
+      ],
+      "answer": 1,
+      "explanation": "A tiny electrode is surrounded by a spherical diffusion field, so reactants converge from every direction. This gives a steady current rather than a decaying one."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l27-tf-001",
+      "topicId": "why-nanoscale",
+      "question": "A nanoelectrode gives a steady-state current that does not decay with time.",
+      "answer": true,
+      "explanation": "Convergent transport reaches a steady shape, so the current settles to a constant value, in contrast to the Cottrell decay of a large planar electrode."
+    },
+    {
+      "id": "l27-mcq-002",
+      "topicId": "nanoelectrodes",
+      "quick": true,
+      "question": "The steady-state limiting current at a hemispherical nanoelectrode is proportional to:",
+      "options": [
+        "Its area",
+        "Its radius",
+        "The square of its radius",
+        "Its volume"
+      ],
+      "answer": 1,
+      "explanation": "For a hemispherical electrode the limiting current is proportional to the radius, not the area. This is why a nanoelectrode gives a measurable current at a tiny size."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l27-tf-002",
+      "topicId": "nanoelectrodes",
+      "question": "Small electrode currents are attractive because they cause little ohmic drop and little double-layer charging.",
+      "answer": true,
+      "explanation": "Tiny currents mean the iR drop in solution is negligible and the charging current is small, so nanoelectrodes can even be used in poorly conducting media and for fast scans."
+    },
+    {
+      "id": "l27-mcq-003",
+      "topicId": "nanoelectrodes",
+      "quick": true,
+      "question": "A nanoelectrode voltammogram is typically:",
+      "options": [
+        "Peak-shaped and decaying",
+        "Sigmoidal with a steady plateau",
+        "A single spike",
+        "Flat at zero"
+      ],
+      "answer": 1,
+      "explanation": "Efficient convergent transport keeps the surface supplied, giving a sigmoidal wave that levels off at the limiting current, independent of scan rate."
+    },
+    {
+      "id": "l27-mcq-004",
+      "topicId": "single-entity",
+      "quick": true,
+      "question": "A single nanoparticle striking a small electrode can be detected as:",
+      "options": [
+        "A colour change",
+        "A small current step",
+        "A temperature rise of the solution",
+        "A change in pH"
+      ],
+      "answer": 1,
+      "explanation": "The particle's reaction adds its own current on top of the background, so its arrival appears as a step whose height measures that single particle's activity."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l27-tf-003",
+      "topicId": "single-entity",
+      "question": "In a nanopore sensor, a single molecule passing through briefly blocks the ionic current.",
+      "answer": true,
+      "explanation": "Each transit produces a dip in the current, and the depth and duration of the dip carry information about the molecule. This is the resistive-pulse principle used in nanopore sensing."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l27-tf-004",
+      "topicId": "single-entity",
+      "question": "Single-entity electrochemistry shows that nanoparticles of nominally equal size can have different activities.",
+      "answer": true,
+      "explanation": "By removing ensemble averaging, single-entity methods reveal a distribution of individual behaviours that a bulk measurement hides."
+    },
+    {
+      "id": "l27-mcq-005",
+      "topicId": "nanostructured-electrodes",
+      "quick": true,
+      "question": "Nanostructuring an electrode helps catalysis mainly by:",
+      "options": [
+        "Removing the need for a catalyst",
+        "Increasing the active surface area and tuning the size-dependent activity",
+        "Lowering the temperature",
+        "Changing the solvent"
+      ],
+      "answer": 1,
+      "explanation": "Nanomaterials pack a huge area into a small volume and can have size- and shape-dependent activity. Both effects boost the catalytic current per gram of material."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l27-tf-005",
+      "topicId": "nanostructured-electrodes",
+      "question": "Catalytic activity can depend on the size and shape of a nanostructure, not only on its area.",
+      "answer": true,
+      "explanation": "The arrangement of surface atoms changes with size and shape, so some reactions are fastest on particular particle sizes or facets. Nanostructuring is a way to tune intrinsic activity."
+    },
+    {
+      "id": "l27-mcq-006",
+      "topicId": "size-effects",
+      "quick": true,
+      "question": "As a semiconductor crystal shrinks to a few nanometres, its band gap:",
+      "options": [
+        "Stays the same",
+        "Widens",
+        "Becomes zero",
+        "Turns into a band"
+      ],
+      "answer": 1,
+      "explanation": "Quantum confinement widens the gap as the crystal shrinks, which shifts the optical and electrochemical properties and is why nanocrystals have size-dependent colours."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l27-tf-006",
+      "topicId": "size-effects",
+      "question": "Charging an isolated nanoparticle occurs in discrete, quantised steps.",
+      "answer": true,
+      "explanation": "Adding a single electron changes the particle's potential by a measurable amount, so the smooth capacitance of a large electrode becomes a staircase. This is quantised capacitance or Coulomb blockade."
+    },
+    {
+      "kind": "multi",
+      "id": "l27-multi-001",
+      "topicId": "size-effects",
+      "quick": true,
+      "question": "Which are consequences of shrinking an electrode or material to the nanoscale? Select all that apply.",
+      "options": [
+        "Convergent diffusion and steady-state currents",
+        "Discrete, quantised charging of small particles",
+        "Size-dependent redox potentials and band gaps",
+        "Loss of all electrochemical activity"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Convergent diffusion, quantised charging and size-dependent properties all appear at the nanoscale. Electrochemical activity is not lost; it is enhanced and altered."
+    }
+  ]
+}

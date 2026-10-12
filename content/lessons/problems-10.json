@@ -1,0 +1,230 @@
+{
+  "slug": "problems-10",
+  "label": "Problem set 10",
+  "title": "Problem set 10: Impedance-based methods",
+  "summary": "Practice with impedance: charge-transfer resistance, capacitive reactance, the Nyquist semicircle and the Warburg diffusion element.",
+  "source": "Bard & Faulkner ch.10",
+  "order": 110,
+  "minutes": 28,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Electrochemical impedance spectroscopy measures the response to a small sinusoidal perturbation over a range of frequencies. The Randles circuit gives the charge-transfer resistance Rct = RT/(nF i0), the double-layer capacitance Cdl, the solution resistance Rs and a Warburg diffusion element."
+    },
+    {
+      "kind": "para",
+      "text": "On a Nyquist plot the semicircle diameter is Rct, its high-frequency intercept is Rs, and a 45-degree tail at low frequency signals diffusion."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps10-imp",
+      "tone": "amber",
+      "title": "Hint sheet: impedance relations",
+      "summary": "Practice with impedance: charge-transfer resistance, capacitive reactance, the Nyquist semicircle and the Warburg diffusion element.",
+      "minutes": 23,
+      "keyPoints": [
+        "Rct = RT/(nF i0)",
+        "Zc = 1/(omega C)",
+        "Semicircle apex at omega = 1/(Rct Cdl)",
+        "Nyquist: Rs at high f, Rs+Rct at low f",
+        "Warburg tail at 45 degrees"
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Electrochemical impedance spectroscopy measures the response to a small sinusoidal perturbation over a range of frequencies. The Randles circuit gives the charge-transfer resistance Rct = RT/(nF i0), the double-layer capacitance Cdl, the solution resistance Rs and a Warburg diffusion element."
+        },
+        {
+          "kind": "para",
+          "text": "On a Nyquist plot the semicircle diameter is Rct, its high-frequency intercept is Rs, and a 45-degree tail at low frequency signals diffusion."
+        },
+        {
+          "kind": "worked",
+          "title": "Charge-transfer resistance",
+          "given": "n = 1, i0 = 1.0e-3 A/cm2, T = 298.15 K",
+          "steps": [
+            "Use Rct = RT/(nF i0).",
+            "Numerator: 8.314 x 298.15 = 2478.6 J/mol.",
+            "Divide by nF i0 = 96.485 C/(s cm2): Rct = 25.7 ohm cm2."
+          ],
+          "result": "Rct = 25.7 ohm cm2"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "numeric",
+      "id": "ps10-num-001",
+      "topicId": "ps10-imp",
+      "question": "The charge-transfer resistance is Rct = RT/(nF i0). Calculate Rct in ohm cm2 for n = 1, i0 = 1.0e-3 A/cm2, T = 298.15 K, R = 8.314 J/(K mol), F = 96485 C/mol.",
+      "answer": 25.7,
+      "tolerance": 2.5,
+      "unit": "ohm cm2",
+      "explanation": "Rct = (8.314 x 298.15)/(1 x 96485 x 1.0e-3) = 2478.6/96.485 = 25.7 ohm cm2."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps10-num-002",
+      "topicId": "ps10-imp",
+      "question": "Calculate the impedance magnitude of a capacitor Zc = 1/(omega C) in ohms for C = 20 uF and a frequency of 100 Hz (omega = 2 pi f = 628.3 s-1).",
+      "answer": 79.6,
+      "tolerance": 6,
+      "unit": "ohm",
+      "explanation": "Zc = 1/(628.3 x 20e-6) = 1/0.01257 = 79.6 ohm."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps10-num-003",
+      "topicId": "ps10-imp",
+      "question": "The apex of the Nyquist semicircle occurs at angular frequency omega = 1/(Rct Cdl). Calculate the frequency f in Hz for Rct = 100 ohm and Cdl = 20 uF.",
+      "answer": 79.6,
+      "tolerance": 6,
+      "unit": "Hz",
+      "explanation": "omega = 1/(100 x 20e-6) = 500 s-1; f = omega/(2 pi) = 500/6.283 = 79.6 Hz."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps10-num-004",
+      "topicId": "ps10-imp",
+      "question": "In a Randles circuit the solution resistance Rs is 10 ohm and the charge-transfer resistance Rct is 100 ohm. What is the real-axis intercept at the low-frequency end of the semicircle, in ohms?",
+      "answer": 110,
+      "tolerance": 6,
+      "unit": "ohm",
+      "explanation": "At low frequency the semicircle meets the real axis at Rs + Rct = 10 + 100 = 110 ohm."
+    },
+    {
+      "id": "ps10-mcq-001",
+      "topicId": "ps10-imp",
+      "quick": true,
+      "question": "On a Nyquist plot of a simple Randles circuit, the diameter of the semicircle equals:",
+      "options": [
+        "The solution resistance Rs",
+        "The charge-transfer resistance Rct",
+        "The double-layer capacitance",
+        "The frequency"
+      ],
+      "answer": 1,
+      "explanation": "The semicircle spans from Rs to Rs + Rct, so its diameter is Rct, which therefore falls as the exchange current (and kinetics) improve."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps10-tf-001",
+      "topicId": "ps10-imp",
+      "quick": true,
+      "question": "The high-frequency intercept of a Nyquist plot gives the solution resistance Rs.",
+      "answer": true,
+      "explanation": "At high frequency the double-layer capacitor short-circuits the faradaic branch, so the impedance reduces to Rs, which is read at the high-frequency intercept."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps10-tf-002",
+      "topicId": "ps10-imp",
+      "question": "A Warburg impedance, reflecting diffusion, appears as a straight line at 45 degrees in the Nyquist plot.",
+      "answer": true,
+      "explanation": "Diffusion gives an impedance with equal real and imaginary parts, so it plots as a 45-degree line, usually at low frequency after the semicircle."
+    },
+    {
+      "id": "ps10-mcq-002",
+      "topicId": "ps10-imp",
+      "quick": true,
+      "question": "At very low frequency in an experiment limited by diffusion, the impedance is dominated by:",
+      "options": [
+        "The Warburg (diffusion) element",
+        "The solution resistance",
+        "The double-layer capacitance",
+        "The counter electrode"
+      ],
+      "answer": 0,
+      "explanation": "At low frequency the reactant must diffuse over longer distances, so the diffusion (Warburg) impedance dominates the response."
+    },
+    {
+      "kind": "multi",
+      "id": "ps10-multi-001",
+      "topicId": "ps10-imp",
+      "question": "Which elements make up the Randles equivalent circuit? Select all that apply.",
+      "options": [
+        "Solution resistance Rs",
+        "Double-layer capacitance Cdl",
+        "Charge-transfer resistance Rct",
+        "A Warburg diffusion element"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "The Randles circuit contains Rs in series with a parallel combination of Cdl and the faradaic branch (Rct plus, when diffusion matters, a Warburg element)."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps10-tf-003",
+      "topicId": "ps10-imp",
+      "question": "For a pure capacitor the phase angle between current and voltage is -90 degrees.",
+      "answer": true,
+      "explanation": "A capacitor passes current that leads the voltage by 90 degrees, so its impedance phase is -90 degrees, in contrast to a pure resistor at 0 degrees."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps10-num-005",
+      "topicId": "ps10-imp",
+      "question": "Calculate the charge-transfer resistance Rct = RT/(nF i0) in ohm cm2 for n = 1, i0 = 1.0e-4 A/cm2, T = 298.15 K.",
+      "answer": 257,
+      "tolerance": 25,
+      "unit": "ohm cm2",
+      "explanation": "Rct = 2478.6/(1 x 96485 x 1.0e-4) = 2478.6/9.6485 = 257 ohm cm2. A small i0 gives a large Rct."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps10-num-006",
+      "topicId": "ps10-imp",
+      "question": "Calculate the impedance magnitude of a 20 uF capacitor at 1000 Hz (omega = 2 pi f = 6283 s-1), in ohms.",
+      "answer": 7.96,
+      "tolerance": 1,
+      "unit": "ohm",
+      "explanation": "Zc = 1/(6283 x 20e-6) = 1/0.1257 = 7.96 ohm. The impedance falls as frequency rises."
+    },
+    {
+      "id": "ps10-mcq-003",
+      "topicId": "ps10-imp",
+      "quick": true,
+      "question": "On a Nyquist plot the faradaic semicircle is followed at low frequency by:",
+      "options": [
+        "A Warburg 45-degree line when diffusion matters",
+        "Another larger semicircle",
+        "A vertical line always",
+        "Nothing at all"
+      ],
+      "answer": 0,
+      "explanation": "After the charge-transfer semicircle, diffusion adds a 45-degree Warburg tail at low frequency, reflecting the growing importance of mass transport."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps10-tf-004",
+      "topicId": "ps10-imp",
+      "question": "A larger exchange current density gives a smaller charge-transfer resistance.",
+      "answer": true,
+      "explanation": "Rct = RT/(nF i0), so a fast reaction (large i0) has a small Rct and a smaller semicircle."
+    },
+    {
+      "kind": "multi",
+      "id": "ps10-multi-002",
+      "topicId": "ps10-imp",
+      "question": "Which can be extracted from a Nyquist plot of a Randles circuit? Select all that apply.",
+      "options": [
+        "The solution resistance Rs from the high-frequency intercept",
+        "The charge-transfer resistance Rct from the semicircle diameter",
+        "The double-layer capacitance from the apex frequency",
+        "The atomic mass of the electrode"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Rs, Rct and Cdl all follow from the intercepts and apex of the semicircle. The atomic mass of the electrode has no role in the impedance response."
+    }
+  ]
+}

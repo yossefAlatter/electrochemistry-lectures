@@ -266,6 +266,22 @@ a {
   text-decoration-color: var(--tone);
 }
 
+/* A heading written as an anchor link is still a heading: never underline it
+   or tint it like body copy. Higher specificity than `.prose-lesson a`. */
+.prose-lesson .toc-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+}
+
+/* The first paragraph of a section reads as a lede: a touch larger and darker,
+   so the eye is pulled in before the denser material below. */
+.prose-lesson > p:first-child {
+  font-size: calc(1.14rem * var(--reading-scale, 1));
+  line-height: calc(1.7 * var(--reading-scale, 1));
+  color: var(--c-ink);
+}
+
 /* headings pick up the section's tone */
 .font-serif {
   font-family: var(--font-display), Georgia, serif;

@@ -1,0 +1,1194 @@
+{
+  "slug": "lesson-6",
+  "label": "Lesson 6",
+  "title": "The electrical double layer",
+  "summary": "Every electrode reaction happens in a region only a few atoms thick, where the extra charge on the metal meets a cloud of ions that balances it. This lesson builds that region step by step: first the Helmholtz sheet, then the Gouy-Chapman cloud, then the Stern compromise, and finally the thermodynamics that needs no model at all. Along the way you meet the Debye length, the point of zero charge, electrocapillary curves, adsorption isotherms, and the difference between charging an interface and using up a reactant.",
+  "order": 6,
+  "minutes": 60,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Lessons 4 and 5 kept the electrode surface simple: flat, inert, and featureless - just a place where a reactant shows up and an electron changes hands. That picture was useful, but it hid the most interesting part of electrochemistry. The line between a metal and a solution is not really a line. It is a region a few tenths of a nanometre thick. Inside it, charge is pulled apart, solvent molecules are held in place, and the electric field can reach about 10<sup>7</sup> V/cm - as strong as the fields that hold atoms together. This region is the **electrical double layer**."
+    },
+    {
+      "kind": "para",
+      "text": "The double layer is not just an oddity. It is where the electrode potential actually drops, so it sets the difference between the potential of the metal and the potential a reacting ion feels where it reacts. It is why adding an inert salt can speed up or slow down an electrode reaction, why adsorption changes how well a catalyst works, and why an electrode stores charge like a capacitor before any reaction starts. Following Bagotsky ch.10 and Bard ch.13, this lesson rebuilds the interface from scratch: the models that describe it, the experiments that measure it, and the two kinds of current that flow through it."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The one-sentence summary of this lesson",
+      "body": "The boundary between metal and solution acts like a capacitor a few tenths of a nanometre thick. Its charge, its potential profile and its capacitance all come from a tug of war between electrical attraction, thermal motion, and the fact that ions have a finite size. Every rate and every potential you measure is set in that one nanometre."
+    }
+  ],
+  "sections": [
+    {
+      "id": "interphase",
+      "tone": "azure",
+      "title": "An interface is a phase of its own",
+      "minutes": 6,
+      "summary": "Where an electrode meets an electrolyte there is not a line but a region - the interphase. The whole region is neutral, yet charge is split across it. That creates huge electric fields and the potential differences that every electrochemical measurement depends on.",
+      "keyPoints": [
+        "The whole interphase is neutral, but the charge is split: the charge on the electrode and the charge in the solution are equal and opposite.",
+        "Two kinds of charge separation exist. Some are surface effects inside one phase (electrons spilling over, solvent dipoles lining up). Others form the real double layer shared by metal and solution.",
+        "The separated charges sit only a few tenths of a nanometre apart, so the field reaches about 10^9 V/m - about the strength of the fields that hold atoms together.",
+        "This region is where the electrode potential actually drops, so it sets the potential that drives every electrode reaction."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "When two liquids or solids meet, each one disturbs the other. Near the boundary, particles have neighbours on one side only, so the forces on them no longer balance. The composition and the energy there shift away from the values in the bulk. The changed zone in each phase is called a **surface layer**. The pair of surface layers at the junction is the **interphase**. Unlike a plain geometric boundary, it has a thickness and properties of its own."
+        },
+        {
+          "kind": "para",
+          "text": "The interphase between an electrode and an electrolyte has a rich electrical structure. As a whole it is neutral, but that neutrality is the *sum* of two separated charges. On the metal side there is a surface charge density `σ`<sub>M</sub>, from extra or missing electrons in the outermost atomic layers. On the solution side there is an equal and opposite charge density `σ`<sub>S</sub>, carried by extra cations or anions that have crowded towards the surface. The condition is simple:"
+        },
+        {
+          "kind": "formula",
+          "tex": "\\sigma_{\\mathrm{M}} + \\sigma_{\\mathrm{S}} = 0",
+          "caption": "Electroneutrality of the interphase. The metal cannot hold a net charge on its own. Any excess on the electrode is matched exactly by ions on the solution side, and the other way round."
+        },
+        {
+          "kind": "para",
+          "text": "It helps to sort the separated charge into two families. The first stays inside one phase and creates a **surface potential**. Examples: the uneven electron cloud at a metal's outermost layer, and polar solvent molecules lined up against the electrode with all their dipoles pointing the same way. The second family is the real **interfacial double layer**: one sheet of charge in the metal and its opposite charge in the solution. The potential difference that matters in electrochemistry is the sum of all these parts, but the interfacial part changes most easily with potential and concentration - and that is what the rest of this lesson is about."
+        },
+        {
+          "kind": "para",
+          "text": "Why does a region one nanometre thick deserve a whole lesson? Because of the field inside it. Two sheets of charge a distance `d` apart - only a few tenths of a nanometre - give a field of order `ΔV/d`. With a potential difference of a volt or so, the field reaches about 10<sup>9</sup> V/m, or 10<sup>7</sup> V/cm. That is a hundred times the field needed to break down dry air, and it is close to the fields inside molecules. No wonder solvent molecules are forced into line and ions lose part of their solvent shell at an electrode surface."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "Where the potential is really dropped",
+          "body": "When we quote an electrode potential, we mean the difference in inner potential between the metal and the bulk solution. Almost all of that difference falls across the interphase, within a few atomic diameters of the surface. A reacting molecule never sees the bulk solution potential. It sees the local potential just outside the double layer. That is why the structure of the interphase, not the bulk solution, controls how fast electrode reactions run."
+        }
+      ]
+    },
+    {
+      "id": "helmholtz-model",
+      "tone": "indigo",
+      "title": "Helmholtz and the parallel-plate picture",
+      "minutes": 6,
+      "summary": "Helmholtz pictured the counter-charge as a stiff sheet pressed against the electrode, so the double layer is a capacitor with a fixed capacitance. The size comes out right, but the way capacitance changes with potential does not.",
+      "keyPoints": [
+        "Helmholtz treated the double layer as two parallel sheets of charge, separated by the distance of closest approach d.",
+        "The model gives a fixed differential capacitance C_H = εε0/d. It does not change with potential or with concentration.",
+        "With d of a few tenths of a nanometre and a much lower dielectric constant, C_H comes out around 10-20 microfarads per square centimetre, close to what is measured.",
+        "The model fails because measurements show capacitance changing with potential and concentration - proof that the counter-charge is not a stiff sheet."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Hermann von Helmholtz gave the first real picture of the charged interface in 1853. A metal is a conductor, so it cannot hold an electric field inside itself. Any extra charge must sit right at its surface. By symmetry, he argued, the counter-charge in the solution does the same. The result is two parallel sheets of opposite charge a molecular distance apart - literally a double layer - and the name has stuck ever since."
+        },
+        {
+          "kind": "para",
+          "text": "Two sheets of charge are just a parallel-plate capacitor. If the sheets carry surface charge density `σ` and sit a distance `d` apart in a material with dielectric constant `ε`, the voltage across them depends on that spacing, and the capacitance per unit area follows from the geometry:"
+        },
+        {
+          "kind": "formula",
+          "tex": "C_{\\mathrm{H}} = \\frac{\\varepsilon \\varepsilon_0}{d}",
+          "caption": "Helmholtz-layer capacitance. The counter-charge is treated as a stiff sheet at distance d. The capacitance depends only on that spacing and on the dielectric constant of the material between the sheets."
+        },
+        {
+          "kind": "para",
+          "text": "The model gets the size about right. A solvated ion can get no closer than about 0.3 to 0.5 nm to a metal surface. In that squeezed layer the water dipoles are held in a strong field and can no longer rotate freely, so the effective dielectric constant drops from about 80 in the bulk to something nearer 6. Put those numbers in and you get a capacitance of roughly 10 to 20 `µF/cm`<sup>2</sup>, which is exactly what real mercury electrodes show. The model also explains why the field is so strong: a volt across half a nanometre is a million volts per centimetre."
+        },
+        {
+          "kind": "para",
+          "text": "The trouble is that the parallel-plate picture makes the capacitance a *constant*. Both the spacing and the dielectric constant are treated as fixed properties of the materials, so the model says the differential capacitance `C = dσ/dE` should not depend on the potential or on the salt concentration. Experiment says otherwise. Careful measurements on mercury show a capacitance that dips near the potential of zero charge and rises on either side, and the whole curve shifts and flattens as the salt concentration goes up. In other words, the counter-charge is not a stiff sheet: the ions still have thermal energy and will not line up obediently at one fixed plane."
+        },
+        {
+          "kind": "formula",
+          "tex": "C_{\\mathrm{H}} = \\frac{\\varepsilon \\varepsilon_0}{d} \\approx \\frac{(6)(8.85\\times10^{-12})}{0.4\\times 10^{-9}} \\approx 0.13\\ \\mathrm{F\\,m^{-2}} \\approx 13\\ \\mu\\mathrm{F\\,cm^{-2}}",
+          "caption": "Order-of-magnitude check of the Helmholtz model. A separation of about 0.4 nm and a dielectric constant near 6 - water molecules pinned in the strong field - give the tens of microfarads per square centimetre seen at real interfaces."
+        },
+        {
+          "kind": "callout",
+          "variant": "warn",
+          "title": "What the model cannot explain",
+          "body": "A constant capacitance would mean a straight line of charge against potential. Real interfaces give a curve whose slope changes with potential and with salt concentration. The Helmholtz picture gets the size of the double layer right but misses its softness: thermal motion spreads the counter-charge into a diffuse cloud."
+        }
+      ]
+    },
+    {
+      "id": "diffuse-layer",
+      "tone": "violet",
+      "title": "The diffuse layer and the Debye length",
+      "minutes": 7,
+      "summary": "Gouy and Chapman let the ions move. Electrostatics pulls them towards the surface and thermal motion spreads them out. The result is a fuzzy cloud whose thickness is set by the Debye length, and whose capacitance at last depends on potential and concentration.",
+      "keyPoints": [
+        "A Boltzmann distribution balances electrical attraction against thermal motion: the ion concentration drops off exponentially with distance.",
+        "Put Boltzmann together with Poisson and you get the Poisson-Boltzmann equation. Its solution is a potential that decays exponentially, with decay length κ^-1.",
+        "The Debye length κ^-1 gets shorter as concentration rises: about 1 nm in 0.1 M, 10 nm in 1 mM and 100 nm in 10 µM for a 1:1 electrolyte.",
+        "Diffuse-layer capacitance follows cosh of the surface potential, so it has a V-shaped minimum at the point of zero charge."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The counter-ions are not held stiffly in place. Electrostatics pulls them towards the electrode while thermal motion stirs them about. The balance between the two spreads the counter-charge into a **diffuse layer** a few nanometres thick: densest at the surface and fading gradually into the bulk solution. Gouy in France proposed this picture in 1910, and Chapman in England in 1913."
+        },
+        {
+          "kind": "para",
+          "text": "The physics starts with a Boltzmann distribution. An ion of charge number `z` at a point where the potential is `φ` has electrostatic energy `zeφ` compared with the bulk, so its local concentration is raised or lowered by a Boltzmann factor:"
+        },
+        {
+          "kind": "formula",
+          "tex": "n_i(x) = n_i^{0}\\exp\\!\\left(-\\frac{z_i e \\varphi(x)}{kT}\\right)",
+          "caption": "Boltzmann distribution of ions in the diffuse layer. Cations (z > 0) build up where the potential is negative and are pushed away where it is positive. Anions do the opposite. Neutral species feel no electrical force at all."
+        },
+        {
+          "kind": "para",
+          "text": "That charge distribution must in turn create the potential that produced it. The link is the Poisson equation of electrostatics, which ties the curvature of the potential to the local charge density. Put the Boltzmann population into Poisson and you get the **Poisson-Boltzmann equation**. For a symmetrical `z:z` electrolyte, where both ions carry charge magnitude `z`, a sinh function expresses the difference between the extra cations and the missing anions:"
+        },
+        {
+          "kind": "formula",
+          "tex": "\\frac{d^{2}\\varphi}{dx^{2}} = \\frac{2 n^{0} z e}{\\varepsilon\\varepsilon_0}\\,\\sinh\\!\\left(\\frac{z e \\varphi}{kT}\\right)",
+          "caption": "Poisson-Boltzmann equation for a symmetrical z:z electrolyte, with n^0 the bulk number concentration of each ion. It says the potential curves in proportion to the net charge density, and that density itself depends on the potential."
+        },
+        {
+          "kind": "para",
+          "text": "For symmetrical electrolytes the equation has a neat exact solution. The potential fades away from the surface over a characteristic distance `1/κ`, and at small potentials the hyperbolic tangent reduces to a simple exponential. Two numbers carry most of the useful chemistry: the potential at the surface, and the decay length `κ`<sup>-1</sup>, called the **Debye length**."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\tanh\\!\\left(\\frac{z e \\varphi}{4kT}\\right) = \\tanh\\!\\left(\\frac{z e \\varphi_0}{4kT}\\right) e^{-\\kappa x}",
+          "caption": "Exact potential profile in the diffuse layer. Far from the electrode the potential falls exponentially, and the decay length 1/κ is the Debye length. Below about 50/z mV the tanh reduces to the simple exponential φ = φ_0 e^(-κx)."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\kappa = \\sqrt{\\frac{2 n^{0} z^{2} e^{2}}{\\varepsilon\\varepsilon_0 kT}}, \\qquad \\kappa\\,[\\mathrm{cm}^{-1}] = 3.29\\times 10^{7}\\, z \\sqrt{C^{*}}",
+          "caption": "Inverse Debye length. The second form is for dilute aqueous solutions at 25 C, with C^* the electrolyte concentration in mol/L. As concentration rises, κ grows, the diffuse layer is squeezed thinner, and the counter-charge packs closer to the surface."
+        },
+        {
+          "kind": "table",
+          "head": [
+            "Concentration (1:1)",
+            "Debye length κ^-1",
+            "Physical picture"
+          ],
+          "rows": [
+            [
+              "10 µM",
+              "about 100 nm",
+              "Very spread out; the cloud reaches far into the solution"
+            ],
+            [
+              "1 mM",
+              "about 10 nm",
+              "Diffuse layer much thicker than the compact layer"
+            ],
+            [
+              "0.1 M",
+              "about 1 nm",
+              "About as thick as the compact layer"
+            ],
+            [
+              "1 M",
+              "about 0.3 nm",
+              "Squeezed tight; almost a Helmholtz sheet"
+            ]
+          ],
+          "widths": [
+            1.2,
+            1.2,
+            2.2
+          ]
+        },
+        {
+          "kind": "para",
+          "text": "To find how much counter-charge the diffuse layer can hold, integrate the charge density - or, more neatly, use Gauss's law across a box around the electrode surface. The result links the surface charge to the surface potential through a sinh function, and its derivative with respect to potential gives the diffuse-layer capacitance:"
+        },
+        {
+          "kind": "formula",
+          "tex": "\\sigma_{\\mathrm{M}} = \\sqrt{8 n^{0}\\varepsilon\\varepsilon_0 kT}\\; z\\, \\sinh\\!\\left(\\frac{z e \\varphi_0}{2 kT}\\right), \\qquad C_{\\mathrm{d}} = \\frac{d\\sigma_{\\mathrm{M}}}{d\\varphi_0} \\propto \\cosh\\!\\left(\\frac{z e \\varphi_0}{2 kT}\\right)",
+          "caption": "Diffuse-layer charge and capacitance. The capacitance is smallest where φ_0 = 0 - the point of zero charge - and rises the same way on either side, giving the V-shaped curves seen experimentally at low concentration."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "Why the Debye length matters everywhere",
+          "body": "The Debye length sets the distance over which the solution screens an electrode's charge. When it is much smaller than the distance a reactant has to travel, you can treat the double layer as a thin sheet with a sharp edge. When it grows to match the length scale of the experiment - as in very dilute solution - you have to carry its thickness explicitly through the kinetics."
+        }
+      ]
+    },
+    {
+      "id": "gouy-chapman-stern",
+      "tone": "rose",
+      "title": "Ions have size: the Gouy-Chapman-Stern model",
+      "minutes": 7,
+      "summary": "Gouy-Chapman treats ions as points that can crowd in as close as they like, so its capacitance rises without limit. Stern fixes this by banning ions from coming closer than their own radius. The double layer then splits into a compact capacitor in series with a diffuse one - the model still used today.",
+      "keyPoints": [
+        "Gouy-Chapman has a real flaw: it treats ions as point charges, so the capacitance shoots off to infinity at high polarisation.",
+        "Stern introduced a plane of closest approach, the outer Helmholtz plane. Beyond that plane the diffuse theory applies.",
+        "The compact layer has a straight-line potential drop and a fixed capacitance C_H. The diffuse layer has the V-shaped capacitance C_d.",
+        "The two sit in series: 1/C = 1/C_H + 1/C_d. The total follows the smaller of the two, and it flattens at high concentration or high polarisation.",
+        "Grahame refined the model: he separated the plane of specifically adsorbed ions (inner Helmholtz plane) from the plane of closest approach of hydrated ions (outer Helmholtz plane)."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Gouy-Chapman does something impossible: it treats ions as point charges that may come as close to the electrode as they like. As the electrode gets more strongly charged, the calculated spacing between the two charge sheets shrinks towards zero, and the predicted capacitance grows without limit. Real ions have a set radius, and a solvated ion cannot come closer than its sheath allows. Otto Stern supplied the missing rule in 1924, and David Grahame refined it in 1947 into the form still taught today."
+        },
+        {
+          "kind": "para",
+          "text": "Stern's idea is to keep both pictures, each where it belongs. The closest the centre of a solvated ion can come to the metal is a plane at distance `x`<sub>2</sub>. This is the **outer Helmholtz plane** (OHP). Between the electrode and the OHP there are no charge carriers, so by Poisson's equation the potential there varies **linearly** - exactly the Helmholtz parallel-plate behaviour. Past the OHP the potential follows the Gouy-Chapman solution, but measured from the potential `ψ`<sub>2</sub> at the OHP rather than from the bulk. The double layer is therefore a **compact (Helmholtz) layer** in series with a **diffuse layer**."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\sigma_{\\mathrm{M}} = C_{\\mathrm{H}}(\\varphi_0 - \\psi_2) = \\sqrt{8 n^{0}\\varepsilon\\varepsilon_0 kT}\\; z \\sinh\\!\\left(\\frac{z e \\psi_2}{2kT}\\right)",
+          "caption": "Stern's matching condition. The compact layer and the diffuse layer hold the same charge, so the two expressions for σ_M must agree. Solving them together shows how the total potential drop is shared between the compact and diffuse parts."
+        },
+        {
+          "kind": "para",
+          "text": "Because the two layers are in series, their capacitances add as reciprocals - exactly like two capacitors in series. The total capacitance is always smaller than the smaller of the two parts. The compact-layer capacitance `C`<sub>H</sub> hardly depends on potential at all, because its thickness and dielectric constant are fixed by geometry. The diffuse-layer capacitance `C`<sub>d</sub> varies strongly: minimum at the point of zero charge and rising on both sides. Which one controls the series sum depends on the conditions:"
+        },
+        {
+          "kind": "formula",
+          "tex": "\\frac{1}{C} = \\frac{1}{C_{\\mathrm{H}}} + \\frac{1}{C_{\\mathrm{d}}}",
+          "caption": "Gouy-Chapman-Stern capacitance as two capacitors in series. Near the point of zero charge in dilute solution C_d is small, so the V-shaped diffuse behaviour rules. In concentrated solution, or far from the PZC, C_d is large and the total settles at the constant value of C_H."
+        },
+        {
+          "kind": "para",
+          "text": "This model explains the measurements right away. At low concentration the diffuse layer is thick, so its capacitance is the small one, and the measured capacitance shows a clear minimum near the point of zero charge. Raise the concentration and the diffuse layer is squeezed; its capacitance grows until it no longer limits the series sum, and the measured curve flattens towards the constant Helmholtz value. Push the potential far from the PZC in dilute solution and the same flattening happens, because there too the diffuse layer is squeezed."
+        },
+        {
+          "kind": "para",
+          "text": "The Gouy-Chapman-Stern model still has gaps. The measured compact-layer capacitance does drift a little with potential: the dielectric constant of the tightly bound water layer saturates in the huge field, and anions and cations have different closest-approach distances. The model also ignores ion pairing near the surface. But as a working model that links capacitance data to a physical picture, it is still the standard that every refinement is judged against."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "Outer Helmholtz plane (OHP)",
+          "body": "The plane of closest approach of a solvated ion to the electrode, at distance x_2. Its potential ψ_2 is what a reactant sitting in the solution actually feels, and it is the quantity that appears in the Frumkin correction to electrode kinetics."
+        }
+      ]
+    },
+    {
+      "id": "specific-adsorption",
+      "tone": "coral",
+      "title": "Specific adsorption and the inner Helmholtz plane",
+      "minutes": 7,
+      "summary": "Some ions lose part of their solvent shell and touch the metal directly. This chemical bonding, not just electrostatics, lets them slip inside the outer Helmholtz plane to an inner plane. It shifts the point of zero charge and reshapes the whole potential profile.",
+      "keyPoints": [
+        "Specific adsorption is chemical (chemisorption): the ion loses part of its solvent shell and touches the surface. A purely electrostatic ion stays at the OHP.",
+        "Specifically adsorbed ions sit at the inner Helmholtz plane (IHP), closer to the electrode than the OHP.",
+        "It is strongest for large, weakly solvated, polarisable anions such as iodide and thiocyanate. Fluoride barely adsorbs at all.",
+        "Specific adsorption pushes the point of zero charge to more negative potentials and raises the capacitance on the positive side.",
+        "When the adsorbed charge is larger than the metal charge, the potential can change sign inside the compact layer - the super-equivalent case."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The Gouy-Chapman-Stern model treats ions as anonymous point charges that feel the electrode only through electrostatics. In reality, some ions interact chemically too. Grahame noticed that electrocapillary curves for different salts matched on the negative side of the point of zero charge but parted sharply on the positive side - the side where anions are the counter-ions. The behaviour clearly depended on the *identity* of the anion, which pure electrostatics could never explain. The missing ingredient is **specific adsorption**."
+        },
+        {
+          "kind": "para",
+          "text": "A specifically adsorbing ion sticks to the electrode surface in a special way. It sheds part of its solvent shell, loses some of its water, and stops moving, sitting directly against the metal. This is chemisorption: short-range chemical forces, not long-range electrostatic pull. Because the ion is no longer wrapped in solvent, its centre can get closer than a solvated ion could. Where it sits is the **inner Helmholtz plane** (IHP), inside the outer Helmholtz plane of the solvated ions."
+        },
+        {
+          "kind": "para",
+          "text": "Which ions adsorb specifically? The general rules: adsorption gets stronger as the ion gets bigger, as it gets more polarisable, and as it is held less tightly by solvent; and it is stronger for anions than for cations. So the halides line up as F<sup>-</sup> < Cl<sup>-</sup> < Br<sup>-</sup> < I<sup>-</sup>. In water, fluoride holds on to its water so tightly that it acts almost like a purely electrostatic ion, while iodide adsorbs easily. The ions that like to sit on the metal are exactly those that can give up part of their water shell cheaply."
+        },
+        {
+          "kind": "para",
+          "text": "Specific adsorption puts a third sheet of charge into the double layer. The neutrality condition then runs between the metal, the inner plane and the diffuse layer. Because the adsorbed charge sits closer to the metal than the diffuse counter-charge, it can often more than cancel the metal charge: the potential can pass through zero *inside* the compact layer and take the opposite sign there, which forces the diffuse layer to hold charge of the same sign as the electrode. This is the **super-equivalent** case. It produces the distinctive potential profiles that rise, fall, or cross the axis within the first nanometre."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\sigma_{\\mathrm{M}} + \\sigma_{1} + \\sigma_{2} = 0",
+          "caption": "Neutrality with specific adsorption. σ_1 is the charge at the inner Helmholtz plane and σ_2 the charge in the diffuse layer. If the adsorbed charge σ_1 is bigger than the metal charge, the diffuse layer must change sign to balance it."
+        },
+        {
+          "kind": "para",
+          "text": "The clearest experimental sign of specific adsorption is a shift in the point of zero charge. When an anion sticks to an uncharged surface it brings negative charge with it, so the electrode has to be made more negative to get back to neutrality - the point of zero charge moves negative. How far it moves measures how strong the adsorption is, and how that shift changes with concentration is the raw data that adsorption isotherms (two sections later) are built from."
+        },
+        {
+          "kind": "callout",
+          "variant": "warn",
+          "title": "A model within a model",
+          "body": "The IHP picture is a simplification. Specifically adsorbed ions sit at particular sites, not spread out in an even sheet, so there is no single well-defined potential at the inner plane. Because the charge is in lumps, neighbouring adsorbed ions repel each other less, and adsorption comes out stronger than a smeared-charge model predicts. The IHP is a useful fiction, not a literal plane of atoms."
+        }
+      ]
+    },
+    {
+      "id": "surface-thermodynamics",
+      "tone": "amber",
+      "title": "The thermodynamics of surfaces",
+      "minutes": 7,
+      "summary": "Before any structural model, thermodynamics already says what an interface must do. The Gibbs adsorption isotherm links surface tension to surface excess, and its electrochemical form - the electrocapillary equation - turns a measurement of surface tension into the charge and capacitance of the double layer.",
+      "keyPoints": [
+        "The surface excess Γ is the amount of a component at the interface in excess of what the bulk would contain, expressed per unit area.",
+        "The Gibbs adsorption isotherm states that surface tension falls by Γ times the change in chemical potential of an adsorbed species.",
+        "In an electrochemical system the isotherm becomes the electrocapillary equation, in which the coefficient of dE is the surface charge σ_M.",
+        "Lippmann's result follows at once: the slope of the electrocapillary curve gives the surface charge, and its second derivative gives the differential capacitance.",
+        "The maximum of the electrocapillary curve is the point of zero charge, where the metal surface is uncharged."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The models of the last sections are pictures, and pictures can mislead. Fortunately the interface also obeys thermodynamics, and thermodynamics does not care what picture we hold. From a few measurable quantities - surface tension, and how it varies with potential and concentration - we can work out the charge on the electrode and the amount of each species adsorbed, without committing to any structural model at all. This is the rigorous backbone that every model must reproduce."
+        },
+        {
+          "kind": "para",
+          "text": "The central quantity is the **surface excess**. Cut a slice through the interface and draw an imaginary dividing surface. Compare the amount of a component `i` that is actually present near the surface with the amount the bulk phases would have contained out to that surface. The difference, divided by the area, is the surface excess `Γ_i`. Because absolute surface excesses are not independently measurable, one usually quotes them *relative to the solvent* - for aqueous systems, relative to water."
+        },
+        {
+          "kind": "para",
+          "text": "Gibbs showed that at constant temperature the change in surface tension is the negative sum of the surface excesses times the changes in chemical potential. A species that accumulates at the surface lowers the surface tension; one that is depleted raises it. That is why soaps and surfactants, which adsorb strongly, so dramatically cut the surface tension of water:"
+        },
+        {
+          "kind": "formula",
+          "tex": "d\\gamma = -\\sum_i \\Gamma_i\\, d\\mu_i",
+          "caption": "Gibbs adsorption isotherm. Surface tension γ falls when the chemical potential μ_i of an adsorbing component is raised, in proportion to its surface excess Γ_i. This holds for any interface."
+        },
+        {
+          "kind": "para",
+          "text": "For an electrode, one of the species whose chemical potential we can vary is the electron, and its chemical potential is controlled by the electrode potential. Writing the isotherm for a mercury electrode in contact with a simple electrolyte, and taking the electrode potential as the variable, turns it into the **electrocapillary equation**:"
+        },
+        {
+          "kind": "formula",
+          "tex": "-d\\gamma = \\sigma_M\\, dE + \\Gamma_{+}\\, d\\mu_{\\pm} + \\Gamma_{n}\\, d\\mu_{n} + \\cdots",
+          "caption": "The electrocapillary equation. At fixed electrolyte and fixed neutral adsorbate, the derivative of surface tension with respect to potential is minus the electrode charge."
+        },
+        {
+          "kind": "para",
+          "text": "Setting the concentration terms aside gives **Lippmann's equation**. It says that the slope of the surface tension against potential curve is the electrode charge, with a change of sign. Since charge is this slope and capacitance is the change of charge with potential, the capacitance is the second derivative of the electrocapillary curve. A single careful surface-tension measurement therefore gives both the charge and the capacitance of the double layer."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\sigma_M = -\\left(\\frac{\\partial \\gamma}{\\partial E}\\right)_{\\mu}, \\qquad C = \\frac{\\partial \\sigma_M}{\\partial E} = -\\left(\\frac{\\partial^2 \\gamma}{\\partial E^2}\\right)_{\\mu}",
+          "caption": "Lippmann's equation and its derivative. Charge is the slope of the electrocapillary curve, and capacitance is the curvature."
+        },
+        {
+          "kind": "para",
+          "text": "The electrocapillary curve is a nearly parabolic plot of surface tension against potential. Its slope is the charge, its curvature the capacitance, and its summit the potential at which both vanish. That maximum is the point of zero charge: the electrode is uncharged there, positively charged at more positive potentials and negatively charged at more negative ones. The surface tension is greatest there because, with no charge to repel itself, the surface can contract most strongly. On either side of the maximum the accumulating charge thins the surface and the tension falls."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "Thermodynamics before models",
+          "body": "The electrocapillary equation is exact. Whatever structural picture we favour - Helmholtz, Gouy-Chapman, Stern, or something newer - it must reproduce the measured charge, capacitance and surface excess. That is why the mercury electrocapillary curve became the benchmark against which every double-layer model has been judged."
+        }
+      ]
+    },
+    {
+      "id": "adsorption-isotherms",
+      "tone": "emerald",
+      "title": "Adsorption isotherms",
+      "minutes": 7,
+      "summary": "An isotherm says how much of a species sits on the surface at a given bulk concentration and potential. Langmuir assumes independent sites and gives saturation; Temkin and Frumkin add interactions between neighbours to fit the surfaces that Langmuir cannot.",
+      "keyPoints": [
+        "An adsorption isotherm relates surface coverage θ to bulk concentration or activity and to electrode potential.",
+        "The standard free energy of adsorption depends on potential, so adsorption is strongest near the point of zero charge and weakens as the electrode is charged.",
+        "The Langmuir isotherm assumes no interactions between adsorbed species, a homogeneous surface, and a monolayer, giving θ = βc/(1 + βc).",
+        "The Temkin isotherm treats a heterogeneous surface or strong interactions, giving θ proportional to the logarithm of concentration.",
+        "The Frumkin isotherm adds a coverage-dependent interaction energy; attractive interactions give S-shaped curves, repulsive ones give flattened curves, and zero interaction returns Langmuir."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A theory that tells us ions are attracted to an electrode is not much use until it says how many actually arrive. The quantitative answer is the **adsorption isotherm**, a function relating the surface concentration of the adsorbate to its concentration in the bulk and to the electrode potential. Isotherms come from the balance of electrochemical potentials of the adsorbed and bulk species, and different assumptions about the surface give different forms."
+        },
+        {
+          "kind": "para",
+          "text": "At equilibrium, the tendency of the adsorbed and dissolved forms to leave is the same, so their electrochemical potentials are equal. Writing this out introduces the standard free energy of adsorption, `ΔG_ads`. That energy is a function of electrode potential: an adsorbing ion is stabilised by the electrode's opposite charge, so adsorption is strongest near the point of zero charge and weakens as the electrode acquires like charge. The result is the familiar bell-shaped coverage-versus-potential curve for neutral and ionic adsorbates."
+        },
+        {
+          "kind": "para",
+          "text": "The simplest model is the **Langmuir isotherm** (1918). It assumes the surface offers a fixed number of identical sites, that one adsorbed particle occupies one site, that neighbours do not interact, and that at most one layer can form. Adsorption and desorption are then a simple competition for free sites, and the fractional coverage θ obeys:"
+        },
+        {
+          "kind": "formula",
+          "tex": "\\frac{1-\\theta}{\\theta} = \\beta c, \\qquad \\theta = \\frac{\\beta c}{1 + \\beta c}, \\qquad \\beta \\propto e^{-\\Delta G_{\\mathrm{ads}}/RT}",
+          "caption": "Langmuir isotherm. Coverage rises linearly at low concentration, then bends over and saturates at θ = 1 as every site fills. The adsorption coefficient β measures how strongly the surface binds the species."
+        },
+        {
+          "kind": "para",
+          "text": "Real surfaces depart from the Langmuir ideal in recognisable ways. A polycrystalline metal exposes facets of different activity, so the sites are not equivalent: adsorption on the strongest sites happens first and its energy falls as coverage grows. Strong lateral interactions between adsorbed particles have a similar effect. The **Temkin isotherm** captures this by making the adsorption energy fall linearly with coverage, which linearises coverage against the logarithm of concentration over the middle range:"
+        },
+        {
+          "kind": "formula",
+          "tex": "\\theta = \\frac{f}{RT}\\,\\ln(\\beta c), \\qquad 0.2 < \\theta < 0.8",
+          "caption": "Temkin isotherm. Valid over the intermediate coverage range, where the surface is neither nearly empty nor nearly full. The parameter f measures how quickly the adsorption energy falls as neighbours fill in."
+        },
+        {
+          "kind": "para",
+          "text": "The **Frumkin isotherm** keeps the Langmuir picture but makes the adsorption energy a linear function of coverage, adding a term for the interaction energy `g` between neighbouring adsorbed particles. A positive `g` and attractive interactions steepen the isotherm into an S-shaped curve; a negative `g` and repulsive interactions flatten it. When `g` is zero the Frumkin isotherm collapses back to Langmuir, which is a useful check on the algebra."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\frac{1-\\theta}{\\theta}\\,e^{-2g\\theta} = \\beta c",
+          "caption": "Frumkin isotherm with interaction parameter g, written in a compact dimensionless form. g > 0 means attraction between neighbours and a sharper, S-shaped uptake; g < 0 means repulsion and a gentler curve; g = 0 recovers Langmuir."
+        },
+        {
+          "kind": "table",
+          "head": [
+            "Isotherm",
+            "Key assumption",
+            "Signature shape"
+          ],
+          "rows": [
+            [
+              "Langmuir",
+              "Independent sites, no interactions, monolayer",
+              "Rises then saturates smoothly at θ = 1"
+            ],
+            [
+              "Temkin",
+              "Heterogeneous surface or strong interactions",
+              "Coverage linear in log concentration over 0.2 < θ < 0.8"
+            ],
+            [
+              "Frumkin",
+              "Interaction energy linear in coverage",
+              "S-shaped when attractive, flattened when repulsive"
+            ]
+          ]
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "Adsorption isotherm",
+          "body": "A relation between surface coverage, bulk concentration (or activity) and electrode potential at a fixed temperature. It is the quantitative bridge between the thermodynamic surface excess and the microscopic picture of particles sitting on sites."
+        }
+      ]
+    },
+    {
+      "id": "real-surfaces",
+      "tone": "teal",
+      "title": "Mercury, platinum, and real surfaces",
+      "minutes": 6,
+      "summary": "Almost everything clean we know about the double layer comes from one electrode: mercury, because it is liquid and can be renewed. Solid electrodes such as platinum add oxides, facets and roughness, so the elegant model becomes a guide rather than a law.",
+      "keyPoints": [
+        "An ideally polarisable electrode passes no faradaic current over a wide potential window, so its response is purely double-layer charging.",
+        "Mercury is the model system: a large hydrogen overpotential widens the window, it is liquid so it has no grain boundaries, and a dropping electrode exposes fresh surface continuously.",
+        "Mercury's double-layer capacitance passes through a minimum of roughly 18 µF/cm² near its point of zero charge, and its electrocapillary curves are the benchmark data.",
+        "Solid electrodes such as platinum are not ideally polarisable: they form oxides, reconstruct, expose different crystal facets and have a roughness that inflates the apparent area.",
+        "The Gouy-Chapman-Stern picture still guides work on solids, but its constants must be treated as effective values fitted to each surface."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "If the double layer is only a nanometre thick, measuring it means measuring a very small amount of charge on a very small amount of surface - and doing so without any competing faradaic reaction muddying the signal. An electrode that satisfies this ideal is called **ideally polarisable**: over some potential range no electrons cross the interface, so the entire measured current is the non-faradaic current of charging the double layer. Such an electrode acts as a pure capacitor, and its capacitance can be measured directly."
+        },
+        {
+          "kind": "para",
+          "text": "For decades the model system was **mercury**, for several reasons that fit together neatly. Mercury has a very large overpotential for hydrogen evolution, so its usable potential window is unusually wide. It is a liquid, so its surface has no grain boundaries or crystal facets and is atomically smooth and reproducible. A dropping mercury electrode exposes a fresh surface every few seconds, so contamination never accumulates. And the surface tension of a liquid metal is directly measurable, which is what makes the electrocapillary equation practical."
+        },
+        {
+          "kind": "para",
+          "text": "The familiar numbers of double-layer physics are mercury numbers. Its capacitance passes through a minimum of roughly 18 µF/cm² near the point of zero charge in dilute fluoride solution, and the minimum deepens and sharpens as the electrolyte is diluted - exactly the behaviour that made the diffuse layer necessary. Its electrocapillary curves, nearly parabolic in potential, became the reference against which every proposed model was tested."
+        },
+        {
+          "kind": "para",
+          "text": "Real electrodes for technology are almost never mercury. They are solid metals such as **platinum**, and solids refuse to behave. A platinum surface in contact with water or air is normally covered with an oxide or a layer of adsorbed oxygen species, so the interface is not a clean metal-solution boundary at all. A clean platinum surface reconstructs, rearranging its top atomic layer. Different crystal faces expose different atomic arrangements and adsorb ions and solvent differently. And a practical electrode is rough, so its true area can be several times its geometric area, which scales every measured capacitance and current."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "From law to guide",
+          "body": "On mercury the Gouy-Chapman-Stern model is quantitative. On a solid, oxidised, rough platinum surface it is at best a qualitative guide: the model's constants become effective values that depend on the specific surface, its history and its coverage. The physics does not change, but the clean numbers do. This is why practical electrochemistry leans so heavily on a few reference electrolytes and reference potentials. Inert salts such as fluoride, or the tetraalkylammonium salts in non-aqueous solvents, adsorb weakly and behave closest to the electrostatic ideal."
+        }
+      ]
+    },
+    {
+      "id": "capacitive-faradaic",
+      "tone": "slate",
+      "title": "Capacitive current and faradaic current",
+      "minutes": 6,
+      "summary": "Every electrode carries two currents at once: a non-faradaic current that charges the double layer, and a faradaic current that transfers electrons. They have different time signatures, and separating them is the first practical task of any measurement.",
+      "keyPoints": [
+        "The total current is the sum of a capacitive (non-faradaic) current and a faradaic current; only the faradaic part corresponds to a chemical reaction.",
+        "When the potential changes, the double layer must charge, giving a capacitive current i_c = C_dl dE/dt, proportional to the scan rate.",
+        "After a potential step the capacitive current decays exponentially with the RC time constant of the cell, whereas the faradaic current decays more slowly (as t^-1/2).",
+        "Charging charge can be measured separately in chronocoulometry, where the capacitive charge is a step and the faradaic charge grows with the square root of time.",
+        "The capacitive current sets the detection limit in trace analysis and explains the need for a supporting electrolyte and for careful baseline subtraction."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "An electrode in solution does two separate things when we change its potential. It rearranges the charge already there to build up or relax the double layer - that takes a current but transfers no electrons across the interface. And, if the potential is right, it drives an electron-transfer reaction, which does transfer electrons and which alone corresponds to chemistry. The first is the capacitive or non-faradaic current; the second is the faradaic current. Every measured current is their sum."
+        },
+        {
+          "kind": "para",
+          "text": "Because the double layer behaves like a capacitor of differential capacitance `C_dl`, charging it pulls out a charge `q = C_dl ΔE`, and a current flows whenever the potential is changing. In a linear sweep the potential moves at a constant scan rate `v`, so the capacitive current is simply proportional to that rate. This is a major practical reason that faster scans look noisier: the charging current grows, yet it tells us nothing about the reaction."
+        },
+        {
+          "kind": "formula",
+          "tex": "i_c = C_{dl}\\,\\frac{dE}{dt} = C_{dl}\\,v",
+          "caption": "Capacitive current during a potential sweep. It flows only while the potential moves, changes sign when the scan reverses, and is proportional to the scan rate - unlike a diffusion-limited faradaic peak, which grows only as the square root of the scan rate."
+        },
+        {
+          "kind": "para",
+          "text": "If instead of sweeping we make a sudden potential step, the double layer charges through the resistance of the solution and the cell. The capacitive current then decays exponentially, with a time constant set by the product of the series resistance and the capacitance. A faradaic current following a step is set by the supply of reactant to the surface and decays much more slowly, as the inverse square root of time. That difference in signatures is the basis of the standard methods for telling the currents apart."
+        },
+        {
+          "kind": "formula",
+          "tex": "i_c(t) = \\frac{\\Delta E}{R_s}\\,e^{-t/\\tau}, \\qquad \\tau = R_s C_{dl}, \\qquad i_f(t) \\propto t^{-1/2}",
+          "caption": "After a potential step the capacitive current dies away exponentially with the cell time constant τ, while the faradaic (diffusion-controlled) current decays only as t^-1/2. Plotting the charge against the square root of time separates the two cleanly."
+        },
+        {
+          "kind": "para",
+          "text": "Chronocoulometry exploits this difference directly. Setting the integrated current against the square root of time gives a straight line whose intercept is the double-layer charging charge and whose slope gives the diffusion-controlled faradaic charge. One extrapolation to time zero therefore yields the capacitance on one axis and the electroactive concentration on the other."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "The double layer is the stage, not the play",
+          "body": "The capacitive current is often a nuisance, but the double layer that produces it is not. Its potential profile decides the concentration and the driving force seen by every reactant, which is precisely the Frumkin effect that modified the kinetics of Lesson 5. Understanding the double layer is what lets us subtract its current in an analysis and correct for its potential in kinetics."
+        }
+      ],
+      "cta": {
+        "title": "The nanometre that changes everything",
+        "body": "Lesson 6 went from a boundary that is one atom thick to the thermodynamics that describes it without a model. We met the compact layer and the diffuse layer, the Debye length that sets their scale, specific adsorption that reshapes them, the electrocapillary equation that measures them, the isotherms that count the adsorbate, and the distinction between charging the double layer and reacting at it. Every one of these ideas sits underneath the kinetics of Lesson 5 and will sit underneath the measurement methods to come. Test yourself on this lesson's bank first.",
+        "href": "/lessons/lesson-6/quiz",
+        "linkLabel": "Take the Lesson 6 questions",
+        "secondaryHref": "/lessons/lesson-5",
+        "secondaryLabel": "Recheck Lesson 5"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "l6-mcq-001",
+      "topicId": "interphase",
+      "quick": true,
+      "question": "Taken as a whole, the interphase between an electrode and an electrolyte is:",
+      "options": [
+        "Positively charged",
+        "Negatively charged",
+        "Electroneutral, though charge is separated across it",
+        "Uncharged on the metal side only"
+      ],
+      "answer": 2,
+      "explanation": "The interphase carries no net charge, but that neutrality is the sum of two equal and opposite surface charges: a metal surface charge σ_M and a solution-side charge σ_S with σ_M + σ_S = 0."
+    },
+    {
+      "id": "l6-mcq-002",
+      "topicId": "interphase",
+      "quick": true,
+      "question": "Why does the double layer produce electric fields of order 10^9 V/m?",
+      "options": [
+        "Because the electrode carries an enormous total charge",
+        "Because the separated charges are only a few tenths of a nanometre apart",
+        "Because the solution has a very low dielectric constant throughout",
+        "Because the current through the cell is large"
+      ],
+      "answer": 1,
+      "explanation": "Field strength is roughly the potential difference divided by the separation. With about a volt dropped across a few tenths of a nanometre, the field reaches 10^9 V/m - comparable to the fields holding atoms together."
+    },
+    {
+      "id": "l6-mcq-003",
+      "topicId": "interphase",
+      "quick": true,
+      "question": "Which of these belongs to the group of surface effects confined to a single phase rather than to the true interfacial double layer?",
+      "options": [
+        "The layer of counter-ions in solution",
+        "The excess electron charge on the metal",
+        "The orientation of polar solvent dipoles at the surface",
+        "The diffuse part of the ionic cloud"
+      ],
+      "answer": 2,
+      "explanation": "Oriented solvent dipoles produce a surface potential confined to the solution phase. The true interfacial double layer is shared between the metal surface charge and the ionic charge in solution."
+    },
+    {
+      "id": "l6-mcq-004",
+      "topicId": "interphase",
+      "question": "Electrochemists care about the interphase mainly because:",
+      "options": [
+        "It stores a large amount of energy for its thickness",
+        "It is where the electrode potential is actually dropped, so it sets the driving force seen by reactants",
+        "It prevents current from flowing",
+        "It has a fixed composition independent of potential"
+      ],
+      "answer": 1,
+      "explanation": "The potential driving an electrode reaction is not the bulk solution potential but the potential at the reaction site in the double layer. This is why the structure of the interphase directly controls electrode kinetics."
+    },
+    {
+      "id": "l6-mcq-005",
+      "topicId": "helmholtz-model",
+      "quick": true,
+      "question": "In the Helmholtz model the solution side of the double layer is pictured as:",
+      "options": [
+        "A diffuse cloud of ions decaying into the bulk",
+        "A rigid sheet of counter-charge at a fixed distance from the metal",
+        "A layer of neutral solvent molecules only",
+        "Two sheets of charge of the same sign"
+      ],
+      "answer": 1,
+      "explanation": "Helmholtz treated both charges as sheets pressed against the interface, so the double layer is equivalent to a parallel-plate capacitor with plate separation d."
+    },
+    {
+      "id": "l6-mcq-006",
+      "topicId": "helmholtz-model",
+      "quick": true,
+      "question": "The Helmholtz model predicts a differential capacitance given by:",
+      "options": [
+        "C = ε ε0 / d, independent of potential",
+        "C proportional to the square root of concentration",
+        "C = κ^-1",
+        "C proportional to cosh of the surface potential"
+      ],
+      "answer": 0,
+      "explanation": "A parallel-plate capacitor has C = εε0/d. Because d and ε are treated as fixed, the model predicts a constant capacitance that does not vary with potential or electrolyte concentration."
+    },
+    {
+      "id": "l6-mcq-007",
+      "topicId": "helmholtz-model",
+      "quick": true,
+      "question": "The decisive experimental failure of the Helmholtz model is that:",
+      "options": [
+        "It predicts far too small a capacitance",
+        "It predicts a constant capacitance, whereas real capacitance varies with potential and concentration",
+        "It cannot explain why a field exists at all",
+        "It requires ions to be neutral"
+      ],
+      "answer": 1,
+      "explanation": "Real mercury electrodes show a U-shaped capacitance that depends on potential and on concentration. The Helmholtz picture, with its fixed geometry, cannot reproduce either dependence."
+    },
+    {
+      "id": "l6-mcq-008",
+      "topicId": "helmholtz-model",
+      "question": "Why is the dielectric constant in the compact layer taken to be much lower than in bulk water?",
+      "options": [
+        "Because the layer contains no water at all",
+        "Because water dipoles are strongly aligned by the enormous field, so they can no longer respond freely",
+        "Because the dielectric constant of water falls as temperature rises",
+        "Because the solution is concentrated"
+      ],
+      "answer": 1,
+      "explanation": "In the huge interfacial field the water dipoles are wrenched into alignment, reducing their ability to screen charge. The effective dielectric constant near the surface is more like 6 than the bulk value of about 78."
+    },
+    {
+      "id": "l6-mcq-009",
+      "topicId": "diffuse-layer",
+      "quick": true,
+      "question": "The diffuse layer forms because:",
+      "options": [
+        "Ions are fixed rigidly at the electrode surface",
+        "Electrostatic attraction competes with thermal motion, spreading the counter-charge over a finite thickness",
+        "The electrode is uncharged",
+        "Solvent molecules are immobile"
+      ],
+      "answer": 1,
+      "explanation": "The Gouy-Chapman picture balances the electrode's pull on the counter-ions against their thermal tendency to wander. The result is a cloud whose concentration decays away from the surface."
+    },
+    {
+      "id": "l6-mcq-010",
+      "topicId": "diffuse-layer",
+      "quick": true,
+      "question": "As the electrolyte concentration of a 1:1 solution increases, the Debye length:",
+      "options": [
+        "Increases in proportion to concentration",
+        "Stays constant",
+        "Decreases, from about 10 nm at 1 mM to about 1 nm at 0.1 M",
+        "Becomes negative"
+      ],
+      "answer": 2,
+      "explanation": "The Debye length scales as 1/sqrt(concentration). More ions means more screening, so the diffuse layer is compressed: roughly 10 nm at 1 mM and 1 nm at 0.1 M."
+    },
+    {
+      "id": "l6-mcq-011",
+      "topicId": "diffuse-layer",
+      "quick": true,
+      "question": "For small surface potentials, the potential in the diffuse layer decays:",
+      "options": [
+        "Linearly with distance",
+        "Exponentially with distance, with decay length κ^-1",
+        "As the square of distance",
+        "It does not decay"
+      ],
+      "answer": 1,
+      "explanation": "When the surface potential is below about 50/z mV, the exact solution linearises to φ = φ0 e^(-κx). The characteristic distance 1/κ is the Debye length."
+    },
+    {
+      "id": "l6-mcq-012",
+      "topicId": "diffuse-layer",
+      "question": "The Gouy-Chapman diffuse-layer capacitance behaves as:",
+      "options": [
+        "A constant, independent of potential",
+        "A cosh function of surface potential, with a minimum at the point of zero charge",
+        "A linear function of surface potential",
+        "Zero at all potentials away from the PZC"
+      ],
+      "answer": 1,
+      "explanation": "Differentiating the sinh charge-potential relation gives a capacitance proportional to cosh. It is smallest where the surface potential is zero, producing the V-shaped minimum at the PZC."
+    },
+    {
+      "id": "l6-mcq-013",
+      "topicId": "gouy-chapman-stern",
+      "quick": true,
+      "question": "What defect of the Gouy-Chapman theory did Stern's modification fix?",
+      "options": [
+        "It ignored the electrode charge",
+        "It treated ions as point charges able to approach the surface arbitrarily closely, giving unlimited capacitance",
+        "It predicted capacitance independent of concentration",
+        "It omitted the diffuse layer"
+      ],
+      "answer": 1,
+      "explanation": "Real ions have finite size and, if solvated, a solvation sheath as well. Forbidding them from coming nearer than a plane of closest approach removes the unphysical unlimited rise in capacitance."
+    },
+    {
+      "id": "l6-mcq-014",
+      "topicId": "gouy-chapman-stern",
+      "quick": true,
+      "question": "In the Gouy-Chapman-Stern model the compact and diffuse parts behave as:",
+      "options": [
+        "Two capacitors in parallel",
+        "Two capacitors in series: 1/C = 1/C_H + 1/C_d",
+        "A single constant capacitor",
+        "A resistor and a capacitor"
+      ],
+      "answer": 1,
+      "explanation": "The total potential drop is shared between the compact and diffuse layers, so their capacitances add as reciprocals, exactly as for two capacitors in series. The total is always below the smaller component."
+    },
+    {
+      "id": "l6-mcq-015",
+      "topicId": "gouy-chapman-stern",
+      "quick": true,
+      "question": "At high electrolyte concentration, or far from the point of zero charge, the measured capacitance tends toward:",
+      "options": [
+        "Zero",
+        "The constant compact-layer capacitance C_H",
+        "The V-shaped diffuse-layer capacitance",
+        "Negative values"
+      ],
+      "answer": 1,
+      "explanation": "Under these conditions the diffuse layer is compressed and C_d becomes large, so 1/C_d is small and the series capacitance is dominated by the constant C_H. The curve flattens accordingly."
+    },
+    {
+      "id": "l6-mcq-016",
+      "topicId": "gouy-chapman-stern",
+      "question": "Within the compact layer between the electrode and the outer Helmholtz plane, the potential varies:",
+      "options": [
+        "Exponentially",
+        "Linearly with distance",
+        "As the square root of distance",
+        "Not at all"
+      ],
+      "answer": 1,
+      "explanation": "There is no charge in the compact layer, so Poisson's equation makes the potential linear there - the parallel-plate behaviour. The curvature and exponential decay begin beyond the OHP."
+    },
+    {
+      "id": "l6-mcq-017",
+      "topicId": "specific-adsorption",
+      "quick": true,
+      "question": "Specific adsorption of an ion means that the ion:",
+      "options": [
+        "Is held only by long-range electrostatic forces at the OHP",
+        "Loses part of its solvation sheath and contacts the surface chemically, sitting at the inner Helmholtz plane",
+        "Is repelled from the surface",
+        "Neutralises the electrode completely"
+      ],
+      "answer": 1,
+      "explanation": "Specific adsorption is chemisorption. The ion is partly dehydrated, loses mobility and its centre lies closer to the metal than the OHP - at the inner Helmholtz plane."
+    },
+    {
+      "id": "l6-mcq-018",
+      "topicId": "specific-adsorption",
+      "quick": true,
+      "question": "Which anion adsorbs most strongly at a mercury electrode in aqueous solution?",
+      "options": [
+        "Fluoride",
+        "Chloride",
+        "Iodide",
+        "Hydroxide"
+      ],
+      "answer": 2,
+      "explanation": "Specific adsorption strengthens with size and polarisability and weakens with strong solvation. Iodide is large and weakly hydrated, so it adsorbs strongly; fluoride is so well hydrated that it adsorbs almost not at all."
+    },
+    {
+      "id": "l6-mcq-019",
+      "topicId": "specific-adsorption",
+      "quick": true,
+      "question": "A clear experimental signature of specific anion adsorption is that it:",
+      "options": [
+        "Shifts the point of zero charge to more positive potentials",
+        "Shifts the point of zero charge to more negative potentials and raises the positive-side capacitance",
+        "Removes the electrocapillary maximum",
+        "Makes the electrode ideally polarisable"
+      ],
+      "answer": 1,
+      "explanation": "Adsorbed anions bring negative charge to the surface, so the electrode must be made more negative to be neutral, shifting the PZC negative. The extra charge also raises the capacitance on the positive side."
+    },
+    {
+      "id": "l6-mcq-020",
+      "topicId": "specific-adsorption",
+      "question": "In the super-equivalent case of specific adsorption:",
+      "options": [
+        "The specifically adsorbed charge is much smaller than the metal charge",
+        "The specifically adsorbed charge exceeds the metal charge, so the potential can change sign inside the compact layer",
+        "No diffuse layer exists",
+        "The electrode becomes uncharged at all potentials"
+      ],
+      "answer": 1,
+      "explanation": "When the charge at the inner Helmholtz plane is larger in magnitude than the metal charge, the potential passes through zero within the compact layer and the diffuse layer must hold charge of the same sign as the electrode."
+    },
+    {
+      "id": "l6-mcq-021",
+      "topicId": "surface-thermodynamics",
+      "quick": true,
+      "question": "The Gibbs adsorption isotherm states that:",
+      "options": [
+        "Surface tension is independent of adsorption",
+        "Surface tension falls by the sum of surface excess times chemical potential change: dγ = -Σ Γ_i dμ_i",
+        "Charge equals surface tension",
+        "Surface excess is always positive"
+      ],
+      "answer": 1,
+      "explanation": "A species that accumulates at the surface lowers the surface tension; one that is depleted raises it. The isotherm is a thermodynamic result holding for any interface, independent of any structural model."
+    },
+    {
+      "id": "l6-mcq-022",
+      "topicId": "surface-thermodynamics",
+      "quick": true,
+      "question": "The electrocapillary equation, differentiated with respect to potential, gives:",
+      "options": [
+        "The concentration of the electrolyte",
+        "The electrode charge as minus the slope of the surface tension curve",
+        "The diffusion coefficient",
+        "The transfer coefficient"
+      ],
+      "answer": 1,
+      "explanation": "This is Lippmann's result: σ_M = -(∂γ/∂E). The slope of the electrocapillary curve gives the surface charge, and its second derivative gives the differential capacitance."
+    },
+    {
+      "id": "l6-mcq-023",
+      "topicId": "surface-thermodynamics",
+      "quick": true,
+      "question": "The maximum of an electrocapillary curve corresponds to:",
+      "options": [
+        "The potential of maximum current",
+        "The point of zero charge, where the surface charge is zero",
+        "The standard hydrogen electrode potential",
+        "The onset of hydrogen evolution"
+      ],
+      "answer": 1,
+      "explanation": "At the maximum the slope is zero, so the charge is zero. That potential is the point of zero charge; the electrode is positive at more positive potentials and negative at more negative ones."
+    },
+    {
+      "id": "l6-mcq-024",
+      "topicId": "surface-thermodynamics",
+      "question": "Why do electrochemists usually quote surface excesses relative to the solvent rather than as absolute values?",
+      "options": [
+        "Because the solvent never adsorbs",
+        "Because absolute surface excesses are not independently measurable, so only excesses relative to water can be determined",
+        "Because water has no chemical potential",
+        "Because surface tension is undefined for solvents"
+      ],
+      "answer": 1,
+      "explanation": "Gibbs-Duhem links the chemical potentials of all components, so their surface excesses are not independent. Choosing the solvent (water) as the reference removes that ambiguity and gives measurable relative excesses."
+    },
+    {
+      "id": "l6-mcq-025",
+      "topicId": "adsorption-isotherms",
+      "quick": true,
+      "question": "Which set of assumptions defines the Langmuir isotherm?",
+      "options": [
+        "Strong interactions between neighbours and a heterogeneous surface",
+        "Independent identical sites, no interactions between adsorbates, and a single saturated monolayer",
+        "Multilayer adsorption with no saturation",
+        "Coverage independent of concentration"
+      ],
+      "answer": 1,
+      "explanation": "Langmuir assumes a fixed number of equivalent sites, at most one particle per site, and no interaction between neighbours. Adsorption and desorption then compete only for free sites."
+    },
+    {
+      "id": "l6-mcq-026",
+      "topicId": "adsorption-isotherms",
+      "quick": true,
+      "question": "The Langmuir isotherm written in terms of fractional coverage θ is:",
+      "options": [
+        "θ = βc",
+        "θ = βc / (1 + βc)",
+        "θ = (1/RT) ln(βc)",
+        "θ = exp(-2gθ) βc"
+      ],
+      "answer": 1,
+      "explanation": "Coverage rises linearly at low concentration and saturates at θ = 1 as sites fill. The form θ = βc/(1 + βc) is the defining relation of the Langmuir model."
+    },
+    {
+      "id": "l6-mcq-027",
+      "topicId": "adsorption-isotherms",
+      "quick": true,
+      "question": "The Temkin isotherm is preferred when the surface is heterogeneous or interactions are strong; it predicts that:",
+      "options": [
+        "Coverage is linear in concentration at all concentrations",
+        "Coverage is linear in the logarithm of concentration over intermediate coverage (roughly 0.2 < θ < 0.8)",
+        "Coverage is always zero",
+        "Coverage depends only on potential"
+      ],
+      "answer": 1,
+      "explanation": "With the adsorption energy falling linearly with coverage, θ becomes proportional to ln(βc). The relation is applied over the intermediate coverage range where it fits best."
+    },
+    {
+      "id": "l6-mcq-028",
+      "topicId": "adsorption-isotherms",
+      "question": "In the Frumkin isotherm, a positive interaction parameter g implies:",
+      "options": [
+        "Repulsive interactions and a flattened isotherm",
+        "Attractive interactions and an S-shaped isotherm; g = 0 recovers Langmuir",
+        "No adsorption at all",
+        "That the electrode is uncharged"
+      ],
+      "answer": 1,
+      "explanation": "Positive g means neighbouring adsorbates attract, which sharpens the uptake into an S-shaped curve. As g tends to zero the interaction term vanishes and the Frumkin isotherm reduces to Langmuir."
+    },
+    {
+      "id": "l6-mcq-029",
+      "topicId": "real-surfaces",
+      "quick": true,
+      "question": "An ideally polarisable electrode is one that:",
+      "options": [
+        "Passes a very large faradaic current",
+        "Passes no faradaic current over a potential window, so its response is purely double-layer charging",
+        "Has no double layer",
+        "Cannot be polarised at all"
+      ],
+      "answer": 1,
+      "explanation": "Over the ideal window no electrons cross the interface, so the measured current is entirely non-faradaic and the electrode behaves as a pure capacitor whose capacitance can be measured directly."
+    },
+    {
+      "id": "l6-mcq-030",
+      "topicId": "real-surfaces",
+      "quick": true,
+      "question": "Which is NOT a reason mercury became the model electrode for double-layer studies?",
+      "options": [
+        "A large hydrogen overpotential gives a wide usable potential window",
+        "It is a liquid, so its surface is smooth and has no grain boundaries",
+        "A dropping electrode continuously exposes a fresh surface",
+        "It forms a stable, strongly adherent oxide layer"
+      ],
+      "answer": 3,
+      "explanation": "Mercury does not build up a blocking oxide; that is precisely an advantage. Its high hydrogen overpotential, liquid surface, renewable drop and measurable surface tension are what made it the benchmark."
+    },
+    {
+      "id": "l6-mcq-031",
+      "topicId": "real-surfaces",
+      "quick": true,
+      "question": "The differential capacitance of mercury passes through a minimum near its point of zero charge of roughly:",
+      "options": [
+        "1 µF/cm²",
+        "18 µF/cm²",
+        "180 µF/cm²",
+        "1800 µF/cm²"
+      ],
+      "answer": 1,
+      "explanation": "Mercury's double-layer capacitance has a minimum of about 18 µF/cm² near the PZC in dilute fluoride solution, which deepens and sharpens as the electrolyte is diluted."
+    },
+    {
+      "id": "l6-mcq-032",
+      "topicId": "real-surfaces",
+      "question": "Why does the Gouy-Chapman-Stern model become only a rough guide at a solid platinum electrode?",
+      "options": [
+        "Because platinum does not conduct electricity",
+        "Because the surface can oxidise, reconstruct, expose different crystal facets and be rough, so its constants are only effective values",
+        "Because platinum has no double layer",
+        "Because the Debye length is always zero at metals"
+      ],
+      "answer": 1,
+      "explanation": "The same physics applies, but oxides, reconstruction, crystallographic faces and roughness mean the compact-layer thickness, dielectric behaviour and true area are not those of a clean liquid metal."
+    },
+    {
+      "id": "l6-mcq-033",
+      "topicId": "capacitive-faradaic",
+      "quick": true,
+      "question": "The current measured at an electrode is best described as:",
+      "options": [
+        "Purely faradaic at all times",
+        "The sum of a capacitive (non-faradaic) charging current and a faradaic reaction current",
+        "Purely capacitive at all times",
+        "Independent of the double layer"
+      ],
+      "answer": 1,
+      "explanation": "Changing the potential charges the double layer even when no reaction occurs, and any electron transfer adds a faradaic component. Only the faradaic part corresponds to chemistry."
+    },
+    {
+      "id": "l6-mcq-034",
+      "topicId": "capacitive-faradaic",
+      "quick": true,
+      "question": "During a linear potential sweep, the capacitive current is:",
+      "options": [
+        "Proportional to the square root of the scan rate",
+        "Proportional to the scan rate: i_c = C_dl v",
+        "Independent of the scan rate",
+        "Inversely proportional to the scan rate"
+      ],
+      "answer": 1,
+      "explanation": "Charging a capacitor of capacitance C_dl while the potential changes at rate v requires current C_dl v. This is why faster scans suffer a larger charging background."
+    },
+    {
+      "id": "l6-mcq-035",
+      "topicId": "capacitive-faradaic",
+      "quick": true,
+      "question": "After a potential step, how do the capacitive and faradaic currents compare in time?",
+      "options": [
+        "Both decay as t^-1/2",
+        "The capacitive current decays exponentially with time constant R_s C_dl, while the faradaic current decays more slowly as t^-1/2",
+        "The capacitive current is constant and the faradaic current is zero",
+        "Both are constant"
+      ],
+      "answer": 1,
+      "explanation": "The double layer charges through the cell resistance, so the capacitive current falls as exp(-t/τ) with τ = R_s C_dl. The diffusion-controlled faradaic current dies away only as t^-1/2, so the two can be separated in time."
+    },
+    {
+      "id": "l6-mcq-036",
+      "topicId": "capacitive-faradaic",
+      "question": "In chronocoulometry, a plot of charge against the square root of time gives a straight line whose intercept is:",
+      "options": [
+        "The diffusion coefficient",
+        "The charge used to charge the double layer",
+        "The scan rate",
+        "The transfer coefficient"
+      ],
+      "answer": 1,
+      "explanation": "The intercept at time zero is the capacitive charge stored in the double layer, while the slope reflects the diffusion-controlled faradaic charge. One extrapolation therefore separates the two contributions."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l6-tf-001",
+      "topicId": "interphase",
+      "question": "The interphase is neutral overall, with equal and opposite charges only a few tenths of a nanometre apart.",
+      "answer": true,
+      "explanation": "The electrode charge and the solution charge are equal and opposite, so the region is neutral overall, but they sit only a few tenths of a nanometre apart. That gives fields near 10^9 V/m."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l6-tf-002",
+      "topicId": "helmholtz-model",
+      "question": "The Helmholtz parallel-plate model predicts a differential capacitance that does not change with potential or concentration.",
+      "answer": true,
+      "explanation": "Helmholtz takes the counter-charge as a stiff sheet at a fixed distance, giving C_H = e e0 / d, a constant. Measurements show a capacitance that changes with potential and concentration, which is why the model fails."
+    },
+    {
+      "kind": "numeric",
+      "id": "l6-num-001",
+      "topicId": "diffuse-layer",
+      "question": "The Debye length is about 1 nm in a 0.1 M 1:1 electrolyte. What is it in a 1 mM (10^-3 M) 1:1 electrolyte, in nanometres?",
+      "answer": 10.0,
+      "tolerance": 1,
+      "unit": "nm",
+      "explanation": "The Debye length grows as the concentration falls. The lesson quotes about 1 nm in 0.1 M, 10 nm in 1 mM and 100 nm in 10 uM, a tenfold rise for each hundredfold dilution."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l6-tf-003",
+      "topicId": "diffuse-layer",
+      "question": "The diffuse-layer capacitance has a V-shaped minimum at the point of zero charge.",
+      "answer": true,
+      "explanation": "The diffuse-layer capacitance varies as the hyperbolic cosine of the surface potential, so it is smallest at the point of zero charge and rises on either side, giving a V shape."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l6-tf-004",
+      "topicId": "gouy-chapman-stern",
+      "question": "The Gouy-Chapman theory treats ions as point charges, so its capacitance diverges to infinity at high polarization.",
+      "answer": true,
+      "explanation": "Without a finite ion size, the ions pile up in an arbitrarily thin layer at high polarization and the capacitance runs away. Stern fixed this by introducing a plane of closest approach."
+    },
+    {
+      "kind": "multi",
+      "id": "l6-multi-001",
+      "topicId": "gouy-chapman-stern",
+      "question": "Which statements about the Gouy-Chapman-Stern model are correct? Select all that apply.",
+      "options": [
+        "The compact and diffuse layers act in series",
+        "The compact layer has a fixed capacitance",
+        "It introduces the outer Helmholtz plane",
+        "It still ignores ion size entirely"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The two layers sit in series, 1/C = 1/C_H + 1/C_d; the compact layer has a fixed capacitance C_H; and Stern introduced the outer Helmholtz plane of closest approach. Far from ignoring ion size, that plane is exactly what fixes the point-charge problem."
+    },
+    {
+      "kind": "multi",
+      "id": "l6-multi-002",
+      "topicId": "specific-adsorption",
+      "question": "Which species tend to adsorb specifically and strongly? Select all that apply.",
+      "options": [
+        "Iodide",
+        "Thiocyanate",
+        "Fluoride",
+        "A small, strongly hydrated cation"
+      ],
+      "answers": [
+        0,
+        1
+      ],
+      "explanation": "Specific adsorption is strongest for large, weakly solvated, polarisable anions such as iodide and thiocyanate. Fluoride barely adsorbs at all, and small strongly hydrated ions stay at the outer Helmholtz plane rather than touching the surface."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l6-tf-005",
+      "topicId": "specific-adsorption",
+      "question": "Specific adsorption is strongest for small, strongly solvated cations.",
+      "answer": false,
+      "explanation": "It is the opposite: large, weakly solvated, polarisable anions adsorb most strongly, because they can shed part of their solvent shell and touch the surface. Small strongly solvated ions stay outside."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l6-tf-006",
+      "topicId": "surface-thermodynamics",
+      "question": "The maximum of the electrocapillary curve is the point of zero charge.",
+      "answer": true,
+      "explanation": "The slope of the electrocapillary curve gives the surface charge; at the maximum the slope is zero, so the metal carries no net charge. That is the point of zero charge."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l6-tf-007",
+      "topicId": "adsorption-isotherms",
+      "question": "The Langmuir isotherm assumes no interactions between adsorbed species.",
+      "answer": true,
+      "explanation": "Langmuir assumes a homogeneous surface, a monolayer and no interactions between neighbours, giving theta = beta c / (1 + beta c). The Frumkin isotherm adds interactions, which produce S-shaped or flattened curves."
+    },
+    {
+      "kind": "multi",
+      "id": "l6-multi-003",
+      "topicId": "adsorption-isotherms",
+      "question": "Which isotherm-and-assumption pairs are correct? Select all that apply.",
+      "options": [
+        "Langmuir: no interactions between adsorbed species",
+        "Temkin: a heterogeneous surface or strong interactions",
+        "Frumkin: a coverage-dependent interaction energy",
+        "Langmuir: S-shaped curves from attractive interactions"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Langmuir is the no-interaction monolayer, Temkin handles heterogeneity or strong interactions with a logarithmic coverage, and Frumkin adds a coverage-dependent interaction energy. The S-shaped curve is a Frumkin feature, not a Langmuir one."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l6-tf-008",
+      "topicId": "real-surfaces",
+      "question": "Mercury makes a good model electrode because it is liquid, so it has no grain boundaries and can be renewed continuously.",
+      "answer": true,
+      "explanation": "Mercury also has a large hydrogen overpotential, which widens its usable potential window. Its double-layer capacitance passes through a minimum near 18 uF/cm2 at the point of zero charge, and its electrocapillary curves are the benchmark data."
+    },
+    {
+      "kind": "numeric",
+      "id": "l6-num-002",
+      "topicId": "capacitive-faradaic",
+      "question": "The capacitive current is i_c = C_dl dE/dt. If C_dl = 20 uF/cm2 and the potential is swept at dE/dt = 0.10 V/s, what is i_c in microamperes per square centimetre?",
+      "answer": 2.0,
+      "tolerance": 0.1,
+      "unit": "uA/cm2",
+      "explanation": "i_c = C_dl dE/dt = 20 uF/cm2 x 0.10 V/s = 2.0 uA/cm2. This charging current scales with the scan rate, while the faradaic current from a reaction does not grow as fast."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l6-tf-009",
+      "topicId": "capacitive-faradaic",
+      "question": "After a potential step the capacitive current decays exponentially, while the faradaic current decays more slowly, as t^-1/2.",
+      "answer": true,
+      "explanation": "The double layer charges with the RC time constant of the cell, so the capacitive current falls exponentially. A diffusion-controlled faradaic current falls only as t^-1/2, so it dominates at longer times."
+    }
+  ]
+}

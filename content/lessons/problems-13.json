@@ -1,0 +1,243 @@
+{
+  "slug": "problems-13",
+  "label": "Problem set 13",
+  "title": "Problem set 13: Double-layer structure and adsorption",
+  "summary": "Practice with the double layer and adsorption: Debye length, compact-layer capacitance, adsorption isotherms, the point of zero charge and underpotential deposition.",
+  "source": "Bard & Faulkner ch.13",
+  "order": 113,
+  "minutes": 28,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "The double layer has a compact (Helmholtz) part and a diffuse (Gouy-Chapman) part; the Stern model combines them. The diffuse-layer thickness is the Debye length, about 0.304/sqrt(I) nm for a 1:1 electrolyte in water at 25 C."
+    },
+    {
+      "kind": "para",
+      "text": "Adsorption is described by isotherms: Langmuir for non-interacting sites, Frumkin when interactions matter. The compact-layer capacitance is C = eps0 epsr/d."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps13-dl",
+      "tone": "amber",
+      "title": "Hint sheet: double-layer relations",
+      "summary": "Practice with the double layer and adsorption: Debye length, compact-layer capacitance, adsorption isotherms, the point of zero charge and underpotential deposition.",
+      "minutes": 23,
+      "keyPoints": [
+        "Debye length = 0.304/sqrt(I) nm (1:1, water, 25 C)",
+        "Compact capacitance C = eps0 epsr/d",
+        "Langmuir: theta = KC/(1+KC)",
+        "sigma = C E near the pzc"
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The double layer has a compact (Helmholtz) part and a diffuse (Gouy-Chapman) part; the Stern model combines them. The diffuse-layer thickness is the Debye length, about 0.304/sqrt(I) nm for a 1:1 electrolyte in water at 25 C."
+        },
+        {
+          "kind": "para",
+          "text": "Adsorption is described by isotherms: Langmuir for non-interacting sites, Frumkin when interactions matter. The compact-layer capacitance is C = eps0 epsr/d."
+        },
+        {
+          "kind": "worked",
+          "title": "Debye length at low ionic strength",
+          "given": "I = 1.0e-3 mol/L, 1:1 electrolyte, 25 C",
+          "steps": [
+            "Use Debye length (nm) = 0.304/sqrt(I).",
+            "sqrt(1.0e-3) = 0.0316.",
+            "Debye length = 0.304/0.0316 = 9.6 nm."
+          ],
+          "result": "Debye length = 9.6 nm"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "numeric",
+      "id": "ps13-num-001",
+      "topicId": "ps13-dl",
+      "question": "At 25 C in water the Debye length is approximately 0.304/sqrt(I) nm for a 1:1 electrolyte, with I in mol/L. Calculate the Debye length in nm for I = 1.0e-3 mol/L.",
+      "answer": 9.6,
+      "tolerance": 1.0,
+      "unit": "nm",
+      "explanation": "sqrt(1.0e-3)=0.0316; Debye length = 0.304/0.0316 = 9.6 nm."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps13-num-002",
+      "topicId": "ps13-dl",
+      "question": "Using the same relation, calculate the Debye length in nm for I = 0.10 mol/L.",
+      "answer": 0.96,
+      "tolerance": 0.1,
+      "unit": "nm",
+      "explanation": "sqrt(0.10)=0.316; Debye length = 0.304/0.316 = 0.96 nm. Higher ionic strength compresses the diffuse layer."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps13-num-003",
+      "topicId": "ps13-dl",
+      "question": "For a Langmuir isotherm the coverage is theta = KC/(1 + KC). Calculate theta for K = 1.0e4 M-1 and C = 1.0e-4 M.",
+      "answer": 0.5,
+      "tolerance": 0.05,
+      "explanation": "KC = 1.0e4 x 1.0e-4 = 1.0; theta = 1/(1 + 1) = 0.5, i.e. half a monolayer."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps13-num-004",
+      "topicId": "ps13-dl",
+      "question": "The compact-layer capacitance is C = eps0 epsr/d. Calculate C in uF/cm2 for epsr = 6, d = 0.30 nm (3.0e-10 m), and eps0 = 8.854e-12 F/m. (1 F/m2 = 100 uF/cm2.)",
+      "answer": 17.7,
+      "tolerance": 2,
+      "unit": "uF/cm2",
+      "explanation": "C = 8.854e-12 x 6/3.0e-10 = 0.177 F/m2 = 17.7 uF/cm2."
+    },
+    {
+      "id": "ps13-mcq-001",
+      "topicId": "ps13-dl",
+      "quick": true,
+      "question": "In the Gouy-Chapman model the electrode is surrounded by:",
+      "options": [
+        "A diffuse layer of mobile ions whose concentration decays into the bulk",
+        "A rigid layer of a single ion thickness only",
+        "No ions at all",
+        "A metal film"
+      ],
+      "answer": 0,
+      "explanation": "Gouy-Chapman describes a diffuse layer in which the counter-ion excess decays with distance into the bulk solution, in contrast to the rigid Helmholtz picture."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps13-tf-001",
+      "topicId": "ps13-dl",
+      "quick": true,
+      "question": "The Debye length (thickness of the diffuse layer) decreases as the ionic strength increases.",
+      "answer": true,
+      "explanation": "More ions screen the electrode charge more effectively, so the diffuse layer is compressed and the Debye length falls as 1/sqrt(I)."
+    },
+    {
+      "id": "ps13-mcq-002",
+      "topicId": "ps13-dl",
+      "quick": true,
+      "question": "The Stern model of the double layer combines:",
+      "options": [
+        "A compact Helmholtz layer and a diffuse Gouy-Chapman layer",
+        "Two diffuse layers",
+        "A single ion and a photon",
+        "An electron gas"
+      ],
+      "answer": 0,
+      "explanation": "Stern combined the rigid Helmholtz layer of specifically adsorbed or oriented ions near the surface with the diffuse Gouy-Chapman region beyond it."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps13-tf-002",
+      "topicId": "ps13-dl",
+      "question": "The Langmuir isotherm assumes that adsorbed species do not interact with one another.",
+      "answer": true,
+      "explanation": "Langmuir adsorption assumes equivalent, independent sites with no lateral interactions; the Frumkin isotherm adds an interaction term."
+    },
+    {
+      "id": "ps13-mcq-003",
+      "topicId": "ps13-dl",
+      "quick": true,
+      "question": "Underpotential deposition (UPD) refers to:",
+      "options": [
+        "Deposition of a metal monolayer at a potential positive of its bulk equilibrium potential",
+        "Deposition at very negative potentials",
+        "Gas evolution",
+        "Dissolution of the electrode"
+      ],
+      "answer": 0,
+      "explanation": "UPD is the formation of an adsorbed metal monolayer at a potential less negative than bulk deposition, because the adsorbate binds more strongly to the substrate than to itself."
+    },
+    {
+      "kind": "multi",
+      "id": "ps13-multi-001",
+      "topicId": "ps13-dl",
+      "question": "Which factors affect the structure of the electrical double layer? Select all that apply.",
+      "options": [
+        "Ionic strength of the solution",
+        "The charge on the electrode",
+        "Specific adsorption of ions",
+        "The colour of the solvent"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Ionic strength sets the diffuse-layer thickness, the electrode charge sets the field, and specific adsorption modifies the compact layer. Solvent colour is irrelevant to double-layer structure."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps13-num-005",
+      "topicId": "ps13-dl",
+      "question": "The electrode potential at which the surface charge is zero is called the potential of zero charge. If the capacitance is 20 uF/cm2 near that point and the potential is 0.20 V from the pzc, what is the surface charge in uC/cm2? (sigma = C x E.)",
+      "answer": 4.0,
+      "tolerance": 0.4,
+      "unit": "uC/cm2",
+      "explanation": "sigma = 20 uF/cm2 x 0.20 V = 4.0 uC/cm2."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps13-num-006",
+      "topicId": "ps13-dl",
+      "question": "Using Debye length = 0.304/sqrt(I) nm for a 1:1 electrolyte in water at 25 C, calculate the Debye length in nm for I = 0.010 mol/L.",
+      "answer": 3.04,
+      "tolerance": 0.3,
+      "unit": "nm",
+      "explanation": "sqrt(0.010) = 0.100; Debye length = 0.304/0.100 = 3.04 nm."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps13-num-007",
+      "topicId": "ps13-dl",
+      "question": "For a Langmuir isotherm theta = KC/(1 + KC), calculate theta when KC = 9.",
+      "answer": 0.9,
+      "tolerance": 0.05,
+      "explanation": "theta = 9/(1 + 9) = 0.9, i.e. 90 percent of the sites are occupied."
+    },
+    {
+      "id": "ps13-mcq-004",
+      "topicId": "ps13-dl",
+      "quick": true,
+      "question": "The potential of zero charge (pzc) is the potential at which:",
+      "options": [
+        "The electrode surface has no net excess charge",
+        "The current is infinite",
+        "The diffuse layer disappears entirely",
+        "The electrode melts"
+      ],
+      "answer": 0,
+      "explanation": "At the pzc the metal carries no net excess charge, the surface tension of an electrocapillary curve is maximal, and the double-layer structure is at its simplest."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps13-tf-003",
+      "topicId": "ps13-dl",
+      "question": "Specific adsorption of an ion generally shifts the potential of zero charge.",
+      "answer": true,
+      "explanation": "An ion that adsorbs specifically on the electrode changes the interfacial charge balance and therefore shifts the pzc, often strongly for iodide and similar ions."
+    },
+    {
+      "kind": "multi",
+      "id": "ps13-multi-002",
+      "topicId": "ps13-dl",
+      "question": "Which statements about the double layer are correct? Select all that apply.",
+      "options": [
+        "The compact layer forms within a few angstroms of the surface",
+        "The diffuse layer is several Debye lengths thick",
+        "Raising the ionic strength thins the diffuse layer",
+        "The double layer stores charge like a capacitor"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four are correct: a compact inner layer, a diffuse outer region, compression of the diffuse layer by added electrolyte, and capacitor-like charge storage."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import SectionView from "@/components/views/SectionView";
-import { plainText } from "@/components/Blocks";
+import { plainText } from "@/components/kit";
 import { allLessons } from "@/content";
 
 type Params = { slug: string; section: string };

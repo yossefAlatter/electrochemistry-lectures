@@ -1,125 +1,110 @@
 # Adding material
 
-Every lesson is a set of **short section pages**, and each section ends with
-its own three-question check. That structure is the whole design: no page is
-long enough to feel like a wall, and a learner can stop after any section.
+A lesson is a **JSON file**. You write one file, `content/lessons/<slug>.json`,
+and the site picks it up: the directory is the list of lessons, so there is
+nothing to register anywhere else. The components in `components/kit` and the
+templates in `components/templates` decide how it looks, so an author never
+lays out a page - they fill in data and the fixed templates place it.
 
 The nesting is:
 
 ```
 Subject   Physical Chemistry          <- a subject area; others are expected
   Course  Electrochemistry           <- a group of lessons
-    Lesson  lesson-1                <- has its own question bank
-      Section  nernst                <- ONE PAGE, with Next / Previous
+    Lesson  lesson-8.json            <- has its own question bank
+      Section  cottrell              <- ONE PAGE, with Next / Previous
 ```
 
-Adding a section, a lesson, a course or a subject is purely additive. Nothing
-that already exists has to change.
-
-## Add a section to an existing lesson
-
-Sections are the common case, and the change is one file edit: append an
-object to that lesson's `sections` array.
-
-```ts
-{
-  id: "capacitors",              // URL segment, unique inside the lesson
-  title: "Double-layer capacitance",
-  tone: "indigo",                // one of the nine hues; see README
-  summary: "One-line card text. Say what the section answers.",
-  minutes: 7,                    // shown on the card and the section header
-  keyPoints: ["Worth memorising; also drives the quiz review."],
-  blocks: [ /* see below */ ],
-  cta: {                         // optional panel at the very bottom
-    title: "Next up",
-    body: "Why it matters.",
-    href: "/lessons/lesson-2",
-    linkLabel: "Go to Lesson 2",
-  },
-}
-```
-
-That is all. The route `/lessons/lesson-1/capacitors`, the card on the
-contents page, the sidebar entry and the Next/Previous buttons are generated
-from `sections`, so there is nothing else to register.
+A lesson is a set of **short section pages**, and each section closes with its
+own quick check. That structure is the whole design: no page is long enough to
+feel like a wall, and a learner can stop after any section.
 
 ## Add a lesson
 
-Two files, then one line in the registry.
+One file: `content/lessons/lesson-9.json`.
 
-### 1. `content/lesson-2.ts`
-
-```ts
-import type { Lesson } from "./types";
-import { lesson2Mcq } from "./lesson-2.mcq";
-
-export const lesson2: Lesson = {
-  slug: "lesson-2",              // becomes /lessons/lesson-2
-  label: "Lesson 2",             // sidebar text
-  title: "Electroanalytical methods",
-  summary: "One or two sentences, shown on the home page card.",
-  order: 2,                       // sidebar ordering, lowest first
-  minutes: 60,                    // fallback if sections carry no minutes
-  intro: [ { kind: "para", text: "Shown on the lesson contents page." } ],
-  sections: [ /* as above */ ],
-  mcq: lesson2Mcq,
-  constants: [ { symbol: "F", name: "Faraday", value: "96 485 C mol⁻¹" } ],
-};
+```json
+{
+  "slug": "lesson-9",              // becomes /lessons/lesson-9
+  "label": "Lesson 9",             // sidebar text
+  "title": "Electroanalytical methods",
+  "summary": "One or two sentences, shown on the home page card.",
+  "source": "Follows Bard & Faulkner ch. 12",   // optional credit line
+  "order": 9,                      // sidebar ordering, lowest first
+  "minutes": 60,                   // fallback if sections carry no minutes
+  "intro": [
+    { "kind": "para", "text": "Shown on the lesson contents page." }
+  ],
+  "constants": [
+    { "symbol": "F", "name": "Faraday", "value": "96 485 C mol⁻¹" }
+  ],
+  "sections": [ /* see below */ ],
+  "questions": [ /* see below */ ]
+}
 ```
 
-### 2. `content/lesson-2.mcq.ts`
+Save the file. The route `/lessons/lesson-9`, its cards, the sidebar entry and
+the quiz all appear on the next build. `order` positions it in the sidebar; it
+must be unique enough to land where you intend.
 
-```ts
-import type { Mcq } from "./types";
+## Add a section to a lesson
 
-export const lesson2Mcq: Mcq[] = [
-  {
-    id: "l2-mcq-001",             // unique across the whole site
-    topicId: "capacitors",        // must match a section id
-    quick: true,                  // optional: include in that section's check
-    question: "…",
-    options: ["…", "…", "…", "…"],  // exactly four
-    answer: 2,                    // index of the correct option
-    explanation: "Why that is right, and why the nearest wrong answer is not.",
-  },
-];
+Append an object to that lesson's `sections` array:
+
+```json
+{
+  "id": "capacitors",              // URL segment, unique inside the lesson
+  "tone": "indigo",                // one of the nine hues; see Colours
+  "title": "Double-layer capacitance",
+  "summary": "One-line card text. Say what the section answers.",
+  "minutes": 7,                    // shown on the card and the section header
+  "keyPoints": ["Worth memorising; also drives the quiz review."],
+  "blocks": [ /* see below */ ],
+  "cta": {                         // optional panel at the very bottom
+    "title": "Next up",
+    "body": "Why it matters.",
+    "href": "/lessons/lesson-9",
+    "linkLabel": "Go to Lesson 9"
+  }
+}
 ```
 
-Mark three questions per section with `quick: true`. Those become the inline
-**Quick check** at the bottom of the section page; everything else stays in
-the full bank. `content/index.ts` falls back to the first three of a section's
-questions if none are flagged, so a section is never left without a check.
+The route `/lessons/lesson-9/capacitors`, the card on the contents page, the
+sidebar entry and the Next/Previous buttons are generated from `sections`, so
+there is nothing else to add.
 
-### 3. Register it: `content/index.ts`
+## Add a question
 
-```ts
-import { lesson2 } from "./lesson-2";   // add
+Questions live in the same file, in the `questions` array. A question's
+`topicId` must match the `id` of a section in the **same lesson**, or the build
+fails.
 
-// then append it to the right course, inside the right subject
-courses: [
-  {
-    id: "electrochemistry",
-    title: "Electrochemistry",
-    description: "…",
-    lessons: [
-      lesson1,
-      lesson2,          // add
-    ],
-  },
-],
+```json
+{
+  "id": "l9-mcq-001",             // unique across the whole site
+  "topicId": "capacitors",        // must match a section id
+  "quick": true,                  // optional: include in that section's check
+  "question": "…",
+  "options": ["…", "…", "…", "…"],  // exactly four
+  "answer": 2,                    // index of the correct option (0-3)
+  "explanation": "Why that is right, and why the nearest wrong answer is not."
+}
 ```
 
-Give the lesson an `order` lower than any it should follow; the sidebar sorts
-on that.
+Mark three questions per section with `"quick": true`. Those become the inline
+**Quick check** at the bottom of the section page; everything else stays in the
+full bank. If no question is flagged for a section, the first three of its
+questions are used, so a section is never left without a check.
 
 ## Add a course or a subject
 
-A **course** is a group of lessons in the sidebar. A **subject** is a group
-of courses. Both are plain objects in `content/index.ts`:
+A **course** is a group of lessons in the sidebar; a **subject** is a group of
+courses. Both are still plain objects in `content/index.ts`, because grouping
+is a site decision rather than lesson content:
 
 ```ts
 {
-  id: "spectroscopy",
+  slug: "spectroscopy",
   title: "Spectroscopy",
   tagline: "Postgraduate · from first principles to research level",
   description: "Shown on the subject block of the home page.",
@@ -127,20 +112,35 @@ of courses. Both are plain objects in `content/index.ts`:
 }
 ```
 
-When a second subject appears the sidebar starts printing subject headings on
-its own - no change to `SiteShell` is needed.
+Lessons inside a course are **discovered, not listed**: the `lessons` field is
+filled by `loadAllLessons()`, which reads `content/lessons/*.json` and merges
+the remaining TypeScript lessons, sorted by `order`. Do not list lessons by
+hand.
 
 ## What you can write in `blocks`
+
+Blocks are the body of a section, rendered in order by the section template.
 
 | `kind` | Purpose | Fields |
 | --- | --- | --- |
 | `para` | body text | `text` |
+| `heading` | in-page sub-heading, wired into the contents rail | `text`, `level?` (2 or 3) |
 | `formula` | display maths (KaTeX) | `tex`, `caption?` |
 | `figure` | a diagram from `public/figures` | `src`, `caption`, `alt` |
 | `table` | comparison table | `head`, `rows`, `widths?` |
-| `callout` | highlighted box | `variant`: `key`\|`warn`\|`term`, `title`, `body` |
+| `callout` | highlighted box | `variant`, `title`, `body` |
 | `list` | bullets or numbers | `items`, `ordered?` |
 | `worked` | worked calculation | `title`, `given`, `steps`, `result` |
+
+Callout `variant` is one of:
+
+| variant | Use it for |
+| --- | --- |
+| `key` | a rule worth remembering |
+| `warn` | the mistake this section invites |
+| `term` | the definition of a specific term |
+| `note` | an aside that does not fit the flow |
+| `example` | a concrete instance |
 
 ### How to structure a section
 
@@ -160,8 +160,8 @@ skeleton. Keeping it means a reader always knows where they are.
 6. **Bridge to the next.** Close with what the reader can now do and what
    comes next, so the lesson reads as one argument.
 
-Use `variant: "term"` for definitions of a specific term, `key` for rules worth
-remembering, `warn` for mistakes.
+Use `heading` when a section is long enough to need signposts; each heading
+appears in the in-page contents rail on wide screens.
 
 ### Text formatting
 
@@ -174,34 +174,36 @@ remembering, `warn` for mistakes.
 ### Maths
 
 `formula.tex` is LaTeX for KaTeX and is rendered on the server, so nothing
-maths-related is shipped to the browser. Display maths scrolls horizontally
-on a narrow screen rather than overflowing the page.
+maths-related is shipped to the browser. Display maths scrolls horizontally on
+a narrow screen rather than overflowing the page.
 
-Inside a `worked` block, write each step in LaTeX and it is rendered as a
-displayed equation:
+Inside a `worked` block, write each step in LaTeX; each is rendered as a
+displayed equation. In JSON, a backslash is already a literal backslash, so no
+extra escaping is needed:
 
-```ts
+```json
 {
-  kind: "worked",
-  title: "Levich current at 900 rpm",
-  given: "D = 7.0e-6 cm²/s, C* = 1.0e-5 mol/cm³, ω = 94.2 rad/s",
-  steps: [
-    String.raw`D^{2/3} = (7.0\times10^{-6})^{2/3} = 3.65\times10^{-4}`,
-    String.raw`i_L = 0.620\,nF\,D^{2/3}\,\omega^{1/2}\,C^{*}`,
+  "kind": "worked",
+  "title": "Levich current at 900 rpm",
+  "given": "D = 7.0e-6 cm²/s, C* = 1.0e-5 mol/cm³, ω = 94.2 rad/s",
+  "steps": [
+    "D^{2/3} = (7.0\\times10^{-6})^{2/3} = 3.65\\times10^{-4}",
+    "i_L = 0.620\\,nF\\,D^{2/3}\\,\\omega^{1/2}\\,C^{*}"
   ],
-  result: "9.2 mA cm⁻².",
+  "result": "9.2 mA cm⁻²."
 }
 ```
 
-Use `String.raw` so backslashes survive JavaScript. A malformed formula is
-rendered in red by KaTeX rather than crashing the page.
+Use `\\` inside a JSON string only where LaTeX itself needs a literal
+backslash that begins a command (as above); a malformed formula is rendered in
+red by KaTeX rather than crashing the page.
 
 ### Figures
 
 Drop a PNG into `public/figures/` and reference it by file name:
 
-```ts
-{ kind: "figure", src: "passivation.png", alt: "…", caption: "…" }
+```json
+{ "kind": "figure", "src": "passivation.png", "alt": "…", "caption": "…" }
 ```
 
 Always write a real `alt`: it is what a screen reader announces.
@@ -222,8 +224,8 @@ and any figure referenced by content that does not exist on disk.
 `check_legibility.py` then confirms the labels survive being scaled into a
 phone-width column, which is the failure `check_figures.py` cannot see: a
 figure can be perfectly laid out and still arrive with 5 px text. If you add a
-figure, write its labels at 13 pt or larger and let the checker
-confirm the canvas stays at 1000 px.
+figure, write its labels at 13 pt or larger and let the checker confirm the
+canvas stays at 1000 px.
 
 ## Colours
 
@@ -241,13 +243,13 @@ tokens; both palettes then update in light and dark mode at once.
 ## Checklist before you commit
 
 ```bash
-npm run build
-npm run lint
-../electricial-chemistry/.venv/bin/python tools/check_figures.py
+npm run check    # eslint + tsc
+npm run build    # also validates every lesson file
 ```
 
-The build fails if a question's `topicId` matches no section, if an option
-list is not length four, or if the types do not line up.
+The build fails, naming the file and the field, if a lesson file is malformed:
+a question's `topicId` matches no section, an option list is not length four,
+a `tone` is unknown, a duplicate section `id`, and so on.
 
 ## Quiz behaviour you get for free
 
@@ -255,4 +257,4 @@ list is not length four, or if the types do not line up.
 - one question per screen, large tap targets, no horizontal scrolling
 - the explanation appears the moment you commit, including for correct answers
 - a results screen with the score and a review list of everything you got wrong
-- per-section entry points: `/lessons/lesson-2/quiz?topic=capacitors`
+- per-section entry points: `/lessons/lesson-9/quiz?topic=capacitors`

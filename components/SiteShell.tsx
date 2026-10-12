@@ -3,13 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import {
-  getSubjects,
-  homeHref,
-  lessonHref,
-  quizHref,
-  sectionHref,
-} from "@/content/registry";
+import { homeHref, lessonHref, quizHref, sectionHref } from "@/lib/links";
+import type { NavSubject } from "@/lib/nav";
 import ThemeToggle from "@/components/ThemeToggle";
 import { t } from "@/lib/i18n";
 
@@ -24,7 +19,14 @@ import { t } from "@/lib/i18n";
  * Side placement follows the text direction: the drawer hangs off the inline
  * start edge, which is the left in this LTR layout.
  */
-export function SiteShell({ children }: { children: React.ReactNode }) {
+export function SiteShell({
+  nav,
+  children,
+}: {
+  /** The slim navigation tree, derived on the server. */
+  nav: NavSubject[];
+  children: React.ReactNode;
+}) {
   const [open, setOpen] = useState(false);
   const d = t();
 
@@ -98,7 +100,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           open ? "translate-x-0 shadow-2xl" : "-translate-x-full",
         ].join(" ")}
       >
-        <SidebarBody onNavigate={() => setOpen(false)} />
+        <SidebarBody nav={nav} onNavigate={() => setOpen(false)} />
       </nav>
 
       {/* ---------- page ---------- */}
@@ -114,9 +116,15 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   );
 }
 
-function SidebarBody({ onNavigate }: { onNavigate: () => void }) {
+function SidebarBody({
+  nav,
+  onNavigate,
+}: {
+  nav: NavSubject[];
+  onNavigate: () => void;
+}) {
   const pathname = usePathname();
-  const subjects = getSubjects();
+  const subjects = nav;
   const d = t();
 
   return (

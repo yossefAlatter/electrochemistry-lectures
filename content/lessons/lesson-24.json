@@ -1,0 +1,335 @@
+{
+  "slug": "lesson-24",
+  "label": "Lesson 24",
+  "title": "Unusual electrochemical phenomena",
+  "summary": "Electrodes do not always settle at a steady state. This lesson collects phenomena that fall outside the simple picture: oscillations and bistability, electrochemical noise, crystal growth and morphology, electrochromism and electrocapillarity, and the coupling of electrochemistry to light, magnetism and mechanics.",
+  "order": 24,
+  "minutes": 38,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Most of this course assumes an electrode settles down: a steady current follows from a steady potential. Real electrodes sometimes refuse. They can oscillate, flip between two states, or show a flickering noise that hides information about single events."
+    },
+    {
+      "kind": "para",
+      "text": "This lesson gathers such phenomena. They are not curiosities: nonlinear behaviour underlies corrosion and passivation, noise is a sensitive probe, and the coupling of electrochemistry to light, magnetism and mechanics opens whole research fields."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The one-sentence summary",
+      "body": "When an electrode's feedback loops are strong, it can oscillate, switch and flicker, and these effects connect electrochemistry to nonlinear dynamics and to other branches of physics."
+    }
+  ],
+  "sections": [
+    {
+      "id": "oscillations",
+      "tone": "azure",
+      "title": "Oscillations and bistability",
+      "minutes": 8,
+      "summary": "Some electrode reactions oscillate or switch between two steady states. The cause is feedback: a reaction produces a species that changes the rate of the reaction itself.",
+      "keyPoints": [
+        "Electrochemical oscillations are periodic changes in current or potential at constant external conditions.",
+        "They need feedback - positive feedback to sustain, and a delay or a limiting step to shape the cycle.",
+        "Bistability means two stable states at the same external setting, with switching between them.",
+        "The metal dissolves, passivates, and reactivates in cycles in a classic oscillating corrosion system."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Hold the current constant and the potential of an electrode may rise and fall in a regular rhythm. Hold the potential constant and the current may do the same. These oscillations require feedback: a species produced by the reaction changes the reaction's own rate, and the loop closes to sustain an oscillation."
+        },
+        {
+          "kind": "para",
+          "text": "A textbook example is the dissolution and passivation of a metal. The metal dissolves, raising the local concentration of ions until a passive film or a salt layer forms; the film then slows the dissolution until it dissolves away, and the cycle begins again. Positive feedback drives the oscillation, and the film's formation provides the delay."
+        },
+        {
+          "kind": "para",
+          "text": "Bistability is the simpler cousin. At a single value of the applied potential, the electrode can sit at either of two stable currents, and a small disturbance can flip it from one to the other. The current-voltage curve is folded, so the same potential corresponds to two rates."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "Why nonlinear dynamics appears here",
+          "body": "The reaction rate depends on the surface, and the surface depends on the rate. That mutual dependence is a feedback loop, and feedback loops are exactly what produce oscillations and multistability in any nonlinear system."
+        }
+      ]
+    },
+    {
+      "id": "noise",
+      "tone": "indigo",
+      "title": "Electrochemical noise",
+      "minutes": 8,
+      "summary": "A current that should be steady shows tiny fluctuations. The noise is not only a nuisance: its statistical character reveals events as small as a single electron transfer or a single pit forming.",
+      "keyPoints": [
+        "Electrochemical noise is the fluctuation of current or potential about its mean.",
+        "Shot noise reflects the discreteness of individual charge-transfer events.",
+        "Noise analysis can detect pitting corrosion before it is visible.",
+        "Sometimes the noise is the signal - a way to study rare, single events."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A current of one microampere is a vast number of electrons per second, so it looks perfectly steady. Look closely, and it flickers. The flicker carries information, because the way the current fluctuates depends on how the charge is delivered: in a smooth stream, or in occasional large bursts."
+        },
+        {
+          "kind": "para",
+          "text": "Each electron-transfer event is discrete, so even a simple reaction contributes shot noise proportional to the square root of the current. When the fluctuations are much larger than that, something more interesting is happening - a surface forming a pit, an adsorbate rearranging, or a film breaking down."
+        },
+        {
+          "kind": "para",
+          "text": "This makes noise a practical tool. Monitoring the fluctuations of a corroding metal can reveal the onset of localised pitting attack before any pit is visible, which is a real advantage in industry. When the goal is to study rare events, the strategy is inverted: the noise *is* the signal."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "From nuisance to signal",
+          "body": "Early experimenters worked hard to remove noise. Modern practitioners often deliberately measure it, because its statistics encode the mechanism of the underlying events."
+        }
+      ]
+    },
+    {
+      "id": "electrocrystallization",
+      "tone": "violet",
+      "title": "Electrocrystallisation and morphology",
+      "minutes": 8,
+      "summary": "Metal deposition begins with nucleation and proceeds by growth, and the competition between the two controls the film's grain size and shape. The same principles explain both fine plating and battery-killing dendrites.",
+      "keyPoints": [
+        "Deposition passes through nucleation, then growth of the nuclei.",
+        "A high overpotential favours nucleation, giving many small grains and a smooth film.",
+        "Transport limitation favours growth of tips, giving dendrites and powders.",
+        "The final morphology decides the coating's strength, appearance and corrosion resistance."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "When metal is deposited from solution it does not appear uniformly. New atoms first gather into small clusters, and only those above a critical size survive as nuclei. The number of nuclei, and how fast each grows, together decide the texture of the film."
+        },
+        {
+          "kind": "para",
+          "text": "A high overpotential makes nucleation easy, so many nuclei form and each stays small, giving a fine-grained, smooth deposit. A low overpotential instead lets a few nuclei grow large, giving a coarse film or isolated crystals. This is the same overpotential-morphology rule met in the surface-layers lesson, now seen as a competition."
+        },
+        {
+          "kind": "para",
+          "text": "Transport changes the outcome. When deposition is limited by how fast ions arrive, any bump on the surface sticks out into fresher solution and grows faster, so bumps become tips and tips become dendrites. This is desirable for metal powders and disastrous in a battery, where a dendrite can grow across the cell and short it."
+        },
+        {
+          "kind": "callout",
+          "variant": "example",
+          "title": "The smooth-plating recipe",
+          "body": "Industrial plating baths are tuned to deposit at a high overpotential with good agitation, so that nucleation dominates, growth is even, and the film comes out bright and smooth rather than rough or dendritic."
+        }
+      ]
+    },
+    {
+      "id": "chromism-and-capillarity",
+      "tone": "rose",
+      "title": "Electrochromism and electrocapillarity",
+      "minutes": 8,
+      "summary": "Changing an electrode's potential can change its colour (electrochromism) and its surface tension (electrocapillarity). Both come from the same underlying redistribution of charge and ions at the interface.",
+      "keyPoints": [
+        "Electrochromism is a reversible colour change driven by the electrode potential.",
+        "It underlies smart windows, mirrors and displays.",
+        "Electrocapillarity is the change of surface tension with potential.",
+        "Lippmann's equation links the surface-tension curve to the surface charge and capacitance."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Some materials change colour when their oxidation state changes, and because an electrode controls oxidation state through potential, it can control colour. This is electrochromism, already met among the conducting polymers. It is put to work in smart windows, self-dimming mirrors and low-power displays, which need energy only when they switch."
+        },
+        {
+          "kind": "para",
+          "text": "The second effect is older. The surface tension of a metal in contact with a solution depends on the electrode potential, because changing the potential changes how much charge and how many ions crowd the interface. This is electrocapillarity, and it explains why a mercury surface changes its shape as its potential is changed."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\left(\\frac{\\partial \\gamma}{\\partial E}\\right) = -\\sigma_M",
+          "caption": "Lippmann's equation: the slope of the electrocapillary curve is minus the surface charge"
+        },
+        {
+          "kind": "para",
+          "text": "Lippmann's equation ties the two together. The slope of the surface-tension-versus-potential curve gives the surface charge, and its maximum, where the slope is zero, is the point of zero charge. From the curvature, the differential capacitance follows - an early and elegant route to the double layer."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "One interface, many faces",
+          "body": "Electrochromism, electrocapillarity, adsorption and capacitance all spring from the same interface. Change the charge on the electrode and the colour, the tension, the ions and the capacitance all respond together."
+        }
+      ]
+    },
+    {
+      "id": "coupled-effects",
+      "tone": "coral",
+      "title": "Coupled effects: light, magnetism and mechanics",
+      "minutes": 8,
+      "summary": "Electrochemistry couples to other branches of physics. Light generates charge carriers, a magnetic field shifts the rate, and mechanical stress or a bend can change a potential.",
+      "keyPoints": [
+        "Photoelectrochemistry uses light to create charge carriers at a semiconductor electrode.",
+        "Magnetoelectrochemistry uses a magnetic field to change transport and reaction rates.",
+        "Electrochemomechanics couples electrode potential to stress, bending and strain.",
+        "The coupling works both ways: mechanical force can generate a potential."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "In photoelectrochemistry a semiconductor electrode absorbs light and the resulting electrons and holes drive a reaction. This is the physics behind a solar cell and behind the dream of splitting water with sunlight alone. Light in, chemistry out."
+        },
+        {
+          "kind": "para",
+          "text": "A magnetic field can influence an electrochemical reaction too. It acts on the motion of ions and on the magnetic properties of intermediates, shifting transport and sometimes the rate itself. Magnetoelectrochemistry studies these subtle couplings."
+        },
+        {
+          "kind": "para",
+          "text": "Mechanics also joins in. Depositing or removing atoms at an electrode changes its volume, and if the electrode is clamped or is a thin film, that change becomes stress. The reverse holds as well: bending or squeezing an electrode can shift its potential, which is the seed of flexible and wearable devices that sense a touch or a movement."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "The pattern behind the couplings",
+          "body": "In each case the electrode energy depends on some external field - light, a magnetic field, a stress. Change the field and you change the potential, and the reverse is also true. The same thermodynamic logic that linked potential to composition earlier now links it to other variables."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "truefalse",
+      "id": "l24-tf-001",
+      "topicId": "oscillations",
+      "quick": true,
+      "question": "Electrochemical oscillations require feedback, in which a species produced by the reaction changes the reaction's own rate.",
+      "answer": true,
+      "explanation": "Without a feedback loop the system settles to a steady state. Feedback plus a delay or limiting step produces the periodic behaviour."
+    },
+    {
+      "id": "l24-mcq-001",
+      "topicId": "oscillations",
+      "quick": true,
+      "question": "Bistability of an electrode means:",
+      "options": [
+        "The current is always zero",
+        "Two stable states exist at the same external setting, with switching between them",
+        "The temperature is constant",
+        "The electrode dissolves once"
+      ],
+      "answer": 1,
+      "explanation": "At a single applied potential the electrode can sit at either of two stable currents, and a small disturbance flips it between them. This folds the current-voltage curve."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l24-tf-002",
+      "topicId": "oscillations",
+      "question": "The dissolution and passivation of a metal can produce regular oscillations.",
+      "answer": true,
+      "explanation": "The metal dissolves, a film forms and slows it, the film dissolves away, and the cycle repeats. The film provides the delay that turns feedback into an oscillation."
+    },
+    {
+      "id": "l24-mcq-002",
+      "topicId": "noise",
+      "quick": true,
+      "question": "The shot noise of an electrochemical current arises from:",
+      "options": [
+        "Temperature changes",
+        "The discreteness of individual charge-transfer events",
+        "The colour of the electrode",
+        "The reference electrode"
+      ],
+      "answer": 1,
+      "explanation": "Charge arrives in discrete events, so even a simple reaction shows fluctuations proportional to the square root of the current. Larger-than-shot noise signals something more interesting, such as pitting."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l24-tf-003",
+      "topicId": "noise",
+      "question": "Monitoring electrochemical noise can reveal the onset of pitting corrosion before it is visible.",
+      "answer": true,
+      "explanation": "The statistics of the fluctuations change when localised attack starts, so noise analysis is a sensitive early-warning method for corrosion."
+    },
+    {
+      "id": "l24-mcq-003",
+      "topicId": "electrocrystallization",
+      "quick": true,
+      "question": "A high overpotential during metal deposition usually gives:",
+      "options": [
+        "Many small nuclei and a fine-grained film",
+        "Few large crystals",
+        "No deposit at all",
+        "A gas"
+      ],
+      "answer": 0,
+      "explanation": "A high overpotential raises the nucleation rate, so many nuclei form and each stays small, producing a smooth, fine-grained film. Low overpotential instead gives coarse growth."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l24-tf-004",
+      "topicId": "electrocrystallization",
+      "question": "Transport-limited deposition tends to produce dendrites because tips grow faster.",
+      "answer": true,
+      "explanation": "A tip sticks out into fresher solution and grows faster than the rest, so bumps become dendrites. This is useful for making powders but dangerous in batteries, where a dendrite can short the cell."
+    },
+    {
+      "id": "l24-mcq-004",
+      "topicId": "chromism-and-capillarity",
+      "quick": true,
+      "question": "Electrochromism is:",
+      "options": [
+        "A reversible colour change driven by the electrode potential",
+        "An irreversible melting",
+        "A change in mass",
+        "A change in conductivity only"
+      ],
+      "answer": 0,
+      "explanation": "Changing the electrode potential changes the material's oxidation state and therefore its colour, reversibly. Smart windows and self-dimming mirrors use the effect."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l24-tf-005",
+      "topicId": "chromism-and-capillarity",
+      "question": "Lippmann's equation relates the slope of the electrocapillary curve to the surface charge.",
+      "answer": true,
+      "explanation": "The slope of surface tension against potential equals minus the surface charge. Its maximum marks the point of zero charge, and its curvature gives the differential capacitance."
+    },
+    {
+      "id": "l24-mcq-005",
+      "topicId": "coupled-effects",
+      "quick": true,
+      "question": "In photoelectrochemistry, a semiconductor electrode:",
+      "options": [
+        "Blocks all light",
+        "Absorbs light, and the photogenerated carriers drive the reaction",
+        "Melts when illuminated",
+        "Becomes an insulator"
+      ],
+      "answer": 1,
+      "explanation": "Absorbed light creates electron-hole pairs that drive the electrode reaction, the physics behind solar cells and artificial photosynthesis."
+    },
+    {
+      "kind": "truefalse",
+      "id": "l24-tf-006",
+      "topicId": "coupled-effects",
+      "question": "Bending or squeezing an electrode can shift its potential, and the coupling also works the other way.",
+      "answer": true,
+      "explanation": "Electrode potential and mechanical stress are coupled: a potential change can cause strain, and a strain can generate a potential. This underlies flexible and wearable electrochemical devices."
+    },
+    {
+      "kind": "multi",
+      "id": "l24-multi-001",
+      "topicId": "coupled-effects",
+      "question": "Which external fields can couple to an electrochemical reaction? Select all that apply.",
+      "options": [
+        "Light",
+        "A magnetic field",
+        "Mechanical stress",
+        "The colour of the room"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Light, magnetic fields and mechanical stress all couple to electrochemistry because the electrode energy depends on them. The colour of the room has no electrochemical role."
+    }
+  ]
+}

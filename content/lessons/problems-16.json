@@ -1,0 +1,190 @@
+{
+  "slug": "problems-16",
+  "label": "Problem set 16",
+  "title": "Problem set 16: Scanning probe techniques",
+  "summary": "Practice with scanning probe electrochemistry: SECM feedback modes, approach curves, STM tunnelling and the combination of imaging with electrochemical control.",
+  "source": "Bard & Faulkner ch.16",
+  "order": 116,
+  "minutes": 24,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Scanning probe techniques raster a small tip over a surface. SECM reads a current that depends on the tip-substrate distance and reactivity (feedback mode), while STM and AFM map topography by tunnelling current or force."
+    },
+    {
+      "kind": "para",
+      "text": "In SECM, a regenerating substrate raises the tip current (positive feedback) and an insulating one lowers it (negative feedback); approach curves record this."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps16-spm",
+      "tone": "amber",
+      "title": "Hint sheet: scanning probe ideas",
+      "summary": "Practice with scanning probe electrochemistry: SECM feedback modes, approach curves, STM tunnelling and the combination of imaging with electrochemical control.",
+      "minutes": 19,
+      "keyPoints": [
+        "SECM tip current depends on tip-substrate distance",
+        "Positive feedback: conductive substrate raises tip current",
+        "Negative feedback: insulating substrate lowers it",
+        "STM tunnelling current decays exponentially"
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Scanning probe techniques raster a small tip over a surface. SECM reads a current that depends on the tip-substrate distance and reactivity (feedback mode), while STM and AFM map topography by tunnelling current or force."
+        },
+        {
+          "kind": "para",
+          "text": "In SECM, a regenerating substrate raises the tip current (positive feedback) and an insulating one lowers it (negative feedback); approach curves record this."
+        },
+        {
+          "kind": "worked",
+          "title": "Tip current enhancement",
+          "given": "i_tip(substrate) = 1.5 x i_bulk",
+          "steps": [
+            "The normalized current is i_tip/i_bulk = 1.5.",
+            "Enhancement fraction = 1.5 - 1.0.",
+            "Enhancement = 0.5."
+          ],
+          "result": "50 percent enhancement (positive feedback)"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "ps16-mcq-001",
+      "topicId": "ps16-spm",
+      "quick": true,
+      "question": "Scanning electrochemical microscopy (SECM) uses as its probe:",
+      "options": [
+        "An ultramicroelectrode tip moved close to a substrate",
+        "A beam of electrons in vacuum",
+        "A thermometer",
+        "A pH meter"
+      ],
+      "answer": 0,
+      "explanation": "SECM scans a small electrode tip near a surface and reads the current, which depends on the tip-substrate distance and the substrate reactivity."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps16-tf-001",
+      "topicId": "ps16-spm",
+      "quick": true,
+      "question": "In the feedback mode of SECM, a conductive substrate regenerates the mediator and increases the tip current.",
+      "answer": true,
+      "explanation": "When the substrate regenerates the mediator, its return to the tip adds to the measured current, so the tip current rises above its bulk value - positive feedback."
+    },
+    {
+      "id": "ps16-mcq-002",
+      "topicId": "ps16-spm",
+      "quick": true,
+      "question": "In SECM feedback mode, an insulating substrate that blocks the mediator causes the tip current to:",
+      "options": [
+        "Decrease below its bulk value",
+        "Increase without limit",
+        "Stay exactly at the bulk value",
+        "Become zero at all distances"
+      ],
+      "answer": 0,
+      "explanation": "An inert surface shields the tip and blocks diffusion of the mediator back to it, so the tip current falls - negative feedback."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps16-tf-002",
+      "topicId": "ps16-spm",
+      "question": "Scanning tunnelling microscopy (STM) measures a tunnelling current that falls sharply as the tip is lifted away from the surface.",
+      "answer": true,
+      "explanation": "The tunnelling current decays roughly exponentially with distance, which is why STM can follow atomic-scale height changes so sensitively."
+    },
+    {
+      "kind": "multi",
+      "id": "ps16-multi-001",
+      "topicId": "ps16-spm",
+      "question": "Which techniques are scanning probe methods used in electrochemistry? Select all that apply.",
+      "options": [
+        "Scanning electrochemical microscopy (SECM)",
+        "Scanning tunnelling microscopy (STM)",
+        "Atomic force microscopy (AFM)",
+        "X-ray crystallography"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "SECM, STM and AFM all raster a probe over a surface to map it, and each can be combined with electrochemical control. X-ray crystallography is not a scanning probe method."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps16-tf-003",
+      "topicId": "ps16-spm",
+      "question": "An approach curve in SECM records the tip current as the tip is moved toward the substrate.",
+      "answer": true,
+      "explanation": "The shape of the approach curve - rising (positive feedback) or falling (negative feedback) - identifies whether the substrate regenerates or blocks the mediator."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps16-num-001",
+      "topicId": "ps16-spm",
+      "question": "In a positive-feedback SECM measurement the tip current close to the substrate is 1.5 times the bulk tip current. By what fraction is the current enhanced over the bulk value?",
+      "answer": 0.5,
+      "tolerance": 0.05,
+      "explanation": "Enhancement = 1.5 - 1.0 = 0.5, i.e. the current is 50 percent larger than in the bulk."
+    },
+    {
+      "id": "ps16-mcq-003",
+      "topicId": "ps16-spm",
+      "quick": true,
+      "question": "Scanning tunnelling microscopy images a surface by:",
+      "options": [
+        "Measuring a tunnelling current between a sharp tip and the surface",
+        "Weighing the surface",
+        "Heating the sample",
+        "Measuring pH"
+      ],
+      "answer": 0,
+      "explanation": "A bias applied between a nanometre-sharp tip and a conducting surface produces a tunnelling current that depends steeply on the gap, so scanning the tip maps the surface."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps16-tf-004",
+      "topicId": "ps16-spm",
+      "question": "Atomic force microscopy maps a surface by measuring the force between a sharp probe and the sample.",
+      "answer": true,
+      "explanation": "AFM feels the surface rather than tunnelling through it, so it works on insulators as well as conductors."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps16-num-002",
+      "topicId": "ps16-spm",
+      "question": "In SECM feedback mode the tip current at a large tip-substrate distance equals the bulk value i_bulk. If close to a conductive substrate the current rises to 2.0 i_bulk, by what factor is the current enhanced?",
+      "answer": 2.0,
+      "tolerance": 0.15,
+      "explanation": "The normalized tip current near the substrate is 2.0 times the bulk value, so the enhancement factor is 2.0 (positive feedback)."
+    },
+    {
+      "id": "ps16-mcq-004",
+      "topicId": "ps16-spm",
+      "quick": true,
+      "question": "A key requirement of the SECM tip electrode is that it be:",
+      "options": [
+        "Very small (an ultramicroelectrode) to localise the measurement",
+        "Very large to collect more current",
+        "Made of the substrate material",
+        "Insulated on all sides"
+      ],
+      "answer": 0,
+      "explanation": "A tiny tip is needed so the measured current reflects a small, well-defined region and so the tip can approach close to the substrate."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps16-tf-005",
+      "topicId": "ps16-spm",
+      "question": "SECM can map the local reactivity of a surface, not just its topography.",
+      "answer": true,
+      "explanation": "Because the tip current depends on how the substrate consumes or regenerates the mediator, SECM distinguishes chemically active regions, a functional map rather than a purely topographic one."
+    }
+  ]
+}

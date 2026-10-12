@@ -1,0 +1,225 @@
+{
+  "slug": "problems-7",
+  "label": "Problem set 7",
+  "title": "Problem set 7: Polarography and pulse voltammetry",
+  "summary": "Practice with the Ilkovic equation and the drop parameters, plus the principles of pulse techniques and their advantage over dc polarography.",
+  "source": "Bard & Faulkner ch.7",
+  "order": 107,
+  "minutes": 26,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Polarography uses the dropping mercury electrode, whose constantly renewed surface gives reproducible measurements. The diffusion current follows the Ilkovic equation id = 708 n D^(1/2) m^(2/3) t^(1/6) C (id in uA, C in mM)."
+    },
+    {
+      "kind": "para",
+      "text": "Pulse methods step the potential on each drop and sample the current late, when the charging current has decayed, so much smaller concentrations can be measured."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps7-polar",
+      "tone": "amber",
+      "title": "Hint sheet: polarography relations",
+      "summary": "Practice with the Ilkovic equation and the drop parameters, plus the principles of pulse techniques and their advantage over dc polarography.",
+      "minutes": 21,
+      "keyPoints": [
+        "id = 708 n D^(1/2) m^(2/3) t^(1/6) C",
+        "id proportional to D^(1/2)",
+        "id proportional to m^(2/3) t^(1/6)",
+        "Charging current decays faster than diffusion current"
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Polarography uses the dropping mercury electrode, whose constantly renewed surface gives reproducible measurements. The diffusion current follows the Ilkovic equation id = 708 n D^(1/2) m^(2/3) t^(1/6) C (id in uA, C in mM)."
+        },
+        {
+          "kind": "para",
+          "text": "Pulse methods step the potential on each drop and sample the current late, when the charging current has decayed, so much smaller concentrations can be measured."
+        },
+        {
+          "kind": "worked",
+          "title": "Ilkovic diffusion current",
+          "given": "n = 1, D = 1.0e-5 cm2/s, m = 1.0 mg/s, t = 4.0 s, C = 1.0 mM",
+          "steps": [
+            "Use id = 708 n D^(1/2) m^(2/3) t^(1/6) C.",
+            "D^(1/2)=3.162e-3, m^(2/3)=1, t^(1/6)=1.260.",
+            "id = 708 x 3.162e-3 x 1 x 1.260 x 1.0 = 2.82 uA."
+          ],
+          "result": "id = 2.82 uA"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "numeric",
+      "id": "ps7-num-001",
+      "topicId": "ps7-polar",
+      "question": "Use the Ilkovic equation id = 708 n D^(1/2) m^(2/3) t^(1/6) C, with id in uA, C in mM, m in mg/s, t in s and D in cm2/s. Calculate id in uA for n = 1, D = 1.0e-5 cm2/s, m = 1.0 mg/s, t = 4.0 s, C = 1.0 mM.",
+      "answer": 2.82,
+      "tolerance": 0.2,
+      "unit": "uA",
+      "explanation": "D^(1/2)=3.162e-3; t^(1/6)=4^(1/6)=1.260; id = 708 x 1 x 3.162e-3 x 1 x 1.260 x 1.0 = 2.82 uA."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps7-num-002",
+      "topicId": "ps7-polar",
+      "question": "The Ilkovic diffusion current is proportional to D^(1/2). If the diffusion coefficient is doubled, by what factor does id change?",
+      "answer": 1.41,
+      "tolerance": 0.05,
+      "explanation": "id scales with sqrt(D), so doubling D multiplies id by sqrt(2) = 1.41."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps7-num-003",
+      "topicId": "ps7-polar",
+      "question": "In the Ilkovic equation the drop parameters enter as m^(2/3) t^(1/6). If the mercury flow rate m is doubled and t is unchanged, by what factor does id change? (Give the factor, e.g. 1.59.)",
+      "answer": 1.59,
+      "tolerance": 0.04,
+      "explanation": "id scales with m^(2/3), so doubling m multiplies id by 2^(2/3) = 1.587."
+    },
+    {
+      "id": "ps7-mcq-001",
+      "topicId": "ps7-polar",
+      "quick": true,
+      "question": "The dropping mercury electrode is valuable in polarography mainly because:",
+      "options": [
+        "Its surface is renewed with every drop, giving reproducible, clean results",
+        "It is extremely hard",
+        "It never dissolves",
+        "It has no capacitance"
+      ],
+      "answer": 0,
+      "explanation": "Each drop presents a fresh, reproducible surface, which avoids contamination and passivation; the drop also gives a constant, renewing diffusion layer."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps7-tf-001",
+      "topicId": "ps7-polar",
+      "quick": true,
+      "question": "In polarography the charging (capacitive) current decays faster than the diffusion current as a drop grows.",
+      "answer": true,
+      "explanation": "The charging current falls roughly as t^(-1/3) while the diffusion current falls as t^(-1/6), so sampling late in the drop life favours the faradaic signal."
+    },
+    {
+      "id": "ps7-mcq-002",
+      "topicId": "ps7-polar",
+      "quick": true,
+      "question": "Pulse techniques improve detection limits mainly by:",
+      "options": [
+        "Increasing the electrode area",
+        "Sampling the current late so the charging current is largely gone",
+        "Removing the analyte",
+        "Heating the solution"
+      ],
+      "answer": 1,
+      "explanation": "By applying short pulses and sampling near the end, the rapidly decaying charging current is small compared with the faradaic current, so lower concentrations can be measured."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps7-tf-002",
+      "topicId": "ps7-polar",
+      "question": "In a polarogram the half-wave potential reports the identity of the species being reduced.",
+      "answer": true,
+      "explanation": "The position of the wave (the half-wave potential) is characteristic of the redox couple, while its height (the diffusion current) reports the concentration."
+    },
+    {
+      "kind": "multi",
+      "id": "ps7-multi-001",
+      "topicId": "ps7-polar",
+      "question": "Which are advantages of pulse polarographic methods over classical dc polarography? Select all that apply.",
+      "options": [
+        "Better discrimination against charging current",
+        "Lower detection limits",
+        "Reduced concentration polarisation of the surface",
+        "Elimination of the need for any reference electrode"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Pulse methods suppress charging current, reach lower detection limits and probe a fresher surface. A reference electrode is still needed."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps7-num-004",
+      "topicId": "ps7-polar",
+      "question": "A diffusion current of 2.82 uA is measured for a 1.0 mM solution. By what factor must the concentration change to give 5.64 uA? (Give the factor.)",
+      "answer": 2.0,
+      "tolerance": 0.1,
+      "explanation": "The diffusion current is proportional to concentration, so doubling the concentration doubles the current: a factor of 2.0."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps7-tf-003",
+      "topicId": "ps7-polar",
+      "question": "In normal-pulse polarography the potential is stepped from a base value with each new drop, and the current is sampled near the end of the pulse.",
+      "answer": true,
+      "explanation": "A pulse is applied late in the drop life and the current is sampled just before the drop falls, when the charging current has largely decayed."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps7-num-005",
+      "topicId": "ps7-polar",
+      "question": "The Ilkovic current is proportional to t^(1/6). If id = 2.82 uA at t = 4.0 s, what is id in uA at t = 1.0 s?",
+      "answer": 2.24,
+      "tolerance": 0.2,
+      "unit": "uA",
+      "explanation": "id(1)/id(4) = (1/4)^(1/6) = 0.794, so id = 0.794 x 2.82 = 2.24 uA."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps7-num-006",
+      "topicId": "ps7-polar",
+      "question": "The Ilkovic current is proportional to concentration. A 1.0 mM solution gives 2.82 uA. What concentration in mM gives 8.46 uA?",
+      "answer": 3.0,
+      "tolerance": 0.2,
+      "unit": "mM",
+      "explanation": "The ratio is 8.46/2.82 = 3.0, so the concentration is 1.0 x 3.0 = 3.0 mM."
+    },
+    {
+      "id": "ps7-mcq-003",
+      "topicId": "ps7-polar",
+      "quick": true,
+      "question": "In classical dc polarography the potential is:",
+      "options": [
+        "Swept slowly and linearly while the mercury drops",
+        "Held constant while the drop grows",
+        "Swept at thousands of volts per second",
+        "Never changed"
+      ],
+      "answer": 0,
+      "explanation": "Classical polarography slowly sweeps the potential and records the diffusion current for each drop, producing a staircase-like polarogram."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps7-tf-004",
+      "topicId": "ps7-polar",
+      "question": "The Ilkovic diffusion current depends on the drop time through t^(1/6).",
+      "answer": true,
+      "explanation": "The t^(1/6) dependence is weak, reflecting the balance between the growing drop area and the expanding diffusion layer."
+    },
+    {
+      "kind": "multi",
+      "id": "ps7-multi-002",
+      "topicId": "ps7-polar",
+      "question": "Which improve the performance of polarographic measurements? Select all that apply.",
+      "options": [
+        "Removing dissolved oxygen",
+        "Using pulse waveforms",
+        "Sampling the current late in the drop life",
+        "Using the largest possible charging current"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Deaeration, pulse waveforms and late sampling all improve the faradaic signal. A large charging current degrades it."
+    }
+  ]
+}

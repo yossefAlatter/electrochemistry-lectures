@@ -1,0 +1,248 @@
+{
+  "slug": "problems-2",
+  "label": "Problem set 2",
+  "title": "Problem set 2: Potentials and thermodynamics of cells",
+  "summary": "Practice converting between emf and free energy, entropy, enthalpy and equilibrium constants, and handling reference-electrode scales and formal potentials.",
+  "source": "Bard & Faulkner ch.2",
+  "order": 102,
+  "minutes": 28,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Chapter 2 links the cell emf to thermodynamics: dG = -nFE, dS = nF(dE/dT), dH = dG + TdS, and log10 K = nE0/0.05916 at 25 C."
+    },
+    {
+      "kind": "para",
+      "text": "Whenever a potential is quoted, remember which reference it is measured against; converting between scales means adding or subtracting the reference potential."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ps2-thermo",
+      "tone": "amber",
+      "title": "Hint sheet: thermodynamic relations",
+      "summary": "Practice converting between emf and free energy, entropy, enthalpy and equilibrium constants, and handling reference-electrode scales and formal potentials.",
+      "minutes": 23,
+      "keyPoints": [
+        "dG = -nFE",
+        "dS = nF(dE/dT)",
+        "dH = dG + TdS",
+        "log10 K = nE0/0.05916 (25 C)",
+        "E(SCE) = E(NHE) - 0.242 V"
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Chapter 2 links the cell emf to thermodynamics: dG = -nFE, dS = nF(dE/dT), dH = dG + TdS, and log10 K = nE0/0.05916 at 25 C."
+        },
+        {
+          "kind": "para",
+          "text": "Whenever a potential is quoted, remember which reference it is measured against; converting between scales means adding or subtracting the reference potential."
+        },
+        {
+          "kind": "worked",
+          "title": "Cell free energy from the emf",
+          "given": "n = 2, E0 = 1.10 V, F = 96485 C/mol",
+          "steps": [
+            "Use dG0 = -nFE0.",
+            "Substitute: dG0 = -2 x 96485 x 1.10.",
+            "Multiply: -2.123e5 J/mol = -212.3 kJ/mol."
+          ],
+          "result": "dG0 = -212 kJ/mol"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "kind": "numeric",
+      "id": "ps2-num-001",
+      "topicId": "ps2-thermo",
+      "question": "A cell reaction transfers n = 2 electrons and has a standard emf E0 = 1.10 V. Using dG0 = -nFE0 with F = 96485 C/mol, calculate dG0 in kJ/mol.",
+      "answer": -212.3,
+      "tolerance": 5,
+      "unit": "kJ/mol",
+      "explanation": "dG0 = -2 x 96485 x 1.10 = -2.123e5 J/mol = -212.3 kJ/mol."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps2-num-002",
+      "topicId": "ps2-thermo",
+      "question": "For a one-electron couple with E0 = 0.30 V at 25 C, calculate log10 K for the reaction, using log10 K = nE0/0.05916.",
+      "answer": 5.07,
+      "tolerance": 0.15,
+      "explanation": "log10 K = (1 x 0.30)/0.05916 = 5.07, so K is about 1.2e5. The emf is a direct measure of the equilibrium constant."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps2-num-003",
+      "topicId": "ps2-thermo",
+      "question": "For a two-electron cell the emf changes with temperature at dE/dT = -5.0e-4 V/K. Calculate the reaction entropy dS in J/(K mol), using dS = nF(dE/dT).",
+      "answer": -96.5,
+      "tolerance": 6,
+      "unit": "J/(K mol)",
+      "explanation": "dS = 2 x 96485 x (-5.0e-4) = -96.5 J/(K mol). The temperature coefficient of the emf measures the entropy change."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps2-num-004",
+      "topicId": "ps2-thermo",
+      "question": "A cell reaction has dG = -190 kJ/mol and TdS = -43 kJ/mol at 298 K. Calculate dH in kJ/mol, using dH = dG + TdS.",
+      "answer": -233,
+      "tolerance": 4,
+      "unit": "kJ/mol",
+      "explanation": "dH = -190 + (-43) = -233 kJ/mol. This is the heat that would be released if the reaction ran without doing electrical work."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps2-num-005",
+      "topicId": "ps2-thermo",
+      "question": "A potential measured as 0.530 V versus NHE is to be reported versus the saturated calomel electrode, whose potential is 0.242 V versus NHE. Calculate E versus SCE in volts (E_SCE = E_NHE - 0.242).",
+      "answer": 0.288,
+      "tolerance": 0.005,
+      "unit": "V",
+      "explanation": "E vs SCE = 0.530 - 0.242 = 0.288 V. Converting scales is just adding or subtracting the reference potential."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps2-num-006",
+      "topicId": "ps2-thermo",
+      "question": "The formal potential of the Fe3+/Fe2+ couple in a certain medium is 0.700 V. Using the Nernst equation E = E0-prime - (0.05916/1) log([Fe2+]/[Fe3+]), calculate E in volts when [Fe2+]/[Fe3+] = 10.",
+      "answer": 0.641,
+      "tolerance": 0.004,
+      "unit": "V",
+      "explanation": "E = 0.700 - 0.05916 x log(10) = 0.700 - 0.05916 = 0.641 V."
+    },
+    {
+      "id": "ps2-mcq-001",
+      "topicId": "ps2-thermo",
+      "quick": true,
+      "question": "For a spontaneous cell reaction, the standard free energy change and the cell emf are related by:",
+      "options": [
+        "dG0 = +nFE0",
+        "dG0 = -nFE0",
+        "dG0 = nF/E0",
+        "dG0 = 0"
+      ],
+      "answer": 1,
+      "explanation": "The emf is positive for a spontaneous reaction and the free energy change is negative, so dG0 = -nFE0."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps2-tf-001",
+      "topicId": "ps2-thermo",
+      "quick": true,
+      "question": "The standard hydrogen electrode is assigned a potential of zero at all temperatures.",
+      "answer": true,
+      "explanation": "The NHE is the primary reference; its potential is defined as zero, and all other standard potentials are measured against it."
+    },
+    {
+      "kind": "multi",
+      "id": "ps2-multi-001",
+      "topicId": "ps2-thermo",
+      "question": "Which quantities can be obtained from electrochemical cell measurements? Select all that apply.",
+      "options": [
+        "dG of the reaction",
+        "dS from the temperature coefficient",
+        "The equilibrium constant K",
+        "The activation energy of the counter electrode reaction"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Cell emf gives dG, its temperature coefficient gives dS, and together they give K (and dH). The counter electrode reaction is not characterised by the cell emf."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps2-tf-002",
+      "topicId": "ps2-thermo",
+      "question": "The formal potential E0-prime incorporates activity coefficients and other medium effects.",
+      "answer": true,
+      "explanation": "Unlike the standard potential, the formal potential is measured in a specific medium and absorbs activity coefficients, complexation and ion pairing."
+    },
+    {
+      "id": "ps2-mcq-002",
+      "topicId": "ps2-thermo",
+      "quick": true,
+      "question": "A quasireference electrode (a bare metal wire) is acceptable only if:",
+      "options": [
+        "It is calibrated against a known couple and its potential is stable during the experiment",
+        "It is made of platinum",
+        "It is kept at 100 C",
+        "It carries no current at all"
+      ],
+      "answer": 0,
+      "explanation": "A QRE has an unknown potential, so it must be calibrated (e.g. against ferrocene) and must not drift during the measurement."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps2-tf-003",
+      "topicId": "ps2-thermo",
+      "question": "A cell that is chemically irreversible cannot behave reversibly in a thermodynamic sense.",
+      "answer": true,
+      "explanation": "If reversing the current gives different reactions, the cell cannot be driven along a continuous series of equilibrium states, so it cannot be thermodynamically reversible."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps2-num-007",
+      "topicId": "ps2-thermo",
+      "question": "A one-electron reaction has E0 = 0.300 V. Calculate dG0 in kJ/mol (dG0 = -nFE0).",
+      "answer": -28.9,
+      "tolerance": 1.5,
+      "unit": "kJ/mol",
+      "explanation": "dG0 = -1 x 96485 x 0.300 = -28946 J/mol = -28.9 kJ/mol."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps2-num-008",
+      "topicId": "ps2-thermo",
+      "question": "A two-electron reaction has dG0 = -100 kJ/mol. Calculate E0 in volts (E0 = -dG0/(nF)).",
+      "answer": 0.518,
+      "tolerance": 0.01,
+      "unit": "V",
+      "explanation": "E0 = 100000/(2 x 96485) = 0.518 V."
+    },
+    {
+      "id": "ps2-mcq-003",
+      "topicId": "ps2-thermo",
+      "quick": true,
+      "question": "At thermodynamic equilibrium of a cell reaction:",
+      "options": [
+        "dG = 0 and the emf is zero",
+        "dG is at its maximum",
+        "The emf is infinite",
+        "dS is necessarily zero"
+      ],
+      "answer": 0,
+      "explanation": "At equilibrium the reaction has no further tendency to proceed, so dG = 0 and, since dG = -nFE, the emf is zero."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps2-tf-004",
+      "topicId": "ps2-thermo",
+      "question": "A positive cell emf corresponds to a negative free-energy change and hence a spontaneous reaction.",
+      "answer": true,
+      "explanation": "Since dG = -nFE, a positive emf makes dG negative, the thermodynamic condition for spontaneity."
+    },
+    {
+      "kind": "multi",
+      "id": "ps2-multi-002",
+      "topicId": "ps2-thermo",
+      "question": "Which can shift the measured potential of an electrode in a real cell? Select all that apply.",
+      "options": [
+        "Complexation of one redox partner",
+        "Changes in ionic strength (activity coefficients)",
+        "The choice of reference-electrode scale",
+        "The colour of the electrode"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Complexation, ionic strength and the reference scale all shift the reported potential. The colour of the electrode is irrelevant."
+    }
+  ]
+}
