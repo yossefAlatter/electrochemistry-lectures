@@ -17,8 +17,9 @@
 // content/registry.ts rather than reaching into the content files.
 
 import type { Course, Lesson, Question, Section, Subject } from "./types";
-import { loadAllLessons } from "./load";
+import { loadAllLessons, SPECTROSCOPY_LESSONS_DIR } from "./load";
 import {
+  courseHref as courseHrefPure,
   homeHref as homeHrefPure,
   lessonHref as lessonHrefPure,
   quizHref as quizHrefPure,
@@ -34,15 +35,15 @@ export const subjects: Subject[] = [
     tagline: "Postgraduate · from first principles to research level",
     description:
       "Postgraduate physical chemistry, taught in short illustrated sections. " +
-      "Begin with Lesson 0, a short orientation, then work through the " +
-      "lessons in order. Every section is a short page with its own quick " +
-      "check, and the full question bank sits behind each lesson.",
+      "Two courses are offered: Electrochemistry and Spectroscopy. Every " +
+      "section is a short page with its own quick check, and the full question " +
+      "bank sits behind each lesson.",
     courses: [
       {
         id: "electrochemistry",
         title: "Electrochemistry",
         description:
-          "The core subject: how charge moves, how potentials are measured, " +
+          "The core course: how charge moves, how potentials are measured, " +
           "why rates are what they are, and how cells are designed, used and " +
           "broken. Begin with Lesson 0, a short orientation, then work " +
           "through the lessons in order.",
@@ -51,9 +52,20 @@ export const subjects: Subject[] = [
         // dropping in a JSON file; there is nothing to register here.
         lessons: loadAllLessons(),
       },
+      {
+        id: "spectroscopy",
+        title: "Spectroscopy",
+        description:
+          "How electromagnetic radiation is made, how it is described as both " +
+          "a wave and a stream of photons, and how its interaction with matter " +
+          "gives rise to the spectra used across the physical sciences. Begin " +
+          "with Lesson 1 and work through in order.",
+        // Discovered, not listed: JSON files in
+        // `content/spectroscopy/lessons/`, sorted by `order`.
+        lessons: loadAllLessons(SPECTROSCOPY_LESSONS_DIR),
+      },
     ],
   },
-  // A second subject, e.g. { slug: "spectroscopy", title: "Spectroscopy", ... }
 ];
 
 /* ----------------------------------------------------------------- registry --*/
@@ -102,6 +114,7 @@ export interface Registry {
   ): SectionNeighbour | undefined;
 
   /* Links. The site is served from the root, so its URLs carry no prefix. */
+  courseHref(course: Course | { id: string }): string;
   lessonHref(lesson: Lesson | { slug: string }): string;
   sectionHref(
     lesson: Lesson | { slug: string },
@@ -150,13 +163,24 @@ export function createRegistry(tree: Subject[]): Registry {
     courseOfLesson: (lesson) =>
       allCourses.find((c) => c.lessons.includes(lesson)),
 
+    // Prev/next stay inside the lesson's own course: the pager walks a course,
+    // not the whole site, so leaving the last lesson of one course does not
+    // silently drop the reader into another.
     nextLesson: (slug) => {
-      const i = allLessons.findIndex((l) => l.slug === slug);
-      return i >= 0 ? allLessons[i + 1] : undefined;
+      const course = allCourses.find((c) =>
+        c.lessons.some((l) => l.slug === slug),
+      );
+      if (!course) return undefined;
+      const i = course.lessons.findIndex((l) => l.slug === slug);
+      return i >= 0 ? course.lessons[i + 1] : undefined;
     },
     prevLesson: (slug) => {
-      const i = allLessons.findIndex((l) => l.slug === slug);
-      return i > 0 ? allLessons[i - 1] : undefined;
+      const course = allCourses.find((c) =>
+        c.lessons.some((l) => l.slug === slug),
+      );
+      if (!course) return undefined;
+      const i = course.lessons.findIndex((l) => l.slug === slug);
+      return i > 0 ? course.lessons[i - 1] : undefined;
     },
 
     questionsForSection,
@@ -182,6 +206,7 @@ export function createRegistry(tree: Subject[]): Registry {
     // Links are built at the root, so the original `/lessons/...` URLs are
     // byte-for-byte unchanged. The implementations live in `lib/links.ts` so
     // client components can build a URL without importing this module.
+    courseHref: courseHrefPure,
     lessonHref: lessonHrefPure,
     sectionHref: sectionHrefPure,
     quizHref: quizHrefPure,
@@ -217,6 +242,9 @@ export const quickCheckFor = registry.quickCheckFor;
 export const countQuestions = registry.countQuestions;
 export const countQuickChecks = registry.countQuickChecks;
 export const sectionNeighbours = registry.sectionNeighbours;
+
+export const courseHref = (course: Course | { id: string }) =>
+  registry.courseHref(course);
 
 export const lessonHref = (lesson: Lesson | { slug: string }) =>
   registry.lessonHref(lesson);

@@ -1,0 +1,556 @@
+{
+  "slug": "emr-nature",
+  "label": "Lesson 1",
+  "title": "The nature of electromagnetic radiation",
+  "summary": "Electromagnetic radiation is a wave and a stream of particles at the same time. This lesson sets out both pictures: the oscillating electric and magnetic fields of the wave, the photons of the quantum view, and the relationships that connect wavelength, frequency and energy across the electromagnetic spectrum.",
+  "source": "Written fresh; spectroscopy foundations",
+  "order": 1,
+  "minutes": 34,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Spectroscopy is the study of how matter interacts with electromagnetic radiation. Before any of it makes sense you need a clear picture of what that radiation is. This lesson gives two pictures that are both true, and shows how they fit together."
+    },
+    {
+      "kind": "para",
+      "text": "The first is the *wave* picture: light is an oscillating electromagnetic field that travels through space. The second is the *quantum* picture: light arrives in discrete packets of energy called photons. Neither alone explains everything you will see in a spectrum."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The two pictures in one sentence",
+      "body": "Electromagnetic radiation is a transverse electromagnetic wave whose energy is delivered in discrete photons, so its wavelength, frequency and photon energy are linked by c = \\u03bbf and E = hf."
+    }
+  ],
+  "constants": [
+    {
+      "symbol": "c",
+      "name": "Speed of light in vacuum",
+      "value": "2.998 × 10^8 m/s"
+    },
+    {
+      "symbol": "h",
+      "name": "Planck constant",
+      "value": "6.626 × 10^-34 J s"
+    }
+  ],
+  "sections": [
+    {
+      "id": "wave-nature",
+      "tone": "azure",
+      "title": "The wave nature of EMR",
+      "summary": "Electromagnetic radiation is a transverse wave: an electric field and a magnetic field oscillating together and travelling through space.",
+      "minutes": 7,
+      "keyPoints": [
+        "EMR is a transverse wave made of an oscillating electric field E and magnetic field B.",
+        "The two fields are mutually perpendicular and both are perpendicular to the direction of travel.",
+        "The wavelength λ is the distance between corresponding points on the wave; the frequency f is the number of cycles per second.",
+        "In a vacuum every form of EMR travels at the same speed, the speed of light c, with c = λf."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Start with the wave picture. Electromagnetic radiation is a *transverse wave*: a disturbance that travels forward while the things doing the oscillating move at right angles to the direction of travel. What oscillates is not a material but a pair of fields."
+        },
+        {
+          "kind": "para",
+          "text": "The first is the *electric field* E, the second the *magnetic field* B. They rise and fall together as a sine wave, and they are oriented at right angles to each other and to the direction in which the wave moves. A wave is drawn as two sine curves threaded along a common axis, one for E and one for B."
+        },
+        {
+          "kind": "para",
+          "text": "Two lengths describe the wave. The *wavelength* λ is the distance from one crest to the next, or between any two corresponding points. The *amplitude* is the height of the wave, which sets how strong the fields are, and with the intensity of the light. The *frequency* f is how many complete cycles pass a fixed point each second, measured in hertz (Hz)."
+        },
+        {
+          "kind": "formula",
+          "tex": "c = \\lambda f",
+          "caption": "The speed of light links wavelength and frequency"
+        },
+        {
+          "kind": "para",
+          "text": "In a vacuum all electromagnetic radiation travels at the same speed, the speed of light c, about 3.0 × 10^8 m/s. Because that speed is fixed, wavelength and frequency are locked together: a longer wavelength must mean a lower frequency, and a shorter wavelength a higher one."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "One wave, many names",
+          "body": "Radio waves, microwaves, infrared, visible light, ultraviolet, X-rays and gamma rays are all the same kind of wave. Only their wavelength and frequency differ, and that single difference changes everything about how they interact with matter."
+        }
+      ]
+    },
+    {
+      "id": "quantum-nature",
+      "tone": "indigo",
+      "title": "The quantum nature of EMR",
+      "summary": "Light also behaves as a stream of discrete energy packets called photons, each carrying an energy set by its frequency.",
+      "minutes": 7,
+      "keyPoints": [
+        "EMR is absorbed and emitted in discrete packets of energy called photons or quanta.",
+        "The energy of one photon is E = hf, where h is the Planck constant.",
+        "Photon energy is proportional to frequency: higher frequency means higher energy.",
+        "A high-frequency photon, such as an X-ray photon, carries far more energy than a low-frequency radio photon."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The wave picture cannot explain everything. When light is absorbed or emitted, matter does not take it in continuously: it exchanges energy in fixed, discrete amounts called *quanta*. The smallest packet of electromagnetic energy is the *photon*."
+        },
+        {
+          "kind": "para",
+          "text": "A photon is not a tiny ball with a definite position. It is a packet of energy whose size is fixed by the frequency of the radiation. The higher the frequency, the more energy each photon carries."
+        },
+        {
+          "kind": "formula",
+          "tex": "E = h f",
+          "caption": "Energy of a single photon, with h the Planck constant"
+        },
+        {
+          "kind": "para",
+          "text": "Here h is the *Planck constant*, about 6.626 × 10^-34 J s. It is a very small number, which is why a beam of ordinary light, carrying enormous numbers of photons, looks perfectly continuous. The quantisation is only visible when energy is exchanged one photon at a time."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "The same relation, two symbols",
+          "body": "You will see frequency written as both f and the Greek letter nu (ν). E = hf and E = hν mean exactly the same thing: photon energy equals the Planck constant times the frequency."
+        },
+        {
+          "kind": "para",
+          "text": "Because photon energy rises with frequency, an X-ray photon carries far more energy than a photon of visible light, and a radio photon carries far less still. This single fact underlies why X-rays can ionise atoms while radio waves pass through a body almost untouched."
+        }
+      ]
+    },
+    {
+      "id": "properties",
+      "tone": "violet",
+      "title": "Key properties of EMR",
+      "summary": "Four properties describe how electromagnetic radiation behaves: it propagates at c, needs no medium, forms a continuous spectrum, and interacts with matter as waves and as particles.",
+      "minutes": 6,
+      "keyPoints": [
+        "EMR propagates through space at the speed of light c.",
+        "It requires no medium: it travels through a vacuum, unlike sound.",
+        "It forms a continuous electromagnetic spectrum from radio waves to gamma rays.",
+        "It interacts with matter as waves (diffraction, interference) and as particles (absorption, emission, the photoelectric effect)."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Four properties summarise how electromagnetic radiation behaves, and each one matters for spectroscopy."
+        },
+        {
+          "kind": "list",
+          "items": [
+            "*Propagation*: it travels through space at the speed of light c.",
+            "*No medium needed*: it can travel through a vacuum, because it is a disturbance of fields rather than of matter.",
+            "*Continuous spectrum*: every wavelength belongs to one single, unbroken spectrum.",
+            "*Dual interaction*: it meets matter as waves in some experiments and as particles in others."
+          ],
+          "ordered": false
+        },
+        {
+          "kind": "para",
+          "text": "The absence of a medium is worth pausing on. Sound is a vibration of a material and must have something to travel through; that is why a ringing bell in an evacuated jar is silent. Light needs no such thing, because the electric and magnetic fields carry it directly. Light crosses the vacuum of space from the Sun to reach us."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "Where the dual behaviour shows up",
+          "body": "Wave behaviour is seen in *diffraction* and *interference*; particle behaviour is seen in *absorption*, *emission* and the *photoelectric effect*. You will meet each one later in this course, and both faces are needed to explain a real spectrum."
+        }
+      ]
+    },
+    {
+      "id": "spectrum",
+      "tone": "rose",
+      "title": "The electromagnetic spectrum",
+      "summary": "The spectrum runs from long-wavelength radio waves to short-wavelength gamma rays; shorter wavelength means higher frequency and higher photon energy.",
+      "minutes": 7,
+      "keyPoints": [
+        "The spectrum is continuous, but it is divided into named regions for convenience.",
+        "Wavelength decreases and energy increases as you move from radio waves towards gamma rays.",
+        "Each region matches particular kinds of transition: nuclear, electronic, vibrational or rotational.",
+        "A photon of energy E = hc/λ can only drive a transition whose energy gap it matches."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Ordered by wavelength, the electromagnetic spectrum divides into named regions. The names are convenient labels on a continuous range, not sharp boundaries. As wavelength falls, both frequency and photon energy rise."
+        },
+        {
+          "kind": "table",
+          "head": [
+            "Region",
+            "Wavelength range",
+            "Energy",
+            "Typical transitions and uses"
+          ],
+          "rows": [
+            [
+              "Gamma rays",
+              "< 0.01 nm",
+              "Very high",
+              "Nuclear transitions"
+            ],
+            [
+              "X-rays",
+              "0.01–10 nm",
+              "High",
+              "Crystallography, medical imaging"
+            ],
+            [
+              "Ultraviolet",
+              "10–400 nm",
+              "Moderate to high",
+              "Electronic transitions (UV–Vis spectroscopy)"
+            ],
+            [
+              "Visible",
+              "400–700 nm",
+              "Moderate",
+              "Colour, photosynthesis"
+            ],
+            [
+              "Infrared",
+              "700 nm – 1 mm",
+              "Lower",
+              "Vibrational transitions (IR spectroscopy)"
+            ],
+            [
+              "Microwaves",
+              "1 mm – 1 m",
+              "Lower",
+              "Rotational transitions"
+            ],
+            [
+              "Radio waves",
+              "> 1 m",
+              "Very low",
+              "NMR, MRI, communication"
+            ]
+          ],
+          "widths": [
+            1.3,
+            1.2,
+            1,
+            2.4
+          ]
+        },
+        {
+          "kind": "para",
+          "text": "The right-hand column is the heart of spectroscopy. A molecule absorbs a photon only when its energy matches a gap between two of the molecule’s own energy levels. Large gaps, such as those between electronic states, need high-energy ultraviolet or visible photons; the small gaps of molecular vibration and rotation need infrared and microwave photons."
+        },
+        {
+          "kind": "formula",
+          "tex": "E = h f = \\frac{hc}{\\lambda}",
+          "caption": "Photon energy in terms of wavelength"
+        },
+        {
+          "kind": "para",
+          "text": "Because c is fixed, the energy of a photon can be written just as well in terms of its wavelength. This is the form used most often in spectroscopy, since instruments measure wavelength far more naturally than frequency."
+        }
+      ]
+    },
+    {
+      "id": "parameter-relations",
+      "tone": "coral",
+      "title": "Relationships between the parameters",
+      "summary": "The three central relationships link speed, wavelength, frequency and energy, and let any one of them be found from another.",
+      "minutes": 7,
+      "keyPoints": [
+        "Wavelength, frequency and the speed of light are linked by c = λf.",
+        "Photon energy, frequency and wavelength are linked by E = hf = hc/λ.",
+        "Multiply frequency by wavelength to get c; divide c by wavelength to get frequency.",
+        "Energy rises as wavelength falls, which is why short-wave radiation is the energetic end of the spectrum."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Everything in this lesson follows from two short equations. The first connects the wave parameters; the second adds the photon energy."
+        },
+        {
+          "kind": "formula",
+          "tex": "c = \\lambda f \\qquad\\qquad E = h f = \\frac{hc}{\\lambda}",
+          "caption": "The two central relationships"
+        },
+        {
+          "kind": "para",
+          "text": "Rearranged, they let you move between any pair of quantities. If you know a wavelength, dividing the speed of light by it gives the frequency. Multiply that frequency by h and you have the photon energy. Since all four numbers are tied together, spectroscopy is largely the business of measuring one and inferring the rest."
+        },
+        {
+          "kind": "worked",
+          "title": "The energy of a green photon",
+          "given": "Green light has a wavelength of 550 nm. Find its frequency and the energy of one photon. Take c = 3.00 × 10^8 m/s and h = 6.626 × 10^-34 J s.",
+          "steps": [
+            "Convert the wavelength to metres: λ = 550 nm = 550 × 10^-9 m = 5.50 × 10^-7 m.",
+            "Frequency from c = λf: f = c / λ = (3.00 × 10^8) / (5.50 × 10^-7) = 5.45 × 10^14 Hz.",
+            "Photon energy from E = hf: E = (6.626 × 10^-34) × (5.45 × 10^14) = 3.6 × 10^-19 J."
+          ],
+          "result": "The photon has a frequency of about 5.5 × 10^14 Hz and carries about 3.6 × 10^-19 J of energy."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "The single thread through the spectrum",
+          "body": "Every region of the spectrum obeys the same two equations. What distinguishes an X-ray from a radio wave is simply where it sits on the scale of λ, f and E, and that position decides which transitions it can drive."
+        }
+      ],
+      "cta": {
+        "kind": "cta",
+        "title": "Check what you have learned",
+        "body": "Take the Lesson 1 quiz to test the wave and quantum pictures, the spectrum, and the relationships between the parameters.",
+        "href": "/lessons/emr-nature/quiz",
+        "linkLabel": "Take the Lesson 1 quiz",
+        "secondaryHref": "/lessons/wave-theory",
+        "secondaryLabel": "Next: the wave theory of light"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "emr-mcq-001",
+      "topicId": "wave-nature",
+      "quick": true,
+      "question": "In an electromagnetic wave, the electric field and the magnetic field are:",
+      "options": [
+        "Parallel to each other and to the direction of travel",
+        "Mutually perpendicular and both perpendicular to the direction of travel",
+        "Both parallel to the direction of travel",
+        "Parallel to each other but perpendicular to the direction of travel"
+      ],
+      "answer": 1,
+      "explanation": "The electric and magnetic fields oscillate at right angles to each other and to the direction in which the wave moves, which is what makes the wave transverse."
+    },
+    {
+      "kind": "truefalse",
+      "id": "emr-tf-001",
+      "topicId": "wave-nature",
+      "quick": true,
+      "question": "In a vacuum, all electromagnetic radiation travels at the same speed.",
+      "answer": true,
+      "explanation": "Every region of the spectrum travels at c in a vacuum. What differs between radio waves and gamma rays is the wavelength and frequency, not the speed."
+    },
+    {
+      "kind": "numeric",
+      "id": "emr-num-001",
+      "topicId": "wave-nature",
+      "question": "Infrared radiation has a wavelength of 1.0 × 10^-6 m. What is its frequency, in hertz? Take c = 3.0 × 10^8 m/s.",
+      "answer": 300000000000000.0,
+      "tolerance": 20000000000000.0,
+      "unit": "Hz",
+      "explanation": "f = c / λ = (3.0 × 10^8) / (1.0 × 10^-6) = 3.0 × 10^14 Hz."
+    },
+    {
+      "id": "emr-mcq-002",
+      "topicId": "wave-nature",
+      "question": "The wavelength of a wave is the distance between:",
+      "options": [
+        "The origin and the first crest",
+        "Two corresponding points on the wave, such as crest to crest",
+        "One crest and the nearest trough",
+        "The start and end of the wave"
+      ],
+      "answer": 1,
+      "explanation": "The wavelength is the repeat distance of the wave: from one crest to the next, or equivalently between any two corresponding points."
+    },
+    {
+      "id": "emr-mcq-003",
+      "topicId": "quantum-nature",
+      "quick": true,
+      "question": "The energy carried by a single photon is given by:",
+      "options": [
+        "E = h/λ",
+        "E = hf",
+        "E = fc",
+        "E = h + f"
+      ],
+      "answer": 1,
+      "explanation": "A photon’s energy is the Planck constant times the frequency, E = hf. Higher frequency therefore means more energetic photons."
+    },
+    {
+      "kind": "truefalse",
+      "id": "emr-tf-002",
+      "topicId": "quantum-nature",
+      "quick": true,
+      "question": "A photon of ultraviolet light carries more energy than a photon of visible light.",
+      "answer": true,
+      "explanation": "Ultraviolet has a higher frequency than visible light, and since E = hf, a higher frequency means a more energetic photon."
+    },
+    {
+      "id": "emr-mcq-004",
+      "topicId": "quantum-nature",
+      "quick": true,
+      "question": "The quantum picture of light is needed to explain:",
+      "options": [
+        "Diffraction around an obstacle",
+        "Interference fringes",
+        "The absorption and emission of light in discrete packets",
+        "The bending of light at a glass surface"
+      ],
+      "answer": 2,
+      "explanation": "Absorption and emission happen one photon at a time, so they require the quantum picture. Diffraction and interference are explained by the wave picture."
+    },
+    {
+      "kind": "numeric",
+      "id": "emr-num-002",
+      "topicId": "quantum-nature",
+      "question": "A photon has a frequency of 1.0 × 10^15 Hz. What is its energy, in joules? Take h = 6.626 × 10^-34 J s.",
+      "answer": 6.63e-19,
+      "tolerance": 1e-20,
+      "unit": "J",
+      "explanation": "E = hf = (6.626 × 10^-34) × (1.0 × 10^15) = 6.6 × 10^-19 J."
+    },
+    {
+      "id": "emr-mcq-005",
+      "topicId": "properties",
+      "quick": true,
+      "question": "Which statement about electromagnetic radiation is correct?",
+      "options": [
+        "It can travel only through a material medium",
+        "It cannot travel through a vacuum",
+        "It travels through a vacuum without needing a medium",
+        "It travels more slowly than sound in a vacuum"
+      ],
+      "answer": 2,
+      "explanation": "Electromagnetic radiation needs no medium: the oscillating fields carry it through empty space. Sound, by contrast, does need a medium."
+    },
+    {
+      "kind": "multi",
+      "id": "emr-multi-001",
+      "topicId": "properties",
+      "quick": true,
+      "question": "Which observations are evidence for the wave nature of light? Select all that apply.",
+      "options": [
+        "Diffraction around an edge",
+        "Interference fringes",
+        "The photoelectric effect",
+        "Polarisation"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Diffraction, interference and polarisation are all wave phenomena. The photoelectric effect is evidence for the particle nature."
+    },
+    {
+      "kind": "multi",
+      "id": "emr-multi-002",
+      "topicId": "properties",
+      "quick": true,
+      "question": "Which are true of electromagnetic radiation? Select all that apply.",
+      "options": [
+        "It forms a continuous spectrum",
+        "It propagates at the speed of light in vacuum",
+        "It requires a medium to travel",
+        "It interacts with matter as both waves and particles"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "EMR forms a continuous spectrum, travels at c in vacuum, and shows both wave and particle behaviour. It does not require a medium."
+    },
+    {
+      "id": "emr-mcq-006",
+      "topicId": "spectrum",
+      "quick": true,
+      "question": "Which region of the electromagnetic spectrum has the highest photon energy?",
+      "options": [
+        "Radio waves",
+        "Infrared",
+        "Visible",
+        "Gamma rays"
+      ],
+      "answer": 3,
+      "explanation": "Gamma rays have the shortest wavelengths and therefore the highest frequencies and the highest photon energies, at the far end of the spectrum."
+    },
+    {
+      "id": "emr-mcq-007",
+      "topicId": "spectrum",
+      "quick": true,
+      "question": "As you move from radio waves towards gamma rays across the spectrum:",
+      "options": [
+        "Wavelength increases and energy decreases",
+        "Wavelength decreases and energy increases",
+        "Both wavelength and energy increase",
+        "Both wavelength and energy stay constant"
+      ],
+      "answer": 1,
+      "explanation": "Moving towards gamma rays the wavelength falls while frequency and photon energy rise. The two trends run in opposite directions."
+    },
+    {
+      "kind": "numeric",
+      "id": "emr-num-003",
+      "topicId": "spectrum",
+      "question": "A photon has a wavelength of 500 nm. What is its energy, in joules? Take h = 6.626 × 10^-34 J s and c = 3.00 × 10^8 m/s.",
+      "answer": 3.98e-19,
+      "tolerance": 1e-20,
+      "unit": "J",
+      "explanation": "E = hc/λ = (6.626 × 10^-34 × 3.00 × 10^8) / (500 × 10^-9) = 3.98 × 10^-19 J."
+    },
+    {
+      "id": "emr-mcq-008",
+      "topicId": "spectrum",
+      "quick": true,
+      "question": "Vibrational transitions in molecules are typically probed with which radiation?",
+      "options": [
+        "Gamma rays",
+        "X-rays",
+        "Infrared",
+        "Radio waves"
+      ],
+      "answer": 2,
+      "explanation": "The energy gaps of molecular vibration match infrared photons. Electronic transitions need visible or ultraviolet, and nuclear transitions need gamma rays."
+    },
+    {
+      "id": "emr-mcq-009",
+      "topicId": "parameter-relations",
+      "quick": true,
+      "question": "The relationship between wavelength λ, frequency f and the speed of light c is:",
+      "options": [
+        "c = λ / f",
+        "c = λ f",
+        "c = f / λ",
+        "c = λ + f"
+      ],
+      "answer": 1,
+      "explanation": "The speed of a wave equals its wavelength times its frequency, c = λf. This fixed product is why longer wavelength means lower frequency."
+    },
+    {
+      "kind": "numeric",
+      "id": "emr-num-004",
+      "topicId": "parameter-relations",
+      "question": "Visible light has a wavelength of 600 nm. What is its frequency, in hertz? Take c = 3.0 × 10^8 m/s.",
+      "answer": 500000000000000.0,
+      "tolerance": 30000000000000.0,
+      "unit": "Hz",
+      "explanation": "f = c / λ = (3.0 × 10^8) / (600 × 10^-9) = 5.0 × 10^14 Hz."
+    },
+    {
+      "kind": "truefalse",
+      "id": "emr-tf-003",
+      "topicId": "parameter-relations",
+      "question": "Shorter wavelength radiation carries more energy per photon than longer wavelength radiation.",
+      "answer": true,
+      "explanation": "Since E = hc/λ, energy is inversely proportional to wavelength: the shorter the wavelength, the greater the photon energy."
+    },
+    {
+      "kind": "multi",
+      "id": "emr-multi-003",
+      "topicId": "parameter-relations",
+      "question": "Which equations correctly relate the parameters of electromagnetic radiation? Select all that apply.",
+      "options": [
+        "c = λf",
+        "E = hf",
+        "E = hc/λ",
+        "λ = E c"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "c = λf, E = hf and E = hc/λ are all correct. The relation λ = Ec is not; it confuses the roles of wavelength and energy."
+    }
+  ]
+}

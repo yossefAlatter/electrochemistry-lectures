@@ -6,7 +6,7 @@
 // definition of what a lesson URL looks like.
 
 import { registry, type Registry } from "./index";
-import type { Lesson, Section, Subject } from "./types";
+import type { Course, Lesson, Section, Subject } from "./types";
 import { buildNav, type NavSubject } from "@/lib/nav";
 
 /** The registry: the whole derived view of the content tree. */
@@ -16,6 +16,10 @@ export function getRegistry(): Registry {
 
 export function getSubjects(): Subject[] {
   return registry.subjects;
+}
+
+export function getCourse(id: string): Course | undefined {
+  return registry.getCourse(id);
 }
 
 /**
@@ -30,6 +34,10 @@ export function getNav(): NavSubject[] {
 
 export function homeHref(): string {
   return registry.homeHref();
+}
+
+export function courseHref(course: Course | { id: string }): string {
+  return registry.courseHref(course);
 }
 
 export function lessonHref(lesson: Lesson | { slug: string }): string {

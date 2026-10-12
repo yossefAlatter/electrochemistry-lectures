@@ -156,7 +156,7 @@ Anodic and cathodic metal deposition. Surface-layer formation. Electroactive
 layers and modified electrodes. Scanning probe techniques. Spectroelectrochemistry
 and coupled characterisation.
 
-### L16 — Advanced topics · A ch.24–36, B ch.18 (done)
+### L16 — Advanced topics · A ch.29, B ch.18 (done)
 Electrocatalysis. Photoelectrochemistry and electrogenerated chemiluminescence.
 Conductive polymers. Solid-state electrochemistry. Bioelectrochemistry.
 Nanoelectrochemistry and computer simulation.
@@ -169,54 +169,54 @@ The original plan stopped at L16 and folded the remaining Bagotsky chapters into
 it. That material was instead written out as twelve further lessons, so the
 later chapters get the same depth as the core:
 
-### L17 — Solid-state electrochemistry · A ch.29–30
+### L17 — Solid-state electrochemistry · A ch.25
 Ionic conduction in solids and solid electrolytes. Point defects and their
 equilibria. Intercalation and insertion. Solid-state cells, sensors and devices.
 
-### L18 — Conducting polymers · A ch.28
+### L18 — Conducting polymers · A ch.26
 Conjugated backbones and charge carriers. Doping and the insulator-to-metal
 transition. Redox and capacitive behaviour. Applications in devices and sensors.
 
-### L19 — Studying the electrode surface · A ch.16, B ch.14
+### L19 — Studying the electrode surface · A ch.10,27, B ch.14
 What "the surface" means at atomic scale. Real vs ideal surfaces. Adsorption and
 its measurement. In-situ structural probes and the information each gives.
 
-### L20 — Electrocatalysis · A ch.31, B ch.3.6
+### L20 — Electrocatalysis · A ch.28, B ch.3
 Why catalysts change rate but not thermodynamics. Adsorption energy and the
 volcano relation. Reaction pathways, promoting and poisoning. Fuel-cell and
 water-splitting catalysts.
 
-### L21 — Bioelectrochemistry · A ch.27,35
+### L21 — Bioelectrochemistry · A ch.30
 Electrochemistry of biological molecules. Electron transfer in and between
 proteins. Biosensors and mediators. Biofuel cells and biocompatible interfaces.
 
-### L22 — Electrokinetic phenomena · A ch.23
+### L22 — Electrokinetic phenomena · A ch.31
 Charge on a moving interface. Electrophoresis, electro-osmosis, streaming and
 sedimentation potentials. The zeta potential. Electrokinetic characterisation.
 
-### L23 — Liquid-liquid interfaces · A ch.24–25
+### L23 — Liquid-liquid interfaces · A ch.32
 The interface between two immiscible electrolyte solutions. Ion and electron
 transfer across the ITIES. Distribution potentials. Polarised interfaces and
 their voltammetry.
 
-### L24 — Unusual electrochemical phenomena · A ch.26
+### L24 — Unusual electrochemical phenomena · A ch.33
 Oscillatory and chaotic reactions. Pattern and structure formation at
 electrodes. Spontaneous and current oscillations. What out-of-equilibrium
 electrochemistry reveals.
 
-### L25 — The elementary act of electron transfer · A ch.32
+### L25 — The elementary act of electron transfer · A ch.34
 The single electron-transfer step. Franck-Condon and reorganisational energy.
 Marcus theory and its predictions. Adiabatic vs non-adiabatic transfer.
 
-### L26 — Computer simulation in electrochemistry · A ch.33
+### L26 — Computer simulation in electrochemistry · A ch.35
 What simulation adds to theory. Molecular dynamics and Monte Carlo. Continuum
 and finite-difference simulation of transport and kinetics. Choosing a model.
 
-### L27 — Nanoelectrochemistry · A ch.34, B ch.18
+### L27 — Nanoelectrochemistry · A ch.36, B ch.18
 Behaviour at the nanoscale. Nanoelectrodes and their unusual responses. Single
 molecule and single particle electrochemistry. Nanostructured electrodes.
 
-### L28 — The development of electrochemistry · A ch.36–37
+### L28 — The development of electrochemistry · A ch.37
 From Galvani and Volta to the modern field. How the concepts in this course were
 discovered. Electrochemistry in industry and its contemporary frontiers.
 

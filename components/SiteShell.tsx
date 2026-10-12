@@ -3,8 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { homeHref, lessonHref, quizHref, sectionHref } from "@/lib/links";
-import type { NavSubject } from "@/lib/nav";
+import {
+  courseHref,
+  homeHref,
+  lessonHref,
+  quizHref,
+  sectionHref,
+} from "@/lib/links";
+import type { NavCourse, NavSubject } from "@/lib/nav";
 import ThemeToggle from "@/components/ThemeToggle";
 import { t } from "@/lib/i18n";
 
@@ -124,8 +130,11 @@ function SidebarBody({
   onNavigate: () => void;
 }) {
   const pathname = usePathname();
-  const subjects = nav;
   const d = t();
+  const courses = nav.flatMap((s) => s.courses);
+  const activeCourse = courses.find((course) =>
+    isCourseActive(course, pathname),
+  );
 
   return (
     <div className="flex min-h-full flex-col">
@@ -159,79 +168,15 @@ function SidebarBody({
       </div>
 
       <div className="flex-1 px-3 py-4">
-        {subjects.map((subject) => (
-          <div key={subject.slug} className="mb-6">
-            {subjects.length > 1 && (
-              <h2 className="px-2 pb-2 text-[0.68rem] font-bold uppercase tracking-[0.15em] text-faint">
-                {subject.title}
-              </h2>
-            )}
-
-            {subject.courses.map((course) => (
-              <div key={course.id} className="mb-4 last:mb-0">
-                <h3 className="px-2 pb-1.5 text-[0.68rem] font-bold uppercase tracking-[0.15em] text-faint">
-                  {course.title}
-                </h3>
-                <ul className="space-y-0.5">
-                  {course.lessons.map((lesson) => {
-                    const lessonBase = lessonHref(lesson);
-                    const onLesson =
-                      pathname === lessonBase ||
-                      pathname.startsWith(`${lessonBase}/`);
-                    return (
-                      <li key={lesson.slug}>
-                        <Link
-                          href={lessonBase}
-                          onClick={onNavigate}
-                          aria-current={pathname === lessonBase ? "page" : undefined}
-                          className={[
-                            "flex items-baseline justify-between gap-2 rounded-lg px-2.5 py-2.5",
-                            "text-[0.94rem] leading-snug transition-colors",
-                            onLesson
-                              ? "bg-accent-light font-semibold text-accent-dark"
-                              : "text-ink-soft hover:bg-tint hover:text-ink",
-                          ].join(" ")}
-                        >
-                          <span className="min-w-0">{lesson.label}</span>
-                          <span
-                            className={[
-                              "shrink-0 text-[0.68rem] font-semibold tabular-nums",
-                              onLesson ? "text-accent" : "text-faint",
-                            ].join(" ")}
-                          >
-                            {lesson.sections.length}
-                          </span>
-                        </Link>
-
-                        {onLesson && (
-                          <ul className="mb-1 ms-2.5 mt-0.5 space-y-0.5 border-s border-rule ps-2">
-                            {lesson.sections.map((s) => (
-                              <SubLink
-                                key={s.id}
-                                href={sectionHref(lesson, s)}
-                                label={s.title}
-                                tone={s.tone}
-                                active={pathname === sectionHref(lesson, s)}
-                                onNavigate={onNavigate}
-                              />
-                            ))}
-                            <SubLink
-                              href={quizHref(lesson)}
-                              label={d.navAllQuestions}
-                              tone={undefined}
-                              active={pathname === quizHref(lesson)}
-                              onNavigate={onNavigate}
-                            />
-                          </ul>
-                        )}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            ))}
-          </div>
-        ))}
+        {activeCourse ? (
+          <CourseLessons
+            course={activeCourse}
+            pathname={pathname}
+            onNavigate={onNavigate}
+          />
+        ) : (
+          <CourseIndex courses={courses} onNavigate={onNavigate} />
+        )}
 
         <div className="rounded-lg border border-rule bg-surface-2 px-3 py-3 text-[0.8rem] leading-relaxed text-ink-soft">
           <p className="font-semibold text-ink">{d.navHowBuiltTitle}</p>
@@ -243,6 +188,151 @@ function SidebarBody({
         <p className="font-semibold text-ink-soft">Yossef Hafez Alatter</p>
         <p>{d.navSecondAuthor}</p>
       </div>
+    </div>
+  );
+}
+
+/** Does this URL belong to the course page or one of its lessons? */
+function isCourseActive(course: NavCourse, pathname: string): boolean {
+  const base = courseHref(course);
+  if (pathname === base || pathname.startsWith(`${base}/`)) return true;
+  return course.lessons.some((lesson) => {
+    const lb = lessonHref(lesson);
+    return pathname === lb || pathname.startsWith(`${lb}/`);
+  });
+}
+
+/** Shown when no course is open: the list of courses to choose from. */
+function CourseIndex({
+  courses,
+  onNavigate,
+}: {
+  courses: NavCourse[];
+  onNavigate: () => void;
+}) {
+  const pathname = usePathname();
+  const d = t();
+  return (
+    <div className="mb-6">
+      <h2 className="px-2 pb-2 text-[0.68rem] font-bold uppercase tracking-[0.15em] text-faint">
+        {d.coursesHeading}
+      </h2>
+      <ul className="space-y-0.5">
+        {courses.map((course) => {
+          const href = courseHref(course);
+          const active = pathname === href;
+          return (
+            <li key={course.id}>
+              <Link
+                href={href}
+                onClick={onNavigate}
+                aria-current={active ? "page" : undefined}
+                className={[
+                  "flex items-baseline justify-between gap-2 rounded-lg px-2.5 py-2.5",
+                  "text-[0.94rem] leading-snug transition-colors",
+                  active
+                    ? "bg-accent-light font-semibold text-accent-dark"
+                    : "text-ink-soft hover:bg-tint hover:text-ink",
+                ].join(" ")}
+              >
+                <span className="min-w-0 font-semibold">{course.title}</span>
+                <span className="shrink-0 text-[0.68rem] font-semibold text-faint tabular-nums">
+                  {course.lessons.length}
+                </span>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
+
+/** Shown inside a course: its lessons, with sections under the active one. */
+function CourseLessons({
+  course,
+  pathname,
+  onNavigate,
+}: {
+  course: NavCourse;
+  pathname: string;
+  onNavigate: () => void;
+}) {
+  const d = t();
+  return (
+    <div className="mb-6">
+      <Link
+        href={homeHref()}
+        onClick={onNavigate}
+        className="mb-2 inline-flex items-center gap-1.5 px-2 text-[0.68rem] font-bold uppercase tracking-[0.15em] text-faint transition-colors hover:text-accent"
+      >
+        <span aria-hidden="true">←</span>
+        {d.allCourses}
+      </Link>
+      <h2 className="px-2 pb-1.5">
+        <Link
+          href={courseHref(course)}
+          onClick={onNavigate}
+          className="text-[0.8rem] font-bold uppercase tracking-[0.1em] text-ink-soft transition-colors hover:text-accent"
+        >
+          {course.title}
+        </Link>
+      </h2>
+      <ul className="space-y-0.5">
+        {course.lessons.map((lesson) => {
+          const lessonBase = lessonHref(lesson);
+          const onLesson =
+            pathname === lessonBase || pathname.startsWith(`${lessonBase}/`);
+          return (
+            <li key={lesson.slug}>
+              <Link
+                href={lessonBase}
+                onClick={onNavigate}
+                aria-current={pathname === lessonBase ? "page" : undefined}
+                className={[
+                  "flex items-baseline justify-between gap-2 rounded-lg px-2.5 py-2.5",
+                  "text-[0.94rem] leading-snug transition-colors",
+                  onLesson
+                    ? "bg-accent-light font-semibold text-accent-dark"
+                    : "text-ink-soft hover:bg-tint hover:text-ink",
+                ].join(" ")}
+              >
+                <span className="min-w-0">{lesson.label}</span>
+                <span
+                  className={[
+                    "shrink-0 text-[0.68rem] font-semibold tabular-nums",
+                    onLesson ? "text-accent" : "text-faint",
+                  ].join(" ")}
+                >
+                  {lesson.sections.length}
+                </span>
+              </Link>
+
+              {onLesson && (
+                <ul className="mb-1 ms-2.5 mt-0.5 space-y-0.5 border-s border-rule ps-2">
+                  {lesson.sections.map((s) => (
+                    <SubLink
+                      key={s.id}
+                      href={sectionHref(lesson, s)}
+                      label={s.title}
+                      tone={s.tone}
+                      active={pathname === sectionHref(lesson, s)}
+                      onNavigate={onNavigate}
+                    />
+                  ))}
+                  <SubLink
+                    href={quizHref(lesson)}
+                    label={d.navAllQuestions}
+                    tone={undefined}
+                    active={pathname === quizHref(lesson)}
+                    onNavigate={onNavigate}
+                  />
+                </ul>
+              )}
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }

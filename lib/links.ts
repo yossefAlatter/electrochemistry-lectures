@@ -16,9 +16,18 @@ export interface SectionRef {
   id: string;
 }
 
+/** The least a thing needs to have a course URL. */
+export interface CourseRef {
+  id: string;
+}
+
 /** The site is served from the root, so URLs carry no locale prefix. */
 export function homeHref(): string {
   return "/";
+}
+
+export function courseHref(course: CourseRef): string {
+  return `/courses/${course.id}`;
 }
 
 export function lessonHref(lesson: LessonRef): string {

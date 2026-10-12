@@ -1,0 +1,413 @@
+{
+  "slug": "photoelectric-effect",
+  "label": "Lesson 3",
+  "title": "The photoelectric effect",
+  "summary": "When light strikes a metal surface, electrons can be ejected. The rules this follows, and Einstein’s photon explanation of them, were decisive evidence that light has a particle nature as well as a wave nature.",
+  "source": "Written fresh; spectroscopy foundations",
+  "order": 3,
+  "minutes": 27,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "The wave theory was hugely successful, but one experiment refused to fit it. Shine light on a clean metal surface and electrons fly off. This is the *photoelectric effect*, and the detailed rules it obeys are impossible to explain with waves alone."
+    },
+    {
+      "kind": "para",
+      "text": "The effect opened the quantum chapter of physics. This lesson sets out the observations, Einstein’s explanation, and the way the effect ties directly into wave-particle duality."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The problem in one line",
+      "body": "The photoelectric effect depends on the *frequency* of the light, not its intensity, and the electrons appear instantly. Neither fact fits a model of light as a continuous wave."
+    }
+  ],
+  "sections": [
+    {
+      "id": "threshold",
+      "tone": "azure",
+      "title": "Threshold frequency and instantaneous emission",
+      "summary": "Electrons are ejected only above a threshold frequency, and they appear at once; brighter light ejects more electrons, but not more energetic ones.",
+      "minutes": 7,
+      "keyPoints": [
+        "Below a threshold frequency f0 no electrons are ejected, however intense the light.",
+        "Above the threshold, increasing the intensity increases the number of electrons, not their energy.",
+        "Emission is instantaneous, within about 10^-9 s, once the threshold is reached.",
+        "These rules clash with a wave picture, in which energy would build up gradually."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Shine light on a clean metal surface and, if the light is energetic enough, electrons are released. Measure them carefully and several rules emerge, all of them surprising from a wave point of view."
+        },
+        {
+          "kind": "list",
+          "items": [
+            "*Threshold frequency*: below a certain minimum frequency f0, no electrons are emitted at all, no matter how bright the light.",
+            "*Intensity sets numbers, not energy*: above the threshold, a brighter light produces more electrons, but each electron carries the same energy.",
+            "*Instantaneous*: the electrons appear the moment the light strikes the surface, within about 10^-9 s."
+          ],
+          "ordered": false
+        },
+        {
+          "kind": "para",
+          "text": "The wave picture predicts the opposite on both counts. A more intense wave delivers more energy, so a brighter light should eventually free electrons even at low frequency, given time to build up. And the energy should accumulate gradually, so emission should lag behind the light. Neither happens."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "What actually controls the energy",
+          "body": "In the photoelectric effect the energy of the ejected electrons depends on the *frequency* of the light, and the *number* of electrons depends on the intensity. Frequency and intensity play entirely separate roles."
+        }
+      ]
+    },
+    {
+      "id": "einstein",
+      "tone": "indigo",
+      "title": "Einstein’s explanation",
+      "summary": "Einstein treated light as photons: a single photon is absorbed by a single electron, and its energy must first pay the work function before any is left as kinetic energy.",
+      "minutes": 7,
+      "keyPoints": [
+        "Light arrives as photons of energy hf, and one photon is absorbed by one electron.",
+        "The work function Φ is the minimum energy needed to remove an electron from the metal.",
+        "Energy conservation gives hf = Φ + KE_max.",
+        "An electron gains kinetic energy only from the surplus above the work function."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "In 1905 Einstein explained the effect by taking the quantum idea seriously. Light is not a continuous wave when it interacts with matter: it arrives as photons, each of energy hf. A single photon is absorbed by a single electron in a single, localised event."
+        },
+        {
+          "kind": "para",
+          "text": "Every metal holds its electrons with some minimum binding energy, called the *work function* Φ. Before an electron can escape, the incoming photon must supply at least that much energy. Whatever is left over becomes the electron’s kinetic energy."
+        },
+        {
+          "kind": "formula",
+          "tex": "h f = \\Phi + KE_{max}",
+          "caption": "Einstein’s photoelectric equation"
+        },
+        {
+          "kind": "para",
+          "text": "This one equation explains every observation. If hf is below Φ, the photon cannot free an electron at all, which is the threshold. Above it, the surplus hf − Φ becomes kinetic energy, so the electron energy rises with frequency. Raising the intensity adds more photons and so more electrons, but each still carries only hf − Φ. And absorption is a single instant, so emission is instantaneous."
+        },
+        {
+          "kind": "callout",
+          "variant": "example",
+          "title": "Reading the equation",
+          "body": "The work function Φ is a property of the metal, for example about 1.95 eV for caesium. Light of a given frequency delivers a fixed photon energy hf. The equation says that the electron keeps the difference, no matter how intense the beam."
+        }
+      ]
+    },
+    {
+      "id": "stopping-potential",
+      "tone": "violet",
+      "title": "Photocurrent and stopping potential",
+      "summary": "The stopping potential is the voltage that just halts the most energetic electrons; measuring it gives the maximum kinetic energy directly.",
+      "minutes": 7,
+      "keyPoints": [
+        "A photocurrent flows when ejected electrons are collected at an anode.",
+        "A reverse voltage can oppose them; the stopping potential V0 is the voltage that just stops the fastest electrons.",
+        "The maximum kinetic energy is KE_max = e V0.",
+        "Below the threshold frequency no current flows at any voltage."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "To measure the electron energies, arrange the ejected electrons to cross an evacuated tube to a collecting electrode. A current flows. Now apply a reverse voltage to push the electrons back, and increase it until the current just falls to zero."
+        },
+        {
+          "kind": "para",
+          "text": "That critical voltage is the *stopping potential* V0. It measures the kinetic energy of the *fastest* electrons, because they are the last to be stopped. Since the potential energy gained by a charge e crossing a voltage V0 is eV0, the maximum kinetic energy is found from the stopping potential alone."
+        },
+        {
+          "kind": "formula",
+          "tex": "KE_{max} = e V_0 \\qquad\\qquad e V_0 = h f - \\Phi",
+          "caption": "The stopping potential and the work function"
+        },
+        {
+          "kind": "para",
+          "text": "Plotting the stopping potential against the frequency of the light gives a straight line whose slope is h/e and whose intercept gives Φ. This was one of the first measurements to yield a value of the Planck constant, and it agreed with the value found from black-body radiation."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "What the graph shows",
+          "body": "The stopping-potential graph is a straight line that crosses zero at the threshold frequency f0. Below f0 there is no current at all; above it the line rises with slope h/e, independent of the metal. Only the intercept, the work function, changes from one metal to another."
+        }
+      ]
+    },
+    {
+      "id": "significance",
+      "tone": "rose",
+      "title": "Why the photoelectric effect matters",
+      "summary": "The photoelectric effect proved that light interacts with matter as discrete quanta, laying the groundwork for wave-particle duality.",
+      "minutes": 6,
+      "keyPoints": [
+        "A single photon interacts with a single electron, with energy transferred in one localised event.",
+        "Threshold frequency and instantaneous emission cannot be explained by a continuous wave.",
+        "The effect shows that light carries energy in quanta of size hf.",
+        "It was a direct step towards wave-particle duality and the de Broglie hypothesis."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The photoelectric effect is more than a curiosity. It showed that, whatever light does while it travels, it exchanges energy with matter in discrete packets. A single photon strikes a single electron, and the energy is handed over in one localised event, not spread across a wave."
+        },
+        {
+          "kind": "para",
+          "text": "That is why the threshold and the instantaneity are decisive. A wave would share its energy over the whole surface and take time to build enough to free an electron; a photon either has enough energy or it does not, and it delivers it at once."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "The groundwork for duality",
+          "body": "The photoelectric effect forced physics to accept that light is both wave and particle. It led directly to the de Broglie hypothesis, that particles too have a wavelength, which the next lesson develops."
+        },
+        {
+          "kind": "para",
+          "text": "Downstream, the same physics is used every day. Photomultipliers and photodiodes rely on it to detect light, and photoelectron spectroscopy uses it to measure the electronic energy levels of materials. In this sense the effect is not only a founding experiment but a working tool."
+        }
+      ],
+      "cta": {
+        "title": "Check what you have learned",
+        "body": "Take the Lesson 3 quiz on the threshold frequency, Einstein’s equation, the stopping potential and the significance of the effect.",
+        "href": "/lessons/photoelectric-effect/quiz",
+        "linkLabel": "Take the Lesson 3 quiz",
+        "secondaryHref": "/lessons/light-matter",
+        "secondaryLabel": "Next: interaction of light with matter"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "pe-mcq-001",
+      "topicId": "threshold",
+      "quick": true,
+      "question": "Below the threshold frequency, no electrons are emitted no matter how intense the light is. This shows that:",
+      "options": [
+        "Brighter light has more energy per photon",
+        "Photon energy depends on frequency, not intensity",
+        "Electrons have no charge",
+        "Metals cannot absorb light"
+      ],
+      "answer": 1,
+      "explanation": "Intensity changes the number of photons, not the energy of each one. Below the threshold no individual photon has enough energy to free an electron, however many arrive."
+    },
+    {
+      "kind": "truefalse",
+      "id": "pe-tf-001",
+      "topicId": "threshold",
+      "quick": true,
+      "question": "Increasing the intensity of light above the threshold increases the energy of each ejected electron.",
+      "answer": false,
+      "explanation": "Intensity increases the number of electrons ejected, but each electron’s energy is set by the frequency. Only frequency changes the electron energy."
+    },
+    {
+      "id": "pe-mcq-002",
+      "topicId": "threshold",
+      "quick": true,
+      "question": "Above the threshold frequency, increasing the light intensity increases:",
+      "options": [
+        "The kinetic energy of each electron",
+        "The number of electrons emitted per second",
+        "The work function",
+        "The speed of light"
+      ],
+      "answer": 1,
+      "explanation": "More intense light means more photons per second, so more electrons are ejected. Their individual energy depends only on the photon energy hf and the work function."
+    },
+    {
+      "kind": "truefalse",
+      "id": "pe-tf-002",
+      "topicId": "threshold",
+      "quick": true,
+      "question": "In the photoelectric effect, emission is essentially instantaneous once the threshold frequency is reached.",
+      "answer": true,
+      "explanation": "Emission happens within about 10^-9 s. A single photon is absorbed by a single electron at once, so no time is needed to accumulate energy."
+    },
+    {
+      "id": "pe-mcq-003",
+      "topicId": "einstein",
+      "quick": true,
+      "question": "In Einstein’s picture of the photoelectric effect, one photon is absorbed by:",
+      "options": [
+        "The whole metal surface",
+        "One electron",
+        "Several electrons at once",
+        "The nucleus"
+      ],
+      "answer": 1,
+      "explanation": "The interaction is one photon with one electron, a single localised event. This one-to-one transfer is what makes the effect depend on photon energy rather than intensity."
+    },
+    {
+      "id": "pe-mcq-004",
+      "topicId": "einstein",
+      "quick": true,
+      "question": "The work function Φ of a metal is:",
+      "options": [
+        "The energy of the incident light",
+        "The minimum energy needed to remove an electron from the metal",
+        "The kinetic energy of the ejected electron",
+        "The speed of the electrons"
+      ],
+      "answer": 1,
+      "explanation": "The work function is the minimum energy required to liberate an electron from the metal surface. The photon must supply at least this much before any electron is freed."
+    },
+    {
+      "id": "pe-mcq-005",
+      "topicId": "einstein",
+      "quick": true,
+      "question": "Einstein’s photoelectric equation is:",
+      "options": [
+        "hf = Φ + KE_max",
+        "hf = Φ × KE_max",
+        "KE_max = Φ − hf",
+        "hf = KE_max / Φ"
+      ],
+      "answer": 0,
+      "explanation": "The photon energy hf is divided between the work function Φ and the maximum kinetic energy: hf = Φ + KE_max."
+    },
+    {
+      "kind": "numeric",
+      "id": "pe-num-001",
+      "topicId": "einstein",
+      "question": "A photon of energy 5.0 eV strikes a metal with work function 2.0 eV. What is the maximum kinetic energy of the ejected electron, in eV?",
+      "answer": 3.0,
+      "tolerance": 0.1,
+      "unit": "eV",
+      "explanation": "KE_max = hf − Φ = 5.0 − 2.0 = 3.0 eV."
+    },
+    {
+      "kind": "numeric",
+      "id": "pe-num-002",
+      "topicId": "einstein",
+      "question": "Light of frequency 1.0 × 10^15 Hz strikes a metal of work function 3.0 × 10^-19 J. What is the maximum kinetic energy of an ejected electron, in joules? Take h = 6.626 × 10^-34 J s.",
+      "answer": 3.6e-19,
+      "tolerance": 2e-20,
+      "unit": "J",
+      "explanation": "hf = 6.626 × 10^-34 × 1.0 × 10^15 = 6.63 × 10^-19 J; KE_max = 6.63 × 10^-19 − 3.0 × 10^-19 = 3.6 × 10^-19 J."
+    },
+    {
+      "kind": "multi",
+      "id": "pe-multi-001",
+      "topicId": "einstein",
+      "quick": true,
+      "question": "Which statements about the photoelectric effect are correct? Select all that apply.",
+      "options": [
+        "A photon transfers its energy to a single electron",
+        "The photon energy must exceed the work function to free an electron",
+        "The excess energy becomes the electron’s kinetic energy",
+        "Brighter light lowers the work function"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Absorption is one photon to one electron, and the photon energy must exceed the work function; the surplus becomes kinetic energy. Intensity does not change the work function."
+    },
+    {
+      "id": "pe-mcq-006",
+      "topicId": "stopping-potential",
+      "quick": true,
+      "question": "The stopping potential is the reverse voltage that:",
+      "options": [
+        "Doubles the photocurrent",
+        "Just stops the fastest emitted electrons",
+        "Stops all light from entering",
+        "Increases the work function"
+      ],
+      "answer": 1,
+      "explanation": "The stopping potential is the reverse voltage at which the photocurrent falls to zero, because even the most energetic electrons can no longer reach the collector."
+    },
+    {
+      "id": "pe-mcq-007",
+      "topicId": "stopping-potential",
+      "quick": true,
+      "question": "The maximum kinetic energy of the ejected electrons is given by:",
+      "options": [
+        "KE_max = V0",
+        "KE_max = eV0",
+        "KE_max = e/V0",
+        "KE_max = V0/e"
+      ],
+      "answer": 1,
+      "explanation": "An electron of charge e crossing a potential difference V0 gains energy eV0. So the stopping potential directly measures the maximum kinetic energy: KE_max = eV0."
+    },
+    {
+      "kind": "numeric",
+      "id": "pe-num-003",
+      "topicId": "stopping-potential",
+      "question": "A photoelectric experiment gives a stopping potential of 1.5 V. What is the maximum kinetic energy of the electrons, in eV?",
+      "answer": 1.5,
+      "tolerance": 0.05,
+      "unit": "eV",
+      "explanation": "KE_max = eV0; with V0 = 1.5 V, the maximum kinetic energy is 1.5 eV."
+    },
+    {
+      "kind": "truefalse",
+      "id": "pe-tf-003",
+      "topicId": "stopping-potential",
+      "quick": true,
+      "question": "A plot of stopping potential against frequency is a straight line whose slope is independent of the metal used.",
+      "answer": true,
+      "explanation": "The slope is h/e, a universal constant. Only the intercept, which gives the work function, differs from one metal to another."
+    },
+    {
+      "id": "pe-mcq-008",
+      "topicId": "stopping-potential",
+      "quick": true,
+      "question": "If the frequency of the light is below the threshold frequency, the photocurrent at any applied voltage is:",
+      "options": [
+        "Very large",
+        "Zero",
+        "Equal to the intensity",
+        "Independent of frequency"
+      ],
+      "answer": 1,
+      "explanation": "Below the threshold no photons have enough energy to free an electron, so no electrons are emitted and the current is zero regardless of the voltage."
+    },
+    {
+      "id": "pe-mcq-009",
+      "topicId": "significance",
+      "quick": true,
+      "question": "The photoelectric effect is strong evidence that light:",
+      "options": [
+        "Is a continuous wave",
+        "Interacts with matter in discrete quanta",
+        "Has no energy",
+        "Cannot eject electrons from metals"
+      ],
+      "answer": 1,
+      "explanation": "Because energy is transferred one photon at a time, the effect shows that light interacts with matter in discrete quanta of size hf, a particle-like property."
+    },
+    {
+      "kind": "multi",
+      "id": "pe-multi-002",
+      "topicId": "significance",
+      "quick": true,
+      "question": "Which observations of the photoelectric effect cannot be explained by a continuous wave model? Select all that apply.",
+      "options": [
+        "The existence of a threshold frequency",
+        "Instantaneous emission",
+        "The dependence of electron number on intensity",
+        "The independence of electron energy from intensity"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "A threshold frequency, instantaneous emission, and electron energy independent of intensity all need the photon picture. A wave model does predict that more intensity means more energy and so more electrons."
+    },
+    {
+      "kind": "truefalse",
+      "id": "pe-tf-004",
+      "topicId": "significance",
+      "question": "The photoelectric effect led towards the idea of wave-particle duality.",
+      "answer": true,
+      "explanation": "By showing that light behaves as particles when it exchanges energy with matter, the effect forced physics to accept both wave and particle descriptions."
+    }
+  ]
+}

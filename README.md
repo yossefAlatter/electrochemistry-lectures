@@ -1,10 +1,11 @@
 # Physical Chemistry — Postgraduate
 
-Lesson material and interactive questions for a postgraduate physical chemistry
-course, currently covering electrochemistry. Mobile-first, statically generated,
-no database and no server at runtime. The course is 29 numbered lessons plus a
-problem set for each Bard & Faulkner end-of-chapter set (chapters 1–17) — 46
-lesson files, 203 sections and 1118 questions in all.
+Lesson material and interactive questions for postgraduate physical chemistry.
+The site currently carries two subjects: **Electrochemistry** (29 lessons plus
+a problem set for each Bard & Faulkner chapter 1–17) and **Spectroscopy**
+(course "Applications", 5 lessons). Mobile-first, statically generated, no
+database and no server at runtime. In all: 51 lesson files, 226 sections and
+1201 questions.
 
 Built with Next.js (App Router), TypeScript and Tailwind CSS, with KaTeX for
 the maths.
@@ -28,10 +29,13 @@ so adding material is purely additive.
 content/
   types.ts              the shape of every block, section and question
   schema.ts             the JSON lesson schema + build-time validator
-  load.ts               reads content/lessons/*.json (server only)
+  load.ts               reads each course's lesson directory (server only)
   index.ts              the subject/course tree; lessons are discovered
   lessons/
     lesson-8.json       sections + questions for one lesson
+  spectroscopy/
+    lessons/
+      emr-nature.json   a lesson in the second subject
 ```
 
 `content/index.ts` exports the subject structure and fills each course's lesson
@@ -46,7 +50,8 @@ lesson, a course or a whole subject.
 
 | Route | What it is |
 | --- | --- |
-| `/` | home: subjects, courses, lessons and their section lists |
+| `/` | home: one card per course |
+| `/courses/[course]` | course page: what the course covers, then its lessons |
 | `/lessons/[lesson]` | lesson contents: cards for each short section |
 | `/lessons/[lesson]/[section]` | one section, with Next / Previous and a quick check |
 | `/lessons/[lesson]/quiz` | the full bank for that lesson, shuffled |
@@ -60,8 +65,9 @@ All of these are prerendered at build time via `generateStaticParams`.
   the sidebar is a slide-in drawer that traps the page behind an overlay and
   closes on Escape or on navigation.
 - From `lg` up the sidebar is a permanent column.
-- When you are inside a lesson, the sidebar lists that lesson's sections and
-  marks the one you are reading.
+- The sidebar follows the course you have open: on the home page it lists the
+  courses, inside a course it lists that course's lessons, and inside a lesson
+  it also lists that lesson's sections and marks the one you are reading.
 - Buttons and links are at least 36 px tall on touch, and answer options are
   full-width rows.
 - Nothing overflows horizontally at 360 px: long equations and wide tables

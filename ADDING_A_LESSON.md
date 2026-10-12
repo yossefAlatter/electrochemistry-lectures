@@ -1,10 +1,11 @@
 # Adding material
 
-A lesson is a **JSON file**. You write one file, `content/lessons/<slug>.json`,
-and the site picks it up: the directory is the list of lessons, so there is
-nothing to register anywhere else. The components in `components/kit` and the
-templates in `components/templates` decide how it looks, so an author never
-lays out a page - they fill in data and the fixed templates place it.
+A lesson is a **JSON file**. You write one file such as
+`content/lessons/lesson-8.json`, and the site picks it up: the directory is the
+list of lessons, so there is nothing to register anywhere else. The components
+in `components/kit` and the templates in `components/templates` decide how it
+looks, so an author never lays out a page - they fill in data and the fixed
+templates place it.
 
 The nesting is:
 
@@ -14,6 +15,11 @@ Subject   Physical Chemistry          <- a subject area; others are expected
     Lesson  lesson-8.json            <- has its own question bank
       Section  cottrell              <- ONE PAGE, with Next / Previous
 ```
+
+Each **course** owns its own directory, so a second subject is separated from
+the first simply by where its files live. Electrochemistry reads
+`content/lessons/`; the second subject, Spectroscopy, groups a course
+(Applications) whose lessons live in `content/spectroscopy/lessons/`.
 
 A lesson is a set of **short section pages**, and each section closes with its
 own quick check. That structure is the whole design: no page is long enough to
@@ -106,16 +112,31 @@ is a site decision rather than lesson content:
 {
   slug: "spectroscopy",
   title: "Spectroscopy",
-  tagline: "Postgraduate · from first principles to research level",
+  tagline: "Postgraduate · light, matter and the spectra between them",
   description: "Shown on the subject block of the home page.",
-  courses: [ /* ... */ ],
+  courses: [
+    {
+      id: "applications",
+      title: "Applications",
+      description: "Shown under the course title.",
+      lessons: loadAllLessons(SPECTROSCOPY_LESSONS_DIR),
+    },
+  ],
 }
 ```
 
 Lessons inside a course are **discovered, not listed**: the `lessons` field is
-filled by `loadAllLessons()`, which reads `content/lessons/*.json` and merges
-the remaining TypeScript lessons, sorted by `order`. Do not list lessons by
-hand.
+filled by `loadAllLessons(dir)`, which reads every `*.json` in that course's
+directory, sorted by `order`. Do not list lessons by hand. Each course has its
+own directory - Electrochemistry uses the default `content/lessons/`, while
+Spectroscopy passes `SPECTROSCOPY_LESSONS_DIR` from `content/load.ts`, where a
+new course's directory constant is declared.
+
+Adding a course is enough to give it a card on the home page, a course page at
+`/courses/<id>` listing its lessons, and its own slice of the sidebar. Its `id`
+must be unique across the site, because it is the URL segment; the page,
+`generateStaticParams` and the sidebar all derive from the registry, so there is
+nothing else to wire up. Prev/next on a lesson stays inside its own course.
 
 ## What you can write in `blocks`
 

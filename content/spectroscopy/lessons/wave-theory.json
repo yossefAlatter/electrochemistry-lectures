@@ -1,0 +1,447 @@
+{
+  "slug": "wave-theory",
+  "label": "Lesson 2",
+  "title": "The wave theory of light",
+  "summary": "Before the quantum picture, light was understood as a wave. This lesson follows that theory from Huygens and Maxwell through the five behaviours it explains: reflection, refraction, diffraction, interference and polarisation.",
+  "source": "Written fresh; spectroscopy foundations",
+  "order": 2,
+  "minutes": 30,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "The wave picture introduced in Lesson 1 has a long history and a great deal of explanatory power. This lesson builds the wave theory of light and shows the five everyday behaviours it accounts for, each of which becomes a tool in spectroscopy."
+    },
+    {
+      "kind": "para",
+      "text": "The central claim is simple: light is a self-propagating electromagnetic wave. From that one idea follow reflection, refraction, diffraction, interference and polarisation."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "Why the wave theory matters",
+      "body": "Almost every optical instrument, from a prism to a diffraction grating, relies on the wave behaviour of light. Spectroscopy uses refraction to separate wavelengths and interference to measure them precisely."
+    }
+  ],
+  "sections": [
+    {
+      "id": "huygens-maxwell",
+      "tone": "azure",
+      "title": "Huygens and Maxwell",
+      "summary": "Huygens explained how a wavefront advances through a medium; Maxwell showed that light is an electromagnetic wave, uniting electricity, magnetism and optics.",
+      "minutes": 7,
+      "keyPoints": [
+        "Huygens held that every point on a wavefront acts as a source of secondary wavelets that build the next wavefront.",
+        "A wavefront is a surface of constant phase; rays are lines drawn perpendicular to the wavefronts showing the direction of travel.",
+        "Maxwell showed that oscillating electric and magnetic fields propagate as a wave at the speed of light.",
+        "This linked electricity, magnetism and optics into a single theory."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Two names anchor the wave theory. In the seventeenth century Christiaan Huygens asked how a wave moves forward through space. His answer was the *wavefront*: a surface joining all the points that are in step with one another. He proposed that every point on a wavefront acts as a tiny source of *secondary wavelets*, and the wavefront a moment later is the envelope of all those wavelets."
+        },
+        {
+          "kind": "para",
+          "text": "Picture a stone dropped in water. Circular ripples spread out; each ripple is a wavefront. If you draw an arrow at right angles to a wavefront, you get a *ray*, the direction the energy travels. Rays are the straight lines we usually draw for light, but they are only a convenience built on the underlying wavefronts."
+        },
+        {
+          "kind": "para",
+          "text": "In the nineteenth century James Clerk Maxwell went further. He wrote the equations for electric and magnetic fields and found that a disturbance in those fields travels as a wave, and that its predicted speed matched the measured speed of light. Light, he concluded, is an electromagnetic wave."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "One theory, three subjects",
+          "body": "Maxwell’s result joined electricity, magnetism and optics: the same equations that describe a current in a wire also describe a beam of light. This is the wave picture from Lesson 1, given a mathematical foundation."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "Wavefronts and rays",
+          "body": "A *wavefront* is a surface of constant phase, drawn as a line or curve. A *ray* is perpendicular to it and points along the direction of travel. Rays are how we sketch light paths, but they always rest on the wavefront underneath."
+        }
+      ]
+    },
+    {
+      "id": "reflection-refraction",
+      "tone": "indigo",
+      "title": "Reflection and refraction",
+      "summary": "Reflection bounces light off a surface at equal angles; refraction bends it as it crosses into a medium of different refractive index, an effect that separates colours.",
+      "minutes": 7,
+      "keyPoints": [
+        "In reflection the angle of incidence equals the angle of reflection, both measured from the normal.",
+        "Refraction is the bending of light as it passes between media in which it travels at different speeds.",
+        "Snell’s law relates the angles to the refractive indices: n1 sinθ1 = n2 sinθ2.",
+        "The refractive index n = c/v measures how much slower light travels in a medium than in vacuum.",
+        "Dispersion is refraction’s dependence on wavelength, which splits white light into a spectrum in a prism."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "When light meets a surface it can bounce back. This is *reflection*, and it follows a simple rule: the angle at which the light arrives, measured from the *normal* (the line perpendicular to the surface), equals the angle at which it leaves. A mirror obeys the law of reflection, and so does every surface to some degree."
+        },
+        {
+          "kind": "para",
+          "text": "Light that does not reflect passes into the new medium and bends. This is *refraction*. It happens because light travels at different speeds in different materials: slower in glass or water than in air. The change in speed at the boundary turns the wavefront, and the beam changes direction."
+        },
+        {
+          "kind": "formula",
+          "tex": "n = \\frac{c}{v} \\qquad\\qquad n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2",
+          "caption": "Refractive index and Snell’s law"
+        },
+        {
+          "kind": "para",
+          "text": "The *refractive index* n compares the speed of light in vacuum c to its speed v in the medium. Snell’s law links the angles on either side of the boundary to the indices of the two media. When light enters a denser medium (larger n) it slows and bends towards the normal; leaving for a less dense medium it speeds up and bends away."
+        },
+        {
+          "kind": "para",
+          "text": "Because the refractive index depends slightly on wavelength, different colours bend by different amounts. This is *dispersion*, and it is why a prism spreads white light into a rainbow. Dispersion is the principle behind every prism and grating spectrometer."
+        },
+        {
+          "kind": "callout",
+          "variant": "example",
+          "title": "Why a prism makes a rainbow",
+          "body": "White light contains all visible wavelengths. On entering the prism they slow by slightly different amounts, because n varies with λ, so they leave at slightly different angles. The colours separate and the spectrum appears."
+        }
+      ]
+    },
+    {
+      "id": "diffraction-interference",
+      "tone": "violet",
+      "title": "Diffraction and interference",
+      "summary": "Diffraction is the spreading of light around edges and through slits; interference is the combining of waves into bright and dark fringes. Together they are the clearest proof that light is a wave.",
+      "minutes": 7,
+      "keyPoints": [
+        "Diffraction is the bending and spreading of waves around obstacles or through narrow openings.",
+        "Interference is the superposition of two or more waves.",
+        "Constructive interference occurs where crests meet crests, giving a bright fringe; destructive interference occurs where a crest meets a trough, giving a dark fringe.",
+        "Young’s double-slit experiment produces a fringe pattern that only a wave theory can explain."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Waves do something particles cannot: they spread out when they pass an edge or a narrow slit. This is *diffraction*. The narrower the opening relative to the wavelength, the more pronounced the spreading. A simple shadow with sharp edges is what particles would give; what light actually gives is a soft, fringed edge."
+        },
+        {
+          "kind": "para",
+          "text": "When two sets of waves overlap, they *interfere*. Where two crests meet, the waves add to a larger amplitude; where a crest meets a trough, they cancel. Applied to light, this produces a pattern of bright and dark bands called *fringes*."
+        },
+        {
+          "kind": "para",
+          "text": "Thomas Young demonstrated this with two closely spaced slits. Light from the two slits overlaps on a screen and forms a pattern of alternating bright and dark lines, evenly spaced. No particle picture can account for the dark regions, where two beams of light have somehow produced darkness."
+        },
+        {
+          "kind": "list",
+          "items": [
+            "*Constructive interference*: path difference is a whole number of wavelengths, so crests align and the fringe is bright.",
+            "*Destructive interference*: path difference is an odd number of half-wavelengths, so a crest meets a trough and the fringe is dark."
+          ],
+          "ordered": false
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "The decisive evidence",
+          "body": "Diffraction and interference are the core proof of the wave nature of light. They set the wave picture against the particle picture, and the quantum story you meet later is built to reconcile the two."
+        }
+      ]
+    },
+    {
+      "id": "polarization",
+      "tone": "rose",
+      "title": "Polarisation",
+      "summary": "Because light is a transverse wave, its electric field can oscillate in different directions; polarisation selects one direction, which only a transverse wave allows.",
+      "minutes": 6,
+      "keyPoints": [
+        "Light is a transverse wave, so its electric field oscillates perpendicular to the direction of travel.",
+        "Polarisation is the restriction of the electric field to a single plane of oscillation.",
+        "A polarising filter transmits light oscillating in one direction and blocks the rest.",
+        "Crossed polarisers block light almost completely, a result impossible for a longitudinal wave."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Because light is a *transverse* wave, its electric field oscillates in a plane at right angles to the direction of travel. In ordinary light these planes are randomly mixed. *Polarisation* selects a single plane of oscillation."
+        },
+        {
+          "kind": "para",
+          "text": "A polarising filter acts like a picket fence for the electric field. It passes the component of the field aligned with its axis and absorbs the rest. Light emerging from one filter is polarised; if a second filter is placed at right angles to the first, it blocks the light almost entirely."
+        },
+        {
+          "kind": "para",
+          "text": "This is powerful evidence for the wave model. A longitudinal wave, which oscillates along its direction of travel rather than across it, has no sense of orientation and could never be blocked this way. Only a transverse wave can be polarised."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "Polarisation in the world",
+          "body": "Sunlight reflected from a lake or road is partially polarised, which is why polarising sunglasses cut glare. In spectroscopy, polarisation reveals molecular orientation and is used in circular dichroism to study chiral molecules."
+        }
+      ]
+    },
+    {
+      "id": "wave-summary",
+      "tone": "coral",
+      "title": "What the wave theory explains",
+      "summary": "The wave theory accounts for reflection, refraction, diffraction, interference and polarisation, the five behaviours that define the optics of light.",
+      "minutes": 5,
+      "keyPoints": [
+        "The wave theory explains reflection, refraction, diffraction, interference and polarisation.",
+        "Reflection and refraction follow from wavefronts meeting a boundary; diffraction from spreading at an edge.",
+        "Interference and polarisation follow from the wave nature itself.",
+        "These same effects become the working principles of optical instruments and spectrometers."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Gathered together, the wave theory of light explains five behaviours, each of which you have now met."
+        },
+        {
+          "kind": "list",
+          "items": [
+            "*Reflection*: light bounces off a surface at an angle equal to the incident angle.",
+            "*Refraction*: light bends on entering a new medium, following Snell’s law.",
+            "*Diffraction*: light spreads around edges and through slits.",
+            "*Interference*: overlapping waves form bright and dark fringes.",
+            "*Polarisation*: the transverse electric field can be restricted to one plane."
+          ],
+          "ordered": false
+        },
+        {
+          "kind": "para",
+          "text": "Reflection and refraction come from wavefronts meeting a boundary and changing speed. Diffraction comes from the spreading of waves at an edge. Interference and polarisation follow directly from the nature of waves. Together they form the classical optics of light, and they are the tools spectroscopy uses to select and measure wavelengths."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "Where this leads",
+          "body": "The wave theory is enormously successful, but it cannot explain everything, such as the photoelectric effect. The next lesson takes up that failure and the quantum picture it forced scientists to adopt."
+        }
+      ],
+      "cta": {
+        "title": "Check what you have learned",
+        "body": "Take the Lesson 2 quiz on Huygens and Maxwell, reflection and refraction, diffraction and interference, and polarisation.",
+        "href": "/lessons/wave-theory/quiz",
+        "linkLabel": "Take the Lesson 2 quiz",
+        "secondaryHref": "/lessons/photoelectric-effect",
+        "secondaryLabel": "Next: the photoelectric effect"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "wave-mcq-001",
+      "topicId": "huygens-maxwell",
+      "quick": true,
+      "question": "According to Huygens, a wavefront advances because:",
+      "options": [
+        "The wave stops at each surface",
+        "Every point on a wavefront is a source of secondary wavelets",
+        "Light travels as a stream of particles",
+        "The medium blocks the wave"
+      ],
+      "answer": 1,
+      "explanation": "Huygens’ principle treats each point on a wavefront as a source of secondary wavelets; their envelope forms the next wavefront. This explains how a wave propagates forward."
+    },
+    {
+      "id": "wave-mcq-002",
+      "topicId": "huygens-maxwell",
+      "quick": true,
+      "question": "A ray of light is drawn:",
+      "options": [
+        "Along a wavefront",
+        "Perpendicular to the wavefronts",
+        "At 45° to the wavefronts",
+        "Only inside a medium"
+      ],
+      "answer": 1,
+      "explanation": "A ray shows the direction of energy flow, and is drawn perpendicular to the wavefronts. Wavefronts are surfaces of constant phase."
+    },
+    {
+      "id": "wave-mcq-003",
+      "topicId": "huygens-maxwell",
+      "quick": true,
+      "question": "Maxwell showed that light is:",
+      "options": [
+        "A stream of particles",
+        "A mechanical vibration of the ether",
+        "A self-propagating electromagnetic wave",
+        "A form of sound"
+      ],
+      "answer": 2,
+      "explanation": "Maxwell’s equations showed that oscillating electric and magnetic fields propagate as a wave at the speed of light, identifying light as an electromagnetic wave."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wave-tf-001",
+      "topicId": "huygens-maxwell",
+      "quick": true,
+      "question": "Maxwell’s work linked electricity, magnetism and optics into one theory.",
+      "answer": true,
+      "explanation": "Maxwell’s equations described both electromagnetic phenomena and light with the same mathematics, uniting the three fields."
+    },
+    {
+      "id": "wave-mcq-004",
+      "topicId": "reflection-refraction",
+      "quick": true,
+      "question": "The law of reflection states that the angle of incidence is:",
+      "options": [
+        "Always 90°",
+        "Equal to the angle of reflection",
+        "Twice the angle of reflection",
+        "Independent of the angle of reflection"
+      ],
+      "answer": 1,
+      "explanation": "Measured from the normal, the angle of incidence equals the angle of reflection. This is the law of reflection obeyed by every reflecting surface."
+    },
+    {
+      "id": "wave-mcq-005",
+      "topicId": "reflection-refraction",
+      "quick": true,
+      "question": "Light bends when it enters glass from air because:",
+      "options": [
+        "Its frequency changes",
+        "Its speed changes",
+        "It is absorbed",
+        "It becomes polarised"
+      ],
+      "answer": 1,
+      "explanation": "Refraction occurs because light travels at different speeds in the two media. At the boundary the change in speed turns the wavefront, bending the beam."
+    },
+    {
+      "kind": "numeric",
+      "id": "wave-num-001",
+      "topicId": "reflection-refraction",
+      "question": "The refractive index of a medium is 1.5. If light travels at c = 3.0 × 10^8 m/s in vacuum, what is its speed in the medium, in m/s?",
+      "answer": 200000000.0,
+      "tolerance": 10000000.0,
+      "unit": "m/s",
+      "explanation": "n = c / v, so v = c / n = (3.0 × 10^8) / 1.5 = 2.0 × 10^8 m/s."
+    },
+    {
+      "id": "wave-mcq-006",
+      "topicId": "reflection-refraction",
+      "quick": true,
+      "question": "Dispersion of white light by a prism occurs because:",
+      "options": [
+        "Different wavelengths refract by different amounts",
+        "The prism absorbs some colours",
+        "Light slows to zero inside the prism",
+        "The prism reflects all colours equally"
+      ],
+      "answer": 0,
+      "explanation": "The refractive index depends slightly on wavelength, so each colour bends by a different amount and the colours separate into a spectrum."
+    },
+    {
+      "id": "wave-mcq-007",
+      "topicId": "diffraction-interference",
+      "quick": true,
+      "question": "Diffraction is the:",
+      "options": [
+        "Bouncing of light off a surface",
+        "Spreading of waves around edges or through slits",
+        "Change in colour of light",
+        "Absorption of light by matter"
+      ],
+      "answer": 1,
+      "explanation": "Diffraction is the spreading of a wave when it passes an edge or a narrow opening. It is a wave effect, pronounced when the opening is comparable to the wavelength."
+    },
+    {
+      "id": "wave-mcq-008",
+      "topicId": "diffraction-interference",
+      "quick": true,
+      "question": "In Young’s double-slit experiment, a dark fringe appears where the two waves are:",
+      "options": [
+        "In phase",
+        "Out of phase by half a wavelength",
+        "Of different colours",
+        "Polarised in the same plane"
+      ],
+      "answer": 1,
+      "explanation": "A dark fringe is destructive interference: a crest from one slit meets a trough from the other, so the waves cancel. This requires a path difference of an odd number of half-wavelengths."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wave-tf-002",
+      "topicId": "diffraction-interference",
+      "quick": true,
+      "question": "Interference and diffraction can be explained by a wave model of light.",
+      "answer": true,
+      "explanation": "Both are wave phenomena. Their appearance in Young’s experiment is the classic evidence for the wave nature of light."
+    },
+    {
+      "kind": "multi",
+      "id": "wave-multi-001",
+      "topicId": "diffraction-interference",
+      "quick": true,
+      "question": "Which conditions give constructive interference? Select all that apply.",
+      "options": [
+        "Crests meeting crests",
+        "Path difference equal to a whole number of wavelengths",
+        "A crest meeting a trough",
+        "Troughs meeting troughs"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Constructive interference needs the waves in step: crests with crests, troughs with troughs, and a path difference of a whole number of wavelengths. A crest meeting a trough is destructive."
+    },
+    {
+      "id": "wave-mcq-009",
+      "topicId": "polarization",
+      "quick": true,
+      "question": "Polarisation is possible because light is:",
+      "options": [
+        "A longitudinal wave",
+        "A transverse wave",
+        "A stream of particles",
+        "A sound wave"
+      ],
+      "answer": 1,
+      "explanation": "Only a transverse wave, whose oscillation is at right angles to travel, can be polarised. Polarisation restricts the electric field to one plane."
+    },
+    {
+      "id": "wave-mcq-010",
+      "topicId": "polarization",
+      "quick": true,
+      "question": "When two polarising filters are placed at right angles, the light passing through:",
+      "options": [
+        "Is doubled",
+        "Is almost completely blocked",
+        "Becomes brighter",
+        "Turns into sound"
+      ],
+      "answer": 1,
+      "explanation": "Crossed polarisers block nearly all the light. The first polarises the light, and the second, at right angles, absorbs it. A longitudinal wave could never be blocked this way."
+    },
+    {
+      "kind": "multi",
+      "id": "wave-multi-002",
+      "topicId": "wave-summary",
+      "quick": true,
+      "question": "Which behaviours does the wave theory of light explain? Select all that apply.",
+      "options": [
+        "Reflection",
+        "Refraction",
+        "The photoelectric effect",
+        "Polarisation"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "The wave theory explains reflection, refraction, diffraction, interference and polarisation. The photoelectric effect needs the quantum picture instead."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wave-tf-003",
+      "topicId": "wave-summary",
+      "question": "Reflection, refraction, diffraction, interference and polarisation are all wave behaviours.",
+      "answer": true,
+      "explanation": "Together they form the classical optics of light and are the evidence for its wave nature."
+    }
+  ]
+}

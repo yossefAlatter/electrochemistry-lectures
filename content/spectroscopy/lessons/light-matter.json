@@ -1,0 +1,412 @@
+{
+  "slug": "light-matter",
+  "label": "Lesson 4",
+  "title": "Interaction of light with matter",
+  "summary": "When light meets matter it can be reflected, refracted, transmitted, absorbed, scattered or emitted. This lesson surveys each interaction and shows why the matching of photon energy to energy gaps is the key to absorption and emission.",
+  "source": "Written fresh; spectroscopy foundations",
+  "order": 4,
+  "minutes": 28,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "Light rarely passes through matter untouched. Depending on the material and the wavelength, it may bounce off, bend, pass straight through, be absorbed, be scattered in all directions, or be given back later as emission. Each of these interactions is a tool in spectroscopy."
+    },
+    {
+      "kind": "para",
+      "text": "This lesson walks through the main types and highlights the principle that runs through them all: a photon is absorbed only when its energy matches a gap between two energy levels in the material."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The idea that links them all",
+      "body": "A photon is absorbed only if its energy matches the exact gap between two levels of the material. Different materials have different gaps, so they interact with different wavelengths of light."
+    }
+  ],
+  "sections": [
+    {
+      "id": "reflection-refraction-transmission",
+      "tone": "azure",
+      "title": "Reflection, refraction and transmission",
+      "summary": "Light can bounce off a surface, bend as it crosses a boundary, or pass straight through a transparent medium.",
+      "minutes": 6,
+      "keyPoints": [
+        "Reflection is the bouncing of light off a surface such as a mirror or polished metal.",
+        "Refraction is the bending of light as it passes between media in which it travels at different speeds.",
+        "Transmission is the passing of light straight through a material with little or no disruption.",
+        "A material can reflect, refract and transmit at once, in different proportions."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The simplest interactions happen at the surface. *Reflection* sends light back from a surface, as at a mirror or a polished metal. *Refraction* bends light as it crosses from one medium into another, such as from air into water or a glass prism, because the speed of light differs in the two media. The same bending separates white light into its colours."
+        },
+        {
+          "kind": "para",
+          "text": "*Transmission* is the passage of light straight through a material with little disturbance, as through clear glass or clean air. A single window pane shows all three at once: some light reflects off the surface, some refracts as it enters and leaves, and most passes through unchanged."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "One pane, three effects",
+          "body": "Stand at a lit window at night. You see the room reflected (reflection), distant lights slightly displaced if the glass is thick (refraction), and the outside scene through it (transmission). The same photon can do different things depending only on where it meets the glass."
+        }
+      ]
+    },
+    {
+      "id": "absorption",
+      "tone": "indigo",
+      "title": "Absorption",
+      "summary": "A material absorbs a photon only when the photon energy matches the gap between two of its energy levels; the absorbed energy becomes heat or lifts an electron.",
+      "minutes": 7,
+      "keyPoints": [
+        "Absorption occurs when matter takes the energy of a photon.",
+        "A photon is absorbed only if its energy matches the gap to a higher energy level.",
+        "The absorbed energy can appear as heat or as an electron promoted to a higher level.",
+        "Different materials absorb different wavelengths because their energy levels differ."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "*Absorption* is the taking up of a photon’s energy by matter. The energy may be converted to heat or used to lift an electron to a higher energy level. What decides whether absorption happens at all is a match: the photon energy must equal the gap between the electron’s current level and a higher one."
+        },
+        {
+          "kind": "para",
+          "text": "Because atoms and molecules have their own fixed sets of energy levels, each material absorbs its own characteristic wavelengths. A photon whose energy does not bridge any gap passes through unabsorbed. The absorbed energy then reappears, either as heat or as a promoted electron that will later fall back."
+        },
+        {
+          "kind": "para",
+          "text": "This wavelength selectivity explains a familiar medical fact. Soft tissue and dense bone have different atomic structures and different energy gaps, so they absorb X-ray photons to different degrees. High-energy X-rays pass through soft tissue but are blocked by bone, which is exactly why bone shows up on a radiograph."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "Absorption is the heart of spectroscopy",
+          "body": "An absorption spectrum is a map of the energy gaps in a material, read by finding which wavelengths are missing from the light that passes through. This single idea underlies UV–visible, infrared, atomic absorption and many other techniques."
+        }
+      ]
+    },
+    {
+      "id": "scattering",
+      "tone": "violet",
+      "title": "Scattering",
+      "summary": "Scattering deflects light in many directions when it meets small particles, and its strength rises steeply as wavelength falls, which is why the sky is blue.",
+      "minutes": 6,
+      "keyPoints": [
+        "Scattering occurs when light is deflected in many directions by atoms or small particles.",
+        "The scattered light leaves in directions other than the original beam.",
+        "Scattering by particles much smaller than the wavelength is stronger for shorter wavelengths.",
+        "This strong short-wavelength scattering makes the daytime sky blue and sunsets red."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "*Scattering* happens when light meets atoms or small particles and is deflected in every direction rather than being absorbed or passing straight through. The light is not destroyed; it is redirected, so it appears to come from the scattering centres as well as from the original source."
+        },
+        {
+          "kind": "para",
+          "text": "For particles much smaller than the wavelength of the light, the strength of scattering rises steeply as the wavelength shortens. Blue light, with its shorter wavelength, is scattered far more strongly than red. That is why looking at the sky away from the Sun you see scattered blue light, while light that comes straight through the atmosphere toward you at sunset has lost much of its blue and looks red."
+        },
+        {
+          "kind": "callout",
+          "variant": "example",
+          "title": "The blue sky and the red sunset",
+          "body": "Sunlight enters the atmosphere and is scattered by molecules. Shorter wavelengths scatter more, so blue is spread across the sky. At sunset the light travels a longer path and the blue is scattered away before it reaches you, leaving the red that survives the journey."
+        },
+        {
+          "kind": "para",
+          "text": "Scattering is also used deliberately in spectroscopy. Raman scattering, in which light exchanges a little energy with molecular vibrations, gives a fingerprint of a sample and does not require the light to be absorbed."
+        }
+      ]
+    },
+    {
+      "id": "emission",
+      "tone": "rose",
+      "title": "Emission",
+      "summary": "Emission is the release of light by matter, whether through heat, chemical reaction, or excited electrons falling back to lower energy levels.",
+      "minutes": 6,
+      "keyPoints": [
+        "Emission is the release of light by matter.",
+        "Incandescence is emission caused by heat; luminescence is emission from chemical or other non-thermal excitation.",
+        "Fluorescence is emission when an excited electron drops to a lower energy level and releases a photon.",
+        "The emitted photon’s energy matches the gap the electron falls across."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "If absorption takes energy in, *emission* gives it back as light. Matter can emit light in several ways. The most familiar is *incandescence*, in which heat alone excites the material until it glows, as in a hot filament or a glowing ember."
+        },
+        {
+          "kind": "para",
+          "text": "When the excitation comes from a chemical reaction rather than heat, the emission is called *luminescence*. Bioluminescence, as in a firefly, is a chemical reaction that releases energy as light. When an excited electron simply drops from a higher level to a lower one and gives off the difference as a photon, the process is *fluorescence* or, more generally, photoluminescence."
+        },
+        {
+          "kind": "list",
+          "items": [
+            "*Incandescence*: emission driven by heat.",
+            "*Luminescence*: emission driven by a chemical or other non-thermal process.",
+            "*Fluorescence*: emission as an excited electron falls to a lower level and releases a photon."
+          ],
+          "ordered": false
+        },
+        {
+          "kind": "para",
+          "text": "In every case the energy of the emitted photon matches the gap the electron falls across. Emission spectra are therefore the mirror image of absorption spectra: they report the same energy levels, seen from the other direction."
+        }
+      ]
+    },
+    {
+      "id": "interaction-summary",
+      "tone": "coral",
+      "title": "The interaction types together",
+      "summary": "The six main interactions, taken together, describe everything that can happen when light meets matter, and each is the basis of a spectroscopic method.",
+      "minutes": 5,
+      "keyPoints": [
+        "Light can be reflected, refracted, transmitted, absorbed, scattered or emitted.",
+        "Absorption and emission depend on matching photon energy to energy gaps.",
+        "Scattering does not require absorption and gives its own information.",
+        "Each interaction is the working principle of one or more spectroscopic techniques."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Bring the interactions together and you have a complete account of what can happen when light meets matter."
+        },
+        {
+          "kind": "list",
+          "items": [
+            "*Reflection*: light bounces off a surface.",
+            "*Refraction*: light bends as it changes medium.",
+            "*Transmission*: light passes through with little disruption.",
+            "*Absorption*: matter takes in the photon’s energy, if the energy matches a gap.",
+            "*Scattering*: light is deflected in many directions by small particles.",
+            "*Emission*: matter releases light as energy is given back."
+          ],
+          "ordered": false
+        },
+        {
+          "kind": "para",
+          "text": "Two of these, absorption and emission, are governed by the matching of photon energy to energy levels and are the foundation of most spectroscopy. Scattering needs no absorption and yields its own information about vibrations and structure. Reflection, refraction and transmission are the passive behaviours that instruments rely on to steer and separate light."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "From interactions to techniques",
+          "body": "Each interaction is the seed of a technique: absorption gives UV–visible and IR spectroscopy, emission gives fluorescence and flame emission, scattering gives Raman, and refraction gives prism dispersion. Knowing the interaction is knowing the method."
+        }
+      ],
+      "cta": {
+        "title": "Check what you have learned",
+        "body": "Take the Lesson 4 quiz on reflection, refraction, transmission, absorption, scattering and emission.",
+        "href": "/lessons/light-matter/quiz",
+        "linkLabel": "Take the Lesson 4 quiz",
+        "secondaryHref": "/lessons/wave-particle-duality",
+        "secondaryLabel": "Next: wave-particle duality"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "lm-mcq-001",
+      "topicId": "reflection-refraction-transmission",
+      "quick": true,
+      "question": "The bouncing of light off a mirror is called:",
+      "options": [
+        "Refraction",
+        "Reflection",
+        "Absorption",
+        "Emission"
+      ],
+      "answer": 1,
+      "explanation": "Reflection is light bouncing off a surface. In a mirror it follows the law of reflection, with the angle of incidence equal to the angle of reflection."
+    },
+    {
+      "id": "lm-mcq-002",
+      "topicId": "reflection-refraction-transmission",
+      "quick": true,
+      "question": "Light passing straight through clear glass with little disturbance is an example of:",
+      "options": [
+        "Transmission",
+        "Absorption",
+        "Scattering",
+        "Emission"
+      ],
+      "answer": 0,
+      "explanation": "Transmission is the passage of light through a material with little disruption, as through clear glass or clean air."
+    },
+    {
+      "id": "lm-mcq-003",
+      "topicId": "reflection-refraction-transmission",
+      "quick": true,
+      "question": "Light bends as it passes from air into water because:",
+      "options": [
+        "It is absorbed",
+        "Its speed changes between the media",
+        "It is emitted by the water",
+        "It becomes polarised"
+      ],
+      "answer": 1,
+      "explanation": "Refraction bends light because the speed of light differs in the two media. The change in speed at the boundary turns the wavefront."
+    },
+    {
+      "id": "lm-mcq-004",
+      "topicId": "absorption",
+      "quick": true,
+      "question": "A photon is absorbed by an atom when:",
+      "options": [
+        "Its energy matches the gap between two energy levels",
+        "It is always absorbed regardless of energy",
+        "Its intensity is high enough",
+        "It is scattered first"
+      ],
+      "answer": 0,
+      "explanation": "Absorption requires the photon energy to match the gap between the electron’s current level and a higher one. A photon that fits no gap passes through unabsorbed."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lm-tf-001",
+      "topicId": "absorption",
+      "quick": true,
+      "question": "The energy of an absorbed photon can be converted into heat.",
+      "answer": true,
+      "explanation": "Absorbed energy may raise an electron to a higher level or be dissipated as heat. Either way the photon’s energy has been taken up by the material."
+    },
+    {
+      "id": "lm-mcq-005",
+      "topicId": "absorption",
+      "quick": true,
+      "question": "X-rays pass through soft tissue but are blocked by bone because:",
+      "options": [
+        "Bone reflects all X-rays",
+        "Soft tissue and bone absorb X-rays to different degrees",
+        "X-rays are sound waves",
+        "Bone is transparent to X-rays"
+      ],
+      "answer": 1,
+      "explanation": "Different materials have different atomic structures and energy levels, so they absorb X-rays differently. Bone absorbs X-rays more strongly than soft tissue, which is why it shows up on a radiograph."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lm-tf-002",
+      "topicId": "absorption",
+      "quick": true,
+      "question": "All materials absorb the same wavelengths of light.",
+      "answer": false,
+      "explanation": "Each material has its own set of energy levels, so it absorbs only the wavelengths whose photon energies match its gaps. Different materials therefore absorb different wavelengths."
+    },
+    {
+      "id": "lm-mcq-006",
+      "topicId": "scattering",
+      "quick": true,
+      "question": "Scattering of light differs from absorption because:",
+      "options": [
+        "The light is destroyed",
+        "The light is redirected rather than absorbed",
+        "The light is emitted as heat",
+        "The light changes frequency to zero"
+      ],
+      "answer": 1,
+      "explanation": "In scattering the light is deflected in new directions rather than absorbed. It is redirected, not destroyed, so it can be observed coming from the scattering particles."
+    },
+    {
+      "id": "lm-mcq-007",
+      "topicId": "scattering",
+      "quick": true,
+      "question": "The daytime sky is blue mainly because:",
+      "options": [
+        "The atmosphere contains blue dye",
+        "Short wavelengths are scattered more strongly than long ones",
+        "Blue light is emitted by the sky",
+        "Blue light is absorbed by air"
+      ],
+      "answer": 1,
+      "explanation": "Scattering by small molecules rises steeply as wavelength shortens, so blue light is scattered across the sky much more than red light."
+    },
+    {
+      "kind": "multi",
+      "id": "lm-multi-001",
+      "topicId": "scattering",
+      "quick": true,
+      "question": "Which are true of scattering? Select all that apply.",
+      "options": [
+        "Light leaves in directions other than the original beam",
+        "It can occur without absorption",
+        "It is stronger for shorter wavelengths",
+        "It always converts light to heat"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Scattering redirects light, can occur without absorption, and is stronger at shorter wavelengths. It does not simply convert light to heat."
+    },
+    {
+      "id": "lm-mcq-008",
+      "topicId": "emission",
+      "quick": true,
+      "question": "The glowing of a hot metal filament is an example of:",
+      "options": [
+        "Fluorescence",
+        "Incandescence",
+        "Raman scattering",
+        "Transmission"
+      ],
+      "answer": 1,
+      "explanation": "Incandescence is emission caused by heat. A hot filament glows because it is thermally excited."
+    },
+    {
+      "id": "lm-mcq-009",
+      "topicId": "emission",
+      "quick": true,
+      "question": "Fluorescence occurs when:",
+      "options": [
+        "An electron absorbs a photon",
+        "An excited electron drops to a lower level and releases a photon",
+        "Light passes straight through a material",
+        "Light bounces off a surface"
+      ],
+      "answer": 1,
+      "explanation": "Fluorescence is emission as an excited electron falls to a lower energy level, releasing the energy difference as a photon."
+    },
+    {
+      "id": "lm-mcq-010",
+      "topicId": "emission",
+      "quick": true,
+      "question": "Emission of light by a firefly is an example of:",
+      "options": [
+        "Incandescence",
+        "Luminescence",
+        "Reflection",
+        "Scattering"
+      ],
+      "answer": 1,
+      "explanation": "Bioluminescence, as in a firefly, is luminescence: light produced by a chemical reaction rather than by heat."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lm-tf-003",
+      "topicId": "interaction-summary",
+      "question": "Emission spectra reveal the same energy levels as absorption spectra.",
+      "answer": true,
+      "explanation": "Emission and absorption both involve the same energy gaps, seen from opposite directions. An emission line marks a downward jump that an absorption line would mark as an upward one."
+    },
+    {
+      "kind": "multi",
+      "id": "lm-multi-002",
+      "topicId": "interaction-summary",
+      "question": "Which of these are ways light can interact with matter? Select all that apply.",
+      "options": [
+        "Absorption",
+        "Emission",
+        "Scattering",
+        "Voltage"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Light can be absorbed, emitted or scattered (as well as reflected, refracted and transmitted). Voltage is an electrical quantity, not an interaction of light with matter."
+    }
+  ]
+}

@@ -17,6 +17,18 @@ import type { Lesson } from "./types";
 /** Where lesson files live, relative to the project root. */
 export const LESSONS_DIR = path.join(process.cwd(), "content", "lessons");
 
+/**
+ * The second course's lessons. Each course owns its own directory, so a
+ * `loadAllLessons(dir)` call is all that separates one course's lessons from
+ * another's; the directory is still the list.
+ */
+export const SPECTROSCOPY_LESSONS_DIR = path.join(
+  process.cwd(),
+  "content",
+  "spectroscopy",
+  "lessons",
+);
+
 /** Read and validate every `*.json` in the lessons directory. */
 export function loadJsonLessons(dir: string = LESSONS_DIR): Lesson[] {
   let files: string[];

@@ -1,0 +1,380 @@
+{
+  "slug": "wave-particle-duality",
+  "label": "Lesson 5",
+  "title": "Wave-particle duality and quantized energy",
+  "summary": "Light behaves as both a wave and a stream of particles, and de Broglie argued that matter does too. Together with quantized energy levels, this explains why atoms absorb and emit only at sharp, characteristic wavelengths.",
+  "source": "Written fresh; spectroscopy foundations",
+  "order": 5,
+  "minutes": 27,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "The course so far has shown light as a wave and light as a stream of photons. This final lesson brings the two pictures together as *wave-particle duality*, extends the idea to matter itself, and connects it to the quantized energy levels that give every atom its sharp spectral lines."
+    },
+    {
+      "kind": "para",
+      "text": "The thread running through is that energy is exchanged in fixed amounts. That single idea explains why atoms absorb and emit only at particular wavelengths, and so why every element has its own fingerprint spectrum."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The lesson in one line",
+      "body": "Light is both wave and particle, matter has a wavelength too, and atoms have fixed energy levels, so they absorb and emit only the wavelengths whose photon energies match the gaps between those levels."
+    }
+  ],
+  "sections": [
+    {
+      "id": "dual-nature",
+      "tone": "azure",
+      "title": "Light as both wave and particle",
+      "summary": "Light travels as a wave but exchanges energy as discrete photons; both faces are needed to describe it fully.",
+      "minutes": 6,
+      "keyPoints": [
+        "Light has a dual nature: it behaves as a wave and as a stream of discrete packets called photons.",
+        "Photons are distinguished by their energy; an X-ray photon carries far more energy than a radio photon.",
+        "Wave behaviour shows in diffraction and interference; particle behaviour shows in absorption and emission.",
+        "A beam of light can be pictured as a train of photons, each carrying a definite amount of energy."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "Light is a wave and a stream of particles at the same time. As it travels, its wave nature is plain: it diffracts and interferes. As it interacts with matter, its particle nature takes over: it is absorbed and emitted one photon at a time. This dual nature is the central fact of the quantum description."
+        },
+        {
+          "kind": "para",
+          "text": "The photons in a beam are not all alike. Each carries a definite amount of energy set by its frequency, and that energy decides what the photon can do. A single X-ray photon carries far more energy than a photon of visible or radio light, which is why X-rays can ionise atoms while radio waves pass through matter almost undisturbed."
+        },
+        {
+          "kind": "para",
+          "text": "It helps, as a picture rather than a strict description, to imagine a beam of light as a row of little \"light bullets\", each travelling with a fixed energy that marks its type. The picture is not exact, but it captures the essential point: the energy arrives in discrete lumps, not as a smooth flow."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "When to use which picture",
+          "body": "Use the wave picture for propagation, diffraction and interference. Use the photon picture for absorption, emission and the photoelectric effect. A complete description switches between them as the question demands."
+        }
+      ]
+    },
+    {
+      "id": "de-broglie",
+      "tone": "indigo",
+      "title": "Matter as waves",
+      "summary": "De Broglie proposed that every moving particle has a wavelength set by its momentum, extending duality from light to matter.",
+      "minutes": 6,
+      "keyPoints": [
+        "De Broglie proposed that all moving particles have a characteristic wavelength.",
+        "The de Broglie wavelength is λ = h / (mv), where m is the mass and v the speed.",
+        "The heavier or faster the particle, the shorter its wavelength.",
+        "For everyday objects the wavelength is far too small to observe, which is why matter looks classical."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "If light, long thought to be a wave, can behave as particles, Louis de Broglie asked in 1924 whether the reverse might hold: could particles behave as waves? He proposed that anything with momentum has a wavelength, given by the same Planck constant that appears in the photon energy."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\lambda = \\frac{h}{m v} = \\frac{h}{p}",
+          "caption": "The de Broglie wavelength of a particle"
+        },
+        {
+          "kind": "para",
+          "text": "Here m is the mass, v the speed and p = mv the momentum. The relation says that the wavelength shrinks as mass or speed rises. An electron, being very light, can have a wavelength comparable to the spacing of atoms in a crystal, which is why electron beams diffract from crystals and can be used to study structure."
+        },
+        {
+          "kind": "para",
+          "text": "For a thrown cricket ball, the mass is so large that the de Broglie wavelength is smaller than any measurable length by an enormous margin, so its wave nature is invisible. Duality is real for everything; it is only noticeable for the very small."
+        },
+        {
+          "kind": "callout",
+          "variant": "example",
+          "title": "Electron diffraction",
+          "body": "A beam of electrons fired at a thin crystal produces a diffraction pattern, exactly as a beam of X-rays does. The pattern confirms that electrons, like light, behave as waves, with a wavelength given by λ = h/mv."
+        }
+      ]
+    },
+    {
+      "id": "bohr",
+      "tone": "violet",
+      "title": "Bohr’s model and standing waves",
+      "summary": "Bohr allowed electrons only in certain orbits; de Broglie’s waves explain why, since an orbit must fit a whole number of wavelengths.",
+      "minutes": 7,
+      "keyPoints": [
+        "In Bohr’s model, electrons occupy only certain allowed orbits around the nucleus.",
+        "An orbit is allowed when its circumference fits a whole number of de Broglie wavelengths: 2πr = nλ.",
+        "This condition reproduces Bohr’s angular-momentum rule mvr = nh/2π.",
+        "Because only some orbits are allowed, atoms emit and absorb only certain wavelengths, giving sharp spectral lines."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "In 1913 Niels Bohr proposed that electrons in an atom do not orbit at any radius they like, but only in certain allowed orbits. Jumping between orbits absorbs or emits a photon of fixed energy, which explained the sharp lines seen in atomic spectra. But Bohr had to assume the rule without deriving it."
+        },
+        {
+          "kind": "para",
+          "text": "De Broglie’s picture supplied the reason. If an electron is a wave, then a stable orbit must be one in which the wave joins up smoothly with itself. Otherwise the wave would interfere with itself and cancel out. The condition is that the circumference of the orbit hold a whole number of wavelengths."
+        },
+        {
+          "kind": "formula",
+          "tex": "2\\pi r = n \\lambda \\qquad\\Rightarrow\\qquad m v r = \\frac{n h}{2\\pi}",
+          "caption": "Standing-wave condition and Bohr’s quantisation rule"
+        },
+        {
+          "kind": "para",
+          "text": "Substituting λ = h/mv turns the standing-wave condition into Bohr’s rule that the angular momentum mvr must be a whole-number multiple of h/2π. The quantisation is no longer an assumption: it follows from requiring the electron wave to be a *standing wave* that reinforces itself around the orbit."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "Why spectral lines are sharp",
+          "body": "Because only certain standing waves fit the orbit, only certain energies are allowed. Transitions between them give photons of fixed energy, so atoms emit and absorb at sharp, well-defined wavelengths, the lines that make each element’s spectrum a fingerprint."
+        }
+      ]
+    },
+    {
+      "id": "quantized-energy",
+      "tone": "rose",
+      "title": "Quantized energy levels and spectra",
+      "summary": "Atoms and molecules have fixed energy levels, so they absorb light only when a photon matches a gap between them.",
+      "minutes": 6,
+      "keyPoints": [
+        "Atoms and molecules have fixed, discrete energy levels.",
+        "A material absorbs light only when the photon energy matches a gap between levels.",
+        "Emission occurs when an electron falls from a higher level to a lower one.",
+        "The pattern of absorbed or emitted wavelengths is a fingerprint of the material."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The ideas of this lesson come together in one statement. Atoms and molecules have fixed, discrete energy levels. They cannot accept just any energy; the incoming photon must exactly bridge the gap between the level an electron occupies and a higher one."
+        },
+        {
+          "kind": "para",
+          "text": "Absorption therefore happens only at specific photon energies, and so at specific wavelengths. The same is true in reverse for emission: light is given out only when an electron falls between allowed levels. The pattern of wavelengths absorbed or emitted is unique to each substance."
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Energy levels are discrete, not continuous.",
+            "A photon is absorbed only if its energy matches a gap between levels.",
+            "Emission follows a downward jump between levels.",
+            "The resulting line pattern identifies the material."
+          ],
+          "ordered": false
+        },
+        {
+          "kind": "para",
+          "text": "This is why spectroscopy is such a powerful tool. From the wavelengths a sample absorbs or emits, you can read its energy-level structure and, in many cases, identify exactly what the sample is. The same principle explains the colours of flames, the lines in a star’s spectrum, and the sharp peaks of a molecular absorption spectrum."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "The whole course in one thread",
+          "body": "Light is a wave and a particle, matter has a wavelength, and both have quantized energy. Matching photon energy to energy gaps is what makes matter interact selectively with light, and it is the foundation on which every spectroscopic method is built."
+        }
+      ],
+      "cta": {
+        "title": "Check what you have learned",
+        "body": "Take the Lesson 5 quiz on wave-particle duality, the de Broglie wavelength, Bohr’s model and quantized energy levels.",
+        "href": "/lessons/wave-particle-duality/quiz",
+        "linkLabel": "Take the Lesson 5 quiz",
+        "secondaryHref": "/",
+        "secondaryLabel": "Back to the home page"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "kind": "truefalse",
+      "id": "wpd-tf-001",
+      "topicId": "dual-nature",
+      "quick": true,
+      "question": "Light must be described as both a wave and a stream of particles.",
+      "answer": true,
+      "explanation": "Diffraction and interference need the wave picture; absorption, emission and the photoelectric effect need the photon picture. Both are required."
+    },
+    {
+      "id": "wpd-mcq-001",
+      "topicId": "dual-nature",
+      "quick": true,
+      "question": "Which behaviour of light requires the particle (photon) picture?",
+      "options": [
+        "Diffraction around an edge",
+        "Interference fringes",
+        "The absorption of light in discrete packets",
+        "The bending of light at a surface"
+      ],
+      "answer": 2,
+      "explanation": "Absorption happens one photon at a time, so it needs the particle picture. Diffraction and interference are explained by the wave picture."
+    },
+    {
+      "id": "wpd-mcq-002",
+      "topicId": "dual-nature",
+      "quick": true,
+      "question": "An X-ray photon compared with a radio photon carries:",
+      "options": [
+        "Less energy",
+        "More energy",
+        "The same energy",
+        "No energy"
+      ],
+      "answer": 1,
+      "explanation": "An X-ray photon has a much higher frequency than a radio photon, and since E = hf, it carries much more energy."
+    },
+    {
+      "id": "wpd-mcq-003",
+      "topicId": "de-broglie",
+      "quick": true,
+      "question": "The de Broglie wavelength of a particle of mass m moving at speed v is:",
+      "options": [
+        "λ = mv/h",
+        "λ = h/(mv)",
+        "λ = hmv",
+        "λ = h/(m + v)"
+      ],
+      "answer": 1,
+      "explanation": "De Broglie proposed λ = h/(mv) = h/p. The wavelength falls as the mass or speed rises."
+    },
+    {
+      "kind": "numeric",
+      "id": "wpd-num-001",
+      "topicId": "de-broglie",
+      "question": "An electron (m = 9.11 × 10^-31 kg) moves at 1.00 × 10^6 m/s. What is its de Broglie wavelength, in metres? Take h = 6.626 × 10^-34 J s.",
+      "answer": 7.3e-10,
+      "tolerance": 3e-11,
+      "unit": "m",
+      "explanation": "λ = h/(mv) = 6.626 × 10^-34 / (9.11 × 10^-31 × 1.00 × 10^6) = 7.3 × 10^-10 m."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wpd-tf-002",
+      "topicId": "de-broglie",
+      "quick": true,
+      "question": "A heavier particle moving at the same speed has a shorter de Broglie wavelength.",
+      "answer": true,
+      "explanation": "Since λ = h/(mv), a larger mass gives a smaller wavelength. This is why the wave nature of everyday objects is unobservable."
+    },
+    {
+      "id": "wpd-mcq-004",
+      "topicId": "de-broglie",
+      "quick": true,
+      "question": "The wave nature of electrons is confirmed by:",
+      "options": [
+        "Electron diffraction from a crystal",
+        "The colour of copper",
+        "The weight of the electron",
+        "Its electric charge alone"
+      ],
+      "answer": 0,
+      "explanation": "Electron beams diffract from crystals, producing patterns explained only if electrons have a wavelength λ = h/mv."
+    },
+    {
+      "id": "wpd-mcq-005",
+      "topicId": "bohr",
+      "quick": true,
+      "question": "In Bohr’s model, an electron orbit is allowed when:",
+      "options": [
+        "Its circumference fits a whole number of de Broglie wavelengths",
+        "It has zero energy",
+        "It is a straight line",
+        "Its radius is arbitrary"
+      ],
+      "answer": 0,
+      "explanation": "A stable orbit needs the electron wave to join up smoothly with itself, so the circumference must contain a whole number of wavelengths: 2πr = nλ."
+    },
+    {
+      "id": "wpd-mcq-006",
+      "topicId": "bohr",
+      "quick": true,
+      "question": "The standing-wave condition 2πr = nλ leads to which quantisation?",
+      "options": [
+        "mvr = nh/2π",
+        "E = hf",
+        "c = λf",
+        "λ = h/mv"
+      ],
+      "answer": 0,
+      "explanation": "Substituting λ = h/mv into 2πr = nλ gives mvr = nh/2π, Bohr’s rule that angular momentum is a whole-number multiple of h/2π."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wpd-tf-003",
+      "topicId": "bohr",
+      "quick": true,
+      "question": "Standing waves explain why only certain electron orbits are allowed in an atom.",
+      "answer": true,
+      "explanation": "Only orbits whose circumference is a whole number of wavelengths support a stable standing wave, so only those orbits are allowed."
+    },
+    {
+      "id": "wpd-mcq-007",
+      "topicId": "bohr",
+      "quick": true,
+      "question": "The sharp lines in an atomic emission spectrum arise because:",
+      "options": [
+        "Electrons can have any energy",
+        "Only certain energy levels are allowed",
+        "Atoms emit a continuous range of wavelengths",
+        "Electrons are stationary"
+      ],
+      "answer": 1,
+      "explanation": "Because only certain energy levels exist, transitions between them release photons of fixed energy, giving sharp lines rather than a continuous spectrum."
+    },
+    {
+      "id": "wpd-mcq-008",
+      "topicId": "quantized-energy",
+      "quick": true,
+      "question": "A material absorbs a photon only when:",
+      "options": [
+        "The light is bright enough",
+        "The photon energy matches a gap between energy levels",
+        "The photon is polarised",
+        "The material is hot"
+      ],
+      "answer": 1,
+      "explanation": "Absorption requires the photon energy to match the gap between the occupied level and a higher one. Brightness affects how many photons arrive, not whether they fit."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wpd-tf-004",
+      "topicId": "quantized-energy",
+      "quick": true,
+      "question": "Atoms and molecules have discrete, rather than continuous, energy levels.",
+      "answer": true,
+      "explanation": "The energy levels are quantized: only certain values are allowed. This is why absorption and emission happen at specific wavelengths."
+    },
+    {
+      "kind": "multi",
+      "id": "wpd-multi-001",
+      "topicId": "quantized-energy",
+      "quick": true,
+      "question": "Which statements about quantized energy levels are correct? Select all that apply.",
+      "options": [
+        "Only certain energies are allowed",
+        "Absorption happens when a photon matches a level gap",
+        "Emission happens when an electron drops to a lower level",
+        "Any photon energy can be absorbed"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Energy levels are discrete, absorption needs a matching gap, and emission accompanies a downward jump. Not any photon can be absorbed, only those that fit a gap."
+    },
+    {
+      "id": "wpd-mcq-009",
+      "topicId": "quantized-energy",
+      "quick": true,
+      "question": "The pattern of wavelengths a substance absorbs and emits:",
+      "options": [
+        "Is the same for all substances",
+        "Is a fingerprint that can identify the substance",
+        "Is always a continuous rainbow",
+        "Depends only on the temperature"
+      ],
+      "answer": 1,
+      "explanation": "Because each substance has its own set of energy levels, its absorption and emission pattern is unique and can be used to identify it."
+    }
+  ]
+}

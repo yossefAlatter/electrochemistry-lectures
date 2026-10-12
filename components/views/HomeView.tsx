@@ -1,14 +1,14 @@
 import Link from "next/link";
-import { RichText } from "@/components/kit";
-import { getSubjects, lessonHref } from "@/content/registry";
+import { courseHref, getSubjects, lessonHref } from "@/content/registry";
 import { fill, t } from "@/lib/i18n";
 
 /**
  * The home page.
  *
- * The subject tree comes from the content registry and every string from the
- * dictionary in lib/i18n, so there is exactly one implementation of this page
- * and nothing below is hard-coded.
+ * It lists the courses, one card each, and nothing deeper: a course card is the
+ * entry point, and the lessons inside it live on the course page. The tree and
+ * every string come from the registry and the dictionary, so this page has one
+ * implementation and nothing below is hard-coded.
  */
 export default function HomeView() {
   const subjects = getSubjects();
@@ -85,7 +85,7 @@ export default function HomeView() {
         </div>
       </section>
 
-      {/* ---------------- subjects, courses, lessons ---------------- */}
+      {/* ---------------- courses ---------------- */}
       {subjects.map((subject) => (
         <section key={subject.slug} className="mt-9">
           <h2 className="font-serif text-[1.45rem] font-semibold text-ink">
@@ -96,90 +96,74 @@ export default function HomeView() {
             {subject.description}
           </p>
 
-          {subject.courses.map((course) => (
-            <div key={course.id} className="mt-6">
-              <h3 className="text-[0.72rem] font-bold uppercase tracking-[0.14em] text-faint">
-                {course.title}
-              </h3>
-              <div aria-hidden="true" className="mt-2 flex gap-1">
-                {course.lessons.flatMap((l) =>
-                  l.sections.map((s) => (
-                    <span
-                      key={`${l.slug}-${s.id}`}
-                      data-tone={s.tone}
-                      className="h-1.5 w-6 rounded-full bg-[color:var(--tone)]"
-                    />
-                  )),
-                )}
-              </div>
-              <p className="mt-1 max-w-[60ch] text-[0.9rem] leading-relaxed text-ink-soft">
-                {course.description}
-              </p>
+          <p className="mt-4 text-[0.72rem] font-bold uppercase tracking-[0.14em] text-faint">
+            {d.coursesHeading}
+          </p>
+          <ul className="mt-3 grid gap-4 sm:grid-cols-2">
+            {subject.courses.map((course) => {
+              const lessons = course.lessons;
+              const sections = lessons.reduce(
+                (n, l) => n + l.sections.length,
+                0,
+              );
+              const questions = lessons.reduce((n, l) => n + l.mcq.length, 0);
+              const minutes = lessons.reduce(
+                (n, l) =>
+                  n + l.sections.reduce((m, s) => m + (s.minutes ?? 0), 0),
+                0,
+              );
+              const tones = [
+                ...new Set(
+                  lessons.flatMap((l) => l.sections.map((s) => s.tone)),
+                ),
+              ].slice(0, 12);
 
-              <ul className="mt-4 space-y-3">
-                {course.lessons.map((lesson) => {
-                  const mins = lesson.sections.reduce(
-                    (n, s) => n + (s.minutes ?? 0),
-                    0,
-                  );
-                  return (
-                    <li key={lesson.slug}>
-                      <Link
-                        href={lessonHref(lesson)}
-                        className="block rounded-xl border border-rule bg-surface p-4 transition-all hover:-translate-y-0.5 hover:border-accent hover:shadow-md sm:p-5"
+              return (
+                <li key={course.id} className="h-full">
+                  <Link
+                    href={courseHref(course)}
+                    className="group flex h-full flex-col overflow-hidden rounded-2xl border border-rule bg-surface p-5 transition-all hover:-translate-y-0.5 hover:border-accent hover:shadow-md"
+                  >
+                    <div aria-hidden="true" className="mb-3 flex flex-wrap gap-1">
+                      {tones.map((tone) => (
+                        <span
+                          key={tone}
+                          data-tone={tone}
+                          className="h-1.5 w-7 rounded-full bg-[color:var(--tone)]"
+                        />
+                      ))}
+                    </div>
+
+                    <h3 className="font-serif text-[1.35rem] leading-snug font-semibold text-ink">
+                      {course.title}
+                    </h3>
+                    <p className="mt-2 flex-1 text-[0.93rem] leading-relaxed text-ink-soft">
+                      {course.description}
+                    </p>
+
+                    <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-[0.78rem] text-faint tabular-nums">
+                      <span>{fill(d.courseLessons, { n: lessons.length })}</span>
+                      <span>{fill(d.lessonSectionsCount, { n: sections })}</span>
+                      <span>{fill(d.lessonQuestions, { n: questions })}</span>
+                      {minutes > 0 && (
+                        <span>{fill(d.lessonMinTotal, { n: minutes })}</span>
+                      )}
+                    </div>
+
+                    <span className="mt-4 inline-flex items-center gap-1.5 text-[0.9rem] font-semibold text-accent">
+                      {d.openCourse}
+                      <span
+                        aria-hidden="true"
+                        className="transition-transform group-hover:translate-x-0.5"
                       >
-                        <div className="flex items-baseline justify-between gap-3">
-                          <span className="text-[0.7rem] font-bold uppercase tracking-[0.13em] text-accent">
-                            {lesson.label}
-                          </span>
-                          <span className="shrink-0 text-[0.72rem] text-faint tabular-nums">
-                            {fill(d.cardMeta, {
-                              n: lesson.sections.length,
-                              m: mins || lesson.minutes,
-                              k: lesson.mcq.length,
-                            })}
-                          </span>
-                        </div>
-
-                        <h4 className="mt-1 font-serif text-[1.2rem] leading-snug font-semibold text-ink">
-                          {lesson.title}
-                        </h4>
-                        <p className="mt-1.5 text-[0.93rem] leading-relaxed text-ink-soft">
-                          <RichText text={lesson.summary} />
-                        </p>
-
-                        <ul className="mt-3.5 divide-y divide-rule border-t border-rule">
-                          {lesson.sections.map((s, i) => (
-                            <li
-                              key={s.id}
-                              data-tone={s.tone}
-                              className="flex items-baseline gap-2.5 py-1.5 text-[0.86rem]"
-                            >
-                              <span
-                                aria-hidden="true"
-                                className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[color:var(--tone)]"
-                              />
-                              <span className="shrink-0 text-[0.74rem] font-semibold text-faint tabular-nums">
-                                {String(i + 1).padStart(2, "0")}
-                              </span>
-                              <span className="min-w-0 text-ink-soft">
-                                {s.title}
-                              </span>
-                              {s.minutes && (
-                                <span className="ms-auto shrink-0 text-[0.74rem] text-faint">
-                                  {fill(d.minutes, { n: s.minutes })}
-                                </span>
-                              )}
-                            </li>
-                          ))}
-                        </ul>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          ))}
+                        →
+                      </span>
+                    </span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </section>
       ))}
 
@@ -188,6 +172,9 @@ export default function HomeView() {
         <h2 className="font-serif text-[1.2rem] font-semibold text-ink">
           {d.howToUseTitle}
         </h2>
+        <p className="mt-2 max-w-[62ch] text-[0.95rem] leading-relaxed text-ink-soft">
+          {d.browseCarefully}
+        </p>
         <ol className="mt-3 space-y-2.5 text-[0.95rem] leading-relaxed text-ink-soft">
           {[d.howStep1, d.howStep2, d.howStep3, d.howStep4].map((step, i) => (
             <li key={i}>

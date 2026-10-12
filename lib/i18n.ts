@@ -41,6 +41,17 @@ const en = {
   statSections: "Sections",
   statQuestions: "Questions",
   startFromZero: "Start from zero",
+
+  coursesHeading: "Courses",
+  courseLessons: "{n} lessons",
+  courseMeta: "{n} lessons · {m} min · {k} questions",
+  courseEyebrow: "Course",
+  openCourse: "Open course",
+  startCourse: "Start course",
+  allCourses: "All courses",
+  courseLessonsHeading: "Lessons in this course",
+  browseCarefully: "Pick a course, then work through its lessons in order.",
+  courseNotFound: "Course not found",
   howToUseTitle: "How to use this site",
   howStep1:
     "Begin with Lesson 0. It is a short orientation and assumes nothing.",
