@@ -88,29 +88,81 @@
     {
       "id": "transverse",
       "tone": "indigo",
-      "title": "Polarisation proved the wave is transverse",
-      "summary": "A longitudinal wave cannot be polarised; the fact that light can be forced into a single plane is direct evidence that its oscillations are at right angles to the direction of travel.",
-      "minutes": 5,
+      "title": "Longitudinal and transverse waves, and polarisation",
+      "summary": "A wave may vibrate along its direction of travel (longitudinal) or at right angles to it (transverse). Only a transverse wave can be polarised, and that light can be forced into a single plane is direct evidence that its oscillations travel across, not along, the beam.",
+      "minutes": 6,
       "keyPoints": [
-        "A longitudinal wave vibrates along its direction of travel; a transverse wave vibrates at right angles to it.",
-        "Only a transverse wave can be polarised, because only it has a plane of oscillation to select.",
+        "A longitudinal wave vibrates along its direction of travel and shows compressions and rarefactions; sound in air is the example.",
+        "A transverse wave vibrates at right angles to its travel and shows crests and troughs; light and a wave on a rope are examples.",
+        "Polarisation restricts a transverse wave to a single plane of vibration; a polarising filter transmits only the component along its axis.",
+        "Only a transverse wave can be polarised, because only it has a plane of oscillation to select; crossed filters at 90° block the light.",
         "Malus found polarised light by reflection in 1808; Fresnel and Arago showed in 1819 that beams polarised at right angles do not interfere.",
         "That light can be polarised proved the light wave is transverse."
       ],
       "blocks": [
         {
           "kind": "para",
-          "text": "A wave can oscillate in two ways with respect to its travel. In a *longitudinal* wave the medium vibrates back and forth along the direction of travel; sound is the everyday example. In a *transverse* wave the vibration is at right angles to the direction of travel, like a wave on a rope that you shake up and down."
+          "text": "A wave can oscillate in two ways with respect to its travel. In a *longitudinal* wave the medium vibrates back and forth *along* the direction of travel; sound in air is the everyday example, and the pattern you see is compressions where the air crowds together and rarefactions where it spreads apart. In a *transverse* wave the vibration is *at right angles* to the direction of travel, like a wave on a rope that you shake up and down; the pattern is crests above the axis and troughs below it."
         },
         {
-          "kind": "para",
-          "text": "The difference is not cosmetic. A longitudinal wave has no sideways direction from which to choose, so you cannot force it into a single plane of vibration. A transverse wave can be *polarised*: its oscillations can be restricted to one plane. So if light can be polarised, its vibrations must be transverse."
+          "kind": "figure",
+          "src": "wave_longitudinal.png",
+          "alt": "A longitudinal wave drawn as a row of particles that bunch together at compressions and spread apart at rarefactions, with a highlighted particle vibrating back and forth along the direction of travel.",
+          "caption": "A longitudinal wave. The particles move back and forth *along* the direction of travel, so the wave shows compressions and rarefactions rather than crests and troughs. The highlighted particle's vibration lies on the travel axis."
+        },
+        {
+          "kind": "figure",
+          "src": "wave_transverse.png",
+          "alt": "A transverse wave drawn as a sine curve with crests above the equilibrium line and troughs below it, and a highlighted particle vibrating up and down at right angles to the direction of travel.",
+          "caption": "A transverse wave. The particles move *at right angles* to the direction of travel, giving crests and troughs. Because the vibration lies in a plane across the beam, this is the type of wave that can be polarised."
+        },
+        {
+          "kind": "table",
+          "head": [
+            "Property",
+            "Longitudinal",
+            "Transverse"
+          ],
+          "rows": [
+            [
+              "Direction of vibration",
+              "along the direction of travel",
+              "at right angles to the direction of travel"
+            ],
+            [
+              "What you see",
+              "compressions and rarefactions",
+              "crests and troughs"
+            ],
+            [
+              "Examples",
+              "sound in air, a compression wave in a spring",
+              "light, a wave on a rope or on water"
+            ],
+            [
+              "Can it be polarised?",
+              "no",
+              "yes"
+            ]
+          ]
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "Polarisation, plainly",
+          "body": "To *polarise* a wave is to restrict its vibration to a single plane. A polarising filter lets through only the part of the vibration along its transmission axis. This is possible only for a transverse wave, whose vibration already lies at right angles to the beam, so it has a plane to choose. A longitudinal wave vibrates along the beam, so there is nothing to restrict."
         },
         {
           "kind": "figure",
           "src": "wave_polarization.png",
           "alt": "Unpolarised light with vibrations in many directions passing through a polarising filter, which lets through only the component in a single plane, giving vertically polarised light.",
           "caption": "A polarising filter selects one plane of vibration out of many. Only a transverse wave offers a plane to select, which is why polarisation is the fingerprint of a transverse wave."
+        },
+        {
+          "kind": "figure",
+          "src": "polarization_crossed.png",
+          "alt": "Unpolarised light passes a first filter to become vertically polarised, then meets a second filter whose axis is horizontal, which transmits nothing.",
+          "caption": "Crossed polarisers. The first filter leaves light vibrating in one plane; a second filter at right angles to the first then removes it completely. A longitudinal wave could never show this, and the effect is the basis of glare-reducing sunglasses."
         },
         {
           "kind": "para",

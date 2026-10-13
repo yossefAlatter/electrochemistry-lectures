@@ -19,6 +19,9 @@ import { PhotonEnergy } from "./photon-energy";
 import { WaveReflectionRefraction } from "./wave-reflection-refraction";
 import { WaveDiffraction } from "./wave-diffraction";
 import { WavePolarization } from "./wave-polarization";
+import { WaveLongitudinal } from "./wave-longitudinal";
+import { WaveTransverse } from "./wave-transverse";
+import { PolarizationCrossed } from "./polarization-crossed";
 import { PhotoEnergy } from "./photo-energy";
 import { PhotoStopping } from "./photo-stopping";
 import { LightAbsorptionEmission } from "./light-absorption-emission";
@@ -39,6 +42,9 @@ export const FIGURES: Record<string, FigureComponent> = {
   "wave_reflection_refraction.png": WaveReflectionRefraction,
   "wave_diffraction.png": WaveDiffraction,
   "wave_polarization.png": WavePolarization,
+  "wave_longitudinal.png": WaveLongitudinal,
+  "wave_transverse.png": WaveTransverse,
+  "polarization_crossed.png": PolarizationCrossed,
   "photo_energy.png": PhotoEnergy,
   "photo_stopping.png": PhotoStopping,
   "light_absorption_emission.png": LightAbsorptionEmission,
