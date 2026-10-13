@@ -197,6 +197,36 @@
       ],
       "answer": 1,
       "explanation": "Same colour means the same photon energy, so the fastest electrons have the same energy. The brighter beam simply contains more photons and so frees more electrons per second."
+    },
+    {
+      "id": "ps3-mcq-005",
+      "topicId": "ps3-photo",
+      "question": "Above the threshold frequency, increasing the intensity of the light increases:",
+      "options": [
+        "the number of electrons emitted per second",
+        "the kinetic energy of each electron",
+        "the threshold frequency",
+        "the work function"
+      ],
+      "answer": 0,
+      "explanation": "More intense light delivers more photons per second, so more electrons are emitted. The energy of each electron is set by the frequency, not the intensity."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps3-num-005",
+      "topicId": "ps3-photo",
+      "question": "A metal has a work function of 2.0 eV. Light with a photon energy of 3.0 eV ejects electrons. Find the maximum kinetic energy of the electrons in electronvolts.",
+      "answer": 1.0,
+      "unit": "eV",
+      "explanation": "K_max = hf − φ = 3.0 − 2.0 = 1.0 eV."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps3-tf-004",
+      "topicId": "ps3-photo",
+      "question": "For a given metal, the stopping potential depends on the frequency of the light but not on its intensity.",
+      "answer": true,
+      "explanation": "Above threshold the maximum kinetic energy, and so the stopping potential, is set by the frequency alone."
     }
   ]
 }

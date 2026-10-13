@@ -7,7 +7,7 @@ chapter 1–17) and **Spectroscopy** (6 lessons, from the discovery of the
 electromagnetic wave onwards, plus a matching problem set for each, with
 figures and worked examples). Mobile-first, statically generated, no
 database and no server at runtime. In all: 57 lesson files, 237 sections and
-1305 questions.
+1628 questions, with every Spectroscopy section carrying 15 questions.
 
 Built with Next.js (App Router), TypeScript and Tailwind CSS, with KaTeX for
 the maths.

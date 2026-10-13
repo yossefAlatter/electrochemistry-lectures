@@ -649,6 +649,612 @@
         1
       ],
       "explanation": "Ultraviolet has a higher frequency and therefore a higher photon energy than radio waves. Its wavelength is shorter, not longer, and the speed in a vacuum is c for every kind of radiation."
+    },
+    {
+      "id": "emr-mcq-b01",
+      "topicId": "wave-nature",
+      "question": "The amplitude of a light wave chiefly determines its:",
+      "options": [
+        "brightness (intensity)",
+        "wavelength",
+        "speed in vacuum",
+        "frequency"
+      ],
+      "answer": 0,
+      "explanation": "A larger amplitude means stronger fields and hence a more intense beam. Wavelength, frequency and speed are set by the source and the medium, not by the amplitude."
+    },
+    {
+      "id": "emr-mcq-b02",
+      "topicId": "wave-nature",
+      "question": "The wavelength of a wave is the distance between:",
+      "options": [
+        "two successive crests",
+        "a crest and the adjacent trough",
+        "the source and the detector",
+        "two different colours"
+      ],
+      "answer": 0,
+      "explanation": "Wavelength is the distance over which the pattern repeats, for example crest to crest or trough to trough."
+    },
+    {
+      "id": "emr-mcq-b03",
+      "topicId": "wave-nature",
+      "question": "Frequency is measured in:",
+      "options": [
+        "hertz",
+        "metres",
+        "joules",
+        "newtons"
+      ],
+      "answer": 0,
+      "explanation": "Frequency is the number of cycles per second, and one cycle per second is one hertz (Hz)."
+    },
+    {
+      "id": "emr-mcq-b04",
+      "topicId": "wave-nature",
+      "question": "For light in a vacuum, if the wavelength is doubled the frequency:",
+      "options": [
+        "halves",
+        "doubles",
+        "stays the same",
+        "quadruples"
+      ],
+      "answer": 0,
+      "explanation": "In a vacuum c = λf is fixed, so λ and f are inversely proportional. Doubling λ halves f."
+    },
+    {
+      "kind": "truefalse",
+      "id": "emr-tf-b01",
+      "topicId": "wave-nature",
+      "question": "In a vacuum, all electromagnetic waves travel at the same speed.",
+      "answer": true,
+      "explanation": "Every form of electromagnetic radiation travels at c in a vacuum, whatever its wavelength or frequency."
+    },
+    {
+      "kind": "truefalse",
+      "id": "emr-tf-b02",
+      "topicId": "wave-nature",
+      "question": "In an electromagnetic wave, the fields oscillate parallel to the direction of travel.",
+      "answer": false,
+      "explanation": "The wave is transverse: the fields oscillate at right angles to the direction of travel."
+    },
+    {
+      "kind": "multi",
+      "id": "emr-multi-b01",
+      "topicId": "wave-nature",
+      "question": "Which quantities are needed to calculate the speed of a wave? Select all that apply.",
+      "options": [
+        "wavelength",
+        "frequency",
+        "amplitude",
+        "colour"
+      ],
+      "answers": [
+        0,
+        1
+      ],
+      "explanation": "The wave speed is v = λf, so wavelength and frequency are needed. Amplitude and colour are irrelevant to the speed."
+    },
+    {
+      "kind": "multi",
+      "id": "emr-multi-b02",
+      "topicId": "wave-nature",
+      "question": "Which are true of the E and B fields of an electromagnetic wave in vacuum? Select all that apply.",
+      "options": [
+        "they are mutually perpendicular",
+        "both are perpendicular to the direction of travel",
+        "they rise and fall in step",
+        "they are parallel to each other"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The fields are mutually perpendicular and both transverse, and they oscillate in phase. They are not parallel to each other."
+    },
+    {
+      "kind": "numeric",
+      "id": "emr-num-b01",
+      "topicId": "wave-nature",
+      "question": "Light has a frequency of 5.0 × 10¹⁴ Hz. Find its wavelength in nanometres. Take c = 3.0 × 10⁸ m/s.",
+      "answer": 600.0,
+      "unit": "nm",
+      "explanation": "λ = c/f = (3.0 × 10⁸)/(5.0 × 10¹⁴) = 6.0 × 10⁻⁷ m = 600 nm."
+    },
+    {
+      "kind": "numeric",
+      "id": "emr-num-b02",
+      "topicId": "wave-nature",
+      "question": "A wave has a wavelength of 0.10 m and a frequency of 3.0 × 10⁹ Hz. Find its speed in m/s.",
+      "answer": 300000000.0,
+      "unit": "m/s",
+      "explanation": "v = λf = 0.10 × 3.0 × 10⁹ = 3.0 × 10⁸ m/s."
+    },
+    {
+      "id": "emr-mcq-b05",
+      "topicId": "quantum-nature",
+      "question": "A photon is best described as:",
+      "options": [
+        "a discrete packet of electromagnetic energy",
+        "a small material ball",
+        "a type of electron",
+        "a wave that carries no energy"
+      ],
+      "answer": 0,
+      "explanation": "A photon is the smallest packet of electromagnetic energy, fixed in size by the frequency of the radiation."
+    },
+    {
+      "id": "emr-mcq-b06",
+      "topicId": "quantum-nature",
+      "question": "The energy of a photon is directly proportional to its:",
+      "options": [
+        "frequency",
+        "wavelength",
+        "speed",
+        "amplitude"
+      ],
+      "answer": 0,
+      "explanation": "By E = hf, photon energy rises in step with frequency. Longer wavelength means lower frequency and lower energy."
+    },
+    {
+      "id": "emr-mcq-b07",
+      "topicId": "quantum-nature",
+      "question": "Doubling the frequency of light:",
+      "options": [
+        "doubles the energy of each photon",
+        "halves the energy of each photon",
+        "leaves the photon energy unchanged",
+        "quadruples the photon energy"
+      ],
+      "answer": 0,
+      "explanation": "E = hf is linear in frequency, so doubling f doubles the photon energy."
+    },
+    {
+      "id": "emr-mcq-b08",
+      "topicId": "quantum-nature",
+      "question": "Which photon carries the most energy?",
+      "options": [
+        "an ultraviolet photon",
+        "a green visible photon",
+        "an infrared photon",
+        "a radio photon"
+      ],
+      "answer": 0,
+      "explanation": "Ultraviolet has the highest frequency of the four, so by E = hf it carries the most energy."
+    },
+    {
+      "kind": "truefalse",
+      "id": "emr-tf-b03",
+      "topicId": "quantum-nature",
+      "question": "When light is absorbed, the energy is taken up in whole photons, not in arbitrary amounts.",
+      "answer": true,
+      "explanation": "Energy is exchanged in discrete quanta. This quantisation is the heart of the quantum picture."
+    },
+    {
+      "kind": "truefalse",
+      "id": "emr-tf-b04",
+      "topicId": "quantum-nature",
+      "question": "The energy of a single photon depends on the intensity of the beam.",
+      "answer": false,
+      "explanation": "Each photon's energy is set by the frequency alone. Intensity is simply the number of photons arriving per second."
+    },
+    {
+      "kind": "multi",
+      "id": "emr-multi-b03",
+      "topicId": "quantum-nature",
+      "question": "Which changes would increase the energy of a photon? Select all that apply.",
+      "options": [
+        "increasing the frequency",
+        "using a shorter wavelength",
+        "increasing the intensity",
+        "increasing the amplitude"
+      ],
+      "answers": [
+        0,
+        1
+      ],
+      "explanation": "Photon energy depends only on frequency (equivalently, on wavelength through E = hc/λ). Intensity and amplitude do not change it."
+    },
+    {
+      "kind": "multi",
+      "id": "emr-multi-b04",
+      "topicId": "quantum-nature",
+      "question": "Which are true of the photon picture? Select all that apply.",
+      "options": [
+        "energy is exchanged in discrete packets",
+        "photon energy is E = hf",
+        "each photon carries a fixed, small amount of energy",
+        "photons of all colours carry equal energy"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Energy comes in packets, each of energy E = hf, which is very small. Photons of different colours carry different energies."
+    },
+    {
+      "kind": "numeric",
+      "id": "emr-num-b03",
+      "topicId": "quantum-nature",
+      "question": "Find the energy of a photon of frequency 6.0 × 10¹⁴ Hz, in joules. Take h = 6.626 × 10⁻³⁴ J s.",
+      "answer": 3.98e-19,
+      "unit": "J",
+      "explanation": "E = hf = (6.626 × 10⁻³⁴)(6.0 × 10¹⁴) = 3.98 × 10⁻¹⁹ J."
+    },
+    {
+      "kind": "numeric",
+      "id": "emr-num-b04",
+      "topicId": "quantum-nature",
+      "question": "A photon has an energy of 3.0 × 10⁻¹⁹ J. Find its frequency in hertz. Take h = 6.626 × 10⁻³⁴ J s.",
+      "answer": 453000000000000.0,
+      "unit": "Hz",
+      "explanation": "f = E/h = (3.0 × 10⁻¹⁹)/(6.626 × 10⁻³⁴) = 4.5 × 10¹⁴ Hz."
+    },
+    {
+      "id": "emr-mcq-b09",
+      "topicId": "properties",
+      "question": "Which property is shared by every kind of electromagnetic radiation?",
+      "options": [
+        "it travels at c in a vacuum",
+        "it is visible to the eye",
+        "it is ionising",
+        "it bends in a magnetic field"
+      ],
+      "answer": 0,
+      "explanation": "Every form of electromagnetic radiation travels at c in a vacuum. Visibility, ionising power and deflection differ between regions."
+    },
+    {
+      "id": "emr-mcq-b10",
+      "topicId": "properties",
+      "question": "Electromagnetic radiation can cross empty space because:",
+      "options": [
+        "it needs no medium",
+        "it is carried by air",
+        "it rides on the aether",
+        "it is a sound wave"
+      ],
+      "answer": 0,
+      "explanation": "The oscillating fields sustain each other, so no material medium is required."
+    },
+    {
+      "id": "emr-mcq-b11",
+      "topicId": "properties",
+      "question": "The fact that light shows both wave and particle behaviour is called:",
+      "options": [
+        "wave-particle duality",
+        "resonance",
+        "dispersion",
+        "refraction"
+      ],
+      "answer": 0,
+      "explanation": "Different experiments reveal different aspects of light; the two pictures are united under wave-particle duality."
+    },
+    {
+      "id": "emr-mcq-b12",
+      "topicId": "properties",
+      "question": "Which experiment most clearly reveals the particle nature of light?",
+      "options": [
+        "the photoelectric effect",
+        "double-slit interference",
+        "diffraction at a single slit",
+        "polarisation"
+      ],
+      "answer": 0,
+      "explanation": "The photoelectric effect shows energy being transferred in whole photons, a particle-like behaviour. The others are wave effects."
+    },
+    {
+      "id": "emr-mcq-b13",
+      "topicId": "properties",
+      "question": "Which experiment most clearly reveals the wave nature of light?",
+      "options": [
+        "double-slit interference",
+        "the photoelectric effect",
+        "the Compton effect",
+        "the emission of line spectra"
+      ],
+      "answer": 0,
+      "explanation": "Interference requires the superposition of waves and cannot be explained by particles travelling independently."
+    },
+    {
+      "kind": "truefalse",
+      "id": "emr-tf-b05",
+      "topicId": "properties",
+      "question": "Electromagnetic radiation forms a continuous spectrum with no gaps.",
+      "answer": true,
+      "explanation": "Wavelength and frequency can take any value, so the spectrum is continuous. The named regions simply label bands within it."
+    },
+    {
+      "kind": "truefalse",
+      "id": "emr-tf-b06",
+      "topicId": "properties",
+      "question": "All electromagnetic radiation is visible to the human eye.",
+      "answer": false,
+      "explanation": "Only a narrow band, roughly 400–700 nm, is visible. Radio, microwave, infrared, ultraviolet, X-rays and gamma rays are not."
+    },
+    {
+      "kind": "multi",
+      "id": "emr-multi-b05",
+      "topicId": "properties",
+      "question": "Which are properties of electromagnetic radiation? Select all that apply.",
+      "options": [
+        "travels at c in a vacuum",
+        "needs no medium",
+        "forms a continuous spectrum",
+        "is a mechanical wave"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "It travels at c, needs no medium and is continuous. It is not a mechanical wave, because it needs no matter."
+    },
+    {
+      "kind": "multi",
+      "id": "emr-multi-b06",
+      "topicId": "properties",
+      "question": "Which of the following are wave phenomena? Select all that apply.",
+      "options": [
+        "interference",
+        "diffraction",
+        "polarisation",
+        "the photoelectric effect"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Interference, diffraction and polarisation are wave effects. The photoelectric effect is evidence of the particle nature."
+    },
+    {
+      "kind": "numeric",
+      "id": "emr-num-b05",
+      "topicId": "properties",
+      "question": "How far does light travel in 2.0 s? Take c = 3.0 × 10⁸ m/s. Give the answer in metres.",
+      "answer": 600000000.0,
+      "unit": "m",
+      "explanation": "d = c t = (3.0 × 10⁸)(2.0) = 6.0 × 10⁸ m."
+    },
+    {
+      "kind": "numeric",
+      "id": "emr-num-b06",
+      "topicId": "properties",
+      "question": "A radio wave has a frequency of 1.0 × 10⁶ Hz. Find its wavelength in metres. Take c = 3.0 × 10⁸ m/s.",
+      "answer": 300.0,
+      "unit": "m",
+      "explanation": "λ = c/f = (3.0 × 10⁸)/(1.0 × 10⁶) = 300 m."
+    },
+    {
+      "id": "emr-mcq-b14",
+      "topicId": "spectrum",
+      "question": "Which region of the spectrum has the longest wavelength?",
+      "options": [
+        "radio waves",
+        "infrared",
+        "visible light",
+        "gamma rays"
+      ],
+      "answer": 0,
+      "explanation": "Radio waves lie at the long-wavelength, low-frequency end of the spectrum; gamma rays lie at the other end."
+    },
+    {
+      "id": "emr-mcq-b15",
+      "topicId": "spectrum",
+      "question": "Which region has the highest photon energy?",
+      "options": [
+        "gamma rays",
+        "X-rays",
+        "visible light",
+        "radio waves"
+      ],
+      "answer": 0,
+      "explanation": "Photon energy rises with frequency, and gamma rays have the highest frequency of any region."
+    },
+    {
+      "id": "emr-mcq-b16",
+      "topicId": "spectrum",
+      "question": "Which ordering runs from shortest to longest wavelength?",
+      "options": [
+        "gamma, X-ray, ultraviolet, visible, infrared, microwave, radio",
+        "radio, microwave, infrared, visible, ultraviolet, X-ray, gamma",
+        "visible, infrared, radio, gamma, X-ray",
+        "X-ray, gamma, radio, ultraviolet, visible"
+      ],
+      "answer": 0,
+      "explanation": "The spectrum runs from gamma (shortest) through X-ray, ultraviolet, visible, infrared, microwave to radio (longest)."
+    },
+    {
+      "id": "emr-mcq-b17",
+      "topicId": "spectrum",
+      "question": "As the wavelength decreases across the spectrum, the frequency:",
+      "options": [
+        "increases",
+        "decreases",
+        "stays the same",
+        "becomes zero"
+      ],
+      "answer": 0,
+      "explanation": "Because c = λf is fixed, wavelength and frequency move in opposite directions: shorter wavelength means higher frequency."
+    },
+    {
+      "id": "emr-mcq-b18",
+      "topicId": "spectrum",
+      "question": "Which radiation is used in medical imaging because its short wavelength lets it pass through soft tissue?",
+      "options": [
+        "X-rays",
+        "radio waves",
+        "infrared",
+        "microwaves"
+      ],
+      "answer": 0,
+      "explanation": "X-rays have short wavelength and high photon energy, so they penetrate soft tissue but are stopped by bone."
+    },
+    {
+      "kind": "truefalse",
+      "id": "emr-tf-b07",
+      "topicId": "spectrum",
+      "question": "Gamma rays have a higher frequency than radio waves.",
+      "answer": true,
+      "explanation": "Gamma rays sit at the high-frequency end of the spectrum; radio waves at the low-frequency end."
+    },
+    {
+      "kind": "truefalse",
+      "id": "emr-tf-b08",
+      "topicId": "spectrum",
+      "question": "Infrared radiation has a shorter wavelength than visible light.",
+      "answer": false,
+      "explanation": "Infrared is just beyond the red end of the visible band, so its wavelength is longer than visible light."
+    },
+    {
+      "kind": "multi",
+      "id": "emr-multi-b07",
+      "topicId": "spectrum",
+      "question": "Which regions have a shorter wavelength than visible light? Select all that apply.",
+      "options": [
+        "ultraviolet",
+        "X-rays",
+        "gamma rays",
+        "infrared"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Ultraviolet, X-rays and gamma rays all have shorter wavelengths than visible light. Infrared is longer."
+    },
+    {
+      "kind": "multi",
+      "id": "emr-multi-b08",
+      "topicId": "spectrum",
+      "question": "Which increase as you move from radio waves toward gamma rays? Select all that apply.",
+      "options": [
+        "frequency",
+        "photon energy",
+        "wavelength",
+        "speed in vacuum"
+      ],
+      "answers": [
+        0,
+        1
+      ],
+      "explanation": "Frequency and photon energy increase across the spectrum; wavelength decreases; the speed in vacuum stays c."
+    },
+    {
+      "kind": "numeric",
+      "id": "emr-num-b07",
+      "topicId": "spectrum",
+      "question": "Ultraviolet light has a wavelength of 300 nm. Find its frequency in hertz. Take c = 3.0 × 10⁸ m/s.",
+      "answer": 1000000000000000.0,
+      "unit": "Hz",
+      "explanation": "300 nm = 3.0 × 10⁻⁷ m, so f = c/λ = (3.0 × 10⁸)/(3.0 × 10⁻⁷) = 1.0 × 10¹⁵ Hz."
+    },
+    {
+      "id": "emr-mcq-b19",
+      "topicId": "parameter-relations",
+      "question": "The relationship between speed, wavelength and frequency is:",
+      "options": [
+        "c = λf",
+        "c = λ/f",
+        "c = f/λ",
+        "c = λ + f"
+      ],
+      "answer": 0,
+      "explanation": "The wave travels one wavelength per cycle, so speed equals wavelength times frequency."
+    },
+    {
+      "id": "emr-mcq-b20",
+      "topicId": "parameter-relations",
+      "question": "The energy of a photon expressed in terms of its wavelength is:",
+      "options": [
+        "E = hc/λ",
+        "E = hλ/c",
+        "E = hcλ",
+        "E = hf/λ"
+      ],
+      "answer": 0,
+      "explanation": "Substituting f = c/λ into E = hf gives E = hc/λ, so shorter wavelength means higher energy."
+    },
+    {
+      "id": "emr-mcq-b21",
+      "topicId": "parameter-relations",
+      "question": "If you know a photon's wavelength, you can find its energy using:",
+      "options": [
+        "E = hc/λ",
+        "E = mc²",
+        "E = ½mv²",
+        "E = qV"
+      ],
+      "answer": 0,
+      "explanation": "The relation E = hc/λ links energy directly to wavelength through the two constants h and c."
+    },
+    {
+      "id": "emr-mcq-b22",
+      "topicId": "parameter-relations",
+      "question": "Two photons have frequencies in the ratio 1:3. Their energies are in the ratio:",
+      "options": [
+        "1:3",
+        "3:1",
+        "1:9",
+        "9:1"
+      ],
+      "answer": 0,
+      "explanation": "Energy is proportional to frequency, so the energies share the same ratio as the frequencies: 1:3."
+    },
+    {
+      "kind": "truefalse",
+      "id": "emr-tf-b09",
+      "topicId": "parameter-relations",
+      "question": "A photon of shorter wavelength has more energy than one of longer wavelength.",
+      "answer": true,
+      "explanation": "Energy is E = hc/λ, so it rises as wavelength falls. Short wavelength means high photon energy."
+    },
+    {
+      "kind": "truefalse",
+      "id": "emr-tf-b10",
+      "topicId": "parameter-relations",
+      "question": "The product of a photon's frequency and its wavelength equals the speed of light.",
+      "answer": true,
+      "explanation": "That product is exactly c = λf, a restatement of the wave relation."
+    },
+    {
+      "kind": "multi",
+      "id": "emr-multi-b09",
+      "topicId": "parameter-relations",
+      "question": "Which of the following relationships are correct? Select all that apply.",
+      "options": [
+        "c = λf",
+        "E = hf",
+        "E = hc/λ",
+        "E = h/λ"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are correct. E = h/λ is wrong; it is missing the factor c."
+    },
+    {
+      "kind": "numeric",
+      "id": "emr-num-b08",
+      "topicId": "parameter-relations",
+      "question": "Find the energy of a photon of wavelength 400 nm, in joules. Take h = 6.626 × 10⁻³⁴ J s and c = 3.0 × 10⁸ m/s.",
+      "answer": 4.97e-19,
+      "unit": "J",
+      "explanation": "E = hc/λ = (6.626 × 10⁻³⁴)(3.0 × 10⁸)/(4.0 × 10⁻⁷) = 4.97 × 10⁻¹⁹ J."
+    },
+    {
+      "kind": "numeric",
+      "id": "emr-num-b09",
+      "topicId": "parameter-relations",
+      "question": "Light has a wavelength of 500 nm. Find its frequency in hertz. Take c = 3.0 × 10⁸ m/s.",
+      "answer": 600000000000000.0,
+      "unit": "Hz",
+      "explanation": "500 nm = 5.0 × 10⁻⁷ m, so f = c/λ = (3.0 × 10⁸)/(5.0 × 10⁻⁷) = 6.0 × 10¹⁴ Hz."
     }
   ]
 }

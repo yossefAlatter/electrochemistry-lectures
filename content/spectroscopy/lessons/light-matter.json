@@ -506,6 +506,623 @@
         2
       ],
       "explanation": "Light can be reflected, absorbed or scattered, and often a mixture of all three. It is not true that light always passes through unchanged: that is the special case of a fully transparent, non-absorbing material."
+    },
+    {
+      "id": "lm-mcq-b01",
+      "topicId": "reflection-refraction-transmission",
+      "question": "When light meets matter, it may be:",
+      "options": [
+        "reflected, absorbed, or transmitted (and scattered)",
+        "always absorbed",
+        "always transmitted unchanged",
+        "always destroyed"
+      ],
+      "answer": 0,
+      "explanation": "An incoming beam can be split into a reflected part, an absorbed part, a transmitted part and a scattered part. The balance depends on the material and the wavelength."
+    },
+    {
+      "id": "lm-mcq-b02",
+      "topicId": "reflection-refraction-transmission",
+      "question": "Specular reflection is reflection from:",
+      "options": [
+        "a smooth surface, giving a clear image",
+        "a rough surface, giving no image",
+        "a transparent medium",
+        "a vacuum"
+      ],
+      "answer": 0,
+      "explanation": "A smooth surface reflects a parallel beam as a parallel beam, preserving the image; a rough surface scatters it."
+    },
+    {
+      "id": "lm-mcq-b03",
+      "topicId": "reflection-refraction-transmission",
+      "question": "Diffuse reflection occurs because:",
+      "options": [
+        "a rough surface sends light in many directions",
+        "the surface absorbs all the light",
+        "the light slows down",
+        "the light is polarised"
+      ],
+      "answer": 0,
+      "explanation": "Roughness makes different patches reflect in different directions, so the light is spread out rather than forming a mirror image."
+    },
+    {
+      "id": "lm-mcq-b04",
+      "topicId": "reflection-refraction-transmission",
+      "question": "A material looks transparent when it:",
+      "options": [
+        "transmits most incident light without much absorption",
+        "reflects all the light",
+        "absorbs all the light",
+        "scatters all the light"
+      ],
+      "answer": 0,
+      "explanation": "Transparency means light passes through with little absorption or scattering, over the range of wavelengths concerned."
+    },
+    {
+      "id": "lm-mcq-b05",
+      "topicId": "reflection-refraction-transmission",
+      "question": "The colour of an opaque object is set by:",
+      "options": [
+        "the wavelengths it reflects",
+        "the wavelengths it transmits",
+        "its temperature alone",
+        "its mass"
+      ],
+      "answer": 0,
+      "explanation": "An opaque object shows the colours it reflects strongly; the rest are absorbed. A red object reflects red and absorbs the other colours."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lm-tf-b01",
+      "topicId": "reflection-refraction-transmission",
+      "question": "A black surface absorbs most of the light that falls on it.",
+      "answer": true,
+      "explanation": "Black means little light is reflected; almost all of the incident light is absorbed."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lm-tf-b02",
+      "topicId": "reflection-refraction-transmission",
+      "question": "Refraction happens because light changes speed when it crosses between media.",
+      "answer": true,
+      "explanation": "The change of speed across the boundary bends the wavefront, which is what refraction is."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lm-tf-b03",
+      "topicId": "reflection-refraction-transmission",
+      "question": "A white surface reflects most of the visible wavelengths.",
+      "answer": true,
+      "explanation": "A white surface reflects all visible colours about equally, so it looks white under white light."
+    },
+    {
+      "kind": "multi",
+      "id": "lm-multi-b01",
+      "topicId": "reflection-refraction-transmission",
+      "question": "What can happen to light when it meets matter? Select all that apply.",
+      "options": [
+        "reflection",
+        "absorption",
+        "transmission",
+        "conversion into a gravitational wave"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Light can be reflected, absorbed or transmitted, and it can also be scattered. It is not turned into a gravitational wave."
+    },
+    {
+      "kind": "numeric",
+      "id": "lm-num-b01",
+      "topicId": "reflection-refraction-transmission",
+      "question": "A surface reflects 30% of the incident light and absorbs none. What fraction of the light is transmitted?",
+      "answer": 0.7,
+      "unit": "fraction",
+      "explanation": "Reflection takes 30%, so 70% is transmitted: 0.70."
+    },
+    {
+      "kind": "numeric",
+      "id": "lm-num-b02",
+      "topicId": "reflection-refraction-transmission",
+      "question": "A sample absorbs 60% of the light passing through it. What percentage is transmitted?",
+      "answer": 40.0,
+      "unit": "%",
+      "explanation": "Whatever is not absorbed is transmitted, so 100 − 60 = 40%."
+    },
+    {
+      "id": "lm-mcq-b06",
+      "topicId": "absorption",
+      "question": "A molecule absorbs a photon when:",
+      "options": [
+        "the photon energy matches the gap between two of its energy levels",
+        "the light is very dim",
+        "the molecule is hot",
+        "the photon is reflected"
+      ],
+      "answer": 0,
+      "explanation": "Absorption is resonant: it happens when the photon energy equals the spacing between an occupied and a higher level."
+    },
+    {
+      "id": "lm-mcq-b07",
+      "topicId": "absorption",
+      "question": "An absorption spectrum appears as:",
+      "options": [
+        "dark lines on a bright continuous background",
+        "bright lines on a dark background",
+        "a uniform rainbow",
+        "a single colour"
+      ],
+      "answer": 0,
+      "explanation": "A sample removes the wavelengths it absorbs from a continuous beam, leaving dark lines against the bright background."
+    },
+    {
+      "id": "lm-mcq-b08",
+      "topicId": "absorption",
+      "question": "In the Beer–Lambert law A = εcl, the absorbance is proportional to:",
+      "options": [
+        "the concentration and the path length",
+        "the wavelength alone",
+        "the temperature",
+        "the pressure"
+      ],
+      "answer": 0,
+      "explanation": "Absorbance rises with concentration c and path length l, with the molar absorptivity ε setting the response at that wavelength."
+    },
+    {
+      "id": "lm-mcq-b09",
+      "topicId": "absorption",
+      "question": "A solution that absorbs green light strongly will look:",
+      "options": [
+        "magenta or reddish-purple, the complementary colour",
+        "green",
+        "white",
+        "black"
+      ],
+      "answer": 0,
+      "explanation": "The transmitted light is what remains after green is removed, giving the complementary colour, which is magenta for green."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lm-tf-b04",
+      "topicId": "absorption",
+      "question": "Absorbing a photon raises a molecule to a higher energy level.",
+      "answer": true,
+      "explanation": "The energy of the photon is taken up as internal energy, promoting the molecule from a lower to a higher level."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lm-tf-b05",
+      "topicId": "absorption",
+      "question": "A sample absorbs the same fraction of light at every wavelength.",
+      "answer": false,
+      "explanation": "Absorption is wavelength-dependent. A substance absorbs strongly at its characteristic wavelengths and weakly elsewhere."
+    },
+    {
+      "kind": "multi",
+      "id": "lm-multi-b02",
+      "topicId": "absorption",
+      "question": "The absorbance in the Beer–Lambert law depends on which of the following? Select all that apply.",
+      "options": [
+        "the concentration",
+        "the path length",
+        "the molar absorptivity",
+        "the colour of the container"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Absorbance is A = εcl. The container colour does not enter the law."
+    },
+    {
+      "kind": "numeric",
+      "id": "lm-num-b03",
+      "topicId": "absorption",
+      "question": "A solution has molar absorptivity ε = 500 L mol⁻¹ cm⁻¹, concentration 0.020 mol/L and path length 1.0 cm. Find the absorbance.",
+      "answer": 10.0,
+      "explanation": "A = εcl = 500 × 0.020 × 1.0 = 10."
+    },
+    {
+      "kind": "numeric",
+      "id": "lm-num-b04",
+      "topicId": "absorption",
+      "question": "A solution of concentration 0.10 mol/L in a 2.0 cm cell has an absorbance of 1.0. Find its molar absorptivity in L mol⁻¹ cm⁻¹.",
+      "answer": 5.0,
+      "unit": "L mol⁻¹ cm⁻¹",
+      "explanation": "ε = A/(cl) = 1.0/(0.10 × 2.0) = 5.0 L mol⁻¹ cm⁻¹."
+    },
+    {
+      "id": "lm-mcq-b10",
+      "topicId": "scattering",
+      "question": "Scattering is best described as:",
+      "options": [
+        "the redirection of light by particles or molecules",
+        "the absorption of light",
+        "the emission of light",
+        "specular reflection from a mirror"
+      ],
+      "answer": 0,
+      "explanation": "In scattering, light is redirected in many directions by molecules or particles, without necessarily being absorbed."
+    },
+    {
+      "id": "lm-mcq-b11",
+      "topicId": "scattering",
+      "question": "The intensity of Rayleigh scattering is proportional to:",
+      "options": [
+        "1/λ⁴",
+        "λ⁴",
+        "λ",
+        "1/λ"
+      ],
+      "answer": 0,
+      "explanation": "Rayleigh scattering falls off steeply with wavelength as 1/λ⁴, so short wavelengths scatter far more strongly."
+    },
+    {
+      "id": "lm-mcq-b12",
+      "topicId": "scattering",
+      "question": "The sky looks blue mainly because:",
+      "options": [
+        "short wavelengths are scattered more strongly by air molecules",
+        "air emits blue light",
+        "the atmosphere absorbs red light",
+        "the Sun is blue"
+      ],
+      "answer": 0,
+      "explanation": "By the 1/λ⁴ rule, blue light is scattered much more than red, so blue reaches our eyes from all directions."
+    },
+    {
+      "id": "lm-mcq-b13",
+      "topicId": "scattering",
+      "question": "A sunset looks red because:",
+      "options": [
+        "blue light is scattered away, leaving the longer wavelengths",
+        "red light is scattered more strongly",
+        "the Sun cools in the evening",
+        "the air absorbs only blue"
+      ],
+      "answer": 0,
+      "explanation": "Near the horizon, light travels a long path through the air, so much of the blue is scattered out and red dominates."
+    },
+    {
+      "id": "lm-mcq-b14",
+      "topicId": "scattering",
+      "question": "Raman scattering involves:",
+      "options": [
+        "a change in the photon energy because of molecular vibrations",
+        "simple elastic reflection",
+        "absorption followed by re-emission at the same energy",
+        "total internal reflection"
+      ],
+      "answer": 0,
+      "explanation": "In Raman scattering a small amount of energy is exchanged with molecular vibrations, so the scattered photon has a slightly different energy."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lm-tf-b06",
+      "topicId": "scattering",
+      "question": "Rayleigh scattering is elastic, so the scattered photon has the same energy as the incident one.",
+      "answer": true,
+      "explanation": "Elastic means no energy is transferred, so the photon keeps its energy and only its direction changes."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lm-tf-b07",
+      "topicId": "scattering",
+      "question": "Raman scattering changes the energy of the scattered photon.",
+      "answer": true,
+      "explanation": "The photon gives up or gains a quantum of vibrational energy, so its energy shifts. This shift identifies the molecule."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lm-tf-b08",
+      "topicId": "scattering",
+      "question": "Shorter wavelengths are scattered more strongly than longer ones.",
+      "answer": true,
+      "explanation": "The 1/λ⁴ dependence means blue light scatters much more than red, which is why the sky is blue and sunsets are red."
+    },
+    {
+      "kind": "multi",
+      "id": "lm-multi-b03",
+      "topicId": "scattering",
+      "question": "Which are true of Rayleigh scattering? Select all that apply.",
+      "options": [
+        "it is elastic",
+        "its intensity varies as 1/λ⁴",
+        "it explains the blue of the sky",
+        "it changes the photon energy"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Rayleigh scattering is elastic, follows a 1/λ⁴ law and colours the sky. It does not change the photon energy; that is Raman scattering."
+    },
+    {
+      "kind": "numeric",
+      "id": "lm-num-b05",
+      "topicId": "scattering",
+      "question": "Rayleigh intensity varies as 1/λ⁴. If the wavelength is doubled, by what factor does the intensity change? Give the factor (for example 0.25).",
+      "answer": 0.0625,
+      "explanation": "Doubling λ multiplies intensity by 1/2⁴ = 1/16 = 0.0625."
+    },
+    {
+      "kind": "numeric",
+      "id": "lm-num-b06",
+      "topicId": "scattering",
+      "question": "If the wavelength is halved, by what factor does the Rayleigh scattering intensity increase?",
+      "answer": 16.0,
+      "explanation": "Intensity ∝ 1/λ⁴. Halving λ gives a factor of 2⁴ = 16."
+    },
+    {
+      "id": "lm-mcq-b15",
+      "topicId": "emission",
+      "question": "Light is emitted when:",
+      "options": [
+        "an excited atom or molecule drops to a lower energy level",
+        "an atom absorbs a photon",
+        "an atom is ionised",
+        "a metal melts"
+      ],
+      "answer": 0,
+      "explanation": "Emission follows a downward transition: the energy released appears as a photon."
+    },
+    {
+      "id": "lm-mcq-b16",
+      "topicId": "emission",
+      "question": "An emission spectrum appears as:",
+      "options": [
+        "bright lines on a dark background",
+        "dark lines on a bright background",
+        "a uniform rainbow",
+        "a single dark band"
+      ],
+      "answer": 0,
+      "explanation": "A hot gas of isolated atoms emits at its characteristic wavelengths only, giving bright lines against darkness."
+    },
+    {
+      "id": "lm-mcq-b17",
+      "topicId": "emission",
+      "question": "Fluorescence differs from phosphorescence mainly in:",
+      "options": [
+        "the lifetime of the emission",
+        "the colour",
+        "the intensity",
+        "the polarisation"
+      ],
+      "answer": 0,
+      "explanation": "Fluorescence is prompt; phosphorescence lingers because the excited state is long-lived. Colour, intensity and polarisation are not the defining difference."
+    },
+    {
+      "id": "lm-mcq-b18",
+      "topicId": "emission",
+      "question": "The energy of an emitted photon equals:",
+      "options": [
+        "the energy difference between the two levels involved",
+        "the energy of any absorbed photon",
+        "the work function",
+        "the kinetic energy of the atom"
+      ],
+      "answer": 0,
+      "explanation": "The photon carries away exactly the energy lost by the atom in dropping between the two levels."
+    },
+    {
+      "id": "lm-mcq-b19",
+      "topicId": "emission",
+      "question": "A line spectrum is evidence that:",
+      "options": [
+        "the energy levels in atoms are discrete",
+        "atoms have continuous energy",
+        "light is a wave",
+        "matter is transparent"
+      ],
+      "answer": 0,
+      "explanation": "Sharp lines come only from transitions between discrete levels, so a line spectrum reveals quantised energy."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lm-tf-b09",
+      "topicId": "emission",
+      "question": "An atom can emit a photon only when it moves from a higher to a lower energy level.",
+      "answer": true,
+      "explanation": "Emission requires a downward transition. Going up requires absorption of energy instead."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lm-tf-b10",
+      "topicId": "emission",
+      "question": "A hot gas of isolated atoms produces a continuous emission spectrum.",
+      "answer": false,
+      "explanation": "Isolated atoms give a line spectrum at their characteristic wavelengths. A continuous spectrum comes from a hot dense body."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lm-tf-b11",
+      "topicId": "emission",
+      "question": "The wavelengths in an emission spectrum match those missing from the corresponding absorption spectrum.",
+      "answer": true,
+      "explanation": "Both come from the same set of level spacings, so the lines appear at the same wavelengths, bright in emission and dark in absorption."
+    },
+    {
+      "kind": "multi",
+      "id": "lm-multi-b04",
+      "topicId": "emission",
+      "question": "Which are true of emission? Select all that apply.",
+      "options": [
+        "it follows a downward transition",
+        "the photon energy equals the level gap",
+        "it gives bright lines for isolated atoms",
+        "it always requires a photon to be absorbed first"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Emission follows a downward transition and reveals the level gap as a bright line. Excitation need not be by light; it can be by heat or a discharge."
+    },
+    {
+      "kind": "numeric",
+      "id": "lm-num-b07",
+      "topicId": "emission",
+      "question": "An electron falls from an energy of −3.4 eV to −13.6 eV. Find the energy of the emitted photon in electronvolts.",
+      "answer": 10.2,
+      "unit": "eV",
+      "explanation": "The energy released is the gap: −3.4 − (−13.6) = 10.2 eV."
+    },
+    {
+      "kind": "numeric",
+      "id": "lm-num-b08",
+      "topicId": "emission",
+      "question": "Find the wavelength, in nanometres, of a photon of energy 2.0 eV. Use hc = 1240 eV·nm.",
+      "answer": 620.0,
+      "unit": "nm",
+      "explanation": "λ = hc/E = 1240/2.0 = 620 nm."
+    },
+    {
+      "id": "lm-mcq-b20",
+      "topicId": "interaction-summary",
+      "question": "Which interaction reveals the energy levels of a molecule?",
+      "options": [
+        "absorption of light at specific wavelengths",
+        "diffuse reflection",
+        "refraction",
+        "specular reflection"
+      ],
+      "answer": 0,
+      "explanation": "A molecule absorbs only photons matching its level gaps, so its absorption pattern maps out those gaps."
+    },
+    {
+      "id": "lm-mcq-b21",
+      "topicId": "interaction-summary",
+      "question": "Which process gives information about molecular vibrations through a shift in photon energy?",
+      "options": [
+        "Raman scattering",
+        "specular reflection",
+        "refraction",
+        "total internal reflection"
+      ],
+      "answer": 0,
+      "explanation": "The Raman shift is the energy exchanged with a molecular vibration, so the shift reports on the vibrations."
+    },
+    {
+      "id": "lm-mcq-b22",
+      "topicId": "interaction-summary",
+      "question": "A gas that emits a line spectrum must have:",
+      "options": [
+        "discrete energy levels",
+        "no energy levels",
+        "continuous energy levels",
+        "only one energy level"
+      ],
+      "answer": 0,
+      "explanation": "Sharp emission lines come from transitions between discrete levels; without them the lines could not be sharp."
+    },
+    {
+      "id": "lm-mcq-b23",
+      "topicId": "interaction-summary",
+      "question": "Taken together, reflection, refraction, absorption, scattering and emission:",
+      "options": [
+        "describe how light interacts with matter",
+        "prove light is a particle",
+        "show light carries no energy",
+        "are all the same process"
+      ],
+      "answer": 0,
+      "explanation": "These are the ways light and matter exchange and redirect energy, and together they form the basis of spectroscopy."
+    },
+    {
+      "id": "lm-mcq-b24",
+      "topicId": "interaction-summary",
+      "question": "Which interaction is used in optical spectroscopy to identify a substance?",
+      "options": [
+        "absorption at characteristic wavelengths",
+        "reflection from a mirror",
+        "refraction at a boundary",
+        "polarisation by a filter"
+      ],
+      "answer": 0,
+      "explanation": "Each substance has a fingerprint of absorbed wavelengths, so measuring absorption identifies it."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lm-tf-b12",
+      "topicId": "interaction-summary",
+      "question": "Different substances absorb light at different characteristic wavelengths.",
+      "answer": true,
+      "explanation": "The pattern of absorbed wavelengths is unique to each substance, much like a fingerprint."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lm-tf-b13",
+      "topicId": "interaction-summary",
+      "question": "The absorption and emission spectra of a given substance are related.",
+      "answer": true,
+      "explanation": "Both arise from the same set of energy-level spacings, so the lines occur at matching wavelengths."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lm-tf-b14",
+      "topicId": "interaction-summary",
+      "question": "Scattering always leaves the photon energy unchanged.",
+      "answer": false,
+      "explanation": "Rayleigh scattering is elastic and leaves the energy unchanged, but Raman scattering shifts the photon energy by a vibrational quantum."
+    },
+    {
+      "kind": "multi",
+      "id": "lm-multi-b05",
+      "topicId": "interaction-summary",
+      "question": "Which can be used to identify a substance? Select all that apply.",
+      "options": [
+        "its absorption spectrum",
+        "its emission spectrum",
+        "its Raman spectrum",
+        "its mass alone"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The absorption, emission and Raman spectra are all characteristic fingerprints. Mass by itself does not identify a substance."
+    },
+    {
+      "kind": "multi",
+      "id": "lm-multi-b06",
+      "topicId": "interaction-summary",
+      "question": "Which interactions involve a transfer of energy to the matter? Select all that apply.",
+      "options": [
+        "absorption",
+        "emission",
+        "Raman scattering",
+        "specular reflection"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Absorption and Raman scattering put energy into the matter, and emission takes it out. Specular reflection is elastic and transfers none."
+    },
+    {
+      "kind": "numeric",
+      "id": "lm-num-b09",
+      "topicId": "interaction-summary",
+      "question": "A beam of 100 units is reflected (20), absorbed (30) and scattered (10). How much is transmitted?",
+      "answer": 40.0,
+      "explanation": "By conservation, the transmitted amount is 100 − 20 − 30 − 10 = 40 units."
+    },
+    {
+      "kind": "numeric",
+      "id": "lm-num-b10",
+      "topicId": "interaction-summary",
+      "question": "A sample transmits 25% of the incident light. Find its absorbance, A = −log₁₀(T), with T = 0.25.",
+      "answer": 0.6,
+      "explanation": "T = 0.25, so A = −log₁₀(0.25) = 0.60."
     }
   ]
 }

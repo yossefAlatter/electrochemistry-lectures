@@ -200,6 +200,41 @@
       ],
       "answer": 1,
       "explanation": "Where a crest of one wave meets a trough of the other they cancel, giving a quiet point. This destructive interference is a general property of waves, sound and light alike."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps2-num-004",
+      "topicId": "ps2-waves",
+      "question": "A wave has a frequency of 6.0 × 10¹⁴ Hz. Find its wavelength in nanometres. Take c = 3.0 × 10⁸ m/s.",
+      "answer": 500.0,
+      "unit": "nm",
+      "explanation": "λ = c/f = (3.0 × 10⁸)/(6.0 × 10¹⁴) = 5.0 × 10⁻⁷ m = 500 nm."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps2-tf-004",
+      "topicId": "ps2-waves",
+      "question": "Diffraction is more noticeable when the slit or obstacle is comparable in size to the wavelength.",
+      "answer": true,
+      "explanation": "Strong diffraction requires the wavelength to be comparable to the size of the opening; if the slit is far larger, diffraction is slight."
+    },
+    {
+      "kind": "multi",
+      "id": "ps2-multi-002",
+      "topicId": "ps2-waves",
+      "question": "Which of the following are wave behaviours of light? Select all that apply.",
+      "options": [
+        "interference",
+        "diffraction",
+        "polarisation",
+        "the photoelectric effect"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Interference, diffraction and polarisation are wave effects. The photoelectric effect shows particle behaviour."
     }
   ]
 }

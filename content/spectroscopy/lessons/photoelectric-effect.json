@@ -504,6 +504,420 @@
         3
       ],
       "explanation": "A threshold, instant emission, and a stopping potential set by frequency all point to light arriving in discrete packets of energy. Diffraction is a wave effect and is evidence for the wave picture."
+    },
+    {
+      "id": "pe-mcq-b01",
+      "topicId": "threshold",
+      "question": "The threshold frequency is:",
+      "options": [
+        "the minimum frequency that ejects electrons from a metal",
+        "the maximum frequency the metal can absorb",
+        "the frequency at which the current is zero",
+        "the frequency of visible light"
+      ],
+      "answer": 0,
+      "explanation": "Below the threshold frequency no electrons are emitted, however intense the light; at or above it, emission begins."
+    },
+    {
+      "id": "pe-mcq-b02",
+      "topicId": "threshold",
+      "question": "Below the threshold frequency, increasing the intensity of the light:",
+      "options": [
+        "produces no photoelectrons at all",
+        "produces more photoelectrons",
+        "produces faster photoelectrons",
+        "lowers the work function"
+      ],
+      "answer": 0,
+      "explanation": "Intensity changes how many photons arrive, not how much energy each carries. If no single photon has enough energy, no emission occurs."
+    },
+    {
+      "id": "pe-mcq-b03",
+      "topicId": "threshold",
+      "question": "Photoelectric emission is instantaneous because:",
+      "options": [
+        "a single photon can transfer all its energy to one electron at once",
+        "the electrons heat up slowly until they escape",
+        "the metal melts",
+        "light accumulates over minutes"
+      ],
+      "answer": 0,
+      "explanation": "A photon is absorbed whole by one electron, so escape is immediate, with no build-up time."
+    },
+    {
+      "id": "pe-mcq-b04",
+      "topicId": "threshold",
+      "question": "The threshold frequency depends on:",
+      "options": [
+        "the work function of the metal",
+        "the intensity of the light",
+        "the distance to the lamp",
+        "the area of the metal surface"
+      ],
+      "answer": 0,
+      "explanation": "Each metal needs a minimum photon energy, hf₀, to free an electron, so the threshold is set by the metal's work function."
+    },
+    {
+      "kind": "truefalse",
+      "id": "pe-tf-b01",
+      "topicId": "threshold",
+      "question": "Below the threshold frequency, no photoelectrons are emitted no matter how intense the light is.",
+      "answer": true,
+      "explanation": "Intensity only adds more photons of the same energy. If each photon lacks the energy to free an electron, none is emitted."
+    },
+    {
+      "kind": "truefalse",
+      "id": "pe-tf-b02",
+      "topicId": "threshold",
+      "question": "The wave theory predicts a delay before emission with dim light, but emission is observed to be immediate.",
+      "answer": true,
+      "explanation": "If energy were gathered continuously from the wave, weak light would need time to accumulate. The observed instantaneity is a clue to the photon picture."
+    },
+    {
+      "kind": "multi",
+      "id": "pe-multi-b01",
+      "topicId": "threshold",
+      "question": "Which statements about the threshold are correct? Select all that apply.",
+      "options": [
+        "it depends on the metal",
+        "below it no electrons are emitted",
+        "above it emission is immediate",
+        "it depends on the light intensity"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The threshold is set by the metal and marks the onset of emission, which is immediate above it. Intensity does not change the threshold."
+    },
+    {
+      "kind": "numeric",
+      "id": "pe-num-b01",
+      "topicId": "threshold",
+      "question": "A metal has a work function of 2.0 eV. Find its threshold frequency in hertz. Take 1 eV = 1.6 × 10⁻¹⁹ J and h = 6.626 × 10⁻³⁴ J s.",
+      "answer": 483000000000000.0,
+      "unit": "Hz",
+      "explanation": "φ = 2.0 × 1.6 × 10⁻¹⁹ = 3.2 × 10⁻¹⁹ J. Then f₀ = φ/h = (3.2 × 10⁻¹⁹)/(6.626 × 10⁻³⁴) = 4.8 × 10¹⁴ Hz."
+    },
+    {
+      "kind": "numeric",
+      "id": "pe-num-b02",
+      "topicId": "threshold",
+      "question": "A metal has a work function of 3.0 eV. Find its threshold wavelength in nanometres. Use hc = 1240 eV·nm.",
+      "answer": 413.0,
+      "unit": "nm",
+      "explanation": "λ₀ = hc/φ = 1240/3.0 = 413 nm."
+    },
+    {
+      "id": "pe-mcq-b05",
+      "topicId": "einstein",
+      "question": "Einstein's photoelectric equation is:",
+      "options": [
+        "KEmax = hf − φ",
+        "KEmax = hf + φ",
+        "KEmax = φ − hf",
+        "KEmax = hφ"
+      ],
+      "answer": 0,
+      "explanation": "The photon brings energy hf, the electron pays the work function φ to escape, and the rest is its maximum kinetic energy."
+    },
+    {
+      "id": "pe-mcq-b06",
+      "topicId": "einstein",
+      "question": "The work function φ of a metal is:",
+      "options": [
+        "the minimum energy needed to remove an electron from the surface",
+        "the kinetic energy of the emitted electron",
+        "the energy of the incident photon",
+        "the photocurrent"
+      ],
+      "answer": 0,
+      "explanation": "The work function is the energy barrier an electron must overcome to escape the metal."
+    },
+    {
+      "id": "pe-mcq-b07",
+      "topicId": "einstein",
+      "question": "Increasing the frequency of light above the threshold:",
+      "options": [
+        "increases the maximum kinetic energy of the electrons",
+        "increases the number of electrons emitted",
+        "decreases the work function",
+        "has no effect"
+      ],
+      "answer": 0,
+      "explanation": "Higher frequency means more energetic photons, so the electrons leave with more kinetic energy. The number of electrons is set by intensity."
+    },
+    {
+      "kind": "truefalse",
+      "id": "pe-tf-b03",
+      "topicId": "einstein",
+      "question": "Above threshold, increasing the intensity increases the number of photoelectrons but not their maximum kinetic energy.",
+      "answer": true,
+      "explanation": "More intense light delivers more photons per second, so more electrons are freed, but each photon has the same energy, so KEmax is unchanged."
+    },
+    {
+      "kind": "truefalse",
+      "id": "pe-tf-b04",
+      "topicId": "einstein",
+      "question": "In the simple photoelectric picture, one electron can absorb energy from several photons at once.",
+      "answer": false,
+      "explanation": "The process is a one-photon, one-electron event. That is why a low-frequency photon cannot free an electron no matter how many arrive."
+    },
+    {
+      "kind": "multi",
+      "id": "pe-multi-b02",
+      "topicId": "einstein",
+      "question": "According to Einstein's equation, KEmax depends on which of the following? Select all that apply.",
+      "options": [
+        "the frequency of the light",
+        "the work function of the metal",
+        "the light intensity",
+        "the number of photons"
+      ],
+      "answers": [
+        0,
+        1
+      ],
+      "explanation": "KEmax = hf − φ depends on the photon frequency and the metal's work function. Intensity and photon number affect how many electrons, not how energetic."
+    },
+    {
+      "kind": "numeric",
+      "id": "pe-num-b03",
+      "topicId": "einstein",
+      "question": "Light of frequency 8.0 × 10¹⁴ Hz strikes a metal of work function 2.0 eV (3.2 × 10⁻¹⁹ J). Find KEmax in joules. Take h = 6.626 × 10⁻³⁴ J s.",
+      "answer": 2.1e-19,
+      "unit": "J",
+      "explanation": "Photon energy hf = (6.626 × 10⁻³⁴)(8.0 × 10¹⁴) = 5.30 × 10⁻¹⁹ J. Then KEmax = 5.30 × 10⁻¹⁹ − 3.2 × 10⁻¹⁹ = 2.1 × 10⁻¹⁹ J."
+    },
+    {
+      "id": "pe-mcq-b08",
+      "topicId": "stopping-potential",
+      "question": "The stopping potential is:",
+      "options": [
+        "the reverse voltage that just stops the photocurrent",
+        "the voltage that starts emission",
+        "the work function expressed in volts",
+        "the frequency of the light"
+      ],
+      "answer": 0,
+      "explanation": "Applying a reverse voltage decelerates the electrons; at the stopping potential even the fastest electrons fail to reach the collector."
+    },
+    {
+      "id": "pe-mcq-b09",
+      "topicId": "stopping-potential",
+      "question": "The stopping potential V₀ is related to the maximum kinetic energy by:",
+      "options": [
+        "eV₀ = KEmax",
+        "eV₀ = φ",
+        "eV₀ = hf",
+        "V₀ = hf"
+      ],
+      "answer": 0,
+      "explanation": "The work done against the stopping voltage, eV₀, just cancels the maximum kinetic energy of the emitted electrons."
+    },
+    {
+      "id": "pe-mcq-b10",
+      "topicId": "stopping-potential",
+      "question": "A graph of stopping potential against frequency is a straight line whose slope is:",
+      "options": [
+        "h/e",
+        "e/h",
+        "φ",
+        "h"
+      ],
+      "answer": 0,
+      "explanation": "Since eV₀ = hf − φ, dividing by e gives V₀ = (h/e)f − φ/e, so the slope is h/e."
+    },
+    {
+      "id": "pe-mcq-b11",
+      "topicId": "stopping-potential",
+      "question": "The intercept of the stopping-potential graph on the frequency axis gives:",
+      "options": [
+        "the threshold frequency",
+        "the work function",
+        "the Planck constant",
+        "the electron charge"
+      ],
+      "answer": 0,
+      "explanation": "V₀ falls to zero at the threshold frequency, where the photon energy just equals the work function."
+    },
+    {
+      "kind": "truefalse",
+      "id": "pe-tf-b05",
+      "topicId": "stopping-potential",
+      "question": "The stopping potential depends on the frequency of the light, not on its intensity.",
+      "answer": true,
+      "explanation": "Intensity changes the size of the photocurrent, but the maximum kinetic energy, and hence the stopping potential, is set by the frequency."
+    },
+    {
+      "kind": "truefalse",
+      "id": "pe-tf-b06",
+      "topicId": "stopping-potential",
+      "question": "The slope of the stopping-potential against frequency graph is the same for all metals.",
+      "answer": true,
+      "explanation": "The slope is h/e, a universal constant, so every metal gives a line of the same slope but a different intercept."
+    },
+    {
+      "kind": "multi",
+      "id": "pe-multi-b03",
+      "topicId": "stopping-potential",
+      "question": "From a graph of stopping potential against frequency, one can determine: Select all that apply.",
+      "options": [
+        "the Planck constant",
+        "the work function of the metal",
+        "the threshold frequency",
+        "the light intensity"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The slope gives h/e (hence h), and the intercepts give φ and f₀. Intensity is not read from this graph."
+    },
+    {
+      "kind": "numeric",
+      "id": "pe-num-b04",
+      "topicId": "stopping-potential",
+      "question": "A metal has a threshold frequency of 5.0 × 10¹⁴ Hz. Find its work function in electronvolts. Take h = 4.14 × 10⁻¹⁵ eV s.",
+      "answer": 2.07,
+      "unit": "eV",
+      "explanation": "φ = hf₀ = (4.14 × 10⁻¹⁵)(5.0 × 10¹⁴) = 2.07 eV."
+    },
+    {
+      "kind": "numeric",
+      "id": "pe-num-b05",
+      "topicId": "stopping-potential",
+      "question": "In a photoelectric experiment, light of wavelength 400 nm falls on a metal of work function 2.0 eV. Find KEmax in electronvolts. Use hc = 1240 eV·nm.",
+      "answer": 1.1,
+      "unit": "eV",
+      "explanation": "Photon energy = 1240/400 = 3.1 eV. Then KEmax = 3.1 − 2.0 = 1.1 eV."
+    },
+    {
+      "id": "pe-mcq-b12",
+      "topicId": "significance",
+      "question": "The photoelectric effect is direct evidence that light:",
+      "options": [
+        "delivers its energy in discrete packets",
+        "is a continuous wave",
+        "carries no energy",
+        "is a sound wave"
+      ],
+      "answer": 0,
+      "explanation": "The existence of a threshold and the instantaneous emission show that energy arrives in whole photons."
+    },
+    {
+      "id": "pe-mcq-b13",
+      "topicId": "significance",
+      "question": "Which observation is impossible to explain with the wave theory of light?",
+      "options": [
+        "no emission below the threshold frequency",
+        "reflection from a polished surface",
+        "refraction at a boundary",
+        "interference between two beams"
+      ],
+      "answer": 0,
+      "explanation": "A continuous wave should eventually supply enough energy at any frequency; the sharp threshold is the giveaway of quantised energy."
+    },
+    {
+      "id": "pe-mcq-b14",
+      "topicId": "significance",
+      "question": "Which device makes direct use of the photoelectric effect?",
+      "options": [
+        "a solar cell and a photodetector",
+        "an electric heater",
+        "a loudspeaker",
+        "a bar magnet"
+      ],
+      "answer": 0,
+      "explanation": "Solar cells and photodetectors turn light into a current by freeing electrons with photons."
+    },
+    {
+      "id": "pe-mcq-b15",
+      "topicId": "significance",
+      "question": "Above threshold, the photocurrent is proportional to:",
+      "options": [
+        "the intensity of the light",
+        "the frequency alone",
+        "the work function",
+        "the stopping potential"
+      ],
+      "answer": 0,
+      "explanation": "Each photon frees at most one electron, so more photons per second (higher intensity) means more electrons per second."
+    },
+    {
+      "id": "pe-mcq-b16",
+      "topicId": "significance",
+      "question": "Which change increases the maximum kinetic energy of the emitted electrons?",
+      "options": [
+        "using higher-frequency light",
+        "using more intense light",
+        "using a larger metal plate",
+        "moving the lamp closer"
+      ],
+      "answer": 0,
+      "explanation": "Only a higher photon frequency raises KEmax. Intensity, area and distance change the number of electrons, not their energy."
+    },
+    {
+      "kind": "truefalse",
+      "id": "pe-tf-b07",
+      "topicId": "significance",
+      "question": "The photoelectric effect shows that light has particle as well as wave properties.",
+      "answer": true,
+      "explanation": "The wave picture explains interference and diffraction, while the photoelectric effect reveals the photon, so both pictures are needed."
+    },
+    {
+      "kind": "truefalse",
+      "id": "pe-tf-b08",
+      "topicId": "significance",
+      "question": "Einstein explained the photoelectric effect using the idea of photons.",
+      "answer": true,
+      "explanation": "Building on Planck's quanta, Einstein treated light as packets of energy hf, which accounted for the threshold and the kinetic-energy relation."
+    },
+    {
+      "kind": "truefalse",
+      "id": "pe-tf-b09",
+      "topicId": "significance",
+      "question": "Bright light of sufficiently high frequency ejects more electrons per second than dim light of the same frequency.",
+      "answer": true,
+      "explanation": "More intense light delivers more photons per second, so more electrons are freed each second."
+    },
+    {
+      "kind": "multi",
+      "id": "pe-multi-b04",
+      "topicId": "significance",
+      "question": "Which facts support the photon picture of light? Select all that apply.",
+      "options": [
+        "the existence of a threshold frequency",
+        "instantaneous emission",
+        "KEmax depends on frequency, not intensity",
+        "light bends at a boundary"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The threshold, the instantaneity and the frequency dependence of KEmax all point to quantised energy. Bending at a boundary is ordinary refraction."
+    },
+    {
+      "kind": "numeric",
+      "id": "pe-num-b06",
+      "topicId": "significance",
+      "question": "A metal has a work function of 4.0 eV. Find the minimum frequency of light, in hertz, that can cause emission. Take h = 4.14 × 10⁻¹⁵ eV s.",
+      "answer": 966000000000000.0,
+      "unit": "Hz",
+      "explanation": "f₀ = φ/h = 4.0/(4.14 × 10⁻¹⁵) = 9.7 × 10¹⁴ Hz."
+    },
+    {
+      "kind": "numeric",
+      "id": "pe-num-b07",
+      "topicId": "significance",
+      "question": "Photons of energy 4.0 eV strike a metal of work function 1.5 eV. Find the maximum kinetic energy of the emitted electrons, in electronvolts.",
+      "answer": 2.5,
+      "unit": "eV",
+      "explanation": "KEmax = hf − φ = 4.0 − 1.5 = 2.5 eV."
     }
   ]
 }

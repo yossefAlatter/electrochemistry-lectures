@@ -199,6 +199,45 @@
       ],
       "answer": 0,
       "explanation": "Each electron arrives as a single dot, yet many dots build an interference pattern. That is the wave behaviour of a particle, the heart of wave-particle duality."
+    },
+    {
+      "id": "ps5-mcq-005",
+      "topicId": "ps5-duality",
+      "question": "The de Broglie wavelength of a particle is given by:",
+      "options": [
+        "λ = h/p",
+        "λ = hp",
+        "λ = hmv²",
+        "λ = p/h"
+      ],
+      "answer": 0,
+      "explanation": "De Broglie's relation links wavelength to momentum through the Planck constant: λ = h/p."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps5-tf-003",
+      "topicId": "ps5-duality",
+      "question": "Electron diffraction shows that electrons have wave properties.",
+      "answer": true,
+      "explanation": "The diffraction pattern is a wave phenomenon, so its appearance for electrons shows that they behave as waves."
+    },
+    {
+      "kind": "multi",
+      "id": "ps5-multi-002",
+      "topicId": "ps5-duality",
+      "question": "Which are supported by the Bohr model? Select all that apply.",
+      "options": [
+        "discrete energy levels",
+        "the hydrogen line spectrum",
+        "quantised angular momentum",
+        "electron diffraction through a crystal"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The Bohr model gives discrete levels, quantised angular momentum and the hydrogen spectrum. Electron diffraction needs the full wave picture of matter."
     }
   ]
 }

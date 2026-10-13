@@ -479,6 +479,444 @@
         3
       ],
       "explanation": "A line spectrum is sharp lines, one for each allowed transition, because the energy levels are quantised. The pattern is a fingerprint of the element; it is definitely not a continuous band."
+    },
+    {
+      "id": "wpd-mcq-b01",
+      "topicId": "dual-nature",
+      "question": "Wave-particle duality means that light:",
+      "options": [
+        "shows both wave and particle behaviour, depending on the experiment",
+        "is only a wave",
+        "is only a particle",
+        "has no definable nature"
+      ],
+      "answer": 0,
+      "explanation": "Some experiments reveal the wave face of light and others the particle face; both descriptions are needed."
+    },
+    {
+      "id": "wpd-mcq-b02",
+      "topicId": "dual-nature",
+      "question": "When electrons are fired through a double slit one at a time, the result is:",
+      "options": [
+        "an interference pattern that builds up over time",
+        "just two bright stripes",
+        "no pattern at all",
+        "all electrons landing at one point"
+      ],
+      "answer": 0,
+      "explanation": "Each electron lands at a point, but the accumulated pattern is an interference pattern, showing each electron behaves as a wave."
+    },
+    {
+      "id": "wpd-mcq-b03",
+      "topicId": "dual-nature",
+      "question": "Which experiment reveals the particle nature of light?",
+      "options": [
+        "the photoelectric effect",
+        "interference",
+        "diffraction",
+        "polarisation"
+      ],
+      "answer": 0,
+      "explanation": "The photoelectric effect shows light delivering energy in whole photons, a particle-like behaviour. The others are wave effects."
+    },
+    {
+      "id": "wpd-mcq-b04",
+      "topicId": "dual-nature",
+      "question": "Which experiment reveals the wave nature of light?",
+      "options": [
+        "interference",
+        "the photoelectric effect",
+        "the Compton effect",
+        "line spectra"
+      ],
+      "answer": 0,
+      "explanation": "Interference requires superposition of waves and cannot be explained by independent particles."
+    },
+    {
+      "id": "wpd-mcq-b05",
+      "topicId": "dual-nature",
+      "question": "The idea of complementarity means that:",
+      "options": [
+        "wave and particle aspects are revealed in different experiments",
+        "both aspects always appear at the same time",
+        "the two aspects cancel each other",
+        "neither aspect is real"
+      ],
+      "answer": 0,
+      "explanation": "The wave and particle descriptions are complementary: each experiment brings out one face, and together they give the full picture."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wpd-tf-b01",
+      "topicId": "dual-nature",
+      "question": "A single photon can interfere with itself in a double-slit experiment.",
+      "answer": true,
+      "explanation": "Even one photon at a time produces an interference pattern, so the interference is of the wave with itself, not between different photons."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wpd-tf-b02",
+      "topicId": "dual-nature",
+      "question": "Electrons can show interference, which is a wave effect.",
+      "answer": true,
+      "explanation": "Electron interference and diffraction are direct evidence that matter, like light, has wave behaviour."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wpd-tf-b03",
+      "topicId": "dual-nature",
+      "question": "Both a wave description and a particle description are needed for light.",
+      "answer": true,
+      "explanation": "Neither picture alone explains everything; the two are complementary and both are required."
+    },
+    {
+      "kind": "multi",
+      "id": "wpd-multi-b01",
+      "topicId": "dual-nature",
+      "question": "Which observations support the wave nature of electrons? Select all that apply.",
+      "options": [
+        "electron diffraction through a crystal",
+        "electron interference through two slits",
+        "the photoelectric effect",
+        "the discreteness of charge"
+      ],
+      "answers": [
+        0,
+        1
+      ],
+      "explanation": "Diffraction and interference show electrons behaving as waves. The photoelectric effect and charge quantisation are particle-like."
+    },
+    {
+      "kind": "numeric",
+      "id": "wpd-num-b01",
+      "topicId": "dual-nature",
+      "question": "An electron has a de Broglie wavelength of 0.10 nm. Find its momentum in kg m/s. Take h = 6.626 × 10⁻³⁴ J s.",
+      "answer": 6.626e-24,
+      "unit": "kg m/s",
+      "explanation": "p = h/λ = (6.626 × 10⁻³⁴)/(1.0 × 10⁻¹⁰) = 6.6 × 10⁻²⁴ kg m/s."
+    },
+    {
+      "kind": "numeric",
+      "id": "wpd-num-b02",
+      "topicId": "dual-nature",
+      "question": "How many photons of energy 3.0 × 10⁻¹⁹ J are needed to deliver a total energy of 1.5 × 10⁻¹⁸ J?",
+      "answer": 5.0,
+      "explanation": "Number of photons = total energy / energy per photon = (1.5 × 10⁻¹⁸)/(3.0 × 10⁻¹⁹) = 5."
+    },
+    {
+      "id": "wpd-mcq-b06",
+      "topicId": "de-broglie",
+      "question": "The de Broglie wavelength of a particle is:",
+      "options": [
+        "λ = h/p",
+        "λ = hp",
+        "λ = h/p²",
+        "λ = p/h"
+      ],
+      "answer": 0,
+      "explanation": "De Broglie's relation ties the wavelength to the momentum p through the Planck constant: λ = h/p."
+    },
+    {
+      "id": "wpd-mcq-b07",
+      "topicId": "de-broglie",
+      "question": "De Broglie extended wave-particle duality to:",
+      "options": [
+        "matter",
+        "light only",
+        "electrons only",
+        "photons only"
+      ],
+      "answer": 0,
+      "explanation": "He proposed that all matter has a wave nature, with a wavelength set by its momentum."
+    },
+    {
+      "id": "wpd-mcq-b08",
+      "topicId": "de-broglie",
+      "question": "For a particle of larger momentum, the de Broglie wavelength is:",
+      "options": [
+        "shorter",
+        "longer",
+        "undefined",
+        "unchanged"
+      ],
+      "answer": 0,
+      "explanation": "Since λ = h/p, a larger momentum means a shorter wavelength."
+    },
+    {
+      "id": "wpd-mcq-b09",
+      "topicId": "de-broglie",
+      "question": "Electron diffraction through a crystal is evidence that:",
+      "options": [
+        "electrons behave as waves",
+        "electrons are photons",
+        "electrons have no momentum",
+        "electrons are neutral"
+      ],
+      "answer": 0,
+      "explanation": "A crystal acts as a diffraction grating; the resulting pattern shows the electrons behaving as waves with a de Broglie wavelength."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wpd-tf-b04",
+      "topicId": "de-broglie",
+      "question": "De Broglie proposed that any moving particle has an associated wavelength.",
+      "answer": true,
+      "explanation": "The relation λ = h/p applies to all matter, though the wavelength is only noticeable for very light particles."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wpd-tf-b05",
+      "topicId": "de-broglie",
+      "question": "Heavier or faster particles have longer de Broglie wavelengths.",
+      "answer": false,
+      "explanation": "A larger momentum gives a shorter wavelength. Heavy or fast particles have very small de Broglie wavelengths."
+    },
+    {
+      "kind": "multi",
+      "id": "wpd-multi-b02",
+      "topicId": "de-broglie",
+      "question": "Which determine the de Broglie wavelength of a particle? Select all that apply.",
+      "options": [
+        "its momentum",
+        "its mass and speed",
+        "the Planck constant",
+        "its electric charge"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The wavelength is λ = h/p, and p depends on mass and speed, so all three of momentum, mass/speed and h matter. Charge does not enter."
+    },
+    {
+      "kind": "numeric",
+      "id": "wpd-num-b03",
+      "topicId": "de-broglie",
+      "question": "An electron moves at 2.0 × 10⁶ m/s. Find its de Broglie wavelength in nanometres. Take m = 9.11 × 10⁻³¹ kg and h = 6.626 × 10⁻³⁴ J s.",
+      "answer": 0.364,
+      "unit": "nm",
+      "explanation": "p = mv = (9.11 × 10⁻³¹)(2.0 × 10⁶) = 1.82 × 10⁻²⁴ kg m/s. λ = h/p = 3.6 × 10⁻¹⁰ m = 0.36 nm."
+    },
+    {
+      "kind": "numeric",
+      "id": "wpd-num-b04",
+      "topicId": "de-broglie",
+      "question": "Find the de Broglie wavelength, in nanometres, of a proton (m = 1.67 × 10⁻²⁷ kg) moving at 1.0 × 10⁶ m/s. Take h = 6.626 × 10⁻³⁴ J s.",
+      "answer": 0.000397,
+      "unit": "nm",
+      "explanation": "p = (1.67 × 10⁻²⁷)(1.0 × 10⁶) = 1.67 × 10⁻²¹ kg m/s. λ = h/p = 3.97 × 10⁻¹³ m = 3.97 × 10⁻⁴ nm."
+    },
+    {
+      "id": "wpd-mcq-b10",
+      "topicId": "bohr",
+      "question": "In the Bohr model, electrons occupy:",
+      "options": [
+        "discrete orbits with fixed energies",
+        "a continuous range of orbits",
+        "the nucleus",
+        "random positions"
+      ],
+      "answer": 0,
+      "explanation": "Bohr restricted the electron to certain allowed orbits, each with a definite energy and radius."
+    },
+    {
+      "id": "wpd-mcq-b11",
+      "topicId": "bohr",
+      "question": "Bohr's quantisation condition was that the electron's orbit contains:",
+      "options": [
+        "a whole number of de Broglie wavelengths",
+        "any number of wavelengths",
+        "no wavelengths",
+        "exactly half a wavelength"
+      ],
+      "answer": 0,
+      "explanation": "A stable orbit is a standing wave, so its circumference must fit a whole number of wavelengths: 2πr = nλ."
+    },
+    {
+      "id": "wpd-mcq-b12",
+      "topicId": "bohr",
+      "question": "In the Bohr model, the allowed values of angular momentum are:",
+      "options": [
+        "whole multiples of h/2π",
+        "continuous",
+        "zero",
+        "equal to h"
+      ],
+      "answer": 0,
+      "explanation": "Angular momentum is quantised as L = nh/2π, which forces the orbits to be discrete."
+    },
+    {
+      "id": "wpd-mcq-b13",
+      "topicId": "bohr",
+      "question": "Light is emitted in the Bohr model when an electron:",
+      "options": [
+        "drops from a higher to a lower orbit",
+        "moves to a higher orbit",
+        "stays in the same orbit",
+        "leaves the atom"
+      ],
+      "answer": 0,
+      "explanation": "A downward jump releases the energy difference as a photon. An upward jump absorbs energy instead."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wpd-tf-b06",
+      "topicId": "bohr",
+      "question": "The Bohr model explains the line spectrum of hydrogen.",
+      "answer": true,
+      "explanation": "The allowed energies fix the photon energies, and hence the wavelengths, giving the observed hydrogen lines."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wpd-tf-b07",
+      "topicId": "bohr",
+      "question": "In the Bohr model an electron may orbit the nucleus at any radius.",
+      "answer": false,
+      "explanation": "Only certain radii are allowed, because the orbit must contain a whole number of de Broglie wavelengths."
+    },
+    {
+      "kind": "multi",
+      "id": "wpd-multi-b03",
+      "topicId": "bohr",
+      "question": "Which quantities were quantised in the Bohr model? Select all that apply.",
+      "options": [
+        "the orbital radius",
+        "the orbital energy",
+        "the angular momentum",
+        "the electron charge"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Radius, energy and angular momentum are all restricted to discrete values. The electron charge is a fixed constant."
+    },
+    {
+      "kind": "numeric",
+      "id": "wpd-num-b05",
+      "topicId": "bohr",
+      "question": "Using Eₙ = −13.6/n² eV, find the energy of the n = 2 level of hydrogen in electronvolts.",
+      "answer": -3.4,
+      "unit": "eV",
+      "explanation": "E₂ = −13.6/2² = −13.6/4 = −3.4 eV."
+    },
+    {
+      "kind": "numeric",
+      "id": "wpd-num-b06",
+      "topicId": "bohr",
+      "question": "Using Eₙ = −13.6/n² eV, find the energy of the n = 3 level of hydrogen in electronvolts.",
+      "answer": -1.51,
+      "unit": "eV",
+      "explanation": "E₃ = −13.6/3² = −13.6/9 = −1.51 eV."
+    },
+    {
+      "id": "wpd-mcq-b14",
+      "topicId": "quantized-energy",
+      "question": "Quantised energy levels mean that an atom:",
+      "options": [
+        "can have only certain particular energies",
+        "can have any energy at all",
+        "has only kinetic energy",
+        "has no energy"
+      ],
+      "answer": 0,
+      "explanation": "The electron can occupy only the allowed levels, so the atom's energy takes discrete values."
+    },
+    {
+      "id": "wpd-mcq-b15",
+      "topicId": "quantized-energy",
+      "question": "A line spectrum arises because transitions occur between:",
+      "options": [
+        "discrete energy levels",
+        "continuous levels",
+        "the nucleus and an electron",
+        "two free electrons"
+      ],
+      "answer": 0,
+      "explanation": "Each line corresponds to a jump between two fixed levels, so the photon energy, and hence the wavelength, is sharp."
+    },
+    {
+      "id": "wpd-mcq-b16",
+      "topicId": "quantized-energy",
+      "question": "The energy of a spectral line equals:",
+      "options": [
+        "the difference between two energy levels",
+        "the sum of two energy levels",
+        "the ionisation energy",
+        "the work function"
+      ],
+      "answer": 0,
+      "explanation": "The emitted or absorbed photon carries exactly the energy gap between the two levels."
+    },
+    {
+      "id": "wpd-mcq-b17",
+      "topicId": "quantized-energy",
+      "question": "The Balmer series of hydrogen corresponds to transitions ending at:",
+      "options": [
+        "n = 2",
+        "n = 1",
+        "n = 3",
+        "n = ∞"
+      ],
+      "answer": 0,
+      "explanation": "The Balmer lines come from electrons dropping to the n = 2 level; the Lyman series ends at n = 1."
+    },
+    {
+      "id": "wpd-mcq-b18",
+      "topicId": "quantized-energy",
+      "question": "The ground state of the hydrogen atom is:",
+      "options": [
+        "n = 1",
+        "n = 2",
+        "n = ∞",
+        "n = 0"
+      ],
+      "answer": 0,
+      "explanation": "The lowest allowed level, n = 1, is the ground state; higher n are excited states."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wpd-tf-b08",
+      "topicId": "quantized-energy",
+      "question": "Each element has a unique line spectrum.",
+      "answer": true,
+      "explanation": "The set of energy levels, and so the pattern of lines, is different for every element, which is why spectra identify elements."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wpd-tf-b09",
+      "topicId": "quantized-energy",
+      "question": "The energy levels of an atom form a continuous band.",
+      "answer": false,
+      "explanation": "For an isolated atom the levels are discrete; only in solids do they broaden into bands."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wpd-tf-b10",
+      "topicId": "quantized-energy",
+      "question": "A transition from n = 3 to n = 1 emits a more energetic photon than n = 3 to n = 2.",
+      "answer": true,
+      "explanation": "The n = 1 level is much lower, so the gap is larger and the photon carries more energy."
+    },
+    {
+      "kind": "numeric",
+      "id": "wpd-num-b07",
+      "topicId": "quantized-energy",
+      "question": "Hydrogen drops from n = 3 (−1.51 eV) to n = 2 (−3.4 eV). Find the energy of the emitted photon in electronvolts (give the magnitude).",
+      "answer": 1.89,
+      "unit": "eV",
+      "explanation": "ΔE = −1.51 − (−3.4) = 1.89 eV. The magnitude is 1.89 eV."
+    },
+    {
+      "kind": "numeric",
+      "id": "wpd-num-b08",
+      "topicId": "quantized-energy",
+      "question": "Find the wavelength, in nanometres, of the n = 3 to n = 2 transition of hydrogen (ΔE = 1.89 eV). Use hc = 1240 eV·nm.",
+      "answer": 656.0,
+      "unit": "nm",
+      "explanation": "λ = hc/ΔE = 1240/1.89 = 656 nm. This is the red Hα line."
     }
   ]
 }

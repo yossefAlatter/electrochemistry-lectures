@@ -200,6 +200,40 @@
       ],
       "answer": 1,
       "explanation": "The photon carries away exactly the energy lost by the atom, which is the difference between the upper and lower levels. That is why each transition gives one definite wavelength."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps4-num-004",
+      "topicId": "ps4-matter",
+      "question": "A sample transmits 10% of the incident light. Find its absorbance, A = −log₁₀(T), with T = 0.10.",
+      "answer": 1.0,
+      "explanation": "T = 0.10, so A = −log₁₀(0.10) = 1.0."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps4-tf-004",
+      "topicId": "ps4-matter",
+      "question": "The colour of a solution depends on the wavelengths it absorbs.",
+      "answer": true,
+      "explanation": "What we see is the transmitted light that remains after absorption, so the absorbed wavelengths set the observed colour."
+    },
+    {
+      "kind": "multi",
+      "id": "ps4-multi-002",
+      "topicId": "ps4-matter",
+      "question": "Which processes can remove light from a transmitted beam? Select all that apply.",
+      "options": [
+        "absorption",
+        "scattering",
+        "reflection",
+        "emission of the same photon"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Absorption, scattering and reflection all take light out of the forward beam. Emission would add light, not remove it."
     }
   ]
 }

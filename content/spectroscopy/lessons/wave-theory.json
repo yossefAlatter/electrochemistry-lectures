@@ -542,6 +542,638 @@
       ],
       "answer": 3,
       "explanation": "The photoelectric effect needs the particle picture: energy is handed over one photon at a time. Diffraction, interference and polarisation are all wave effects."
+    },
+    {
+      "id": "wave-mcq-b01",
+      "topicId": "huygens-maxwell",
+      "question": "Huygens' principle states that every point on a wavefront acts as:",
+      "options": [
+        "a source of secondary wavelets",
+        "a fixed particle",
+        "a magnetic pole",
+        "an absorber of light"
+      ],
+      "answer": 0,
+      "explanation": "Each point on a wavefront is treated as a new source of outgoing wavelets; their envelope forms the next wavefront."
+    },
+    {
+      "id": "wave-mcq-b02",
+      "topicId": "huygens-maxwell",
+      "question": "Huygens' principle is used to explain:",
+      "options": [
+        "the propagation and diffraction of waves",
+        "the photoelectric effect",
+        "nuclear decay",
+        "emission spectra"
+      ],
+      "answer": 0,
+      "explanation": "Building wavefronts from wavelets explains how waves travel, bend around edges and diffract."
+    },
+    {
+      "id": "wave-mcq-b03",
+      "topicId": "huygens-maxwell",
+      "question": "Maxwell's theory identified light as:",
+      "options": [
+        "an electromagnetic wave",
+        "a stream of particles",
+        "a sound wave",
+        "a magnetic monopole"
+      ],
+      "answer": 0,
+      "explanation": "Maxwell showed that oscillating electric and magnetic fields propagate as a wave at the speed of light, which is light itself."
+    },
+    {
+      "id": "wave-mcq-b04",
+      "topicId": "huygens-maxwell",
+      "question": "The two constants that fix the speed of light in Maxwell's theory are:",
+      "options": [
+        "ε₀ and μ₀",
+        "h and c",
+        "G and g",
+        "k and T"
+      ],
+      "answer": 0,
+      "explanation": "The permittivity ε₀ and permeability μ₀ of free space combine as c = 1/√(ε₀μ₀)."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wave-tf-b01",
+      "topicId": "huygens-maxwell",
+      "question": "According to Huygens, a wavefront can be constructed by adding up the secondary wavelets from the previous wavefront.",
+      "answer": true,
+      "explanation": "The envelope of the secondary wavelets gives the new position of the wavefront, which is how the principle describes propagation."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wave-tf-b02",
+      "topicId": "huygens-maxwell",
+      "question": "Maxwell's electromagnetic theory later gave Huygens' wave picture a physical basis.",
+      "answer": true,
+      "explanation": "Huygens described how a wave travels; Maxwell and, later, Hertz showed that the wave is an oscillation of electric and magnetic fields."
+    },
+    {
+      "kind": "multi",
+      "id": "wave-multi-b01",
+      "topicId": "huygens-maxwell",
+      "question": "Which did Huygens' wave theory help explain? Select all that apply.",
+      "options": [
+        "reflection",
+        "refraction",
+        "diffraction",
+        "the energy of a photon"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Reflection, refraction and diffraction all follow from wavefront constructions. The photon energy is a quantum idea, later than Huygens."
+    },
+    {
+      "kind": "multi",
+      "id": "wave-multi-b02",
+      "topicId": "huygens-maxwell",
+      "question": "Which of the following are electromagnetic waves? Select all that apply.",
+      "options": [
+        "light",
+        "radio waves",
+        "X-rays",
+        "sound in air"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Light, radio waves and X-rays are all electromagnetic. Sound is a mechanical vibration of air and needs a medium."
+    },
+    {
+      "kind": "numeric",
+      "id": "wave-num-b01",
+      "topicId": "huygens-maxwell",
+      "question": "Water waves travel at 2.0 m/s and have a wavelength of 0.50 m. Find their frequency in hertz.",
+      "answer": 4.0,
+      "unit": "Hz",
+      "explanation": "f = v/λ = 2.0/0.50 = 4.0 Hz."
+    },
+    {
+      "kind": "numeric",
+      "id": "wave-num-b02",
+      "topicId": "huygens-maxwell",
+      "question": "A wave has a frequency of 250 Hz and a wavelength of 1.4 m. Find its speed in m/s.",
+      "answer": 350.0,
+      "unit": "m/s",
+      "explanation": "v = λf = 1.4 × 250 = 350 m/s."
+    },
+    {
+      "id": "wave-mcq-b05",
+      "topicId": "reflection-refraction",
+      "question": "The angle of incidence is measured between the incident ray and:",
+      "options": [
+        "the normal",
+        "the surface",
+        "the reflected ray",
+        "the refracted ray"
+      ],
+      "answer": 0,
+      "explanation": "Angles of incidence, reflection and refraction are all measured from the normal, the line perpendicular to the surface."
+    },
+    {
+      "id": "wave-mcq-b06",
+      "topicId": "reflection-refraction",
+      "question": "The law of reflection states that the angle of incidence equals:",
+      "options": [
+        "the angle of reflection",
+        "half the angle of refraction",
+        "twice the angle of refraction",
+        "the refractive index"
+      ],
+      "answer": 0,
+      "explanation": "For a smooth surface, the reflected ray leaves at the same angle to the normal as the incident ray."
+    },
+    {
+      "id": "wave-mcq-b07",
+      "topicId": "reflection-refraction",
+      "question": "Snell's law is written as:",
+      "options": [
+        "n₁ sin θ₁ = n₂ sin θ₂",
+        "n₁ sin θ₂ = n₂ sin θ₁",
+        "n₁ cos θ₁ = n₂ cos θ₂",
+        "n₁ θ₁ = n₂ θ₂"
+      ],
+      "answer": 0,
+      "explanation": "Snell's law relates the incidence and refraction angles to the refractive indices of the two media."
+    },
+    {
+      "id": "wave-mcq-b08",
+      "topicId": "reflection-refraction",
+      "question": "When light passes from air into glass, it:",
+      "options": [
+        "bends toward the normal and slows down",
+        "bends away from the normal and speeds up",
+        "does not change direction",
+        "reflects completely"
+      ],
+      "answer": 0,
+      "explanation": "Glass has a higher refractive index, so light slows down and bends toward the normal on entering it."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wave-tf-b03",
+      "topicId": "reflection-refraction",
+      "question": "Light speeds up when it enters a medium of higher refractive index.",
+      "answer": false,
+      "explanation": "A higher refractive index means a slower speed, v = c/n. Light slows down on entering a denser medium."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wave-tf-b04",
+      "topicId": "reflection-refraction",
+      "question": "Refraction occurs because light changes speed when it crosses a boundary between media.",
+      "answer": true,
+      "explanation": "The change in speed at the boundary bends the wavefront, which is refraction."
+    },
+    {
+      "kind": "multi",
+      "id": "wave-multi-b03",
+      "topicId": "reflection-refraction",
+      "question": "Which are true when light crosses a boundary into a denser medium? Select all that apply.",
+      "options": [
+        "its direction changes",
+        "its speed changes",
+        "its frequency stays the same",
+        "its wavelength stays the same"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Direction and speed change, but the frequency is set by the source and does not change. The wavelength shortens in step with the speed."
+    },
+    {
+      "kind": "numeric",
+      "id": "wave-num-b03",
+      "topicId": "reflection-refraction",
+      "question": "Light passes from air (n = 1.00) into water (n = 1.33) at an angle of incidence of 30°. Find the angle of refraction in degrees (sin 30° = 0.500).",
+      "answer": 22.1,
+      "unit": "degrees",
+      "explanation": "sin θ₂ = (n₁/n₂) sin θ₁ = (1.00/1.33) × 0.500 = 0.376, so θ₂ = 22.1°."
+    },
+    {
+      "kind": "numeric",
+      "id": "wave-num-b04",
+      "topicId": "reflection-refraction",
+      "question": "The speed of light inside a medium is 2.0 × 10⁸ m/s. Find the refractive index of the medium. Take c = 3.0 × 10⁸ m/s.",
+      "answer": 1.5,
+      "explanation": "n = c/v = (3.0 × 10⁸)/(2.0 × 10⁸) = 1.5."
+    },
+    {
+      "id": "wave-mcq-b09",
+      "topicId": "diffraction-interference",
+      "question": "Diffraction is most pronounced when the slit width is:",
+      "options": [
+        "comparable to the wavelength",
+        "much larger than the wavelength",
+        "zero",
+        "independent of the wavelength"
+      ],
+      "answer": 0,
+      "explanation": "Strong spreading occurs when the opening is of the same order as the wavelength. For a wide slit the spreading is negligible."
+    },
+    {
+      "id": "wave-mcq-b10",
+      "topicId": "diffraction-interference",
+      "question": "In a two-source interference pattern, a bright fringe occurs where the path difference is:",
+      "options": [
+        "a whole number of wavelengths",
+        "a half number of wavelengths",
+        "zero only",
+        "random"
+      ],
+      "answer": 0,
+      "explanation": "Waves arrive in step when the path difference is 0, λ, 2λ, …, giving constructive interference and a bright fringe."
+    },
+    {
+      "id": "wave-mcq-b11",
+      "topicId": "diffraction-interference",
+      "question": "In a double-slit experiment, the fringe spacing increases when:",
+      "options": [
+        "the wavelength increases",
+        "the slit separation increases",
+        "the screen is moved closer",
+        "the intensity increases"
+      ],
+      "answer": 0,
+      "explanation": "Fringe spacing is λD/d. It grows with wavelength and screen distance and shrinks with slit separation; intensity does not affect it."
+    },
+    {
+      "id": "wave-mcq-b12",
+      "topicId": "diffraction-interference",
+      "question": "The condition for a dark fringe is a path difference of:",
+      "options": [
+        "an odd number of half-wavelengths",
+        "a whole number of wavelengths",
+        "zero",
+        "exactly twice the wavelength"
+      ],
+      "answer": 0,
+      "explanation": "Destructive interference and a dark fringe occur when the path difference is λ/2, 3λ/2, 5λ/2, …"
+    },
+    {
+      "kind": "truefalse",
+      "id": "wave-tf-b05",
+      "topicId": "diffraction-interference",
+      "question": "Interference is the basis of the double-slit experiment.",
+      "answer": true,
+      "explanation": "The bright and dark fringes come from the constructive and destructive interference of waves from the two slits."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wave-tf-b06",
+      "topicId": "diffraction-interference",
+      "question": "A single narrow slit can produce a diffraction pattern with a bright central maximum.",
+      "answer": true,
+      "explanation": "A single slit gives a broad central bright band with weaker secondary maxima on either side."
+    },
+    {
+      "kind": "multi",
+      "id": "wave-multi-b04",
+      "topicId": "diffraction-interference",
+      "question": "Which increase the fringe spacing in a double-slit pattern? Select all that apply.",
+      "options": [
+        "a longer wavelength",
+        "a larger screen distance",
+        "a smaller slit separation",
+        "a higher light intensity"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Fringe spacing λD/d grows with λ and D and with smaller d. Intensity changes brightness, not spacing."
+    },
+    {
+      "kind": "multi",
+      "id": "wave-multi-b05",
+      "topicId": "diffraction-interference",
+      "question": "Which of the following are wave effects? Select all that apply.",
+      "options": [
+        "interference",
+        "diffraction",
+        "polarisation",
+        "the photoelectric effect"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Interference, diffraction and polarisation are wave phenomena. The photoelectric effect is a quantum, particle-like effect."
+    },
+    {
+      "kind": "numeric",
+      "id": "wave-num-b05",
+      "topicId": "diffraction-interference",
+      "question": "In a double-slit experiment, λ = 600 nm, the slit separation d = 0.30 mm and the screen distance D = 1.5 m. Find the fringe spacing in mm.",
+      "answer": 3.0,
+      "unit": "mm",
+      "explanation": "Δy = λD/d = (600 × 10⁻⁹)(1.5)/(3.0 × 10⁻⁴) = 3.0 × 10⁻³ m = 3.0 mm."
+    },
+    {
+      "kind": "numeric",
+      "id": "wave-num-b06",
+      "topicId": "diffraction-interference",
+      "question": "Light of wavelength 500 nm passes through a single slit of width 0.010 mm. Find the angle of the first minimum in degrees, using sin θ = λ/a.",
+      "answer": 2.87,
+      "unit": "degrees",
+      "explanation": "sin θ = (500 × 10⁻⁹)/(1.0 × 10⁻⁵) = 0.050, so θ = 2.87°."
+    },
+    {
+      "id": "wave-mcq-b13",
+      "topicId": "polarization",
+      "question": "Polarisation restricts the oscillation of the electric field to:",
+      "options": [
+        "one plane",
+        "all planes",
+        "the direction of travel",
+        "a single speed"
+      ],
+      "answer": 0,
+      "explanation": "A polariser passes only the component of the field in one plane, so the transmitted light oscillates in that plane."
+    },
+    {
+      "id": "wave-mcq-b14",
+      "topicId": "polarization",
+      "question": "Sunlight arriving directly from the Sun is:",
+      "options": [
+        "unpolarised",
+        "vertically polarised",
+        "horizontally polarised",
+        "circularly polarised"
+      ],
+      "answer": 0,
+      "explanation": "Natural light contains oscillations in all planes, so it is unpolarised until it is filtered or reflected."
+    },
+    {
+      "id": "wave-mcq-b15",
+      "topicId": "polarization",
+      "question": "Light reflected from a horizontal surface such as water or glass is often:",
+      "options": [
+        "partially polarised",
+        "completely unpolarised",
+        "fully absorbed",
+        "converted into sound"
+      ],
+      "answer": 0,
+      "explanation": "Reflection tends to favour one plane of oscillation, so the reflected glare is partially polarised. This is why polarising sunglasses cut glare."
+    },
+    {
+      "id": "wave-mcq-b16",
+      "topicId": "polarization",
+      "question": "A polarising filter transmits:",
+      "options": [
+        "the component of the field in one plane",
+        "all components equally",
+        "only blue light",
+        "no light at all"
+      ],
+      "answer": 0,
+      "explanation": "The filter selects one plane of vibration and blocks the perpendicular component."
+    },
+    {
+      "id": "wave-mcq-b17",
+      "topicId": "polarization",
+      "question": "Two polarisers placed at 90° to each other transmit:",
+      "options": [
+        "no light",
+        "half the light",
+        "all the light",
+        "twice the light"
+      ],
+      "answer": 0,
+      "explanation": "The first polariser selects one plane; the second, perpendicular, blocks it entirely, so no light passes."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wave-tf-b07",
+      "topicId": "polarization",
+      "question": "Only transverse waves can be polarised.",
+      "answer": true,
+      "explanation": "Polarisation selects a plane perpendicular to the travel direction, which only a transverse wave possesses."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wave-tf-b08",
+      "topicId": "polarization",
+      "question": "Sound waves in air can be polarised.",
+      "answer": false,
+      "explanation": "Sound in air is longitudinal, with the air moving along the travel direction, so there is no plane to select."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wave-tf-b09",
+      "topicId": "polarization",
+      "question": "Polaroid sunglasses reduce glare because reflected glare is partly polarised.",
+      "answer": true,
+      "explanation": "The glasses block the strongly polarised reflected light, cutting glare from water, roads and glass."
+    },
+    {
+      "kind": "multi",
+      "id": "wave-multi-b06",
+      "topicId": "polarization",
+      "question": "Which statements about polarisation are correct? Select all that apply.",
+      "options": [
+        "it is a property of transverse waves",
+        "a polariser selects one plane of vibration",
+        "two crossed polarisers block the light",
+        "it proves light is longitudinal"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Polarisation is a transverse-wave property; a polariser selects a plane; crossed polarisers block light. It proves light is transverse, not longitudinal."
+    },
+    {
+      "kind": "multi",
+      "id": "wave-multi-b07",
+      "topicId": "polarization",
+      "question": "Which of the following are transverse waves? Select all that apply.",
+      "options": [
+        "light",
+        "radio waves",
+        "sound in air",
+        "waves on a water surface"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Light, radio waves and water surface waves are transverse. Sound in air is longitudinal."
+    },
+    {
+      "kind": "numeric",
+      "id": "wave-num-b07",
+      "topicId": "polarization",
+      "question": "Unpolarised light passes through one ideal polariser. What fraction of its intensity is transmitted? Give the answer as a decimal fraction.",
+      "answer": 0.5,
+      "unit": "fraction",
+      "explanation": "An ideal polariser transmits half the intensity of unpolarised light, since on average half the vibrations lie in the transmitted plane."
+    },
+    {
+      "kind": "numeric",
+      "id": "wave-num-b08",
+      "topicId": "polarization",
+      "question": "In a transverse wave, what is the angle, in degrees, between the oscillation and the direction of travel?",
+      "answer": 90.0,
+      "unit": "degrees",
+      "explanation": "Transverse means the oscillation is at right angles to the direction of travel, that is, 90°."
+    },
+    {
+      "id": "wave-mcq-b18",
+      "topicId": "wave-summary",
+      "question": "Which phenomenon is NOT explained by the wave theory of light?",
+      "options": [
+        "the photoelectric effect",
+        "reflection",
+        "refraction",
+        "interference"
+      ],
+      "answer": 0,
+      "explanation": "The photoelectric effect needs the photon picture. Reflection, refraction and interference are all wave effects."
+    },
+    {
+      "id": "wave-mcq-b19",
+      "topicId": "wave-summary",
+      "question": "The wave theory explains all of the following EXCEPT:",
+      "options": [
+        "the photoelectric effect",
+        "polarisation",
+        "diffraction",
+        "refraction"
+      ],
+      "answer": 0,
+      "explanation": "The photoelectric effect requires light to deliver energy in whole photons, which the wave picture cannot provide."
+    },
+    {
+      "id": "wave-mcq-b20",
+      "topicId": "wave-summary",
+      "question": "Which is the strongest evidence that the light wave is transverse?",
+      "options": [
+        "polarisation",
+        "reflection",
+        "refraction",
+        "rectilinear propagation"
+      ],
+      "answer": 0,
+      "explanation": "Only a transverse wave can be polarised, so the existence of polarised light proves the wave is transverse."
+    },
+    {
+      "id": "wave-mcq-b21",
+      "topicId": "wave-summary",
+      "question": "Total internal reflection occurs when light in a denser medium:",
+      "options": [
+        "strikes the boundary beyond the critical angle",
+        "speeds up",
+        "is absorbed",
+        "changes colour"
+      ],
+      "answer": 0,
+      "explanation": "Beyond the critical angle, no light can refract out, so it is all reflected back inside the denser medium."
+    },
+    {
+      "id": "wave-mcq-b22",
+      "topicId": "wave-summary",
+      "question": "Optical fibres guide light along their length by:",
+      "options": [
+        "total internal reflection",
+        "diffraction",
+        "polarisation",
+        "absorption"
+      ],
+      "answer": 0,
+      "explanation": "Light inside the fibre strikes the walls beyond the critical angle and is reflected back, so it follows the fibre."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wave-tf-b10",
+      "topicId": "wave-summary",
+      "question": "The wave theory of light successfully explains interference and diffraction.",
+      "answer": true,
+      "explanation": "Both are natural consequences of wave superposition, which the wave theory accounts for completely."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wave-tf-b11",
+      "topicId": "wave-summary",
+      "question": "The wave theory alone explains why ultraviolet light ejects electrons from a metal.",
+      "answer": false,
+      "explanation": "The photoelectric effect needs the photon picture: energy is delivered in whole quanta, which the wave theory cannot explain."
+    },
+    {
+      "kind": "truefalse",
+      "id": "wave-tf-b12",
+      "topicId": "wave-summary",
+      "question": "Polarisation shows that the light wave is transverse.",
+      "answer": true,
+      "explanation": "A longitudinal wave cannot be polarised, so the existence of polarised light proves the wave is transverse."
+    },
+    {
+      "kind": "multi",
+      "id": "wave-multi-b08",
+      "topicId": "wave-summary",
+      "question": "Which are explained by the wave theory of light? Select all that apply.",
+      "options": [
+        "reflection",
+        "refraction",
+        "interference",
+        "the photoelectric effect"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Reflection, refraction and interference follow from waves. The photoelectric effect does not and requires photons."
+    },
+    {
+      "kind": "multi",
+      "id": "wave-multi-b09",
+      "topicId": "wave-summary",
+      "question": "Which properties of light were established by experiment? Select all that apply.",
+      "options": [
+        "it can be reflected",
+        "it can be refracted",
+        "it can be polarised",
+        "it transfers energy only in whole photons"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Reflection, refraction and polarisation are classical wave properties. The transfer of energy in whole photons is revealed by the photoelectric effect, not by the wave experiments."
+    },
+    {
+      "kind": "numeric",
+      "id": "wave-num-b09",
+      "topicId": "wave-summary",
+      "question": "The critical angle at a glass-air boundary is 42°. Find the refractive index of the glass, using n = 1/sin c (sin 42° = 0.669).",
+      "answer": 1.49,
+      "explanation": "n = 1/sin c = 1/0.669 = 1.49."
+    },
+    {
+      "kind": "numeric",
+      "id": "wave-num-b10",
+      "topicId": "wave-summary",
+      "question": "Light travels at 2.0 × 10⁸ m/s inside a medium. Find the critical angle at the medium-air boundary, in degrees (sin c = n_air/n_medium).",
+      "answer": 41.8,
+      "unit": "degrees",
+      "explanation": "n = c/v = 1.5, so sin c = 1/1.5 = 0.667 and c = 41.8°."
     }
   ]
 }

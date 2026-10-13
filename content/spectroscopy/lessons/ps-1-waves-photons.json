@@ -197,6 +197,36 @@
       ],
       "answer": 1,
       "explanation": "For any wave, speed = wavelength × frequency, so c = λf. Rearranged, λ = c/f and f = c/λ."
+    },
+    {
+      "id": "ps1-mcq-005",
+      "topicId": "ps1-waves",
+      "question": "The energy of a photon is given by:",
+      "options": [
+        "E = hf",
+        "E = h/f",
+        "E = f/h",
+        "E = hf²"
+      ],
+      "answer": 0,
+      "explanation": "A photon carries an energy proportional to its frequency through the Planck constant: E = hf."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps1-num-005",
+      "topicId": "ps1-waves",
+      "question": "A photon has a frequency of 5.0 × 10¹⁴ Hz. Find its energy in joules. Take h = 6.626 × 10⁻³⁴ J s.",
+      "answer": 3.31e-19,
+      "unit": "J",
+      "explanation": "E = hf = (6.626 × 10⁻³⁴)(5.0 × 10¹⁴) = 3.31 × 10⁻¹⁹ J."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps1-tf-004",
+      "topicId": "ps1-waves",
+      "question": "Doubling the frequency of light doubles the energy of each of its photons.",
+      "answer": true,
+      "explanation": "Since E = hf, doubling f doubles the photon energy."
     }
   ]
 }

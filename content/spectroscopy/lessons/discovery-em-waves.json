@@ -456,6 +456,914 @@
       "question": "Electromagnetic waves need a material medium to travel through.",
       "answer": false,
       "explanation": "They need no medium. After the aether was disproved, it became clear that the oscillating fields sustain each other, so the wave carries itself through a vacuum. That is how sunlight crosses empty space to reach us."
+    },
+    {
+      "id": "disc-mcq-b01",
+      "topicId": "light-as-wave",
+      "question": "Which observations did Newton's corpuscular (particle) theory of light explain simply?",
+      "options": [
+        "reflection and refraction",
+        "interference fringes",
+        "diffraction around an edge",
+        "polarisation of light"
+      ],
+      "answer": 0,
+      "explanation": "Particles travel in straight lines and can bounce (reflection) or be pulled into a denser medium (refraction), so these followed naturally. Interference, diffraction and polarisation did not."
+    },
+    {
+      "id": "disc-mcq-b02",
+      "topicId": "light-as-wave",
+      "question": "Which observation is most directly incompatible with light being a stream of particles?",
+      "options": [
+        "dark interference fringes where two beams overlap",
+        "sharp shadows behind an object",
+        "reflection from a polished surface",
+        "refraction at an air-glass surface"
+      ],
+      "answer": 0,
+      "explanation": "Particles can only add up, so two overlapping beams should always give more light. Waves can cancel to give darkness, which is what the dark fringes show."
+    },
+    {
+      "id": "disc-mcq-b03",
+      "topicId": "light-as-wave",
+      "question": "In an interference pattern, a dark fringe appears where two waves meet because:",
+      "options": [
+        "a crest of one wave cancels a trough of the other",
+        "the particles collide and stop",
+        "one beam is blocked by the other",
+        "the light is absorbed by the screen"
+      ],
+      "answer": 0,
+      "explanation": "Darkness is destructive interference: the two waves arrive out of step, so their displacements add to zero at that point."
+    },
+    {
+      "id": "disc-mcq-b04",
+      "topicId": "light-as-wave",
+      "question": "Diffraction is best described as:",
+      "options": [
+        "the spreading of a wave after it passes an edge or a narrow slit",
+        "the bouncing of light from a surface",
+        "a change of colour inside a medium",
+        "the bending of a particle path by gravity"
+      ],
+      "answer": 0,
+      "explanation": "A wave spreads out when part of its front is blocked. A stream of particles travelling in straight lines would not do this."
+    },
+    {
+      "id": "disc-mcq-b05",
+      "topicId": "light-as-wave",
+      "question": "Under Newton's particle picture, the edge of a shadow cast by an object should be:",
+      "options": [
+        "sharp and well defined",
+        "blurred and spread out",
+        "ringed with bright and dark bands",
+        "coloured like a rainbow"
+      ],
+      "answer": 0,
+      "explanation": "Particles travel in straight lines, so the shadow should have a clean edge. In practice the edge is slightly blurred and fringed, which the wave picture explains as diffraction."
+    },
+    {
+      "kind": "truefalse",
+      "id": "disc-tf-b01",
+      "topicId": "light-as-wave",
+      "question": "Interference requires the two overlapping waves to have a definite phase relationship.",
+      "answer": true,
+      "explanation": "The bright and dark pattern comes from the phase difference between the waves. Without a fixed phase relationship the fringes would wash out."
+    },
+    {
+      "kind": "truefalse",
+      "id": "disc-tf-b02",
+      "topicId": "light-as-wave",
+      "question": "Two overlapping beams of particles can produce dark fringes.",
+      "answer": false,
+      "explanation": "Particles simply add to the number arriving, giving more light everywhere the beams overlap. Darkness requires cancellation, which only waves can do."
+    },
+    {
+      "kind": "truefalse",
+      "id": "disc-tf-b03",
+      "topicId": "light-as-wave",
+      "question": "Diffraction becomes more noticeable when the size of the opening is comparable to the wavelength.",
+      "answer": true,
+      "explanation": "When the slit width is of the same order as the wavelength, the wave spreads strongly. If the opening is far larger than the wavelength, the spreading is small and the straight-line picture nearly works."
+    },
+    {
+      "kind": "multi",
+      "id": "disc-multi-b01",
+      "topicId": "light-as-wave",
+      "question": "Which behaviours did Newton's particle theory of light explain well? Select all that apply.",
+      "options": [
+        "sharp shadows",
+        "reflection from a mirror",
+        "refraction at a surface",
+        "stable interference fringes"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Particles travelling in straight lines account for shadows, reflection and refraction. They cannot produce stable interference fringes, which require waves."
+    },
+    {
+      "kind": "multi",
+      "id": "disc-multi-b02",
+      "topicId": "light-as-wave",
+      "question": "Which observations support the wave picture of light over the particle picture? Select all that apply.",
+      "options": [
+        "bright and dark interference fringes",
+        "diffraction of light around an edge",
+        "sharp straight-line shadows",
+        "reflection from a mirror"
+      ],
+      "answers": [
+        0,
+        1
+      ],
+      "explanation": "Interference and diffraction are wave effects. Sharp shadows and reflection are explained equally well by particles, so they do not decide between the two pictures."
+    },
+    {
+      "kind": "numeric",
+      "id": "disc-num-b01",
+      "topicId": "light-as-wave",
+      "question": "For light of wavelength 600 nm, what is the smallest path difference, in nm, that produces a dark fringe in an interference pattern?",
+      "answer": 300.0,
+      "unit": "nm",
+      "explanation": "A dark fringe occurs when the path difference is an odd number of half-wavelengths. The smallest nonzero value is one half-wavelength: 600/2 = 300 nm."
+    },
+    {
+      "kind": "numeric",
+      "id": "disc-num-b02",
+      "topicId": "light-as-wave",
+      "question": "Two waves arrive with a path difference of 1.5 × 10⁻⁶ m. Light of wavelength 500 nm is used. How many whole wavelengths is this path difference?",
+      "answer": 3.0,
+      "unit": "wavelengths",
+      "explanation": "Convert: 1.5 × 10⁻⁶ m = 1500 nm. Then 1500/500 = 3 whole wavelengths."
+    },
+    {
+      "id": "disc-mcq-b06",
+      "topicId": "transverse",
+      "question": "Polarising a light wave restricts its oscillations to:",
+      "options": [
+        "a single plane",
+        "a single speed",
+        "a single wavelength",
+        "a single photon"
+      ],
+      "answer": 0,
+      "explanation": "A polariser passes only the component of the vibration lying in one plane, so the transmitted light oscillates in that plane alone."
+    },
+    {
+      "id": "disc-mcq-b07",
+      "topicId": "transverse",
+      "question": "Why can a sound wave in air not be polarised?",
+      "options": [
+        "its vibrations are along the direction of travel",
+        "it travels too slowly",
+        "it carries no energy",
+        "it is inaudible at high frequency"
+      ],
+      "answer": 0,
+      "explanation": "Sound in air is longitudinal: the air moves back and forth along the travel direction. There is no sideways plane to select, so polarisation is impossible."
+    },
+    {
+      "id": "disc-mcq-b08",
+      "topicId": "transverse",
+      "question": "The fact that light can be polarised shows that light is:",
+      "options": [
+        "a transverse wave",
+        "a longitudinal wave",
+        "a stream of particles",
+        "a wave with no wavelength"
+      ],
+      "answer": 0,
+      "explanation": "Only a transverse wave has a plane of vibration to select, so a wave that can be polarised must be transverse."
+    },
+    {
+      "id": "disc-mcq-b09",
+      "topicId": "transverse",
+      "question": "In a transverse wave, the oscillation is directed:",
+      "options": [
+        "perpendicular to the direction of travel",
+        "parallel to the direction of travel",
+        "opposite to the direction of travel",
+        "along the direction of energy flow"
+      ],
+      "answer": 0,
+      "explanation": "By definition the displacement in a transverse wave is at right angles to the direction in which the wave travels."
+    },
+    {
+      "id": "disc-mcq-b10",
+      "topicId": "transverse",
+      "question": "Two beams of light polarised at right angles are brought together. The result is that they:",
+      "options": [
+        "do not form an interference pattern",
+        "cancel to give darkness everywhere",
+        "form bright and dark fringes",
+        "double in speed"
+      ],
+      "answer": 0,
+      "explanation": "Beams whose vibrations are in perpendicular planes cannot interfere, because they never oppose each other crest-to-trough. They simply add as light."
+    },
+    {
+      "kind": "truefalse",
+      "id": "disc-tf-b04",
+      "topicId": "transverse",
+      "question": "In a longitudinal wave the oscillation is parallel to the direction of travel.",
+      "answer": true,
+      "explanation": "That is the defining feature of a longitudinal wave, such as sound in air, where the air moves back and forth along the wave's direction."
+    },
+    {
+      "kind": "truefalse",
+      "id": "disc-tf-b05",
+      "topicId": "transverse",
+      "question": "A transverse wave can be polarised, but a longitudinal wave cannot.",
+      "answer": true,
+      "explanation": "Polarisation selects a plane of vibration perpendicular to the travel direction, which only a transverse wave possesses."
+    },
+    {
+      "kind": "truefalse",
+      "id": "disc-tf-b06",
+      "topicId": "transverse",
+      "question": "Passing light through a polarising filter changes its speed in a vacuum.",
+      "answer": false,
+      "explanation": "The speed in a vacuum is c for all electromagnetic radiation. A polariser selects a plane of vibration but does not change the speed in vacuum."
+    },
+    {
+      "kind": "multi",
+      "id": "disc-multi-b03",
+      "topicId": "transverse",
+      "question": "Which of the following are transverse waves? Select all that apply.",
+      "options": [
+        "a wave on a plucked rope",
+        "visible light",
+        "a sound wave in air",
+        "a wave on the surface of water"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "A rope wave, light and a water surface wave all oscillate at right angles to their travel direction. Sound in air is longitudinal."
+    },
+    {
+      "kind": "multi",
+      "id": "disc-multi-b04",
+      "topicId": "transverse",
+      "question": "Which of the following are longitudinal waves? Select all that apply.",
+      "options": [
+        "sound in air",
+        "a compression wave in a spring",
+        "visible light",
+        "a wave on a stretched string"
+      ],
+      "answers": [
+        0,
+        1
+      ],
+      "explanation": "Sound and a spring compression wave move along the direction of travel. Light and a string wave are transverse."
+    },
+    {
+      "kind": "numeric",
+      "id": "disc-num-b03",
+      "topicId": "transverse",
+      "question": "In a transverse wave, at what angle (in degrees) is the vibration to the direction of travel?",
+      "answer": 90.0,
+      "unit": "degrees",
+      "explanation": "Transverse means the displacement is at right angles to the direction of travel, that is, 90°."
+    },
+    {
+      "kind": "numeric",
+      "id": "disc-num-b04",
+      "topicId": "transverse",
+      "question": "A transverse wave travels 12 m along a rope in 4.0 s. What is its speed in m/s?",
+      "answer": 3.0,
+      "unit": "m/s",
+      "explanation": "Speed = distance / time = 12 / 4.0 = 3.0 m/s."
+    },
+    {
+      "id": "disc-mcq-b11",
+      "topicId": "fields-linked",
+      "question": "A changing magnetic field produces:",
+      "options": [
+        "an electric field",
+        "only heat",
+        "a gravitational field",
+        "nothing at all"
+      ],
+      "answer": 0,
+      "explanation": "This is Faraday's law of induction: a changing magnetic field drives an electric field (and hence a current in a conductor)."
+    },
+    {
+      "id": "disc-mcq-b12",
+      "topicId": "fields-linked",
+      "question": "A changing electric field produces:",
+      "options": [
+        "a magnetic field",
+        "a sound wave",
+        "a static charge",
+        "nothing at all"
+      ],
+      "answer": 0,
+      "explanation": "The reverse of induction: a changing electric field gives rise to a magnetic field. Maxwell added this to make the picture symmetric."
+    },
+    {
+      "id": "disc-mcq-b13",
+      "topicId": "fields-linked",
+      "question": "Faraday's law of induction is the principle behind the operation of:",
+      "options": [
+        "generators and transformers",
+        "ordinary resistors",
+        "fixed capacitors",
+        "bar magnets at rest"
+      ],
+      "answer": 0,
+      "explanation": "Both generators and transformers work by changing the magnetic flux through a coil, which induces an EMF."
+    },
+    {
+      "id": "disc-mcq-b14",
+      "topicId": "fields-linked",
+      "question": "Ørsted's experiment showed that an electric current:",
+      "options": [
+        "deflects a nearby compass needle",
+        "emits visible light",
+        "reduces the resistance of a wire",
+        "creates new charge"
+      ],
+      "answer": 0,
+      "explanation": "A current-carrying wire twists a compass needle, which shows that electricity and magnetism are connected."
+    },
+    {
+      "id": "disc-mcq-b15",
+      "topicId": "fields-linked",
+      "question": "Why is it wrong to call a field merely a way of 'bookkeeping' forces?",
+      "options": [
+        "a field stores energy and can exert a force",
+        "a field cannot be measured",
+        "a field travels faster than light",
+        "a field has no physical effects"
+      ],
+      "answer": 0,
+      "explanation": "A field carries energy and pushes on charges, so it behaves like a physical entity in its own right, not just a convenient drawing."
+    },
+    {
+      "id": "disc-mcq-b16",
+      "topicId": "fields-linked",
+      "question": "The mutual creation of electric and magnetic fields is important because it allows:",
+      "options": [
+        "a self-sustaining electromagnetic wave",
+        "a static charge to appear",
+        "a magnet to lose its field",
+        "a current to flow without a circuit"
+      ],
+      "answer": 0,
+      "explanation": "Because each changing field creates the other, a disturbance in the fields can keep regenerating itself as it travels through space."
+    },
+    {
+      "kind": "truefalse",
+      "id": "disc-tf-b07",
+      "topicId": "fields-linked",
+      "question": "To create the other kind of field, a field must be changing.",
+      "answer": true,
+      "explanation": "A steady field does not create the other kind. It is the change (the rate of change) that produces the induced field, as in induction."
+    },
+    {
+      "kind": "truefalse",
+      "id": "disc-tf-b08",
+      "topicId": "fields-linked",
+      "question": "Electricity and magnetism are two entirely unrelated phenomena.",
+      "answer": false,
+      "explanation": "Ørsted and Faraday showed they are two faces of one phenomenon: electric currents create magnetic fields and changing magnetic fields create electric fields."
+    },
+    {
+      "kind": "truefalse",
+      "id": "disc-tf-b09",
+      "topicId": "fields-linked",
+      "question": "A field can exert a force on a charge placed in it.",
+      "answer": true,
+      "explanation": "An electric field exerts a force on a charge, and a magnetic field exerts a force on a moving charge. Fields are not merely descriptive."
+    },
+    {
+      "kind": "multi",
+      "id": "disc-multi-b05",
+      "topicId": "fields-linked",
+      "question": "Which devices rely on electromagnetic induction? Select all that apply.",
+      "options": [
+        "a transformer",
+        "an electric generator",
+        "a bar magnet lying at rest",
+        "an electric motor"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Transformers, generators and motors all involve changing magnetic flux and induced EMFs. A stationary magnet with no change produces no induction."
+    },
+    {
+      "kind": "multi",
+      "id": "disc-multi-b06",
+      "topicId": "fields-linked",
+      "question": "Which statements about fields are correct? Select all that apply.",
+      "options": [
+        "a field can store energy",
+        "a field can exert a force on a charge",
+        "a field needs a material medium to exist",
+        "a field can be created by a changing field of the other kind"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Fields store energy, act on charges, and can be produced by a changing field of the other kind. They do not need a material medium."
+    },
+    {
+      "kind": "numeric",
+      "id": "disc-num-b05",
+      "topicId": "fields-linked",
+      "question": "A coil has 200 turns. The magnetic flux through it changes by 0.010 Wb in 0.050 s. Using EMF = N ΔΦ/Δt, find the magnitude of the induced EMF in volts.",
+      "answer": 40.0,
+      "unit": "V",
+      "explanation": "EMF = N ΔΦ/Δt = 200 × 0.010 / 0.050 = 200 × 0.20 = 40 V."
+    },
+    {
+      "kind": "numeric",
+      "id": "disc-num-b06",
+      "topicId": "fields-linked",
+      "question": "A charge of 5.0 × 10⁻⁶ C sits in an electric field of 2000 N/C. What is the force on it, in newtons?",
+      "answer": 0.01,
+      "unit": "N",
+      "explanation": "F = qE = (5.0 × 10⁻⁶) × 2000 = 1.0 × 10⁻² N."
+    },
+    {
+      "id": "disc-mcq-b17",
+      "topicId": "maxwell",
+      "question": "Maxwell's equations, applied to empty space, predict:",
+      "options": [
+        "a self-propagating electromagnetic wave",
+        "only static fields",
+        "no fields at all",
+        "sound waves in a vacuum"
+      ],
+      "answer": 0,
+      "explanation": "The equations combine into a wave equation, so a disturbance of the fields must travel through empty space."
+    },
+    {
+      "id": "disc-mcq-b18",
+      "topicId": "maxwell",
+      "question": "Maxwell's predicted speed for electromagnetic waves is:",
+      "options": [
+        "1/√(ε₀μ₀)",
+        "ε₀μ₀",
+        "√(ε₀μ₀)",
+        "μ₀/ε₀"
+      ],
+      "answer": 0,
+      "explanation": "The speed is the inverse square root of the product of the two vacuum constants, giving about 3.0 × 10⁸ m/s."
+    },
+    {
+      "id": "disc-mcq-b19",
+      "topicId": "maxwell",
+      "question": "That 1/√(ε₀μ₀) equals the measured speed of light showed that:",
+      "options": [
+        "light is an electromagnetic wave",
+        "light is a stream of particles",
+        "light needs a medium",
+        "light has no speed limit"
+      ],
+      "answer": 0,
+      "explanation": "The identity of the two speeds tied optics to electromagnetism and identified light as an electromagnetic wave."
+    },
+    {
+      "id": "disc-mcq-b20",
+      "topicId": "maxwell",
+      "question": "In an electromagnetic wave in vacuum, E and B are:",
+      "options": [
+        "mutually perpendicular and both perpendicular to the travel direction",
+        "parallel to each other and along the travel direction",
+        "parallel to each other, both perpendicular to travel",
+        "antiparallel to each other"
+      ],
+      "answer": 0,
+      "explanation": "The fields are mutually perpendicular and transverse: each is at right angles to the other and to the direction of travel."
+    },
+    {
+      "id": "disc-mcq-b21",
+      "topicId": "maxwell",
+      "question": "Which constant measures how readily a vacuum hosts an electric field?",
+      "options": [
+        "ε₀, the permittivity",
+        "μ₀, the permeability",
+        "h, the Planck constant",
+        "c, the speed of light"
+      ],
+      "answer": 0,
+      "explanation": "The permittivity ε₀ describes the electric response of a vacuum; the permeability μ₀ describes the magnetic response."
+    },
+    {
+      "id": "disc-mcq-b22",
+      "topicId": "maxwell",
+      "question": "In a vacuum, the electric field of a plane electromagnetic wave has:",
+      "options": [
+        "no component along the direction of travel",
+        "a large component along the direction of travel",
+        "a component only along the magnetic field",
+        "no value at all"
+      ],
+      "answer": 0,
+      "explanation": "Because ∇·E = 0 in empty space, a plane wave has no longitudinal component of E; the field is purely transverse."
+    },
+    {
+      "kind": "truefalse",
+      "id": "disc-tf-b10",
+      "topicId": "maxwell",
+      "question": "Maxwell predicted electromagnetic waves before anyone had produced one.",
+      "answer": true,
+      "explanation": "He derived them mathematically from the field equations. Hertz produced and detected them experimentally some twenty years later."
+    },
+    {
+      "kind": "truefalse",
+      "id": "disc-tf-b11",
+      "topicId": "maxwell",
+      "question": "The speed of an electromagnetic wave in a vacuum depends on its frequency.",
+      "answer": false,
+      "explanation": "In a vacuum all electromagnetic waves travel at the same speed c, whatever their frequency or wavelength."
+    },
+    {
+      "kind": "truefalse",
+      "id": "disc-tf-b12",
+      "topicId": "maxwell",
+      "question": "In a vacuum, the electromagnetic wave is transverse.",
+      "answer": true,
+      "explanation": "The field equations require E and B to be perpendicular to the direction of travel, so the wave is strictly transverse."
+    },
+    {
+      "kind": "multi",
+      "id": "disc-multi-b07",
+      "topicId": "maxwell",
+      "question": "Which of the following follow from Maxwell's equations in empty space? Select all that apply.",
+      "options": [
+        "a wave equation for the fields",
+        "a wave speed of 1/√(ε₀μ₀)",
+        "fields that are strictly transverse",
+        "the need for a material medium"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The equations give a wave equation, a speed set by the vacuum constants, and transverse fields. They require no medium."
+    },
+    {
+      "kind": "multi",
+      "id": "disc-multi-b08",
+      "topicId": "maxwell",
+      "question": "Which are properties of an electromagnetic wave in vacuum? Select all that apply.",
+      "options": [
+        "it travels at c",
+        "E is perpendicular to B",
+        "it is transverse",
+        "it requires a material medium"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "It travels at c, has mutually perpendicular transverse fields, and needs no medium."
+    },
+    {
+      "kind": "numeric",
+      "id": "disc-num-b07",
+      "topicId": "maxwell",
+      "question": "Given c = 3.0 × 10⁸ m/s and μ₀ = 1.257 × 10⁻⁶ H/m, find ε₀ from c = 1/√(ε₀μ₀). Give the answer in F/m.",
+      "answer": 8.85e-12,
+      "unit": "F/m",
+      "explanation": "Rearrange: ε₀ = 1/(μ₀c²) = 1/[(1.257 × 10⁻⁶)(9.0 × 10¹⁶)] = 1/(1.13 × 10¹¹) = 8.8 × 10⁻¹² F/m."
+    },
+    {
+      "kind": "numeric",
+      "id": "disc-num-b08",
+      "topicId": "maxwell",
+      "question": "An electromagnetic wave has an electric-field amplitude of 300 V/m. Using E/B = c = 3.0 × 10⁸ m/s, find the magnetic-field amplitude in tesla.",
+      "answer": 1e-06,
+      "unit": "T",
+      "explanation": "B = E/c = 300 / (3.0 × 10⁸) = 1.0 × 10⁻⁶ T."
+    },
+    {
+      "id": "disc-mcq-b23",
+      "topicId": "hertz",
+      "question": "Hertz's spark-gap apparatus generated and detected:",
+      "options": [
+        "radio waves",
+        "X-rays",
+        "sound waves",
+        "gamma rays"
+      ],
+      "answer": 0,
+      "explanation": "A spark transmitter produced bursts of radio-frequency electromagnetic radiation, picked up by a small spark at the detector."
+    },
+    {
+      "id": "disc-mcq-b24",
+      "topicId": "hertz",
+      "question": "Hertz showed his waves could be polarised, which demonstrated that they are:",
+      "options": [
+        "transverse",
+        "longitudinal",
+        "massive",
+        "static"
+      ],
+      "answer": 0,
+      "explanation": "Only a transverse wave can be polarised, so this proved the waves were transverse like light."
+    },
+    {
+      "id": "disc-mcq-b25",
+      "topicId": "hertz",
+      "question": "Hertz measured his waves to travel at:",
+      "options": [
+        "the speed of light",
+        "the speed of sound",
+        "half the speed of light",
+        "zero speed"
+      ],
+      "answer": 0,
+      "explanation": "The waves travelled at c, matching Maxwell's prediction and confirming they were electromagnetic."
+    },
+    {
+      "id": "disc-mcq-b26",
+      "topicId": "hertz",
+      "question": "Radio waves and visible light differ in:",
+      "options": [
+        "wavelength and frequency",
+        "their speed in vacuum",
+        "whether they are electromagnetic",
+        "whether they can be polarised"
+      ],
+      "answer": 0,
+      "explanation": "They are the same kind of wave; only wavelength and frequency differ. Their speed in vacuum and their polarisability are the same."
+    },
+    {
+      "id": "disc-mcq-b27",
+      "topicId": "hertz",
+      "question": "Hertz focused his waves onto the detector with a curved metal reflector, showing that the waves:",
+      "options": [
+        "can be reflected and carry energy in a beam",
+        "are sound waves",
+        "are static fields",
+        "have no energy"
+      ],
+      "answer": 0,
+      "explanation": "Reflection and focusing show the radiation behaves like light and carries energy in a directed beam."
+    },
+    {
+      "id": "disc-mcq-b28",
+      "topicId": "hertz",
+      "question": "The spark-gap detector responded because the arriving wave:",
+      "options": [
+        "drove a spark across the gap with its oscillating field",
+        "heated the gap to melting point",
+        "pushed air through the gap",
+        "carried a net electric charge"
+      ],
+      "answer": 0,
+      "explanation": "The oscillating electric field of the incoming wave produced a large enough field at the gap to spark across it."
+    },
+    {
+      "kind": "truefalse",
+      "id": "disc-tf-b13",
+      "topicId": "hertz",
+      "question": "Radio waves and light are the same kind of wave, differing only in wavelength and frequency.",
+      "answer": true,
+      "explanation": "Both are electromagnetic waves. Their place on the spectrum is set by wavelength and frequency alone."
+    },
+    {
+      "kind": "truefalse",
+      "id": "disc-tf-b14",
+      "topicId": "hertz",
+      "question": "In a vacuum, radio waves travel more slowly than visible light.",
+      "answer": false,
+      "explanation": "In a vacuum every electromagnetic wave travels at c. Only in a medium can different frequencies travel at slightly different speeds."
+    },
+    {
+      "kind": "truefalse",
+      "id": "disc-tf-b15",
+      "topicId": "hertz",
+      "question": "Electromagnetic waves can be polarised because they are transverse.",
+      "answer": true,
+      "explanation": "Polarisation selects a plane of vibration. Because the fields oscillate at right angles to travel, such a plane exists."
+    },
+    {
+      "kind": "multi",
+      "id": "disc-multi-b09",
+      "topicId": "hertz",
+      "question": "Which properties did Hertz demonstrate for his waves? Select all that apply.",
+      "options": [
+        "they travel at the speed of light",
+        "they can be reflected",
+        "they can be polarised",
+        "they need air to travel"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Hertz measured the speed, reflected and focused the waves, and polarised them. They do not need air; they travel through vacuum."
+    },
+    {
+      "kind": "multi",
+      "id": "disc-multi-b10",
+      "topicId": "hertz",
+      "question": "Which are true of both radio waves and visible light? Select all that apply.",
+      "options": [
+        "they are transverse",
+        "they travel at c in vacuum",
+        "they can be polarised",
+        "they are longitudinal"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Both are transverse electromagnetic waves travelling at c in vacuum and polarisable. Neither is longitudinal."
+    },
+    {
+      "kind": "numeric",
+      "id": "disc-num-b09",
+      "topicId": "hertz",
+      "question": "A radio wave has a frequency of 3.0 × 10⁸ Hz. Find its wavelength in metres. Take c = 3.0 × 10⁸ m/s.",
+      "answer": 1.0,
+      "unit": "m",
+      "explanation": "λ = c/f = (3.0 × 10⁸)/(3.0 × 10⁸) = 1.0 m."
+    },
+    {
+      "kind": "numeric",
+      "id": "disc-num-b10",
+      "topicId": "hertz",
+      "question": "An FM radio station broadcasts at 100 MHz. What is its wavelength in metres? Take c = 3.0 × 10⁸ m/s.",
+      "answer": 3.0,
+      "unit": "m",
+      "explanation": "100 MHz = 1.0 × 10⁸ Hz, so λ = c/f = (3.0 × 10⁸)/(1.0 × 10⁸) = 3.0 m."
+    },
+    {
+      "id": "disc-mcq-b29",
+      "topicId": "aether-to-fields",
+      "question": "Michelson and Morley set out to detect:",
+      "options": [
+        "the Earth's motion through the aether",
+        "the mass of a photon",
+        "the charge of the electron",
+        "gravitational waves"
+      ],
+      "answer": 0,
+      "explanation": "They tried to measure a change in the speed of light as the Earth moved through the supposed aether."
+    },
+    {
+      "id": "disc-mcq-b30",
+      "topicId": "aether-to-fields",
+      "question": "Their result was that the speed of light:",
+      "options": [
+        "did not change with direction",
+        "changed strongly with direction",
+        "depended on the colour",
+        "was zero"
+      ],
+      "answer": 0,
+      "explanation": "No difference with direction was found, so there was no aether wind and no evidence for an aether."
+    },
+    {
+      "id": "disc-mcq-b31",
+      "topicId": "aether-to-fields",
+      "question": "What sustains an electromagnetic wave through a vacuum?",
+      "options": [
+        "the fields creating each other",
+        "moving air",
+        "the aether",
+        "static charge"
+      ],
+      "answer": 0,
+      "explanation": "A changing E creates a B and a changing B creates an E, so the fields keep the wave going with no medium."
+    },
+    {
+      "id": "disc-mcq-b32",
+      "topicId": "aether-to-fields",
+      "question": "Because a changing E makes a B and a changing B makes an E, the wave:",
+      "options": [
+        "regenerates itself as it travels",
+        "slows down over time",
+        "loses its fields after a metre",
+        "stops in a vacuum"
+      ],
+      "answer": 0,
+      "explanation": "Each part of the wave creates the next, so the disturbance propagates indefinitely through empty space."
+    },
+    {
+      "id": "disc-mcq-b33",
+      "topicId": "aether-to-fields",
+      "question": "Einstein's theory of relativity removed the need for:",
+      "options": [
+        "the aether",
+        "electric fields",
+        "magnetic fields",
+        "photons"
+      ],
+      "answer": 0,
+      "explanation": "Relativity described light travelling through empty space with no medium, so the aether was unnecessary."
+    },
+    {
+      "id": "disc-mcq-b34",
+      "topicId": "aether-to-fields",
+      "question": "In an electromagnetic wave, the energy is carried by:",
+      "options": [
+        "the oscillating fields",
+        "a moving material",
+        "the aether",
+        "sound vibrations"
+      ],
+      "answer": 0,
+      "explanation": "The fields themselves carry the energy of the wave; there is no material doing the carrying."
+    },
+    {
+      "kind": "truefalse",
+      "id": "disc-tf-b16",
+      "topicId": "aether-to-fields",
+      "question": "The speed of light in vacuum is the same in all directions.",
+      "answer": true,
+      "explanation": "Michelson and Morley found no directional dependence, which is why no aether wind was detected."
+    },
+    {
+      "kind": "truefalse",
+      "id": "disc-tf-b17",
+      "topicId": "aether-to-fields",
+      "question": "Sunlight can reach the Earth through the vacuum of space.",
+      "answer": true,
+      "explanation": "Electromagnetic waves need no medium, so light crosses empty space from the Sun to the Earth."
+    },
+    {
+      "kind": "truefalse",
+      "id": "disc-tf-b18",
+      "topicId": "aether-to-fields",
+      "question": "An electromagnetic wave can travel through a vacuum.",
+      "answer": true,
+      "explanation": "The fields sustain each other, so no material medium is required. This is why starlight reaches us across space."
+    },
+    {
+      "kind": "multi",
+      "id": "disc-multi-b11",
+      "topicId": "aether-to-fields",
+      "question": "Which were reasons the aether was abandoned? Select all that apply.",
+      "options": [
+        "no aether wind was detected",
+        "light travels through a vacuum",
+        "relativity needs no medium",
+        "the aether was measured to be very dense"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The missing aether wind, the vacuum propagation of light, and relativity all removed the need for the aether. It was never measured to be dense."
+    },
+    {
+      "kind": "multi",
+      "id": "disc-multi-b12",
+      "topicId": "aether-to-fields",
+      "question": "Which are true of an electromagnetic wave in vacuum? Select all that apply.",
+      "options": [
+        "it carries energy",
+        "it needs no medium",
+        "its fields sustain each other",
+        "it is longitudinal"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "It carries energy, needs no medium, and its fields sustain each other. It is transverse, not longitudinal."
+    },
+    {
+      "kind": "numeric",
+      "id": "disc-num-b11",
+      "topicId": "aether-to-fields",
+      "question": "Light travels from the Sun, 1.5 × 10¹¹ m away, through vacuum. How long does it take to reach the Earth, in seconds? Take c = 3.0 × 10⁸ m/s.",
+      "answer": 500.0,
+      "unit": "s",
+      "explanation": "t = d/c = (1.5 × 10¹¹)/(3.0 × 10⁸) = 5.0 × 10² s = 500 s."
+    },
+    {
+      "kind": "numeric",
+      "id": "disc-num-b12",
+      "topicId": "aether-to-fields",
+      "question": "A light year is the distance light travels in one year. Using c = 3.0 × 10⁸ m/s and 1 year = 3.15 × 10⁷ s, find one light year in metres (give the coefficient, e.g. 9.5e15).",
+      "answer": 9450000000000000.0,
+      "unit": "m",
+      "explanation": "d = c t = (3.0 × 10⁸)(3.15 × 10⁷) = 9.45 × 10¹⁵ m."
     }
   ]
 }
