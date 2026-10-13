@@ -3,10 +3,11 @@
 Lesson material and interactive questions for postgraduate physical chemistry.
 The site carries one subject, **Physical Chemistry**, with two courses:
 **Electrochemistry** (29 lessons plus a problem set for each Bard & Faulkner
-chapter 1–17) and **Spectroscopy** (5 lessons plus a matching problem set, each
-with figures and worked examples). Mobile-first, statically generated, no
-database and no server at runtime. In all: 56 lesson files, 231 sections and
-1291 questions.
+chapter 1–17) and **Spectroscopy** (6 lessons, from the discovery of the
+electromagnetic wave onwards, plus a matching problem set for each, with
+figures and worked examples). Mobile-first, statically generated, no
+database and no server at runtime. In all: 57 lesson files, 237 sections and
+1305 questions.
 
 Built with Next.js (App Router), TypeScript and Tailwind CSS, with KaTeX for
 the maths.

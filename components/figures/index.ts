@@ -26,6 +26,7 @@ import { LightScattering } from "./light-scattering";
 import { DeBroglieStandingWave } from "./de-broglie-standing-wave";
 import { BohrLevels } from "./bohr-levels";
 import { DualityDoubleSlit } from "./duality-double-slit";
+import { EmDiscoveryTimeline } from "./em-discovery-timeline";
 
 /** Every registered figure draws itself; none takes props. */
 export type FigureComponent = ComponentType;
@@ -45,6 +46,7 @@ export const FIGURES: Record<string, FigureComponent> = {
   "de_broglie_wave.png": DeBroglieStandingWave,
   "bohr_levels.png": BohrLevels,
   "duality_double_slit.png": DualityDoubleSlit,
+  "em_discovery_timeline.png": EmDiscoveryTimeline,
 };
 
 /** The SVG component for a figure file name, or null to fall back to the PNG. */

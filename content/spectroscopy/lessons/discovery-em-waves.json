@@ -1,0 +1,450 @@
+{
+  "slug": "discovery-em-waves",
+  "label": "Lesson 0",
+  "title": "How the electromagnetic wave was discovered",
+  "summary": "The wave picture of light was not handed to us ready-made. This lesson follows the chain of evidence that produced it: interference and diffraction made light a wave, polarisation proved the wave is transverse, Ørsted and Faraday joined electricity to magnetism, Maxwell's equations predicted a wave travelling at the speed of light, Hertz caught one in the laboratory, and the fall of the aether left the oscillating fields to carry the wave themselves.",
+  "source": "Written fresh; history of the electromagnetic wave",
+  "order": 0,
+  "minutes": 32,
+  "intro": [
+    {
+      "kind": "para",
+      "text": "The wave picture of light was not handed to us ready-made. It was assembled slowly, over about two hundred years, by people who each answered one stubborn question. Interference and diffraction told us light is a wave; polarisation told us the wave is *transverse*; induction tied electricity to magnetism; Maxwell's equations turned that union into a prediction of a wave travelling at the speed of light; and Hertz caught the wave in the laboratory."
+    },
+    {
+      "kind": "para",
+      "text": "This lesson follows that path, because knowing *how* the picture was earned makes the picture itself easier to trust. There is no heavy mathematics here; the aim is to see why each step was needed and what forced the next one, so that when Lesson 1 states the conclusions flatly you already know where they came from."
+    },
+    {
+      "kind": "callout",
+      "variant": "key",
+      "title": "The conclusion, compressed",
+      "body": "Light is a transverse wave whose oscillations are electric and magnetic fields. Interference showed it is a wave, polarisation showed the wave is transverse, Faraday's induction showed the fields are real, and Maxwell showed the fields alone reproduce the measured speed of light."
+    }
+  ],
+  "constants": [
+    {
+      "symbol": "c",
+      "name": "Speed of light in vacuum",
+      "value": "2.998 × 10^8 m/s"
+    },
+    {
+      "symbol": "ε₀",
+      "name": "Permittivity of free space",
+      "value": "8.854 × 10^-12 F/m"
+    },
+    {
+      "symbol": "μ₀",
+      "name": "Permeability of free space",
+      "value": "4π × 10^-7 H/m"
+    }
+  ],
+  "sections": [
+    {
+      "id": "light-as-wave",
+      "tone": "azure",
+      "title": "First, light proved to be a wave",
+      "summary": "Interference and diffraction could only be explained if light is a wave, but the early wave was imagined as a vibration of a material medium, the aether.",
+      "minutes": 5,
+      "keyPoints": [
+        "Interference and diffraction are wave effects; Young's fringes in 1801 established light as a wave.",
+        "The early wave picture assumed the vibration was in a material medium, the luminiferous aether.",
+        "Nothing yet said what the wave was made of; that was still an open question."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "By the start of the nineteenth century the particle picture of Newton was under strain. Thomas Young's two-slit experiment (1801) produced bright and dark bands where two beams of light overlapped. Adding two lights should always give more light, never darkness. Dark fringes appear only if light arrives as a wave, so that a crest from one beam can cancel a trough from the other. Diffraction, the bending of light around edges, pointed the same way."
+        },
+        {
+          "kind": "figure",
+          "src": "em_discovery_timeline.png",
+          "alt": "A horizontal timeline of seven milestones: Young's interference fringes in 1801, Malus's polarisation in 1808, Ørsted's current deflecting a needle in 1820, Faraday's induction in 1831, Maxwell's prediction of the speed of light in 1865, Hertz's radio waves in 1887, and Einstein's conclusion in 1905 that no medium is needed. The milestones are coloured by theme: wave nature, fields joined, and electromagnetic wave.",
+          "caption": "Seven milestones in the making of the wave picture. Young and Malus established the wave and its transverse nature; Ørsted and Faraday joined electricity and magnetism; Maxwell predicted a wave at the speed of light; Hertz measured one; and Einstein showed none needs a medium. The colours group the stages."
+        },
+        {
+          "kind": "para",
+          "text": "So light was a wave. But a wave is a pattern in *something*, and nobody had seen what was waving. Following the physics of the day, everyone assumed a material medium that filled all of space — the *luminiferous aether* — just as sound waves need air. That assumption would survive for most of a century before it fell."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "A wave in what?",
+          "body": "Interference proved light has wave behaviour, but it could not say what is oscillating. The answer, fields rather than matter, had to wait for the joining of electricity and magnetism."
+        }
+      ]
+    },
+    {
+      "id": "transverse",
+      "tone": "indigo",
+      "title": "Polarisation proved the wave is transverse",
+      "summary": "A longitudinal wave cannot be polarised; the fact that light can be forced into a single plane is direct evidence that its oscillations are at right angles to the direction of travel.",
+      "minutes": 5,
+      "keyPoints": [
+        "A longitudinal wave vibrates along its direction of travel; a transverse wave vibrates at right angles to it.",
+        "Only a transverse wave can be polarised, because only it has a plane of oscillation to select.",
+        "Malus found polarised light by reflection in 1808; Fresnel and Arago showed in 1819 that beams polarised at right angles do not interfere.",
+        "That light can be polarised proved the light wave is transverse."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "A wave can oscillate in two ways with respect to its travel. In a *longitudinal* wave the medium vibrates back and forth along the direction of travel; sound is the everyday example. In a *transverse* wave the vibration is at right angles to the direction of travel, like a wave on a rope that you shake up and down."
+        },
+        {
+          "kind": "para",
+          "text": "The difference is not cosmetic. A longitudinal wave has no sideways direction from which to choose, so you cannot force it into a single plane of vibration. A transverse wave can be *polarised*: its oscillations can be restricted to one plane. So if light can be polarised, its vibrations must be transverse."
+        },
+        {
+          "kind": "figure",
+          "src": "wave_polarization.png",
+          "alt": "Unpolarised light with vibrations in many directions passing through a polarising filter, which lets through only the component in a single plane, giving vertically polarised light.",
+          "caption": "A polarising filter selects one plane of vibration out of many. Only a transverse wave offers a plane to select, which is why polarisation is the fingerprint of a transverse wave."
+        },
+        {
+          "kind": "para",
+          "text": "The evidence arrived in two parts. In 1808 Étienne-Louis Malus noticed that light reflected from a glass surface was polarised. A few years later, in 1819, Augustin-Jean Fresnel and François Arago found that two beams polarised at right angles refuse to interfere: they simply add as light. That is impossible for a longitudinal wave, where every beam would share the same axis of vibration."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "The idea in one line",
+          "body": "Polarisation is a property only a transverse wave can have, so the observation that light can be polarised proves its oscillations are perpendicular to the direction it travels."
+        }
+      ]
+    },
+    {
+      "id": "fields-linked",
+      "tone": "violet",
+      "title": "Electricity and magnetism were joined",
+      "summary": "Ørsted showed that a current deflects a compass needle and Faraday showed that a changing magnetic field creates an electric field, revealing that fields carry energy and act on matter.",
+      "minutes": 5,
+      "keyPoints": [
+        "Ørsted (1820) found that an electric current deflects a nearby compass needle, linking electricity and magnetism.",
+        "Faraday (1831) found that a changing magnetic field creates an electric field, and a changing electric field creates a magnetic field.",
+        "This showed that fields are physical things that carry energy, not merely a way of drawing forces.",
+        "The mutual creation of one field by a change in the other is exactly what later lets a wave sustain itself."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "While the debate about the wave nature of light continued, a separate discovery was unfolding. In 1820 Hans Christian Ørsted noticed that a wire carrying a current made a nearby compass needle swing. Electricity and magnetism, treated as separate subjects for centuries, were connected."
+        },
+        {
+          "kind": "para",
+          "text": "Michael Faraday pushed the connection further. In 1831 he found that a *changing* magnetic field produces an electric field, and a changing electric field produces a magnetic field — the effect behind every generator and transformer. Crucially, these fields do real work: they carry energy and exert forces."
+        },
+        {
+          "kind": "callout",
+          "variant": "note",
+          "title": "Fields are not bookkeeping",
+          "body": "It is tempting to treat a field as a clever way of describing forces at a distance. Faraday's experiments show otherwise: a field stores energy and can push on charge, so it behaves like a physical thing in its own right."
+        },
+        {
+          "kind": "para",
+          "text": "Keep this mutual creation in mind. A changing electric field gives rise to a magnetic field, and a changing magnetic field gives rise to an electric field. That single fact is what, in the next section, allows a disturbance to keep regenerating itself as it travels."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "Why this matters for light",
+          "body": "Because each field can create the other, a pair of oscillating fields can travel through empty space without any material to support it. The seed of the electromagnetic wave is already here."
+        }
+      ]
+    },
+    {
+      "id": "maxwell",
+      "tone": "rose",
+      "title": "Maxwell predicted an electromagnetic wave",
+      "summary": "Combining the known laws of electricity and magnetism, Maxwell derived a wave equation, found its speed to be 1 over the square root of ε₀μ₀ — the measured speed of light — and predicted that light is an electromagnetic wave.",
+      "minutes": 6,
+      "keyPoints": [
+        "Maxwell (1861-1865) gathered the laws of electricity and magnetism into four equations.",
+        "In empty space they combine into a wave equation, so a self-sustaining electromagnetic wave should exist.",
+        "Its predicted speed is c = 1/√(ε₀μ₀), which comes out to about 3 × 10⁸ m/s, the speed of light.",
+        "The equations also force E, B and the direction of travel to be mutually perpendicular: the wave is transverse."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "James Clerk Maxwell set about writing the known laws of electricity and magnetism as a small set of equations. When he combined them for empty space, something unexpected fell out. A changing electric field creates a magnetic field; a changing magnetic field creates an electric field; so a disturbance can renew itself and march forward. The equations took the form of a *wave equation*."
+        },
+        {
+          "kind": "formula",
+          "tex": "\\frac{\\partial^2 E}{\\partial x^2} = \\frac{1}{c^2}\\,\\frac{\\partial^2 E}{\\partial t^2}",
+          "caption": "Maxwell's equations in empty space give a wave equation for the fields"
+        },
+        {
+          "kind": "para",
+          "text": "The speed of that wave was fixed by two constants already measured in the laboratory: the permittivity ε₀, which measures how readily a vacuum hosts an electric field, and the permeability μ₀, the same idea for a magnetic field. The equations gave the speed as a simple combination of the two."
+        },
+        {
+          "kind": "formula",
+          "tex": "c = \\frac{1}{\\sqrt{\\varepsilon_0 \\mu_0}}",
+          "caption": "Maxwell's predicted speed for electromagnetic waves"
+        },
+        {
+          "kind": "para",
+          "text": "Putting in the measured numbers gave about 3.0 × 10⁸ m/s. That is the measured speed of light. Maxwell drew the inescapable conclusion: light *is* an electromagnetic wave. Optics became a branch of electromagnetism, and the wave that had puzzled Young now had a definite substance, the fields themselves."
+        },
+        {
+          "kind": "figure",
+          "src": "em_wave.png",
+          "alt": "An electromagnetic wave, with the electric field E oscillating vertically and the magnetic field B oscillating from side to side at right angles, both perpendicular to the direction of travel, which is marked by an arrow labelled at the speed of light c.",
+          "caption": "The wave Maxwell's equations demand: **E** and **B** at right angles to each other and to the direction of travel, moving forward at **c**. The transverse geometry is not a choice; it is forced by the field equations."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "A prediction, not an observation",
+          "body": "Maxwell did not observe an electromagnetic wave; no one had yet made one. He computed that if the laws of electricity and magnetism are right, such waves must exist and must travel at the speed of light. That is one of the boldest predictions in physics."
+        }
+      ]
+    },
+    {
+      "id": "hertz",
+      "tone": "coral",
+      "title": "Hertz caught the wave",
+      "summary": "In 1887 Hertz generated and detected electromagnetic waves in the laboratory, showing they travel at the speed of light and can be reflected, refracted and polarised like light.",
+      "minutes": 5,
+      "keyPoints": [
+        "Hertz built a spark-gap transmitter and a detector and produced radio-frequency electromagnetic waves.",
+        "The waves travelled at the speed of light and could be reflected, refracted, focused and polarised.",
+        "This confirmed we are dealing with electromagnetic waves, and that light is one: radio and light are the same phenomenon.",
+        "Radio waves and light differ only in wavelength and frequency, exactly the picture Lesson 1 states."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "The prediction had to be tested. Between 1885 and 1889 Heinrich Hertz built an apparatus in which a spark jumping across one gap produced a burst of radiation, and a small spark across a second gap detected it. He was generating and receiving *radio* waves: electromagnetic waves at a much longer wavelength than light."
+        },
+        {
+          "kind": "para",
+          "text": "The waves behaved exactly as predicted. They travelled at the speed of light. They could be reflected by a metal sheet and brought to a focus by a curved reflector, showing they carry energy in beams. And, decisively, they could be polarised — a transverse electromagnetic wave, made and controlled in the laboratory."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "One phenomenon, two names",
+          "body": "Hertz's radio waves and visible light are the same kind of wave, differing only in wavelength and frequency. Maxwell's theory had already said so; the experiment made it plain."
+        },
+        {
+          "kind": "para",
+          "text": "With Hertz, the wave picture was no longer an inference about light alone. Electromagnetic waves were real, controllable objects, and their measured speed matched Maxwell's prediction to within the accuracy of the day."
+        }
+      ]
+    },
+    {
+      "id": "aether-to-fields",
+      "tone": "amber",
+      "title": "The aether fell, the fields remained",
+      "summary": "Michelson and Morley found no aether wind, and Einstein's relativity showed none is needed: the oscillating fields propagate themselves. What oscillates is not a material but a pair of fields.",
+      "minutes": 6,
+      "keyPoints": [
+        "The Michelson-Morley experiment (1887) found no motion of the Earth relative to any aether.",
+        "Einstein (1905) discarded the aether: electromagnetic waves need no medium.",
+        "A changing E makes a B and a changing B makes an E, so the fields sustain one another through empty space.",
+        "The final answer to 'what is waving?' is the fields themselves."
+      ],
+      "blocks": [
+        {
+          "kind": "para",
+          "text": "One problem remained. A wave was thought to need a medium, and the aether had never been detected. In 1887, the same year as Hertz's work, Albert Michelson and Edward Morley measured the speed of light in different directions as the Earth moved through space. If an aether existed, that speed should change slightly with direction. It did not. No aether wind was ever found."
+        },
+        {
+          "kind": "para",
+          "text": "In 1905 Albert Einstein removed the difficulty at the root. He discarded the aether altogether, and his theory of relativity showed that light travels through empty space without any medium at all. The medium was never there to find."
+        },
+        {
+          "kind": "para",
+          "text": "Then what is waving? The answer is the fields. A changing electric field creates a magnetic field, and a changing magnetic field creates an electric field, so the two regenerate each other and a disturbance travels through the vacuum on its own. There is no material carrying it; the fields are the wave."
+        },
+        {
+          "kind": "callout",
+          "variant": "key",
+          "title": "The answer to 'what oscillates?'",
+          "body": "Not a material, and not space waving like a jelly, but a pair of fields, E and B, each sustaining the other as the pattern moves forward at c. That is the sentence Lesson 1 opens with, and now you know how it was earned."
+        }
+      ],
+      "cta": {
+        "kind": "cta",
+        "title": "Check what you have learned",
+        "body": "Take the Lesson 0 quiz on how the electromagnetic wave was discovered, from interference and polarisation to Maxwell, Hertz and the fall of the aether.",
+        "href": "/lessons/discovery-em-waves/quiz",
+        "linkLabel": "Take the Lesson 0 quiz",
+        "secondaryHref": "/lessons/emr-nature",
+        "secondaryLabel": "Next: the nature of electromagnetic radiation"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "disc-mcq-001",
+      "topicId": "light-as-wave",
+      "question": "Which experiment first made a convincing case that light behaves as a wave?",
+      "options": [
+        "Young's two-slit interference experiment",
+        "Hertz's spark-gap experiment",
+        "Malus's reflection experiment",
+        "Michelson and Morley's interferometer"
+      ],
+      "answer": 0,
+      "explanation": "Young's two-slit experiment (1801) produced bright and dark fringes. Dark bands where two beams overlap can only appear if light is a wave, so that a crest of one beam cancels a trough of the other."
+    },
+    {
+      "id": "disc-tf-001",
+      "kind": "truefalse",
+      "topicId": "light-as-wave",
+      "question": "Interference and diffraction are effects that a stream of particles cannot produce.",
+      "answer": true,
+      "explanation": "Both are wave effects. Two streams of particles would simply add to give more light, never the dark fringes of destructive interference, and particles would not spread out around an edge as diffraction requires."
+    },
+    {
+      "id": "disc-multi-001",
+      "kind": "multi",
+      "topicId": "light-as-wave",
+      "question": "Interference had established that light is a wave, yet important questions were still open. Which of these were still unknown at that stage? Select all that apply.",
+      "options": [
+        "what was doing the oscillating",
+        "whether light could be polarised",
+        "whether the waves needed a material medium",
+        "that light is a wave at all"
+      ],
+      "answers": [
+        0,
+        2
+      ],
+      "explanation": "The wave nature itself was settled by interference. What remained open was what was oscillating and whether a medium (the aether) was required. Polarisation was discovered later, and it was the clue to the first open question."
+    },
+    {
+      "id": "disc-mcq-002",
+      "topicId": "transverse",
+      "question": "A sound wave in air cannot be polarised because it is longitudinal. What does that tell you about light, which can be polarised?",
+      "options": [
+        "light's oscillations are perpendicular to its direction of travel",
+        "light must need a material medium",
+        "light travels faster than sound",
+        "light is really a stream of particles"
+      ],
+      "answer": 0,
+      "explanation": "Only a transverse wave has a plane of oscillation to select, so polarisation is possible only for a transverse wave. Since light can be polarised, its vibrations are transverse, at right angles to the direction of travel."
+    },
+    {
+      "id": "disc-tf-002",
+      "kind": "truefalse",
+      "topicId": "transverse",
+      "question": "Only a transverse wave can be polarised.",
+      "answer": true,
+      "explanation": "A longitudinal wave vibrates along its direction of travel, so there is no sideways plane to restrict it to. Polarisation selects one plane of vibration, which only a transverse wave possesses."
+    },
+    {
+      "id": "disc-mcq-003",
+      "topicId": "transverse",
+      "question": "Fresnel and Arago found that two beams polarised at right angles do not interfere. Why was this result important?",
+      "options": [
+        "it proved the light wave is transverse",
+        "it proved light travels at the speed of light",
+        "it proved light is made of photons",
+        "it showed that light needs no medium"
+      ],
+      "answer": 0,
+      "explanation": "If the beams refused to interfere, their vibrations were in perpendicular planes. A longitudinal wave has only one axis of vibration, so it could never show this behaviour. The observation proved the light wave is transverse."
+    },
+    {
+      "id": "disc-mcq-004",
+      "topicId": "fields-linked",
+      "question": "What did Faraday's induction experiments show about fields?",
+      "options": [
+        "that fields can carry energy and exert forces, so they are physical things",
+        "that fields are only a convenient way of drawing forces at a distance",
+        "that fields travel faster than light",
+        "that fields need a material medium to exist"
+      ],
+      "answer": 0,
+      "explanation": "A changing magnetic field produces an electric field and vice versa, and these fields do real work: they store energy and drive currents. So they are not just bookkeeping for forces; they behave like physical things in their own right."
+    },
+    {
+      "id": "disc-tf-003",
+      "kind": "truefalse",
+      "topicId": "fields-linked",
+      "question": "A changing magnetic field can create an electric field, and a changing electric field can create a magnetic field.",
+      "answer": true,
+      "explanation": "This mutual creation is the essence of Faraday's induction. It is also the reason an electromagnetic wave can sustain itself through a vacuum: each field keeps regenerating the other."
+    },
+    {
+      "id": "disc-mcq-005",
+      "topicId": "maxwell",
+      "question": "Maxwell's equations predicted an electromagnetic wave travelling at a speed given by 1/√(ε₀μ₀). Why was this so striking?",
+      "options": [
+        "because the value came out equal to the measured speed of light",
+        "because it came out equal to the speed of sound",
+        "because it was zero in a vacuum",
+        "because it varied with the colour of the light"
+      ],
+      "answer": 0,
+      "explanation": "Two constants measured in purely electrical and magnetic experiments gave a speed of about 3 × 10⁸ m/s, the speed of light. That coincidence forced the conclusion that light is an electromagnetic wave."
+    },
+    {
+      "id": "disc-num-001",
+      "kind": "numeric",
+      "topicId": "maxwell",
+      "question": "Maxwell's predicted wave speed is c = 1/√(ε₀μ₀). Using ε₀ = 8.85 × 10⁻¹² F/m and μ₀ = 1.257 × 10⁻⁶ H/m, calculate c in m/s.",
+      "answer": 300000000.0,
+      "tolerance": 10000000.0,
+      "unit": "m/s",
+      "explanation": "ε₀μ₀ = (8.85 × 10⁻¹²)(1.257 × 10⁻⁶) = 1.11 × 10⁻¹⁷. Then √(ε₀μ₀) = 3.33 × 10⁻⁹, so c = 1/(3.33 × 10⁻⁹) = 3.0 × 10⁸ m/s."
+    },
+    {
+      "id": "disc-mcq-006",
+      "topicId": "hertz",
+      "question": "What did Hertz achieve in 1887?",
+      "options": [
+        "he generated and detected electromagnetic waves in the laboratory",
+        "he was the first to measure the speed of light",
+        "he discovered the electron",
+        "he proved that light needs an aether"
+      ],
+      "answer": 0,
+      "explanation": "Hertz used a spark-gap transmitter and a spark detector to produce and receive radio waves. He showed they travel at the speed of light and can be reflected, refracted and polarised, confirming Maxwell's prediction."
+    },
+    {
+      "id": "disc-multi-002",
+      "kind": "multi",
+      "topicId": "hertz",
+      "question": "Which properties did Hertz's radio waves share with visible light? Select all that apply.",
+      "options": [
+        "they can be polarised",
+        "they travel at the speed of light",
+        "they can be reflected and refracted",
+        "they carry no energy"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Hertz showed his waves travelled at the speed of light, could be reflected and focused, and could be polarised, all like light. They do carry energy, so the last option is false."
+    },
+    {
+      "id": "disc-mcq-007",
+      "topicId": "aether-to-fields",
+      "question": "What did the Michelson-Morley experiment find?",
+      "options": [
+        "no motion of the Earth relative to any aether",
+        "that the speed of light depends on direction",
+        "that light is a stream of particles",
+        "that the aether is a rigid solid"
+      ],
+      "answer": 0,
+      "explanation": "Michelson and Morley looked for a change in the speed of light as the Earth moved through the supposed aether. They found none, so there was no aether wind and no evidence for an aether at all."
+    },
+    {
+      "id": "disc-tf-004",
+      "kind": "truefalse",
+      "topicId": "aether-to-fields",
+      "question": "Electromagnetic waves need a material medium to travel through.",
+      "answer": false,
+      "explanation": "They need no medium. After the aether was disproved, it became clear that the oscillating fields sustain each other, so the wave carries itself through a vacuum. That is how sunlight crosses empty space to reach us."
+    }
+  ]
+}
