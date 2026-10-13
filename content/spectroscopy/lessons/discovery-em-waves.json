@@ -44,14 +44,25 @@
       "id": "light-as-wave",
       "tone": "azure",
       "title": "First, light proved to be a wave",
-      "summary": "Interference and diffraction could only be explained if light is a wave, but the early wave was imagined as a vibration of a material medium, the aether.",
+      "summary": "Newton first pictured light as a stream of particles travelling in straight lines; interference and diffraction then showed it must be a wave, which early physicists imagined as a vibration of a material medium, the aether.",
       "minutes": 5,
       "keyPoints": [
+        "Before Young, the dominant picture was Newton's: light as a stream of tiny particles, or corpuscles, travelling in straight lines.",
         "Interference and diffraction are wave effects; Young's fringes in 1801 established light as a wave.",
         "The early wave picture assumed the vibration was in a material medium, the luminiferous aether.",
         "Nothing yet said what the wave was made of; that was still an open question."
       ],
       "blocks": [
+        {
+          "kind": "para",
+          "text": "Before that, the dominant picture was Newton's. In his *Opticks* (1704) he argued that light is a stream of tiny particles, which he called *corpuscles*, thrown out by a source and travelling in straight lines. Particles explain a good deal at once: they cast sharp shadows, they bounce off a mirror to give reflection, and if they are pulled slightly toward a denser medium as they cross its surface they bend toward the normal, which is refraction."
+        },
+        {
+          "kind": "callout",
+          "variant": "term",
+          "title": "Newton's corpuscles",
+          "body": "Newton's light particles were not atoms in the modern sense. They were small, featureless *corpuscles* that carried the light and moved in straight lines. The picture held for a century largely because it, and Newton's great authority, explained reflection and refraction so simply."
+        },
         {
           "kind": "para",
           "text": "By the start of the nineteenth century the particle picture of Newton was under strain. Thomas Young's two-slit experiment (1801) produced bright and dark bands where two beams of light overlapped. Adding two lights should always give more light, never darkness. Dark fringes appear only if light arrives as a wave, so that a crest from one beam can cancel a trough from the other. Diffraction, the bending of light around edges, pointed the same way."
